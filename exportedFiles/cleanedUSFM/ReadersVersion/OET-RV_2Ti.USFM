@@ -1,40 +1,40 @@
-\id 2TI - Open English Translation—Readers’ Version (OET-RV) v0.1.57
+\id 2TI - Open English Translation—Readers’ Version (OET-RV) v0.2.1
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 TI2
 \rem WORDTABLE OET-LV_NT_word_table.tsv
-\h 2 Timothy
-\toc1 2 Timothy
-\toc2 2 Timothy
+\h 2 Timotheos
+\toc1 2 Timotheos
+\toc2 2 Timotheos
 \toc3 2 Ti.
-\mt2 Paul’s second letter to
-\mt1 Timothy
+\mt2 Paulos’s second letter to
+\mt1 Timotheos
 \is1 Introduction
-\ip This is \bk the second letter of Paul that we have that’s written to Timothy\bk*. He wrote it from Rome when he was imprisoned there as a result of his preaching about Yeshua the messiah. Timothy was still teaching the believers in Ephesus, so here Paul requests him to come to see him before he gets sentenced to death.
-\ip In this letter, Paul advised Timothy to be strong so that he can persevere in his preaching and doing God’s work even in the middle of suffering and when others oppose him. He also warns Timothy about the coming evil of teachers of false doctrines because these can destroy the faith of the listeners.
-\ip Most of all, Paul reminds Timothy about his life so that Paul’s faith and endurance would be an example for Timothy to follow: his humility, his love, and his enduring suffering from those who persecuted him.
-\iot Main components of Paul’s letter
+\ip This is \bk the second letter of Paulos that we have that’s written to Timotheos\bk*. He wrote it from Romai when he was imprisoned there as a result of his preaching about Yeshua the messiah. Timotheos was still teaching the believers in Efesos, so here Paulos requests him to come to see him before he gets sentenced to death.
+\ip In this letter, Paulos advised Timotheos to be strong so that he can persevere in his preaching and doing God’s work even in the middle of suffering and when others oppose him. He also warns Timotheos about the coming evil of teachers of false doctrines because these can destroy the faith of the listeners.
+\ip Most of all, Paulos reminds Timotheos about his life so that Paulos’s faith and endurance would be an example for Timotheos to follow: his humility, his love, and his enduring suffering from those who persecuted him.
+\iot Main components of Paulos’s letter
 \io1 Introduction \ior 1:1-2\ior*
 \io1 Advice and encouragement \ior 1:3–2:13\ior*
 \io1 The advice and the warning \ior 2:14–4:5\ior*
-\io1 The living of Paul \ior 4:6-18\ior*
+\io1 The living of Paulos \ior 4:6-18\ior*
 \io1 Signing off \ior 4:19-22\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \p
-\v 1 \add This letter is from\add* Paul, a missionary \nd of Yeshua\nd* the \nd messiah\nd* according to \nd God’s\nd* will and with the promise of life in \nd Yeshua the messiah\nd*.
-\v 2 \add It’s written\add* to \add my\add* dear child, Timothy.\x + \xo 1:2: \xt Acts 16:1.\x* May you experience grace, mercy, and peace from \nd God\nd* the father and our \nd master Yeshua\nd* the \nd messiah\nd*.
+\v 1 \add This letter is from\add* Paulos, a missionary \nd of Yeshua\nd* \add (Jesus; Grk. Yesus)\add* the \nd messiah\nd* according to \nd God’s\nd* will and with the promise of life in \nd Yeshua the messiah\nd*.
+\v 2 \add It’s written\add* to \add my\add* dear child, Timotheos.\x + \xo 1:2: \xt Acts 16:1.\x* May you experience grace, mercy, and peace from \nd God\nd* the father and our \nd master Yeshua\nd* the \nd messiah\nd*.
 \s1 Advice and encouragement
 \p
 \v 3 I’ve been serving \nd God\nd* with a clean conscience since my childhood and I’m \add thankful\add* \nd to\nd* him that night and day I haven’t stopped praying for you—
 \v 4 remembering your tears and longing to see you \add again\add*, which will fill me with happiness.
-\v 5 I recall your faith without hypocrisy, which I first noticed in your grandmother Lois and in your mother Eunice,\x + \xo 1:5: \xt Acts 16:1.\x* and which I’m sure is also in you.
+\v 5 I recall your faith without hypocrisy, which I first noticed in your grandmother Lois and in your mother Eunike,\x + \xo 1:5: \xt Acts 16:1.\x* and which I’m sure is also in you.
 \v 6 So that’s why I’m reminding you to rekindle \nd God’s\nd* gift which you received when I placed my hands on you \add and prayed for you\add*,
 \v 7 because \nd God\nd* didn’t give us a fearful spirit, but gave us power, love, and wisdom.
 \p
 \v 8 So because of that, don’t be ashamed of our \nd master’s\nd* testimony, and nor of mine, even though I’m a prisoner for him, but let the two of us suffer together for the sake of the good message with the help \nd of God’s\nd* power.
-\v 9 It’s \add God\add* that saved us and called us to live a godly life. His selection of us had nothing to do with anything good we might have done, but rather he has his own \add purposes\add* and had given us grace via \nd Yeshua the messiah\nd* even before \add time\add* began.
+\v 9 It’s \add God\add* that saved us and called us to live a godly life. His selection of us had nothing to do with anything good we might have done, but rather he has his own \add purposes\add* and had given us grace via \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd* even before \add time\add* began.
 \v 10 That grace has been revealed now that our saviour \nd Yeshua\nd* the \nd messiah\nd* appeared and obliterated death, while at the same time illuminating life and immortality through the good message
 \v 11 that I was appointed to proclaim, as well as being a missionary and teacher.\x + \xo 1:11: \xt 1Tim 2:7.\x*
 \p
@@ -42,14 +42,14 @@
 \v 13 The style of sound messages that you heard from me, you need to retain in faith in \nd Yeshua the messiah\nd*, and with \add your\add* love for him.
 \v 14 Keep that good deposit with the help of \nd the\nd* holy \nd spirit\nd* who lives in us.
 \p
-\v 15 You’ve already heard that those in Asia \add Minor\add* all turned their backs on me, including Phygelus and Hermogenes.
-\v 16 May the \nd master\nd* show mercy to Onesiforus and his family, because he often cheered me up and he wasn’t ashamed of my \add chains\add*.
-\v 17 When he came to Rome he actively searched for me and found me.
-\v 18 May the \nd master\nd* help him find mercy from \nd Yahweh\nd* on the \add judgement\add* day, but anyway, you well know how much \add Onesiforus\add* helped us in Ephesus.
+\v 15 You’ve already heard that those in Asia \add Minor\add* all turned their backs on me, including Fugelos and Hermogenes.
+\v 16 May the \nd master\nd* show mercy to Onesiforos and his family, because he often cheered me up and he wasn’t ashamed of my \add chains\add*.
+\v 17 When he came to Romai he actively searched for me and found me.
+\v 18 May the \nd master\nd* help him find mercy from \nd Yahweh\nd* on the \add judgement\add* day, but anyway, you well know how much \add Onesiforos\add* helped us in Efesos.
 \c 2
 \s1 Yeshua’s followers obey and endure
 \p
-\v 1 So my ‘son’, may the grace from \nd Yeshua the messiah\nd* make you strong
+\v 1 So my ‘son’, may the grace from \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd* make you strong
 \v 2 along with everything you heard from me through many witnesses. Entrust those things to faithful people who will also be capable of teaching others.
 \p
 \v 3 Suffer together \add with me\add* as a good soldier \nd of Yeshua the messiah\nd*.
@@ -79,7 +79,7 @@
 \p
 \v 15 Work hard so that \nd God\nd* will see you as someone he approves of—not ashamed of the \add good message\add* but straight-talking the truth.
 \v 16 Avoid chatter about unimportant or crude topics because it will eventually led to godlessness.
-\v 17 Those kinds of talk are like rot that spreads, as happened when Hymenaeus and Philetus
+\v 17 Those kinds of talk are like rot that spreads, as happened when Humenaios and Filetos
 \v 18 deviated from the truth by claiming that the resurrection has already happened and have drawn some away from the faith.
 \v 19 However \nd God’s\nd* solid foundation has stood with this inscription on it: ‘\nd Yahweh\nd* knew his own ones,’\x + \xo 2:19: \xt Num 16:5.\x* and ‘Let everyone who claims to follow \nd Yahweh\nd* avoid disobedience.’
 \p
@@ -100,13 +100,13 @@
 \v 5 \add appearing\add* to be godly on the surface yet denying that God is real, and turning from the truth.
 \v 6 Some of these will quietly enter houses and captivate gullible women. Despite being known for \add their\add* sins, they’re led by various lusts—
 \v 7 always ‘learning’ yet never \add actually\add* confronting \add the reality of\add* the truth.
-\v 8 This is just like how Jannes and Jambres opposed Mosheh,\x + \xo 3:8: \xt Exo 7:11 (possibly these Egyptian magicians).\x* and similarly these people, having depraved \add minds\add* and who are unqualified concerning the faith, oppose the truth.
-\v 9 But they won’t be advancing \add in the faith\add* because their foolishness will eventually become evident to everyone, just as happened with \add Jannes and Jambres\add*.
+\v 8 This is just like how Yannes and Yambres opposed Mosheh \add (Moses)\add*,\x + \xo 3:8: \xt Exo 7:11 (possibly these Egyptian magicians).\x* and similarly these people, having depraved \add minds\add* and who are unqualified concerning the faith, oppose the truth.
+\v 9 But they won’t be advancing \add in the faith\add* because their foolishness will eventually become evident to everyone, just as happened with \add Yannes and Yambres\add*.
 \s1 Living your faith even at a cost
 \p
-\v 10 However \add Timothy\add*, you followed me in \add your\add* teaching, \add your\add* conduct, \add your\add* purpose and \add your\add* faith, in patience, love, endurance,
-\v 11 and even through persecution and \add suffering\add* like I endured in Antioch,\x + \xo 3:11: \xt Acts 13:14-52.\x* Iconium,\x + \xo 3:11: \xt Acts 14:1-7.\x* and Lystra\x + \xo 3:11: \xt Acts 14:8-20.\x*—yet the \nd master\nd* rescued me in each case.
-\v 12 Anyway, everyone who wants to seriously follow \nd Yeshua the messiah\nd* should expect to be persecuted.
+\v 10 However \add Timotheos\add*, you followed me in \add your\add* teaching, \add your\add* conduct, \add your\add* purpose and \add your\add* faith, in patience, love, endurance,
+\v 11 and even through persecution and \add suffering\add* like I endured in Antiokeia,\x + \xo 3:11: \xt Acts 13:14-52.\x* Ikonion,\x + \xo 3:11: \xt Acts 14:1-7.\x* and Lustra\x + \xo 3:11: \xt Acts 14:8-20.\x*—yet the \nd master\nd* rescued me in each case.
+\v 12 Anyway, everyone who wants to seriously follow \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd* should expect to be persecuted.
 \p
 \v 13 Meanwhile evil people and scammers will get worse and worse—deceiving others and then being deceived themselves.
 \v 14 Hold on to the things that you learnt and were convinced are true, because you know you can trust those who taught them to you.
@@ -118,7 +118,7 @@
 \v 1-2 I am proclaiming \add these truths\add* before \nd God\nd* and \add before\add* \nd Yeshua\nd* the \nd messiah\nd* who will judge both the living and the dead. Proclaim his appearance \add on earth\add*\f + \fr 4:1 \ft It’s not clear if Paul is referring to Yeshua’s previous coming to the earth, or to the expected, future coming. (See also 4:8)\f* and his kingdom, stand by the message \add whether it’s convenient or seems out of place\add*, rebuke and scold \add those who need it\add*, but \add also\add* encourage with complete patience and teaching.
 \v 3 A time will come when people will no longer be tolerating scriptural teaching, but will prefer their own doctrines, so they’ll find teachers to teach what they want to hear,
 \v 4 \add so\add* not only will they avoid hearing the truth, they’ll be following myths instead.
-\v 5 However \add Timothy\add*, you stay sensible about everything, endure hardship, tell people the good message, and do all your duties well.
+\v 5 However \add Timotheos\add*, you stay sensible about everything, endure hardship, tell people the good message, and do all your duties well.
 \p
 \v 6 As for me, I’ve already done all I can, and the time of my departure is approaching.
 \v 7 I’ve fought the fight for \add goodness\add*. I’ve finished the race. I’ve kept the faith.
@@ -126,21 +126,21 @@
 \s1 Final bits and pieces
 \p
 \v 9 Try to come to me as soon as possible,
-\v 10 because Demas\x + \xo 4:10: \xt Col 4:14; Phm 24.\x* was attracted back to worldly things, and so he left me and went to Thessalonica. Crescens has gone to Galatia, and Titos\x + \xo 4:10: \xt 2Cor 8:23; Gal 2:3; Tit 1:4.\x* went to Dalmatia.
-\v 11 Only Luke\x + \xo 4:11: \xt Col 4:14; Phm 24.\x* stayed with me. Fetch Mark\x + \xo 4:11: \xt Acts 12:12,25; 13:13; 15:37-39; Col 4:10; Phm 24.\x* on your way and bring him to me \add also\add* because he’s always \add very\add* helpful.
-\v 12 I sent Tychicus\x + \xo 4:12: \xt Acts 20:4; Eph 6:21-22; Col 4:7-8.\x* to Ephesus.
-\v 13 When you come, bring the coat that I left with Carpas in Troas,\x + \xo 4:13: \xt Acts 20:6.\x* along with the scrolls and most of the parchments.\f + \fr 4:13 \ft We get no clues here about what scrolls they were (possibly some Hebrew scriptures), nor what was on the parchments—they may even have been still blank for writing on.\f*
+\v 10 because Demas\x + \xo 4:10: \xt Col 4:14; Phm 24.\x* was attracted back to worldly things, and so he left me and went to Thessalonikai. Kreskes has gone to Galatia, and Titos\x + \xo 4:10: \xt 2Cor 8:23; Gal 2:3; Tit 1:4.\x* went to Dalmatia.
+\v 11 Only Lukas \add (Luke)\add*\x + \xo 4:11: \xt Col 4:14; Phm 24.\x* stayed with me. Fetch Markos\x + \xo 4:11: \xt Acts 12:12,25; 13:13; 15:37-39; Col 4:10; Phm 24.\x* on your way and bring him to me \add also\add* because he’s always \add very\add* helpful.
+\v 12 I sent Tukikos\x + \xo 4:12: \xt Acts 20:4; Eph 6:21-22; Col 4:7-8.\x* to Efesos.
+\v 13 When you come, bring the coat that I left with Karpos in Troias,\x + \xo 4:13: \xt Acts 20:6.\x* along with the scrolls and most of the parchments.\f + \fr 4:13 \ft We get no clues here about what scrolls they were (possibly some Hebrew scriptures), nor what was on the parchments—they may even have been still blank for writing on.\f*
 \p
-\v 14 Alexander the coppersmith\x + \xo 4:14: \xt 1Tim 1:20.\x* did a lot of harm to me but \nd Yahweh\nd* will ‘reward’ him for what he’s done.\x + \xo 4:14: \xt Psa 62:12; Rom 2:6.\x*
+\v 14 Alexandros \add (Alexander)\add* the coppersmith\x + \xo 4:14: \xt 1Tim 1:20.\x* did a lot of harm to me but \nd Yahweh\nd* will ‘reward’ him for what he’s done.\x + \xo 4:14: \xt Psa 62:12; Rom 2:6.\x*
 \v 15 You also should watch out for him, because he was very strongly opposed to our teaching.
 \p
-\v 16 At my first defence \add in the courts here in Rome\add*, no one stood with me. Everyone deserted me, but that shouldn’t be held against them.
+\v 16 At my first defence \add in the courts here in Romai\add*, no one stood with me. Everyone deserted me, but that shouldn’t be held against them.
 \v 17 But the \nd master\nd* stood by me and strengthened me to ensure that the good message \add was proclaimed\add* and all the pagans heard it, and I was rescued out of the lion’s mouth so to speak.
 \v 18 The \nd master\nd* will rescue me from every evil plot, and he will bring me into his heavenly kingdom. He should be praised forever. \add May it be so\add*.
 \s1 Signing off
 \p
-\v 19 Greet Priscilla and Aquila\x + \xo 4:19: \xt Acts 18:2.\x* for me, and Onesiforus’ household.\x + \xo 4:19: \xt 2Tim 1:16-17.\x*
-\v 20 Erastus\x + \xo 4:20: \xt Acts 19:22; Rom 16:23.\x* stayed in Corinth, and I left Trophimus\x + \xo 4:20: \xt Acts 20:4; 21:29.\x* in Miletus because he was sick.
-\v 21 Make sure you come before the winter. Eubulus greets you, as do Pudens, Linus, Claudia, and all the believers.
+\v 19 Greet Priskilla and Akulas \add (Aquila)\add*\x + \xo 4:19: \xt Acts 18:2.\x* for me, and Onesiforos’ household.\x + \xo 4:19: \xt 2Tim 1:16-17.\x*
+\v 20 Erastos\x + \xo 4:20: \xt Acts 19:22; Rom 16:23.\x* stayed in Korinthos, and I left Trofimos\x + \xo 4:20: \xt Acts 20:4; 21:29.\x* in Milaitos because he was sick.
+\v 21 Make sure you come before the winter. Eubulos greets you, as do Pudes, Linos, Klaudia, and all the believers.
 \p
-\v 22 May you always know \add inside\add* that the \nd master Yeshua\nd* is with you, and may all of you there experience God’s grace.
+\v 22 May you always know \add inside\add* that the \nd master Yeshua\nd* \add (Jesus; Grk. Yesus)\add* is with you, and may all of you there experience God’s grace.

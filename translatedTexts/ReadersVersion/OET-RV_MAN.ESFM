@@ -1,8 +1,8 @@
-\id MAN - Open English Translation—Readers' Version (OET-RV) v0.1.0
+\id MAN - Open English Translation—Readers' Version (OET-RV) v0.4.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MAN
-\rem not WORDTABLE OET-LV_OT_word_table.tsv
+\rem WORDTABLE OET-LV_DC_word_table.tsv
 \rem Adapted from the Public Domain WEBBE courtesy of https://eBible.org
 \h Prayer of Menasheh
 \toc1 The Prayer of Menasheh King of Yehudah when He was Held Captive in Bavel
@@ -13,23 +13,30 @@
 \mt2 King of Yehudah,
 \mt3 When He Was Held Captive in Bavel
 \is1 Introduction
+\ip This short \bk Prayer of Menasheh\bk* (Manasseh) is presented as the prayer of Yehudah's (Judah's) king while he was held captive in Bavel (Babylon). The account in 2 Chronicles 33:10-20 tells how Menasheh humbled himself, prayed, and was restored to his kingdom, but doesn't give the words of his prayer. This document gives a prayer in his voice.
+\ip The prayer moves from acknowledging God's power and mercy to a direct confession of wrongdoing. Menasheh admits that he doesn't deserve rescue, asks for forgiveness, and promises to praise God. Its central hope is that God's compassion can reach even someone who has sinned greatly.
 \ip \bk The Prayer of Menasheh\bk* is recognised as Deuterocanonical Scripture by the Greek Orthodox and Russian Orthodox Churches. It is included in an appendix to the Latin Vulgate Bible.
+\iot Main components of this prayer
+\io1 God's power, patience, and mercy \ior 1:1-8\ior*
+\io1 Confession and a plea for forgiveness \ior 1:9-13\ior*
+\io1 Confidence in God's mercy and a promise of praise \ior 1:14-15\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
+\s1 Menasheh asks God for forgiveness
 \p
-\v 1 Oh LORD Almighty in heaven, God of our fathers Avraham, Yitshak \add !(Isaac)\add*, and Ya’akov \add !(Jacob)\add*, and of their righteous offspring,
-\v 2 you who have made heaven and earth, with all their order,
-\v 3 who have bound the sea by the word of your commandment, who have shut up the deep, and sealed it by your terrible and glorious name,
-\v 4 whom all things fear, yes, tremble before your power,
-\v 5 for the majesty of your glory can't be borne, and the anger of your threatening towards sinners is unbearable.
-\v 6 Your merciful promise is unmeasurable and unsearchable,
-\v 7 for you are the master Most High, of great compassion, patient and abundant in mercy, and relent at human suffering.
-\v 8 You,\f + \fr 1:8 \ft The Alex. MS. omits \fqa You… saved.\f* Oh master, according to your great goodness have promised repentance and forgiveness to those who have sinned against you. Of your infinite mercies, you have appointed repentance to sinners, that they may be saved. You therefore, Oh master, who are the god of the just, have not appointed repentance to the just, to Avraham, Yitshak, and Ya’akov, which have not sinned against you, but you have appointed repentance to me, a sinner.
-\v 9 Because I have sinned more than the number of the sands of the sea. My transgressions are multiplied,\f + \fr 1:9 \ft The Alex. MS. omits \fqa Oh master… multiplied.\f* Oh master, my transgressions are multiplied, and I am not worthy to behold and see the height of heaven for the multitude of my iniquities.
-\v 10 I am bowed down with many iron bands, so that I can't lift up my head by reason of my sins,\f + \fr 1:10 \ft Some authorities omit \fqa by reason of my sins.\f* neither have I any relief; for I have provoked your wrath, and done that which is evil before you:\f + \fr 1:10 \ft The Alex. MS. omits \fqa I did… commandments.\f* I didn't do your will, neither did I keep your commandments. I have set up abominations, and have multiplied detestable things.
-\v 11 Now therefore I bow the knee of my heart, asking you for grace.
-\v 12 I have sinned, Oh master, I have sinned, and I acknowledge my iniquities;
-\v 13 but, I humbly ask you, forgive me, Oh master, forgive me, and please don't destroy me with my iniquities. Don't be angry with me forever, by reserving evil for me. Don't condemn me into the lower parts of the earth. Because you, Oh master, are the god of those who repent.
-\v 14 In me you will show all your goodness, for you will save me, even though I am unworthy, according to your great mercy.
-\v 15 Then I will praise you forever all the days of my life; for all the army of heaven sings your praise, and yours is the glory forever and ever. Amen.
+\v 1 Oh LORD¦114462 Almighty in heaven, God¦114465 of our fathers¦114467 Avraham, Yitshak \add !(Isaac)\add*, and Ya'akov \add !(Jacob)\add*, and of their righteous descendants,
+\v 2 you who've¦114481 made¦114482 heaven¦114484 and¦114485 earth¦114487, with¦114488 all¦114489 their order,
+\v 3 who've¦114493 bound the¦114495 sea¦114496 by the¦114497 word¦114498 of¦114499 your commandment, who've¦114502 shut¦114503 up the¦114504 deep, and¦114506 sealed¦114507 it by your terrible and¦114511 glorious name¦114513,
+\v 4 whom all¦114516 things fear, yes, tremble before your power¦114522,
+\v 5 for the¦114526 majesty¦114527 of your glory¦114529 can't be borne, and¦114531 the anger of your threatening towards¦114536 sinners is unbearable.
+\v 6 Your merciful¦114545 promise¦114547 is immeasurable and unsearchable¦114543,
+\v 7 for¦114550 you're¦114551 the master Most High, of great compassion¦114581, patient and¦114556 abundant in mercy¦114557, and relent at human¦114561 suffering.
+\v 8 You,\f + \fr 1:8 \ft The Alex. MS. omits \fqa You… saved.\f* Oh master, according to your great goodness have promised repentance and forgiveness to those who've sinned against you. Of your infinite mercies, you've appointed repentance to sinners, that they may be saved. You therefore¦114589, Oh master, who are the¦114591 god¦114592 of the¦114593 just¦114594, haven't appointed repentance to the just, to Avraham, Yitshak, and¦114601 Ya'akov, which haven't sinned against you, but¦114603 you've¦114608 appointed repentance to me, a sinner.
+\v 9 Because I've sinned more times than there are grains of sand in the¦114610 sea. My transgressions are multiplied,\f + \fr 1:9 \ft The Alex. MS. omits \fqa Oh master… multiplied.\f* Oh master, my transgressions are multiplied, and¦114615 I'm¦114617 not worthy¦114618 to¦114619 look up and¦114620 see the¦114622 height¦114623 of¦114624 heaven¦114625 for the multitude¦114627 of my iniquities.
+\v 10 I'm bowed down with many iron bands, so that¦114636 I can't¦114637 lift up my head¦114640 because¦114647 of my sins,\f + \fr 1:10 \ft Some authorities omit \fqa by reason of my sins.\f* and I¦114641 have no¦114643 relief; for I've¦114645 provoked your anger¦114650, and¦114652 done that¦114653 which is evil¦114654 before¦114655 you¦114656:\f + \fr 1:10 \ft The Alex. MS. omits \fqa I did… commandments.\f* I didn't¦114658 do¦114659 your will¦114661, and¦114663 I didn't¦114664 keep your commandments. I've set up abominations, and¦114671 have multiplied detestable things.
+\v 11 Now¦114675 therefore I bow¦114676 the knee¦114677 of my heart¦114678, asking you¦114683 for grace.
+\v 12 I've sinned, Oh master, I've sinned, and¦114688 I¦114699 acknowledge¦114693 my iniquities;
+\v 13 but, I¦114702 humbly ask you, forgive me, Oh master, forgive me, and¦114703 please don't destroy me with my iniquities. Don't be angry with me forever, by reserving evil¦114717 for me. Don't condemn me into¦114722 the¦114723 lower parts of the¦114725 earth¦114726. Because¦114727 you¦114728, Oh master, are the god¦114730 of those who¦114732 repent.
+\v 14 In¦114735 me you'll show all¦114738 your goodness, for you'll¦114741 save¦114745 me, even though I'm¦114744 unworthy, according¦114747 to¦114747 your great mercy¦114750.
+\v 15 Then¦114752 I'll praise you¦114754 forever all¦114756 the¦114758 days¦114759 of my life¦114761; for all¦114766 the¦114767 army of heaven¦114770 sings your praise, and¦114771 yours is¦114773 the¦114774 glory¦114775 forever and ever. Amen¦114779.

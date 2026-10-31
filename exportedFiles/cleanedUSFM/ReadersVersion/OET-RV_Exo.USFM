@@ -1,4 +1,4 @@
-\id EXO - Open English Translation—Readers’ Version (OET-RV) v0.2.0
+\id EXO - Open English Translation—Readers’ Version (OET-RV) v0.2.3
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EXO
@@ -31,7 +31,7 @@
 \p
 \v 1 These are the names of Yisrael’s \add (Israel)\add* descendants who accompanied Ya’akov \add (Jacob)\add* when he moved his household to Mitsrayim \add (Egypt)\add*:\x + \xo 1:1-4: \xt Gen 46:8-27.\x*
 \v 2 Re’uven, Shim’on \add (Simeon)\add*, Levi, Yehudah \add (Judah)\add*,
-\v 3 Yisakar \add (Issachar)\add*, Zevulun, Benyamin \add (Benjamin)\add*,
+\v 3 Yisakar \add (Issachar)\add*, Zevulun, Benyamin,
 \v 4 Dan, Naftali \add (Naphtali)\add*, Gad, and Asher.
 \v 5 \add At that time,\add* Ya’akov had a total of seventy descendants (including Yosef \add (Joseph)\add* \add and his sons\add* who were \add already\add* in Mitsrayim.)
 \p
@@ -41,7 +41,7 @@
 \v 8 \add Eventually\add* a new king \add came to power\add* in Mitsrayim who had never known Yosef\x + \xo 1:8: \xt Acts 7:18.\x*
 \v 9 and he told his people, “Listen, those descendants of Yisrael \add (Israel)\add* are becoming more numerous and powerful than us.
 \v 10 \add So\add*, let’s deal wisely with them, in case they \add continue to\add* multiply. Then if war was to break out, they could easily take the other side and fight against us, and then leave \add our\add* country.”\x + \xo 1:10: \xt Acts 7:19.\x*
-\v 11 Then they appointed overseers to work them in slave gangs, and using them as forced labour, they built the store cities at Piton and Rameses for Par’oh \add (Pharaoh)\add*.
+\v 11 Then they appointed overseers to work them in slave gangs, and using them as forced labour, they built the store cities at Piton and Ra’meses for Par’oh \add (Pharaoh)\add*.
 \v 12 \add However,\add* the more they oppressed them, the more they multiplied and spread out, and \add the more\add* the \add Mitsrim\add* \add (Egyptians)\add* came to dread the Israelis.
 \v 13 \add So\add* \add they\add* made the Israelis work \add long, hard hours\add*,
 \v 14 and they made their lives bitter with the hard slavery. \add They were forced to make\add* mortar and bricks, as well as all kinds of slave labour in the \add fields\add*—all the work they had to do was \add strenuous and tiring\add*.
@@ -92,7 +92,7 @@
 \v 22 \add When\add* she gave birth to a son, he named him ‘Gereshom’ \add (which means ‘foreigner’)\add* because he said, “I’ve become a foreigner \add living\add* in a foreign land.”
 \p
 \v 23 \add Eventually\add* Mitsrayim’s \add (Egypt)\add* king died, \add but\add* the Israelis groaned from the slavery \add they were still under\add* and they cried out, and their cry \add for freedom\add* from slavery went up to God.
-\v 24 \add He\add* heard their groaning and remembered his agreement with Avraham \add (Abraham)\add*, with Yitshak \add (Isaac)\add*, and with Ya’akov \add (Jacob)\add*,\x + \xo 2:24: \xt Gen 15:13-14.\x*
+\v 24 \add He\add* heard their groaning and remembered his agreement with Avraham, with Yitshak \add (Isaac)\add*, and with Ya’akov \add (Jacob)\add*,\x + \xo 2:24: \xt Gen 15:13-14.\x*
 \v 25 and \add he\add* \add looked down on\add* the Israelis and \add he\add* \add was concerned about them\add*.
 \c 3
 \s1 God calls Mosheh from a burning bush
@@ -105,10 +105,10 @@
 \p “I’m here,” he \add replied\add*.
 \p
 \v 5 “Don’t come any closer,” \add Yahweh\add* said. “Take off your sandals because the place where you’re standing is HOLY ground.
-\v 6 I’m the god of your father and the god of Avraham \add (Abraham)\add*, Yitshak \add (Isaac)\add*, and Ya’akov \add (Jacob)\add*.” \add So\add* Mosheh covered hid his face because he was scared to look at God.
+\v 6 I’m the god of your father and the god of Avraham, Yitshak \add (Isaac)\add*, and Ya’akov \add (Jacob)\add*.” \add So\add* Mosheh covered hid his face because he was scared to look at God.
 \p
 \v 7 “I’ve certainly noticed the suffering of my people in Mitsrayim \add (Egypt)\add*,” Yahweh \add continued\add*, “I’ve heard their \add cries\add* as the \add slave drivers\add* oppress them—I’m unmistakingly aware of their \add pain\add*.
-\v 8 \add So\add* I’ve come down to set them free from Mitsri \add (Egyptian)\add* \add control\add* and to bring them up from \add there\add* to a good and wide land—a land flowing with milk and honey. \add It’s currently\add* the place of the Kena’anim \add (Canaanites)\add*, the Hittim, the Amorim, the Perizzim, the Hivim, and the Yevusim.
+\v 8 \add So\add* I’ve come down to set them free from Mitsri \add (Egyptian)\add* \add control\add* and to bring them up from \add there\add* to a good and wide land—a land flowing with milk and honey. \add It’s currently\add* the place of the Kena’anim \add (Canaanites)\add*, the Hitim, the Amorim, the Perizim, the Hivim, and the Yevusim.
 \v 9 \add Yes,\add* the cry of the Israelis has now \add reached\add* me and what’s more, I’ve seen \add how much\add* the Mitsrim \add (Egyptians)\add* are oppressing them.
 \v 10 \add So\add* go now and I’ll send you to Par’oh \add (Pharaoh)\add* and bring my people—Yisrael’s \add (Israel)\add* descendants—out from Mitsrayim.”
 \p
@@ -119,9 +119,9 @@
 \v 13 “\add But listen\add*,” Mosheh told God, “\add If\add* I’m about to go to the Israelis and if I told them, ‘Your ancestors’ god has sent me to you.’ then they’d \add ask\add* me, ‘\add Oh yeah,\add* what’s his name?’ then what would I tell them?”\x + \xo 3:13: \xt Exo 6:2-3.\x*
 \p
 \v 14 “I AM WHO I AM,” God told Mosheh. “You’ll \add tell them this\add*: ‘I AM (Yahweh) sent me to you.’ ”\x + \xo 3:14: \xt Rev 1:4,8.\x*
-\v 15 Then \add he\add* \add continued\add*, “This is what you \add need\add* to tell the Israelis: ‘Yahweh, the god of your ancestors, the god of Avraham \add (Abraham)\add*, Yitshak \add (Isaac)\add*, and Ya’akov \add (Jacob)\add*, sent me to you. This is my name forever, and this is my memorial throughout the generations.’
+\v 15 Then \add he\add* \add continued\add*, “This is what you \add need\add* to tell the Israelis: ‘Yahweh, the god of your ancestors, the god of Avraham, Yitshak \add (Isaac)\add*, and Ya’akov \add (Jacob)\add*, sent me to you. This is my name forever, and this is my memorial throughout the generations.’
 \v 16 Go and gather the Israeli elders, and tell them, ‘Yahweh, the god of your ancestors, appeared to me, the god of Avraham, Yitshak, and Ya’akov, to say, “I’ve certainly noticed you all and \add how you’re all being treated\add* in Mitsrayim,
-\v 17 and I’ve promised to take you all from your mistreatment in Mitsrayim, away to the land where the Kena’anim \add (Canaanites)\add*, Hittim, Amorim, Perizzim, Hivim, and the Yevusim \add are currently living\add*—to a land flowing with milk and honey.” ’
+\v 17 and I’ve promised to take you all from your mistreatment in Mitsrayim, away to the land where the Kena’anim \add (Canaanites)\add*, Hitim, Amorim, Perizim, Hivim, and the Yevusim \add are currently living\add*—to a land flowing with milk and honey.” ’
 \p
 \v 18 Then \add the people\add* will listen to what you tell them, and you and the Israeli elders will go to the Mitsri \add (Egyptian)\add* king and you’ll all tell him, ‘Yahweh, the god of the Ivrim \add (Hebrews)\add*, has met with us. \add So\add* now, please let us go three days’ journey into the wilderness, so we can sacrifice to Yahweh, our god.’
 \v 19 \add But\add* I know that the Mitsri king won’t let you go \add until he’s forced to\add*.
@@ -137,7 +137,7 @@
 \p “\add My\add* \add shepherd’s\add* staff,” he said.
 \v 3 “Throw it on the ground,” \add Yahweh\add* said. \add So Mosheh\add* he threw it onto the ground and it became a snake, and \add he quickly moved back away from it\add*.
 \v 4 “Pick it up by its tail.” Yahweh told \add him\add*. \add So\add* \add Mosheh\add* picked it up by the tail and it became a staff in his hand \add again\add*.
-\v 5 “That’s so that they’ll believe that \add I\add* appeared to you: Yahweh—the god of their ancestors—the god of Avraham \add (Abraham)\add*, Yitshak \add (Isaac)\add*, and Ya’akov \add (Jacob)\add*.”
+\v 5 “That’s so that they’ll believe that \add I\add* appeared to you: Yahweh—the god of their ancestors—the god of Avraham, Yitshak \add (Isaac)\add*, and Ya’akov \add (Jacob)\add*.”
 \p
 \v 6 “\add Now\add* put your hand \add on your chest—\add*inside your robe.” Yahweh added. \add So\add* \add Mosheh\add* \add did that\add*, and when he pulled it out again, his hand had gone \add totally\add* white with disease.
 \v 7 Then \add Yahweh\add* said, “\add Now, put\add* your hand \add back in again\add*.” \add So\add* \add Mosheh\add* \add did it again,\add* and when he pulled it out, wow, it had \add returned to normal\add*.
@@ -219,7 +219,7 @@
 \s1 God promises to rescue the people
 \p
 \v 2 Then God spoke to Mosheh \add (Moses)\add* \add again\add*, “I am Yahweh
-\v 3 and I \add revealed myself\add* to Avraham \add (Abraham)\add*, to Yitshak \add (Isaac)\add*, and to Ya’akov \add (Jacob)\add* as El Shaddai (God the provider) but they didn’t know me by my name Yahweh.\x + \xo 6:2-3: \xt Gen 17:1; 28:3; 35:11; Exo 3:13-15.\x*
+\v 3 and I \add revealed myself\add* to Avraham, to Yitshak \add (Isaac)\add*, and to Ya’akov \add (Jacob)\add* as El Shaddai (God the provider) but they didn’t know me by my name Yahweh.\x + \xo 6:2-3: \xt Gen 17:1; 28:3; 35:11; Exo 3:13-15.\x*
 \v 4 \add What’s more,\add* I made an agreement with them: to give them the Kena’an \add (Canaan)\add* region—the area which they had been staying in.
 \v 5 \add Furthermore,\add* I’ve heard the complaints from the Israelis who have been enslaved by the Mitsrim \add (Egyptians)\add*, and I have remembered my agreement.
 \v 6 Therefore, tell the Israelis, ‘I am Yahweh and I will \add help you escape from\add* the \add control\add* of the Mitsrim and rescue you from their slavery. I’ll buy you out of slavery using my \add power\add* and by \add punishing the Mitsrim for this injustice\add*.
@@ -234,9 +234,9 @@
 \s1 The ancestors of Mosheh and Aharon
 \p
 \v 14 The following were the leaders of the clans:
-\p The sons of \bd Re’uven\bd* (Yisrael’s \add (Israel)\add* eldest son) were Hanok, Pallu, Hetsron, and Karmi, and \add they headed\add* the clans of Re’uven.
+\p The sons of \bd Re’uven\bd* (Yisrael’s \add (Israel)\add* eldest son) were Hanok, Palu, Hetsron, and Karmi, and \add they headed\add* the clans of Re’uven.
 \p
-\v 15 \bd Shim’on’s \add (Simeon)\add*\bd* sons were Yemuel, Yamin, Ohad, Yakin, Zohar, and Shaul—the son of a Kena’ani \add (Canaanite)\add* \add woman\add*, and \add they headed\add* the clans of Shim’on.
+\v 15 \bd Shim’on’s\bd* \add (Simeon)\add* sons were Yemuel, Yamin, Ohad, Yakin, Tsohar, and Shaul—the son of a Kena’ani \add (Canaanite)\add* \add woman\add*, and \add they headed\add* the clans of Shim’on.
 \p
 \v 16 \bd Levi’s\bd* sons were Gereshon, Kohat, and Merari.\x + \xo 6:16-19: \xt Num 3:17-20; 26:57-58; 1Ch 6:16-19.\x* Levi was 137 years old when he died.
 \v 17 Gereshon’s sons were Livni and Shimei, and \add they headed\add* their clans.
@@ -244,10 +244,10 @@
 \v 19 Merari’s sons were Mahli and Mushi, and \add all of those headed\add* the clans of Levi.
 \v 20 Amram married his aunt Yokeved, and she gave birth to Aharon \add (Aaron)\add* and Mosheh \add (Moses)\add*. Amram \add lived\add* to be 137 years old.
 \v 21 Yitshar’s sons were Korah, Nefeg, and Zikri.
-\v 22 Uziel’s sons were Mishael, Elitsafan, and Sithri.
+\v 22 Uziel’s sons were Mishael, Elitsafan, and Sitri.
 \p
-\v 23 Aharon \add married\add* Elisheva, Amminadav’s daughter and the sister of Nahshon, and she gave birth to Nadav, Avihu, Eleazar, and Itamar.
-\v 24 Korah’s sons were Assir, Elkanah, and Abiasaph, and \add they headed\add* the clans of Korah.
+\v 23 Aharon \add married\add* Elisheva, Aminadav’s daughter and the sister of Nahshon, and she gave birth to Nadav, Avihu, Eleazar, and Itamar.
+\v 24 Korah’s sons were Asir, Elkanah, and Aviasaf, and \add they headed\add* the clans of Korah.
 \v 25 Aharon’s son Eleazar took a wife for himself from the daughters of Putiel and she gave birth to Pinhas.
 \p \add All of\add* those \add headed\add* the clans of Levi.
 \p
@@ -501,7 +501,7 @@
 \v 35 The Israelis did everything that Mosheh had instructed them, \add including\add* asking for items of gold and silver, and clothing from the Mitsrim.\x + \xo 12:35-36: \xt Exo 3:21-22.\x*
 \v 36 Yahweh gave the people favour in the eyes of the Mitsrim, \add so by\add* \add their\add* requests, they were able to strip the Mitsrim of their wealth.
 \p
-\v 37 Then the Israelis walked from Rameses toward Sukkot—about 600,000 strong men on foot, not counting \add women and\add* children.
+\v 37 Then the Israelis walked from Ra’meses toward Sukot—about 600,000 strong men on foot, not counting \add women and\add* children.
 \v 38 A large assortment of other people also went with them, along with large numbers of sheep and goats, and cattle.
 \p
 \v 39 They baked the dough that they brought from Mitsrayim \add (Egypt)\add* into flat bread since it \add hadn’t had time to rise\add*,\f + \fr 12:39 \ft Most modern readers probably visualise yeast bought from a supermarket when ‘leaven’ (or even ‘yeast’) is mentioned in a Bible translation. However, it’s much more likely that each day, a portion of the bread dough was set aside for the natural yeasts (think ‘sour dough’ bread) to accumulate, and then mixed into the new batch of dough the next day and left for the natural yeasts to work and rise the dough. The text here implies that it’s possible that the Hebrew word translated ‘unleavened’ really meant ‘unrisen’ on that first ‘pass-over’ night.\f* because they were driven out of Mitsrayim \add in a hurry\add* and hadn’t \add had time to prepare food to take\add*.
@@ -529,7 +529,7 @@
 \p
 \v 3 Then Mosheh \add (Moses)\add* told the people, “\add Always\add* remember this day, that you went out of Mitsrayim \add (Egypt)\add*, \add rescued\add* from slavery, because Yahweh \add used his power\add* to bring you out from there. And \add nothing with yeast in it\add* can be eaten \add when you celebrate this\add*.
 \v 4 Today you are leaving in the month of Aviv,
-\v 5 and \add when\add* Yahweh brings you into the \add area occupied by\add* the Kena’anim \add (Canaanites)\add*, Hittim, Amorim, Hivim, and the Yevusim (which he swore to your fathers to give to you—a land flowing with milk and honey) you must observe this ceremony in this \add same\add* month.
+\v 5 and \add when\add* Yahweh brings you into the \add area occupied by\add* the Kena’anim \add (Canaanites)\add*, Hitim, Amorim, Hivim, and the Yevusim (which he swore to your fathers to give to you—a land flowing with milk and honey) you must observe this ceremony in this \add same\add* month.
 \v 6 You must eat \add only\add* flat bread for seven days, and then on the seventh day, there will be a festival to \add honour\add* Yahweh.
 \v 7 \add Again,\add* you must only eat flat bread for seven days—\add not only that\add* you mustn’t \add even have\add* any risen bread, nor must you have any yeast within any of your borders.
 \v 8 On that \add festival\add* day, you must tell your \add children\add*, ‘This is because of what Yahweh did for \add us\add* when \add we left\add* Mitsrayim.’
@@ -550,14 +550,14 @@
 \p
 \v 19 Mosheh \add (Moses)\add* \add ensured that\add* Yosef’s \add (Joseph)\add* bones were taken with \add them\add*, because \add many years back\add* \add Yosef\add* had made the Israelis promise, saying, “God will certainly \add take notice\add* of you all, and you must take my bones \add out\add* from here with you.”\x + \xo 13:19: \xt Gen 50:25; Josh 24:32.\x*
 \p
-\v 20 The people travelled on from Sukkot and camped at Etham on the edge of the wilderness.
+\v 20 The people travelled on from Sukot and camped at Etam on the edge of the wilderness.
 \v 21 During the day, Yahweh went ahead of them in a pillar of cloud to lead them on the way, and at nighttime, he went in a pillar of fire to be light to them, \add so they could travel both\add* in the daytime and at night.
 \v 22 The daytime pillar of cloud and the nighttime pillar of fire, didn’t ever leave their place \add ahead\add* of the people.
 \c 14
 \s1 Crossing the Red Sea
 \p
 \v 1 Then Yahweh told Mosheh \add (Moses)\add*,
-\v 2 “Tell the Israelis that they should turn and camp in front of Pi-Hahirot, between Migdol and the sea, in front of Ba’al-Zephon. You all are to camp by the sea opposite it.
+\v 2 “Tell the Israelis that they should turn and camp in front of Pi-Hahirot, between Migdol and the sea, in front of Ba’al-Tsefon. You all are to camp by the sea opposite it.
 \v 3 Then Par’oh \add (Pharaoh)\add* will say, ‘They \add are confused\add* \add and lost\add*—the wilderness has boxed them in.’
 \v 4 I’ll strengthen Par’oh’s \add resolve\add* and he’ll chase after them. Then because of Par’oh and all his army, I’ll be \add honoured\add* and the Mitsrim \add (Egyptians)\add* will know that I am Yahweh.” \add So the Israelis camped where they were instructed\add*.
 \p
@@ -565,13 +565,13 @@
 \v 6 Then he hitched up his chariot and took his \add army\add* with him.
 \v 7 He took 600 of the best chariots as well as all the other Mitsri \add (Egyptian)\add* chariots and officers \add to supervise\add* them.
 \v 8 Yahweh strengthened the Mitsri king’s resolve and so Par’oh pursued after the Israelis after they had confidently marched out \add of Mitsrayim\add*.
-\v 9 The Mitsrim pursued them, then all of Par’oh’s \add horses\add* and chariots, along with his mounted soldiers and his foot army, overtook them camping above the sea above Pi-Hahirot, across from Ba’al-Zephon.
+\v 9 The Mitsrim pursued them, then all of Par’oh’s \add horses\add* and chariots, along with his mounted soldiers and his foot army, overtook them camping above the sea above Pi-Hahirot, across from Ba’al-Tsefon.
 \p
 \v 10 As \add the Mitsrim\add* approached, the Israelis looked back, and \add to their horror\add*, saw the army coming after them. They were extremely afraid and cried out to Yahweh.
-\v 11 They \add complained\add* to Mosheh \add (Moses)\add*, “Is it because there weren’t any graves in Mitsrayim that you brought us here to die in the wilderness? What have you done to us? Why did you bring us out from Mitsrayim?
+\v 11 They \add complained\add* to Mosheh, “Is it because there weren’t any graves in Mitsrayim that you brought us here to die in the wilderness? What have you done to us? Why did you bring us out from Mitsrayim?
 \v 12 Isn’t this \add exactly what we told\add* you in Mitsrayim when we said, ‘\add Just leave us alone\add* and let us serve the Mitsrim’? Because serving the Mitsrim \add sounds a lot\add* better to us than dying \add out here\add* in the wilderness.”
 \p
-\v 13 Then Mosheh told the people, “You mustn’t be afraid. Stand still and see how Yahweh saves you all—he’s going to do it today, because any Mitsrim that you see today, you’ll never, ever see them again.
+\v 13 Then Mosheh \add (Moses)\add* told the people, “You mustn’t be afraid. Stand still and see how Yahweh saves you all—he’s going to do it today, because any Mitsrim that you see today, you’ll never, ever see them again.
 \v 14 Yahweh himself will fight for you all—all you need to do is to remain calm.”
 \v 15 Then Yahweh \add scolded\add* Mosheh, “Why are you \add still here\add* crying out to me? Talk to the Israelis and get them moving forward.
 \v 16 As for you, raise your staff and stretch your arm out over the sea and divide it. Then the Israelis will go on onto dry ground through the middle of the sea.
@@ -687,7 +687,7 @@
 \c 16
 \s1 The manna and the quail
 \p
-\v 1 Then they left Eylim, and all the Israelis entered into the wilderness at Siyn (between Eylim and Sinay) \add around six weeks\add* after leaving Mitsrayim \add (Egypt)\add*,
+\v 1 Then they left Eylim, and all the Israelis entered into the wilderness at Sin (between Eylim and Sinay) \add around six weeks\add* after leaving Mitsrayim \add (Egypt)\add*,
 \v 2 and all the Israelis murmured against Mosheh \add (Moses)\add* and Aharon \add (Aaron)\add* \add there\add* in the wilderness,
 \v 3 saying, “If only \add Yahweh had killed us\add* in Mitsrayim, \add where we’d be\add* sitting by a pot of meat eating bread until we’re full, because you’ve brought us out into this wilderness to \add starve us all to death\add*.”
 \p
@@ -736,7 +736,7 @@
 \s1 Yahweh gives water from a rock
 \r (Num. 20:1-13)
 \p
-\v 1 Then all the Israelis moved on from Siyn in the wilderness, travelling following Yahweh’s instructions. They camped at Refidim \add but\add* there was no water for the people to drink.\x + \xo 17:1-7: \xt Num 20:2-13.\x*
+\v 1 Then all the Israelis moved on from Sin in the wilderness, travelling following Yahweh’s instructions. They camped at Refidim \add but\add* there was no water for the people to drink.\x + \xo 17:1-7: \xt Num 20:2-13.\x*
 \v 2 \add So\add* the people argued with Mosheh \add (Moses)\add* \add again\add*, saying, “Give us water to drink!”
 \p “Why are you all quarrelling with me?” Mosheh \add answered\add*. “Why are you all testing Yahweh?”
 \p
@@ -747,7 +747,7 @@
 \v 5 “Walk on ahead of the people,” Yahweh told Mosheh, “and take some of the Israeli elders with you, and your staff—the one which you struck the river with. Take it in your hand and go.
 \v 6 Watch me. I will stand \add in front of you\add* there on the rock at Horev. Then you will strike the rock and \add water\add* will come out of it, and the people will drink.” \add So\add* Mosheh did that while the Israeli elders watched.
 \p
-\v 7 \add Mosheh\add* named that place \add both\add* ‘Massah’ \add (which means ‘testing’)\add* and ‘Merivah’ \add (which means ‘complaining’)\add*, because of the conflict among the Israelis and because of how they tested Yahweh by saying, ‘Is Yahweh among us or not?’
+\v 7 \add Mosheh\add* named that place \add both\add* ‘Masah’ \add (which means ‘testing’)\add* and ‘Merivah’ \add (which means ‘complaining’)\add*, because of the conflict among the Israelis and because of how they tested Yahweh by saying, ‘Is Yahweh among us or not?’
 \s1 Mosheh’s arms held high to defeat Amalek
 \p
 \v 8 Then the Amalek \add army\add* came and attacked Yisrael \add (Israel)\add* at Refidim,
@@ -825,7 +825,7 @@
 \v 20 Yahweh had descended onto the top of Mt. Sinay, and \add he\add* called Mosheh up to the top of the mountain, \add so\add* Mosheh ascended.
 \v 21 \add But\add* Yahweh told \add him\add*, “Go \add back\add* down and warn the people in case they force their way through to look at \add me\add* and many of them perish.
 \v 22 Also, the priests who come nearer to \add me\add*, they \add must be very careful to purify themselves\add* in case \add I\add* \add suddenly punish\add* them.”
-\v 23 \add But\add* Mosheh \add questioned\add* Yahweh, “The people aren’t able to come up on Mt. Sinay, because you yourself warned us, ‘Set boundaries all around the mountain to keep it sacred.’ ”\x + \xo 19:23 \xt 19:12.\x*
+\v 23 \add But\add* Mosheh \add questioned\add* Yahweh, “The people aren’t able to come up on Mt. Sinay, because you yourself warned us, ‘Set boundaries all around the mountain to keep it sacred.’ ”\x + \xo 19:23: \xt 19:12.\x*
 \v 24 “Go \add back\add* down,” Yahweh \add responded\add*, “and bring Aharon \add (Aaron)\add* back up with you. \add However,\add* the priests and the people \add must not cross the boundary\add* to come up to \add me\add*, in case \add I\add* \add suddenly punish\add* them.”
 \v 25 \add So\add* Mosheh went down and spoke to the people.
 \c 20
@@ -1024,13 +1024,13 @@
 \v 20 Listen, I’m about to send a messenger \add in front of you\add* to guard you on the way, and to take you to the place that I have prepared.
 \v 21 \add Stay behind him\add* and listen to \add what he says\add*. Don’t \add annoy\add* him because he won’t \add put up with disobedience\add* because \add he represents my authority\add*.
 \v 22 \add But\add* if you \add take careful notice of his words\add* and do everything that I say, then I’ll be an enemy to your enemies and I’ll be against those who are against you.
-\v 23 My messenger will go \add ahead of you\add* and take you to \add face\add* the Amorim, the Hittim, the Perizzim, the Kena’anim \add (Canaanites)\add*, the Hivim, and the Yevusim, and then I’ll annihilate them.
+\v 23 My messenger will go \add ahead of you\add* and take you to \add face\add* the Amorim, the Hitim, the Perizim, the Kena’anim \add (Canaanites)\add*, the Hivim, and the Yevusim, and then I’ll annihilate them.
 \v 24 You mustn’t serve or bow down to their gods, and you mustn’t do \add what those people\add* do, because you must completely overthrow them and completely smash their \add sacred\add* \add stone\add* pillars.
 \v 25 You all must worship your god Yahweh, and he’ll bless your food and your water. I’ll keep sickness away from you
 \v 26 \add and\add* there won’t be \add any miscarriages\add* or \add women\add* in your land that can’t conceive. I’ll ensure \add that you live your full\add* number of days.
 \p
 \v 27 I’ll \add go ahead of you and will terrify\add* and confuse all of the people \add groups\add* \add whose lands you’ll enter\add*, and I’ll \add cause them to flee from you in battle\add*.
-\v 28 I’ll send \add hornets\add* \add ahead of you\add* and \add they’ll\add* drive out the Hivim, the Kena’anim, and the Hittim \add before you get there\add*.
+\v 28 I’ll send \add hornets\add* \add ahead of you\add* and \add they’ll\add* drive out the Hivim, the Kena’anim, and the Hitim \add before you get there\add*.
 \v 29 I won’t drive them out \add more than a year ahead of you\add* in case the area becomes desolate and the \add wild animals proliferate too much\add* in the countryside.
 \v 30 I’ll drive them out little by little \add ahead of you\add* until \add your numbers increase\add* and you take over the land.
 \v 31 Then I’ll \add help you establish\add* your \add borders\add* from the Red Sea to the Mediterranean, and from the wilderness to the \add Perat\add* \add (Euphrates)\add* river, because I’ll \add help you defeat the existing\add* inhabitants of the land and so you’ll drive them right out.
@@ -1235,7 +1235,7 @@
 \v 28 Then tie the rings on the sacred pouch to the rings on the apron with a blue cord so that the pouch sits above the waistband and can’t come loose from the apron.
 \p
 \v 29 Then \add whenever\add* Aharon \add (Aaron)\add* enters the sacred inner room \add to stand\add* in front of \add me\add*, he’ll be carrying the names of Yisrael’s sons over his heart on the sacred pouch that’ll be used for \add making decisions\add*.
-\v 30 Then place the ‘Urim’ and the ‘Tummim’\f + \fr 28:30 \ft These two objects appear abruptly in the text—they haven’t been described previously—in fact, they’re not described anywhere, so we don’t really know much about them except that it seems they were used somehow to indicate Yahweh’s decision on important matters. Although we presume that Mosheh must have already been familiar with them, sadly we’re unable to translate these two Hebrew words, because we’re not.\f*\x + \xo 28:30: \xt Num 27:21; Deu 33:8; Ezr 2:63; Neh 7:65.\x* in the sacred pouch so they’ll be over Aharon’s heart when he goes in before Yahweh, thus Aharon will continually bear the decisions of the Israelis over his heart before Yahweh.
+\v 30 Then place the ‘Urim’ and the ‘Tumim’\f + \fr 28:30 \ft These two objects appear abruptly in the text—they haven’t been described previously—in fact, they’re not described anywhere, so we don’t really know much about them except that it seems they were used somehow to indicate Yahweh’s decision on important matters. Although we presume that Mosheh must have already been familiar with them, sadly we’re unable to translate these two Hebrew words, because we’re not.\f*\x + \xo 28:30: \xt Num 27:21; Deu 33:8; Ezr 2:63; Neh 7:65.\x* in the sacred pouch so they’ll be over Aharon’s heart when he goes in before Yahweh, thus Aharon will continually bear the decisions of the Israelis over his heart before Yahweh.
 \s1 The other parts of the uniform
 \r (Exo. 39:22-31)
 \p
@@ -1426,7 +1426,7 @@
 \v 10 \add So\add* leave me alone now and let my anger rage against them. I will destroy them and make you into a great nation.”
 \v 11 But Mosheh pleaded with his god Yahweh and \add asked\add*, “Yahweh, why \add are you angry at\add* your people that you have brought out of Mitsrayim with \add your incredible power and actions\add*?\x + \xo 32:11-14: \xt Num 14:13-19.\x*
 \v 12 \add If you did that,\add* the Mitsrim \add (Egyptians)\add* would say, ‘\add Ha,\add* he brought them out with evil plans to kill them in the mountains and to destroy them from \add off the earth\add*.’ Turn from your anger and repent from \add any idea of doing\add* evil to your people.
-\v 13 Remember Avraham \add (Abraham)\add* and Yitshak \add (Isaac)\add* and Yisrael—your servants that you swore to them yourself and told them, ‘I will cause your descendants to increase like the stars in the sky, and I will give your descendants all this land which I told you about, and they will inherit it forever.’ ”\x + \xo 32:13: \xt Gen 22:16-17; Gen 17:8.\x*
+\v 13 Remember Avraham and Yitshak \add (Isaac)\add* and Yisrael—your servants that you swore to them yourself and told them, ‘I will cause your descendants to increase like the stars in the sky, and I will give your descendants all this land which I told you about, and they will inherit it forever.’ ”\x + \xo 32:13: \xt Gen 22:16-17; Gen 17:8.\x*
 \v 14 \add So\add* Yahweh repented from the evil that he’d said he’d do to his people.
 \p
 \v 15 Then Mosheh turned and went down the mountain carrying the two tablets with the transcript. The tablets were engraved on both sides—front and back.
@@ -1457,9 +1457,9 @@
 \c 33
 \s1 God tells them to leave Mt. Sinay
 \p
-\v 1 Then Yahweh \add told\add* Mosheh \add (Moses)\add*, “Go \add and\add* pack up from here, you and the people that you brought out of Mitsrayim \add (Egypt)\add*. Go to the land which I promised to Avraham \add (Abraham)\add*,\x + \xo 33:1: \xt Gen 12:7.\x* to Yitshak \add (Isaac)\add*,\x + \xo 33:1: \xt Gen 26:3.\x* and to Ya’akov \add (Jacob)\add*,\x + \xo 33:1: \xt Gen 28:13.\x* \add when I told them that\add* I’d give it to \add their descendants\add*.
-\v 2 I’ll send an angel \add ahead of you\add*, and I’ll drive out the Kena’anim \add (Canaanites)\add*, the Amorim, the Hittim, the Perizzim, the Hivim, and the Yevusim.
-\v 3 \add It’s\add* a land flowing with milk and honey, but I won’t \add stay among you\add* in case I \add decide to\add* destroy you on the way because you’re \add stubborn\add* people.”\x + \xo 33:3 \xt 32:9.\x*
+\v 1 Then Yahweh \add told\add* Mosheh \add (Moses)\add*, “Go \add and\add* pack up from here, you and the people that you brought out of Mitsrayim \add (Egypt)\add*. Go to the land which I promised to Avraham,\x + \xo 33:1: \xt Gen 12:7.\x* to Yitshak \add (Isaac)\add*,\x + \xo 33:1: \xt Gen 26:3.\x* and to Ya’akov \add (Jacob)\add*,\x + \xo 33:1: \xt Gen 28:13.\x* \add when I told them that\add* I’d give it to \add their descendants\add*.
+\v 2 I’ll send an angel \add ahead of you\add*, and I’ll drive out the Kena’anim \add (Canaanites)\add*, the Amorim, the Hitim, the Perizim, the Hivim, and the Yevusim.
+\v 3 \add It’s\add* a land flowing with milk and honey, but I won’t \add stay among you\add* in case I \add decide to\add* destroy you on the way because you’re \add stubborn\add* people.”\x + \xo 33:3: \xt 32:9.\x*
 \p
 \v 4 \add When\add* the people heard this \add angry comment\add*, they mourned and none of them put on \add anything fancy\add*.\f + \fr 33:4 \ft But they didn’t mourn enough to wear sackcloth and throw ashes on themselves.\f*
 \v 5 Yahweh \add had\add*\f + \fr 33:5 \ft Assumed.\f* \add told\add* Mosheh, “Tell the Israelis, ‘You’re all \add stubborn\add* people. If I went with you for \add even\add* one moment, then I’d destroy you. \add So\add* now, take off your \add jewellery and anything fancy that you’re wearing\add*, and then I’ll know what I’ll do to you.’ ”
@@ -1506,7 +1506,7 @@
 \v 9 and said, “Please, if I have found favour in your \add sight\add*, my master, please go with us, because \add these\add* are \add stubborn\add* people. And forgive our disobedience and our sin and \add take us as your inheritance\add*.”
 \p
 \v 10 \add Yahweh\add* said, “Listen, I’m about to make an agreement \add in front of\add* all your people.\f + \fr 34:10 \ft Because there’s no punctuation in the original Hebrew, it’s not certain if ‘in front of all your people’ goes with what it follows (as the \+em OET-RV\+em* has chosen), or with what follows it (as in several other translations).\f* I will do miracles that have not been \add done before\add* anywhere on the earth or in any country \add of the world\add*. All the people that you’re among will see \add my\add* work, because what I’m going to do with you is \add awe-inspiring\add*.
-\v 11 \add Be sure to obey\add* what I’m telling you today. See, I’m about to force the Amorim, the Kena’anim \add (Canaanites)\add*, the Hittim, the Perizzim, the Hivim, and the Yevusim out of the land ahead of you.
+\v 11 \add Be sure to obey\add* what I’m telling you today. See, I’m about to force the Amorim, the Kena’anim \add (Canaanites)\add*, the Hitim, the Perizim, the Hivim, and the Yevusim out of the land ahead of you.
 \v 12 \add Be very careful\add* not to make any treaties with any of the \add current\add* inhabitants of the land that you’re about to enter, in case it ends up trapping you.
 \v 13 \add What you must do instead is to\add* break down their altars and smash their pillars, and cut down the poles \add used to worship their god\add* Asherah.\x + \xo 34:13: \xt Deu 16:21.\x*
 \v 14 You must not bow down to any other god because Yahweh is a jealous God—jealous \add to protect\add* his name.

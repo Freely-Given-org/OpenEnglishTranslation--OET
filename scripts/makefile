@@ -97,8 +97,15 @@ CONNECTOR_PY := $(wildcard connect_OET-RV_words_via_OET-LV/*.py)
 SBE_RUST_DIR := ../../ScriptedBibleEditor/Rust/scripted_bible_editor
 SBE_RUST_BIN := $(SBE_RUST_DIR)/target/release/scripted_bible_editor
 
-# Rule to build the Rust binary if sources have changed
-$(SBE_RUST_BIN): $(shell find $(SBE_RUST_DIR)/src -type f) $(SBE_RUST_DIR)/Cargo.toml
+# The editor embeds the transliterator and its tables. Make must invoke Cargo
+# when those inputs change, even if the editor's own sources are unchanged.
+BTRANSLIT_RUST_DIR := ../../BibleTransliterations/Rust
+BTRANSLIT_RUST_INPUTS := $(shell find $(BTRANSLIT_RUST_DIR)/src -type f) \
+    $(wildcard $(BTRANSLIT_RUST_DIR)/*.rs $(BTRANSLIT_RUST_DIR)/*.py \
+               $(BTRANSLIT_RUST_DIR)/Cargo.* $(BTRANSLIT_RUST_DIR)/../sourceTables/*.tsv)
+
+# Rule to build the Rust binary if editor or transliteration inputs have changed
+$(SBE_RUST_BIN): $(shell find $(SBE_RUST_DIR)/src -type f) $(wildcard $(SBE_RUST_DIR)/Cargo.*) $(BTRANSLIT_RUST_INPUTS)
 	cd $(SBE_RUST_DIR) && cargo build --release
 
 # Choose ONE of the following
@@ -108,7 +115,7 @@ SBE := $(SBE_RUST_BIN)
 
 # Choose ONE of the following
 # BTranslit := ../../BibleTransliterations/Python/BibleTransliterations.py
-BTranslit := ../../BibleTransliterations/Rust/lib.src.rs ../../BibleTransliterations/Rust/build_static_tables.py ../../BibleTransliterations/Rust/build.rs
+BTranslit := $(BTRANSLIT_RUST_INPUTS)
 
 HebrewTranslit := ../../BibleTransliterations/sourceTables/Hebrew.tsv
 GreekTranslit := ../../BibleTransliterations/sourceTables/Greek.tsv
@@ -131,16 +138,20 @@ LV_NT: $(LV_NT_HTML) $(Clear_Bible_NT_lowfat_TSV)
 RV: $(RV_HTML)
 
 #=== Draft LV deuterocanonical books =======================
-# This stage reuses the NT transliterator and creates its own DC word table. It does
+# Greek drafts reuse the NT transliterator; LAO uses Lightfoot Latin and explicit
+# occurrence glosses. All 17 books share stable DC word numbers. This stage does
 # not add unreviewed lexical glosses to the existing HTML/USFM/VREF exports.
 # A cached, checksum-pinned build is offline; only missing source files download.
 DC_PYTHON ?= $(if $(wildcard .venv/bin/python),.venv/bin/python,$(UVrun) python)
-.PHONY: LV_DC DC_sources check_DC
-DC_sources:
+.PHONY: LV_DC LV_LAO DC_sources check_DC
+DC_sources: build_OET-LV_DC.py DC/source_manifest.json
 	@$(DC_PYTHON) build_OET-LV_DC.py fetch
 
-LV_DC: DC_sources $(SBE) $(scripted_DC_updates)
+LV_DC: DC_sources DC/LAO_latin_glosses.tsv $(SBE) $(scripted_DC_updates)
 	@$(DC_PYTHON) build_OET-LV_DC.py build --editor "$(SBE)"
+
+# Build the full table so LAO's links retain their offset after existing DC books.
+LV_LAO: LV_DC
 
 check_DC: LV_DC
 	@$(DC_PYTHON) -m unittest discover -s tests -p 'test_dc_pipeline.py'

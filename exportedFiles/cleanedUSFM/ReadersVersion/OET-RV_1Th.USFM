@@ -1,21 +1,21 @@
-\id 1TH - Open English Translation—Readers’ Version (OET-RV) v0.1.52
+\id 1TH - Open English Translation—Readers’ Version (OET-RV) v0.2.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 TH1
 \rem WORDTABLE OET-LV_NT_word_table.tsv
-\h 1 Thessalonians
-\toc1 1 Thessalonians
-\toc2 1 Thessalonians
+\h 1 Thessalonikai
+\toc1 1 Thessalonikai
+\toc2 1 Thessalonikai
 \toc3 1 Th.
-\mt2 Paul’s first letter to the believers in
-\mt1 Thessalonica
+\mt2 Paulos’s first letter to the believers in
+\mt1 Thessalonikai
 \is1 Introduction
-\ip Thessalonica was the capital city of the Roman province of Macedonia (and is now the large, modern city of Thessaloniki in Greece). Paul taught God’s message there in Thessalonica after he left Philippi (Acts 17:1-4). Before long, there was disagreement from Jews upset about Paul’s preaching to non-Jews (Acts 17:5-9). So Paul was forced to leave Thessalonica and he went on to Berea (Acts 17:10-13). Then after a while he went on to Athens (Acts 17:14-15). Finally, he continued on to Corinth (Acts 18:1-17). On his arrival there, he heard Timothy’s account of his other work. He had been told by Timothy about the what the group of believers there in Thessalonica had been facing.
-\ip Paul wrote this \bk First letter of Paul to the believers in Thessalonica\bk* in order to encourage and strengthen the believers there. He gave thanks for the account about their faith and their love. He also reminded them about the lifestyle that he demonstrated to them while he was still there with them. He answered questions again from the believers concerning the return of the messiah, and if the deceased believers would come back to life before the messiah returns. Paul used this letter to tell them it’s necessary that they continue to work in their day-to-day jobs while they wait for the return of the messiah.
-\iot Main components of Paul’s letter
+\ip Thessalonikai was the capital city of the Romaios province of Makedonia (and is now the large, modern city of Thessaloniki in Greece). Paulos taught God’s message there in Thessalonikai after he left Filippou (Acts 17:1-4). Before long, there was disagreement from Yehudim upset about Paulos’s preaching to non-Jews (Acts 17:5-9). So Paulos was forced to leave Thessalonikai and he went on to Beroia (Acts 17:10-13). Then after a while he went on to Athainai (Acts 17:14-15). Finally, he continued on to Korinthos (Acts 18:1-17). On his arrival there, he heard Timotheos’s account of his other work. He had been told by Timotheos about the what the group of believers there in Thessalonikai had been facing.
+\ip Paulos wrote this \bk First letter of Paulos to the believers in Thessalonikai\bk* in order to encourage and strengthen the believers there. He gave thanks for the account about their faith and their love. He also reminded them about the lifestyle that he demonstrated to them while he was still there with them. He answered questions again from the believers concerning the return of the messiah, and if the deceased believers would come back to life before the messiah returns. Paulos used this letter to tell them it’s necessary that they continue to work in their day-to-day jobs while they wait for the return of the messiah.
+\iot Main components of Paulos’s letter
 \io1 Introduction \ior 1:1\ior*
 \io1 Thanking and praising \ior 1:2–2:16\ior*
-\io1 Timothy’s good report \ior 2:17–3:13\ior*
+\io1 Timotheos’s good report \ior 2:17–3:13\ior*
 \io1 Living in a way that pleases God \ior 4:1-12\ior*
 \io1 Teaching concerning the messiah’s return \ior 4:13–5:11\ior*
 \io1 The final warning \ior 5:12-22\ior*
@@ -24,25 +24,25 @@
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \p
-\v 1 \add This letter is from\add* Paul, Silas, and Timothy.
-\p \add It’s written\add* to the assembly of \add believers\add* in \nd God\nd* the father and \nd the master Yeshua Messiah\nd* \add there\add* in Thessalonica.\x + \xo 1:1: \xt Acts 17:1.\x*
+\v 1 \add This letter is from\add* Paulos, Silas, and Timotheos.
+\p \add It’s written\add* to the assembly of \add believers\add* in \nd God\nd* the father and \nd the master Yeshua \+add (Jesus; Grk. Yesus)\+add* Messiah\nd* \add there\add* in Thessalonikai.\x + \xo 1:1: \xt Acts 17:1.\x*
 \p \add May God\add* give \add his\add* grace and peace to all of you.
-\s1 Paul praises the believers
+\s1 Paulos praises the believers
 \p
 \v 2 We \add here\add* are always thanking \nd God\nd* for all of you and \add remembering\add* you in our prayers—always
-\v 3 remembering before our \nd God\nd* and father about your striving for the faith and the labour of love and the endurance of the hope in our \nd master Yeshua Messiah\nd*.
+\v 3 remembering before our \nd God\nd* and father about your striving for the faith and the labour of love and the endurance of the hope in our \nd master Yeshua \+add (Jesus; Grk. Yesus)\+add* Messiah\nd*.
 \v 4 \add Brothers and sisters\add*, we know that you’re all loved by \nd God\nd*—the one who chose you.
 \v 5 The good message \add that we brought\add* wasn’t just any old message, but also comes in \nd the\nd* holy \nd spirit\nd* with power and with full assurance \add of its truth\add*. You know how we lived among you because of \add our concern\add* for you all,
 \v 6 and then you all imitated both us and the \nd master\nd* after receiving the message in tribulation with a lot \nd of\nd* excitement about \nd the\nd* holy \nd spirit\nd*\x + \xo 1:6: \xt Acts 17:5-9.\x*—
-\v 7 so much so that you all became examples to all the believers in Macedonia and Achaia.
-\v 8 So now the message of the \nd master\nd* has been heard not only in Macedonia and Achaia, but in every place where your faith towards \nd God\nd* has been seen—so that \add now\add* we don’t even need to say anything.
+\v 7 so much so that you all became examples to all the believers in Makedonia and Akaia.
+\v 8 So now the message of the \nd master\nd* has been heard not only in Makedonia and Akaia, but in every place where your faith towards \nd God\nd* has been seen—so that \add now\add* we don’t even need to say anything.
 \v 9 They’ve been reporting back to us about kindly we were accepted by you all and how you all turned from idols to God, to serve \nd the\nd* living and true God
 \v 10 and waiting for his son, Yeshua to \add return\add* from the heavens. \nd Yeshua\nd* is the one that he \add brought back to life\add* and who rescues us from \add God’s\add* severe anger which is coming.
 \c 2
-\s1 Paul recalls his visit to Thessalonica
+\s1 Paulos recalls his visit to Thessalonikai
 \p
-\v 1 \add Brothers and sisters\add*, you yourselves know that our going to \add Thessalonica\add* wasn’t wasted,
-\v 2 but after previously suffering and being mistreated in Philippi,\x + \xo 2:2: \xt Acts 16:19-24.\x* we spoke boldly \add at your place with God’s help\add*, to tell you all the good message from God despite a lot of opposition \add there\add*.\x + \xo 2:2: \xt Acts 17:1-9.\x*
+\v 1 \add Brothers and sisters\add*, you yourselves know that our going to \add Thessalonikai\add* wasn’t wasted,
+\v 2 but after previously suffering and being mistreated in Filippou \add (Philippi)\add*,\x + \xo 2:2: \xt Acts 16:19-24.\x* we spoke boldly \add at your place with God’s help\add*, to tell you all the good message from God despite a lot of opposition \add there\add*.\x + \xo 2:2: \xt Acts 17:1-9.\x*
 \v 3 As we recommend \add a change in your lifestyles\add*, we don’t do it with deception or impurity or deceit,
 \v 4 but since God has approved us and entrusted the good message to us, that’s what we talk about. We don’t aim to bring pleasure to people, but rather to bring them \nd to God\nd*—the one who approves our \add inner motives\add*.
 \v 5 As you all know, we never once came with a message of flattery, nor did we come under any \add pretenses\add* (\nd God is\nd* \add our\add* witness) trying to get anything from you,
@@ -56,37 +56,37 @@
 \v 12 how to encourage and to console \add them\add*. We testified to you so that you all would \add live lives\add* worthy \nd of God\nd*—the one who invited you into his kingdom and to \add share\add* his honour.
 \p
 \v 13 We also never stop thanking \nd God\nd* that when you accepted \nd God’s\nd* message that you heard from us, it wasn’t a message from humans, but truly was a message from \nd God\nd* who is working in all of you who believed.
-\v 14 \add Brothers and sisters\add*, you became imitators of the \add other\add* assemblies \nd of God\nd* in Yudea which are \add founded on\add* \nd Messiah Yeshua\nd*. You all suffered the same \add things\add* from your own countrymen that the \add strict\add* Jews did to them.\x + \xo 2:14: \xt Acts 17:5.\x*
+\v 14 \add Brothers and sisters\add*, you became imitators of the \add other\add* assemblies \nd of God\nd* in Yehudah \add (Judea)\add* which are \add founded on\add* \nd Messiah Yeshua\nd* \add (Jesus; Grk. Yesus)\add*. You all suffered the same \add things\add* from your own countrymen that the \add strict\add* Yehudim \add (Jews)\add* did to them.\x + \xo 2:14: \xt Acts 17:5.\x*
 \v 15 They executed their own prophets as well as the \nd master Yeshua\nd*. They drove us out,\x + \xo 2:15: \xt Acts 9:23,29; 13:45,50; 14:2,5,19; 17:5,13; 18:12.\x* displeasing \nd God\nd* and contrary to all people—
 \v 16 forbidding us from telling non-Jews that they \add need\add* to be saved so that they stay in their sins, but \add God’s\add* severe anger will finish them off.
-\s1 Paul’s desire to visit Thessalonica again
+\s1 Paulos’s desire to visit Thessalonikai again
 \p
 \v 17 But we, \add brothers and sisters\add*, have been cut off from you for a while, but only physically and not in \add our\add* \add hearts\add*, in fact we long to see you even more.
-\v 18 We wanted to come and see you all—I, Paul, even tried twice to come—but Satan held us back.
-\v 19 Because who is it that encourages and pleases us and that we can brag about? Won’t it be you all there \add in front of\add* our \nd master Yeshua\nd* when he \add returns\add*,
+\v 18 We wanted to come and see you all—I, Paulos, even tried twice to come—but Satan held us back.
+\v 19 Because who is it that encourages and pleases us and that we can brag about? Won’t it be you all there \add in front of\add* our \nd master Yeshua\nd* \add (Jesus; Grk. Yesus)\add* when he \add returns\add*,
 \v 20 because you all make us \add both\add* happy and proud.
 \c 3
 \p
-\v 1 When we could endure it no longer, we were happy to be left alone in Athens.\x + \xo 3:1: \xt Acts 17:15.\x*
-\v 2 We sent Timothy, who’s our brother and \nd God’s\nd* servant in the \nd messiah’s\nd* good message, so that he could strengthen you all and encourage you in your faith
+\v 1 When we could endure it no longer, we were happy to be left alone in Athainai.\x + \xo 3:1: \xt Acts 17:15.\x*
+\v 2 We sent Timotheos, who’s our brother and \nd God’s\nd* servant in the \nd messiah’s\nd* good message, so that he could strengthen you all and encourage you in your faith
 \v 3 so that no one will be upset by these difficulties because you all know that \add God\add* has appointed us for those.
 \v 4 Also, when we were with you all previously, we told you that we were going to be oppressed, and then it happened as you know.
-\v 5 So again when I could no longer endure it, I sent \add Timothy\add* to \add find out\add* about your faith, just in case you’d been tempted by the tempter and then our work \add there\add* would have been wasted.
+\v 5 So again when I could no longer endure it, I sent \add Timotheos\add* to \add find out\add* about your faith, just in case you’d been tempted by the tempter and then our work \add there\add* would have been wasted.
 \p
-\v 6 But now Timothy’s returned here to us,\x + \xo 3:6: \xt Acts 18:5.\x* telling us the good news about your faith and love, and how you’re always mentioning good \add things about\add* us and wanting to see us, just like we’d like to see all of you.
+\v 6 But now Timotheos’s returned here to us,\x + \xo 3:6: \xt Acts 18:5.\x* telling us the good news about your faith and love, and how you’re always mentioning good \add things about\add* us and wanting to see us, just like we’d like to see all of you.
 \v 7 So \add even\add* in our distress and sufferings, we’re comforted by your faith, \add brothers and sisters\add*
 \v 8 because now we can live \add happily\add* since you’re all standing firm in \nd Yahweh\nd*.
 \v 9 We’re not able to repay God for the thankfulness that we have about you, because we are certainly thrilled in \nd God’s\nd* presence because of you all.
 \p
 \v 10 Day and night we’re strongly requesting \add God\add* that we’ll be able to \add go and\add* see you all \add again\add*, and to \add teach\add* anything that’s lacking in your faith,
-\v 11 and that \nd God\nd* our father himself and our \nd master Yeshua\nd* might show us how we could get to you all.
+\v 11 and that \nd God\nd* our father himself and our \nd master Yeshua\nd* \add (Jesus; Grk. Yesus)\add* might show us how we could get to you all.
 \p
 \v 12 May the \nd master\nd* increase your \add numbers\add* and give you all an excess of love towards each other and toward everyone, just like we also have toward all of you,
 \v 13 in order to strengthen your \add faith and make you\add* blameless and spotless before our father \nd God\nd*, when our \nd master Yeshua\nd* comes with all his holy \add people\add*. \add May it be so\add*.
 \c 4
 \s1 Living to please God
 \p
-\v 1 So finally, \add brothers and sisters\add*, you learnt from us about how to live in a way that pleases \nd God\nd* as indeed you are. Now we are requesting you all, and we’re instructing \add you\add* from \nd the master Yeshua\nd* to do this even more,
+\v 1 So finally, \add brothers and sisters\add*, you learnt from us about how to live in a way that pleases \nd God\nd* as indeed you are. Now we are requesting you all, and we’re instructing \add you\add* from \nd the master Yeshua\nd* \add (Jesus; Grk. Yesus)\add* to do this even more,
 \v 2 because you all know the instructions that we gave to you through the \nd master Yeshua\nd*.
 \v 3 Because this is \nd God’s\nd* will: that you all stay holy, keeping away from all sexual immorality,
 \v 4 knowing that each of \add your bodies\add* is like a container that you can fill with holiness and honour.
@@ -96,13 +96,13 @@
 \v 8 so anyone who rejects this is not rejecting a human but \add rejecting\add* \nd God\nd*—the one who gives his holy \nd spirit\nd* to you all.
 \p
 \v 9 Then concerning brotherly love, you don’t need me to write about that because you yourselves have been taught by God to be loving each other
-\v 10 \add and\add* because you’re all already doing it to the believers all over Macedonia. But we advise you, \add brothers and sisters\add* to do it even more
+\v 10 \add and\add* because you’re all already doing it to the believers all over Makedonia. But we advise you, \add brothers and sisters\add* to do it even more
 \v 11 and to make it your \add ambition\add* to live quietly and to \add look after\add* your own selves. Work with your own hands as we instructed you,
 \v 12 so that you have a good attitude towards \add non-believers\add* and so that you don’t have any outstanding \add needs\add*.
 \s1 The master’s return
 \p
 \v 13 But we don’t want you to be \add ignorant\add*, \add brothers and sisters\add*, about those who’ve \add died\add* so that you won’t mourn like others who don’t have any hope,
-\v 14 because if we believe that \nd Yeshua\nd* died and \add came back to life\add*, then we can also believe that \add when he returns,\add* \nd Yeshua\nd* will be bringing with him those who have died.
+\v 14 because if we believe that \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* died and \add came back to life\add*, then we can also believe that \add when he returns,\add* \nd Yeshua\nd* will be bringing with him those who have died.
 \v 15 So this is what we’re saying in Yahweh’s message: those who are still living when the \nd master\nd* \add returns\add*, we certainly won’t precede those who’ve already \add died\add*\x + \xo 4:15-17: \xt 1Cor 15:51-52.\x*
 \v 16 because there’ll be an announcement from the archangel and \nd God’s\nd* trumpet \add will sound\add* and then the \nd master\nd* will come down from heaven with a loud shout. The dead \add believers\add* in \nd Messiah\nd* will come to life again first,\x + \xo 4:16: \xt 1Cor 15:51-52.\x*
 \v 17 then we who are still alive will be pulled up into the clouds together with them to meet the \nd master\nd* in the air, and from then will always remain with \nd Yahweh\nd*.
@@ -117,7 +117,7 @@
 \v 6 so as a result, we won’t be sleeping like the others, but we’ll be alert and sober.
 \v 7 Those who sleep do it at night, and those who get drunk do it at night,
 \v 8 but we \add belong\add* to the day. We’ll be dressed in the armour of faith and love, and the helmet which is the hope of \add our\add* salvation.\x + \xo 5:8: \xt Isa 59:17; Eph 6:13-17.\x*
-\v 9 \nd God\nd* hasn’t assigned us to \add his\add* severe anger, but rather for obtaining salvation through our \nd master Yeshua Messiah\nd*—
+\v 9 \nd God\nd* hasn’t assigned us to \add his\add* severe anger, but rather for obtaining salvation through our \nd master Yeshua \+add (Jesus; Grk. Yesus)\+add* Messiah\nd*—
 \v 10 the one who was executed on our behalf so that whether we might be \add alert and\add* watching, or whether we’re \add dead and\add* ‘sleeping’, \add either way\add* we’ll \add all\add* live together with him.
 \v 11 So comfort and encourage each other as you’ve all been doing already.
 \s1 Final teaching and greetings
@@ -131,7 +131,7 @@
 \v 16 Always \add find something to\add* be happy about.
 \v 17 Never stop praying,
 \v 18 thanking \add God\add* \nd about\nd* everything.
-\p This is what \nd God\nd* wants for you in \nd Messiah Yeshua\nd*:
+\p This is what \nd God\nd* wants for you in \nd Messiah Yeshua\nd* \add (Jesus; Grk. Yesus)\add*:
 \v 19 Don’t smother the \add holy\add* \nd spirit\nd*.
 \v 20 Don’t scorn prophesies.
 \v 21 Evaluate everything, holding on to what’s good

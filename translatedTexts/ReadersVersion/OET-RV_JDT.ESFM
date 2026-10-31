@@ -1,508 +1,544 @@
-\id JDT Judith - Open English Translation—Readers' Version (OET-RV) v0.1.0
+\id JDT Judith - Open English Translation—Readers' Version (OET-RV) v0.4.0
+\rem WORDTABLE OET-LV_DC_word_table.tsv
 \h Yehudit
 \toc1 Yehudit
 \toc2 Yehudit
 \toc3 Jdt
 \mt1 Yehudit
 \is1 Introduction
+\ip \bk Yehudit\bk* (Judith) tells how a Jewish widow helps to rescue her people from an invading army. The story opens with the conquests of King Nevukadnetsar (Nebuchadnezzar), who is presented here as ruling the Assyrians from Nineveh. His commander Holofernes demands submission from the surrounding nations, but the people of Yisrael (Israel) prepare to resist and ask God to protect them and their temple.
+\ip When Holofernes surrounds Betulia and cuts off its water supply, the people begin to lose hope. Their leaders agree to surrender unless help comes within five days. Yehudit challenges them for setting a deadline for God, then prays and carries out a dangerous plan of her own. She enters the enemy camp and uses Holofernes' confidence in her to bring about his downfall.
+\ip The account emphasises trusting God when the odds seem overwhelming, and shows how courage and wisdom can overturn military power. Yehudit's prayers and the final song of thanks direct the credit for the rescue to God.
 \ip \bk Yehudit\bk* is recognised as Deuterocanonical Scripture by the Romaios Catholic, Greek Orthodox, and Russian Orthodox Churches.
+\iot Main components of this account
+\io1 Nevukadnetsar's conquests and Holofernes' campaign \ior 1:1–3:10\ior*
+\io1 Yisrael prepares to resist and Betulia is besieged \ior 4:1–7:32\ior*
+\io1 Yehudit challenges the leaders and prays for help \ior 8:1–9:14\ior*
+\io1 Yehudit enters the enemy camp and kills Holofernes \ior 10:1–13:20\ior*
+\io1 The enemy's defeat and the people's celebration \ior 14:1–16:25\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
+\s1 Nevukadnetsar defeats Arpakshad
 \p
-\v 1 In the twelfth year of the reign of Nevukadnetsar \add !(Nebuchadnezzar)\add*, who reigned over the Assyrians in Nineveh, the great city, in the days of Arpakshad, who reigned over the Madim \add !(Medes)\add* in Ahmeta,
+\v 1 In the twelfth year of Nevukadnetsar's \add !(Nebuchadnezzar)\add* reign, who reigned over the Assyrians in Nineveh, the great city, in the days of Arpakshad, who reigned over the Madim \add !(Medes)\add* in Ahmeta,
 \v 2 and built around Ahmeta walls of hewn stones three cubits broad and six cubits long, and made the height of the wall seventy cubits, and its breadth fifty cubits,
-\v 3 and set its towers at its gates one hundred cubits high, and its breadth in the foundation was sixty cubits,
-\v 4 and made its gates, even gates that were raised to the height of seventy cubits, and their breadth forty cubits, for his mighty army to go out of, and the setting in array of his footmen—
-\v 5 in those days King Nevukadnetsar made war with King Arpakshad in the great plain. This plain is on the borders of Ragau.
-\v 6 There came to meet him all that lived in the hill country, and all that lived by Perat \add !(Euphrates)\add*, Hidekel, and Hudaspes, and in the plain of Areyok the king of the Elymaeans. Many nations of the sons of Chelod assembled themselves to the battle.
+\v 3 and¦5527 set its towers at its gates one hundred¦5537 cubits high, and¦5538 its breadth in the¦5539 foundation was sixty¦5545 cubits,
+\v 4 and¦5546 made¦5547 its gates¦5549, even gates¦5551 that were raised to the height¦5554 of seventy¦5556 cubits, and¦5557 their breadth forty cubits, for his mighty army to go out of, and¦5568 the¦5570 setting in array of his footmen—
+\v 5 in¦5576 those days¦5578 King¦5581 Nevukadnetsar made¦5574 war¦5575 with¦5583 King¦5584 Arpakshad in¦5586 the¦5589 great¦5590 plain. This¦5591 plain is¦5592 on¦5593 the¦5594 borders of Ragau.
+\v 6 There came to¦5599 meet him all¦5601 that¦5602 lived¦5603 in the¦5604 hill country, and¦5606 all¦5607 that¦5608 lived¦5609 by Perat \add !(Euphrates)\add*, Hidekel, and¦5612 Hudaspes, and¦5615 in the¦5616 plain of Areyok the¦5621 king¦5622 of the Elymaeans. Many nations¦5626 of the sons¦5631 of Chelod assembled¦5625 themselves to the battle.
 \p
-\v 7 And Nevukadnetsar king of the Assyrians sent to all who lived in Paras \add !(Persia)\add*, and to all who lived westward, to those who lived in Kilikia, Damesek \add !(Damascus)\add*, Levanon, Anti-Lebanon, and to all who lived along the sea coast,
-\v 8 and to those amongst the nations that were of Karmel and Gilead, and to the higher Galil and the great plain of Yizre’el \add !(Jezreel)\add*,
-\v 9 and to all who were in Shomron \add !(Samaria)\add* and its cities, and beyond Yarden \add !(Jordan)\add* to Yerushalem \add !(Jerusalem)\add*, Betane, Chellus, Kadesh, the river of Mitsrayim \add !(Egypt)\add*, Tahfanhes, Ra’meses, and all the land of Goshen,
+\v 7 And¦5633 Nevukadnetsar king¦5637 of the Assyrians sent¦5634 to¦5639 all¦5640 who¦5641 lived¦5642 in Paras \add !(Persia)\add*, and¦5645 to¦5646 all¦5647 who¦5648 lived¦5649 westward, to¦5650 those who¦5652 lived¦5653 in Kilikia, Damesek \add !(Damascus)\add*, Levanon, Anti-Lebanon, and to all¦5662 who¦5663 lived¦5664 along the sea coast,
+\v 8 and¦5668 to those among¦5670 the¦5671 nations¦5672 that were of¦5673 Karmel and¦5675 Gilead, and¦5677 to the¦5678 higher Galil and¦5681 the¦5682 great¦5683 plain¦5684 of Yizre'el \add !(Jezreel)\add*,
+\v 9 and to all who were in Shomron \add !(Samaria)\add* and its cities, and beyond Yarden \add !(Jordan)\add* to Yerushalem \add !(Jerusalem)\add*, Betane, Chellus, Kadesh, the river of Mitsrayim \add !(Egypt)\add*, Tahfanhes, Ra'meses, and all the land of Goshen,
 \v 10 until you come above Tsoan and Nof \add !(Memphis)\add*, and to all that lived in Mitsrayim, until you come to the borders of Kush \add !(Ethiopia)\add*.
-\v 11 All those who lived in all the land made light of the commandment of Nevukadnetsar king of the Assyrians, and didn't go with him to the war; for they were not afraid of him, but he was before them as one man. They turned away his messengers from their presence without effect, and with disgrace.
+\v 11 All¦5742 those who¦5743 lived¦5744 in all¦5745 the¦5746 land¦5747 made light of the commandment of Nevukadnetsar king¦5752 of the Assyrians, and¦5754 didn't go with him to¦5756 the¦5759 war¦5760; for they weren't¦5766 afraid¦5763 of him, but he¦5768 was before¦5780 them as one man¦5770. They turned away his messengers from their presence¦5767 without effect, and¦5772 with disgrace¦5779.
 \p
-\v 12 And Nevukadnetsar was exceedingly angry with all this land, and he swore by his throne and kingdom that he would surely be avenged upon all the coasts of Kilikia, Damesek, and Aram \add !(Syria)\add*, that he would kill with his sword all the inhabitants of the land of Moav \add !(Moab)\add*, the children of Amon, all Yehudah \add !(Judea)\add*, and all who were in Mitsrayim, until you come to the borders of the two seas.
-\v 13 And he set the battle in array with his army against King Arpakshad in the seventeenth year; and he prevailed in his battle, and turned to flight all the army of Arpakshad, with all his horses and all his chariots.
-\v 14 He took possession of his cities. He came to Ahmeta and took the towers, plundered its streets, and turned its beauty into shame.
-\v 15 He took Arpakshad in the mountains of Ragau, struck him through with his darts, and utterly destroyed him to this day.
-\v 16 He returned with them to Nineveh, he and all his company of sundry nations—an exceedingly great multitude of men of war. There he took his ease and banqueted, he and his army, for one hundred and twenty days.
+\v 12 And¦5783 Nevukadnetsar was extremely angry¦5784 with all¦5787 this¦5788 land¦5789, and he swore¦5793 by his throne¦5796 and¦5797 kingdom¦5799 that he'd¦5800 surely¦5802 be avenged on all¦5804 the¦5805 coasts of Kilikia, Damesek, and Aram \add !(Syria)\add*, that he'd kill with¦5813 his sword¦5815 all¦5818 the¦5819 inhabitants¦5820 of the land¦5822 of Moav \add !(Moab)\add*, the¦5825 children¦5826 of Amon, all¦5829 Yehudah \add !(Judea)\add*, and¦5832 all¦5833 who¦5834 were in¦5835 Mitsrayim, until¦5837 you come¦5839 to¦5840 the¦5841 borders of the¦5843 two¦5844 seas.
+\v 13 And¦5846 he set the battle in array with¦5852 his army against King¦5854 Arpakshad in¦5855 the¦5856 seventeenth year¦5857; and¦5860 he prevailed in¦5862 his battle¦5864, and¦5866 turned to flight all¦5868 Arpakshad's army, with all¦5873 his horses and¦5877 all¦5878 his chariots.
+\v 14 He took possession of his cities¦5885. He¦5886 came to Ahmeta and took the towers, plundered its streets, and turned its beauty into¦5904 shame¦5906.
+\v 15 He took¦5909 Arpakshad in¦5912 the¦5913 mountains¦5914 of Ragau, struck him through with his darts, and utterly destroyed him to this day¦5928.
+\v 16 He returned with¦5932 them to Nineveh, he and¦5935 all¦5936 his company of sundry nations—a very¦5944 great multitude¦5940 of men¦5941 of war. There¦5947 he took his ease and banqueted, he and his army, for one hundred¦5958 and twenty¦5959 days¦5957.
 \c 2
+\s1 Nevukadnetsar plans revenge on the nations
 \p
-\v 1 In the eighteenth year, the twenty-second day of the first month, there was talk in the house of Nevukadnetsar king of the Assyrians that he should be avenged on all the land, even as he spoke.
-\v 2 He called together all his servants and all his great men, and communicated with them his secret counsel, and with his own mouth, recounted the wickedness of all the land.
-\v 3 They decreed to destroy all flesh which didn't follow the word of his mouth.
+\v 1 In¦5961 the¦5962 eighteenth year¦5963, the¦5964 twenty-second day of¦5969 the¦5969 first¦5970 month, there was talk in¦5974 the house¦5975 of Nevukadnetsar king¦5977 of the Assyrians that he should be avenged¦5979 on all¦5980 the¦5981 land¦5982, even as¦5983 he spoke¦5984.
+\v 2 He called together all his servants and¦5991 all¦5992 his great men, and¦5996 communicated with¦5998 them his secret counsel, and¦6005 with his own mouth¦6014, recounted the¦6008 wickedness¦6009 of¦6013 all the¦6013 land¦6011.
+\v 3 They decreed to destroy all¦6020 flesh¦6021 which¦6022 didn't follow¦6024 the¦6025 word¦6026 of¦6027 his mouth¦6028.
 \p
-\v 4 It came to pass, when he had ended his counsel, Nevukadnetsar king of the Assyrians called Holofernes the chief captain of his army, who was second to himself, and said to him,
-\v 5 “The great king, the lord of all the earth, says: ‘Listen, you shall go out from my presence, and take with you men who trust in their strength, to one hundred and twenty thousand footmen and twelve thousand horses with their riders.
-\v 6 And you shall go out against all the west country, because they disobeyed the commandment of my mouth.
-\v 7 You shall declare to them that they should prepare earth and water, because I will go out in my wrath against them, and will cover the whole face of the earth with the feet of my army, who will plunder them.
-\v 8 Their slain will fill their valleys and brooks, and the river will be filled with their dead until it overflows.
-\v 9 I will lead them as captives to the utmost parts of all the earth.
-\v 10 But you shall go forth, and take all their coasts for me first. If they will yield themselves to you,\f + \fr 2:10 \ft Gr. \fqa they will yield…and you shall reserve.\f* then you must reserve them for me until the day of their reproof.
-\v 11 As for those who resist, your eye shall not spare; but you shall give them up to be slain and to be plundered in all your land.
-\v 12 Because as I live, and by the power of my kingdom, I have spoken, and I will do this with my hand.
-\v 13 Moreover, you shall not transgress anything of the commandments of your lord, but you shall surely accomplish them, as I have commanded you. You shall not defer to do them.’ ”
+\v 4 When¦6030 he'd¦6036 ended his counsel, Nevukadnetsar king¦6039 of the Assyrians called¦6037 Holofernes the¦6041 chief captain of his army, who was second¦6047 to¦6048 himself, and¦6051 said¦6052 to¦6053 him,
+\v 5 “The¦6059 great¦6060 king¦6058, the¦6061 lord¦6062 of all¦6063 the¦6064 earth¦6065, says¦6056: ‘Listen, go out¦6069 from¦6069 my presence, and¦6073 take with¦6075 you men¦6077 who trust in¦6079 their strength¦6080, to one hundred¦6085 and twenty¦6086 thousand footmen and¦6087 twelve¦6093 thousand horses¦6089 with¦6090 their riders.
+\v 6 And¦6094 go out against¦6101 all¦6098 the¦6099 west country, because¦6103 they disobeyed¦6104 the¦6105 commandment of¦6107 my mouth¦6108.
+\v 7 Tell to them that¦6117 they should prepare earth¦6114 and¦6115 water¦6116, because I'll go out in¦6119 my anger against¦6122 them, and¦6124 will cover the¦6127 whole¦6126 face¦6128 of the¦6129 earth¦6130 with the¦6132 feet¦6133 of my army, who'll¦6134 plunder them.
+\v 8 Their slain will fill their valleys and¦6143 brooks, and¦6150 the¦6151 river¦6155 will be filled with their dead¦6158 until it¦6159 overflows.
+\v 9 I'll lead them as captives¦6164 to¦6166 the¦6167 utmost parts of all¦6169 the¦6170 earth¦6171.
+\v 10 But¦6173 go¦6174 out¦6174, and take all¦6177 their coasts for me first. If they'll yield themselves to you,\f + \fr 2:10 \ft Grk. \fqa they will yield…and you shall reserve.\f* then you must reserve them for me until the day¦6189 of their reproof.
+\v 11 As for those who¦6194 resist, show no¦6196 mercy¦6197; but hand¦6201 them over to¦6201 be slain and¦6205 to be plundered¦6206 in¦6207 all¦6208 your land¦6210.
+\v 12 Because¦6212 as I live¦6213, and¦6215 by the¦6216 power¦6217 of my kingdom¦6219, I've¦6220 spoken¦6221, and¦6222 I'll do¦6223 this¦6224 with my hand¦6226.
+\v 13 Moreover, don't disobey any of¦6237 your lord's¦6238 commands, but you must carry them out, as¦6243 I've commanded you¦6245. Don't delay carrying them out.’ ”
+\s1 Holofernes sets out to conquer the west
 \p
-\v 14 So Holofernes went out from the presence of his lord, and called all the governors, the captains, and officers of the army of Ashur \add !(Assyria)\add*.
-\v 15 He counted chosen men for the battle, as his lord had commanded him, to one hundred and twenty thousand, with twelve thousand archers on horseback.
-\v 16 He arranged them as a great multitude is ordered for the war.
-\v 17 He took camels, donkeys, and mules for their baggage, an exceedingly great multitude, and sheep, oxen, and goats without number for their provision,
-\v 18 and a large supply of rations for every man, and a huge amount of gold and silver out of the king's house.
-\v 19 He went out, he and all his army, on their journey, to go before King Nevukadnetsar \add !(Nebuchadnezzar)\add*, and to cover all the face of the earth westward with their chariots, horsemen, and chosen footmen.
-\v 20 A great company of various nations went out with them like locusts and like the sand of the earth. Because they could not be counted by reason of their multitude.
+\v 14 So¦6252 Holofernes went¦6253 out¦6253 from¦6255 the presence of his lord¦6258, and¦6260 called¦6261 all¦6262 the¦6263 governors, the¦6266 captains, and¦6268 officers¦6267 of Ashur's \add !(Assyria)\add* army.
+\v 15 He¦6281 counted chosen men¦6276 for the¦6282 battle, as¦6279 his lord¦6283 had commanded him, to one hundred and twenty thousand, with twelve¦6287 thousand archers on horseback.
+\v 16 He¦6295 arranged them as a great multitude¦6299 is ordered for the war.
+\v 17 He took¦6302 camels, donkeys, and mules for their baggage, a very¦6314 great multitude¦6312, and¦6315 sheep¦6316, oxen¦6318, and¦6319 goats without number¦6328 for their provision,
+\v 18 and¦6329 a large supply of rations for every¦6331 man¦6332, and¦6335 a huge amount of gold¦6336 and¦6337 silver out¦6339 of the king's¦6341 house¦6340.
+\v 19 He went out¦6345, he¦6346 and¦6347 all¦6348 his army, on their journey¦6353, to¦6345 go¦6345 before King¦6356 Nevukadnetsar \add !(Nebuchadnezzar)\add*, and¦6358 to cover all¦6360 the¦6361 face¦6362 of the¦6363 earth¦6364 westward with¦6365 their chariots, horsemen, and chosen footmen.
+\v 20 A great company of various nations went out with them like locusts¦6380 and¦6383 like the¦6385 sand¦6386 of the¦6387 earth¦6388. Because¦6390 they couldn't be¦6391 counted¦6392 because of their multitude¦6394.
 \p
-\v 21 And they departed out of Nineveh three days’ journey towards the plain of Bectileth, and encamped from Bectileth near the mountain which is at the left hand of the Upper Kilikia.
-\v 22 And he took all his army, his footmen, horsemen, and chariots, and went away from there into the hill country,
-\v 23 and destroyed Put and Lud, and plundered all the children of Rasses and the children of Yishmael \add !(Ishmael)\add*, which were along the wilderness to the south of the land of the Chellians.
-\v 24 And he went over Perat \add !(Euphrates)\add*, and went through Mesopotamia, and broke down all the high cities that were upon the river Arbonai, until you come to the sea.
-\v 25 And he took possession of the borders of Kilikia, and killed all who resisted him, and came to the borders of Yefet \add !(Japheth)\add*, which were towards the south, opposite Arav.
-\v 26 He surrounded all the children of Midyan, and set their tents on fire, and plundered their sheepfolds.
-\v 27 He went down into the plain of Damesek \add !(Damascus)\add* in the days of wheat harvest, and set all their fields on fire, and utterly destroyed their flocks and herds, plundered their cities, laid their plains waste, and struck all their young men with the edge of the sword.
+\v 21 And¦6396 they departed out¦6398 of Nineveh three¦6401 days¦6402’ journey towards¦6403 the plain of Bectileth, and¦6408 encamped from¦6410 Bectileth near¦6412 the¦6413 mountain¦6414 which is at the¦6415 left¦6417 hand of the¦6418 Upper Kilikia.
+\v 22 And¦6421 he took¦6422 all¦6423 his army, his footmen, horsemen¦6431, and¦6432 chariots, and¦6436 went¦6437 away¦6437 from¦6438 there¦6438 into the¦6440 hill country,
+\v 23 and¦6442 destroyed Put and¦6446 Lud, and¦6448 plundered all¦6450 the children¦6451 of Rasses and¦6453 the children¦6454 of Yishmael \add !(Ishmael)\add*, which were along the¦6456 wilderness to¦6457 the¦6459 south¦6462 of the land of the Chellians.
+\v 24 And¦6465 he went over Perat \add !(Euphrates)\add*, and¦6469 went through¦6470 Mesopotamia, and¦6473 broke down all¦6475 the¦6476 high cities¦6477 that were on¦6481 the¦6482 river Arbonai, until¦6485 you come¦6487 to¦6488 the sea¦6489.
+\v 25 And¦6490 he took possession of the borders of Kilikia, and¦6496 killed all¦6498 who¦6499 resisted him, and¦6502 came¦6503 to¦6503 the borders of Yefet \add !(Japheth)\add*, which were towards the south¦6509, opposite Arav.
+\v 26 He surrounded all¦6516 the¦6517 children¦6518 of Midyan, and¦6520 set their tents on fire, and¦6525 plundered their sheepfolds.
+\v 27 He went¦6531 down¦6531 into the plain¦6533 of Damesek \add !(Damascus)\add* in¦6535 the days¦6536 of wheat harvest¦6537, and¦6539 set all¦6541 their fields¦6543 on fire, and utterly destroyed their flocks and herds, plundered their cities¦6556, laid their plains waste, and struck¦6565 all¦6566 their young men with the edge of the sword.
 \p
-\v 28 And the fear and the dread of him fell onto those who lived on the sea coast, upon those who were in Tsidon \add !(Sidon)\add* and Tsor \add !(Tyre)\add*, those who lived in Sur and Ocina, and all who lived in Yavneh. Those who lived in Azotos and Ashkelon feared him exceedingly.
+\v 28 And¦6573 the¦6575 fear¦6576 and¦6577 the¦6578 dread of him fell¦6574 onto those who¦6582 lived¦6583 on the¦6584 sea coast¦6585, on those who¦6586 were¦6587 in¦6588 Tsidon \add !(Sidon)\add* and Tsor \add !(Tyre)\add*, those who¦6593 lived¦6594 in Sur and¦6596 Ocina, and¦6598 all¦6599 who¦6600 lived¦6601 in Yavneh. Those who¦6604 lived¦6605 in¦6606 Azotos and¦6608 Ashkelon feared¦6610 him greatly.
 \c 3
+\s1 The coastal nations surrender
 \p
-\v 1 And they sent to him messengers with words of peace, saying,
-\v 2 “Listen, we the servants of Nevukadnetsar \add !(Nebuchadnezzar)\add* the great king lie before you. Use us as it is pleasing in your sight.
-\v 3 Listen, our dwellings, and all our country, and all our fields of wheat, and our flocks and herds, and all the sheepfolds of our tents, lie before your face. Use them as it may please you.
-\v 4 Listen, even our cities and those who dwell in them are your servants. Come and deal with them as it is good in your eyes.”
+\v 1 And¦6613 they sent¦6614 to¦6614 him messengers with¦6615 words¦6618 of peace, saying,
+\v 2 “Listen, we¦6622 the servants of Nevukadnetsar \add !(Nebuchadnezzar)\add* the great¦6627 king¦6626 lie before¦6629 you¦6630. Use¦6631 us as¦6633 it's pleasing¦6634 in your sight.
+\v 3 Listen, our dwellings, and all our country, and all our fields of wheat, and our flocks and herds, and all¦6654 the¦6655 sheepfolds of our tents, lie before¦6661 your face¦6662. Use¦6664 them as it may please you¦6669.
+\v 4 Listen, even our cities¦6673 and¦6675 those who¦6676 live¦6677 in¦6678 them are¦6682 your servants. Come¦6683 and deal with them as it's¦6687 good in¦6689 your eyes¦6690.”
 \p
-\v 5 So the men came to Holofernes, and declared to him according to these words.
+\v 5 So¦6692 the¦6694 men¦6695 came¦6693 to¦6696 Holofernes, and¦6698 declared to¦6699 him according¦6701 to¦6701 these words.
 \p
-\v 6 He came down towards the sea coast, he and his army, and set garrisons in the high cities, and took out of them chosen men for allies.
-\v 7 They received him, they and all the country round about them, with garlands and dances and timbrels.
-\v 8 He threw down all their borders, and cut down their sacred groves. It had been given to him to destroy all the gods of the land, that all the nations would worship Nevukadnetsar only, and that all their tongues and their tribes would call upon him as a god.
+\v 6 He came¦6706 down¦6706 towards¦6707 the¦6708 sea coast¦6709, he¦6710 and¦6711 his army, and¦6715 set garrisons in the¦6717 high cities¦6718, and¦6721 took¦6722 out¦6723 of them chosen men¦6727 for allies.
+\v 7 They received¦6730 him, they and¦6733 all¦6734 the¦6735 country round about them, with¦6738 garlands and¦6740 dances¦6741 and¦6742 timbrels.
+\v 8 He threw down all their borders, and¦6750 cut down their sacred groves. It'd¦6753 been¦6756 given to him to destroy all¦6760 the¦6761 gods¦6762 of the¦6763 land¦6764, that¦6765 all¦6771 the¦6772 nations¦6773 would worship Nevukadnetsar only, and¦6774 that all¦6775 their tongues¦6777 and¦6778 their tribes¦6781 would call¦6783 on¦6783 him as a god¦6786.
 \p
-\v 9 Then he came towards Yizre’el \add !(Jezreel)\add* near to Dotan, which is opposite the great ridge of Yehudah \add !(Judea)\add*.
-\v 10 He encamped between Geva and Beyt-Shean. He was there a whole month, that he might gather together all the baggage of his army.
+\v 9 Then¦6787 he came¦6788 towards Yizre'el \add !(Jezreel)\add* near¦6792 to Dotan, which is¦6796 opposite¦6797 the¦6800 great¦6801 ridge of Yehudah \add !(Judea)\add*.
+\v 10 He encamped between Geva and Beyt-Shean. He was¦6812 there¦6813 a whole month¦6814, that¦6817 he might gather together all¦6819 the¦6820 baggage of his army.
 \c 4
+\s1 Yisrael prepares to resist
 \p
-\v 1 The children of Yisrael \add !(Israel)\add* who lived in Yehudah heard all that Holofernes the chief captain of Nevukadnetsar king of the Assyrians had done to the nations, and how he had plundered all their temples and destroyed them utterly.
-\v 2 They were exceedingly afraid at his approach, and were troubled for Yerushalem \add !(Jerusalem)\add* and for the temple of the master their god;
-\v 3 because they had newly come up from the captivity, and all the people of Yehudah were recently gathered together; and the vessels, the altar, and the house were sanctified after being profaned.
+\v 1 The¦6827 children¦6828 of Yisrael \add !(Israel)\add* who¦6830 lived¦6831 in¦6832 Yehudah heard¦6826 all¦6835 that Holofernes the¦6841 chief captain of Nevukadnetsar king¦6844 of the Assyrians had done¦6837 to¦6837 the¦6839 nations¦6840, and¦6846 how¦6836 he'd plundered all¦6850 their temples and¦6854 destroyed them utterly.
+\v 2 They were extremely afraid¦6860 at his approach, and¦6866 were troubled¦6875 for Yerushalem \add !(Jerusalem)\add* and¦6869 for the¦6870 temple¦6871 of the master their god¦6873;
+\v 3 because¦6876 they'd newly come up from¦6880 the¦6881 captivity, and¦6883 all¦6885 Yehudah's people were recently¦6877 gathered together; and¦6891 the¦6892 vessels¦6893, the¦6895 altar¦6896, and¦6897 the¦6898 house¦6899 were sanctified after being profaned.
 \p
-\v 4 And they sent into every coast of Shomron \add !(Samaria)\add*, to Konae, to Beyt-Horon, Belmaim, Yeriho \add !(Jericho)\add*, to Choba, Aesora, and to the valley of Shalem;
-\v 5 and they occupied beforehand all the tops of the high mountains, fortified the villages that were in them, and stored supplies for the provision of war, for their fields were newly reaped.
-\v 6 Yehoyakim the high priest, who was in those days at Yerushalem, wrote to those who lived in Betulia and Betomesthaim, which is opposite Yizre’el \add !(Jezreel)\add* towards the plain that is near to Dotan,
-\v 7 charging them to seize upon the ascents of the hill country; because by them was the entrance into Yehudah, and it was easy to stop them from approaching, inasmuch as the approach was narrow, with space for two men at the most.
-\v 8 And the children of Yisrael did as Yehoyakim the high priest had commanded them, as did the senate of all the people of Yisrael, which was in session at Yerushalem.
+\v 4 And¦6905 they sent¦6906 into every¦6908 coast of Shomron \add !(Samaria)\add*, to Konae, to Beyt-Horon, Belmaim, Yeriho \add !(Jericho)\add*, to Choba, Aesora, and to the¦6925 valley of Shalem;
+\v 5 and¦6928 they occupied beforehand all¦6930 the¦6931 tops of the¦6933 high mountains¦6934, fortified the villages¦6942 that¦6950 were¦6952 in them, and stored supplies for the¦6953 provision of war, for their fields were newly reaped.
+\v 6 Yehoyakim the¦6960 high priest¦6961, who¦6962 was¦6965 in¦6966 those days¦6968 at Yerushalem, wrote¦6958 to those who¦6967 lived in¦6970 Betulia and¦6975 Betomesthaim, which¦6977 is¦6978 opposite¦6979 Yizre'el \add !(Jezreel)\add* towards the plain that's¦6969 near¦6986 to Dotan,
+\v 7 charging them to¦6988 seize on the¦6990 ascents of the¦6992 hill country; because¦6995 by them was¦6997 the entrance into Yehudah, and¦7003 it¦7007 was¦7012 easy to¦7013 stop them from approaching, since¦6994 the¦7015 approach was narrow¦7009, with space for two¦7017 men¦7014 at the most.
+\v 8 And¦7018 the¦7020 children¦7021 of Yisrael did as¦7023 Yehoyakim the¦7027 high priest¦7028 had commanded them, as did the senate of¦7033 all¦7034 Yisrael's people, which¦7037 was in¦7039 session at Yerushalem.
+\s1 The people plead with God for help
 \p
-\v 9 And every man of Yisrael cried to God with great earnestness, and with great earnestness they humbled their souls.
-\v 10 They, their wives, their children, their cattle, and every sojourner, hireling, and servant bought with their money put sackcloth on their loins.
-\v 11 Every man and woman of Yisrael, including the little children and the inhabitants of Yerushalem, fell prostrate before the temple, threw ashes upon their heads, and spread out their sackcloth before the master. They put sackcloth around the altar.
-\v 12 They cried to the god of Yisrael earnestly with one consent, that he would not give their children as prey, their wives as plunder, the cities of their inheritance to destruction, and the sanctuary to being profaned and being made a reproach, for the nations to rejoice at.
-\v 13 The master heard their voice, and looked at their affliction. The people continued fasting many days in all Yehudah and Yerushalem before the sanctuary of the master Almighty.
-\v 14 And Yehoyakim the high priest, and all the priests who stood before the master, and those who ministered to the master, had their loins dressed in sackcloth and offered the continual burnt offering, the vows, and the free gifts of the people.
-\v 15 They had ashes on their turbans. They cried to the master with all their power, that he would look upon all the house of Yisrael for good.
+\v 9 And¦7041 every¦7043 man¦7044 of Yisrael cried to¦7046 God¦7048 with great¦7051 earnestness, and¦7052 with great¦7059 earnestness they humbled their souls¦7055.
+\v 10 They, their wives, their children, their cattle, and every¦7074 sojourner¦7075, hireling, and¦7078 servant bought¦7079 with¦7079 their money¦7079 put¦7081 sackcloth¦7082 on their loins¦7085.
+\v 11 Every man and woman of Yisrael, including the little children and the inhabitants of Yerushalem, fell prostrate before the temple, threw ashes on their heads, and spread out their sackcloth before the master. They put sackcloth around the altar.
+\v 12 They cried to the god of Yisrael earnestly with one consent, that he wouldn't give their children as prey, their wives as plunder, the cities of their inheritance to destruction, and the sanctuary to being profaned and being made a reproach, for the nations to rejoice at.
+\v 13 The¦7165 master heard their voice¦7166, and looked at their affliction. The people¦7176 continued fasting¦7177 many days¦7178 in¦7180 all¦7181 Yehudah and¦7184 Yerushalem before the¦7188 sanctuary¦7189 of the master Almighty¦7191.
+\v 14 And¦7192 Yehoyakim the¦7194 high priest¦7195, and¦7198 all¦7199 the¦7200 priests who stood before¦7202 the master, and¦7205 those who¦7206 ministered to¦7210 the¦7211 master, had their loins¦7212 dressed in sackcloth¦7209 and offered the continual burnt offering, the vows, and the free gifts¦7225 of¦7226 the¦7226 people¦7227.
+\v 15 They had ashes¦7230 on their turbans. They cried to¦7231 the¦7232 master with¦7237 all¦7240 their power¦7241, that he'd look on all¦7245 the house¦7246 of Yisrael for good.
 \c 5
+\s1 Ahior warns Holofernes about Yisrael's God
 \p
-\v 1 Holofernes, the chief captain of the army of Ashur \add !(Assyria)\add*, was told that the children of Yisrael had prepared for war, had shut up the passages of the hill country, had fortified all the tops of the high hills, and had set up barricades in the plains.
-\v 2 Then he was exceedingly angry, and he called all the princes of Moav \add !(Moab)\add*, the captains of Amon, and all the governors of the sea coast,
-\v 3 and he said to them, “Tell me now, you sons of Kena’an \add !(Canaan)\add*, who are these people who dwell in the hill country? What are the cities that they inhabit? How large is their army? Where is their power and their strength? What king is set over them, to be the leader of their army?
-\v 4 Why have they turned their backs, that they should not come and meet me, more than all who dwell in the west?”
+\v 1 Holofernes, the chief captain of Ashur's \add !(Assyria)\add* army, was told that the children¦7256 of Yisrael had prepared for war¦7260, had shut up the¦7262 passages of the¦7264 hill country, had fortified all¦7269 the tops of the high¦7272 hills, and¦7273 had set up barricades in¦7275 the¦7276 plains.
+\v 2 Then¦7279 he was extremely angry¦7280, and¦7283 he called¦7284 all¦7285 the¦7286 princes of Moav \add !(Moab)\add*, Amon's captains, and¦7293 all¦7294 the governors of the sea coast,
+\v 3 and¦7298 he said¦7299 to¦7299 them, “Tell me now, you sons¦7304 of Kena'an \add !(Canaan)\add*, who¦7307 are these people¦7308 who¦7310 live in¦7312 the hill country? What are the cities¦7319 that they inhabit? How large is their army? Where is their power and their strength¦7334? What king¦7341 is set over them, to¦7342 be the leader of their army?
+\v 4 Why have they turned their backs, that¦7347 they shouldn't¦7350 come¦7351 and meet¦7353 me, more than¦7355 all¦7356 who¦7357 live¦7358 in¦7359 the west?”
 \p
-\v 5 Then Ahior, the leader of all the children of Amon, said to him, “Let my lord now hear a word from the mouth of your servant, and I will tell you the truth concerning these people who dwell in this hill country, near to the place where you dwell. No lie will come out of the mouth of your servant.
-\v 6 These people are descended from the Kasdim \add !(Chaldeans)\add*.
-\v 7 They sojourned before this in Mesopotamia, because they didn't want to follow the gods of their fathers, which were in the land of the Kasdim.
-\v 8 They departed from the way of their parents, and worshipped the god of heaven, the god whom they knew. Their parents threw them out from the face of their gods, and they fled into Mesopotamia and sojourned there many days.
-\v 9 Then their god commanded them to depart from the place where they sojourned, and to go into the land of Kena’an. They lived there, and prospered with gold and silver, and with exceedingly much cattle.
-\v 10 Then they went down into Mitsrayim \add !(Egypt)\add*, for a famine covered all the land of Kena’an. They sojourned there until they had grown up. They became a great multitude there, so that one could not count the population of their nation.
-\v 11 Then the king of Mitsrayim rose up against them, and dealt subtly with them, and brought them low, making them labour in brick,\f + \fr 5:11 \ft Some authorities read \fqa and he brought them low with clay and brick, etc.\f* and made them slaves.
-\v 12 They cried to their god, and he struck all the land of Mitsrayim with incurable plagues; so the Mitsrim \add !(Egyptians)\add* threw them out of their sight.
-\v 13 God dried up the Red sea before them,
-\v 14 and brought them into the way of Sinay Kadesh-Barnea and they threw out all that lived in the wilderness.
-\v 15 They lived in the land of the Amorim, and they destroyed by their strength everyone in Heshbon. Passing over Yarden \add !(Jordan)\add*, they possessed all the hill country.
-\v 16 They threw out before them the Kena’ani \add !(Canaanite)\add*, the Perizi, the Yevusi, the Shechemite, and all the Girgashim, and they lived in that country many days.
+\v 5 Then¦7361 Ahior, the¦7366 leader of all¦7368 the children¦7369 of Amon, said¦7362 to him, “Let my lord¦7374 now hear¦7371 a word¦7376 from¦7377 your servant's¦7380 mouth¦7378, and¦7382 I'll tell you¦7384 the¦7385 truth¦7386 about¦7387 these people¦7389 who¦7392 live in this¦7394 hill country, near¦7395 to the place where you¦7396 live. No¦7399 lie¦7401 will come out¦7402 of¦7403 your servant's¦7406 mouth¦7404.
+\v 6 These people¦7409 are¦7411 descended from the Kasdim \add !(Chaldeans)\add*.
+\v 7 They sojourned before¦7417 this in Mesopotamia¦7420, because¦7421 they didn't want to¦7424 follow¦7424 the¦7425 gods¦7426 of their fathers¦7428, which¦7430 were¦7431 in¦7432 the land¦7433 of the Kasdim.
+\v 8 They departed from¦7437 the¦7439 way of their parents¦7440, and¦7442 worshipped¦7443 the¦7444 god¦7445 of¦7446 heaven¦7447, the god¦7448 whom they knew¦7450. Their parents threw them out from¦7454 the face¦7455 of their gods, and¦7459 they fled¦7460 into Mesopotamia and¦7463 sojourned there¦7465 many days¦7466.
+\v 9 Then¦7468 their god¦7471 commanded them to depart from¦7474 the¦7475 place where they sojourned¦7476, and¦7478 to¦7479 go into the land¦7481 of Kena'an. They lived there¦7485, and¦7486 prospered with gold¦7488 and¦7489 silver, and¦7491 with very¦7495 large herds of cattle.
+\v 10 Then¦7496 they went¦7497 down¦7497 into Mitsrayim \add !(Egypt)\add*, for¦7501 a famine covered all the land¦7505 of Kena'an. They sojourned there¦7510 until¦7511 they'd grown up. They became a great multitude¦7518 there, so¦7520 that one couldn't count¦7523 the population of their nation.
+\v 11 Then¦7527 the¦7530 king¦7531 of Mitsrayim rose up against them, and¦7533 dealt subtly with them, and¦7538 brought them low, making them labour in¦7539 brick,\f + \fr 5:11 \ft Some authorities read \fqa and he brought them low with clay and brick, etc.\f* and made them slaves¦7548.
+\v 12 They cried to¦7551 their god¦7553, and he struck¦7556 all¦7557 the¦7558 land¦7559 of Mitsrayim with incurable plagues¦7561; so¦7567 the¦7570 Mitsrim \add !(Egyptians)\add* threw them out of their sight.
+\v 13 God¦7578 dried up the¦7579 Red¦7580 sea¦7581 before¦7582 them,
+\v 14 and¦7584 brought¦7585 them into the way of¦7589 Sinay Kadesh-Barnea and they threw out all¦7596 that¦7597 lived¦7598 in¦7599 the¦7600 wilderness.
+\v 15 They lived in¦7604 the land¦7605 of the Amorim, and¦7607 they destroyed by their strength¦7614 everyone¦7608 in¦7612 Heshbon. Passing over Yarden \add !(Jordan)\add*, they possessed all¦7621 the¦7622 hill country.
+\v 16 They threw out¦7626 before them the¦7629 Kena'ani \add !(Canaanite)\add*, the¦7632 Perizi, the¦7635 Yevusi, the¦7638 Shechemite, and¦7640 all¦7641 the¦7642 Girgashim, and¦7644 they lived in¦7646 that country many days¦7648.
 \p
-\v 17 And while they didn't sin before their god, they prospered, because God who hates iniquity was with them.
-\v 18 But when they departed from the way which he appointed them, they were destroyed in many severe battles, and were led captives into a land that was not theirs. The temple of their god was razed to the ground, and their cities were taken by their adversaries.
-\v 19 And now they have returned to their god, and have come up from the dispersion where they were dispersed, and have possessed Yerushalem \add !(Jerusalem)\add*, where their sanctuary is, and are settled in the hill country; for it was desolate.
+\v 17 And¦7650 while they didn't sin¦7653 before¦7654 their god¦7656, they prospered, because¦7663 God¦7664 who hates¦7665 iniquity was with¦7667 them.
+\v 18 But when¦7670 they departed from¦7673 the¦7674 way which¦7676 he¦7678 appointed them, they were destroyed in¦7680 many severe battles, and¦7686 were led captives into a¦7677 land¦7689 that¦7693 wasn't theirs. Their god's¦7696 temple¦7694 was razed to¦7698 the ground¦7700, and¦7701 their cities¦7703 were taken by¦7706 their adversaries.
+\v 19 And¦7709 now¦7710 they've returned to their god¦7714, and have come up from¦7717 the¦7718 dispersion¦7719 where they were dispersed, and¦7723 have possessed Yerushalem \add !(Jerusalem)\add*, where their sanctuary is, and¦7731 are settled in¦7733 the¦7734 hill country; for it was¦7737 desolate.
 \p
-\v 20 And now, my lord and master, if there is any error in this people, and they sin against their god, we will find out what this thing is in which they stumble, and we will go up and overcome them.
-\v 21 But if there is no lawlessness in their nation, let my lord now pass by, lest their master defend them, and their god be for them, and we will be a reproach before all the earth.”
+\v 20 And¦7739 now¦7740, my lord¦7742 and master¦7741, if¦7743 there's¦7745 any error¦7746 in¦7747 this¦7748 people¦7749, and¦7751 they sin¦7752 against their god¦7755, we'll find out what this¦7759 thing is¦7761 in¦7762 which they stumble¦7764, and¦7766 we'll go up and¦7768 overcome them.
+\v 21 But if¦7771 there's no¦7773 lawlessness¦7775 in¦7776 their nation¦7778, let my lord now pass¦7780 by¦7780, otherwise their master might defend them and¦7790 their god¦7792 might take their side, and¦7796 we'd be¦7797 disgraced before the¦7802 whole¦7801 world¦7803.”
 \p
-\v 22 It came to pass, when Ahior had finished speaking these words, all the people standing around the tent complained. The great men of Holofernes, and all who lived by the sea side and in Moav \add !(Moab)\add*, said that he should be cut to pieces.
-\v 23 Because, they said, “We will not be afraid of the children of Yisrael \add !(Israel)\add*, because, behold, they are a people that has no power nor might to make the battle strong.
-\v 24 Therefore now we will go up, and they will be a prey to be devoured by all your army, master Holofernes.”
+\v 22 When¦7804 Ahior had finished speaking¦7809 these words¦7811, all¦7815 the¦7816 people¦7817 standing around the¦7820 tent¦7821 complained. The¦7826 great¦7827 men¦7827 of Holofernes, and¦7829 all¦7830 who¦7831 lived¦7832 by the¦7833 sea side and¦7835 in Moav \add !(Moab)\add*, said¦7825 that¦7836 he¦7839 should be cut to pieces.
+\v 23 Because¦7841, they said, “We won't¦7854 be afraid of the children¦7844 of Yisrael \add !(Israel)\add*, because¦7847 they're a¦7848 people¦7848 that¦7850 has no¦7851 power nor might to make the battle strong¦7858.
+\v 24 Therefore now we'll go up, and¦7862 they'll be a prey to¦7863 be¦7863 devoured¦7865 by all¦7866 your army¦7868, master¦7870 Holofernes.”
 \c 6
+\s1 Holofernes sends Ahior to Betulia
 \p
-\v 1 And when the disturbance of the men that were around the council had ceased, Holofernes the chief captain of the army of Ashur \add !(Assyria)\add* said to Ahior and to all the children of Moav\f + \fr 6:1 \ft Some authorities read \fqa Ammon. \ft Compare ver. 5.\f* before all the people of the foreigners:
+\v 1 And¦7872 when the¦7875 disturbance of the¦7877 men¦7878 that were around the¦7879 council had ceased, Holofernes the¦7881 chief captain of Ashur's \add !(Assyria)\add* army said¦7884 to Ahior and¦7883 to¦7884 all the¦7886 children¦7900 of¦7892 Moav\f + \fr 6:1 \ft Some authorities read \fqa Ammon. \ft Compare ver. 5.\f* before all¦7893 the people of¦7894 the¦7894 foreigners:
 \p
-\v 2 “And who are you, Ahior, and the mercenaries of Efrayim \add !(Ephraim)\add*,\f + \fr 6:2 \ft Some authorities read \fqa Ammon. \ft Compare ver. 5.\f* that you have prophesied amongst us as today, and have said that we should not make war with the race of Yisrael, because their god will defend them? And who is God but Nevukadnetsar \add !(Nebuchadnezzar)\add*?
-\v 3 He will send forth his might, and will destroy them from the face of the earth, and their god will not deliver them; but we his servants will strike them as one man. They will not sustain the might of our cavalry.
-\v 4 Because with them we will burn them up. Their mountains will be drunken with their blood. Their plains will be filled with their dead bodies. Their footsteps will not stand before us, but they will surely perish, says King Nevukadnetsar, lord of all the earth; for he said, ‘The words that I have spoken\f + \fr 6:4 \ft Gr. \fqa he has spoken.\f* will not be in vain.’
+\v 2 “And who are you, Ahior, and the mercenaries of Efrayim \add !(Ephraim)\add*,\f + \fr 6:2 \ft Some authorities read \fqa Ammon. \ft Compare ver. 5.\f* that you've prophesied among us as today, and have said that we shouldn't make war with the race of Yisrael, because their god will defend them? And who's God but Nevukadnetsar \add !(Nebuchadnezzar)\add*?
+\v 3 He'll send forth his might, and will destroy them from the face of the earth, and their god won't deliver them; but we his servants will strike them as one man. They won't sustain the might of our cavalry.
+\v 4 Because¦7976 with them we'll¦8006 burn them up. Their mountains¦7982 will be drunken with their blood¦7987. Their plains will be filled with their dead¦7994 bodies. Their footsteps won't stand before us, but¦8007 they'll surely perish, says King¦8012 Nevukadnetsar, lord¦8015 of all¦8016 the¦8017 earth¦8018; for¦8020 he said, ‘The words¦8026 that I've spoken¦8010\f + \fr 6:4 \ft Grk. \fqa he has spoken.\f* won't be in vain.’
 \p
-\v 5 But you, Ahior, hireling of Amon, who have spoken these words in the day of your iniquity, will see my face no more from this day, until I am avenged of the race of those that came out of Mitsrayim \add !(Egypt)\add*.
-\v 6 And then the sword of my army, and the multitude of those who serve me, will pass through your sides, and you will fall amongst their slain when I return.
-\v 7 Then my servants will bring you back into the hill country, and will set you in one of the cities by the passes.
-\v 8 You will not perish until you are destroyed with them.
-\v 9 And if you hope in your heart that they will not be taken, don't let your countenance fall. I have spoken it, and none of my words will fall to the ground.”
+\v 5 But¦8029 you, Ahior, hireling of¦8032 Amon, who've¦8036 spoken these words¦8037 in¦8039 the day¦8040 of your iniquity, will see¦8044 my face¦8047 no¦8043 more from¦8049 this¦8050 day¦8051, until¦8053 I'm avenged¦8055 of the¦8056 race of those that¦8058 came out¦8059 of Mitsrayim \add !(Egypt)\add*.
+\v 6 And¦8061 then¦8062 the sword of my army¦8067, and¦8069 the multitude of those who serve me, will pass¦8063 through¦8063 your sides, and you'll¦8077 fall among¦8080 their slain when¦8084 I return¦8085.
+\v 7 Then¦8086 my servants will bring you¦8088 back into the hill country, and¦8095 will set you¦8097 in¦8098 one¦8099 of the¦8100 cities¦8101 by the¦8102 passes.
+\v 8 You won't perish until¦8107 you're destroyed with¦8110 them.
+\v 9 And¦8112 if¦8113 you hope in your heart¦8116 that¦8118 they won't¦8121 be taken, don't let your face¦8125 fall. I've spoken¦8126 it, and¦8127 none¦8128 of my words will fall to the¦8130 ground.”
 \p
-\v 10 Then Holofernes commanded his servants who waited in his tent to take Ahior, and bring him back to Betulia, and deliver him into the hands of the children of Yisrael \add !(Israel)\add*.
-\v 11 So his servants took him, and brought him out of the camp into the plain, and they moved from the midst of the plains into the hill country, and came to the springs that were under Betulia.
-\v 12 When the men of the city saw them on the top of the hill, they took up their weapons, and went out of the city against them to the top of the hill. Every man that used a sling kept them from coming up, and threw stones at them.
-\v 13 They took cover under the hill, bound Ahior, threw him down, left him at the foot of the hill, and went away to their lord.
+\v 10 Then¦8133 Holofernes commanded his servants who waited in¦8142 his tent¦8144 to¦8146 take Ahior, and bring him back to Betulia, and deliver¦8155 him into the hands¦8157 of the children¦8158 of Yisrael \add !(Israel)\add*.
+\v 11 So¦8160 his servants took him, and¦8166 brought¦8167 him out¦8169 of the¦8170 camp into the¦8173 plain¦8174, and¦8175 they moved from¦8177 the middle¦8178 of the¦8179 plains into the¦8182 hill country, and¦8184 came¦8185 to¦8186 the¦8187 springs that¦8189 were¦8190 under¦8191 Betulia.
+\v 12 When¦8193 the¦8197 men¦8198 of the¦8199 city¦8200 saw them on the¦8202 top of¦8204 the¦8204 hill¦8205, they took up their weapons¦8208, and¦8210 went¦8211 out¦8212 of the¦8213 city¦8214 against them to the¦8216 top of¦8218 the¦8218 hill¦8219. Every¦8221 man¦8222 that used a¦8223 sling kept them from coming up, and¦8228 threw¦8229 stones¦8231 at them.
+\v 13 They took cover under¦8236 the¦8237 hill¦8238, bound¦8239 Ahior, threw him down, left him at the foot of¦8248 the¦8248 hill¦8249, and¦8250 went away to¦8252 their lord¦8254.
 \p
-\v 14 But the children of Yisrael descended from their city, and came to him, untied him, led him away into Betulia, and presented him to the rulers of their city,
-\v 15 which were in those days Ozias the son of Mikah, of the tribe of Shim’on \add !(Simeon)\add*, and Chabris the son of Otniel, and Charmis the son of Malkiel.
-\v 16 Then they called together all the elders of the city; and all their young men ran together, with their women, to the assembly. They set Ahior in the midst of all their people. Then Ozias asked him what had happened.
-\v 17 He answered and declared to them the words of the council of Holofernes, and all the words that he had spoken in the midst of the princes of the children of Ashur \add !(Assyria)\add*, and all the great words that Holofernes had spoken against the house of Yisrael.
-\v 18 Then the people fell down and worshipped God, and cried, saying,
-\v 19 “Oh master God of heaven, behold their arrogance, and pity the low estate of our race. Look upon the face of those who are sanctified to you this day.”
-\v 20 They comforted Ahior, and praised him exceedingly.
-\v 21 Then Ozias took him out of the assembly into his house, and made a feast for the elders. They called on the god of Yisrael for help all that night.
+\v 14 But¦8257 the children¦8258 of Yisrael descended from¦8260 their city¦8262, and¦8266 came to him, untied him, led¦8269 him away¦8269 into Betulia, and¦8273 presented him to¦8276 the¦8277 rulers¦8278 of their city¦8280,
+\v 15 which¦8282 were¦8283 in¦8284 those days¦8286 Ozias¦8288 the¦8289 son of Mikah, of the¦8293 tribe¦8294 of Shim'on \add !(Simeon)\add*, and¦8296 Chabris the¦8298 son of¦8299 Otniel, and Charmis the son¦8303 of Malkiel.
+\v 16 Then¦8305 they called¦8306 together¦8306 all¦8307 the¦8308 elders¦8309 of the¦8310 city¦8311; and¦8312 all¦8314 their young¦8315 men¦8315 ran together, with their women¦8319, to the¦8321 assembly¦8322. They set Ahior among¦8327 all¦8329 their people¦8331. Then¦8333 Ozias¦8336 asked him what had happened.
+\v 17 He answered¦8340 and¦8339 declared to¦8341 them the¦8343 words of the¦8345 council of Holofernes, and¦8348 all¦8349 the¦8350 words that he'd spoken¦8353 among¦8354 the princes of the children¦8358 of Ashur \add !(Assyria)\add*, and¦8360 all the great words that Holofernes had spoken against the¦8365 house¦8366 of Yisrael.
+\v 18 Then¦8368 the¦8370 people¦8371 fell down and worshipped¦8372 God¦8374, and¦8375 cried, saying,
+\v 19 “Oh master God¦8380 of¦8381 heaven¦8382, look at their arrogance, and¦8388 pity the¦8390 low estate of¦8392 our race. Look on¦8397 the¦8398 face¦8399 of those who¦8400 are sanctified to you¦8402 this¦8404 day¦8405.”
+\v 20 They comforted¦8408 Ahior, and¦8411 praised him highly.
+\v 21 Then¦8415 Ozias¦8418 took¦8416 him out¦8419 of the¦8420 assembly¦8421 into his house¦8423, and¦8425 made¦8426 a feast for the¦8428 elders¦8429. They called on the¦8432 god¦8433 of Yisrael for help¦8436 all¦8437 that¦8440 night¦8439.
 \c 7
+\s1 Holofernes surrounds Betulia
 \p
-\v 1 The next day Holofernes commanded all his army and all the people who had come to be his allies, that they should move their camp towards Betulia, seize the passes of the hill country, and make war against the children of Yisrael.
-\v 2 Every mighty man of them moved that day. The army of their men of war was one hundred and seventy thousand footmen, plus twelve thousand horsemen, besides the baggage and the men who were on foot amongst them—an exceedingly great multitude.
-\v 3 They encamped in the valley near Betulia, by the fountain. They spread themselves in breadth over Dotan even to Belmaim, and in length from Betulia to Kuamon, which is near Yizre’el \add !(Jezreel)\add*.
+\v 1 The¦8443 next¦8443 day¦8443 Holofernes commanded all¦8446 his army¦8448 and¦8450 all¦8451 the¦8452 people¦8453 who'd¦8455 come¦8456 to¦8457 be his allies, that¦8458 they should move their camp towards¦8462 Betulia, seize the¦8465 passes of the¦8467 hill country, and¦8470 make¦8471 war¦8472 against the¦8474 children¦8475 of Yisrael.
+\v 2 Every mighty man of them moved that¦8482 day¦8481. The¦8488 army of their men¦8491 of war was one¦8494 hundred¦8496 and seventy¦8497 thousand¦8500 footmen, plus twelve¦8501 thousand horsemen, besides the¦8503 baggage and¦8505 the¦8506 men¦8507 who¦8508 were¦8509 on¦8511 foot among them—a very¦8515 great multitude¦8513.
+\v 3 They encamped in¦8518 the¦8519 valley near¦8521 Betulia, by the¦8524 fountain. They spread themselves in breadth¦8529 over Dotan even to¦8530 Belmaim, and in length¦8537 from¦8538 Betulia to Kuamon, which is¦8543 near Yizre'el \add !(Jezreel)\add*.
 \p
-\v 4 But the children of Yisrael, when they saw the multitude of them, were terrified, and everyone said to his neighbour, “Now these men will lick up the face of all the earth. Neither the high mountains, nor the valleys, nor the hills will be able to bear their weight.
-\v 5 Every man took up his weapons of war, and when they had kindled fires upon their towers, they remained and watched all that night.
+\v 4 But the children¦8548 of Yisrael, when they saw the¦8553 multitude¦8554 of them, were terrified, and¦8557 everyone said¦8558 to¦8560 his neighbour¦8562, “Now¦8564 these men will lick up the¦8567 face¦8568 of all¦8571 the¦8569 earth¦8570. Neither¦8573 the high¦8577 mountains¦8575, nor the valleys, nor the hills will be able to bear their weight.
+\v 5 Every man took¦8589 up¦8589 his weapons of war, and¦8596 when they'd kindled fires on¦8599 their towers, they remained and watched all¦8605 that¦8608 night¦8607.
 \p
-\v 6 But on the second day Holofernes led out all his cavalry in the sight of the children of Yisrael which were in Betulia,
-\v 7 viewed the ascents to their city, and searched out the springs of the waters, seized upon them, and set garrisons of men of war over them. Then he departed back to his people.
+\v 6 But¦8610 on the¦8612 second¦8613 day¦8611 Holofernes led¦8614 out¦8614 all¦8616 his cavalry in the¦8617 sight of the¦8622 children¦8623 of Yisrael which¦8625 were¦8626 in¦8627 Betulia,
+\v 7 viewed the ascents to their city¦8634, and¦8636 searched out the¦8637 springs of the¦8639 waters¦8640, seized on them, and set garrisons of men¦8650 of war over them. Then¦8652 he¦8653 departed back to his people¦8657.
 \p
-\v 8 All the rulers of the children of Esav \add !(Esau)\add*, all the leaders of the people of Moav \add !(Moab)\add*, and the captains of the sea coast came to him and said,
-\v 9 “Let our lord now hear a word, that there not be losses in your army.
-\v 10 Because this people of the children of Yisrael do not trust in their spears, but in the height of the mountains wherein they dwell, for it is not easy to come up to the tops of their mountains.
-\v 11 And now, my lord, don't fight against them as men fight who join battle, and there will not so much as one man of your people perish.
-\v 12 Remain in your camp, and keep every man of your army safe. Let your servants get possession of the water spring, which flows from the foot of the mountain,
-\v 13 because all the inhabitants of Betulia get their water from there. Then thirst will kill them, and they will give up their city. Then we and our people will go up to the tops of the mountains that are near, and will camp upon them, to watch that not one man gets out of the city.
-\v 14 They will be consumed with famine—they, their wives, and their children. Before the sword comes against them they will be laid low in the streets where they dwell.
-\v 15 And you will pay them back with evil, because they rebelled, and didn't meet your face in peace.”
+\v 8 All¦8662 the¦8663 rulers¦8664 of the¦8665 children¦8666 of Esav \add !(Esau)\add*, all¦8669 the¦8670 leaders of¦8672 the¦8672 people¦8673 of Moav \add !(Moab)\add*, and¦8675 the¦8676 captains of the¦8678 sea coast came¦8660 to¦8680 him and said¦8680,
+\v 9 “Let our lord now hear¦8681 a word¦8683, that¦8687 there not¦8688 be¦8689 losses in¦8691 your army.
+\v 10 Because this¦8695 people¦8697 of the¦8699 children¦8700 of Yisrael don't trust in their spears, but¦8708 in the¦8710 height of the¦8712 mountains¦8713 wherein they live, for it isn't¦8723 easy to come up to the tops of their mountains¦8729.
+\v 11 And¦8731 now¦8732, my lord, don't¦8734 fight¦8735 against them as¦8738 men fight who join battle, and¦8742 there won't so much as one man of¦8746 your people¦8747 perish.
+\v 12 Remain in your camp, and keep every man¦8758 of your army safe. Let your servants get possession of the¦8770 water¦8771 spring, which¦8772 flows¦8769 from¦8774 the¦8775 foot of¦8777 the¦8777 mountain¦8778,
+\v 13 because¦8779 all¦8782 the¦8783 inhabitants¦8784 of Betulia get their water from¦8780 there¦8780. Then¦8786 thirst¦8790 will kill them, and¦8791 they'll give up their city¦8794. Then¦8796 we¦8797 and¦8798 our people¦8800 will go¦8817 up to¦8803 the¦8804 tops of the¦8807 mountains¦8808 that are near¦8805, and¦8809 will camp on them, to¦8811 watch that not¦8816 one man gets out of the¦8819 city¦8820.
+\v 14 They'll be consumed with famine—they, their wives, and their children¦8835. Before¦8838 the¦8840 sword¦8841 comes¦8839 against¦8842 them they'll be laid low in¦8845 the streets where they live.
+\v 15 And¦8851 you'll pay them back with evil¦8855, because¦8856 they rebelled, and¦8859 didn't meet¦8861 your face¦8863 in¦8865 peace¦8866.”
 \p
-\v 16 Their words were pleasing in the sight of Holofernes and in the sight of all his servants; and he ordered them to do as they had spoken.
-\v 17 And the army of the children of Amon moved, and with them five thousand of the children of Ashur \add !(Assyria)\add*, and they encamped in the valley. They seized the waters and the springs of the waters of the children of Yisrael.
-\v 18 The children of Esav \add !(Esau)\add* went up with the children of Amon, and encamped in the hill country near Dotan. They sent some of them towards the south, and towards the east, near Ekrebel, which is near Chusi, that is upon the brook Mochmur. The rest of the army of the Assyrians encamped in the plain, and covered all the face of the land. Their tents and baggage were pitched upon it in a great crowd. They were an exceedingly great multitude.
+\v 16 Their words¦8870 were pleasing in the sight of Holofernes and¦8874 in the sight of all¦8876 his servants; and he ordered them to¦8882 do¦8882 as¦8883 they'd spoken¦8884.
+\v 17 And¦8885 the army of the children¦8888 of Amon moved, and¦8890 with¦8891 them five¦8894 thousand¦8893 of the children¦8895 of Ashur \add !(Assyria)\add*, and¦8897 they encamped in¦8899 the¦8900 valley. They seized the¦8904 waters¦8905 and¦8906 the¦8907 springs of the¦8909 waters¦8910 of the¦8911 children¦8912 of Yisrael.
+\v 18 The children¦8916 of Esav \add !(Esau)\add* went up with the¦8919 children¦8920 of Amon, and¦8922 encamped in¦8924 the¦8925 hill country near Dotan. They sent¦8930 some of them towards the south¦8934, and¦8935 towards the east, near Ekrebel, which is¦8940 near¦8941 Chusi, that's¦8944 on¦8945 the¦8946 brook¦8947 Mochmur. The rest of the army¦8952 of the¦8953 Assyrians encamped in¦8956 the¦8957 plain, and¦8959 covered all¦8961 the¦8962 face¦8963 of the¦8964 land¦8965. Their tents and baggage were pitched on it¦8972 in¦8974 a great crowd¦8975. They were¦8978 a very¦8982 great multitude¦8980.
+\s1 The thirsty people demand surrender
 \p
-\v 19 The children of Yisrael cried to the master their god, for their spirit fainted; for all their enemies had surrounded them. There was no way to escape out from amongst them.
-\v 20 All the army of Ashur remained around them, their footmen and their chariots and their horsemen, for thirty-four days. All their vessels of water ran dry for all the inhabitants of Betulia.
-\v 21 The cisterns were emptied, and they had no water to drink their fill for one day; for they rationed drink by measure.
-\v 22 Their young children were discouraged. The women and the young men fainted for thirst. They fell down in the streets of the city, and in the passages of the gates. There was no longer any strength in them.
+\v 19 The¦8984 children¦8985 of Yisrael cried to¦8988 the master their god¦8990, for their spirit¦8995 fainted; for all¦8999 their enemies¦9001 had surrounded¦8998 them. There was no¦9004 way to¦9005 escape out¦9007 from¦9007 among¦9008 them.
+\v 20 All¦9014 Ashur's army remained around them, their footmen and¦9019 their chariots and¦9022 their horsemen¦9024, for thirty-four days¦9026. All¦9030 their vessels of water¦9039 ran dry for all¦9034 the¦9035 inhabitants¦9032 of Betulia.
+\v 21 The¦9041 cisterns were emptied, and¦9044 they had no¦9045 water¦9050 to¦9047 drink¦9047 their fill for one day¦9051; for they rationed drink by measure¦9055.
+\v 22 Their young children were discouraged. The women¦9066 and¦9068 the¦9069 young¦9070 men¦9070 fainted for thirst. They fell down in¦9077 the¦9078 streets of the¦9080 city¦9081, and¦9082 in¦9083 the¦9084 passages of the¦9086 gates¦9087. There was no¦9089 longer any strength in¦9093 them.
 \p
-\v 23 All the people, including the young men, the women, and the children, were gathered together against Ozias, and against the rulers of the city. They cried with a loud voice, and said before all the elders,
-\v 24 “God be judge between all of you and us, because you have done us great wrong, in that you have not spoken words of peace with the children of Ashur.
-\v 25 Now we have no helper; but God has sold us into their hands, that we should be laid low before them with thirst and great destruction.
-\v 26 And now summon them, and deliver up the whole city as prey to the people of Holofernes, and to all his army.
-\v 27 Because it is better for us to be captured by them. Because we will be servants, and our souls will live, and we will not see the death of our babies before our eyes, and our wives and our children fainting in death.
-\v 28 We take to witness against you the heaven and the earth, and our god and the master of our fathers, who punishes us according to our sins and the sins of our fathers. Do what we have said today!”
+\v 23 All¦9097 the¦9098 people¦9099, including¦9102 the¦9107 young¦9108 men¦9108, the¦9110 women¦9111, and¦9112 the¦9113 children¦9114, were gathered together against Ozias, and¦9115 against the rulers¦9104 of the¦9105 city¦9106. They cried with a loud voice¦9117, and¦9119 said¦9120 before all¦9122 the¦9123 elders¦9124,
+\v 24 “God¦9127 be judge¦9125 between all of you and¦9130 us, because you've¦9131 done¦9133 us great¦9137 wrong¦9136, in that¦9132 you haven't spoken¦9139 words of peace with¦9141 the¦9142 children¦9143 of Ashur.
+\v 25 Now¦9146 we have no¦9147 helper¦9149; but¦9151 God¦9155 has sold¦9152 us into their hands¦9158, that we should be laid low before them with thirst and¦9166 great¦9168 destruction¦9167.
+\v 26 And¦9169 now¦9170 summon them, and¦9173 deliver up the¦9175 whole city¦9176 as prey to Holofernes' people¦9181, and¦9183 to all¦9184 his army.
+\v 27 Because¦9189 it's¦9192 better for us to¦9195 be¦9195 captured by them. Because¦9196 we'll be servants, and¦9199 our souls will live¦9200, and we won't see¦9206 the¦9207 death¦9208 of our babies before our eyes¦9213, and¦9215 our wives and¦9218 our children¦9220 fainting in death.
+\v 28 We take to witness against you¦9227 the¦9228 heaven¦9229 and¦9230 the¦9231 earth¦9232, and¦9233 our god¦9235 and¦9237 the¦9239 master of our fathers¦9240, who punishes us according¦9245 to¦9245 our sins¦9247 and¦9249 the¦9251 sins¦9252 of our fathers¦9254. Do¦9258 what we've said today¦9267!”
 \p
-\v 29 And there was great weeping of all with one consent in the midst of the assembly; and they cried to the master God with a loud voice.
-\v 30 And Ozias said to them, “Brethren, be of good courage! Let us endure five more days, during which the master our god will turn his mercy towards us; for he will not forsake us utterly.
-\v 31 But if these days pass, and no help comes to us, I will do what you say.”
-\v 32 Then he dispersed the people, every man to his own camp; and they went away to the walls and towers of their city. He sent the women and children into their houses. They were brought very low in the city.
+\v 29 And¦9268 there was¦9269 great weeping¦9270 of all¦9276 with one consent in¦9272 the¦9274 assembly¦9275; and¦9278 they cried to¦9280 the¦9282 master God¦9283 with a loud voice¦9284.
+\v 30 And¦9286 Ozias¦9290 said¦9287 to¦9288 them, “Brethren¦9292, be of good courage¦9291! Let us endure five¦9295 more days¦9296, during¦9297 which¦9298 the¦9301 master our god¦9302 will turn¦9299 his mercy¦9305 towards¦9307 us; for¦9310 he won't forsake us utterly.
+\v 31 But if¦9315 these days pass, and no help¦9324 comes¦9321 to¦9322 us, I'll¦9323 do¦9325 what you¦9329 say.”
+\v 32 Then¦9330 he dispersed the¦9332 people¦9333, every man to his own camp; and¦9338 they went¦9348 away to¦9339 the¦9340 walls¦9341 and¦9342 towers of their city¦9346. He¦9347 sent¦9359 the¦9350 women¦9351 and¦9352 children¦9354 into their houses¦9357. They were¦9361 brought very¦9364 low in¦9365 the¦9366 city¦9367.
 \c 8
+\s1 Yehudit challenges the leaders to trust God
 \p
-\v 1 In those days Yehudit \add !(Judith)\add* heard about this. She was the daughter of Merari, the son of Ox, the son of Yosef \add !(Joseph)\add*, the son of Uziel, the son of Hilkiyah, the son of Hananyah, the son of Gid’on, the son of Raphaim, the son of Ahituv, the son of Elihu, the son of Eliav, the son of Netanel, the son of Shelumiel, the son of Salasadai, the son of Yisrael \add !(Israel)\add*.
-\v 2 Her husband was Menasheh \add !(Manasseh)\add*, of her tribe and of her family. He died in the days of barley harvest.
-\v 3 Because he stood over those who bound sheaves in the field, and was overcome by the burning heat, and he fell on his bed, and died in his city Betulia. So they buried him with his fathers in the field which is between Dotan and Ba’al-Hamon.
-\v 4 Yehudit was a widow in her house three years and four months.
-\v 5 She made herself a tent upon the roof of her house, and put on sackcloth upon her loins. The garments of her widowhood were upon her.
-\v 6 And she fasted all the days of her widowhood, except the eves of the Sabbaths, the Sabbaths, the eves of the new moons, the new moons, and the feasts and joyful days of the house of Yisrael.
-\v 7 She was beautiful in appearance, and lovely to behold. Her husband Menasheh had left her gold, silver, menservants, maidservants, cattle, and lands. She remained on those lands.
-\v 8 No one said anything evil about her, for she feared God exceedingly.
+\v 1 In¦9370 those days¦9373 Yehudit \add !(Judith)\add* heard¦9369 about this. She was the daughter¦9375 of Merari¦9376, the son¦9377 of Ox¦9378, the son of Yosef \add !(Joseph)\add*, the son of Uziel, the son of Hilkiyah, the son of Hananyah, the son of Gid'on, the son of Raphaim, the son of Ahituv, the son of Elihu, the son of Eliav, the son of Netanel, the son of Shelumiel, the son of Salasadai, the son of Yisrael \add !(Israel)\add*.
+\v 2 Her husband was Menasheh \add !(Manasseh)\add*, of her tribe¦9405 and¦9407 of her family¦9409. He¦9410 died¦9412 in¦9413 the days¦9414 of barley¦9416 harvest¦9415.
+\v 3 Because¦9418 he stood over those who¦9422 bound sheaves¦9423 in¦9424 the¦9425 field, and¦9427 was overcome by the¦9428 burning heat¦9429, and he fell on¦9437 his bed¦9439, and¦9440 died in¦9442 his city¦9445 Betulia. So¦9447 they buried¦9448 him with¦9450 his fathers¦9452 in¦9454 the¦9455 field¦9456 which is between Dotan and¦9460 Ba'al-Hamon.
+\v 4 Yehudit was¦9463 a widow in¦9465 her house¦9467 three¦9471 years¦9470 and¦9472 four¦9474 months¦9473.
+\v 5 She made¦9476 herself a tent¦9478 on¦9479 the¦9480 roof¦9481 of¦9482 her house¦9483, and¦9485 put¦9486 on¦9486 sackcloth on¦9487 her loins¦9489. The¦9496 clothes¦9497 of her widowhood were¦9493 on¦9494 her.
+\v 6 And¦9501 she fasted all¦9503 the¦9504 days¦9505 of her widowhood, except the eves of the Sabbaths, the Sabbaths, the eves of the new moons, the new moons, and the feasts and joyful days of the house¦9520 of Yisrael.
+\v 7 She was¦9523 beautiful¦9528 in appearance¦9526, and¦9527 lovely to¦9530 look¦9530 at. Her husband Menasheh had left her gold¦9539, silver, male servants, female servants, cattle, and lands. She¦9553 remained on those lands.
+\v 8 No¦9555 one said anything evil¦9561 about her, for she feared¦9563 God¦9565 greatly.
 \p
-\v 9 She heard the evil words of the people against the governor, because they fainted for lack of water; and Yehudit heard all the words that Ozias spoke to them, how he swore to them that he would deliver the city to the Assyrians after five days.
-\v 10 So she sent her maid, who was over all things that she had, to summon Ozias, Chabris, and Charmis, the elders of her city.
-\v 11 They came to her, and she said to them, “Hear me now, Oh you rulers of the inhabitants of Betulia! Because your word that you have spoken before the people this day is not right. You have set the oath which you have pronounced between God and you, and have promised to deliver the city to our enemies, unless within these days the master turns to help you.
-\v 12 Now who are you that you have tested God this day, and stand in the place of God amongst the children of men?
-\v 13 Now try the master Almighty, and you will never know anything.
-\v 14 Because you will not find the depth of the heart of man, and you will not perceive the things that he thinks. How will you search out God, who has made all these things, and know his mind, and comprehend his purpose? No, my kindred, don't provoke the master our god to anger!
-\v 15 Because if he has not decided to help us within these five days, he has power to defend us in such time as he will, or to destroy us before the face of our enemies.
-\v 16 But don't you pledge the counsels of the master our god! Because God is not like a human being, that he should be threatened, neither is he like a son of man, that he should be won over by pleading.
-\v 17 Therefore let's wait for the salvation that comes from him, and call upon him to help us. He will hear our voice, if it pleases him.
-\v 18 Because there arose none in our age, neither is there any of us today, tribe, or kindred, or family, or city, which worship gods made with hands, as it was in the former days;
-\v 19 for which cause our fathers were given to the sword, and for plunder, and fell with a great destruction before our enemies.
-\v 20 But we know no other god beside him. Therefore we hope that he will not despise us, nor any of our race.
-\v 21 Because if we are captured, all Yehudah \add !(Judea)\add* will be captured and our sanctuary will be plundered; and he will require our blood for profaning it.
-\v 22 The slaughter of our kindred, the captivity of the land, and the desolation of our inheritance, he will bring on our heads amongst the Gentiles, wherever we will be in bondage. We will be an offence and a reproach to those who take us for a possession.
-\v 23 Because our bondage will not be ordered to favour; but the master our god will turn it to dishonour.
-\v 24 And now, kindred, let's show an example to our kindred, because their soul depends on us, and the sanctuary, the house, and the altar depend on us.
-\v 25 Besides all this let's give thanks to the master our god, who tries us, even as he did our fathers also.
-\v 26 Remember all the things which he did to Avraham, and all the things in which he tried Yitshak \add !(Isaac)\add*, and all the things which happened to Ya’akov \add !(Jacob)\add* in Mesopotamia of Aram \add !(Syria)\add*, when he kept the sheep of Lavan \add !(Laban)\add* his mother's brother.
-\v 27 Because he has not tried us in the fire, as he did them, to search out their hearts, neither has he taken vengeance on us; but the master scourges those who come near to him, to admonish them.”
+\v 9 She heard¦9568 the¦9569 evil¦9574 words of¦9571 the¦9571 people¦9572 against¦9575 the¦9576 governor¦9577, because¦9578 they fainted for lack of water¦9584; and¦9585 Yehudit heard¦9586 all¦9587 the¦9588 words¦9589 that Ozias¦9595 spoke¦9592 to¦9593 them, how¦9596 he swore¦9597 to¦9597 them that he'd¦9598 deliver the¦9600 city¦9601 to the Assyrians after¦9602 five¦9604 days¦9603.
+\v 10 So¦9607 she¦9611 sent her maid, who¦9612 was over all¦9614 things that¦9615 she¦9617 had, to¦9618 summon Ozias, Chabris, and Charmis, the¦9624 elders¦9625 of her city¦9627.
+\v 11 They came¦9630 to¦9631 her, and¦9633 she¦9636 said to¦9637 them, “Hear¦9637 me now, Oh you rulers¦9640 of the¦9641 inhabitants¦9642 of Betulia! Because your word¦9649 that¦9645 you've¦9650 spoken¦9652 before the¦9654 people¦9655 this¦9657 day¦9658 isn't¦9680 right¦9647. You've set the¦9662 oath¦9663 which¦9664 you've pronounced between God¦9668 and¦9669 you¦9670, and¦9671 have promised to¦9672 deliver the¦9674 city¦9675 to¦9683 our enemies, unless within these days the¦9684 master turns¦9683 to¦9686 help¦9686 you.
+\v 12 Now¦9689 who are¦9691 you¦9692 that you've tested God¦9696 this¦9698 day¦9699, and stand in the place of God¦9706 among¦9707 the children¦9709 of men?
+\v 13 Now¦9712 try the master Almighty, and¦9716 you'll never know¦9718 anything.
+\v 14 Because you won't find¦9727 the depth¦9723 of the heart¦9724 of man¦9725, and¦9728 you won't perceive the¦9730 things that¦9722 he¦9732 thinks. How¦9736 will you search out God¦9738, who's made¦9740 all¦9742 these things, and¦9745 know¦9749 his mind, and¦9750 comprehend his purpose? No, my¦9753 kindred, don't provoke the master our god to¦9758 anger¦9758!
+\v 15 Because¦9763 if¦9764 he hasn't¦9765 decided to¦9766 help¦9771 us within these five¦9769 days¦9770, he¦9773 has power to¦9774 defend us in¦9777 such time as he will¦9779, or¦9782 to destroy us before¦9786 our enemies'¦9789 face¦9787.
+\v 16 But¦9792 don't¦9793 you pledge the¦9795 counsels of¦9798 the¦9798 master our god¦9799! Because¦9801 God¦9806 isn't¦9808 like a human being, that he should be threatened, neither is he like a son¦9810 of man¦9811, that he should be won over by pleading.
+\v 17 Therefore¦9813 let's wait for the¦9815 salvation¦9818 that comes from him, and call on him to help¦9822 us. He'll hear our voice¦9827, if¦9829 it¦9831 pleases¦9832 him.
+\v 18 Because¦9833 there arose¦9835 none in¦9836 our age, neither is¦9841 there any of us today¦9846, tribe¦9848, or kindred, or family¦9850, or city¦9854, which¦9857 worship gods¦9859 made with hands, as¦9861 it was¦9862 in¦9863 the¦9864 former days¦9866;
+\v 19 for which¦9867 cause our fathers¦9876 were given¦9869 to¦9869 the sword¦9871, and¦9872 for plunder, and¦9878 fell with a great¦9881 destruction before¦9882 our enemies¦9884.
+\v 20 But we know¦9891 no other¦9888 god¦9889 beside him. Therefore we hope¦9895 that¦9896 he won't¦9900 despise us, nor any of¦9902 our race.
+\v 21 Because¦9905 if we're¦9909 captured, all¦9912 Yehudah \add !(Judea)\add* will be captured and¦9915 our sanctuary¦9918 will be plundered; and¦9920 he'll require our blood for profaning it¦9924.
+\v 22 The slaughter of our kindred, the¦9936 captivity¦9937 of the¦9938 land¦9939, and¦9940 the desolation of our inheritance¦9944, he'll bring on our heads¦9948 among the Gentiles, wherever we'll¦9949 be in¦9950 bondage. We'll be an offence and a reproach to those who¦9965 take us for a possession.
+\v 23 Because¦9975 our bondage won't be ordered to favour; but¦9976 the¦9982 master our god¦9983 will turn it to dishonour¦9978.
+\v 24 And¦9985 now¦9986, kindred, let's show an example to¦9995 our kindred, because their soul¦9997 depends on us, and¦9999 the¦10000 sanctuary¦10001, the¦10003 house¦10004, and¦10005 the¦10006 altar¦10007 depend on¦10009 us.
+\v 25 Besides all¦10013 this let's give thanks to the master our god¦10017, who tries us, even as¦10022 he did our fathers¦10025 also¦10023.
+\v 26 Remember¦10027 all the things which he did¦10029 to¦10029 Avraham, and¦10032 all the¦10035 things in which he tried Yitshak \add !(Isaac)\add*, and¦10037 all the things which happened to Ya'akov \add !(Jacob)\add* in¦10042 Mesopotamia¦10043 of Aram \add !(Syria)\add*, when he kept the¦10047 sheep¦10048 of¦10050 Lavan \add !(Laban)\add* his mother's¦10053 brother¦10051.
+\v 27 Because¦10055 he hasn't tried us in the fire, as¦10057 he did them, to search out their hearts¦10063, neither has he¦10064 taken vengeance on us; but¦10069 the master scourges those who come near to him, to¦10072 admonish them.”
 \p
-\v 28 And Ozias said to her, “All that you have spoken, you have spoken with a good heart. There is no one who will deny your words.
-\v 29 Because this is not the first day wherein your wisdom is manifested; but from the beginning of your days all the people have known your understanding, because the disposition of your heart is good.
-\v 30 But the people were exceedingly thirsty, and compelled us to do as we spoke to them, and to bring an oath upon ourselves, which we will not break.
-\v 31 And now pray for us, because you are a godly woman, and the master will send us rain to fill our cisterns, and we will faint no more.”
+\v 28 And¦10077 Ozias¦10081 said¦10078 to¦10079 her, “All¦10082 that you've spoken, you've spoken with a good heart¦10086. There's no¦10089 one who'll¦10093 deny your words¦10094.
+\v 29 Because¦10096 this¦10099 isn't the¦10101 first day¦10109 wherein your wisdom¦10102 is¦10105 manifested; but¦10106 from¦10107 the beginning¦10108 of your days all¦10112 the¦10113 people have known¦10111 your understanding¦10116, because the disposition of your heart¦10124 is good.
+\v 30 But¦10126 the¦10127 people¦10128 were extremely thirsty, and¦10131 compelled us to¦10133 do¦10133 as¦10135 we spoke¦10136 to¦10136 them, and¦10138 to bring an oath¦10140 on¦10141 ourselves, which¦10143 we won't break.
+\v 31 And¦10146 now¦10147 pray¦10148 for us, because¦10151 you're a godly woman¦10152, and¦10155 the master will send¦10156 us rain¦10159 to fill our cisterns, and¦10165 we'll faint no¦10166 more.”
+\s1 Yehudit announces her plan
 \p
-\v 32 Then Yehudit \add !(Judith)\add* said to them, “Hear me, and I will do a thing, which will go down to all generations amongst the children of our race.
-\v 33 You shall all stand at the gate tonight. I will go out with my maid. Within the days after which you said that you would deliver the city to our enemies, the master will deliver Yisrael \add !(Israel)\add* by my hand.
-\v 34 But you shall not enquire of my act; for I will not tell you until the things are finished that I will do.”
+\v 32 Then¦10169 Yehudit \add !(Judith)\add* said¦10170 to them, “Hear¦10174 me, and¦10176 I'll do¦10177 a thing¦10178, which¦10179 will go down to all generations among the children¦10184 of¦10185 our race.
+\v 33 All of you¦10188 must stand at the¦10191 gate¦10192 tonight. I'll¦10198 go out with¦10199 my maid. Within the days¦10206 after¦10207 which¦10208 you said¦10209 that you'd deliver the¦10211 city¦10212 to¦10216 our enemies, the¦10218 master will deliver Yisrael \add !(Israel)\add* by my hand¦10221.
+\v 34 But¦10224 don't ask what I'm¦10229 going to do; for¦10231 I won't tell¦10232 you¦10233 until¦10234 the¦10235 things are finished¦10236 that¦10237 I'll¦10238 do¦10239.”
 \p
-\v 35 Then Ozias and the rulers said to her, “Go in peace. May the master God be before you, to take vengeance on our enemies.”
-\v 36 So they returned from the tent, and went to their stations.
+\v 35 Then¦10240 Ozias¦10242 and¦10243 the¦10244 rulers¦10245 said¦10241 to her, “Go in peace¦10250. May the¦10253 master God¦10254 be before¦10255 you, to take vengeance¦10258 on our enemies¦10260.”
+\v 36 So they returned from¦10264 the¦10265 tent¦10266, and went to their stations.
 \c 9
+\s1 Yehudit prays for help
 \p
-\v 1 But Yehudit fell onto her face, and put ashes upon her head, and uncovered the sackcloth with which she was clothed. The incense of that evening was now being offered at Yerushalem \add !(Jerusalem)\add* in the house of God, and Yehudit cried to the master with a loud voice, and said,
-\v 2 “Oh master God of my father Shim’on \add !(Simeon)\add*, into whose hand you gave a sword to take vengeance on the strangers who loosened the belt of a virgin to defile her, uncovered her thigh to her shame, and profaned her womb to her reproach; for you said, ‘It shall not be so;’ and they did so.
-\v 3 Therefore you gave their rulers to be slain, and their bed, which was ashamed for her who was deceived,\f + \fr 9:3 \ft Some authorities read \fqa which was ashamed for their deceit that they practised.\f* to be dyed in blood, and struck the servants with their masters, and the masters upon their thrones;
-\v 4 and gave their wives for a prey, and their daughters to be captives, and all their spoils to be divided amongst your dear children; which were moved with zeal for you, and abhorred the pollution of their blood, and called upon you for aid. Oh God, Oh my god, hear me also who am a widow.
-\v 5 Because you did the things that were before those things, and those things, and such as come after; and you planned the things which are now, and the things which are to come. The things which you planned came to pass.
-\v 6 Yes, the things which you determined stood before you, and said, ‘Listen, we are here; for all your ways are prepared, and your judgement is with foreknowledge.’
-\v 7 Because, behold, the Assyrians are multiplied in their power. They are exalted with horse and rider. They were proud of the strength of their footmen. They have trusted in shield, spear, bow, and sling. They don't know that you are the master who breaks the battles. ‘The master’ is your name.
-\v 8 Break their strength in your power, and bring down their force in your wrath; for they intend to profane your sanctuary, and to defile the tabernacle where your glorious name rests, and to destroy the horn of your altar with the sword.
-\v 9 Look at their pride, and send your wrath upon their heads. Give into my hand, which am a widow, the might that I have conceived.
-\v 10 Strike by the deceit of my lips the servant with the prince, and the prince with his servant. Break down their arrogance by the hand of a woman.
-\v 11 Because your power stands not in numbers, nor your might in strong men, but you are a God of the afflicted. You are a helper of the oppressed, a helper of the weak, a protector of the forsaken, a saviour of those who are without hope.
-\v 12 Please, please, God of my father, and God of the inheritance of Yisrael, master of the heavens and of the earth, Creator of the waters, King of all your creation, hear my prayer.
-\v 13 Make my speech and deceit to be their wound and bruise, who intend hard things against your covenant, your holy house, the top of Tsiyon \add !(Zion)\add*, and the house of the possession of your children.
-\v 14 Make every nation and tribe of yours to know that you are God, the god of all power and might, and that there is no other who protects the race of Yisrael but you.”
+\v 1 But¦10273 Yehudit fell onto her face¦10276, and¦10277 put ashes on¦10280 her head¦10282, and¦10284 uncovered the sackcloth with which¦10286 she was clothed¦10287. The¦10300 incense¦10301 of that¦10304 evening¦10303 was¦10290 now¦10291 being offered at Yerushalem \add !(Jerusalem)\add* in¦10293 God's¦10299 house¦10297, and¦10305 Yehudit cried¦10306 to¦10306 the master with a loud voice¦10307, and¦10312 said¦10313,
+\v 2 “Oh master God¦10316 of¦10317 my father¦10318 Shim'on \add !(Simeon)\add*, into whose hand¦10324 you gave¦10322 a sword¦10325 to take vengeance¦10327 on the strangers who loosened the belt of a virgin¦10332 to defile¦10334 her, uncovered her thigh¦10337 to her shame¦10344, and¦10340 profaned her womb¦10342 to¦10345 her reproach; for¦10346 you said¦10345, ‘This mustn't happen;’ and¦10350 they did¦10351 so.
+\v 3 Therefore you gave¦10354 their rulers¦10355 to be slain, and¦10359 their bed, which¦10363 was ashamed for her who¦10365 was deceived,\f + \fr 9:3 \ft Some authorities read \fqa which was ashamed for their deceit that they practised.\f* to be dyed in blood¦10369, and¦10370 struck the servants with their masters, and¦10375 the masters on¦10377 their thrones¦10378;
+\v 4 and¦10380 gave¦10381 their wives for a prey, and¦10386 their daughters¦10387 to be captives¦10389, and¦10390 all¦10391 their spoils to be divided among your dear children¦10396; which¦10400 were moved with zeal¦10404 for you¦10405, and¦10406 abhorred the pollution of their blood¦10409, and¦10411 called on you¦10413 for aid. Oh God, Oh my god, hear me also¦10422 who¦10425 am a widow¦10426.
+\v 5 Because you¦10427 did¦10429 the¦10430 things that¦10432 were before those things, and¦10433 those things, and¦10435 such as come after¦10437; and¦10438 you planned the¦10439 things which are now¦10440, and¦10441 the¦10442 things which are to¦10446 come. The things which¦10447 you planned happened.
+\v 6 Yes, the things which¦10451 you determined stood¦10450 before you, and¦10453 said¦10454, ‘Listen, we're here; for all¦10457 your ways are prepared¦10462, and¦10463 your judgement¦10465 is with foreknowledge¦10468.’
+\v 7 Because the Assyrians are multiplied in their power. They're exalted with horse and rider. They were proud of the strength of their footmen. They've trusted in shield, spear, bow, and sling. They don't know that you're the master who breaks the battles. ‘The master’ is your name.
+\v 8 Break their strength in your power, and bring down their force in your anger; for they intend to profane your sanctuary, and to defile the tabernacle where your glorious name rests, and to destroy the horn of your altar with the sword.
+\v 9 Look¦10546 at their pride, and send¦10550 your anger¦10552 on their heads¦10555. Give¦10557 into¦10558 my hand¦10559, which am a widow¦10562, the¦10563 might that I've conceived.
+\v 10 Strike by the deceit¦10570 of my lips¦10569 the servant with the prince, and¦10574 the¦10581 prince with his servant. Break down their arrogance by a woman's hand¦10584.
+\v 11 Because¦10587 your power¦10591 stands not¦10593 in numbers, nor your might in strong men, but¦10599 you're¦10601 a God¦10602 of the afflicted. You're¦10604 a¦10605 helper¦10605 of the oppressed, a¦10606 helper of the weak¦10607, a protector of the forsaken, a saviour¦10611 of those who are without hope.
+\v 12 Please, please, God¦10615 of¦10616 my father¦10617, and¦10619 God¦10620 of the inheritance¦10621 of Yisrael, master¦10623 of the¦10624 heavens¦10625 and¦10626 of the¦10627 earth¦10628, Creator of the¦10630 waters¦10631, King¦10632 of all¦10633 your creation¦10634, hear my prayer¦10639.
+\v 13 Make my speech and¦10641 deceit to¦10642 be their wound¦10648 and¦10649 bruise, who intend hard things against your covenant¦10655, your holy house¦10658, the top of Tsiyon \add !(Zion)\add*, and the house¦10665 of the possession of your children¦10667.
+\v 14 Make¦10672 every¦10674 nation¦10676 and¦10678 tribe¦10680 of¦10682 yours to know¦10681 that¦10684 you're¦10686 God¦10688, the¦10687 god of all¦10689 power¦10690 and¦10691 might, and¦10693 that there's no¦10694 other who protects the race of Yisrael but you¦10703.”
 \c 10
+\s1 Yehudit enters the enemy camp
 \p
-\v 1 It came to pass, when she had ceased to cry to the god of Yisrael \add !(Israel)\add*, and had finished saying all these words,
-\v 2 that she rose up where she had fallen down, called her maid, and went down into the house that she lived on the Sabbath days and on her feast days.
-\v 3 She pulled off the sackcloth which she had put on, took off the garments of her widowhood, washed her body all over with water, anointed herself with rich ointment, braided the hair of her head, and put a tiara upon it. She put on her garments of gladness, which she used to wear in the days of the life of Menasheh \add !(Manasseh)\add* her husband.
-\v 4 She took sandals for her feet, and put on her anklet, bracelets, rings, earrings, and all her jewellery. She made herself very beautiful to deceive the eyes of all men who would see her.
-\v 5 She gave her maid a leather container of wine and a flask of oil, and filled a bag with roasted grain, lumps of figs, and fine bread. She packed all her vessels together, and laid them upon her.
+\v 1 When¦10704 she'd ceased¦10707 to¦10707 cry to¦10709 the¦10710 god¦10711 of Yisrael \add !(Israel)\add*, and¦10713 had finished saying all¦10715 these words,
+\v 2 that¦10722 she rose up where she'd fallen down, called¦10725 her maid, and¦10729 went¦10730 down¦10730 into the¦10732 house¦10733 that¦10735 she¦10738 lived on¦10739 the¦10742 Sabbath¦10743 days and¦10744 on¦10745 her feast days.
+\v 3 She pulled off the¦10751 sackcloth which¦10753 she'd¦10761 put on, took off the¦10764 clothes of her widowhood, washed her body¦10765 all over with water¦10766, anointed herself with rich ointment¦10769, braided the¦10773 hair¦10774 of her head¦10776, and¦10778 put a tiara on¦10781 it. She put¦10784 on¦10784 her clothes¦10786 of gladness¦10788, which she used to wear in the¦10794 days¦10795 of the¦10796 life¦10797 of¦10798 Menasheh \add !(Manasseh)\add* her husband.
+\v 4 She took¦10803 sandals¦10804 for her feet¦10807, and put on her anklet, bracelets, rings, earrings, and all¦10823 her jewellery. She¦10826 made herself very¦10829 beautiful to deceive the eyes¦10832 of all men¦10833 who'd see her.
+\v 5 She¦10842 gave¦10839 her maid a leather container of wine¦10844 and¦10845 a flask of oil¦10847, and¦10848 filled a bag¦10849 with roasted grain, lumps of figs, and fine bread¦10855. She packed all¦10859 her vessels together, and¦10863 laid¦10864 them on¦10865 her.
 \p
-\v 6 They went out to the gate of the city of Betulia, and found Ozias and the elders of the city, Chabris and Charmis standing by it.
-\v 7 But when they saw her, that her countenance was altered and her apparel was changed, they were greatly astonished by her beauty and said to her,
+\v 6 They went out to¦10869 the¦10870 gate¦10871 of the¦10872 city¦10873 of Betulia, and¦10875 found Ozias and¦10881 the¦10882 elders¦10883 of the¦10884 city¦10885, Chabris and¦10887 Charmis standing by it.
+\v 7 But¦10890 when¦10893 they saw her, that¦10896 her face¦10897 was¦10894 altered and her clothing was changed, they were greatly astonished by her beauty and said¦10914 to her,
 \v 8 “May the god of our fathers give you favour, and accomplish your purposes to the glory of the children of Yisrael, and to the exaltation of Yerushalem \add !(Jerusalem)\add*.”
 \p Then she worshipped God,
-\v 9 and said to them, “Command that they open the gate of the city for me, and I will go out to accomplish the things you spoke with me about.”
-\p And they commanded the young men to open to her, as she had spoken;
-\v 10 and they did so.
-\p Then Yehudit \add !(Judith)\add* went out, she, and her handmaid with her. The men of the city watched her until she had gone down the mountain, until she had passed the valley, and they could see her no more.
-\v 11 They went straight onward in the valley. The watch of the Assyrians met her;
-\v 12 and they took her, and asked her, “Of what people are you? Where are you coming from? Where are you going?”
-\p She said, “I am a daughter of the Ivrim \add !(Hebrews)\add*. I am fleeing away from their presence, because they are about to be given you to be consumed.
-\v 13 I am coming into the presence of Holofernes the chief captain of your army, to declare words of truth. I will show him a way that he can go and win all the hill country, and there will not be lacking of his men one person, nor one life.”
+\v 9 and said to them, “Command that they open the gate of the city for me, and I'll go out to accomplish the things you spoke with me about.”
+\p And they commanded the young men to open to her, as she'd spoken;
+\v 10 and¦10972 they did¦10973 so.
+\p Then Yehudit \add !(Judith)\add* went¦10976 out¦10976, she¦10978, and¦10979 her handmaid with¦10983 her. The¦10988 men¦10989 of the¦10990 city¦10991 watched her until¦10992 she'd gone¦10994 down¦10994 the¦10995 mountain¦10996, until¦10997 she'd passed¦10998 the¦10999 valley, and¦11001 they could see¦11004 her no¦11002 more.
+\v 11 They went straight¦11012 onward in¦11008 the valley. The watch of the Assyrians met¦11014 her;
+\v 12 and¦11019 they took her, and¦11022 asked her, “Of what people are you? Where are you coming¦11028 from? Where¦11030 are you going?”
+\p She said¦11033, “I'm a daughter¦11034 of the¦11036 Ivrim \add !(Hebrews)\add*. I'm fleeing away from¦11040 their presence, because¦11043 they're about to¦11044 be given you¦11046 to be consumed.
+\v 13 I'm¦11049 coming into the¦11052 presence of¦11058 Holofernes the¦11058 chief captain of your army, to¦11059 declare words of truth¦11061. I'll show¦11063 him a way that he¦11066 can go¦11050 and¦11071 win all¦11073 the¦11074 hill country, and¦11076 there¦11081 won't¦11084 be lacking of his men¦11080 one person, nor one life¦11086.”
 \p
-\v 14 Now when the men heard her words, and considered her countenance, the beauty thereof was exceedingly marvellous in their eyes. They said to her,
-\v 15 “You have saved your life, in that you have hurried to come down to the presence of our master. Now come to his tent. Some of us will guide you until they deliver you into his hands.
-\v 16 But when\f + \fr 10:16 \ft Gr. \fqa if.\f* you stand before him, don't be afraid in your heart, but declare to him what you just said, and he will treat you well.”
-\v 17 They chose out of them a hundred men, and appointed them to accompany her and her maid; and they brought them to the tent of Holofernes.
+\v 14 Now when¦11088 the¦11090 men¦11091 heard¦11089 her words, and¦11095 looked at her face¦11098, they were¦11101 astonished by her beauty. They said¦11109 to¦11110 her,
+\v 15 “You've saved your life, in that¦11113 you've¦11115 hurried to¦11117 come¦11117 down¦11117 to the presence of our master. Now¦11124 come¦11125 to¦11126 his tent¦11128. Some of us will guide you¦11134 until¦11135 they deliver¦11136 you¦11137 into his hands¦11140.
+\v 16 But¦11143 when\f + \fr 10:16 \ft Grk. \fqa if.\f* you stand before him, don't¦11147 be afraid¦11148 in¦11145 your¦11146 heart¦11150, but¦11152 declare to¦11154 him what you¦11157 just said, and¦11158 he'll treat you well¦11159.”
+\v 17 They chose out¦11164 of them a hundred¦11167 men¦11166, and¦11168 appointed them to accompany her and¦11171 her maid; and¦11175 they brought¦11176 them to¦11178 Holofernes' tent¦11180.
 \p
-\v 18 And there was great excitement throughout all the camp, for her coming was reported amongst the tents. They came and surrounded her as she stood outside Holofernes’ tent, until they told him about her.
-\v 19 They marvelled at her beauty, and marvelled at the children of Yisrael \add !(Israel)\add* because of her. Each one said to his neighbour, “Who would despise these people, who have amongst them such women? Because it is not good that one man of them be left, seeing that, if they are let go, they will be able to deceive the whole earth.
+\v 18 And¦11182 there was¦11183 great excitement throughout all¦11186 the¦11187 camp, for¦11190 her coming¦11195 was reported among¦11185 the tents. They came and¦11197 surrounded her as she¦11200 stood¦11202 outside¦11203 Holofernes’ tent¦11205, until¦11207 they told him about¦11210 her.
+\v 19 They marvelled¦11213 at her beauty, and¦11218 marvelled¦11219 at the¦11220 children¦11221 of Yisrael \add !(Israel)\add* because of her. Each¦11227 one said¦11226 to¦11228 his neighbour¦11230, “Who'd despise¦11233 these people¦11235, who have¦11238 among¦11239 them such¦11242 women¦11241? Because¦11243 it isn't good¦11245 that one man of them be left, seeing that, if they're let go, they'll be¦11254 able¦11254 to deceive the¦11257 whole¦11256 earth¦11258.
 \p
-\v 20 Then the guards of Holofernes and all his servants came out and brought her into the tent.
-\v 21 And Holofernes was resting upon his bed under the canopy, which was woven with purple, gold, emeralds, and precious stones.
-\v 22 And they told him about her; and he came out into the space before his tent, with silver lamps going before him.
-\v 23 But when Yehudit \add !(Judith)\add* had come before him and his servants, they all marvelled at the beauty of her countenance. She fell down upon her face and bowed down to him, but his servants raised her up.
+\v 20 Then¦11259 the¦11261 guards of Holofernes and¦11264 all¦11265 his servants came out¦11260 and¦11269 brought¦11270 her into¦11270 the¦11273 tent¦11274.
+\v 21 And¦11275 Holofernes was¦11276 resting on¦11279 his bed¦11281 under the¦11284 canopy, which¦11286 was¦11287 woven with purple¦11289, gold¦11291, emeralds, and precious stones¦11295.
+\v 22 And¦11298 they told him about¦11301 her; and he came out¦11304 into the space before his tent, with silver lamps going¦11311 before¦11311 him.
+\v 23 But¦11314 when Yehudit \add !(Judith)\add* had come¦11315 before him and¦11320 his servants, they all¦11325 marvelled¦11324 at the¦11327 beauty of¦11329 her face¦11330. She¦11331 fell down on¦11334 her face¦11335 and¦11338 bowed down to¦11339 him, but his servants raised her up.
 \c 11
+\s1 Yehudit wins Holofernes' confidence
 \p
-\v 1 Holofernes said to her, “Woman, take courage. Don't be afraid in your heart; for I never hurt anyone who has chosen to serve Nevukadnetsar \add !(Nebuchadnezzar)\add*, the king of all the earth.
-\v 2 And now, if your people who dwell in the hill country had not slighted me, I would not have lifted up my spear against them; but they have done these things to themselves.
-\v 3 And now tell me why you fled from them and came to us; for you have come to save yourself. Take courage! You will live tonight, and hereafter;
-\v 4 for there is no one that will wrong you, but all will treat you well, as is done to the servants of King Nevukadnetsar my lord.”
+\v 1 Holofernes said¦11345 to¦11346 her, “Woman¦11350, take courage. Don't¦11351 be afraid¦11352 in your heart¦11354; for I¦11357 never hurt anyone who's¦11361 chosen to serve Nevukadnetsar \add !(Nebuchadnezzar)\add*, the king¦11364 of all¦11366 the¦11367 earth¦11368.
+\v 2 And¦11369 now¦11370, if your people¦11372 who¦11374 live¦11375 in the¦11376 hill country hadn't¦11379 slighted me, I¦11381 wouldn't have lifted up my spear¦11386 against¦11388 them; but¦11390 they've done¦11393 these things to¦11393 themselves.
+\v 3 And¦11395 now¦11396 tell¦11397 me why you fled from¦11402 them and¦11404 came to¦11405 us; for you've come¦11405 to¦11406 save yourself. Take¦11412 courage¦11412! You'll live¦11417 tonight, and¦11418 in the¦11420 future;
+\v 4 for¦11423 there's¦11424 no¦11422 one that'll¦11425 wrong you¦11427, but¦11428 all will treat you well¦11429, as is done¦11429 to the¦11434 servants of¦11436 King¦11439 Nevukadnetsar my lord¦11437.”
 \p
-\v 5 And Yehudit said to him, “Receive the words of your servant, and let your handmaid speak in your presence, and I won't lie to my lord tonight.
-\v 6 If you will follow the words of your handmaid, God will bring the thing to pass perfectly with you; and my lord will not fail to accomplish his purposes.
-\v 7 As Nevukadnetsar king of all the earth lives, and as his power lives, who has sent you for the preservation of every living thing, not only do men serve him by you, but also the wild animals in the countryside, the cattle, and the birds of the sky will live through your strength, in the time of Nevukadnetsar and of all his house.
-\v 8 Because we have heard of your wisdom and the subtle plans of your soul. It has been reported in all the earth that you only are brave in all the kingdom, mighty in knowledge, and wonderful in feats of war.
-\v 9 And now as concerning the matter which Ahior spoke in your council, we have heard his words; for the men of Betulia saved him, and he declared to them all that he had spoken before you.
-\v 10 Therefore, Oh lord and master, don't neglect his word, but lay it up in your heart, for it is true; for our race will not be punished, neither will the sword prevail against them, unless they sin against their god.
-\v 11 And now, that my lord may not be defeated and frustrated in his purpose, and that death may fall onto them, their sin has overtaken them, wherewith they will provoke their god to anger, whenever they do wickedness.
-\v 12 Since their food failed them, and all their water was scant, they took counsel to kill their livestock, and determined to consume all those things which God charged them by his laws that they should not eat.
-\v 13 They are resolved to spend the first fruits of the grain and the tithes of the wine and the oil, which they had sanctified and reserved for the priests who stand before the face of our god in Yerushalem \add !(Jerusalem)\add*, which it is not fitting for any of the people so much as to touch with their hands.
-\v 14 They have sent some to Yerushalem, because they also that dwell there have done this thing, to bring them permission from the council of elders.
-\v 15 When these instructions come to them and they do it, they will be given to you to be destroyed the same day.
-\v 16 Therefore I your servant, knowing all this, fled away from their presence. God sent me to work things with you, at which all the earth will be astonished, even as many as hear it.
-\v 17 Because your servant is religious, and serves the god of heaven day and night. Now, my lord, I will stay with you; and your servant will go out by night into the valley. I will pray to God, and he will tell me when they have committed their sins.
-\v 18 Then I will come and tell you. Then you can go out with all your army, and there will be none of them that will resist you.
-\v 19 And I will lead you through the midst of Yehudah \add !(Judea)\add*, until you come to Yerushalem. I will set your throne in the midst of it. You will drive them as sheep that have no shepherd, and a dog will not so much as open his mouth before you; for these things were told me according to my foreknowledge, and were declared to me, and I was sent to tell you.”
+\v 5 And¦11441 Yehudit said¦11442 to him, “Receive¦11446 your servant's¦11450 words, and¦11452 let your handmaid speak in your presence, and¦11460 I won't lie¦11463 to my lord¦11465 tonight.
+\v 6 If¦11472 you'll follow the¦11474 words¦11475 of your handmaid, God¦11485 will bring the¦11476 thing¦11480 to¦11481 pass perfectly with¦11482 you¦11483; and¦11486 my lord¦11490 won't fail to accomplish his purposes.
+\v 7 As Nevukadnetsar king¦11497 of all¦11499 the¦11500 earth¦11501 lives, and¦11502 as his power¦11505 lives¦11503, who's¦11504 sent¦11508 you¦11509 for the preservation of every¦11512 living thing, not only¦11516 do men serve him by you¦11519, but¦11522 also¦11523 the¦11524 wild¦11525 animals¦11525 in the¦11526 countryside¦11527, the¦11529 cattle, and¦11531 the¦11532 birds¦11533 of¦11534 the¦11534 sky¦11535 will live through¦11536 your strength¦11538, in the time of Nevukadnetsar and¦11543 of all¦11544 his house¦11546.
+\v 8 Because we've heard¦11548 of your wisdom¦11551 and¦11553 the subtle plans of your soul¦11557. It's been reported¦11560 in all¦11561 the¦11562 earth¦11563 that¦11564 you¦11565 only are brave in¦11568 all¦11569 the kingdom¦11570, mighty in¦11573 knowledge¦11574, and¦11575 wonderful in¦11577 feats of war.
+\v 9 And¦11580 now¦11581 as about the¦11582 matter which¦11584 Ahior spoke¦11585 in¦11587 your¦11594 council, we've heard¦11591 his words¦11583; for the¦11598 men¦11599 of Betulia saved him, and¦11601 he declared to them all¦11604 that¦11595 he'd spoken before you¦11608.
+\v 10 Therefore, Oh lord¦11611 and master¦11610, don't¦11612 neglect his word¦11615, but¦11617 lay it¦11619 up in¦11620 your heart¦11622, for it's true¦11625; for our race won't be¦11626 punished, neither will the¦11630 sword¦11635 prevail against them, unless they sin against their god¦11643.
+\v 11 And¦11645 now¦11646, that¦11647 my lord¦11651 may not¦11648 be¦11649 defeated and frustrated in his purpose, and that death¦11658 may fall onto them, their sin¦11665 has overtaken them, wherewith they'll provoke their god¦11670 to¦11674 anger, whenever they do¦11674 wickedness.
+\v 12 Since¦11676 their food¦11681 failed them, and¦11682 all¦11684 their water¦11685 was scant, they took counsel to kill their livestock, and determined to consume all those things which God¦11697 charged them by his laws that¦11699 they shouldn't¦11702 eat¦11703.
+\v 13 They're resolved to spend the¦11707 first fruits of¦11709 the¦11709 grain¦11710 and¦11711 the¦11712 tithes of¦11714 the¦11714 wine¦11715 and¦11716 the¦11717 oil¦11718, which¦11719 they'd sanctified and reserved for the¦11722 priests¦11723 who¦11724 stand¦11725 before our god's¦11732 face¦11730 in Yerushalem \add !(Jerusalem)\add*, which¦11736 it isn't¦11737 fitting¦11740 for any of¦11745 the¦11745 people so much as to touch with their hands¦11739.
+\v 14 They've sent¦11748 some to¦11748 Yerushalem, because they also¦11752 that¦11751 live¦11755 there¦11754 have done¦11756 this thing, to bring them permission from¦11763 the¦11764 council of elders.
+\v 15 When¦11766 these instructions come to¦11767 them and¦11772 they do¦11773 it¦11771, they'll be given to you¦11775 to be destroyed¦11777 the¦11779 same day¦11780.
+\v 16 Therefore I¦11783 your servant¦11785, knowing¦11787 all this, fled away¦11791 from¦11791 their presence. God¦11798 sent¦11795 me to¦11799 work things with¦11800 you¦11801, at which¦11804 all¦11806 the¦11807 earth¦11808 will be astonished, even as many as hear¦11811 it¦11812.
+\v 17 Because¦11813 your servant is¦11818 religious, and serves the¦11824 god¦11825 of¦11826 heaven¦11827 day¦11823 and¦11828 night. Now¦11829, my lord¦11833, I'll stay¦11830 with¦11831 you¦11832; and¦11835 your servant will go¦11836 out¦11836 by night¦11841 into the¦11843 valley. I'll pray¦11846 to¦11847 God¦11849, and¦11850 he'll tell¦11851 me when¦11853 they've committed their sins¦11856.
+\v 18 Then I'll come¦11859 and tell you¦11861. Then you¦11867 can go out¦11874 with¦11863 all¦11864 your army, and¦11868 there'll be¦11870 none of them that'll¦11871 resist you¦11873.
+\v 19 And¦11876 I'll lead you¦11878 through¦11879 the middle of Yehudah \add !(Judea)\add*, until¦11883 you come¦11885 to¦11889 Yerushalem. I'll set your throne in¦11893 its centre. You'll drive them as sheep¦11900 that¦11914 have no¦11902 shepherd¦11904, and¦11905 a dog¦11908 won't so much as open his mouth before you¦11913; for these things were told¦11916 me according¦11918 to¦11918 my foreknowledge¦11919, and¦11921 were declared to¦11922 me, and I was sent¦11925 to¦11926 tell you¦11927.”
 \p
-\v 20 Her words were pleasing in the sight of Holofernes and of all his servants. They marvelled at her wisdom, and said,
-\v 21 “There is not such a woman from one end of the earth to the other, for beauty of face and wisdom of words.”
+\v 20 Her words¦11931 were pleasing in¦11933 the sight of¦11933 Holofernes and¦11935 of¦11936 all¦11937 his servants. They marvelled¦11942 at her wisdom¦11945, and¦11947 said¦11948,
+\v 21 “There isn't¦11950 such¦11951 a woman¦11952 from¦11953 one end of the¦11957 earth¦11958 to the other, for beauty of face¦11960 and¦11961 wisdom¦11962 of words¦11963.”
 \p
-\v 22 Holofernes said to her, “God did well to send you before the people, that might would be in our hands, and destruction amongst those who slighted my lord.
-\v 23 And now you are beautiful in your countenance, and wise in your words. If you will do as you have spoken, your god will be my god, and you will dwell in the palace of King Nevukadnetsar \add !(Nebuchadnezzar)\add*, and will be renowned through the whole earth.”
+\v 22 Holofernes said¦11965 to her, “God¦11972 did well¦11969 to¦11973 send¦11973 you¦11974 before¦11975 the¦11976 people¦11977, that might would be¦11979 in¦11980 our hands¦11981, and¦11985 destruction¦11991 among those who slighted my lord¦11989.
+\v 23 And¦11992 now¦11993 you're¦11996 beautiful in¦11997 your face, and¦12001 wise in¦12003 your words¦12005. If¦12008 you'll do¦12009 as¦12010 you've spoken, your god¦12013 will be¦12015 my god¦12017, and¦12018 you'll¦12019 live in¦12020 King¦12022 Nevukadnetsar's \add !(Nebuchadnezzar)\add* palace¦12021, and¦12025 will be¦12026 renowned through the¦12030 whole¦12029 earth¦12031.”
 \c 12
+\s1 Yehudit stays in the camp
 \p
-\v 1 He commanded that she should be brought in where his silver vessels were set, and asked that his servants should prepare some of his own delicacies for her, and that she should drink from his own wine.
+\v 1 He commanded that she should be brought¦12034 in¦12034 where his silver vessels were set, and¦12049 asked that his servants should prepare some of¦12050 his own delicacies for her, and that she¦12052 should drink¦12053 from his own wine¦12051.
 \p
-\v 2 And Yehudit \add !(Judith)\add* said, “I can't eat of it, lest there be an occasion of stumbling; but provision will be made for me from the things that have come with me.”
+\v 2 And¦12054 Yehudit \add !(Judith)\add* said¦12055, “I can't¦12062 eat it¦12060, because that¦12061 could cause me to¦12063 sin. I'll eat from¦12066 the¦12067 supplies I¦12069 brought with me.”
 \p
-\v 3 And Holofernes said to her, “But if the things that are with you should run out, from where will we be able to give you more like it? Because there is none of your race with us.”
+\v 3 And¦12071 Holofernes said¦12072 to¦12073 her, “But if¦12076 the¦12079 things that are with¦12081 you should run out¦12094, from where will we be able to¦12086 give¦12086 you more like¦12087 it¦12088? Because¦12090 there's¦12091 none of¦12095 your race with us.”
 \p
-\v 4 And Yehudit said to him, “As your soul lives, my lord, your servant will not use up those things that are with me until the master works by my hand the things that he has determined.”
-\v 5 Then Holofernes’ servants brought her into the tent, and she slept until midnight. Then she rose up towards the morning watch,
-\v 6 and sent to Holofernes, saying, “Let my lord now command that they allow your servant to go out to pray.”
+\v 4 And¦12098 Yehudit said¦12099 to¦12101 him, “As your soul¦12105 lives¦12103, my lord¦12107, your servant¦12113 won't use up those things that¦12115 are¦12116 with¦12117 me until¦12119 the master works by my hand¦12124 the things that¦12126 he's¦12102 determined.”
+\v 5 Then¦12128 Holofernes’ servants brought her into the¦12135 tent¦12136, and¦12137 she slept until¦12139 midnight. Then¦12143 she rose up towards¦12134 the¦12146 morning watch¦12148,
+\v 6 and¦12149 sent¦12150 to¦12151 Holofernes, saying, “Let my lord¦12157 now command¦12153 that¦12160 they allow your servant to¦12165 go¦12165 out¦12165 to pray.”
 \p
-\v 7 Holofernes commanded his guards that they should not stop her. She stayed in the camp three days, and went out every night into the valley of Betulia and washed herself at the fountain of water in the camp.
-\v 8 And when she came up, she implored the master God of Yisrael \add !(Israel)\add* to direct her way to the triumph of the children of his people.
-\v 9 She came in clean and remained in the tent until she ate her food towards evening.
+\v 7 Holofernes commanded his guards that¦12169 they shouldn't¦12171 stop her. She¦12173 stayed in¦12176 the¦12177 camp three¦12180 days¦12179, and¦12181 went out every night¦12184 into the¦12186 valley of Betulia and¦12189 washed herself at the fountain of¦12197 water¦12198 in the camp.
+\v 8 And¦12199 when she came up, she implored the¦12203 master God¦12205 of Yisrael \add !(Israel)\add* to direct her way¦12200 to the¦12208 triumph of the¦12213 children¦12214 of¦12215 his people¦12216.
+\v 9 She came in clean¦12220 and remained in the¦12222 tent¦12223 until¦12224 she ate her food¦12228 towards evening¦12231.
+\s1 Holofernes invites Yehudit to a feast
 \p
-\v 10 It came to pass on the fourth day, that Holofernes made a feast for his own servants only, and called none of the officers to the banquet.
-\v 11 And he said to Bagoas the eunuch, who had charge over all that he had, “Go now, and persuade this Ivri \add !(Hebrew)\add* woman who is with you that she come to us, and eat and drink with us.
-\v 12 Because listen, it would be a disgrace if we shall let such a woman go, not having had her company; for if we don't draw her to ourselves, she will laugh us to scorn.”
+\v 10 On¦12234 the¦12235 fourth¦12238 day¦12236, Holofernes made¦12239 a feast for his own servants only, and¦12246 called¦12248 none¦12252 of the¦12253 officers to¦12254 the¦12255 banquet.
+\v 11 And¦12257 he said¦12258 to¦12258 Bagoas the eunuch, who had charge over all¦12266 that¦12267 he¦12268 had, “Go now, and persuade this¦12272 Ivri \add !(Hebrew)\add* woman¦12273 who's¦12277 with¦12278 you¦12279 that she come¦12281 to¦12282 us, and¦12284 eat¦12285 and¦12286 drink¦12287 with¦12288 us.
+\v 12 Because listen, it'd be a disgrace if we let such¦12298 a woman¦12297 go, not¦12306 having had her company; for if we¦12309 don't draw her to ourselves, she'll laugh us to scorn.”
 \p
-\v 13 Bagoas went from the presence of Holofernes, and came in to her, and said, “Let this fair lady not fear to come to my lord, and to be honoured in his presence, and to drink wine and be merry with us, and to be made this day as one of the daughters of the children of Ashur \add !(Assyria)\add* who serve in Nevukadnetsar's \add !(Nebuchadnezzar)\add* palace.”
+\v 13 Bagoas¦12312 went from¦12313 the presence of Holofernes, and¦12316 came in to her, and¦12320 said¦12321, “Let this fair lady not¦12322 fear to¦12330 come¦12330 to¦12331 my lord¦12333, and to¦12336 be honoured in his presence, and¦12339 to¦12340 drink¦12340 wine¦12345 and be merry with us, and to¦12347 be¦12347 made this¦12349 day¦12350 as one of the daughters¦12353 of the¦12355 children¦12356 of Ashur \add !(Assyria)\add* who¦12358 serve in¦12360 Nevukadnetsar's \add !(Nebuchadnezzar)\add* palace¦12361.”
 \p
-\v 14 Yehudit \add !(Judith)\add* said to him, “Who am I, that I should contradict my lord? Because whatever would be pleasing in his eyes, I will do speedily, and this will be my joy to the day of my death.”
-\v 15 She arose, and decked herself with her apparel and all her woman's attire; and her servant went and laid fleeces on the ground for her next to Holofernes, which she had received from Bagoas for her daily use, that she might sit and eat upon them.
+\v 14 Yehudit \add !(Judith)\add* said¦12364 to him, “Who am¦12370 I¦12371, that¦12376 I should contradict my lord¦12374? Because whatever would be¦12379 pleasing¦12384 in¦12380 his eyes¦12382, I'll do¦12386 speedily, and¦12387 this will be my joy¦12390 to the day¦12392 of my death¦12393.”
+\v 15 She arose, and¦12395 decked herself with her clothing¦12399 and¦12400 all¦12401 her woman's attire; and¦12406 her servant¦12409 went¦12407 and¦12411 laid fleeces on¦12416 the¦12416 ground¦12416 for her next to Holofernes, which¦12419 she'd received from¦12421 Bagoas for her daily use, that¦12424 she¦12427 might sit and eat¦12430 on¦12432 them.
 \p
-\v 16 Yehudit came in and sat down, and Holofernes’ heart was ravished with her. His passion was aroused, and he exceedingly desired her company. He was watching for a time to deceive her from the day that he had seen her.
-\v 17 Holofernes said to her, “Drink now, and be merry with us.”
+\v 16 Yehudit came in and¦12434 sat down, and¦12438 Holofernes’ heart¦12441 was¦12451 ravished with¦12456 her. His passion was aroused, and¦12445 he¦12449 greatly desired her company. He¦12457 was watching for a time¦12460 to deceive her from¦12464 the day¦12466 that he'd¦12468 seen her.
+\v 17 Holofernes said¦12470 to her, “Drink¦12474 now, and¦12476 be merry with¦12478 us.”
 \p
-\v 18 Yehudit said, “I will drink now, my lord, because my life is magnified in me this day more than all the days since I was born.”
-\v 19 Then she took and ate and drank before him what her servant had prepared.
-\v 20 Holofernes took great delight in her, and drank exceedingly much wine, more than he had drunk at any time in one day since he was born.
+\v 18 Yehudit said¦12483, “I'll drink now, my lord¦12487, because my life¦12491 is magnified in¦12493 me this day¦12499 more than¦12496 all¦12497 the¦12498 days since¦12488 I¦12502 was born.”
+\v 19 Then¦12503 she took¦12504 and ate¦12505 and¦12506 drank¦12507 before¦12508 him what her servant¦12513 had prepared¦12511.
+\v 20 Holofernes took great delight in her, and drank¦12521 a great deal of wine¦12522, more than he'd drunk¦12527 at any time in¦12529 one day¦12530 since he was born.
 \c 13
+\s1 Yehudit kills Holofernes
 \p
-\v 1 But when the evening had come, his servants hurried to depart. Bagoas shut the tent outside, and dismissed those who waited from the presence of his lord. They went away to their beds; for they were all weary, because the feast had been long.
-\v 2 But Yehudit was left alone in the tent, with Holofernes lying along upon his bed; for he was drunk with wine.
-\v 3 Yehudit had said to her servant that she should stand outside her bedchamber, and wait for her to come out, as she did daily; for she said she would go out to her prayer. She spoke to Bagoas according to the same words.
-\v 4 All went away from her presence, and none was left in the bedchamber, small or great. Yehudit, standing by his bed, said in her heart, Oh master God of all power, look in this hour upon the works of my hands for the exaltation of Yerushalem \add !(Jerusalem)\add*.
-\v 5 Because now is the time to help your inheritance, and to do the thing that I have purposed to the destruction of the enemies which have risen up against us.
-\v 6 She came to the bedpost which was at Holofernes’ head, and took down his sword from there.
-\v 7 She drew near to the bed, took hold of the hair of his head, and said, “Strengthen me, Oh master God of Yisrael, this day.”
-\v 8 She struck twice upon his neck with all her might and cut off his head,
-\v 9 tumbled his body down from the bed, and took down the canopy from the posts. After a little while she went out, and gave Holofernes’ head to her maid;
-\v 10 and she put it in her bag of food. They both went out together to prayer, according to their custom. They passed through the camp, circled around that valley, and went up to the mountain of Betulia, and came to its gates.
+\v 1 But¦12536 when the evening¦12537 had come, his servants hurried to¦12538 depart. Bagoas¦12545 shut the¦12547 tent¦12548 outside¦12549, and¦12550 dismissed those who¦12552 waited from¦12554 the presence of his lord¦12557. They went away to¦12565 their beds; for¦12566 they were all¦12567 weary, because¦12569 the¦12570 feast had been¦12573 long.
+\v 2 But¦12577 Yehudit was left alone in¦12580 the¦12581 tent¦12582, with Holofernes lying along on¦12586 his bed¦12588; for¦12591 he¦12593 was drunk with wine¦12595.
+\v 3 Yehudit had said to¦12597 her servant that she¦12601 should stand¦12602 outside¦12603 her bedchamber, and¦12607 wait for her to come out, as¦12612 she did daily; for¦12616 she said¦12617 she'd go out to¦12618 her prayer¦12620. She¦12621 spoke¦12625 to¦12625 Bagoas according¦12626 to¦12626 the¦12627 same words.
+\v 4 All¦12632 went away¦12641 from¦12633 her presence, and¦12635 none¦12636 was left¦12637 in¦12638 the¦12639 bedchamber, small¦12642 or great¦12644. Yehudit, standing¦12646 by his bed¦12650, said¦12652 in¦12653 her heart¦12655, Oh master God¦12659 of all¦12660 power¦12661, look in¦12663 this¦12664 hour¦12665 on¦12667 the¦12668 works¦12669 of my hands¦12671 for the¦12670 exaltation of Yerushalem \add !(Jerusalem)\add*.
+\v 5 Because now¦12677 is the time¦12678 to help your inheritance¦12681, and¦12683 to¦12684 do¦12684 the¦12685 thing that¦12676 I've¦12687 purposed to the destruction¦12689 of the enemies¦12690 which¦12691 have risen up against us.
+\v 6 She came¦12695 to¦12695 the bedpost which¦12700 was¦12701 at Holofernes’ head¦12703, and took¦12705 down¦12705 his sword from¦12709 there¦12710.
+\v 7 She drew near to the¦12713 bed¦12714, took hold of the hair of his head¦12719, and¦12721 said¦12722, “Strengthen me, Oh master God¦12726 of Yisrael, this¦12729 day¦12730.”
+\v 8 She¦12737 struck¦12733 twice¦12738 on¦12739 his neck¦12736 with all her might and¦12743 cut off his head¦12746,
+\v 9 tumbled his body¦12753 down from¦12755 the¦12756 bed, and¦12758 took down the¦12760 canopy from¦12762 the¦12763 posts. After¦12766 a little¦12767 while she went¦12768 out¦12768, and¦12769 gave Holofernes’ head¦12775 to her maid;
+\v 10 and¦12777 she put it in her bag¦12782 of food¦12784. They both¦12789 went out¦12787 together¦12790 to prayer, according¦12791 to¦12791 their custom. They passed through the camp, circled around¦12799 that¦12802 valley, and¦12803 went up to the¦12805 mountain¦12806 of Betulia, and¦12808 came to¦12810 its gates¦12812.
+\s1 Yehudit returns with Holofernes' head
 \p
-\v 11 Yehudit said afar off to the watchmen at the gates, “Open, open the gate, now. God is with us, even our god, to show his power yet in Yisrael \add !(Israel)\add*, and his might against the enemy, as he has done even this day.”
+\v 11 Yehudit said¦12815 afar¦12817 off to the watchmen at the gates, “Open, open the gate, now. God¦12831 is with us, even our god¦12833, to¦12835 show his power¦12841 yet in¦12838 Yisrael \add !(Israel)\add*, and¦12840 his might against the¦12843 enemy¦12844, as¦12845 he's done¦12848 even this day.”
 \p
-\v 12 It came to pass, when the men of her city heard her voice, they made haste to go down to the gate of their city, and they called together the elders of the city.
-\v 13 They all ran together, both small and great, for it seemed unbelievable to them that she had come. They opened the gate and received them, making a fire to give light, and surrounded them.
-\v 14 She said to them with a loud voice, “Praise God! Praise him! Praise God, who has not taken away his mercy from the house of Yisrael, but has destroyed our enemies by my hand tonight!”
+\v 12 When¦12849 the¦12853 men¦12854 of her city¦12856 heard¦12852 her voice¦12859, they hurried to¦12863 go¦12863 down¦12863 to the¦12865 gate¦12866 of their city¦12868, and¦12870 they called¦12871 together¦12871 the¦12872 elders¦12873 of the¦12874 city¦12875.
+\v 13 They all¦12878 ran together, both small¦12880 and great¦12882, for it seemed unbelievable to them that¦12883 she'd¦12886 come¦12888. They opened the¦12892 gate¦12893 and received them, making a fire¦12899 to¦12898 give light¦12898, and surrounded them.
+\v 14 She said¦12906 to¦12906 them with¦12907 a loud voice¦12909, “Praise¦12911 God¦12913! Praise¦12914 him! Praise¦12915 God¦12917, who¦12921 hasn't taken away¦12924 his mercy¦12922 from¦12924 the¦12925 house¦12926 of Yisrael, but¦12928 has destroyed our enemies¦12931 by my hand¦12934 tonight!”
 \p
-\v 15 Then she took the head out of the bag and showed it, and said to them, “Listen, the head of Holofernes, the chief captain of the army of Ashur \add !(Assyria)\add*, and behold, the canopy under which he laid in his drunkenness. The master struck him by the hand of a woman.
-\v 16 And as the master lives, who preserved me in my way that I went, my countenance deceived him to his destruction, and he didn't commit sin with me, to defile and shame me.”
+\v 15 Then¦12940 she took the¦12942 head¦12943 out¦12944 of the¦12945 bag¦12946 and showed¦12947 it, and¦12948 said¦12949 to¦12949 them, “Listen, the¦12952 head¦12953 of Holofernes, the chief captain of Ashur's \add !(Assyria)\add* army, and¦12958 the¦12960 canopy under which¦12963 he laid in¦12965 his drunkenness¦12967. The master struck¦12970 him by a woman's hand¦12975.
+\v 16 And¦12977 as the master lives¦12978, who preserved me in¦12983 my way that¦12989 I¦12994 went, my face¦12993 deceived him to his destruction¦12996, and he didn't commit sin¦13001 with¦13002 me, to defile¦13005 and¦13006 shame me.”
 \p
-\v 17 All the people were exceedingly amazed, and bowed themselves, and worshipped God, and said with one accord, “Blessed are you, Oh our god, who have this day humiliated the enemies of your people.”
+\v 17 All¦13010 the¦13011 people were extremely amazed¦13009, and bowed themselves, and worshipped¦13016 God¦13018, and¦13019 said¦13020 with one accord, “Blessed are¦13023 you, Oh our god¦13025, who have this¦13030 day¦13031 humiliated your people's¦13037 enemies¦13035.”
 \p
-\v 18 Ozias said to her, “Blessed are you, daughter, in the sight of the Most High God, above all the women upon the earth; and blessed is the master God, who created the heavens and the earth, who directed you to cut off the head of the prince of our enemies.
-\v 19 Because your hope will not depart from the heart of men that remember the strength of God forever.
-\v 20 May God turn these things to you for a perpetual praise, to visit you with good things, because you didn't spare your life by reason of the affliction of our race, but prevented our ruin, walking a straight way before our god.”
-\p And all the people said, “Amen! Amen!”
+\v 18 Ozias¦13042 said¦13040 to her, “Blessed are you¦13044, daughter¦13045, in the sight of the Most High God¦13047, above all¦13051 the¦13052 women¦13053 on¦13055 the¦13056 earth¦13057; and¦13058 blessed¦13059 is the¦13061 master God¦13062, who created¦13064 the¦13065 heavens¦13066 and¦13067 the¦13068 earth¦13069, who directed you¦13072 to cut off the head¦13075 of the prince of our enemies¦13077.
+\v 19 Because¦13079 your hope¦13083 won't depart from¦13085 the hearts¦13086 of people who remember God's¦13090 strength¦13089 forever.
+\v 20 May God turn these things to¦13094 you¦13095 for a perpetual praise, to¦13103 visit¦13103 you¦13104 with good things, because¦13114 you¦13113 didn't spare your life because of¦13114 the¦13115 affliction of¦13117 our race, but¦13120 prevented our ruin, walking a straight¦13125 way before¦13127 our god¦13129.”
+\p And¦13131 all¦13133 the¦13134 people said¦13132, “Amen! Amen!”
 \c 14
+\s1 Yehudit prepares the people to attack
 \p
-\v 1 Yehudit \add !(Judith)\add* said to them, “Hear me now, my kindred, and take this head, and hang it upon the battlement of your wall.
-\v 2 It will be, so soon as the morning appears, and the sun comes up on the earth, you shall each take up his weapons of war, and every valiant man of you go out of the city. You shall set a captain over them, as though you would go down to the plain towards the watch of the children of Ashur \add !(Assyria)\add*; but you men shall not go down.
-\v 3 These will take up their full armour, and shall go into their camp and rouse up the captains of the army of Ashur. They will run together to Holofernes’ tent. They won't find him. Fear will fall onto them, and they will flee before your face.
-\v 4 You men, and all that inhabit every border of Yisrael \add !(Israel)\add*, shall pursue them and overthrow them as they go.
-\v 5 But before you do these things, summon Ahior the Amoni to me, that he may see and know him that despised the house of Yisrael, and that sent him to us, as it were to death.
+\v 1 Yehudit \add !(Judith)\add* said¦13139 to them, “Hear¦13143 me now, my kindred, and¦13147 take¦13148 this¦13149 head¦13150, and hang it on¦13154 the¦13155 battlement of¦13157 your wall¦13158.
+\v 2 As soon as morning¦13166 comes and¦13167 the¦13165 sun¦13170 rises over the¦13169 earth¦13173, each¦13175 of you¦13180 must pick up your weapons, and¦13181 every¦13183 brave man¦13184 must go out¦13186 of the¦13172 city¦13188. Put a captain in charge of them, as though you'd go¦13195 down¦13195 to¦13196 the¦13197 plain¦13198 towards¦13199 the watch of the children¦13202 of Ashur \add !(Assyria)\add*; but¦13204 you men mustn't go down.
+\v 3 These will take¦13208 up¦13208 their full armour, and will go into¦13213 their camp and¦13218 rouse up the¦13220 captains of Ashur's army. They'll run together to¦13227 Holofernes’ tent¦13229. They won't find¦13233 him. Fear¦13239 will fall onto them, and¦13240 they'll flee¦13241 before your face¦13243.
+\v 4 You¦13247 men, and¦13248 all¦13249 that¦13250 inhabit¦13251 every¦13252 border of Yisrael \add !(Israel)\add*, must pursue them and overthrow them as they go.
+\v 5 But before¦13261 you do¦13264 these things, summon Ahior the Amoni to me, that he may see and know¦13273 him that despised the¦13276 house¦13277 of¦13278 Yisrael, and¦13280 that sent¦13285 him to us, as it¦13281 were to death¦13284.
+\s1 Ahior believes in Yisrael's God
 \p
-\v 6 And they called Ahior out of the house of Ozias; but when he came, and saw the head of Holofernes in a man's hand in the assembly of the people, he fell onto his face, and his spirit failed.
-\v 7 But when they had recovered him,\f + \fr 14:7 \ft Many authorities read \fqa he had recovered himself.\f* he fell at Yehudit's feet, bowed down to her, and said, “Blessed are you in every tent of Yehudah \add !(Judah)\add*! In every nation, those who hear your name will be troubled.
-\v 8 Now tell me all the things that you have done in these days.”
-\p And Yehudit declared to him in the midst of the people all the things that she had done, from the day that she went out until the time that she spoke to them.
-\v 9 But when she finished speaking, the people shouted with a loud voice, and made a joyful noise in their city.
-\v 10 But when Ahior saw all the things that the god of Yisrael had done, he believed in God exceedingly, and circumcised the flesh of his foreskin, and was joined to the house of Yisrael, to this day.
+\v 6 And¦13288 they called Ahior out¦13292 of¦13293 Ozias' house¦13294; but¦13297 when he came¦13298, and¦13299 saw Holofernes' head¦13302 in¦13304 a man's¦13306 hand¦13305 in¦13308 the¦13309 assembly¦13310 of¦13311 the¦13311 people¦13312, he fell onto his face¦13315, and¦13316 his spirit¦13319 failed.
+\v 7 But¦13322 when they'd recovered him,\f + \fr 14:7 \ft Many authorities read \fqa he had recovered himself.\f* he¦13324 fell¦13325 at Yehudit's feet¦13327, bowed down to¦13330 her, and¦13334 said¦13335, “Blessed¦13336 are you¦13337 in¦13338 every¦13339 tent¦13340 of Yehudah \add !(Judah)\add*! In¦13343 every¦13344 nation¦13345, those who¦13346 hear¦13347 your name¦13349 will be troubled.
+\v 8 Now¦13353 tell me all the things that you've done¦13357 in¦13358 these days¦13360.”
+\p And¦13362 Yehudit declared to¦13363 him among¦13366 the¦13368 people¦13369 all¦13370 the things that she'd done, from¦13374 the day¦13376 that she went¦13377 out¦13377 until¦13378 the time that she spoke¦13380 to them.
+\v 9 But¦13383 when she finished speaking, the¦13387 people¦13388 shouted with a loud voice¦13389, and¦13391 made a joyful noise¦13393 in¦13395 their city¦13397.
+\v 10 But¦13400 when Ahior saw all¦13402 the things that the¦13405 god¦13406 of¦13407 Yisrael had done¦13404, he put deep trust¦13409 in¦13409 God¦13411, and¦13413 circumcised the¦13415 flesh¦13416 of his foreskin, and¦13420 was joined to the¦13423 house¦13424 of Yisrael, to this¦13427 day¦13428.
+\s1 The enemy discovers Holofernes' death
 \p
-\v 11 But as soon as the morning arose, they hanged the head of Holofernes upon the wall, and every man took up his weapons, and they went forth by bands to the ascents of the mountain.
-\v 12 But when the children of Ashur \add !(Assyria)\add* saw them, they sent word to their leaders, and they went to their captains and tribunes, and to every one of their rulers.
-\v 13 They came to Holofernes’ tent, and said to him that was over all that he had, “Wake our lord up, now, for the slaves have been bold to come down against us to battle, that they may be utterly destroyed.”
+\v 11 But¦13431 as soon as the¦13432 morning¦13433 arose, they hanged Holofernes' head¦13438 on the¦13441 wall¦13442, and¦13443 every¦13445 man¦13446 took up his weapons¦13449, and¦13451 they went forth by bands to the¦13456 ascents of¦13458 the¦13458 mountain¦13459.
+\v 12 But¦13461 when the¦13469 children¦13462 of Ashur \add !(Assyria)\add* saw them, they sent word to¦13470 their leaders, and¦13473 they went¦13474 to¦13475 their captains and¦13477 tribunes, and¦13479 to¦13480 every¦13481 one of their rulers¦13482.
+\v 13 They came¦13485 to¦13486 Holofernes’ tent¦13488, and¦13490 said¦13491 to¦13493 him that was over all¦13495 that¦13496 he¦13497 had, “Wake our lord¦13501 up, now, for the¦13505 slaves¦13506 have been bold to¦13507 come¦13507 down¦13507 against us to battle¦13511, that¦13512 they may be utterly destroyed.”
 \p
-\v 14 Bagoas went in, and knocked at the outer door of the tent; for he supposed that Holofernes was sleeping with Yehudit.
-\v 15 But when no one answered, he opened it, went into the bedchamber, and found him thrown upon the threshold dead; and his head had been taken from him.
-\v 16 He cried with a loud voice, with weeping, groaning, and shouting, and tore his garments.
-\v 17 He entered into the tent where Yehudit lodged, and he didn't find her. He leapt out to the people, and cried aloud,
-\v 18 “The slaves have dealt treacherously! One woman of the Ivrim \add !(Hebrews)\add* has brought shame upon the house of King Nevukadnetsar \add !(Nebuchadnezzar)\add*; for, behold, Holofernes lies upon the ground, and his head is not on him!”
+\v 14 Bagoas¦13518 went in, and¦13519 knocked at the¦13521 outer door of the¦13523 tent¦13524; for¦13526 he¦13528 supposed that Holofernes was sleeping¦13527 with¦13529 Yehudit.
+\v 15 But¦13532 when no one answered, he opened it, went into¦13536 the¦13538 bedchamber, and¦13540 found¦13541 him thrown on¦13543 the¦13544 threshold dead¦13547; and¦13548 his head¦13550 had been taken from¦13553 him.
+\v 16 He cried¦13556 with a loud voice¦13557, with¦13559 weeping, groaning¦13562, and¦13563 shouting, and¦13566 tore¦13567 his clothes¦13569.
+\v 17 He entered¦13572 into the¦13574 tent¦13575 where Yehudit lodged, and¦13580 he didn't find¦13582 her. He¦13583 leapt out to the¦13587 people¦13588, and cried¦13589 aloud,
+\v 18 “The¦13591 slaves¦13592 have dealt treacherously! One¦13595 woman¦13596 of the¦13597 Ivrim \add !(Hebrews)\add* has brought shame on King¦13603 Nevukadnetsar's \add !(Nebuchadnezzar)\add* house¦13601; for Holofernes lies on¦13608 the¦13608 ground¦13608, and¦13609 his head¦13611 isn't¦13613 on¦13614 him!”
 \p
-\v 19 But when the rulers of the army of Ashur heard this, they tore their tunics, and their souls were troubled exceedingly. There were cries and an exceedingly great noise in the midst of the camp.
+\v 19 But¦13617 when the rulers¦13623 of Ashur's army heard¦13618 this¦13627, they tore their tunics¦13628, and¦13631 they were deeply troubled¦13632. There were¦13638 cries and¦13641 a very great¦13643 noise in¦13645 the¦13647 camp.
 \c 15
+\s1 Yisrael pursues the fleeing army
 \p
-\v 1 When those who were in the tents heard, they were amazed at what happened.
-\v 2 Trembling and fear fell onto them, and no man dared stay any more in the sight of his neighbour, but rushing out with one accord, they fled into every way of the plain and of the hill country.
-\v 3 Those who had encamped in the hill country round about Betulia fled away. And then the children of Yisrael, every one who was a warrior amongst them, rushed out upon them.
-\v 4 Ozias sent to Betomesthaim, Bevay, Choba, and Chola, and to every border of Yisrael, to tell about the things that had been accomplished, and that all should rush upon their enemies to destroy them.
-\v 5 But when the children of Yisrael heard this, they all fell onto them with one accord, and struck them to Choba. Yes, and in like manner also, people from Yerushalem and from all the hill country came (for men had told them about what happened in their enemies’ camp), and those who were in Gilead and in Galil fell onto their flank with a great slaughter, until they were past Damesek \add !(Damascus)\add* and its borders.
-\v 6 The rest of the people who lived at Betulia fell onto the camp of Ashur, and plundered them, and were enriched exceedingly.
-\v 7 The children of Yisrael returned from the slaughter, and got possession of that which remained. The villages and the cities that were in the hill country and in the plain country took many spoils; for there was an exceedingly great supply.
+\v 1 When¦13649 those who¦13652 were in¦13653 the¦13654 tents heard¦13651, they were¦13656 amazed¦13657 at what happened.
+\v 2 Trembling¦13667 and¦13661 fear¦13665 fell¦13662 onto them, and no¦13669 man¦13671 dared stay¦13672 any more in the sight of his neighbour¦13676, but¦13678 rushing out with one accord, they fled into¦13682 every¦13683 way of¦13685 the¦13685 plain and¦13687 of the¦13688 hill country.
+\v 3 Those who'd¦13691 encamped in¦13693 the¦13694 hill country round about Betulia fled away. And then¦13703 the¦13704 children¦13705 of Yisrael, every¦13707 one¦13708 who was a¦13709 warrior¦13709 among them, rushed out on¦13713 them.
+\v 4 Ozias¦13717 sent¦13716 to Betomesthaim, Bevay, Choba, and Chola, and to every¦13726 border of Yisrael, to¦13730 tell¦13730 about the¦13732 things that'd been accomplished, and¦13734 that¦13735 all¦13736 should rush on their enemies to destroy them.
+\v 5 But¦13745 when the children¦13748 of Yisrael heard¦13746 this¦13747, they all¦13750 fell onto them with one accord, and¦13755 struck them to¦13756 Choba. Yes, and¦13761 in the same way¦13744 also¦13762, people from¦13764 Yerushalem and¦13767 from¦13768 all¦13769 the¦13770 hill country came (for¦13773 men had told them about what happened in their enemies¦13780’ camp), and¦13782 those who¦13783 were in¦13784 Gilead and¦13786 in¦13788 Galil fell onto their flank with a great¦13794 slaughter, until¦13795 they were past Damesek \add !(Damascus)\add* and¦13799 its borders.
+\v 6 The rest of the people who lived¦13807 at Betulia fell¦13809 onto the¦13810 camp of Ashur, and¦13813 plundered them, and¦13816 were¦13817 enriched¦13817 greatly.
+\v 7 The¦13819 children¦13821 of Yisrael returned¦13823 from¦13824 the¦13825 slaughter¦13826, and got possession of that which remained¦13829. The villages and the cities that were in the hill country and in the plain country took many spoils; for¦13844 there was a very¦13847 great supply.
+\s1 The people honour Yehudit
 \p
-\v 8 Yehoyakim the high priest, and the elders of the children of Yisrael \add !(Israel)\add* who lived in Yerushalem \add !(Jerusalem)\add*, came to see the good things which the master had showed to Yisrael, and to see Yehudit \add !(Judith)\add* and to greet her.
-\v 9 When they came to her, they all blessed her with one accord, and said to her, “You are the exaltation of Yerushalem! You are the great glory of Yisrael! You are the great rejoicing of our race!
-\v 10 You have done all these things by your hand. You have done with Yisrael the things that are good, and God is pleased with it. May you be blessed by the Almighty master forever!”
-\p And all the people said, “Amen!”
+\v 8 Yehoyakim the¦13850 high priest¦13851, and¦13854 the¦13855 elders¦13856 of the¦13857 children¦13858 of Yisrael \add !(Israel)\add* who¦13860 lived¦13861 in¦13862 Yerushalem \add !(Jerusalem)\add*, came¦13864 to¦13866 see¦13866 the¦13867 good things which¦13869 the master had showed to Yisrael, and¦13874 to¦13876 see Yehudit \add !(Judith)\add* and¦13879 to¦13880 greet her.
+\v 9 When¦13885 they came to her, they all¦13891 blessed her with one accord, and¦13893 said¦13894 to¦13895 her, “You're¦13897 the exaltation of Yerushalem! You're¦13900 the great¦13902 glory of¦13903 Yisrael! You're the¦13903 great¦13907 rejoicing of¦13908 our race!
+\v 10 You've done¦13911 all¦13912 these things by your hand¦13915. You've¦13916 done¦13917 with Yisrael the things that are good, and God¦13927 is¦13929 pleased with¦13930 it. May you be blessed¦13928 by the Almighty master forever!”
+\p And¦13938 all¦13940 the¦13941 people said¦13939, “Amen!”
 \p
-\v 11 And the people plundered the camp for thirty days; and they gave Holofernes’ tent to Yehudit, along with all his silver cups, his beds, his bowls, and all his furniture. She took them, placed them on her mule, prepared her wagons, and piled them on it.
+\v 11 And¦13944 the¦13947 people¦13948 plundered the¦13949 camp for thirty¦13953 days¦13952; and¦13954 they gave¦13955 Holofernes’ tent¦13959 to Yehudit, along with all his silver cups, his beds, his bowls, and all¦13972 his furniture. She¦13975 took¦13977 them, placed¦13979 them on¦13979 her mule, prepared her wagons, and piled them on¦13992 it¦13993.
 \p
-\v 12 And all the women of Yisrael ran together to see her; and they blessed her, and made a dance amongst them for her. She took branches in her hand, and distributed them to the women who were with her.\f + \fr 15:12 \ft Compare 2 Maccabees 10:7.\f*
-\v 13 Then they made themselves garlands of olive, she and those who were with her, and she went before all the people in the dance, leading all the women. All the men of Yisrael followed in their armour with garlands, and with songs in their mouths.
+\v 12 And¦13994 all¦13996 the women¦13997 of¦13999 Yisrael ran together to¦14000 see her; and¦14002 they blessed her, and¦14005 made¦14006 a dance among them for her. She took¦14012 branches in¦14014 her hand¦14016, and¦14018 distributed them to¦14019 the¦14020 women who¦14022 were with¦14023 her.\f + \fr 15:12 \ft Compare 2 Maccabees 10:7.\f*
+\v 13 Then¦14025 they made themselves garlands of olive, she¦14029 and¦14030 those who¦14031 were with¦14032 her, and she went before all¦14036 the¦14037 people¦14038 in¦14039 the dance, leading all¦14042 the¦14043 women¦14044. All¦14047 the men¦14048 of Yisrael followed¦14046 in their armour with¦14051 garlands, and¦14053 with songs in¦14055 their mouths¦14057.
 \c 16
+\s1 Yehudit's song of thanks
 \p
-\v 1 And Yehudit began to sing this song of thanksgiving in all Yisrael, and all the people sang with loud voices this song of praise.
-\v 2 Yehudit said,
-\q1 “Begin a song to my god with timbrels.
+\v 1 And¦14059 Yehudit began to sing this song of thanksgiving in¦14065 all¦14066 Yisrael, and¦14068 all¦14070 the¦14071 people¦14072 sang with loud voices this song of praise.
+\v 2 Yehudit said¦14077,
+\q1 “Begin a song to¦14077 my god¦14081 with timbrels.
 \q2 Sing to my master with cymbals.
-\q1 Make melody to him with psalm and praise.
-\q2 Exalt him, and call upon his name.
+\q1 Make melody to him with psalm¦14093 and praise.
+\q2 Exalt him, and call on his name¦14099.
 \q1
-\v 3 Because the master is the god that crushes battles.
-\q2 Because in his armies in the midst of the people,
-\q2 he delivered me out of the hand of those who persecuted me.
+\v 3 Because the master is the god¦14102 that¦14106 crushes battles.
+\q2 Because in¦14110 his armies among¦14111 the people¦14112,
+\q2 he delivered me out of the hand¦14116 of those who¦14117 persecuted me.
 \q1
-\v 4 Ashur \add !(Assyria)\add* came out of the mountains from the north.
-\q2 He came with ten thousands of his army.
-\q1 Its multitude stopped the torrents.
+\v 4 Ashur \add !(Assyria)\add* came¦14120 out¦14122 of the mountains¦14123 from¦14124 the¦14125 north¦14125.
+\q2 He¦14130 came with ten thousands of his army.
+\q1 Its multitude¦14133 stopped the torrents.
 \q2 Their horsemen covered the hills.
 \q1
-\v 5 He said that he would burn up my borders,
-\q2 kill my young men with the sword,
-\q2 throw my nursing children to the ground,
+\v 5 He said¦14143 that he'd burn up my borders,
+\q2 kill my young men with¦14152 the sword¦14154,
+\q2 throw my nursing children to the¦14156 ground¦14161,
 \q2 give my infants up as prey,
 \q2 and make my virgins a plunder.
 \b
 \q1
-\v 6 “The Almighty master brought them to nothing by the hand of a woman.
+\v 6 “The Almighty¦14175 master brought them to nothing by a woman's hand¦14179.
 \q2
-\v 7 Because their mighty one didn't fall by young men,
-\q2 neither did sons of the Titans strike him.
+\v 7 Because¦14182 their mighty one didn't fall by¦14187 young men,
+\q2 neither did sons¦14190 of the Titans strike him.
 \q1 Tall giants didn't attack him,
-\q2 but Yehudit \add !(Judith)\add* the daughter of Merari made him weak with the beauty of her countenance.
+\q2 but¦14199 Yehudit \add !(Judith)\add* the daughter¦14201 of Merari made him weak with the beauty of her face¦14205.
 \b
 \q1
-\v 8 “Because she put off the apparel of her widowhood
-\q2 for the exaltation of those who were distressed in Yisrael \add !(Israel)\add*.
-\q1 She anointed her face with ointment,
-\q2 bound her hair in a tiara,
-\q2 and took a linen garment to deceive him.
+\v 8 “Because she¦14213 put off the clothing of her widowhood
+\q2 for¦14210 the exaltation of those who were distressed in Yisrael \add !(Israel)\add*.
+\q1 She anointed her face¦14222 with ointment,
+\q2 bound her hair¦14229 in¦14231 a¦14232 tiara,
+\q2 and¦14233 took¦14234 a linen garment to¦14234 deceive him.
 \q1
-\v 9 Her sandal ravished his eye.
-\q2 Her beauty took his soul prisoner.
-\q2 The sword passed through his neck.
+\v 9 Her sandal¦14241 ravished his eye¦14244.
+\q2 Her beauty¦14248 took his soul¦14251 prisoner.
+\q2 The sword passed¦14253 through¦14253 his neck¦14257.
 \q1
-\v 10 “The Persians quaked at her daring.
-\q2 The Madim \add !(Medes)\add* were daunted at her boldness.
+\v 10 “The¦14261 Persians quaked at her daring.
+\q2 The¦14266 Madim \add !(Medes)\add* were daunted at her boldness¦14267.
 \b
 \q1
-\v 11 “Then my lowly ones shouted aloud.
-\q2 My oppressed people were terrified and trembled for fear.
-\q2 They lifted up their voices and the enemy fled.
+\v 11 “Then¦14270 my lowly ones shouted aloud.
+\q2 My oppressed people were terrified and¦14275 trembled for fear¦14276.
+\q2 They lifted up their voices¦14284 and¦14280 the¦14283 enemy fled.
 \q1
-\v 12 The children of slave-girls pierced them through,
-\q2 and wounded them as fugitives’ children.
-\q2 They perished by the army of my master.
+\v 12 The children¦14288 of slave-girls pierced them through,
+\q2 and¦14292 wounded them as fugitives’ children¦14294.
+\q2 They perished by my master's army.
 \b
 \q1
-\v 13 “I will sing to my god a new song:
-\q2 Oh master, you are great and glorious,
-\q2 marvellous in strength, invincible.
+\v 13 “I'll sing to¦14303 my god¦14305 a new¦14308 song:
+\q2 Oh master, you're great¦14310 and¦14312 glorious,
+\q2 marvellous¦14314 in¦14315 strength¦14316, invincible.
 \q1
-\v 14 Let all your creation serve you;
-\q2 for you spoke, and they were made.
-\q1 You sent out your spirit, and it built them.
-\q2 There is no one who can resist your voice.
+\v 14 Let all¦14320 your creation¦14322 serve you;
+\q2 for you spoke, and¦14326 they were¦14327 made.
+\q1 You sent¦14328 out your spirit¦14330, and¦14332 it built¦14333 them.
+\q2 There's no¦14335 one who¦14339 can resist your voice¦14340.
 \q1
-\v 15 Because the mountains will be moved from their foundations with the waters,
-\q2 and the rocks will melt as wax at your presence:
-\q2 But you are yet merciful to those who fear you.
+\v 15 Because the mountains¦14342 will be moved from¦14344 their foundations with¦14346 the waters¦14347,
+\q2 and the rocks¦14349 will melt as wax at your presence:
+\q2 But¦14350 you're¦14353 yet merciful to¦14357 those who¦14359 fear¦14360 you.
 \q1
-\v 16 Because all sacrifice is little for a sweet savour,
-\q2 and all the fat is very little for a whole burnt offering to you;
-\q2 but he who fears the master is great continually.
+\v 16 Because¦14365 all¦14367 sacrifice¦14368 is little for a sweet savour,
+\q2 and¦14372 all¦14374 the fat¦14375 is very little for a whole burnt¦14377 offering¦14377 to¦14381 you¦14378;
+\q2 but he who fears¦14381 the¦14382 master is great¦14384 continually¦14385.
 \b
 \q1
-\v 17 “Woe to the nations who rise up against my race!
-\q2 The master Almighty will take vengeance on them in the day of judgement
-\q2 and put fire and worms in their flesh;
-\q2 and they will weep and feel their pain forever.”
+\v 17 “Woe¦14386 to the nations¦14387 who rise up against my race!
+\q2 The master Almighty¦14393 will take vengeance on them in the day¦14397 of judgement¦14398
+\q2 and put fire¦14400 and¦14401 worms in their flesh¦14404;
+\q2 and they'll weep and feel their pain forever.”
+\s1 The celebration and Yehudit's later life
 \p
-\v 18 Now when they came to Yerushalem \add !(Jerusalem)\add*, they worshipped God. When the people were purified, they offered their whole burnt offerings, their free will offerings, and their gifts.
-\v 19 Yehudit dedicated all Holofernes’ stuff, which the people had given her, and gave the canopy, which she had taken for herself out of his bedchamber, for a gift to the master.
+\v 18 Now when¦14413 they came to¦14417 Yerushalem \add !(Jerusalem)\add*, they worshipped¦14417 God¦14419. When¦14421 the¦14423 people¦14424 were purified, they offered their whole burnt¦14427 offerings, their free will offerings, and their gifts¦14435.
+\v 19 Yehudit dedicated all¦14439 Holofernes’ stuff, which the people¦14446 had given her, and¦14448 gave the¦14449 canopy, which¦14451 she'd taken¦14452 for herself out¦14454 of¦14455 his bedchamber, for a¦14459 gift to the master.
 \p
-\v 20 And the people continued feasting in Yerushalem before the sanctuary for three months, and Yehudit \add !(Judith)\add* remained with them.
+\v 20 And¦14463 the¦14465 people¦14466 continued feasting in¦14468 Yerushalem before the¦14472 sanctuary¦14473 for three¦14476 months¦14475, and¦14477 Yehudit \add !(Judith)\add* remained with¦14479 them.
 \p
-\v 21 After these days, everyone departed to his own inheritance. Yehudit went away to Betulia, and remained in her own possession, and was honourable in her time in all the land.
-\v 22 Many desired her, but no man knew her all the days of her life from the day that Menasheh \add !(Manasseh)\add* her husband died and was gathered to his people.
-\v 23 She increased in greatness exceedingly; and she grew old in her husband's house, to one hundred and five years. She let her maid go free. Then she died in Betulia. They buried her in the cave of her husband Menasheh.
-\v 24 The house of Yisrael \add !(Israel)\add* mourned for her seven days. She distributed her goods before she died to all those who were nearest of kin to Menasheh her husband, and to those who were nearest of her own kindred.
-\v 25 There was no one who made the children of Yisrael afraid any more in the days of Yehudit, nor for a long time after her death.
+\v 21 After¦14482 these days¦14485, everyone departed to his own inheritance¦14491. Yehudit went¦14495 away¦14495 to Betulia, and remained in her own possession, and was¦14505 honourable¦14510 in her time¦14508 in¦14511 all¦14512 the¦14513 land¦14514.
+\v 22 Many desired her, but no¦14520 man¦14522 knew¦14521 her all¦14524 the¦14525 days¦14526 of her life¦14528 from¦14530 the day¦14532 that Menasheh \add !(Manasseh)\add* her husband died¦14533 and¦14538 was gathered to his people¦14542.
+\v 23 She became very¦14548 highly respected; and¦14549 she grew old in¦14551 her husband's house¦14553, to one¦14555 hundred¦14558 and five¦14559 years¦14557. She let her maid go free¦14561. Then she¦14564 died¦14567 in Betulia. They buried¦14571 her in¦14573 the¦14574 cave of¦14576 her husband Menasheh.
+\v 24 The house¦14583 of Yisrael \add !(Israel)\add* mourned for her seven¦14586 days¦14585. She¦14591 distributed¦14588 her goods before¦14592 she died¦14594 to all¦14596 those who¦14597 were nearest of¦14600 kin to Menasheh her husband, and¦14603 to those who¦14604 were nearest of¦14606 her own kindred.
+\v 25 There was no¦14610 one who¦14613 made the¦14615 children¦14616 of Yisrael afraid any more in¦14618 the¦14619 days¦14620 of Yehudit, nor for a long time after¦14623 her death¦14625.

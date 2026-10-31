@@ -1,545 +1,589 @@
-\id 1ES - 1 Esdras - Open English Translation—Readers' Version (OET-RV) v0.1.0
+\id 1ES - 1 Esdras - Open English Translation—Readers' Version (OET-RV) v0.4.1
+\rem WORDTABLE OET-LV_DC_word_table.tsv
 \h 1 Ezra
 \toc1 The First Book of Ezra
 \toc2 1 Ezra
 \toc3 1Es
 \mt1 The First Book of Ezra
 \is1 Introduction
+\ip \bk The First Book of Ezra\bk*, also known as \bk 1 Esdras\bk*, recounts the fall of Yehudah (Judah) and the return of exiles to Yerushalem (Jerusalem). It begins with King Yoshiyah's (Josiah's) Passover celebration, follows the disasters that lead to exile in Bavel (Babylon), and then describes the return, the rebuilding of the temple, and the work of Ezra. Much of this will be familiar to readers of \bk The Chronicles\bk*, \bk Ezra\bk*, and \bk Nehemyah\bk*, although the material is arranged differently.
+\ip A distinctive part of this account is the debate between three of King Dareyavesh's (Darius') guards about what is strongest. One argues for wine, another for the king, and Zorobabel argues for women before declaring that truth is stronger than everything. His success leads to royal support for the return to Yerushalem and the rebuilding of the temple.
+\ip The account emphasises restored worship, support for the temple, and the need to live according to God's instructions. It ends with Ezra reading and explaining the law to the assembled people, who respond with worship and celebration.
 \ip \bk The First Book of Ezra\bk* is recognised as Deuterocanonical Scripture by the Greek Orthodox and Russian Orthodox Churches. It is not recognised by the Romaios Catholic Church, but 1 Ezra is placed as an appendix to the Latin Vulgate Bible.
+\iot Main components of this account
+\io1 Yoshiyah's Passover and the fall of Yehudah \ior 1:1-58\ior*
+\io1 Permission to return and opposition to rebuilding \ior 2:1-30\ior*
+\io1 The guards' debate and Zorobabel's request \ior 3:1–4:63\ior*
+\io1 The returning families and the rebuilding of the temple \ior 5:1–7:15\ior*
+\io1 Ezra's return and the response to marriages with foreigners \ior 8:1–9:36\ior*
+\io1 Ezra reads God's law to the people \ior 9:37-55\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
+\s1 Yoshiyah celebrates the Passover
 \p
-\v 1 Yoshiyah \add !(Josiah)\add* held the Passover in Yerushalem \add !(Jerusalem)\add* to his master, and offered the Passover the fourteenth day of the first month,\x + \xo 1:1 \xt 2 Kings 23:21; 2 Chronicles 35:1\x*
-\v 2 having set the priests according to their daily courses, being arrayed in their vestments, in the master's temple.
-\v 3 He spoke to the Levites, Yisrael's \add !(Israel)\add* temple servants,\x + \xo 1:3 \xt Numbers 3:9\x* that they should make themselves holy to the master, to set the holy ark of the master in the house that King Shelomoh \add !(Solomon)\add* the son of David had built.
+\v 1 Yoshiyah \add !(Josiah)\add* held the¦105537 Passover¦105538 in¦105539 Yerushalem \add !(Jerusalem)\add* to his master, and offered the¦105546 Passover¦105547 the¦105548 fourteenth¦105549 day¦105550 of¦105551 the¦105553 first¦105554 month,\x + \xo 1:1: \xt 2Ki 23:21; 2Ch 35:1.\x*
+\v 2 having set the¦105556 priests¦105557 according¦105558 to¦105558 their daily courses, being arrayed in their vestments, in the¦105562 master's temple¦105563.
+\v 3 He spoke to the Levites, Yisrael's \add !(Israel)\add* temple servants,\x + \xo 1:3: \xt Num 3:9.\x* that they should make themselves holy to the master, to set the holy ark of the master in the house that King Shelomoh \add !(Solomon)\add* the son of David had built.
 \v 4 He said, “You no longer need to carry it on your shoulders. Now therefore serve the master your god, and minister to his people Yisrael, and prepare yourselves by your fathers’ houses and kindred,
 \v 5 according to the writing of King David of Yisrael, and according to the magnificence of Shelomoh his son. Stand in the holy place according to the divisions of your Levite families who minister in the presence of your kindred the descendants of Yisrael.
 \v 6 Offer the Passover in order, prepare the sacrifices for your kindred, and keep the Passover according to the master's commandment, which was given to Mosheh \add !(Moses)\add*.
 \p
-\v 7 To the people which were present, Yoshiyah gave thirty thousand lambs and kids, and three thousand calves. These things were given from the king's possessions, as he promised, to the people and to the priests and Levites.
-\v 8 Hilkiyah, Zekaryah \add !(Zechariah)\add*, and Yehiel,\f + \fr 1:8 \fq Jehiel, \ft 2 Chronicles 35:8.\f* the rulers of the temple, gave to the priests for the Passover two thousand and six hundred sheep, and three hundred calves.
-\v 9 Konaniyah, Shemayah, Netanel his brother, Hashavyah, Yeiel, and Yoram \add !(Joram)\add*, captains over thousands, gave to the Levites for the Passover five thousand sheep and seven hundred calves.
+\v 7 To¦105685 the¦105687 people¦105688 which were present, Yoshiyah gave thirty¦105694 thousand lambs and kids, and three thousand calves. These things were given from¦105699 the¦105700 king's possessions, as he¦105698 promised¦105704, to the¦105705 people¦105706 and¦105707 to the¦105708 priests¦105709 and¦105710 Levites.
+\v 8 Hilkiyah, Zekaryah \add !(Zechariah)\add*, and Yehiel,\f + \fr 1:8 \fq Jehiel, \ft 2 Chronicles 35:8.\f* the¦105719 rulers of¦105721 the¦105721 temple¦105722, gave¦105713 to¦105720 the¦105723 priests¦105724 for the Passover¦105726 two thousand and six¦105729 hundred sheep¦105727, and three hundred¦105729 calves.
+\v 9 Konaniyah, Shemayah, Netanel his brother¦105739, Hashavyah, Yeiel, and Yoram¦105745 \add !(Joram)\add*, captains over thousands, gave¦105747 to¦105747 the Levites for the Passover¦105751 five thousand sheep¦105752 and seven hundred calves.
 \p
 \v 10 When these things were done, the priests and Levites, having the unleavened bread, stood in proper order according to the kindred,
-\v 11 and according to the several divisions by fathers’ houses, before the people, to offer to the master as it is written in the book of Mosheh. They did this in the morning.
-\v 12 They roasted the Passover lamb with fire, as required. They boiled the sacrifices in the brazen vessels and cauldrons with a pleasing smell,
-\v 13 and set them before all the people. Afterward they prepared for themselves and for their kindred the priests, the sons of Aharon \add !(Aaron)\add*.
-\v 14 Because the priests offered the fat until night. The Levites prepared for themselves and for their kindred the priests, the sons of Aharon.
-\v 15 The holy singers also, the sons of Asaf, were in their order, according to the appointment of David: Asaf, Zekaryah, and Yedutun, who represented the king.
-\v 16 Moreover the gatekeepers were at every gate. No one needed to depart from his daily duties, for their kindred the Levites prepared for them.
+\v 11 and according to the several divisions by fathers’ houses, before the people, to offer to the master as it's written in the book of Mosheh. They did this in the morning.
+\v 12 They roasted the¦105797 Passover¦105798 lamb with fire¦105799, as required. They boiled the¦105803 sacrifices¦105804 in¦105806 the¦105807 brazen vessels and¦105809 cauldrons with¦105811 a pleasing smell,
+\v 13 and¦105813 set them before all¦105815 the¦105816 people¦105819. Afterward¦105820 they prepared¦105823 for themselves and for their kindred the¦105827 priests¦105828, the sons¦105831 of Aharon \add !(Aaron)\add*.
+\v 14 Because the¦105833 priests¦105835 offered the¦105837 fat until¦105839 night. The¦105842 Levites prepared¦105844 for themselves and¦105846 for their kindred the¦105847 priests¦105848, the sons¦105851 of Aharon.
+\v 15 The holy singers also¦105853, the¦105854 sons¦105856 of Asaf¦105857, were¦105858 in their order, according¦105863 to¦105863 the¦105864 appointment of David: Asaf¦105869, Zekaryah, and Yedutun, who¦105874 represented the¦105876 king¦105877.
+\v 16 Moreover the¦105879 gatekeepers were at every gate¦105883. No¦105884 one needed to depart from his daily duties, for¦105892 their kindred the¦105895 Levites prepared¦105897 for them.
 \p
-\v 17 So the things that belonged to the master's sacrifices were accomplished in that day, in holding the Passover,
-\v 18 and offering sacrifices on the altar of the master, according to the commandment of King Yoshiyah.
-\v 19 So the children of Yisrael \add !(Israel)\add* which were present at that time held the Passover and the feast of unleavened bread seven days.
-\v 20 Such a Passover had not been held in Yisrael since the time of the prophet Shmuel \add !(Samuel)\add*.
-\v 21 Indeed, none of the kings of Yisrael held such a Passover as Yoshiyah with the priests, the Levites, and the Yehudim \add !(Jews)\add*, held with all Yisrael that were present in their dwelling place at Yerushalem \add !(Jerusalem)\add*.
-\v 22 This Passover was held in the eighteenth year of the reign of Yoshiyah.
-\v 23 The works of Yoshiyah were upright before his master with a heart full of godliness.
-\v 24 Moreover the things that came to pass in his days have been written in times past, concerning those who sinned and did wickedly against the master more than any other people or kingdom, and how they grieved him exceedingly,\f + \fr 1:24 \ft Or, \fqa sensibly \ft Judges 16:17.\f* so that the master's words were confirmed against Yisrael.
+\v 17 So¦105899 the¦105901 things that belonged to the¦105902 master's sacrifices¦105903 were accomplished in¦105906 that¦105907 day¦105909, in holding the¦105911 Passover¦105912,
+\v 18 and¦105913 offering sacrifices¦105916 on¦105917 the¦105918 altar¦105921 of¦105919 the¦105919 master, according¦105922 to¦105922 King¦105926 Yoshiyah's commandment.
+\v 19 So¦105928 the¦105930 children¦105931 of Yisrael \add !(Israel)\add* which were present at that time¦105937 held the¦105939 Passover¦105940 and¦105941 the feast of unleavened¦105945 bread seven¦105947 days¦105946.
+\v 20 Such¦105953 a Passover¦105952 hadn't been held in¦105954 Yisrael since the¦105958 time¦105959 of¦105961 the¦105961 prophet¦105962 Shmuel \add !(Samuel)\add*.
+\v 21 Indeed, none of Yisrael's kings¦105966 held such a Passover¦105971 as Yoshiyah with the¦105977 priests¦105978, the¦105980 Levites, and¦105982 the¦105983 Yehudim \add !(Jews)\add*, held with all¦105986 Yisrael that were present in their dwelling place at Yerushalem \add !(Jerusalem)\add*.
+\v 22 This¦106001 Passover¦106002 was held in the eighteenth year¦105997 of Yoshiyah's reign.
+\v 23 Yoshiyah's works¦106007 were upright before¦106009 his master with a heart¦106014 full of godliness.
+\v 24 Moreover the¦106018 things that happened in his days have been written in times¦106026 past, about¦106027 those who¦106028 sinned and¦106030 did wickedly against the¦106033 master more than¦106035 any other people or kingdom¦106039, and¦106040 how they grieved him greatly,\f + \fr 1:24 \ft Or, \fqa sensibly \ft Judges 16:17.\f* so that the¦106046 master's words¦106047 were confirmed against¦106051 Yisrael.
+\s1 Yoshiyah is killed in battle
 \p
-\v 25 Now after all these acts of Yoshiyah \add !(Josiah)\add*, it came to pass that Par’oh \add !(Pharaoh)\add* the king of Mitsrayim \add !(Egypt)\add* came to make war at Karkemish on the Perat \add !(Euphrates)\add*; and Yoshiyah went out against him.\x + \xo 1:25 \xt 2 Chronicles 35:20\x*
-\v 26 But the king of Mitsrayim sent to him, saying, “What do I have to do with you, Oh king of Yehudah \add !(Judea)\add*?
-\v 27 I wasn't sent out from the master God against you, for my war is against the Perat. Now the master is with me, yes, the master is with me hastening me forward. Depart from me, and don't be against the master.”
+\v 25 Now after¦106054 all¦106055 these acts of Yoshiyah \add !(Josiah)\add*, it¦106058 happened¦106060 that Par'oh \add !(Pharaoh)\add* the king¦106062 of Mitsrayim \add !(Egypt)\add* came to¦106064 make war¦106065 at Karkemish on¦106067 the¦106070 Perat \add !(Euphrates)\add*; and¦106072 Yoshiyah went¦106073 out¦106073 against him.\x + \xo 1:25: \xt 2Ch 35:20.\x*
+\v 26 But¦106078 the king¦106082 of Mitsrayim sent to¦106084 him, saying, “What do I¦106086 have to do with you¦106088, Oh king¦106090 of Yehudah \add !(Judea)\add*?
+\v 27 I wasn't sent out from the¦106099 master God¦106100 against¦106101 you, for¦106102 my war¦106106 is¦106108 against the Perat. Now¦106110 the master is with¦106112 me, yes, the master is¦106114 with¦106117 me hastening me forward. Depart from me, and¦106122 don't¦106123 be against the¦106125 master.”
 \p
-\v 28 However, Yoshiyah didn't turn back to his chariot, but tried to fight with him, not regarding the words of the prophet Yirmiyah \add !(Jeremiah)\add* from the master's mouth,
-\v 29 but joined battle with him in the plain of Megidon, and the commanders came down against King Yoshiyah.
-\v 30 Then the king said to his servants, “Carry me away out of the battle, for I am very weak!” Immediately his servants carried him away out of the army.
-\v 31 Then he got into his second chariot. After he was brought back to Yerushalem \add !(Jerusalem)\add* he died, and was buried in the tomb of his ancestors.
-\v 32 All Yehudah mourned for Yoshiyah. Yirmiyah the prophet lamented for Yoshiyah, and the chief men with the women made lamentation for him to this day. This was given out for an ordinance to be done continually in all the nation of Yisrael \add !(Israel)\add*.
-\v 33 These things are written in the book of the histories of the kings of Yehudah, and every one of the acts that Yoshiyah did, and his glory, and his understanding in the law of the master, and the things that he had done before, and the things now told, are reported in the book of the kings of Yisrael and Yehudah.
+\v 28 However, Yoshiyah didn't turn back to¦106132 his chariot¦106134, but¦106136 tried to fight with him, not regarding the words of the prophet¦106144 Yirmiyah \add !(Jeremiah)\add* from¦106145 the master's mouth¦106146,
+\v 29 but¦106148 joined battle¦106152 with¦106150 him in¦106153 the¦106154 plain of Megidon, and¦106157 the commanders came¦106158 down¦106158 against King¦106163 Yoshiyah.
+\v 30 Then¦106165 the¦106167 king¦106168 said¦106166 to his servants, “Carry me away out of the¦106169 battle, for I'm¦106177 very weak¦106177!” Immediately¦106181 his servants carried him away¦106187 out of the¦106188 army.
+\v 31 Then¦106190 he got into his second chariot¦106194. After he¦106197 was brought back to Yerushalem \add !(Jerusalem)\add* he¦106205 died, and¦106206 was buried¦106207 in¦106208 the¦106209 tomb of his ancestors.
+\v 32 All¦106214 Yehudah mourned for Yoshiyah. Yirmiyah the¦106223 prophet¦106224 lamented for¦106225 Yoshiyah, and the¦106228 chief men with¦106230 the women¦106231 made lamentation for him to this¦106235 day¦106236. This was given out for an ordinance to¦106241 be¦106241 done continually¦106242 in all¦106244 the¦106245 nation of Yisrael \add !(Israel)\add*.
+\v 33 These things are written in¦106251 the¦106252 book¦106253 of the¦106254 histories of Yehudah's kings¦106258, and¦106261 every one¦106264 of the¦106266 acts that Yoshiyah did, and¦106269 his glory¦106271, and¦106273 his understanding¦106275 in¦106277 the¦106281 master's law¦106279, and¦106282 the things that he'd¦106285 done before, and¦106286 the¦106287 things now¦106288 told, are reported in¦106290 the¦106291 book¦106292 of the¦106293 kings¦106294 of Yisrael and¦106296 Yehudah.
+\s1 Yehudah's last kings and the fall of Yerushalem
 \p
-\v 34 The people took Yehoahaz\f + \fr 1:34 \ft Another reading is, \fqa Jeconias.\f* the son of Yoshiyah, and made him king instead of Yoshiyah his father, when he was twenty-three years old.\x + \xo 1:34 \xt 2 Kings 23:30; 2 Chronicles 36:1\x*
-\v 35 He reigned in Yehudah and Yerushalem for three months. Then the king of Mitsrayim \add !(Egypt)\add* deposed him from reigning in Yerushalem.
-\v 36 He set a tax on the people of one hundred talents of silver and one talent of gold.
-\v 37 The king of Mitsrayim also made King Yehoyakim his brother king of Yehudah and Yerushalem.
-\v 38 And Yehoyakim imprisoned the nobles and apprehended his brother Zarakes, and brought him up out of Mitsrayim.
+\v 34 The people took¦106299 Yehoahaz\f + \fr 1:34 \ft Another reading is, \fqa Jeconias.\f* the son¦106306 of Yoshiyah, and made him king¦106309 instead of¦106312 Yoshiyah his father¦106313, when he¦106314 was¦106315 twenty-three years¦106316 old.\x + \xo 1:34: \xt 2Ki 23:30; 2Ch 36:1.\x*
+\v 35 He reigned¦106320 in¦106321 Yehudah and¦106323 Yerushalem for three¦106326 months¦106325. Then¦106327 the king¦106330 of¦106332 Mitsrayim \add !(Egypt)\add* deposed him from reigning¦106334 in¦106335 Yerushalem.
+\v 36 He set a tax on the¦106339 people of one hundred¦106343 talents of silver and¦106344 one talent of gold¦106345.
+\v 37 The king¦106350 of Mitsrayim also made King¦106352 Yehoyakim his brother¦106355 king¦106357 of Yehudah and¦106360 Yerushalem.
+\v 38 And¦106362 Yehoyakim imprisoned the¦106365 nobles and¦106368 apprehended his brother¦106370 Zarakes, and brought him up out¦106374 of Mitsrayim.
 \p
-\v 39 Yehoyakim was twenty-five years old when he began to reign in Yehudah and Yerushalem. He did that which was evil in the sight of the master.\x + \xo 1:39 \xt 2 Chronicles 36:4-5\x*
-\v 40 King Nevukadnetsar \add !(Nebuchadnezzar)\add* of Bavel \add !(Babylon)\add* came up against him, bound him with a chain of brass, and carried him to Bavel.
-\v 41 Nevukadnetsar also took some of the master's holy vessels, carried them away, and stored them in his own temple at Bavel.
-\v 42 But those things that are reported of him, and of his uncleanness and impiety, are written in the records of the kings.
-\v 43 Then Yehoyakin his son reigned in his place. When he was made king, he was eighteen years old.
-\v 44 He reigned three months and ten days in Yerushalem. He did that which was evil before the master.
+\v 39 Yehoyakim was¦106378 twenty-five¦106379 years¦106376 old when¦106381 he began to¦106382 reign¦106382 in Yehudah and Yerushalem. He did¦106388 that¦106389 which was evil¦106390 in the sight of the master.\x + \xo 1:39: \xt 2Ch 36:4-5.\x*
+\v 40 King¦106399 Nevukadnetsar \add !(Nebuchadnezzar)\add* of Bavel \add !(Babylon)\add* came up against him, bound¦106402 him with a chain of brass, and¦106407 carried him to Bavel.
+\v 41 Nevukadnetsar also¦106411 took¦106418 some of¦106416 the¦106416 master's holy vessels, carried them away¦106412, and¦106420 stored them in¦106423 his own temple¦106425 at Bavel.
+\v 42 But¦106430 those things that are reported of him, and¦106434 of his uncleanness and¦106438 impiety, are written in¦106441 the records of the kings¦106447.
+\v 43 Then¦106448 Yehoyakin his son¦106454 reigned¦106449 in his place. When¦106456 he¦106451 was made king, he¦106455 was¦106459 eighteen years¦106460 old.
+\v 44 He reigned¦106462 three¦106465 months¦106464 and¦106466 ten¦106468 days¦106467 in¦106469 Yerushalem. He did¦106472 that which was evil¦106474 before¦106475 the master.
 \p
-\v 45 So after a year Nevukadnetsar sent and caused him to be brought to Bavel with the holy vessels of the master,
-\v 46 and made Tsidkiyah \add !(Zedekiah)\add* king of Yehudah and Yerushalem when he was twenty-one years old. He reigned eleven years.
-\v 47 He also did that which was evil in the sight of the master, and didn't heed the words that were spoken by Yirmiyah the prophet from the master's mouth.
-\v 48 After King Nevukadnetsar had made him to swear by the name of the master, he broke his oath and rebelled. Hardening his neck and his heart, he transgressed the laws of the master, the god of Yisrael \add !(Israel)\add*.
-\v 49 Moreover the governors of the people and of the priests did many things wickedly, exceeding all the defilements of all nations, and defiled the temple of the master, which was sanctified in Yerushalem.
-\v 50 Their ancestors' god sent by his messenger to call them back, because he had compassion on them and on his dwelling place.
-\v 51 But they mocked his messengers. In the day when the master spoke, they scoffed at his prophets
-\v 52 until he, being angry with his people for their great ungodliness, commanded to bring up the kings of the Kasdim \add !(Chaldeans)\add* against them.
-\v 53 They killed their young men with the sword around their holy temple, and spared neither young man or young woman, old man or child; but he delivered all of them into their hands.
-\v 54 They took all the holy vessels of the master, both great and small, with the treasure chests of the master's ark and the king's treasures, and carried them away to Bavel.
-\v 55 They burnt the master's house, broke down Yerushalem's walls, and burnt its towers with fire.
-\v 56 As for her glorious things, they didn't stop until they had brought them all to nothing. He carried the people who weren't slain with the sword to Bavel.
-\v 57 They were servants to him and to his children until the Persians reigned, to fulfil the word of the master by the mouth of Yirmiyah:
-\v 58 “Until the land has enjoyed its Sabbaths, the whole time of her desolation shall she keep Sabbath, to fulfil seventy years.
+\v 45 So after¦106478 a year¦106479 Nevukadnetsar sent¦106480 and caused him to be brought to Bavel with the¦106487 holy vessels¦106489 of¦106490 the¦106490 master,
+\v 46 and¦106492 made Tsidkiyah \add !(Zedekiah)\add* king¦106495 of Yehudah and¦106498 Yerushalem when he was¦106500 twenty-one years¦106501 old. He reigned¦106504 eleven¦106507 years.
+\v 47 He also¦106508 did¦106509 that¦106510 which was evil¦106511 in the sight of the master, and¦106514 didn't heed the¦106518 words¦106520 that were spoken by¦106521 Yirmiyah the¦106523 prophet¦106524 from¦106525 the master's mouth¦106526.
+\v 48 After King¦106533 Nevukadnetsar had made him to swear by the¦106535 master's name¦106536, he broke his oath and rebelled. Hardening his neck¦106544 and¦106545 his heart¦106547, he¦106548 transgressed¦106549 the laws of the master, the god¦106553 of Yisrael \add !(Israel)\add*.
+\v 49 Moreover the¦106556 governors¦106557 of¦106559 the¦106559 people¦106560 and¦106561 of the¦106562 priests¦106563 did many things wickedly, exceeding all¦106568 the¦106569 defilements of all¦106571 nations¦106573, and¦106574 defiled the¦106576 master's temple¦106577, which was sanctified in¦106582 Yerushalem.
+\v 50 Their ancestors' god sent¦106585 by his messenger to¦106595 call¦106595 them back, because¦106591 he had compassion on them and¦106600 on his dwelling place.
+\v 51 But¦106605 they mocked his messengers. In¦106607 the¦106608 day¦106613 when the¦106618 master spoke¦106614, they scoffed at his prophets¦106619
+\v 52 until¦106621 he¦106624, being angry with his people for their great ungodliness, commanded to¦106625 bring up the¦106626 kings¦106637 of¦106629 the¦106630 Kasdim \add !(Chaldeans)\add* against¦106634 them.
+\v 53 They killed¦106641 their young men with the¦106642 sword¦106646 around their holy¦106649 temple¦106651, and spared neither young man or young¦106657 woman¦106657, old man or child; but¦106662 he delivered¦106664 all¦106663 of them into¦106664 their hands¦106667.
+\v 54 They took¦106690 all¦106670 the¦106671 holy vessels¦106673 of¦106674 the master, both great¦106677 and¦106678 small¦106680, with the¦106682 treasure chests of¦106684 the¦106684 master's ark and¦106686 the¦106687 king's treasures, and carried¦106691 them away to Bavel.
+\v 55 They burnt the¦106696 master's house¦106697, broke down Yerushalem's walls¦106703, and¦106705 burnt its towers with fire¦106711.
+\v 56 As for her glorious things, they didn't stop until they'd brought them all¦106714 to nothing. He¦106717 carried the people who weren't slain with¦106723 the sword to Bavel.
+\v 57 They were¦106728 servants to him and¦106731 to his children¦106733 until¦106735 the Persians reigned¦106737, to¦106737 fulfil the¦106742 master's word by Yirmiyah's mouth¦106745:
+\v 58 “Until¦106747 the land¦106751 has enjoyed its Sabbaths, the¦106756 whole¦106755 time¦106757 of her desolation will she¦106760 keep Sabbath¦106753, to fulfil seventy¦106765 years¦106764.
 \c 2
+\s1 Koresh allows the exiles to return
 \p
-\v 1 In the first year of King Koresh \add !(Cyrus)\add* of the Persians, that the word of the master by the mouth of Yirmiyah \add !(Jeremiah)\add* might be accomplished,\x + \xo 2:1 \xt 2 Chronicles 36:22,23; Ezra 1:1\x*
-\v 2 the master stirred up the spirit of King Koresh of the Persians, and he made an \add official\add* announcement throughout all his kingdom, and also by writing,
-\v 3 saying, “Koresh king of the Persians says: The master of Yisrael \add !(Israel)\add*, the Most High master, has made me king of the whole world,
-\v 4 and commanded me to build him a house at Yerushalem that is in Yehudah.
-\v 5 If therefore there are any of you that are of his people, let the master, even his master, be with him, and let him go up to Yerushalem that is in Yehudah, and build the house of the master of Yisrael. He is the master who dwells in Yerushalem.
-\v 6 Therefore, of those who dwell in various places, let those who are in his own place help each one with gold, with silver,
-\v 7 with gifts, with horses, and cattle, beside the other things which have been added by vow for the temple of the master which is in Yerushalem.
+\v 1 In the first¦106770 year of King Koresh \add !(Cyrus)\add* of the Persians, that the master's word by Yirmiyah's \add !(Jeremiah)\add* mouth¦106776 might be accomplished,\x + \xo 2:1: \xt 2Ch 36:22,23; Ezr 1:1.\x*
+\v 2 the master stirred up the¦106780 spirit¦106781 of King¦106783 Koresh of the Persians, and¦106785 he made an \add official\add* announcement throughout all¦106788 his kingdom¦106790, and¦106792 also¦106792 by writing,
+\v 3 saying, “Koresh king of the¦106806 Persians says¦106798: The¦106808 master of¦106810 Yisrael \add !(Israel)\add*, the¦106810 Most High master, has made me king of the¦106813 whole world¦106807,
+\v 4 and¦106815 commanded me to¦106818 build¦106818 him a house¦106820 at Yerushalem that's¦106823 in¦106824 Yehudah.
+\v 5 If¦106827 therefore¦106830 there are any of you¦106831 that are of¦106833 his people, let the¦106833 master, even his master, be¦106836 with¦106840 him, and¦106842 let him go up to¦106843 Yerushalem that's in¦106848 Yehudah, and build the¦106852 house¦106853 of¦106854 the¦106854 master of¦106856 Yisrael. He's the master who lives in¦106863 Yerushalem.
+\v 6 Therefore¦106866, of those who¦106868 live in various places¦106869, let those who¦106873 are in¦106874 his own place¦106876 help each one with gold¦106879, with silver,
+\v 7 with gifts, with horses¦106886, and¦106887 cattle, beside the other things which have been added by vow for the master's temple¦106898 which is in¦106902 Yerushalem.
 \p
-\v 8 Then the chief of the families of Yehudah \add !(Judah)\add* and of the tribe of Benyamin stood up, with the priests, the Levites, and all whose spirit the master had stirred to go up, to build the house for the master which is in Yerushalem.
-\v 9 Those who lived around them helped them in all things with silver and gold, with horses and cattle, and with very many gifts that were vowed by a great number whose minds were so moved.
+\v 8 Then¦106904 the chief of the families of Yehudah \add !(Judah)\add* and of the tribe¦106914 of Benyamin stood up, with the¦106916 priests¦106917, the¦106919 Levites, and¦106921 all¦106922 whose spirit¦106927 the master had stirred to go up, to¦106929 build¦106929 the house¦106930 for the master which¦106923 is in¦106934 Yerushalem.
+\v 9 Those who¦106937 lived around them helped them in¦106941 all¦106942 things with silver and¦106945 gold¦106946, with horses¦106947 and cattle, and with very¦106953 many gifts that were vowed by a great number whose minds¦106956 were so moved.
 \p
-\v 10 King Koresh also brought out the holy vessels of the master, which Nevukadnetsar \add !(Nebuchadnezzar)\add* had carried away from Yerushalem and had stored in his temple of idols.
-\v 11 Now when King Koresh of the Persians had brought them out, he delivered them to Mitredat his treasurer,
-\v 12 and by him they were delivered to Sheshebatsar\f + \fr 2:12 \ft Another reading is, \fqa Simanassar.\f* the governor of Yehudah.
-\v 13 This was the number of them: one thousand gold cups, one thousand silver cups, twenty-nine silver censers, thirty gold bowls, two thousand and four hundred and ten silver bowls, and one thousand other vessels.
-\v 14 So all the vessels of gold and of silver were brought up, even five thousand and four hundred and seventy-nine,
-\v 15 and were carried back by Sheshebatsar, together with the returning exiles, from Bavel \add !(Babylon)\add* to Yerushalem.
+\v 10 King¦106960 Koresh also brought¦106962 out¦106962 the¦106963 holy vessels¦106965 of¦106966 the¦106966 master, which¦106968 Nevukadnetsar \add !(Nebuchadnezzar)\add* had carried away from¦106971 Yerushalem and¦106973 had stored in¦106976 his temple¦106978 of idols¦106978.
+\v 11 Now when¦106981 King¦106985 Koresh of the Persians had brought them out, he delivered them to¦106987 Mitredat his treasurer,
+\v 12 and by him they were delivered¦106987 to Sheshebatsar\f + \fr 2:12 \ft Another reading is, \fqa Simanassar.\f* Yehudah's governor.
+\v 13 This was the number¦107004 of them: one thousand gold¦107007 cups, one thousand¦107008 silver¦107010 cups, twenty-nine¦107014 silver censers, thirty¦107017 gold bowls, two thousand and four hundred and ten¦107021 silver bowls, and¦107022 one thousand¦107025 other vessels¦107024.
+\v 14 So¦107027 all¦107028 the vessels¦107029 of gold¦107031 and¦107032 of silver¦107033 were brought up, even five thousand and four¦107035 hundred¦107035 and seventy-nine,
+\v 15 and were carried back by¦107039 Sheshebatsar, together¦107041 with the returning exiles, from Bavel \add !(Babylon)\add* to Yerushalem.
+\s1 Opposition stops the rebuilding of Yerushalem
 \p
-\v 16 In the time of King Artahshashta \add !(Artaxerxes)\add* of the Persians, Bishlam, Mitredat, Teve’el, Rehum,\f + \fr 2:16 \fqa Rehum,\f* Rehum, and Shimshay\f + \fr 2:16 \fqa Shimshai.\f* the scribe, with their other associates, dwelling in Shomron \add !(Samaria)\add* and other places, wrote to him against those who lived in Yehudah and Yerushalem the following letter:\x + \xo 2:16 \xt Ezra 4:7\x*
+\v 16 In¦107050 the time¦107058 of King¦107057 Artahshashta \add !(Artaxerxes)\add* of the Persians, Bishlam, Mitredat, Teve'el, Rehum,\f + \fr 2:16 \fqa Rehum,\f* Rehum, and Shimshay\f + \fr 2:16 \fqa Shimshai.\f* the¦107080 scribe¦107081, with their other associates, dwelling¦107063 in¦107064 Shomron \add !(Samaria)\add* and¦107082 other places¦107095, wrote to him against those who lived in¦107090 Yehudah and¦107092 Yerushalem the following letter:\x + \xo 2:16: \xt Ezr 4:7.\x*
 \p
-\v 17 “To King Artahshashta our master, from your servants, Rehum the recorder, Shimshay the scribe, and the rest of their council, and the judges who are in Coele-Syria and Foinikai:
-\v 18 Let it now be known to our lord the king, that the Yehudim \add !(Jews)\add* that have come up from you to us, having come to Yerushalem, are building that rebellious and wicked city, and are repairing its marketplaces and walls, and are laying the foundation of a temple.
-\v 19 Now if this city is built and its walls are finished, they will not only refuse to give tribute, but will even stand up against kings.
-\v 20 Since the things pertaining to the temple are now in hand, we think it appropriate not to neglect such a matter,
-\v 21 but to speak to our lord the king, to the intent that, if it is your pleasure, search may be made in the books of your ancestors.
-\v 22 You will find in the records what is written concerning these things, and will understand that that city was rebellious, troubling both kings and cities,
-\v 23 and that the Yehudim were rebellious, and kept starting wars there in the past. Because this cause, this city was laid waste.
-\v 24 Therefore now we do declare to you, Oh lord the king, that if this city is built again, and its walls set up again, you will from then on have no passage into Coele-Syria and Foinikai.”
+\v 17 “To King¦107099 Artahshashta our master, from your servants, Rehum the recorder, Shimshay the¦107111 scribe¦107112, and¦107113 the rest of their council, and the judges¦107120 who¦107121 are in¦107122 Coele-Syria and¦107125 Foinikai:
+\v 18 Let it now¦107128 be¦107130 known to our lord¦107132 the king¦107133, that¦107134 the¦107135 Yehudim \add !(Jews)\add* that have come up from¦107138 you¦107139 to us, having come to Yerushalem, are building that rebellious and wicked city¦107146, and are repairing its marketplaces¦107154 and¦107156 walls¦107158, and¦107160 are laying the foundation of a temple¦107161.
+\v 19 Now if¦107163 this¦107165 city¦107166 is built¦107168 and¦107169 its walls¦107171 are finished, they won't¦107175 only refuse to¦107177 give¦107177 tribute, but¦107178 will even stand up against kings¦107180.
+\v 20 Since¦107183 the¦107185 things pertaining to¦107186 the¦107187 temple¦107188 are now in hand, we think it appropriate not¦107192 to neglect such¦107195 a matter,
+\v 21 but¦107196 to speak to our lord¦107199 the king¦107200, to the intent that¦107201, if¦107202 it's your pleasure, search may be made in¦107206 the books of your ancestors.
+\v 22 You'll find¦107214 in¦107215 the¦107216 records what's written¦107218 about¦107219 these things, and¦107221 will understand¦107222 that¦107223 that¦107224 city¦107225 was¦107227 rebellious, troubling both kings¦107230 and¦107231 cities¦107232,
+\v 23 and¦107234 that the¦107235 Yehudim were rebellious, and¦107238 kept starting wars there in¦107241 the past. Because¦107246 this cause¦107248, this¦107250 city¦107251 was laid¦107253 waste¦107253.
+\v 24 Therefore now¦107254 we do declare to you¦107257, Oh lord¦107258 the king¦107259, that¦107260 if¦107261 this¦107262 city¦107263 is built¦107265 again, and¦107266 its walls¦107269 set up again, you'll from then on have no¦107272 passage into¦107275 Coele-Syria and¦107279 Foinikai.”
 \p
-\v 25 Then the king wrote back again to Rehum the recorder, Rehum, Shimshay the scribe, and to the rest that of their associates who lived in Shomron \add !(Samaria)\add*, Aram \add !(Syria)\add*, and Foinikai, as follows:
+\v 25 Then¦107281 the¦107283 king¦107284 wrote back again to Rehum the¦107286 recorder, Rehum, Shimshay the¦107288 scribe, and to the¦107296 rest that of their associates who¦107298 lived in¦107302 Shomron \add !(Samaria)\add*, Aram \add !(Syria)\add*, and Foinikai, as follows:
 \p
-\v 26 “I have read the letter which you have sent to me. Therefore I commanded to make search, and it has been found that that city of old time has fought against kings,
+\v 26 “I've read the letter which you've sent to me. Therefore I commanded to make search, and it's been found that that city of old time has fought against kings,
 \v 27 and the men were given to rebellion and war in it, and that mighty and fierce kings were in Yerushalem \add !(Jerusalem)\add*, who reigned and exacted tribute in Coele-Syria and Foinikai.
-\v 28 Now therefore I have commanded to prevent those men from building the city, and heed to be taken that there be nothing done contrary to this order,
-\v 29 and that those wicked doings proceed no further to the annoyance of kings.”
-\v 30 Then King Artahshashta \add !(Artaxerxes)\add*, his letters being read, Rehum, and Shimshay the scribe, and the rest of their associates, went in haste to Yerushalem with cavalry and a multitude of people in battle array, and began to hinder the builders. So the building of the temple in Yerushalem ceased until the second year of the reign of King Dareyavesh \add !(Darius)\add* of the Persians.
+\v 28 Now¦107356 therefore¦107357 I've commanded to¦107364 prevent those men from building¦107364 the¦107365 city¦107366, and¦107367 heed to be taken that¦107369 there be nothing¦107370 done contrary to this order,
+\v 29 and that those wicked¦107381 doings proceed no further to the¦107383 annoyance of kings¦107384.”
+\v 30 Then¦107386 King¦107391 Artahshashta \add !(Artaxerxes)\add*, his letters being read, Rehum, and¦107395 Shimshay the¦107397 scribe¦107398, and¦107399 the¦107400 rest of their associates, went in haste to¦107406 Yerushalem with¦107408 cavalry and a multitude of people in battle array, and began to¦107414 hinder the¦107415 builders. So¦107417 the¦107419 building¦107420 of¦107421 the¦107421 temple¦107422 in¦107424 Yerushalem ceased until¦107426 the¦107427 second¦107428 year of the¦107430 reign of King¦107431 Dareyavesh \add !(Darius)\add* of¦107433 the¦107433 Persians.
 \c 3
+\s1 Three guards debate what is strongest
 \p
-\v 1 Now King Dareyavesh made a great feast for all his subjects, for all who were born in his house, for all the princes of Maday \add !(Media)\add* and of Paras \add !(Persia)\add*,
-\v 2 and for all the local governors and captains and governors who were under him, from Hodu to Kush \add !(Ethiopia)\add*, in the one hundred and twenty seven provinces.
-\v 3 They ate and drank, and when they were satisfied went home. Then King Dareyavesh went into his bedchamber slept, but awakened out of his sleep.
+\v 1 Now King¦107437 Dareyavesh made¦107439 a great¦107441 feast for all¦107442 his subjects, for all¦107447 who¦107448 were born in his house, for all¦107452 the¦107453 princes of Maday \add !(Media)\add* and¦107457 of Paras \add !(Persia)\add*,
+\v 2 and¦107460 for all¦107461 the¦107462 local governors and¦107464 captains and¦107466 governors who¦107468 were under¦107469 him, from¦107471 Hodu to Kush \add !(Ethiopia)\add*, in¦107476 the¦107477 one hundred¦107478 and twenty seven provinces.
+\v 3 They ate and¦107481 drank, and¦107483 when¦107485 they were satisfied went home. Then¦107489 King¦107492 Dareyavesh went into¦107499 his bedchamber slept, but¦107500 awakened out of his sleep¦107499.
 \p
 \v 4 Then the three young men of the bodyguard, who guarded the king, spoke one to another:
 \v 5 “Let every one of us state what one thing is strongest. King Dareyavesh will give he whose statement seems wiser than the others great gifts and great honours in token of victory.
-\v 6 He shall be clothed in purple, drink from gold cups, sleep on a gold bed, and have a chariot with bridles of gold, a fine linen turban, and a chain around his neck.
-\v 7 He shall sit next to Dareyavesh because of his wisdom, and shall be called cousin of Dareyavesh.”
+\v 6 He'll be clothed in purple¦107548, drink¦107553 from gold¦107556 cups, sleep¦107557 on a gold bed, and¦107558 have a chariot¦107559 with bridles of gold, a fine linen turban, and a chain around¦107566 his neck¦107568.
+\v 7 He'll sit next to Dareyavesh because¦107573 of¦107573 his wisdom¦107575, and¦107577 will be called¦107580 cousin of Dareyavesh.”
 \p
 \v 8 Then they each wrote his sentence, sealed them, and laid them under King Dareyavesh’ pillow,
-\v 9 and said, “When the king wakes up, someone will give him the writing. The one who the king and the three princes of Paras \add !(Persia)\add* judge that his sentence is the wisest, to him shall the victory be given, as it is written.”
-\v 10 The first wrote, “Wine is the strongest.”
-\v 11 The second wrote, “The king is strongest.”
-\v 12 The third wrote, “Women are strongest, but above all things Truth is the victor.”
+\v 9 and said, “When the king wakes up, someone will give him the writing. The one who the king and the three princes of Paras \add !(Persia)\add* judge that his sentence is the wisest, to him will the victory be given, as it's written.”
+\v 10 The¦107631 first wrote¦107633, “Wine¦107636 is the strongest.”
+\v 11 The¦107637 second wrote¦107639, “The¦107641 king¦107642 is strongest.”
+\v 12 The¦107643 third¦107644 wrote¦107645, “Women¦107648 are strongest, but above¦107649 all¦107651 things Truth¦107654 is the victor.”
 \p
-\v 13 Now when the king woke up, they took the writing and gave it to him, so he read it.
-\v 14 Sending out, he called all the princes of Paras and of Maday \add !(Media)\add*, the local governors, the captains, the governors, and the chief officers
-\v 15 and sat himself down in the royal seat of judgement; and the writing was read before them.
-\v 16 He said, “Call the young men, and they shall explain their own sentences. So they were called and came in.
-\v 17 They said to them, “Explain what you have written.”
-\p Then the first, who had spoken of the strength of wine, began
-\v 18 and said this: “Oh sirs, how exceedingly strong wine is! It causes all men who drink it to go astray.
+\v 13 Now when¦107656 the¦107658 king¦107659 woke up, they took¦107660 the¦107661 writing¦107662 and gave¦107663 it¦107664 to him, so¦107665 he read it.
+\v 14 Sending out, he called¦107669 all¦107670 the¦107671 princes of Paras and¦107675 of Maday \add !(Media)\add*, the¦107676 local governors, the¦107679 captains, the¦107690 governors, and¦107692 the¦107694 chief officers¦107682
+\v 15 and¦107698 sat himself¦107708 down in the¦107701 royal seat of judgement; and¦107703 the¦107706 writing was read before them.
+\v 16 He¦107715 said¦107714, “Call the¦107719 young men, and they'll explain their own sentences. So they were called and came in.
+\s1 The first guard argues for wine
+\p
+\v 17 They said to them, “Explain what you've written.”
+\p Then¦107721 the¦107723 first¦107724, who'd¦107725 spoken of the¦107728 strength¦107729 of¦107730 wine¦107731, began
+\v 18 and said this: “Oh sirs, how extremely strong wine is! It causes all men who drink it to go astray.
 \v 19 It makes the mind of the king and of the fatherless child to be the same, likewise of the bondman and of the freeman, of the poor man and of the rich.
-\v 20 It also turns every thought into cheer and mirth, so that a man remembers neither sorrow nor debt.
-\v 21 It makes every heart rich, so that a man remembers neither king nor local governor. It makes people say things in large amounts.
-\v 22 When they are in their cups, they forget their love both to friends and kindred, and before long draw their swords.
-\v 23 But when they awake from their wine, they don't remember what they have done.
-\v 24 Oh sirs, isn't wine the strongest, seeing that it forces people to do this?” And when he had said this, he stopped speaking.
+\v 20 It also¦107775 turns every¦107776 thought into cheer and mirth, so that a man remembers neither sorrow nor debt¦107790.
+\v 21 It makes every¦107792 heart¦107793 rich, so¦107796 that a man remembers neither king¦107799 nor local governor. It makes¦107806 people say¦107807 things in large amounts.
+\v 22 When¦107811 they're in their cups, they forget their love both to friends¦107814 and¦107815 kindred, and¦107817 before long draw their swords¦107823.
+\v 23 But¦107824 when¦107825 they awake from¦107826 their wine¦107828, they don't remember what they've done¦107833.
+\v 24 Oh¦107834 sirs, isn't wine¦107839 the strongest, seeing that¦107840 it forces people to¦107843 do¦107843 this?” And¦107844 when he'd said¦107847 this, he stopped speaking.
 \c 4
+\s1 The second guard argues for the king
 \p
-\v 1 Then the second, who had spoken of the strength of the king, began to say,
-\v 2 “Oh sirs, don't men excel in strength who rule over the sea and land, and all things in them?
-\v 3 But yet the king is stronger. He is their lord and has dominion over them. In whatever he commands them, they obey him.
-\v 4 If he tells them to make war the one against the other, they do it. If he sends them out against the enemies, they go, and conquer mountains, walls, and towers.
-\v 5 They kill and are killed, and don't disobey the king's commandment. If they win the victory, they bring everything to the king—all the plunder and everything else.
-\v 6 Likewise for those who are not soldiers, and don't have anything to do with wars, but farm, when they have reaped again that which they had sown, they bring some to the king and compel one another to pay tribute to the king.
-\v 7 He is just one man! If he commands people to kill, they kill. If he commands them to spare, they spare.
+\v 1 Then¦107848 the¦107850 second¦107851, who'd spoken¦107852 of¦107858 the¦107858 king's¦107859 strength¦107857, began to¦107854 say¦107854,
+\v 2 “Oh¦107860 sirs, don't men¦107861 excel in strength who rule over the¦107869 sea¦107870 and land¦107867, and all¦107873 things in¦107875 them?
+\v 3 But yet the king¦107879 is stronger. He's their lord¦107882 and has dominion over¦107882 them. In whatever he commands them, they obey him.
+\v 4 If¦107894 he¦107896 tells¦107895 them to¦107897 make¦107897 war¦107898 the one against the¦107901 other¦107902, they do¦107903 it. If¦107904 he¦107907 sends them out against the¦107909 enemies, they go, and¦107912 conquer mountains¦107915, walls¦107918, and¦107919 towers.
+\v 5 They kill and¦107923 are killed, and¦107925 don't disobey the king's commandment. If they win the victory, they bring everything to¦107931 the¦107935 king¦107936—all¦107938 the plunder and everything else.
+\v 6 Likewise for those who aren't¦107950 soldiers, and¦107946 don't have anything to¦107949 do with wars, but¦107952 farm, when they've reaped again¦107956 that which they had sown, they bring some to the¦107961 king¦107962 and¦107963 compel one another to pay tribute to the¦107971 king¦107972.
+\v 7 He's¦107974 just one¦107975 man¦107975! If¦107978 he commands people to kill, they kill. If¦107982 he commands them to spare, they spare.
 \v 8 If he commands them to strike, they strike. If he commands them to make desolate, they make desolate. If he commands to build, they build.
-\v 9 If he commands them to cut down, they cut down. If he commands them to plant, they plant.
+\v 9 If he commands them to¦107995 cut down, they cut down. If he commands them to¦107998 plant, they plant.
 \v 10 So all his people and his armies obey him. Furthermore, he lies down, he eats and drinks, and takes his rest;
 \v 11 and these keep watch around him. None of them may depart and do his own business. They don't disobey him in anything.
-\v 12 Oh sirs, how could the king not be the strongest, seeing that he is obeyed like this?” Then he stopped talking.
+\v 12 Oh¦108040 sirs, how¦108042 could the¦108045 king¦108046 not be the strongest, seeing that¦108047 he's¦108049 obeyed¦108049 like this?” Then¦108051 he¦108050 stopped talking.
+\s1 Zorobabel argues for women
 \p
-\v 13 Then the third, who had spoken of women, and of truth, (this was Zorobabel) began to speak:
-\v 14 “Oh sirs, isn't the king great, and men are many, and isn't wine strong? Who is it then who rules them, or has the lordship over them? Aren't they women?
-\v 15 Women have given birth to the king and all the people who rule over sea and land.
-\v 16 They came from women. Women nourished up those who planted the vineyards, from where the wine comes.
-\v 17 Women also make garments for men. These bring glory to men. Without women, men can't exist.
-\v 18 Yes, and if men have gathered together gold and silver and any other beautiful thing, and see a woman who is lovely in appearance and beauty,
-\v 19 they let all those things go and gape at her, and with open mouth stare at her. They all have more desire for her than for gold, or silver, or any other beautiful thing.
-\v 20 A man leaves his own father who brought him up, leaves his own country, and joins with his wife.
-\v 21 With his wife he ends his days, with no thought for his father, mother, or country.
-\v 22 By this also you must know that women have dominion over you. Don't you labour and toil, and bring it all to give to women?
-\v 23 Yes, a man takes his sword and goes out to travel, to rob, to steal, and to sail on the sea and on rivers.
-\v 24 He sees a lion and walks in the darkness. When he has stolen, plundered, and robbed, he brings it to the woman he loves.
-\v 25 Therefore a man loves his wife better than father or mother.
-\v 26 Yes, there are many who have lost their minds for women, and become slaves for their sakes.
-\v 27 Many also have perished, have stumbled, and sinned, for women.
-\v 28 Now don't you believe me? Isn't the king great in his power? Don't all regions fear to touch him?
-\v 29 Yet I saw him and Apame the king's concubine, the daughter of the illustrious Barticus, sitting at the right hand of the king,
-\v 30 and taking the crown from the king's head, and setting it onto her own head. Yes, she struck the king with her left hand.
-\v 31 At this, the king gaped and gazed at her with open mouth. If she smiles at him, he laughs. But if she takes any displeasure at him, he flatters her, that she might be reconciled to him again.
-\v 32 Oh sirs, how can it not be that women are strong, seeing they do this?”
+\v 13 Then the¦108053 third¦108055, who'd spoken of women¦108060, and¦108061 of truth¦108063, (this¦108064 was¦108065 Zorobabel¦108066) began to¦108068 speak¦108068:
+\v 14 “Oh sirs, isn't the¦108072 king¦108073 great¦108071, and¦108074 men¦108069 are many, and¦108078 isn't wine¦108080 strong¦108081? Who's it then¦108083 who¦108084 rules them, or¦108087 has the lordship over them? Aren't they women¦108094?
+\v 15 Women¦108096 have given birth to¦108097 the¦108098 king¦108099 and¦108100 all¦108101 the¦108102 people¦108103 who rule over¦108105 sea¦108107 and¦108108 land¦108110.
+\v 16 They came from¦108112 women. Women nourished up those who¦108119 planted the¦108121 vineyards, from¦108123 where the¦108125 wine¦108126 comes.
+\v 17 Women also make clothes for men. These bring glory¦108138 to men. Without¦108146 women¦108148, men can't exist.
+\v 18 Yes, and if¦108150 men have gathered together gold¦108153 and¦108154 silver and¦108156 any other beautiful thing¦108158, and¦108160 see a woman¦108162 who's¦108165 lovely in appearance¦108166 and¦108167 beauty,
+\v 19 they let all¦108171 those things go and gape at her, and with open mouth¦108179 stare at her. They all¦108183 have more¦108186 desire for her than¦108187 for gold¦108189, or silver, or any other beautiful thing¦108195.
+\v 20 A¦108197 man¦108197 leaves his own father¦108200 who¦108206 brought him up, leaves his own¦108207 country¦108208, and¦108209 joins with¦108210 his wife¦108213.
+\v 21 With¦108216 his wife¦108218 he ends his days, with no thought for his father¦108225, mother¦108229, or country¦108232.
+\v 22 By this also¦108233 you¦108236 must know¦108237 that¦108238 women¦108240 have dominion over¦108241 you¦108242. Don't¦108243 you labour and¦108245 toil, and¦108247 bring¦108253 it all¦108248 to¦108251 give¦108251 to¦108253 women?
+\v 23 Yes, a¦108257 man¦108257 takes¦108255 his sword¦108259 and¦108261 goes out to travel, to rob, to¦108267 steal¦108267, and¦108268 to¦108272 sail¦108272 on the¦108270 sea¦108271 and¦108273 on rivers¦108274.
+\v 24 He sees¦108278 a lion and¦108279 walks in¦108280 the darkness¦108281. When¦108284 he's stolen¦108285, plundered, and robbed, he brings it to the¦108290 woman he loves.
+\v 25 Therefore a¦108296 man¦108298 loves¦108295 his wife¦108299 better than¦108301 father¦108303 or mother¦108306.
+\v 26 Yes, there are many who've¦108310 lost their minds for¦108313 women¦108315, and¦108316 become slaves¦108317 for¦108319 their sakes.
+\v 27 Many also have perished, have stumbled, and sinned, for¦108328 women¦108330.
+\v 28 Now¦108332 don't you believe me? Isn't the¦108338 king¦108339 great¦108337 in his power? Don't¦108343 all¦108344 regions fear to touch him?
+\v 29 Yet I saw¦108350 him and¦108352 Apame the king's concubine, the¦108354 daughter¦108355 of¦108357 the illustrious Barticus, sitting¦108363 at the right¦108365 hand of¦108366 the¦108366 king¦108367,
+\v 30 and¦108368 taking the¦108370 crown from¦108372 the king's head, and setting it onto her own head. Yes, she struck the¦108382 king¦108383 with her left¦108385 hand.
+\v 31 At this¦108388, the¦108389 king¦108390 gaped and gazed at her with open mouth¦108393. If she smiles at him, he laughs. But if she¦108405 takes any displeasure at him, he¦108407 flatters her, that¦108408 she¦108410 might be reconciled to him again.
+\v 32 Oh¦108411 sirs, how¦108413 can it not¦108414 be that¦108418 women¦108417 are strong¦108415, seeing they do¦108420 this¦108416?”
+\s1 Truth is stronger than everything
 \p
-\v 33 Then the king and the nobles looked at one another. So he began to speak concerning truth.
+\v 33 Then the king and the nobles looked at one another. So he began to speak about truth.
 \v 34 “Oh sirs, aren't women strong? The earth is great. The sky is high. The sun is swift in its course, for it circles around the sky, and returns on its course again in one day.
-\v 35 Isn't he who makes these things great? Therefore the truth is great, and stronger than all things.
-\v 36 All the earth calls on truth, and the sky blesses truth. All works shake and tremble, but with truth there is no unrighteous thing.
-\v 37 Wine is unrighteous. The king is unrighteous. Women are unrighteous. All the children of men are unrighteous, and all their works are unrighteous. There is no truth in them. They shall also perish in their unrighteousness.
-\v 38 But truth remains, and is strong forever. Truth lives and conquers forevermore.
-\v 39 With truth there is no partiality towards persons or rewards, but truth does the things that are just, instead of any unrighteous or wicked things. All men approve truth's works.
-\v 40 In truth's judgement is not any unrighteousness. Truth is the strength, the kingdom, the power, and the majesty of all ages. Blessed be the god of truth!”
+\v 35 Isn't¦108473 he¦108476 who makes¦108477 these things great? Therefore the¦108479 truth¦108480 is great¦108481, and¦108482 stronger than¦108484 all¦108485 things.
+\v 36 All¦108486 the¦108487 earth¦108488 calls¦108491 on truth¦108490, and¦108492 the¦108493 sky¦108494 blesses truth. All¦108498 works¦108500 shake and¦108502 tremble, but¦108504 with truth there's no¦108505 unrighteous thing.
+\v 37 Wine¦108513 is unrighteous. The¦108515 king¦108516 is unrighteous. Women¦108519 are unrighteous. All¦108521 the¦108522 children¦108523 of men are unrighteous, and¦108526 all¦108528 their works¦108530 are unrighteous. There's no¦108535 truth¦108539 in them. They'll also¦108540 perish in¦108541 their unrighteousness¦108543.
+\v 38 But¦108546 truth¦108548 remains, and¦108550 is¦108551 strong¦108551 forever. Truth lives¦108556 and¦108557 conquers forevermore.
+\v 39 With truth there's no partiality towards persons or rewards, but truth does the things that are just, instead of any unrighteous or wicked things. All men approve truth's works.
+\v 40 In truth's judgement isn't any unrighteousness. Truth is the strength, the kingdom, the power, and the majesty of all ages. Blessed be the god of truth!”
 \p
-\v 41 With that, he stopped speaking. Then all the people shouted and said, “Great is truth, and strong above all things!”
+\v 41 With that, he stopped speaking¦108622. Then¦108623 all¦108624 the¦108625 people¦108626 shouted and¦108629 said¦108631, “Great¦108632 is truth¦108634, and¦108635 strong above all things!”
+\s1 Zorobabel asks to rebuild Yerushalem
 \p
-\v 42 Then the king said to him, “Ask what you wish, even more than is appointed in writing, and we will give it to you, because you are found wisest. You shall sit next me, and shall be called my cousin.”
+\v 42 Then¦108637 the¦108638 king¦108639 said¦108640 to¦108642 him, “Ask¦108642 what you wish, even more than is appointed in writing¦108647, and¦108648 we'll give¦108649 it to you¦108650, because you're found wisest. You'll sit next me, and will be called my cousin.”
 \p
-\v 43 Then he said to the king, “Remember your vow, which you vowed to build Yerushalem \add !(Jerusalem)\add*, in the day when you came to your kingdom,
-\v 44 and to send back all the vessels that were taken out of Yerushalem, which Koresh \add !(Cyrus)\add* set apart when he vowed to destroy Bavel \add !(Babylon)\add*, and vowed to send them back there.
-\v 45 You also vowed to build the temple which the Edomim burnt when Yehudah \add !(Judea)\add* was made desolate by the Kasdim \add !(Chaldeans)\add*.
-\v 46 Now, Oh lord the king, this is what I request, and what I desire of you, and this is the princely generosity that may proceed from you: I ask therefore that you make good the vow, the performance of which you have vowed to the King of Heaven with your own mouth.”
+\v 43 Then¦108663 he said¦108664 to¦108664 the¦108665 king¦108666, “Remember¦108667 your vow¦108669, which¦108670 you vowed to¦108672 build¦108672 Yerushalem \add !(Jerusalem)\add*, in¦108675 the¦108676 day¦108677 when you¦108681 came to¦108682 your kingdom,
+\v 44 and¦108683 to send back all¦108684 the¦108685 vessels¦108686 that¦108687 were taken out¦108689 of Yerushalem, which¦108693 Koresh \add !(Cyrus)\add* set apart when¦108696 he vowed to destroy Bavel \add !(Babylon)\add*, and¦108700 vowed to send them back there¦108703.
+\v 45 You¦108705 also¦108704 vowed to¦108707 build¦108707 the¦108708 temple¦108709 which¦108710 the¦108712 Edomim burnt when¦108714 Yehudah \add !(Judea)\add* was made desolate¦108715 by¦108718 the¦108719 Kasdim \add !(Chaldeans)\add*.
+\v 46 Now¦108722, Oh lord¦108728 the king¦108729, this is what I request, and what I desire of you¦108733, and¦108734 this¦108735 is¦108736 the¦108737 princely generosity that¦108739 may proceed from¦108740 you¦108741: I ask¦108732 therefore¦108743 that¦108744 you make¦108745 good the¦108746 vow¦108747, the performance of which¦108748 you've vowed to the¦108750 King¦108751 of¦108752 Heaven¦108753 with your own mouth¦108756.”
 \p
-\v 47 Then King Dareyavesh \add !(Darius)\add* stood up, kissed him, and wrote letters for him to all the treasurers and governors and captains and local governors, that they should safely bring on their way both him, and all those who would go up with him to build Yerushalem.
-\v 48 He wrote letters also to all the governors who were in Coele-Syria and Foinikai, and to them in Levanon, that they should bring cedar wood from Levanon to Yerushalem, and that they should help him build the city.
-\v 49 Moreover he wrote for all the Yehudim \add !(Jews)\add* who would go out of his realm up into Yehudah concerning their freedom, that no officer, no governor, no local governor, nor treasurer, should forcibly enter into their doors,
-\v 50 and that all the country which they occupied should be free to them without tribute, and that the Edomim should give up the villages of the Yehudim which they held at that time,
-\v 51 and that there should be given twenty talents yearly towards the building of the temple, until the time that it was built,
-\v 52 and another ten talents yearly for burnt offerings to be presented on the altar every day, as they had a commandment to make seventeen offerings,
-\v 53 and that all those who would come from Bavel \add !(Babylon)\add* to build the city should have their freedom—they and their descendants, and all the priests that came.
-\v 54 He wrote also to give them their support and the priests’ vestments in which they minister.
-\v 55 Because the Levites he wrote that their support should be given them until the day that the house was finished and Yerushalem built up.
-\v 56 He commanded that land and wages should be given to all who guarded the city.
-\v 57 He also sent away all the vessels from Bavel that Koresh \add !(Cyrus)\add* had set apart, and all that Koresh had given in commandment, he commanded also to be done and to be sent to Yerushalem.
+\v 47 Then¦108758 King¦108762 Dareyavesh \add !(Darius)\add* stood up, kissed¦108763 him, and¦108765 wrote¦108766 letters for him to¦108770 all¦108771 the¦108772 treasurers and¦108774 governors and¦108776 captains and¦108778 local governors, that¦108780 they should safely bring on their way both him, and¦108783 all those who'd¦108784 go up with¦108785 him to¦108789 build¦108789 Yerushalem.
+\v 48 He wrote¦108806 letters also¦108792 to all¦108793 the¦108794 governors who were in¦108796 Coele-Syria and¦108799 Foinikai, and¦108801 to them in¦108803 Levanon, that¦108804 they should bring cedar wood¦108809 from¦108811 Levanon to Yerushalem, and¦108816 that¦108817 they should help him build the¦108821 city¦108822.
+\v 49 Moreover he wrote¦108824 for all¦108825 the¦108826 Yehudim \add !(Jews)\add* who'd¦108828 go out of his realm up into Yehudah about their freedom¦108838, that no officer, no governor, no local governor, nor treasurer, should forcibly enter into their doors¦108851,
+\v 50 and¦108853 that all¦108854 the¦108855 country¦108856 which¦108857 they occupied should be¦108861 free to them without tribute, and¦108862 that¦108863 the¦108864 Edomim should give up the¦108867 villages¦108868 of the Yehudim which¦108869 they held at that time,
+\v 51 and¦108873 that there should be given¦108879 twenty¦108883 talents¦108882 yearly towards¦108874 the¦108875 building¦108876 of¦108877 the¦108877 temple¦108878, until¦108884 the¦108885 time that it was built,
+\v 52 and¦108887 another¦108900 ten¦108902 talents¦108901 yearly for burnt¦108891 offerings to¦108888 be presented¦108899 on the¦108889 altar¦108890 every day¦108894, as¦108895 they had a commandment¦108897 to make seventeen¦108898 offerings,
+\v 53 and¦108905 that all¦108906 those who'd¦108907 come from¦108909 Bavel \add !(Babylon)\add* to build the¦108913 city¦108914 should have their freedom¦108917—they and their descendants, and all¦108925 the¦108926 priests¦108927 that¦108928 came.
+\v 54 He wrote¦108930 also to give them their support and the priests’ vestments in¦108939 which¦108940 they minister¦108941.
+\v 55 Because the¦108945 Levites he wrote¦108947 that their support should be given¦108948 them until¦108951 the¦108952 day¦108953 that the¦108956 house¦108957 was finished and¦108958 Yerushalem built up.
+\v 56 He commanded that land and¦108961 wages should be given¦108968 to all¦108962 who¦108963 guarded the¦108965 city¦108966.
+\v 57 He also sent¦108974 away¦108974 all¦108975 the¦108976 vessels¦108977 from¦108981 Bavel that Koresh \add !(Cyrus)\add* had set apart, and¦108983 all¦108984 that Koresh had given in commandment, he¦108990 commanded¦108991 also to be done¦108988 and¦108989 to¦108991 be sent to¦108992 Yerushalem.
 \p
-\v 58 Now when this young man had gone out, he lifted up his face to heaven towards Yerushalem, and praised the King of heaven,
-\v 59 and said, “From you comes victory. From you comes wisdom. Yours is the glory, and I am your servant.
-\v 60 Blessed are you, who have given me wisdom. I give thanks to you, Oh master of our fathers.
-\v 61 So he took the letters, went out, came to Bavel, and told it all his kindred.
-\v 62 They praised the god of their ancestors, because he had given them freedom and liberty
-\v 63 to go up and to build Yerushalem and the temple which is called by his name. They feasted with instruments of music and gladness seven days.
+\v 58 Now when¦108998 this¦109000 young¦109001 man¦109001 had gone¦108999 out¦108999, he lifted up¦109002 his face¦109004 to heaven¦109007 towards¦109008 Yerushalem, and praised¦109010 the¦109011 King¦109012 of¦109013 heaven¦109014,
+\v 59 and said, “From¦109016 you¦109017 comes victory¦109018. From¦109020 you¦109021 comes wisdom¦109023. Yours is the¦109026 glory¦109027, and¦109028 I'm¦109029 your¦109030 servant¦109031.
+\v 60 Blessed are¦109033 you¦109039, who've¦109042 given me wisdom¦109037. I give¦109035 thanks to¦109040 you, Oh master¦109041 of our fathers¦109043.
+\v 61 So¦109044 he took¦109045 the¦109046 letters, went¦109049 out¦109049, came to¦109051 Bavel, and¦109054 told it¦109058 all¦109059 his kindred.
+\v 62 They praised the¦109062 god¦109063 of their ancestors, because he'd¦109066 given¦109068 them freedom and¦109071 liberty
+\v 63 to go up and¦109074 to¦109075 build¦109075 Yerushalem and¦109078 the¦109079 temple¦109080 which¦109081 is called¦109082 by his name¦109084. They feasted with¦109090 instruments of music and¦109092 gladness¦109093 seven¦109095 days¦109094.
 \c 5
+\s1 The families returning from exile
 \p
-\v 1 After this, the chiefs of fathers’ houses were chosen to go up according to their tribes, with their wives, sons, and daughters, with their menservants and maidservants, and their livestock.
-\v 2 Dareyavesh \add !(Darius)\add* sent with them one thousand cavalry to bring them back to Yerushalem with peace, with musical instruments, drums, and flutes.
-\v 3 All their kindred were making merry, and he made them go up together with them.
+\v 1 After¦109096 this¦109098, the chiefs of fathers’ houses¦109102 were chosen to go up according¦109104 to¦109104 their tribes¦109105, with their wives, sons¦109113, and¦109115 daughters¦109117, with their male servants and female servants, and their livestock.
+\v 2 Dareyavesh \add !(Darius)\add* sent with¦109132 them one thousand cavalry to bring them back to Yerushalem with¦109142 peace¦109143, with¦109145 musical instruments, drums, and¦109148 flutes.
+\v 3 All¦109151 their kindred were making merry, and¦109156 he¦109158 made them go up together with¦109160 them.
 \p
-\v 4 These are the names of the men who went up, according to their families amongst their tribes, after their several divisions.
-\v 5 The priests, the sons of Pinhas, the sons of Aharon \add !(Aaron)\add*: Yeshua \add !(Jesus)\add* the son of Yotsadak, the son of Serayah, and Yoyakim the son of Zorobabel, the son of Salathiail, of the house of David, of the lineage of Perets, of the tribe of Yehudah \add !(Judah)\add*,
-\v 6 who spoke wise words before Dareyavesh the king of Paras \add !(Persia)\add* in the second year of his reign, in the month Nisan, which is the first month.
+\v 4 These are the¦109164 names¦109165 of the¦109166 men¦109167 who¦109168 went up, according¦109170 to¦109170 their families¦109171 among their tribes¦109175, after their several divisions.
+\v 5 The¦109180 priests¦109181, the sons of Pinhas, the¦109187 sons of¦109188 Aharon \add !(Aaron)\add*: Yeshua \add !(Jesus)\add* the¦109188 son of¦109190 Yotsadak, the¦109190 son of Serayah, and¦109192 Yoyakim the¦109194 son of¦109195 Zorobabel¦109196, the son of Salathiail, of the¦109200 house¦109201 of¦109202 David, of the¦109202 lineage of Perets, of the¦109205 tribe¦109208 of Yehudah \add !(Judah)\add*,
+\v 6 who spoke¦109212 wise¦109219 words¦109218 before Dareyavesh the¦109215 king¦109216 of Paras \add !(Persia)\add* in¦109220 the¦109221 second¦109222 year¦109223 of his reign, in the¦109224 month¦109227 Nisan¦109228, which¦109211 is the¦109229 first¦109230 month.
 \p
-\v 7 These are the of Yehudim \add !(Jews)\add* who came up from the captivity, where they lived as foreigners, whom Nevukadnetsar \add !(Nebuchadnezzar)\add* the king of Bavel \add !(Babylon)\add* had carried away to Bavel.\x + \xo 5:7 \xt Ezra 2:1\x*
-\v 8 They returned to Yerushalem and to the other parts of Yehudah, every man to his own city, who came with Zorobabel, with Yeshua, Nehemyah \add !(Nehemiah)\add*, Serayah,\f + \fr 5:8 \fqa Seralah.\f* Resaias, Eneneus,\f + \fr 5:8 \ft Or, \fqa Enenis.\f* Mordekai, Bilshan, Mispar,\f + \fr 5:8 \fqa Mispar.\f* Re’elayah,\f + \fr 5:8 \fqa Reclaiah\f* Roimus, and Ba’ana, their leaders.
+\v 7 These are¦109232 the¦109235 of Yehudim \add !(Jews)\add* who¦109237 came up from¦109241 the¦109242 captivity, where they lived as foreigners, whom Nevukadnetsar \add !(Nebuchadnezzar)\add* the¦109244 king¦109249 of Bavel \add !(Babylon)\add* had carried away to Bavel.\x + \xo 5:7: \xt Ezr 2:1.\x*
+\v 8 They returned to Yerushalem and to the other parts of Yehudah, every man¦109264 to his own¦109264 city¦109265, who¦109266 came¦109267 with¦109268 Zorobabel¦109269, with Yeshua, Nehemyah \add !(Nehemiah)\add*, Serayah,\f + \fr 5:8 \fqa Seralah.\f* Resaias, Eneneus,\f + \fr 5:8 \ft Or, \fqa Enenis.\f* Mordekai, Bilshan, Mispar,\f + \fr 5:8 \fqa Mispar.\f* Re'elayah,\f + \fr 5:8 \fqa Reclaiah\f* Roimus, and¦109270 Ba'ana, their leaders.
 \p
-\v 9 The number of them of the nation and their leaders: the sons of Par’osh, two thousand and one hundred and seventy two; the sons of\f + \fr 5:9 \fqa Shephatiah.\f* Saphat, four hundred and seventy two;
+\v 9 The number of them of the nation and their leaders: the sons of Par'osh, two thousand and one hundred and seventy two; the sons of\f + \fr 5:9 \fqa Shephatiah.\f* Saphat, four hundred and seventy two;
 \v 10 the sons of\f + \fr 5:10 \fqa Arah.\f* Arah, seven hundred and fifty six;
-\v 11 the sons of\f + \fr 5:11 \fqa Pahath-moab.\f* Pahat-Moav, of the sons of Yeshua and Yoav \add !(Joab)\add*, two thousand and eight hundred and twelve;
-\v 12 the sons of Eylam, one thousand and two hundred and fifty four; the sons of\f + \fr 5:12 \fqa Zattu.\f* Zatu, nine hundred and forty five; the sons of\f + \fr 5:12 \fqa Zaccai.\f* Zakay, seven hundred and five; the sons of Bani, six hundred and forty eight;
-\v 13 the sons of Bevay, six hundred and twenty three; the sons of\f + \fr 5:13 \fqa Asgad.\f* Azgad,\f + \fr 5:13 \ft According to other readings, 3622, or 3222.\f* one thousand and three hundred and twenty two;
-\v 14 the sons of Adonikam, six hundred and sixty seven; the sons of\f + \fr 5:14 \fqa Bigvai.\f* Bigvay, two thousand and sixty six; the sons of\f + \fr 5:14 \fqa Adin.\f* Adin, four hundred and fifty four;
-\v 15 the sons of\f + \fr 5:15 \fqa Ater of Hezekiah.\f* Ater, of Hizkiyah \add !(Hezekiah)\add*, ninety two; the sons of Kilan and Azetas, sixty seven; the sons of\f + \fr 5:15 \ft Another reading is, \fqa Azuru.\f* Azaru, four hundred and thirty two;
-\v 16 the sons of\f + \fr 5:16 \ft Another reading is, \fqa Annias.\f* Annis, one hundred and one; the sons of Arom, the sons of\f + \fr 5:16 \fqa Bezai.\f* Betsay, three hundred and twenty three; the sons of Arsiphurith, one hundred and twelve;
-\v 17 the sons of Baiterus, three thousand and five; the sons of\f + \fr 5:17 \fqa Bethlehem.\f* Beyt-Lehem \add !(Bethlehem)\add*, one hundred and twenty three;
-\v 18 those from Netofah, fifty five; those from Anatot, one hundred and fifty eight; those from\f + \fr 5:18 \fqa Azmaveth.\f* Azmavet, forty two;
-\v 19 those from Kiryat-Yearim,\f + \fr 5:19 \fqa Kiryat-Arim \ft or \fqa Kiryat-Yearim.\f* twenty five: those from Kefirah and Be’erot, seven hundred and forty three;
-\v 20 the Chadiasai and Ammidioi, four hundred and twenty two; those from Ramah\f + \fr 5:20 \fqa Rumah.\f* and Geva,\f + \fr 5:20 \fqa Geba.\f* six hundred and twenty one;
-\v 21 those from Mikmas,\f + \fr 5:21 \fqa Michmas.\f* one hundred and twenty two; those from Beyt-El \add !(Bethel)\add*,\f + \fr 5:21 \fqa Bethel.\f* fifty two; the sons of Magbish,\f + \fr 5:21 \fqa Magbish\f* one hundred and fifty six;
-\v 22 the sons of Calamolalus\f + \fr 5:22 \fqa Lod, Hadid.\f* and Ono,\f + \fr 5:22 \fqa Ono.\f* seven hundred and twenty five; the sons of Yeriho \add !(Jericho)\add*,\f + \fr 5:22 \fqa Yeriho/Jericho.\f* three\f + \fr 5:22 \ft Another reading is, \fqa two\f* hundred and forty five;
-\v 23 and the sons of Sena’ah,\f + \fr 5:23 \fqa Senaah.\f* three thousand and three hundred and thirty.
+\v 11 the sons¦109309 of\f + \fr 5:11 \fqa Pahath-moab.\f* Pahat-Moav, of the¦109313 sons¦109314 of Yeshua and¦109316 Yoav \add !(Joab)\add*, two¦109318 thousand¦109318 and eight¦109319 hundred¦109319 and twelve¦109320;
+\v 12 the sons¦109321 of Eylam, one thousand¦109323 and two¦109324 hundred¦109324 and fifty four; the sons¦109326 of\f + \fr 5:12 \fqa Zattu.\f* Zatu, nine¦109328 hundred¦109328 and forty five; the sons¦109330 of\f + \fr 5:12 \fqa Zaccai.\f* Zakay, seven¦109332 hundred¦109332 and five¦109333; the sons¦109334 of Bani¦109335, six¦109336 hundred¦109336 and forty eight;
+\v 13 the sons¦109338 of Bevay, six¦109340 hundred¦109340 and twenty three; the sons¦109342 of\f + \fr 5:13 \fqa Asgad.\f* Azgad,\f + \fr 5:13 \ft According to other readings, 3622, or 3222.\f* one thousand¦109344 and three¦109345 hundred¦109345 and twenty two;
+\v 14 the sons¦109347 of Adonikam, six¦109349 hundred¦109349 and sixty seven; the sons¦109351 of\f + \fr 5:14 \fqa Bigvai.\f* Bigvay, two¦109353 thousand¦109353 and sixty six; the sons¦109356 of\f + \fr 5:14 \fqa Adin.\f* Adin, four¦109358 hundred¦109358 and fifty four;
+\v 15 the sons¦109360 of\f + \fr 5:15 \fqa Ater of Hezekiah.\f* Ater, of Hizkiyah \add !(Hezekiah)\add*, ninety two; the sons¦109364 of Kilan¦109365 and¦109366 Azetas, sixty seven; the sons¦109369 of\f + \fr 5:15 \ft Another reading is, \fqa Azuru.\f* Azaru, four¦109371 hundred¦109371 and thirty two;
+\v 16 the sons¦109373 of\f + \fr 5:16 \ft Another reading is, \fqa Annias.\f* Annis, one hundred¦109375 and one¦109376; the sons¦109377 of Arom¦109378, the sons¦109380 of\f + \fr 5:16 \fqa Bezai.\f* Betsay, three¦109382 hundred¦109382 and twenty three; the sons¦109384 of Arsiphurith, one hundred¦109386 and twelve;
+\v 17 the sons¦109388 of Baiterus, three¦109390 thousand¦109390 and five¦109391; the sons¦109392 of\f + \fr 5:17 \fqa Bethlehem.\f* Beyt-Lehem \add !(Bethlehem)\add*, one hundred¦109395 and twenty three;
+\v 18 those from¦109398 Netofah, fifty five; those from¦109402 Anatot, one hundred¦109404 and fifty eight; those from¦109407\f + \fr 5:18 \fqa Azmaveth.\f* Azmavet, forty two;
+\v 19 those from¦109411 Kiryat-Yearim,\f + \fr 5:19 \fqa Kiryat-Arim \ft or \fqa Kiryat-Yearim.\f* twenty five: those from¦109415 Kefirah and¦109417 Be'erot, seven¦109419 hundred¦109419 and forty three;
+\v 20 the¦109421 Chadiasai and¦109423 Ammidioi, four¦109425 hundred¦109425 and twenty two; those from¦109428 Ramah\f + \fr 5:20 \fqa Rumah.\f* and¦109430 Geva,\f + \fr 5:20 \fqa Geba.\f* six¦109432 hundred¦109432 and twenty¦109433 one¦109434;
+\v 21 those from¦109436 Mikmas,\f + \fr 5:21 \fqa Michmas.\f* one hundred¦109438 and twenty two; those from Beyt-El \add !(Bethel)\add*,\f + \fr 5:21 \fqa Bethel.\f* fifty two; the sons¦109444 of Magbish,\f + \fr 5:21 \fqa Magbish\f* one hundred¦109446 and fifty six;
+\v 22 the sons¦109448 of Calamolalus\f + \fr 5:22 \fqa Lod, Hadid.\f* and¦109450 Ono,\f + \fr 5:22 \fqa Ono.\f* seven¦109452 hundred¦109452 and twenty five; the sons¦109454 of Yeriho \add !(Jericho)\add*,\f + \fr 5:22 \fqa Yeriho/Jericho.\f* three\f + \fr 5:22 \ft Another reading is, \fqa two\f* hundred¦109456 and forty five;
+\v 23 and the sons¦109458 of Sena'ah,\f + \fr 5:23 \fqa Senaah.\f* three¦109460 thousand¦109460 and three¦109461 hundred¦109461 and thirty.
 \p
-\v 24 The priests: the sons of Yedayah,\f + \fr 5:24 \fqa Jedaiah.\f* the son of Yeshua \add !(Jesus)\add*, amongst the sons of Sanasib, nine hundred and seventy two; the sons of Imer,\f + \fr 5:24 \fqa Immer.\f* one thousand and fifty two;
-\v 25 the sons of Pashhur,\f + \fr 5:25 \fqa Pashhur.\f* one thousand and two hundred and forty seven; and the sons of Harim,\f + \fr 5:25 \fqa Harim.\f* one thousand and seventeen.
-\v 26 The Levites: the sons of Yeshua, Kadmiel, Bani, and Hodavyah, seventy four.
-\v 27 The holy singers: the sons of Asaf, one hundred and twenty eight.
-\v 28 The gatekeepers: the sons of\f + \fr 5:28 \fqa Shallum.\f* Shalum, the sons of\f + \fr 5:28 \fqa Ater.\f* Ater, the sons of Talmon, the sons of\f + \fr 5:28 \fqa Akkub.\f* Akuv, the sons of\f + \fr 5:28 \fqa Hatita.\f* Hatita, the sons of\f + \fr 5:28 \fqa Shobai.\f* Shovay, in all one hundred and thirty nine.
+\v 24 The¦109463 priests¦109464: the¦109465 sons¦109466 of¦109468 Yedayah,\f + \fr 5:24 \fqa Jedaiah.\f* the¦109468 son of Yeshua \add !(Jesus)\add*, among the¦109471 sons¦109472 of Sanasib, nine hundred¦109474 and seventy two; the sons¦109476 of Imer,\f + \fr 5:24 \fqa Immer.\f* one thousand and fifty two¦109478;
+\v 25 the sons¦109480 of Pashhur,\f + \fr 5:25 \fqa Pashhur.\f* one thousand¦109482 and two¦109486 hundred¦109486 and forty seven; and the sons of Harim,\f + \fr 5:25 \fqa Harim.\f* one thousand and seventeen¦109487.
+\v 26 The¦109488 Levites: the¦109490 sons¦109491 of Yeshua, Kadmiel, Bani, and Hodavyah, seventy four.
+\v 27 The holy singers: the sons¦109502 of Asaf, one hundred¦109504 and twenty eight.
+\v 28 The gatekeepers: the sons of\f + \fr 5:28 \fqa Shallum.\f* Shalum, the sons of\f + \fr 5:28 \fqa Ater.\f* Ater, the sons of Talmon, the sons of\f + \fr 5:28 \fqa Akkub.\f* Akuv, the sons of\f + \fr 5:28 \fqa Hatita.\f* Hatita, the sons of\f + \fr 5:28 \fqa Shobai.\f* Shovay, in all¦109519 one hundred¦109520 and thirty nine.
 \p
-\v 29 The temple servants: the sons of\f + \fr 5:29 \fqa Ziha.\f* Esav \add !(Esau)\add*, the sons of\f + \fr 5:29 \fqa Hasupha.\f* Hasufa, the sons of Tabaeot, the sons of\f + \fr 5:29 \fqa Keros.\f* Keyros, the sons of\f + \fr 5:29 \fqa Siaha.\f* Siea, the sons of\f + \fr 5:29 \fqa Padon.\f* Padon, the sons of Levana, the sons of\f + \fr 5:29 \fqa Hagaba.\f* Hagava.
-\v 30 the sons of\f + \fr 5:30 \fqa Akkub.\f* Akuv, the sons of Uta, the sons of Ketab, the sons of\f + \fr 5:30 \fqa Hagab.\f* Hagav, the sons of\f + \fr 5:30 \fqa Shamlai.\f* Shamlay, the sons of\f + \fr 5:30 \fqa Hanan.\f* Anan, the sons of\f + \fr 5:30 \fqa Giddel.\f* Gidel, the sons of\f + \fr 5:30 \fqa Gahar\f* Gahar,
-\v 31 the sons of\f + \fr 5:31 \fqa Reaiah.\f* Yair, the sons of\f + \fr 5:31 \fqa Rezin.\f* Retsin, the sons of\f + \fr 5:31 \fqa Nekoda.\f* Nekoda, the sons of Chaseba, the sons of\f + \fr 5:31 \fqa Gazzam.\f* Gazam, the sons of\f + \fr 5:31 \fqa Uzza.\f* Ozias, the sons of\f + \fr 5:31 \fqa Paseah.\f* Paseah, the sons of Asara, the sons of\f + \fr 5:31 \fqa Besai.\f* Besay, the sons of\f + \fr 5:31 \fqa Asnah.\f* Asnah, the sons of\f + \fr 5:31 \fqa Meunim.\f* Meunim, the sons of\f + \fr 5:31 \fqa Nephisim.\f* Nafish, the sons of\f + \fr 5:31 \fqa Bakbuk. \ft According to other readings, \fqa Acum, \ft or \fqa Acuph.\f* Bakbuk, the sons of\f + \fr 5:31 \fqa Hakupha.\f* Hakufa, the sons of\f + \fr 5:31 \fqa Harhur.\f* Harhur, the sons of Pharakim, the sons of\f + \fr 5:31 \fqa Bazluth.\f* Batslut,
-\v 32 the sons of\f + \fr 5:32 \fqa Mehida.\f* Mehida, the sons of Cutha, the sons of\f + \fr 5:32 \fqa Harsha\f* Harsha, the sons of\f + \fr 5:32 \fqa Barkos.\f* Barkos, the sons of\f + \fr 5:32 \fqa Sisera.\f* Sisera, the sons of\f + \fr 5:32 \fqa Temah\f* Temah, the sons of\f + \fr 5:32 \fqa Neziah. \ft Another reading is, \fqa Nasith.\f* Netsiah, the sons of Hatifa.
+\v 29 The temple servants: the sons¦109524 of\f + \fr 5:29 \fqa Ziha.\f* Esav \add !(Esau)\add*, the sons¦109526 of\f + \fr 5:29 \fqa Hasupha.\f* Hasufa, the sons¦109528 of Tabaeot, the sons¦109530 of\f + \fr 5:29 \fqa Keros.\f* Keyros, the sons¦109532 of\f + \fr 5:29 \fqa Siaha.\f* Siea, the sons¦109534 of\f + \fr 5:29 \fqa Padon.\f* Padon, the sons¦109536 of Levana, the sons¦109538 of\f + \fr 5:29 \fqa Hagaba.\f* Hagava.
+\v 30 the sons¦109540 of\f + \fr 5:30 \fqa Akkub.\f* Akuv, the sons¦109542 of Uta, the sons¦109544 of Ketab, the sons¦109546 of\f + \fr 5:30 \fqa Hagab.\f* Hagav, the sons¦109548 of\f + \fr 5:30 \fqa Shamlai.\f* Shamlay, the sons¦109550 of\f + \fr 5:30 \fqa Hanan.\f* Anan¦109551, the sons¦109552 of\f + \fr 5:30 \fqa Giddel.\f* Gidel, the sons¦109554 of\f + \fr 5:30 \fqa Gahar\f* Gahar,
+\v 31 the sons¦109556 of\f + \fr 5:31 \fqa Reaiah.\f* Yair, the sons¦109558 of\f + \fr 5:31 \fqa Rezin.\f* Retsin, the sons¦109560 of\f + \fr 5:31 \fqa Nekoda.\f* Nekoda, the sons¦109562 of Chaseba, the sons¦109564 of\f + \fr 5:31 \fqa Gazzam.\f* Gazam, the sons¦109566 of\f + \fr 5:31 \fqa Uzza.\f* Ozias, the sons¦109568 of\f + \fr 5:31 \fqa Paseah.\f* Paseah, the sons¦109570 of Asara¦109571, the sons¦109572 of\f + \fr 5:31 \fqa Besai.\f* Besay, the sons¦109574 of\f + \fr 5:31 \fqa Asnah.\f* Asnah, the sons¦109576 of\f + \fr 5:31 \fqa Meunim.\f* Meunim, the sons¦109578 of\f + \fr 5:31 \fqa Nephisim.\f* Nafish, the sons¦109580 of\f + \fr 5:31 \fqa Bakbuk. \ft According to other readings, \fqa Acum, \ft or \fqa Acuph.\f* Bakbuk, the sons¦109582 of\f + \fr 5:31 \fqa Hakupha.\f* Hakufa, the sons¦109584 of\f + \fr 5:31 \fqa Harhur.\f* Harhur, the sons¦109586 of Pharakim, the sons¦109588 of\f + \fr 5:31 \fqa Bazluth.\f* Batslut,
+\v 32 the sons¦109590 of\f + \fr 5:32 \fqa Mehida.\f* Mehida, the sons¦109592 of Cutha, the sons¦109594 of\f + \fr 5:32 \fqa Harsha\f* Harsha, the sons¦109596 of\f + \fr 5:32 \fqa Barkos.\f* Barkos, the sons¦109598 of\f + \fr 5:32 \fqa Sisera.\f* Sisera, the sons¦109600 of\f + \fr 5:32 \fqa Temah\f* Temah, the sons¦109602 of\f + \fr 5:32 \fqa Neziah. \ft Another reading is, \fqa Nasith.\f* Netsiah, the sons¦109604 of Hatifa.
 \p
-\v 33 The sons of the servants of Shelomoh \add !(Solomon)\add*: the sons of\f + \fr 5:33 \fqa Hussophereth.\f* Soferet, the sons of\f + \fr 5:33 \fqa Peruda.\f* Perida, the sons of\f + \fr 5:33 \fqa Jaalah.\f* Ya’alah, the sons of\f + \fr 5:33 \fqa Darkon.\f* Darkon, the sons of\f + \fr 5:33 \fqa Giddel.\f* Isdael, the sons of\f + \fr 5:33 \fqa Shephatia.\f* Shefatyah,
-\v 34 the sons of\f + \fr 5:34 \fqa Hattil.\f* Hatil, the sons of\f + \fr 5:34 \fqa Pochereth-haz-zebaim, \ft Ezra 2:57.\f* Pokeret-Hatsvayim, the sons of Sabie, the sons of Sarothie, the sons of\f + \fr 5:34 \ft Another reading is, \fqa Misaias.\f* Masias, the sons of Gas, the sons of Addus, the sons of Subas, the sons of Apherra, the sons of Barodis, the sons of Saphat, the sons of Alon.
+\v 33 The sons¦109606 of Shelomoh's \add !(Solomon)\add* servants: the sons¦109609 of\f + \fr 5:33 \fqa Hussophereth.\f* Soferet, the sons¦109611 of\f + \fr 5:33 \fqa Peruda.\f* Perida, the sons¦109613 of\f + \fr 5:33 \fqa Jaalah.\f* Ya'alah, the sons¦109615 of\f + \fr 5:33 \fqa Darkon.\f* Darkon, the sons¦109617 of\f + \fr 5:33 \fqa Giddel.\f* Isdael, the sons¦109619 of\f + \fr 5:33 \fqa Shephatia.\f* Shefatyah,
+\v 34 the sons¦109621 of\f + \fr 5:34 \fqa Hattil.\f* Hatil, the sons¦109623 of\f + \fr 5:34 \fqa Pochereth-haz-zebaim, \ft Ezra 2:57.\f* Pokeret-Hatsvayim, the sons¦109625 of Sabie, the sons¦109627 of Sarothie, the sons¦109629 of\f + \fr 5:34 \ft Another reading is, \fqa Misaias.\f* Masias, the sons¦109631 of Gas¦109632, the sons¦109633 of Addus, the sons¦109635 of Subas, the sons¦109637 of Apherra, the sons¦109639 of Barodis¦109640, the sons¦109641 of Saphat, the sons¦109643 of Alon.
 \p
-\v 35 All the temple-servants and the sons of the servants of Shelomoh were three hundred and seventy two.
-\v 36 These came up from\f + \fr 5:36 \fqa Telmelah.\f* Tel-Melah, and\f + \fr 5:36 \fqa Telharsha.\f* Tel-Harsha,\f + \fr 5:36 \fqa Cherub. Addan.\f* Charaathalan leading them, and Allar;
-\v 37 and they could not show their families, nor their stock, how they were of Yisrael \add !(Israel)\add*: the sons of\f + \fr 5:37 \fqa Delaiah. \ft Another reading is, \fqa Asan.\f* Delayah the son of\f + \fr 5:37 \fqa Tobiah \ft Another reading is, \fqa Baenan.\f* Ban, the sons of\f + \fr 5:37 \fqa Nekoda.\f* Nekoda, six hundred and fifty two.
+\v 35 All¦109645 the¦109646 temple-servants and¦109648 the¦109649 sons¦109650 of Shelomoh's servants were three¦109654 hundred¦109654 and seventy two.
+\v 36 These came up from¦109658\f + \fr 5:36 \fqa Telmelah.\f* Tel-Melah, and¦109660\f + \fr 5:36 \fqa Telharsha.\f* Tel-Harsha,\f + \fr 5:36 \fqa Cherub. Addan.\f* Charaathalan leading them, and¦109665 Allar;
+\v 37 and¦109667 they couldn't¦109669 show their families¦109672, nor their stock, how¦109676 they were of¦109678 Yisrael \add !(Israel)\add*: the¦109678 sons¦109681 of¦109683\f + \fr 5:37 \fqa Delaiah. \ft Another reading is, \fqa Asan.\f* Delayah the¦109683 son¦109684 of¦109685\f + \fr 5:37 \fqa Tobiah \ft Another reading is, \fqa Baenan.\f* Ban, the¦109685 sons¦109687 of\f + \fr 5:37 \fqa Nekoda.\f* Nekoda, six¦109689 hundred¦109689 and fifty two.
 \p
-\v 38 Of the priests, those who usurped the office of the priesthood and were not found: the sons of\f + \fr 5:38 \fqa Habaiah, \ft or \fqa Hobaiah.\f* Havayah, the sons of\f + \fr 5:38 \fqa Hakkoz.\f* Hakots, the sons of Jaddus, who married Augia one of the daughters of\f + \fr 5:38 \fqa Barzillai. \ft Another reading is, \fqa Phaezeldaeus.\f* Barzilay, and was called after his name.
-\v 39 When the description of the kindred of these men was sought in the register and was not found, they were removed from executing the office of the priesthood;
-\v 40 for Nehemyah \add !(Nehemiah)\add* and Attharias told them that they should not be partakers of the holy things until a high priest wearing\f + \fr 5:40 \ft Gr. \fqa the manifestation and truth.\f* Urim and Tumim should arise.
+\v 38 Of the¦109694 priests¦109695, those who usurped the office of the priesthood¦109698 and¦109699 weren't found¦109701: the sons of\f + \fr 5:38 \fqa Habaiah, \ft or \fqa Hobaiah.\f* Havayah, the sons of¦109708\f + \fr 5:38 \fqa Hakkoz.\f* Hakots, the¦109708 sons of Jaddus, who married Augia one of the daughters¦109713 of\f + \fr 5:38 \fqa Barzillai. \ft Another reading is, \fqa Phaezeldaeus.\f* Barzilay, and¦109715 was called¦109716 after his name¦109719.
+\v 39 When¦109721 the description of the kindred of these men was sought in¦109727 the¦109728 register and¦109730 wasn't¦109731 found, they were removed from executing the office of¦109734 the¦109734 priesthood¦109735;
+\v 40 for Nehemyah \add !(Nehemiah)\add* and Attharias¦109741 told¦109737 them that they shouldn't¦109742 be partakers of the¦109744 holy¦109745 things until¦109746 a high priest wearing\f + \fr 5:40 \ft Grk. \fqa the manifestation and truth.\f* Urim and Tumim should arise¦109747.
 \p
-\v 41 So all those of Yisrael, from twelve years old and upward, beside menservants and women servants, were in number forty two thousand and three hundred and sixty.
-\v 42 Their menservants and handmaids were seven thousand and three hundred and thirty and seven; the minstrels and singers, two hundred and forty five;
-\v 43 four hundred and thirty and five camels, seven thousand and thirty six horses, two hundred and forty five mules, and five thousand and five hundred and twenty five animals of burden.
+\v 41 So¦109756 all¦109757 those of Yisrael, from¦109760 twelve years old and¦109762 upward, beside male servants and¦109766 women servants, were in number forty two¦109770 thousand¦109770 and three¦109771 hundred¦109771 and sixty¦109772.
+\v 42 Their male servants and¦109775 handmaids were seven¦109777 thousand¦109777 and three¦109778 hundred¦109778 and thirty and seven; the minstrels and singers, two¦109783 hundred¦109783 and forty five;
+\v 43 four¦109786 hundred¦109786 and thirty and five camels, seven¦109790 thousand¦109790 and thirty six horses, two¦109793 hundred¦109793 and forty¦109794 five mules, and five thousand and five hundred¦109798 and twenty five animals of burden.
 \p
-\v 44 And some of the chief men of their families, when they came to the temple of God that is in Yerushalem \add !(Jerusalem)\add*, vowed to set up the house again in its own place according to their ability,
-\v 45 and to give into the holy treasury of the works one thousand minas\f + \fr 5:45 \ft A mina is about 570 grams or 1.25 pounds.\f* of gold, five thousand minas of silver, and one hundred priestly vestments.
+\v 44 And¦109800 some of the¦109802 chief men of their families¦109806, when they came to God's¦109815 temple¦109813 that's¦109816 in¦109817 Yerushalem \add !(Jerusalem)\add*, vowed to¦109820 set up the¦109821 house¦109822 again in its own place¦109826 according¦109828 to¦109828 their ability¦109831,
+\v 45 and¦109832 to¦109833 give¦109833 into the¦109835 holy treasury¦109837 of the¦109838 works¦109839 one thousand minas\f + \fr 5:45 \ft A mina is about 570 grams or 1.25 pounds.\f* of gold¦109840, five thousand¦109842 minas¦109845 of silver, and¦109847 one hundred¦109850 priestly vestments.
 \p
-\v 46 The priests and the Levites and some of the people lived in Yerushalem and the country. The holy singers also and the gatekeepers and all Yisrael lived in their villages.
+\v 46 The¦109853 priests¦109854 and¦109855 the¦109856 Levites and¦109858 some of¦109861 the¦109861 people¦109862 lived in¦109864 Yerushalem and¦109866 the¦109867 country¦109868. The¦109869 holy singers also¦109870 and¦109872 the¦109873 gatekeepers and¦109875 all¦109876 Yisrael lived in¦109878 their villages.
+\s1 Worship resumes at the rebuilt altar
 \p
-\v 47 But when the seventh month was at hand, and when the children of Yisrael were each in their own place, they all came together with one purpose into the broad place before the first porch which is towards the east.
-\v 48 Then Yeshua the son of Yotsadak, his kindred the priests, Zorobabel the son of Salathiail, and his kindred stood up and made the altar of the god of Yisrael ready
-\v 49 to offer burnt sacrifices on it, in accordance with the express commands in the book of Mosheh \add !(Moses)\add* the man of God.
-\v 50 Some people joined them out of the other nations of the land, and they erected the altar onto its own place, because all the nations of the land were hostile to them and oppressed them; and they offered sacrifices at the proper times and burnt offerings to the master both morning and evening.
-\v 51 They also held the feast of tabernacles, as it is commanded in the law, and offered sacrifices daily, as appropriate.
-\v 52 After that, they offered the continual oblations and the sacrifices of the Sabbaths, of the new moons, and of all the consecrated feasts.
-\v 53 All those who had made any vow to God began to offer sacrifices to God from the new moon of the seventh month, although the temple of God was not yet built.
-\v 54 They gave money, food, and drink to the masons and carpenters.
-\v 55 They also gave carts to the people of Tsidon \add !(Sidon)\add* and Tsor \add !(Tyre)\add*, that they should bring cedar trees from Levanon, and convey them in rafts to the harbour of Yafo \add !(Joppa)\add*, according to the commandment which was written for them by Koresh \add !(Cyrus)\add* king of the Persians.
+\v 47 But¦109883 when the¦109884 seventh month was at hand, and¦109887 when the¦109889 children¦109890 of Yisrael were each¦109892 in¦109893 their own¦109895 place, they all came together with one purpose into¦109896 the¦109899 broad place before the¦109901 first¦109902 porch which is towards¦109898 the¦109906 east¦109907.
+\v 48 Then¦109908 Yeshua the¦109911 son of¦109912 Yotsadak, his kindred the priests¦109919, Zorobabel¦109921 the¦109922 son of¦109923 Salathiail, and his kindred stood up and made¦109929 the¦109930 altar¦109931 of¦109932 the¦109932 god¦109933 of Yisrael ready¦109929
+\v 49 to¦109935 offer burnt sacrifices on¦109936 it¦109937, in accordance with the¦109940 express commands in¦109941 the¦109942 book¦109944 of¦109945 Mosheh \add !(Moses)\add* the¦109945 man¦109946 of¦109947 God¦109948.
+\v 50 Some people joined them out¦109953 of the¦109954 other nations¦109956 of the¦109957 land¦109958, and¦109959 they erected the¦109961 altar¦109962 onto its own place¦109965, because¦109967 all¦109975 the¦109976 nations¦109977 of the¦109978 land were hostile to¦109979 them and oppressed them; and they offered sacrifices¦109984 at the¦109986 proper times¦109987 and¦109988 burnt¦109989 offerings¦109989 to the¦109991 master both morning¦109992 and¦109993 evening.
+\v 51 They also¦109996 held the feast of tabernacles, as it's commanded in¦110004 the¦110005 law¦110006, and¦110007 offered sacrifices¦110008 daily, as appropriate.
+\v 52 After¦110015 that¦110016, they offered¦110017 the continual oblations and¦110019 the sacrifices¦110020 of the Sabbaths¦110021, of the new moons, and of all¦110026 the consecrated feasts.
+\v 53 All those who'd made any vow¦110031 to God¦110033 began to¦110041 offer sacrifices¦110042 to God from¦110034 the¦110035 new¦110036 moon¦110036 of¦110037 the¦110037 seventh¦110038 month, although God's¦110049 temple¦110047 wasn't¦110050 yet¦110050 built¦110051.
+\v 54 They gave¦110053 money¦110054, food, and¦110052 drink to¦110053 the¦110055 masons and carpenters.
+\v 55 They also gave carts to the¦110065 people of Tsidon \add !(Sidon)\add* and¦110067 Tsor \add !(Tyre)\add*, that¦110070 they should bring cedar trees from¦110073 Levanon, and convey them in rafts to the harbour¦110083 of Yafo \add !(Joppa)\add*, according¦110084 to¦110084 the commandment which was written for them by Koresh \add !(Cyrus)\add* king¦110094 of¦110092 the¦110092 Persians.
+\s1 The temple foundations are laid
 \p
-\v 56 In the second year after his coming to the temple of God at Yerushalem \add !(Jerusalem)\add*, in the second month, Zorobabel the son of Salathiail, Yeshua \add !(Jesus)\add* the son of Yotsadak, their kindred, the Levitical priests, and all those who had come to Yerushalem out of the captivity began work.
-\v 57 They laid the foundation of God's temple on the new moon of the second month, in the second year after they had come to Yehudah \add !(Judea)\add* and Yerushalem.
-\v 58 They appointed the Levites who were at least twenty years old over the master's works. Then Yeshua, with his sons and kindred, Kadmiel his brother, the sons of Yeshua, Emadabun, and the sons of Yoda the son of Henadad, and their sons and kindred, all the Levites, with one accord stood up and started the business, labouring to advance the works in the house of God. So the builders built the master's temple.\x + \xo 5:58 \xt Ezra 3:8-9\x*
+\v 56 In the¦110096 second¦110097 year¦110098 after his coming to¦110099 God's¦110104 temple¦110102 at Yerushalem \add !(Jerusalem)\add*, in the¦110103 second¦110108 month, Zorobabel¦110110 the¦110111 son of¦110112 Salathiail, Yeshua \add !(Jesus)\add* the son of¦110117 Yotsadak, their kindred, the Levitical priests¦110125, and¦110128 all¦110129 those who'd¦110130 come to Yerushalem out¦110132 of the¦110133 captivity began work.
+\v 57 They laid the¦110139 foundation of¦110141 God's¦110142 temple¦110140 on the¦110143 new¦110144 moon¦110144 of¦110145 the second month, in¦110151 the¦110152 second year after they'd come¦110153 to Yehudah \add !(Judea)\add* and¦110157 Yerushalem.
+\v 58 They appointed the¦110161 Levites who¦110166 were at least twenty years old over the¦110168 master's works. Then Yeshua, with his sons¦110175 and¦110176 kindred, Kadmiel his brother¦110178, the¦110181 sons of Yeshua, Emadabun, and¦110183 the¦110184 sons¦110185 of Yoda¦110190 the¦110188 son¦110189 of¦110191 Henadad, and their sons¦110195 and kindred, all¦110198 the¦110191 Levites, with¦110193 one accord stood up and¦110196 started the¦110199 business, labouring to¦110203 advance the¦110205 works¦110206 in¦110207 God's house¦110209. So¦110212 the¦110214 builders built the¦110216 master's temple¦110217.\x + \xo 5:58: \xt Ezr 3:8-9.\x*
 \p
-\v 59 The priests stood arrayed in their vestments with musical instruments and trumpets, and the Levites the sons of Asaf with their cymbals,
-\v 60 singing songs of thanksgiving and praising the master, according to the directions of King David of Yisrael \add !(Israel)\add*.
-\v 61 They sang aloud, praising the master in songs of thanksgiving, because his goodness and his glory are forever in all Yisrael.
-\v 62 All the people sounded trumpets and shouted with a loud voice, singing songs of thanksgiving to the master for the raising up of the master's house.
-\v 63 Some of the Levitical priests and of the heads of their families, the elderly who had seen the former house came to the building of this one with lamentation and great weeping.\x + \xo 5:63 \xt Ezra 3:12-13\x*
-\v 64 But many with trumpets and joy shouted with a loud voice,
-\v 65 so that the people couldn't hear the trumpets for the weeping of the people, for the multitude sounded loudly, so that it was heard far away.
+\v 59 The priests¦110223 stood arrayed in their vestments with¦110225 musical instruments and¦110227 trumpets, and¦110229 the Levites the sons¦110232 of Asaf¦110233 with their cymbals,
+\v 60 singing songs of thanksgiving and¦110240 praising¦110241 the master, according¦110242 to¦110242 the directions of King¦110244 David of¦110245 Yisrael \add !(Israel)\add*.
+\v 61 They sang aloud, praising¦110251 the¦110252 master in songs of thanksgiving, because¦110249 his goodness and¦110258 his glory¦110260 are forever in¦110264 all¦110265 Yisrael.
+\v 62 All¦110268 the¦110269 people¦110270 sounded trumpets and¦110272 shouted with a loud voice¦110274, singing songs of thanksgiving to¦110279 the master for the raising up of¦110282 the¦110282 master's house¦110283.
+\v 63 Some of the¦110288 Levitical priests¦110289 and¦110292 of the heads of their families¦110297, the¦110299 elderly who'd¦110301 seen¦110302 the¦110303 former house¦110306 came to¦110307 the¦110308 building¦110310 of this one with¦110311 lamentation and¦110313 great¦110315 weeping.\x + \xo 5:63: \xt Ezr 3:12-13.\x*
+\v 64 But¦110316 many with trumpets and¦110320 joy¦110321 shouted with a loud voice¦110324,
+\v 65 so¦110325 that the¦110326 people¦110327 couldn't hear¦110329 the¦110330 trumpets for¦110332 the¦110333 weeping of¦110335 the¦110335 people¦110336, for¦110338 the¦110341 multitude sounded loudly, so¦110344 that it was heard far away.
+\s1 Opposition to rebuilding the temple
 \p
-\v 66 Therefore when the enemies of the tribe of Yehudah \add !(Judah)\add* and Benyamin heard it, they came to know what that noise of trumpets meant.\x + \xo 5:66 \xt Ezra 4:1\x*
-\v 67 They learnt that those who returned from captivity built the temple for the master, the god of Yisrael.
-\v 68 So they went to Zorobabel and Yeshua, and to the chief men of the families, and said to them, “We will build together with you.
-\v 69 Because we, just like you, obey your master, and sacrifice to him from the days of King Esar-Hadon\f + \fr 5:69 \ft Another reading is, \fqa Asbacaphath.\f* of the Assyrians, who brought us here.”
+\v 66 Therefore when¦110347 the¦110349 enemies¦110350 of the¦110351 tribe¦110352 of Yehudah \add !(Judah)\add* and¦110354 Benyamin heard¦110348 it, they came¦110357 to¦110357 know¦110357 what that noise¦110360 of trumpets meant.\x + \xo 5:66: \xt Ezr 4:1.\x*
+\v 67 They learnt that¦110365 those who returned¦110364 from¦110367 captivity built the¦110371 temple¦110372 for the master, the god¦110375 of Yisrael.
+\v 68 So¦110377 they went¦110378 to¦110378 Zorobabel¦110380 and¦110381 Yeshua, and¦110383 to the chief men of the families, and said to¦110388 them, “We'll build together with you¦110391.
+\v 69 Because¦110393 we, just like you, obey your master, and¦110399 sacrifice to¦110395 him from¦110402 the days¦110403 of King¦110405 Esar-Hadon\f + \fr 5:69 \ft Another reading is, \fqa Asbacaphath.\f* of the Assyrians, who brought us here¦110410.”
 \p
-\v 70 Then Zorobabel, Yeshua \add !(Jesus)\add* and the chief men of the families of Yisrael said to them, “It is not for you to build the house for the master our god.
-\v 71 We ourselves alone will build for the master of Yisrael, as King Koresh \add !(Cyrus)\add* of the Persians has commanded us.”
-\v 72 But the heathen of the land pressed hard on the inhabitants of Yehudah, cut off their supplies, and hindered their building.
-\v 73 By their secret plots, and popular persuasions and commotions, they hindered the finishing of the building all the time that King Koresh lived. So they were hindered from building for two years, until the reign of Dareyavesh.
+\v 70 Then¦110411 Zorobabel¦110414, Yeshua \add !(Jesus)\add* and the chief men of the families of Yisrael said¦110412 to them, “It¦110413 isn't for you¦110427 to¦110429 build¦110429 the¦110430 house¦110431 for the master our god¦110433.
+\v 71 We¦110435 ourselves alone¦110437 will build for the¦110439 master of¦110441 Yisrael, as King¦110449 Koresh \add !(Cyrus)\add* of the Persians has commanded us.”
+\v 72 But¦110452 the¦110454 heathen of the¦110457 land¦110455 pressed hard on¦110458 the¦110459 inhabitants of Yehudah, cut off their supplies, and hindered their building¦110465.
+\v 73 By their secret plots¦110467, and¦110466 popular persuasions and¦110469 commotions, they hindered the finishing of the¦110475 building¦110476 all¦110477 the¦110478 time¦110479 that¦110480 King¦110483 Koresh lived¦110481. So¦110485 they were hindered from building¦110488 for two¦110490 years¦110489, until¦110491 Dareyavesh's reign.
 \c 6
+\s1 The rebuilding resumes
 \p
-\v 1 Now in the second year of the reign of Dareyavesh \add !(Darius)\add*, Hagay and Zekaryah \add !(Zechariah)\add* the son of\f + \fr 6:1 \fqa Iddo. \ft Another reading is, \fqa Eddin\f* Ido, the prophets, prophesied to the Yehudim \add !(Jews)\add* in Yehudah and Yerushalem \add !(Jerusalem)\add* in the name of the master, the god of Yisrael.\x + \xo 6:1 \xt Ezra 4:24; 5:1\x*
-\v 2 Then Zorobabel the son of Salathiail and Yeshua the son of Yotsadak stood up and began to build the house of the master at Yerushalem, the prophets of the master being with them and helping them.
+\v 1 Now in¦110495 the¦110497 second¦110498 year¦110499 of Dareyavesh's \add !(Darius)\add* reign, Hagay and¦110505 Zekaryah \add !(Zechariah)\add* the¦110507 son of¦110508\f + \fr 6:1 \fqa Iddo. \ft Another reading is, \fqa Eddin\f* Ido, the prophets¦110511, prophesied¦110503 to¦110512 the Yehudim \add !(Jews)\add* in¦110517 Yehudah and¦110520 Yerushalem \add !(Jerusalem)\add* in the¦110523 name¦110524 of the master, the god¦110526 of Yisrael.\x + \xo 6:1: \xt Ezr 4:24; 5:1.\x*
+\v 2 Then¦110530 Zorobabel¦110532 the¦110533 son of¦110534 Salathiail and¦110536 Yeshua the¦110538 son of¦110539 Yotsadak stood¦110531 up and began to¦110542 build¦110542 the¦110543 master's house¦110544 at Yerushalem, the¦110553 master's prophets¦110552 being with them and helping them.
 \p
-\v 3 At the same time Tatenay\f + \fr 6:3 \fqa Tattenai.\f* the governor of Aram \add !(Syria)\add* and Foinikai came to them, with Shetar-Bozenay\f + \fr 6:3 \fqa Shetharbozenai\f* and his companions, and said to them,\x + \xo 6:3 \xt Ezra 5:3\x*
+\v 3 At the same time Tatenay\f + \fr 6:3 \fqa Tattenai.\f* the governor of Aram \add !(Syria)\add* and Foinikai came to them, with Shetar-Bozenay\f + \fr 6:3 \fqa Shetharbozenai\f* and his companions, and said to them,\x + \xo 6:3: \xt Ezr 5:3.\x*
 \v 4 “By whose authority do you build this house and this roof, and perform all the other things? Who are the builders who do these things?”
-\v 5 Nevertheless, the elders of the Yehudim obtained favour, because the master had visited the captives;
-\v 6 and they were not hindered from building until such time as communication was made to Dareyavesh concerning them, and his answer received.
+\v 5 Nevertheless, the¦110607 elders¦110613 of¦110610 the¦110610 Yehudim obtained favour, because¦110603 the¦110612 master had visited the¦110614 captives¦110608;
+\v 6 and¦110616 they weren't hindered from building¦110620 until¦110621 such time as communication was made to Dareyavesh about¦110625 them, and¦110627 his answer received.
+\s1 The officials ask Dareyavesh to investigate
 \p
 \v 7 A copy of the letter which Tatenay, governor of Aram and Foinikai, and Shetar-Bozenay, with their companions, the rulers in Aram and Foinikai, wrote and sent to Dareyavesh:
 \p
 \v 8 “To King Dareyavesh, greetings. Let it be fully known to our lord the king, that having come into the country of Yehudah \add !(Judea)\add*, and entered into the city of Yerushalem, we found in the city of Yerushalem the elders of the Yehudim that were of the captivity
 \v 9 building a great new house for the master of hewn and costly stones, with timber laid in the walls.
-\v 10 Those works are being done with great speed. The work goes on prosperously in their hands, and it is being accomplished with all glory and diligence.
-\v 11 Then asked we these elders, saying, ‘By whose authority are you building this house and laying the foundations of these works?’
-\v 12 Therefore, to the intent that we might give knowledge to you by writing who were the leaders, we questioned them, and we required of them the names in writing of their principal men.
-\v 13 So they gave us this answer, ‘We are the servants of the master who made heaven and earth.
-\v 14 As for this house, it was built many years ago by a great and strong king of Yisrael \add !(Israel)\add*, and was finished.
-\v 15 But when our fathers sinned against the master of Yisrael who is in heaven, and provoked him to wrath, he gave them over into the hands of King Nevukadnetsar \add !(Nebuchadnezzar)\add* of Bavel, king of the Kasdim \add !(Chaldeans)\add*.
-\v 16 They pulled down the house, burnt it, and carried away the people captive to Bavel.
-\v 17 But in the first year that Koresh \add !(Cyrus)\add* reigned over the country of Bavel, King Koresh wrote that this house should be rebuilt.
-\v 18 The holy vessels of gold and of silver that Nevukadnetsar had carried away out of the house at Yerushalem \add !(Jerusalem)\add* and had set up in his own temple, those King Koresh brought out of the temple in Bavel, and they were delivered to Zorobabel and to Sheshebatsar\f + \fr 6:18 \ft Another reading is, \fqa Sabunassarus.\f* the governor,
-\v 19 with commandment that he should carry away all these vessels, and put them in the temple at Yerushalem, and that the master's temple should be built on its site.
-\v 20 Then Sheshebatsar, having come here, laid the foundations of the master's house which is in Yerushalem. From that time to this we are still building. It is not yet fully completed.’
-\v 21 Now therefore, if it seems good, Oh king, let a search be made amongst the royal archives of our lord the king that are in Bavel.
-\v 22 If it is found that the building of the house of the master which is in Yerushalem has been done with the consent of King Koresh, and it seems good to our lord the king, let him send us directions concerning these things.”
+\v 10 Those works¦110704 are being done with great speed. The¦110711 work¦110712 goes on prosperously in their hands¦110715, and it's¦110716 being accomplished with all¦110719 glory¦110720 and¦110721 diligence¦110707.
+\v 11 Then¦110724 asked we these elders¦110727, saying, ‘By whose authority are you¦110731 building¦110733 this¦110734 house¦110735 and¦110737 laying the¦110738 foundations of these works¦110739?’
+\v 12 Therefore¦110743, to the¦110746 intent that we might give knowledge to¦110747 you¦110748 by writing¦110750 who¦110752 were the¦110754 leaders, we questioned them, and¦110756 we required of them the names in writing of their principal men.
+\v 13 So they gave us this¦110763 answer¦110765, ‘We're¦110768 the¦110770 servants of¦110772 the¦110772 master who¦110774 made heaven¦110775 and¦110776 earth¦110778.
+\v 14 As for this house¦110781, it was built¦110780 many years¦110783 ago by a great¦110789 and¦110790 strong¦110791 king¦110786 of¦110787 Yisrael \add !(Israel)\add*, and¦110792 was finished.
+\v 15 But when our fathers¦110797 sinned¦110800 against the¦110802 master of¦110804 Yisrael who's¦110806 in heaven, and provoked him to¦110808 anger, he¦110809 gave them over into the hands¦110811 of King¦110813 Nevukadnetsar \add !(Nebuchadnezzar)\add* of Bavel, king¦110815 of the¦110816 Kasdim \add !(Chaldeans)\add*.
+\v 16 They pulled down¦110821 the¦110818 house¦110820, burnt it, and¦110823 carried away the¦110824 people¦110825 captive to Bavel.
+\v 17 But¦110830 in¦110829 the¦110831 first¦110832 year¦110833 that Koresh \add !(Cyrus)\add* reigned over the country¦110836 of Bavel, King¦110840 Koresh wrote¦110838 that¦110839 this¦110842 house¦110843 should be rebuilt.
+\v 18 The¦110847 holy vessels¦110849 of gold¦110851 and¦110852 of silver¦110854 that¦110855 Nevukadnetsar had carried¦110856 away out of¦110859 the¦110859 house¦110860 at Yerushalem \add !(Jerusalem)\add* and¦110864 had set up in¦110867 his own temple¦110870, those King¦110876 Koresh brought out¦110877 of¦110878 the¦110878 temple¦110879 in¦110881 Bavel, and¦110883 they were delivered¦110884 to¦110884 Zorobabel¦110886 and to Sheshebatsar\f + \fr 6:18 \ft Another reading is, \fqa Sabunassarus.\f* the¦110887 governor,
+\v 19 with commandment that he¦110891 should carry¦110893 away all¦110894 these vessels¦110896, and put them in¦110899 the¦110900 temple¦110901 at Yerushalem, and¦110905 that the¦110906 master's temple¦110907 should be built on¦110911 its site.
+\v 20 Then¦110914 Sheshebatsar, having come¦110917 here, laid the¦110919 foundations¦110920 of¦110921 the¦110921 master's house¦110922 which is in¦110925 Yerushalem. From¦110928 that¦110929 time to¦110935 this we're still building. It isn't yet fully completed.’
+\v 21 Now¦110937 therefore¦110938, if¦110939 it seems good, Oh king¦110941, let a search be made among the¦110944 royal archives of¦110947 our lord the¦110947 king that are in¦110943 Bavel.
+\v 22 If¦110950 it's¦110958 found that the¦110959 building¦110960 of¦110961 the¦110964 master's house¦110962 which is in¦110965 Yerushalem has been done with the consent of King Koresh, and it seems good to our lord the king¦110971, let him send us directions about¦110975 these things.”
+\s1 Dareyavesh orders support for the rebuilding
 \p
-\v 23 Then King Dareyavesh \add !(Darius)\add* commanded that a search be made amongst the archives that were laid up at Bavel \add !(Babylon)\add*. So at Ahmeta the palace, which is in the country of Maday \add !(Media)\add*, a scroll was found where these things were recorded:\x + \xo 6:23 \xt Ezra 6:1\x*
-\v 24 “In the first year of the reign of Koresh, King Koresh commanded to build up the house of the master which is in Yerushalem, where they sacrifice with continual fire.
-\v 25 Its height shall be sixty cubits, and the breadth sixty cubits, with three rows of hewn stones, and one row of new wood from that country. Its expenses are to be given out of the house of King Koresh.
-\v 26 The holy vessels of the house of the master, both gold and silver, that Nevukadnetsar took out of the house at Yerushalem and carried away to Bavel, should be restored to the house at Yerushalem, and be set in the place where they were before.”
-\v 27 Also he commanded that Tatenay the governor of Aram \add !(Syria)\add* and Foinikai, and Shetar-Bozenay, and their companions, and those who were appointed rulers in Aram and Foinikai, should be careful not to meddle with the place, but allow Zorobabel, the servant of the master, and governor of Yehudah \add !(Judea)\add*, and the elders of the Yehudim \add !(Jews)\add*, to build that house of the master in its place.
-\v 28 “I also command to have it built up whole again; and that they look diligently to help those who are of the captivity of Yehudah, until the house of the master is finished,
-\v 29 and that out of the tribute of Coele-Syria and Foinikai a portion shall be carefully given to these men for the sacrifices of the master, that is, to Zorobabel the governor for bulls, rams, and lambs,
-\v 30 and also corn, salt, wine and oil, and that continually every year without further question, according as the priests who are in Yerushalem may direct to be daily spent,
-\v 31 that drink offerings may be made to the Most High God for the king and for his children, and that they may pray for their lives.”
-\v 32 He commanded that whoever should transgress, yes, or neglect anything written here, a beam shall be taken out of his own house, and he shall be hanged on it, and all his goods seized for the king.
-\v 33 “Therefore may the master, whose name is called on there, utterly destroy every king and nation that stretches out his hand to hinder or damage that house of the master in Yerushalem.
-\v 34 I, King Dareyavesh have ordained that these things be done with diligence.”
+\v 23 Then¦110977 King¦110979 Dareyavesh \add !(Darius)\add* commanded that a search be made among¦110983 the¦110984 archives that were laid up at Bavel \add !(Babylon)\add*. So¦110990 at Ahmeta the palace, which is in the country¦110999 of Maday \add !(Media)\add*, a scroll was found¦110991 where these things were recorded:\x + \xo 6:23: \xt Ezr 6:1.\x*
+\v 24 “In the first year of Koresh's reign, King Koresh commanded to build up the master's house which is in Yerushalem, where they sacrifice with continual fire.
+\v 25 Its height will be sixty cubits, and the breadth sixty cubits, with three rows of hewn stones, and one row of new wood from that country. Its expenses are to be given out of King Koresh's house.
+\v 26 The¦111056 holy vessels¦111058 of¦111059 the¦111062 master's house¦111060, both¦111063 gold¦111064 and¦111065 silver¦111066, that¦111090 Nevukadnetsar took¦111068 out of¦111071 the¦111071 house¦111072 at Yerushalem and¦111076 carried¦111077 away to¦111088 Bavel, should be¦111088 restored to¦111089 the house at Yerushalem, and be set in the place¦111091 where they were before.”
+\v 27 Also¦111094 he commanded that Tatenay the governor of Aram \add !(Syria)\add* and¦111099 Foinikai, and¦111101 Shetar-Bozenay, and¦111103 their companions, and¦111106 those who¦111107 were appointed rulers¦111113 in¦111109 Aram and¦111111 Foinikai, should be careful not to¦111114 meddle with the¦111115 place¦111116, but¦111118 allow Zorobabel¦111122, the master's servant, and governor of Yehudah \add !(Judea)\add*, and the¦111128 elders¦111129 of¦111134 the¦111134 Yehudim \add !(Jews)\add*, to¦111137 build¦111137 that house¦111133 of¦111139 the¦111139 master in its place¦111140.
+\v 28 “I¦111142 also¦111143 command to¦111146 have it built¦111146 up whole again; and¦111147 that they look diligently to help those who are of the captivity of Yehudah, until¦111157 the¦111162 master's house¦111161 is finished,
+\v 29 and¦111164 that out of the¦111166 tribute of Coele-Syria and¦111170 Foinikai a portion will be carefully¦111172 given to these men for the¦111176 sacrifices¦111179 of the¦111180 master, that is, to Zorobabel¦111182 the governor for bulls¦111185, rams, and lambs¦111189,
+\v 30 and also corn, salt¦111195, wine¦111197 and¦111198 oil¦111199, and that continually¦111200 every year¦111202 without further question, according as¦111203 the¦111205 priests¦111206 who¦111207 are in¦111208 Yerushalem may direct to¦111212 be daily spent,
+\v 31 that¦111215 drink offerings may be made to the¦111218 Most High God¦111219 for¦111222 the¦111223 king¦111224 and¦111225 for his children¦111227, and¦111228 that¦111231 they may pray for their lives¦111233.”
+\v 32 He commanded that¦111236 whoever should transgress, yes, or neglect anything written¦111242 here, a beam will be taken out¦111247 of his own¦111249 house, and¦111251 he'll be hanged on¦111252 it¦111253, and¦111255 all his goods seized for the¦111256 king.
+\v 33 “Therefore may the master, whose name¦111268 is called¦111270 on¦111270 there¦111271, utterly destroy every¦111273 king¦111274 and¦111275 nation¦111276 that stretches out his hand¦111280 to¦111282 hinder or¦111283 damage¦111284 that¦111285 house¦111286 of the¦111289 master in¦111290 Yerushalem.
+\v 34 I¦111292, King¦111293 Dareyavesh have ordained that¦111298 these things be¦111299 done with diligence.”
 \c 7
+\s1 The completed temple is dedicated
 \p
-\v 1 Then Tatenay the governor of Coele-Syria and Foinikai, and Shetar-Bozenay, with their companions, following the commandments of King Dareyavesh \add !(Darius)\add*,\x + \xo 7:1 \xt Ezra 6:13\x*
-\v 2 very carefully supervised the holy work, assisting the elders of the Yehudim \add !(Jews)\add* and rulers of the temple.
-\v 3 So the holy work prospered, while Hagay and Zekaryah \add !(Zechariah)\add* the prophets prophesied.
+\v 1 Then¦111300 Tatenay the governor¦111302 of¦111315 Coele-Syria and Foinikai, and Shetar-Bozenay, with their companions, following King¦111316 Dareyavesh's \add !(Darius)\add* commandments,\x + \xo 7:1: \xt Ezr 6:13.\x*
+\v 2 very carefully supervised the¦111320 holy work, assisting the¦111325 elders¦111326 of the¦111327 Yehudim \add !(Jews)\add* and¦111329 rulers of the temple.
+\v 3 So¦111331 the¦111334 holy work¦111336 prospered, while Hagay and¦111339 Zekaryah \add !(Zechariah)\add* the¦111341 prophets¦111342 prophesied.
 \v 4 They finished these things by the commandment of the master, the god of Yisrael, and with the consent of Koresh \add !(Cyrus)\add*, Dareyavesh, and Artahshashta \add !(Artaxerxes)\add*, kings of the Persians.
 \v 5 So the holy house was finished by the twenty-third day of the month Adar, in the sixth year of King Dareyavesh.
-\v 6 The children of Yisrael, the priests, the Levites, and the others who returned from captivity who joined them did what was written in the book of Mosheh \add !(Moses)\add*.
-\v 7 Because the dedication of the master's temple, they offered one hundred bulls, two hundred rams, four hundred lambs,
-\v 8 and twelve male goats for the sin of all Yisrael, according to the number of the twelve princes of the tribes of Yisrael.
-\v 9 The priests and the Levites stood arrayed in their vestments, according to their kindred, for the services of the master, the god of Yisrael, according to the book of Mosheh. The gatekeepers were at every gate.
+\v 6 The¦111381 children¦111382 of Yisrael, the¦111385 priests¦111386, the¦111388 Levites, and¦111390 the¦111391 others who¦111393 returned from¦111394 captivity who joined them did what was written in¦111401 the¦111402 book¦111404 of Mosheh \add !(Moses)\add*.
+\v 7 Because the¦111408 dedication of¦111410 the¦111410 master's temple¦111411, they offered one hundred¦111415 bulls¦111414, two¦111417 hundred rams, four hundred lambs¦111418,
+\v 8 and twelve male goats for¦111421 the sin¦111422 of all¦111423 Yisrael, according to¦111427 the number¦111428 of the twelve princes of the tribes of Yisrael.
+\v 9 The¦111437 priests¦111438 and¦111439 the¦111440 Levites stood¦111436 arrayed in their vestments, according¦111442 to¦111442 their kindred, for the services of the master, the god¦111449 of Yisrael, according to the¦111452 book¦111454 of Mosheh. The¦111456 gatekeepers were at every gate¦111460.
+\s1 The returned exiles celebrate the Passover
 \p
-\v 10 The children of Yisrael \add !(Israel)\add* who came out of captivity held the Passover the fourteenth day of the first month, when the priests and the Levites were sanctified together,
-\v 11 with all those who returned from captivity; for they were sanctified. Because the Levites were all sanctified together,
-\v 12 and they offered the Passover for all who returned from captivity, for their kindred the priests, and for themselves.
-\v 13 The children of Yisrael who came out of the captivity ate, even all those who had separated themselves from the abominations of the heathen of the land, and sought the master.
-\v 14 They kept the feast of unleavened bread seven days, rejoicing before the master,
-\v 15 because he had turned the counsel of the king of Ashur \add !(Assyria)\add* towards them, to strengthen their hands in the works of the master, the god of Yisrael.
+\v 10 The¦111463 children¦111464 of Yisrael \add !(Israel)\add* who¦111466 came out¦111467 of captivity held the¦111470 Passover¦111471 the¦111473 fourteenth¦111474 day of¦111475 the¦111475 first¦111476 month, when¦111478 the¦111480 priests¦111481 and¦111482 the¦111483 Levites were sanctified together,
+\v 11 with all¦111487 those who returned from captivity; for they were sanctified. Because the¦111495 Levites were all sanctified together,
+\v 12 and¦111500 they offered the¦111502 Passover¦111503 for all¦111504 who returned from captivity, for their kindred the priests¦111514, and¦111515 for themselves.
+\v 13 The¦111519 children¦111520 of Yisrael who¦111522 came out¦111523 of the¦111524 captivity ate, even all¦111526 those who'd¦111527 separated themselves from¦111529 the¦111530 abominations¦111531 of the¦111532 heathen of the¦111534 land¦111535, and sought¦111536 the¦111537 master.
+\v 14 They kept the feast of unleavened¦111544 bread seven¦111545 days¦111546, rejoicing before¦111548 the master,
+\v 15 because¦111550 he'd turned the¦111552 counsel of¦111554 the¦111554 king¦111555 of Ashur \add !(Assyria)\add* towards them, to¦111557 strengthen their hands¦111561 in the¦111564 works¦111565 of the master, the god¦111567 of Yisrael.
 \c 8
+\s1 Ezra comes to Yerushalem
 \p
-\v 1 After these things, when Artahshashta \add !(Artaxerxes)\add* the king of the Persians reigned, Ezra came, who was the son of Azaryah, the son of Zekaryah \add !(Zechariah)\add*, the son of Hilkiyah, the son of Shalem,\x + \xo 8:1 \xt Ezra 7:1\x*
-\v 2 the son of Tsadok, the son of Ahituv, the son of Amaryah, the son of Ozias,\f + \fr 8:2 \ft The Vatican MS. omits \fq the son of Memeroth, the son of Zaraias, the son of Savias.\f* the son of Merayot, the son of Zerahyah, the son of Zerahyah, the son of Buki, the son of Avishua, the son of Pinhas, the son of Eleazar, the son of Aharon \add !(Aaron)\add*, the chief priest.
-\v 3 This Ezra went up from Bavel \add !(Babylon)\add* as a skilled scribe in the law of Mosheh \add !(Moses)\add*, which was given by the god of Yisrael.
-\v 4 The king honoured him, for he found favour in his sight in all his requests.
+\v 1 After these things, when¦111569 Artahshashta \add !(Artaxerxes)\add* the¦111575 king¦111577 of the Persians reigned, Ezra came, who was the son of Azaryah, the son of Zekaryah \add !(Zechariah)\add*, the son of Hilkiyah, the son of Shalem,\x + \xo 8:1: \xt Ezr 7:1.\x*
+\v 2 the son of Tsadok, the son of Ahituv, the son of Amaryah, the son of Ozias,\f + \fr 8:2 \ft The Vatican MS. omits \fq the son of Memeroth, the son of Zaraias, the son of Savias.\f* the son of Merayot, the son of Zerahyah, the son of Zerahyah, the son of Buki, the son of Avishua, the son of Pinhas, the son of Eleazar¦111602, the son of Aharon \add !(Aaron)\add*, the chief priest.
+\v 3 This¦111609 Ezra went up from¦111612 Bavel \add !(Babylon)\add* as a skilled scribe¦111615 in¦111618 Mosheh's \add !(Moses)\add* law¦111621, which¦111614 was¦111617 given by¦111624 the¦111625 god¦111626 of¦111627 Yisrael.
+\v 4 The¦111632 king¦111633 honoured him, for¦111636 he¦111638 found favour in his sight in all¦111640 his requests.
 \v 5 There went up with him also some of the children of Yisrael, and of the priests, Levites, holy singers, gatekeepers, and temple servants to Yerushalem \add !(Jerusalem)\add*
-\v 6 in the seventh year of the reign of Artahshashta, in the fifth month (this was the king's seventh year); for they left Bavel on the new moon of the first month and came to Yerushalem, by the prosperous journey which the master gave them\f + \fr 8:6 \ft Some MSS. omit \fq for his sake.\f* for his sake.
-\v 7 Because Ezra had very great skill, so that he omitted nothing of the law and commandments of the master, but taught all Yisrael the ordinances and judgements.
+\v 6 in the seventh year of Artahshashta's reign, in the fifth month (this was the king's seventh year); for they left Bavel on the new moon of the first month and came to Yerushalem, by the prosperous journey which the master gave them\f + \fr 8:6 \ft Some MSS. omit \fq for his sake.\f* for his sake.
+\v 7 Because¦111699 Ezra had very¦111701 great skill, so that¦111705 he omitted nothing¦111706 of¦111710 the¦111710 law¦111711 and¦111713 commandments¦111716 of the¦111715 master, but taught¦111717 all¦111718 Yisrael the¦111719 ordinances and¦111722 judgements¦111723.
+\s1 The king's letter authorising Ezra's work
 \p
-\v 8 Now the commission, which was written from King Artahshashta, came to Ezra the priest and reader of the law of the master, was as follows:
+\v 8 Now the¦111726 commission, which¦111741 was written from¦111729 King¦111731 Artahshashta, came to¦111732 Ezra the¦111734 priest¦111735 and¦111736 reader of¦111738 the¦111744 master's law¦111739, was¦111742 as follows:
 \p
-\v 9 “King Artahshashta to Ezra the priest and reader of the law of the master, greetings.
-\v 10 Having determined to deal graciously, I have given orders that those of the nation of the Yehudim \add !(Jews)\add*, and of the priests and Levites, and of those within our realm who are willing and freely choose to, should go with you to Yerushalem.
-\v 11 As many therefore as are so disposed, let them depart with you, as it has seemed good both to me and my seven friends the counsellors,
-\v 12 that they may look to the affairs of Yehudah \add !(Judea)\add* and Yerushalem, in accordance with what is in the master's law,
+\v 9 “King¦111746 Artahshashta to Ezra the¦111749 priest¦111750 and¦111751 reader of¦111753 the¦111753 master's law¦111754, greetings.
+\v 10 Having determined to deal graciously, I've¦111760 given orders that¦111763 those of¦111766 the¦111766 nation¦111767 of the¦111768 Yehudim \add !(Jews)\add*, and¦111771 of the¦111772 priests¦111773 and¦111774 Levites, and¦111777 of those within our¦111781 realm who are willing and freely choose to, should go with you¦111784 to Yerushalem.
+\v 11 As¦111787 many therefore¦111788 as are so disposed, let them depart with you, as it's seemed good both¦111794 to me and¦111795 my seven¦111797 friends¦111798 the counsellors,
+\v 12 that¦111800 they may look to¦111803 the¦111804 affairs of Yehudah \add !(Judea)\add* and¦111806 Yerushalem, in accordance¦111803 with what's in¦111811 the¦111812 master's law¦111813,
 \v 13 and carry the gifts to the master of Yisrael to Yerushalem, which I and my friends have vowed, and that all the gold and silver that can be found in the country of Bavel for the master in Yerushalem,
-\v 14 with that also which is given of the people for the temple of the master their god that is at Yerushalem, be collected: even the gold and silver for bulls, rams, and lambs, and what goes with them,
-\v 15 to the end that they may offer sacrifices to the master on the altar of the master their god, which is in Yerushalem.
-\v 16 Whatever you and your kindred decide to do with gold and silver, do that according to the will of your god.
-\v 17 The holy vessels of the master, which are given you for the use of the temple of your god, which is in Yerushalem,
-\v 18 and whatever else you shall remember for the use of the temple of your god, you shall give it out of the king's treasury.
-\v 19 I, King Artahshashta \add !(Artaxerxes)\add*, have also commanded the keepers of the treasures in Aram \add !(Syria)\add* and Foinikai, that whatever Ezra the priest and reader of the law of the Most High God shall send for, they should give it to him with all diligence,
+\v 14 with that also which is given of the people for the temple of the master their god that's at Yerushalem, be collected: even the gold and silver for bulls, rams, and lambs, and what goes with them,
+\v 15 to the end that they may offer sacrifices¦111883 to the¦111884 master on¦111886 the¦111887 altar¦111888 of¦111889 the¦111889 master their god¦111891, which is in¦111894 Yerushalem.
+\v 16 Whatever you and your kindred decide to¦111905 do¦111905 with¦111901 gold¦111906 and¦111907 silver, do that according¦111910 to¦111910 your god's¦111914 will¦111912.
+\v 17 The¦111917 holy vessels¦111919 of¦111920 the master, which are given you¦111924 for the¦111926 use of¦111928 your god's¦111931 temple¦111929, which is in Yerushalem,
+\v 18 and whatever else you remember for the use of your god's temple, give¦111933 it out¦111934 of¦111935 the¦111935 king's treasury¦111937.
+\v 19 I¦111938, King¦111941 Artahshashta \add !(Artaxerxes)\add*, have also commanded the keepers of the treasures in¦111948 Aram \add !(Syria)\add* and Foinikai, that¦111948 whatever Ezra the¦111953 priest¦111954 and¦111955 reader of¦111957 the¦111959 Most High God's¦111960 law¦111958 sends¦111951 for, they should give¦111964 it¦111965 to him with all diligence,
 \v 20 to the sum of one hundred talents of silver, likewise also of wheat even to one hundred cors,\f + \fr 8:20 \ft a cor is about 230 litres, so 100 cors is about 23 kilolitres or 652 bushels\f* and one hundred firkins\f + \fr 8:20 \ft a firkin is about 41 litres or 11 gallons.\f* of wine, and\f + \fr 8:20 \ft So some authorities. See Ezra 7:22. The common reading is, \fqa other things.\f* salt in abundance.
-\v 21 Let all things be performed after God's law diligently to the most high God, that wrath come not onto the kingdom of the king and his sons.
-\v 22 I command you also that no tax, nor any other imposition, be laid on any of the priests, or Levites, or holy singers, or gatekeepers, or temple servants, or any that have employment in this temple, and that no man has authority to impose any tax on them.
-\v 23 You, Ezra, according to the wisdom of God, ordain judges and justices that they may judge in all Aram and Foinikai all those who know the law of your god; and those who don't know it, you shall teach.
-\v 24 Anyone who transgresses the law of your god and of the king shall be punished diligently, whether it be by death, or other punishment, by penalty of money, or by imprisonment.”
+\v 21 Let all things be performed after God's law diligently to the most high God, that anger come not onto the kingdom of the king and his sons.
+\v 22 I command¦112014 you¦112012 also¦112013 that¦112015 no tax, nor any other imposition, be laid¦112044 on any of the¦112017 priests¦112018, or Levites, or holy singers, or gatekeepers, or temple servants, or any that have employment in this¦112020 temple, and that no man¦112034 has¦112042 authority¦112043 to impose any tax on them.
+\v 23 You¦112048, Ezra, according¦112050 to¦112050 God's¦112054 wisdom¦112052, ordain judges and¦112057 justices that¦112059 they may judge¦112056 in¦112061 all¦112062 Aram and¦112064 Foinikai all¦112066 those who¦112067 know your god's¦112072 law¦112070; and¦112074 those who don't¦112076 know it, you must teach.
+\v 24 Anyone who transgresses the¦112084 law¦112085 of¦112086 your god¦112087 and of the king will be punished diligently, whether it be by death¦112097, or other punishment¦112101, by penalty of money, or by imprisonment.”
 \p
-\v 25 Then Ezra the scribe said, “Blessed be the only master, the god of my fathers, who has put these things into the heart of the king, to glorify his house that is in Yerushalem,
-\v 26 and has honoured me in the sight of the king, his counsellors, and all his friends and nobles.
-\v 27 Therefore I was encouraged by the help of the master my god, and gathered together out of Yisrael \add !(Israel)\add* men to go up with me.
+\v 25 Then¦112107 Ezra the¦112110 scribe¦112111 said¦112108, “Blessed be the only master, the¦112115 god¦112116 of my fathers¦112118, who's¦112120 put these things into¦112121 the¦112126 king's¦112127 heart¦112125, to¦112128 glorify¦112128 his house¦112130 that's¦112132 in¦112133 Yerushalem,
+\v 26 and¦112135 has honoured me in¦112138 the sight of¦112138 the¦112139 king¦112140, his counsellors, and all¦112145 his friends¦112147 and¦112148 nobles.
+\v 27 Therefore I¦112152 was¦112154 encouraged by the¦112156 help of¦112159 the¦112159 master my god¦112160, and¦112162 gathered together out¦112165 of¦112166 Yisrael \add !(Israel)\add* men¦112164 to go up with me.
+\s1 The families travelling with Ezra
 \p
-\v 28 These are the chief according to their families and their several divisions, who went up with me from Bavel \add !(Babylon)\add* in the reign of King Artahshashta \add !(Artaxerxes)\add*:
-\v 29 of the sons of Pinhas, Gereshom; of the sons of Itamar, Daniyel; of the sons of David,\f + \fr 8:29 \fqa Hattush.\f* Hatush\f + \fr 8:29 \ft Ezra 8:3, \fqa of the sons of Shecaniah; of the sons of Parosh.\f* the son of Shekanyah;
-\v 30 of the sons of Par’osh, Zekaryah \add !(Zechariah)\add*; and with him were counted one hundred and fifty men;
-\v 31 of the sons of Pahat-Moav, Elyehoeynay the son of\f + \fr 8:31 \fqa Zerehiah.\f* Zerahyah, and with him two hundred men;
-\v 32 of\f + \fr 8:32 \ft Ezra 8:5, \fqa of the sons of Shecaniah, the son of Jahaziel.\f* the sons of Zatu, Shekanyah the son of Yahaziel, and with him three hundred men; of the sons of Adin, Ovadyah \add !(Obadiah)\add* the son of Yonatan \add !(Jonathan)\add*, and with him two hundred and fifty men;
-\v 33 of the sons of Eylam, Yeshaeyah son of Atalyah \add !(Athaliah)\add*, and with him seventy men;
-\v 34 of the sons of Shefatyah, Zevadyah son of Mika’el \add !(Michael)\add*, and with him seventy men;
-\v 35 of the sons of Yoav \add !(Joab)\add*, Ovadyah son of Yehiel. Yehiel, and with him two hundred and twelve men;
-\v 36 of the sons of Bani, Shelomit son of Yosifyah,\f + \fr 8:36 \ft Ezra 8:10, \fqa of the sons of Shelomith, the son of Josiphiah.\f* and with him one hundred and sixty men;
-\v 37 of the sons of Bevay, Zekaryah son of Bevay, and with him twenty-eight men;
-\v 38 of the sons of Azgad: Azgad, Yohan \add !(John)\add* son of Hakatan Hakatan, and with him one hundred and ten men;
-\v 39 of the sons of Adonikam, the last, and these are the names of them, Elifelet, Ye’uel, and Shemayah, and with them seventy men;
-\v 40 of the sons of Bigvay, Utay the son of Zabud, and with him seventy men.
+\v 28 These are the¦112173 chief according¦112175 to¦112175 their families¦112177 and¦112179 their several divisions, who went up with¦112184 me from¦112186 Bavel \add !(Babylon)\add* in¦112188 King¦112193 Artahshashta's \add !(Artaxerxes)\add* reign:
+\v 29 of the¦112195 sons¦112196 of Pinhas, Gereshom; of the¦112200 sons¦112201 of Itamar, Daniyel; of the¦112205 sons¦112206 of David,\f + \fr 8:29 \fqa Hattush.\f* Hatush\f + \fr 8:29 \ft Ezra 8:3, \fqa of the sons of Shecaniah; of the sons of Parosh.\f* the¦112209 son of Shekanyah;
+\v 30 of the¦112212 sons¦112213 of Par'osh, Zekaryah \add !(Zechariah)\add*; and¦112216 with¦112217 him were counted one hundred¦112221 and fifty¦112222 men¦112220;
+\v 31 of the sons of Pahat-Moav, Elyehoeynay the¦112224 son¦112225 of\f + \fr 8:31 \fqa Zerehiah.\f* Zerahyah, and¦112230 with¦112231 him two¦112234 hundred¦112234 men¦112233;
+\v 32 of\f + \fr 8:32 \ft Ezra 8:5, \fqa of the sons of Shecaniah, the son of Jahaziel.\f* the sons of Zatu, Shekanyah the¦112236 son¦112237 of Yahaziel, and¦112241 with¦112242 him three¦112245 hundred¦112245 men; of the¦112247 sons¦112248 of Adin¦112249, Ovadyah \add !(Obadiah)\add* the son of Yonatan \add !(Jonathan)\add*, and¦112252 with¦112253 him two¦112256 hundred¦112256 and fifty¦112257 men;
+\v 33 of the¦112259 sons of Eylam, Yeshaeyah son¦112260 of Atalyah \add !(Athaliah)\add*, and¦112264 with¦112265 him seventy¦112268 men¦112267;
+\v 34 of the¦112270 sons of Shefatyah, Zevadyah son¦112271 of Mika'el \add !(Michael)\add*, and¦112275 with¦112276 him seventy¦112279 men¦112278;
+\v 35 of the¦112281 sons of Yoav \add !(Joab)\add*, Ovadyah son¦112282 of Yehiel. Yehiel, and¦112286 with¦112287 him two¦112290 hundred¦112290 and twelve¦112291 men¦112289;
+\v 36 of the¦112293 sons of Bani, Shelomit son¦112294 of Yosifyah,\f + \fr 8:36 \ft Ezra 8:10, \fqa of the sons of Shelomith, the son of Josiphiah.\f* and¦112298 with¦112299 him one hundred¦112304 and sixty¦112302 men¦112301;
+\v 37 of the¦112306 sons of Bevay, Zekaryah son¦112307 of Bevay, and¦112311 with¦112312 him twenty-eight¦112315 men¦112314;
+\v 38 of the¦112317 sons of Azgad: Azgad, Yohan \add !(John)\add* son¦112318 of Hakatan Hakatan, and¦112322 with¦112323 him one hundred¦112326 and ten¦112327 men¦112325;
+\v 39 of the¦112329 sons¦112330 of Adonikam¦112331, the¦112332 last¦112333, and¦112334 these are the¦112336 names¦112337 of¦112340 them, Elifelet, Ye'uel, and¦112342 Shemayah, and¦112344 with¦112345 them seventy¦112348 men¦112347;
+\v 40 of the¦112350 sons of Bigvay, Utay the son¦112351 of¦112355 Zabud, and¦112357 with¦112358 him seventy¦112361 men¦112360.
+\s1 Ezra prepares the group for the journey
 \p
-\v 41 I gathered them together to the river called Ahava. There we pitched our tents three days, and I inspected them.
-\v 42 When I had found there none of the priests and Levites,
-\v 43 then sent I to Eleazar, Ariel, Shemayah,
+\v 41 I gathered them together to the¦112366 river¦112369 called Ahava. There we pitched our tents three¦112373 days¦112372, and¦112375 I inspected them.
+\v 42 When¦112378 I'd found¦112387 there¦112388 none of the¦112380 priests¦112381 and¦112382 Levites,
+\v 43 then sent¦112389 I to¦112390 Eleazar, Ariel, Shemayah,
 \v 44 Elnatan, Shemayah, Yoyariv, Natan \add !(Nathan)\add*, Elnatan, Zekaryah, and Meshulam, principal men and men of understanding.
-\v 45 I asked them to go to Ido the captain, who was in the place of the treasury,
-\v 46 and commanded them that they should speak to Ido, to his kindred, and to the treasurers in that place, to send us such men as might execute the priests’ office in our master's house.
-\v 47 By the mighty hand of our master, they brought to us men of understanding of the sons of\f + \fr 8:47 \fqa Mahli.\f* Mahli the son of Levi, the son of Yisrael \add !(Israel)\add*,\f + \fr 8:47 \fqa Sherebiah.\f* Shereveyah, and his sons, and his kindred, who were eighteen,
-\v 48 and\f + \fr 8:48 \fqa Hashabiah.\f* Hashavyah, Annuus, and Osaias his brother, of the sons of Chanuneus, and their sons were twenty men;
-\v 49 and of the temple servants whom David and the principal men had appointed for the servants of the Levites, two hundred and twenty temple servants. The list of all their names was reported.
+\v 45 I asked¦112414 them to¦112416 go¦112416 to¦112417 Ido the¦112419 captain, who was in¦112422 the¦112423 place¦112424 of¦112425 the¦112425 treasury¦112426,
+\v 46 and¦112431 commanded them that¦112432 they should speak to Ido, to his kindred, and¦112435 to the¦112436 treasurers in¦112437 that¦112438 place¦112439, to¦112441 send¦112441 us such men as might execute the priests’ office in our master's house¦112447.
+\v 47 By the¦112455 mighty¦112456 hand¦112457 of¦112458 our master, they brought¦112452 to¦112454 us men¦112461 of understanding of the¦112463 sons¦112464 of¦112466\f + \fr 8:47 \fqa Mahli.\f* Mahli the¦112466 son of¦112468 Levi, the¦112468 son of Yisrael \add !(Israel)\add*,\f + \fr 8:47 \fqa Sherebiah.\f* Shereveyah, and¦112471 his sons¦112473, and¦112475 his kindred, who¦112476 were¦112478 eighteen,
+\v 48 and\f + \fr 8:48 \fqa Hashabiah.\f* Hashavyah, Annuus, and Osaias his brother¦112488, of the¦112490 sons¦112491 of Chanuneus, and¦112493 their sons¦112495 were twenty¦112497 men¦112498;
+\v 49 and¦112499 of the¦112501 temple servants whom David and¦112506 the¦112507 principal men had appointed for the¦112510 servants of the¦112512 Levites, two¦112515 hundred¦112515 and¦112516 twenty¦112517 temple servants. The¦112520 list of¦112521 all¦112518 their names¦112521 was reported.
+\s1 Prayer and preparations for a safe journey
 \p
-\v 50 There I vowed a fast for the young men before our master, to seek from him a prosperous journey both for us and for our children and livestock that were with us;
-\v 51 for I was ashamed to ask of the king infantry, cavalry, and an escort for protection against our adversaries.
-\v 52 Because we had said to the king that the power of our master would be with those who seek him, to support them in all ways.
-\v 53 Again we prayed to our lord about these things, and found him to be merciful.
+\v 50 There¦112524 I vowed a fast¦112525 for the¦112526 young men before¦112528 our master, to¦112531 seek¦112531 from¦112532 him a prosperous journey both¦112536 for us and¦112537 for our children¦112541 and¦112543 livestock that were with us;
+\v 51 for¦112546 I was ashamed to¦112547 ask¦112547 of the¦112548 king¦112549 infantry, cavalry, and an escort for¦112556 protection against our adversaries.
+\v 52 Because¦112564 we'd said to the¦112565 king¦112566 that¦112567 our master's power¦112569 would be¦112573 with¦112574 those who¦112575 seek him, to support them in all¦112579 ways.
+\v 53 Again¦112582 we prayed to our lord¦112585 about¦112584 these things, and¦112589 found him to be merciful.
 \p
-\v 54 Then I set apart twelve men of the chiefs of the priests,\f + \fr 8:54 \fqa Sherebiah, Hashabiah.\f* Shereveyah, Hashavyah, and ten men of their kindred with them.
-\v 55 I weighed out to them the silver, the gold, and the holy vessels of the house of our master, which the king, his counsellors, the nobles, and all Yisrael \add !(Israel)\add* had given.
-\v 56 When I had weighed it, I delivered to them six hundred and fifty talents of silver, silver vessels weighing one hundred talents, one hundred talents of gold,
-\v 57 twenty golden vessels, and twelve vessels of brass, even of fine brass, glittering like gold.
-\v 58 I said to them, “You are holy to the master, the vessels are holy, and the gold and the silver are a vow to the master, the master of our fathers.
-\v 59 Watch and keep them until you deliver them to the chiefs of the priests and Levites, and to the principal men of the families of Yisrael in Yerushalem, in the chambers of our master's house.
-\v 60 So the priests and the Levites who received the silver, the gold, and the vessels which were in Yerushalem, brought them into the temple of the master.
+\v 54 Then¦112592 I set apart twelve men of the¦112594 chiefs of the¦112596 priests¦112597,\f + \fr 8:54 \fqa Sherebiah, Hashabiah.\f* Shereveyah, Hashavyah, and ten men of their kindred with¦112605 them.
+\v 55 I weighed out to them the¦112616 silver, the¦112619 gold¦112620, and¦112621 the¦112622 holy vessels¦112624 of¦112625 our master's house¦112626, which¦112630 the¦112632 king¦112633, his counsellors, the nobles, and all¦112642 Yisrael \add !(Israel)\add* had given¦112631.
+\v 56 When¦112644 I'd weighed it, I delivered¦112646 to¦112646 them six¦112650 hundred¦112650 and fifty¦112651 talents of silver, silver vessels weighing one hundred talents, one hundred talents of gold,
+\v 57 twenty¦112663 golden vessels, and¦112664 twelve¦112673 vessels of brass, even of fine brass, glittering like gold.
+\v 58 I said¦112675 to¦112675 them, “You're¦112678 holy¦112679 to¦112680 the¦112681 master, the¦112684 vessels¦112685 are holy¦112687, and¦112688 the¦112689 gold¦112690 and¦112691 the¦112692 silver are a¦112694 vow¦112694 to the¦112695 master, the¦112698 master of our fathers¦112699.
+\v 59 Watch¦112701 and¦112702 keep them until¦112704 you deliver¦112706 them to the¦112709 chiefs of the¦112711 priests¦112712 and¦112713 Levites, and¦112716 to¦112718 the¦112719 principal men of¦112721 the¦112721 families of Yisrael in¦112723 Yerushalem, in¦112725 the¦112726 chambers of¦112728 our master's house¦112729.
+\v 60 So¦112733 the priests¦112737 and¦112738 the Levites who received the silver, the¦112744 gold¦112745, and¦112746 the¦112747 vessels¦112748 which were in¦112750 Yerushalem, brought them into the¦112756 master's temple¦112755.
+\s1 The group arrives in Yerushalem
 \p
-\v 61 We left the river Ahava on the twelfth day of the first month. We came to Yerushalem \add !(Jerusalem)\add* by the mighty hand of our master which was on us. The master delivered us from every enemy on the way, and so we came to Yerushalem.
-\v 62 When we had been there three days, the silver and gold was weighed and delivered in our master's house on the fourth day to\f + \fr 8:62 \fqa Meremoth.\f* Meremot the priest the son of\f + \fr 8:62 \fqa Uriah.\f* Uriyah.
-\v 63 With him was Eleazar the son of Pinhas, and with them were Yozavad the son of Yeshua \add !(Jesus)\add* and\f + \fr 8:63 \fqa Noadiah the son of Binnui.\f* Noadyah the son of Binuy, the Levites. All was delivered to them by number and weight.
-\v 64 All the weight of them was recorded at the same hour.
-\v 65 Moreover those who had come out of captivity offered sacrifices to the master, the god of Yisrael, even twelve bulls for all Yisrael, ninety-six rams,
-\v 66 seventy-two lambs, and twelve goats for a peace offering—all of them a sacrifice to the master.
-\v 67 They delivered the king's commandments to the king's stewards and to the governors of Coele-Syria and Foinikai; and they honoured the people and the temple of the master.
+\v 61 We left the¦112761 river¦112762 Ahava on the¦112764 twelfth day of¦112766 the¦112766 first¦112767 month. We came to Yerushalem \add !(Jerusalem)\add* by the¦112774 mighty¦112775 hand¦112776 of¦112777 our master which was on us. The master delivered¦112784 us from every¦112790 enemy¦112791 on the way, and¦112792 so we came to¦112793 Yerushalem.
+\v 62 When¦112796 we'd been¦112797 there three days, the silver and¦112808 gold¦112810 was weighed and delivered¦112811 in¦112812 our master's house¦112814 on the¦112803 fourth¦112804 day to\f + \fr 8:62 \fqa Meremoth.\f* Meremot the priest¦112819 the son of\f + \fr 8:62 \fqa Uriah.\f* Uriyah.
+\v 63 With¦112821 him was Eleazar¦112823 the¦112824 son of¦112825 Pinhas, and¦112827 with¦112829 them were Yozavad the son of Yeshua \add !(Jesus)\add* and\f + \fr 8:63 \fqa Noadiah the son of Binnui.\f* Noadyah the son of Binuy, the Levites. All was delivered to¦112839 them by number¦112840 and weight.
+\v 64 All the¦112847 weight of them was recorded at the¦112851 same hour¦112852.
+\v 65 Moreover those who'd¦112853 come¦112855 out¦112856 of captivity offered sacrifices to the master, the¦112861 god¦112862 of¦112863 Yisrael, even twelve¦112867 bulls¦112866 for¦112868 all¦112869 Yisrael, ninety-six rams,
+\v 66 seventy-two¦112874 lambs¦112873, and twelve goats for a peace offering—all¦112879 of them a sacrifice¦112880 to the¦112881 master.
+\v 67 They delivered the king's commandments to the king's stewards and¦112892 to the¦112893 governors of Coele-Syria and¦112897 Foinikai; and¦112899 they honoured the¦112901 people and¦112903 the¦112906 master's temple¦112905.
+\s1 Ezra learns about marriages to foreigners
 \p
-\v 68 Now when these things were done, the principal men came to me and said,
-\v 69 “The nation of Yisrael, the princes, the priests, and the Levites haven't put away from themselves the foreign people of the land nor the uncleannesses of the Gentiles—the Kena’anim \add !(Canaanites)\add*, Hitim, Perizi, Yevusim, Moavim, Mitsrim \add !(Egyptians)\add*, and Edomim.
-\v 70 Because both they and their sons have married with their daughters, and the holy seed is mixed with the foreign people of the land. From the beginning of this matter the rulers and the nobles have been partakers of this iniquity.”
+\v 68 Now when these things were done, the¦112913 principal men came to me and¦112908 said,
+\v 69 “The¦112918 nation¦112919 of¦112920 Yisrael, the princes, the priests¦112927, and¦112928 the¦112929 Levites haven't put away¦112940 from¦112940 themselves the¦112931 foreign people of the¦112934 land¦112935 nor the¦112937 uncleannesses of the¦112941 Gentiles—the¦112943 Kena'anim \add !(Canaanites)\add*, Hitim, Perizi, Yevusim, Moavim, Mitsrim \add !(Egyptians)\add*, and Edomim.
+\v 70 Because¦112958 both they and their sons¦112967 have married with their daughters¦112961, and the¦112973 holy¦112974 seed¦112972 is mixed with the¦112976 foreign people of the¦112979 land¦112980. From¦112991 the¦112992 beginning¦112993 of¦112994 this matter the rulers and the nobles have been partakers of this iniquity.”
+\s1 Ezra confesses the people's sins
 \p
-\v 71 And as soon as I had heard these things, I tore my clothes and my holy garment, and plucked the hair from off my head and beard, and sat down sad and full of heaviness.
-\v 72 So all those who were moved at the word of the master, the god of Yisrael, assembled to me while I mourned for the iniquity, but I sat still full of heaviness until the evening sacrifice.
-\v 73 Then rising up from the fast with my clothes and my holy garment torn, and bowing my knees and stretching out my hands to the master,
-\v 74 I said, “Oh master, I am ashamed and confounded before your face,
-\v 75 for our sins are multiplied above our heads, and our errors have reached up to heaven
-\v 76 ever since the time of our fathers. We are in great sin, even to this day.
-\v 77 Because our sins and our fathers’ we with our kindred, our kings, and our priests were given up to the kings of the earth, to the sword, and to captivity, and for a prey with shame, to this day.
-\v 78 Now in some measure mercy has been shown to us from you, Oh master, that there should be left us a root and a name in the place of your sanctuary,
-\v 79 and to uncover a light in the house of the master our god, and to give us food in the time of our servitude.
-\v 80 Yes, when we were in bondage, we were not forsaken by our master, but he gave us favour before the kings of Paras \add !(Persia)\add*, so that they gave us food,
-\v 81 glorified the temple of our master, and raised up the desolate Tsiyon \add !(Zion)\add*, to give us a sure dwelling in Yehudah \add !(Judea)\add* and Yerushalem \add !(Jerusalem)\add*.
+\v 71 And¦112996 as soon as I'd heard¦112999 these things, I¦113000 tore my clothes¦113004 and¦113005 my holy garment, and¦113009 plucked the hair from off my head¦113014 and¦113015 beard, and¦113018 sat down sad and¦113021 full of heaviness.
+\v 72 So¦113023 all those who were moved at the word of the master, the god¦113034 of¦113035 Yisrael, assembled to me while I mourned for the¦113040 iniquity, but¦113042 I sat still full of heaviness until¦113045 the¦113046 evening sacrifice¦113048.
+\v 73 Then¦113049 rising up from¦113051 the fast with my clothes¦113057 and my holy garment torn, and bowing my knees¦113064 and¦113065 stretching¦113066 out¦113066 my hands¦113068 to¦113069 the¦113070 master,
+\v 74 I said, “Oh master, I'm ashamed and¦113075 confounded before your face¦113078,
+\v 75 for¦113081 our sins¦113082 are multiplied above¦113085 our heads¦113087, and¦113089 our errors have reached up to heaven¦113096
+\v 76 ever since the¦113099 time¦113100 of our fathers¦113102. We're¦113105 in¦113106 great¦113107 sin¦113108, even to this¦113110 day¦113111.
+\v 77 Because¦113114 our sins¦113116 and¦113118 our fathers¦113120’ we with our kindred, our kings¦113130, and¦113132 our priests¦113135 were given up to the¦113137 kings¦113138 of the¦113139 earth¦113140, to the sword¦113142, and¦113143 to captivity¦113144, and¦113145 for a prey with¦113147 shame¦113148, to this¦113150 day¦113152.
+\v 78 Now¦113154 in some measure mercy¦113160 has been shown to us from¦113161 you, Oh master, that there should be left¦113165 us a root¦113167 and¦113168 a name¦113169 in¦113170 the¦113171 place¦113172 of your sanctuary,
+\v 79 and¦113175 to uncover a light in¦113180 the¦113181 house¦113182 of¦113184 the¦113184 master our god¦113185, and to¦113187 give¦113187 us food¦113189 in¦113190 the¦113191 time¦113192 of our servitude.
+\v 80 Yes, when¦113196 we were in¦113197 bondage, we¦113200 weren't forsaken by¦113203 our master, but¦113207 he gave us favour before¦113212 Paras' \add !(Persia)\add* kings¦113214, so that they gave us food,
+\v 81 glorified¦113220 our master's temple¦113222, and¦113226 raised up the¦113228 desolate Tsiyon \add !(Zion)\add*, to¦113231 give¦113231 us a sure dwelling in¦113234 Yehudah \add !(Judea)\add* and¦113237 Yerushalem \add !(Jerusalem)\add*.
 \p
-\v 82 “Now, Oh master, what shall we say, having these things? Because we have transgressed your commandments which you gave by the hand of your servants the prophets, saying,
-\v 83 ‘The land, which you enter into to possess as an inheritance, is a land polluted with the pollutions of the foreigners of the land, and they have filled it with their uncleanness.
-\v 84 Therefore now you shall not join your daughters to their sons, neither shall you take their daughters for your sons.
-\v 85 You shall never seek to have peace with them, that you may be strong, and eat the good things of the land, and that you may leave it for an inheritance to your children for evermore.’
-\v 86 All that has happened is done to us for our wicked works and great sins, for you, Oh master, made our sins light,
-\v 87 and gave to us such a root; but we have turned back again to transgress your law in mingling ourselves with the uncleanness of the heathen of the land.
-\v 88 You weren't angry with us to destroy us until you had left us neither root, seed, nor name.
-\v 89 Oh master of Yisrael \add !(Israel)\add*, you are true, for we are left a root this day.
-\v 90 Listen, now we are before you in our iniquities, for we can't stand any longer before you because of these things.”
+\v 82 “Now, Oh master, what can we say, having these things? Because we've transgressed your commandments which you gave by the hand of your servants the prophets, saying,
+\v 83 ‘The land, which you enter into to possess as an inheritance, is a land polluted with the pollutions of the foreigners of the land, and they've filled it with their uncleanness.
+\v 84 Therefore now¦113283 you¦113286 mustn't¦113287 marry your daughters¦113294 to¦113297 their sons, and you mustn't take¦113297 their daughters for your sons¦113299.
+\v 85 You must never seek¦113303 to have peace with them, that¦113311 you may be strong, and eat¦113313 the¦113314 good things of the¦113316 land¦113317, and¦113318 that¦113320 you¦113322 may leave it for an¦113324 inheritance to your children¦113321 forever.’
+\v 86 All¦113328 that's happened is¦113330 done to¦113330 us for¦113331 our wicked¦113336 works¦113333 and¦113337 great¦113339 sins, for you, Oh master, made our sins light,
+\v 87 and gave¦113350 to¦113350 us such¦113352 a root¦113353; but we've turned back again¦113354 to transgress your law¦113358 in mingling ourselves with the uncleanness of the heathen of the land¦113368.
+\v 88 You weren't angry with us to¦113372 destroy¦113372 us until¦113374 you'd left us neither root¦113378, seed¦113380, nor name¦113382.
+\v 89 Oh master of¦113385 Yisrael \add !(Israel)\add*, you're true¦113387, for¦113390 we're left a root¦113391 this¦113393 day.
+\v 90 Listen, now¦113396 we're¦113397 before¦113398 you¦113399 in¦113400 our iniquities, for¦113405 we can't stand¦113407 any longer before¦113409 you¦113410 because of these things.”
+\s1 The people agree to act
 \p
-\v 91 As Ezra in his prayer made his confession, weeping, and lying flat on the ground before the temple, a very great throng of men, women, and children gathered to him from Yerushalem \add !(Jerusalem)\add*; for there was great weeping amongst the multitude.\x + \xo 8:91 \xt Ezra 10:1\x*
-\v 92 Then Yekonias the son of Yehiel, one of the sons of Yisrael, called out, and said, “Oh Ezra, we have sinned against the master God, we have married foreign women of the heathen of the land, but there is still hope for Yisrael.
-\v 93 Let's make an oath to the master about this, that we will put away all our foreign wives with their children,
-\v 94 as seems good to you, and to as many as obey the master's Law.
-\v 95 Arise, and take action, for this is your task, and we will be with you to do valiantly.”
-\v 96 So Ezra arose, and took an oath from the chief of the priests and Levites of all Yisrael to do these things; and they swore to it.
+\v 91 As Ezra in his prayer¦113415 made his confession, weeping¦113418, and lying flat on the ground before¦113420 the¦113421 temple¦113422, a very¦113430 great throng of men¦113431, women¦113433, and¦113434 children gathered to him from Yerushalem \add !(Jerusalem)\add*; for¦113437 there was¦113438 great¦113439 weeping among¦113440 the¦113441 multitude¦113442.\x + \xo 8:91: \xt Ezr 10:1.\x*
+\v 92 Then¦113443 Yekonias the¦113447 son¦113448 of Yehiel, one of the sons of Yisrael, called¦113444 out¦113460, and said¦113450, “Oh Ezra, we've¦113452 sinned against the¦113455 master God, we've married foreign women¦113458 of the¦113461 heathen of the¦113463 land¦113464, but¦113465 there's¦113467 still hope for Yisrael.
+\v 93 Let's make an oath¦113475 to¦113476 the¦113477 master about¦113498 this¦113481, that we'll¦113483 put away all¦113480 our foreign wives with¦113488 their children¦113490,
+\v 94 as seems good to¦113493 you¦113494, and¦113495 to as many as obey the master's Law¦113499.
+\v 95 Arise¦113501, and take action, for¦113505 this¦113506 is your task, and¦113508 we'll¦113509 be with¦113510 you¦113511 to¦113513 do¦113513 valiantly.”
+\v 96 So¦113514 Ezra arose¦113515, and took an oath from the¦113518 chief of the¦113520 priests¦113521 and¦113522 Levites of all¦113524 Yisrael to¦113527 do¦113527 these things; and they swore to¦113528 it¦113529.
 \c 9
+\s1 The people deal with marriages to foreigners
 \p
-\v 1 Then Ezra rose up from the temple courtyard and went to the chamber of Yonah \add !(Jonah)\add* the son of Elyashiv,\x + \xo 9:1 \xt Ezra 10:6\x*
-\v 2 and lodged there, and ate no bread and drank no water, mourning for the great iniquities of the multitude.
-\v 3 An \add official\add* announcement was made in all Yehudah and Yerushalem to all those who returned from captivity, that they should be gathered together at Yerushalem,
-\v 4 and that anyone who didn't meet there within two or three days, in accordance with the ruling of the elders, that their livestock would be seized for the use of the temple, and they would be expelled from the multitude of those who returned from captivity.
+\v 1 Then Ezra rose up from¦113535 the temple¦113539 courtyard¦113537 and went to¦113540 the¦113542 chamber¦113543 of¦113545 Yonah \add !(Jonah)\add* the¦113545 son of Elyashiv,\x + \xo 9:1: \xt Ezr 10:6.\x*
+\v 2 and¦113547 lodged there¦113549, and ate no bread¦113550 and¦113553 drank¦113555 no water¦113554, mourning for the¦113560 great¦113561 iniquities of¦113562 the¦113562 multitude¦113563.
+\v 3 An \add official\add* announcement was made in¦113567 all¦113568 Yehudah and¦113571 Yerushalem to all¦113573 those who¦113574 returned from¦113575 captivity, that¦113576 they should be gathered together at Yerushalem,
+\v 4 and¦113581 that anyone who didn't¦113584 meet there within two¦113587 or¦113588 three¦113589 days¦113590, in accordance¦113591 with the¦113592 ruling of the¦113594 elders¦113596, that their livestock would be seized for the use of the temple, and¦113601 they'd be expelled from¦113604 the¦113605 multitude¦113606 of those who¦113607 returned from captivity.
 \p
-\v 5 Within three days, all those of the tribe of Yehudah \add !(Judah)\add* and Benyamin gathered together at Yerushalem \add !(Jerusalem)\add*. This was the ninth month, on the twentieth day of the month.
-\v 6 All the multitude sat together shivering in the broad place before the temple because of the present foul weather.
-\v 7 So Ezra arose up and said to them, “You have transgressed the law and married foreign wives, increasing the sins of Yisrael \add !(Israel)\add*.
-\v 8 Now make confession and give glory to the master, the god of our fathers,
-\v 9 and do his will, and separate yourselves from the heathen of the land, and from the foreign women.”
+\v 5 Within three¦113620 days, all¦113611 those of the¦113614 tribe¦113615 of Yehudah \add !(Judah)\add* and¦113617 Benyamin gathered together at Yerushalem \add !(Jerusalem)\add*. This¦113624 was the¦113625 ninth¦113627 month, on the¦113628 twentieth day¦113621 of¦113630 the¦113630 month.
+\v 6 All¦113634 the¦113635 multitude¦113636 sat together shivering in¦113637 the¦113638 broad place before the¦113640 temple¦113641 because¦113643 of¦113643 the¦113644 present¦113645 foul weather.
+\v 7 So¦113647 Ezra arose¦113648 up and said¦113650 to¦113650 them, “You've¦113652 transgressed the law and¦113654 married foreign wives, increasing the¦113658 sins¦113660 of Yisrael \add !(Israel)\add*.
+\v 8 Now¦113664 make confession¦113666 and give¦113665 glory¦113667 to the master, the god¦113670 of our fathers¦113672,
+\v 9 and¦113674 do¦113675 his will¦113677, and¦113679 separate yourselves from¦113681 the¦113682 heathen of the¦113684 land¦113685, and¦113686 from¦113687 the¦113688 foreign women¦113689.”
 \p
-\v 10 Then the whole multitude cried out, and said with a loud voice, “Just as you have spoken, so we will do.
-\v 11 But because the multitude is great, and it is foul weather, so that we can't stand outside, and this is not a work of one day or two, seeing our sin in these things has spread far,
-\v 12 therefore let the rulers of the multitude stay, and let all those of our settlements that have foreign wives come at the time appointed,
-\v 13 and with them the rulers and judges of every place, until we turn away the wrath of the master from us for this matter.”
+\v 10 Then¦113692 the¦113695 whole¦113694 multitude¦113696 cried out, and¦113697 said¦113698 with a loud voice¦113701, “Just as you've spoken, so we'll do¦113705.
+\v 11 But¦113706 because the¦113707 multitude¦113708 is great, and¦113710 it's foul weather, so¦113713 that we can't stand¦113716 outside, and¦113718 this¦113719 isn't a work¦113720 of one day¦113724 or two¦113727, seeing our sin in¦113732 these things has spread far,
+\v 12 therefore let the¦113736 rulers of¦113738 the¦113738 multitude¦113739 stay, and¦113740 let all¦113741 those of our settlements that have¦113748 foreign wives come at the time¦113753 appointed,
+\v 13 and¦113755 with them the¦113757 rulers and¦113759 judges¦113761 of every place¦113756, until¦113762 we turn away¦113768 the¦113770 master's anger¦113766 from¦113768 us for this¦113772 matter.”
 \p
-\v 14 So Yonatan \add !(Jonathan)\add* the son of Asahel and Yahzeyah\f + \fr 9:14 \ft Another reading is, \fqa Ezias.\f* the son of Tikvah took the matter on themselves. Meshulam and Levi and Shabtay were judges with them.
-\v 15 Those who returned from captivity did according to all these things.
+\v 14 So¦113775 Yonatan \add !(Jonathan)\add* the son of Asahel and¦113781 Yahzeyah\f + \fr 9:14 \ft Another reading is, \fqa Ezias.\f* the son of Tikvah took the matter on themselves. Meshulam and¦113783 Levi and¦113785 Shabtay were judges with them.
+\v 15 Those who returned from captivity did¦113790 according¦113791 to¦113791 all¦113792 these things.
 \p
-\v 16 Ezra the priest chose for himself principal men of their families, all by name. On the new moon of the tenth month they met together to examine the matter.
-\v 17 So their cases of men who had foreign wives was brought to an end by the new moon of the first month.
+\v 16 Ezra the¦113802 priest¦113803 chose for himself principal men¦113804 of their families, all¦113809 by name¦113811. On the¦113814 new¦113815 moon¦113815 of¦113816 the tenth month they met together to examine the matter.
+\v 17 So¦113823 their cases of men¦113830 who had foreign wives was brought¦113824 to¦113825 an end¦113826 by the¦113836 new¦113837 moon¦113837 of¦113838 the¦113838 first¦113839 month.
+\s1 Those who had married foreign women
 \p
-\v 18 Of the priests who had come together and had foreign wives, there were found
-\v 19 of the sons of Yeshua \add !(Jesus)\add* the son of Yotsadak, and his kindred, Ma’aseyah,\f + \fr 9:19 \fqa Maaseiah.\f* Eleazar, and Yariv,\f + \fr 9:19 \fqa Jarib.\f* and Gedalyah.\f + \fr 9:19 \fqa Gedaliah\f*
-\v 20 They gave their hands to put away their wives, and to offer rams to make reconciliation for their error.
-\v 21 Of the sons of Imer: Hananyah, Zevadyah, Harim,\f + \fr 9:21 \fqa Harim\f* Ma’aseyah,\f + \fr 9:21 \fqa Maaseiah.\f* Yehiel,\f + \fr 9:21 \fqa Jehiel.\f* and Uziyah.\f + \fr 9:21 \fqa Uzziah.\f*
-\v 22 Of the sons of Pashhur:\f + \fr 9:22 \fqa Pashhur.\f* Elyehoeynay, Ma’aseyah, Yishmael \add !(Ishmael)\add*, Netanel, Yozavad,\f + \fr 9:22 \fqa Jozabad.\f* and Eleasah.\f + \fr 9:22 \fqa Elasah.\f*
+\v 18 Of the¦113843 priests¦113844 who'd¦113845 come together and had foreign wives, there were found¦113842
+\v 19 of the¦113851 sons of¦113854 Yeshua \add !(Jesus)\add* the son¦113852 of Yotsadak, and his kindred, Ma'aseyah,\f + \fr 9:19 \fqa Maaseiah.\f* Eleazar, and Yariv,\f + \fr 9:19 \fqa Jarib.\f* and Gedalyah.\f + \fr 9:19 \fqa Gedaliah\f*
+\v 20 They gave their hands¦113870 to¦113868 put¦113868 away their wives, and to offer rams to make reconciliation for¦113879 their error.
+\v 21 Of the¦113885 sons¦113886 of Imer: Hananyah, Zevadyah, Harim,\f + \fr 9:21 \fqa Harim\f* Ma'aseyah,\f + \fr 9:21 \fqa Maaseiah.\f* Yehiel,\f + \fr 9:21 \fqa Jehiel.\f* and Uziyah.\f + \fr 9:21 \fqa Uzziah.\f*
+\v 22 Of the¦113901 sons¦113902 of Pashhur:\f + \fr 9:22 \fqa Pashhur.\f* Elyehoeynay, Ma'aseyah, Yishmael \add !(Ishmael)\add*, Netanel, Yozavad,\f + \fr 9:22 \fqa Jozabad.\f* and Eleasah.\f + \fr 9:22 \fqa Elasah.\f*
 \p
-\v 23 Of the Levites: Yozavad, Shimei, Kelayah\f + \fr 9:23 \fqa Kelaiah.\f* who was called Kelita,\f + \fr 9:23 \fqa Kelita.\f* Petahyah,\f + \fr 9:23 \fqa Pethahiah.\f* Yehudah \add !(Judas)\add*, and Yonah \add !(Jonah)\add*.
-\v 24 Of the holy singers: Elyashiv\f + \fr 9:24 \fqa Eliashib.\f* and Bakurus.
-\v 25 Of the gatekeepers: Shalum and\f + \fr 9:25 \fqa Telem.\f* Telem.
+\v 23 Of the Levites: Yozavad, Shimei, Kelayah\f + \fr 9:23 \fqa Kelaiah.\f* who was¦113923 called Kelita,\f + \fr 9:23 \fqa Kelita.\f* Petahyah,\f + \fr 9:23 \fqa Pethahiah.\f* Yehudah \add !(Judas)\add*, and Yonah \add !(Jonah)\add*.
+\v 24 Of the¦113932 holy singers: Elyashiv\f + \fr 9:24 \fqa Eliashib.\f* and Bakurus.
+\v 25 Of the¦113937 gatekeepers: Shalum and¦113940\f + \fr 9:25 \fqa Telem.\f* Telem.
 \p
-\v 26 Of Yisrael \add !(Israel)\add*, of the sons of Par’osh:\f + \fr 9:26 \fqa Parosh.\f* Rameyah,\f + \fr 9:26 \fqa Ramiah\f* Yiziyah,\f + \fr 9:26 \fqa Izziah. \ft Another reading is, \fqa Iezias\f* Malkiyah, Miyamin,\f + \fr 9:26 \fqa Mijamin.\f* Eleazar, Asibas, and Benayah.\f + \fr 9:26 \fqa Malchijah.\f*
-\v 27 Of the sons of Elah: Matanyah, Zekaryah \add !(Zechariah)\add*, Yehiel,\f + \fr 9:27 \fqa Jehiel.\f* Ovadyah \add !(Obadiah)\add*, Yerimot, and\f + \fr 9:27 \fqa Abdi.\f* Avdi.
-\v 28 Of the sons of Zatu:\f + \fr 9:28 \fqa Zattu.\f* Elyehoeynay,\f + \fr 9:28 \fqa Elioenai.\f* Elyashiv,\f + \fr 9:28 \fqa Eliashib.\f* Matanyah,\f + \fr 9:28 \fqa Mattaniah.\f* Yerimot, Zavad,\f + \fr 9:28 \fqa Zabad.\f* and\f + \fr 9:28 \fqa Aziza.\f* Aziza.
-\v 29 Of the sons of Bevay: Yohan \add !(John)\add*, Hananyah, Zabay,\f + \fr 9:29 \fqa Zabbai.\f* and Atlay.\f + \fr 9:29 \fqa Athlai.\f*
-\v 30 Of the sons of Bani:\f + \fr 9:30 \fqa Bani.\f* Meshulam,\f + \fr 9:30 \fqa Meshullam.\f* Maluk,\f + \fr 9:30 \fqa Malluch.\f* Adayah,\f + \fr 9:30 \fqa Adaiah.\f* Yashuv, Sheal,\f + \fr 9:30 \fqa Sheal.\f* and Yerimot.
-\v 31 Of the sons of Addi: Naathus, Moossias, Laccunus, Naidus, Matanyah, Sheal, Balnuus, and Menasheh \add !(Manasseh)\add*.
-\v 32 Of the sons of Hanan: Elyehoeynay, Aseas, Malkiyah, Sabbeus, and Shim’on \add !(Simon)\add* Chosameus.
-\v 33 Of the sons of Hashum: Matenay,\f + \fr 9:33 \fqa Mattenai.\f* Matityah \add !(Mattathias)\add*,\f + \fr 9:33 \fqa Mattattah.\f* Zavad,\f + \fr 9:33 \fqa Zabad.\f* Elifelet, Menasheh, and Shimei.
-\v 34 Of the sons of Bani: Yirmiyah \add !(Jeremiah)\add*, Momdis, Ismaerus, Yoel \add !(Joel)\add*, Amram, Pedias, Anos, Carabasion, Enasibus, Mamnitamenus, Eliasis, Bannus, Eliali, Someis, Shelemyah, and Netanyah. Of the sons of Ezora: Sesis, Ezril, Azarel, Samatus, Zimri, and Yosef \add !(Joseph)\add*.
-\v 35 Of the sons of Nooma: Mazitias, Zavad, Edos, Yoel, and Benayah.
-\v 36 All these had taken foreign wives, and they put them away with their children.
+\v 26 Of Yisrael \add !(Israel)\add*, of the sons¦113947 of Par'osh:\f + \fr 9:26 \fqa Parosh.\f* Rameyah,\f + \fr 9:26 \fqa Ramiah\f* Yiziyah,\f + \fr 9:26 \fqa Izziah. \ft Another reading is, \fqa Iezias\f* Malkiyah, Miyamin,\f + \fr 9:26 \fqa Mijamin.\f* Eleazar, Asibas, and Benayah.\f + \fr 9:26 \fqa Malchijah.\f*
+\v 27 Of the¦113963 sons¦113964 of Elah: Matanyah, Zekaryah \add !(Zechariah)\add*, Yehiel,\f + \fr 9:27 \fqa Jehiel.\f* Ovadyah \add !(Obadiah)\add*, Yerimot, and\f + \fr 9:27 \fqa Abdi.\f* Avdi.
+\v 28 Of the¦113978 sons¦113979 of Zatu:\f + \fr 9:28 \fqa Zattu.\f* Elyehoeynay,\f + \fr 9:28 \fqa Elioenai.\f* Elyashiv,\f + \fr 9:28 \fqa Eliashib.\f* Matanyah,\f + \fr 9:28 \fqa Mattaniah.\f* Yerimot, Zavad,\f + \fr 9:28 \fqa Zabad.\f* and\f + \fr 9:28 \fqa Aziza.\f* Aziza.
+\v 29 Of the¦113991 sons¦113992 of Bevay: Yohan \add !(John)\add*, Hananyah, Zabay,\f + \fr 9:29 \fqa Zabbai.\f* and Atlay.\f + \fr 9:29 \fqa Athlai.\f*
+\v 30 Of the¦114002 sons¦114003 of Bani:\f + \fr 9:30 \fqa Bani.\f* Meshulam,\f + \fr 9:30 \fqa Meshullam.\f* Maluk,\f + \fr 9:30 \fqa Malluch.\f* Adayah,\f + \fr 9:30 \fqa Adaiah.\f* Yashuv, Sheal,\f + \fr 9:30 \fqa Sheal.\f* and Yerimot.
+\v 31 Of the sons¦114015 of Addi¦114016: Naathus, Moossias, Laccunus, Naidus, Matanyah, Sheal, Balnuus, and Menasheh \add !(Manasseh)\add*.
+\v 32 Of the¦114032 sons¦114033 of Hanan: Elyehoeynay, Aseas, Malkiyah, Sabbeus, and Shim'on \add !(Simon)\add* Chosameus.
+\v 33 Of the¦114047 sons¦114048 of Hashum: Matenay,\f + \fr 9:33 \fqa Mattenai.\f* Matityah \add !(Mattathias)\add*,\f + \fr 9:33 \fqa Mattattah.\f* Zavad,\f + \fr 9:33 \fqa Zabad.\f* Elifelet, Menasheh, and Shimei.
+\v 34 Of the¦114063 sons¦114064 of Bani: Yirmiyah \add !(Jeremiah)\add*, Momdis, Ismaerus, Yoel \add !(Joel)\add*, Amram, Pedias¦114072, Anos¦114074, Carabasion, Enasibus, Mamnitamenus, Eliasis¦114080, Bannus, Eliali, Someis¦114083, Shelemyah, and¦114086 Netanyah. Of the¦114088 sons¦114089 of Ezora¦114090: Sesis, Ezril, Azarel, Samatus, Zimri, and Yosef \add !(Joseph)\add*.
+\v 35 Of the¦114099 sons¦114100 of Nooma: Mazitias¦114102, Zavad, Edos, Yoel, and Benayah.
+\v 36 All¦114107 these had taken foreign wives, and¦114112 they put them away with¦114115 their children¦114116.
+\s1 Ezra reads God's law to the people
 \p
-\v 37 The priests and Levites, and those who were of Yisrael \add !(Israel)\add*, lived in Yerushalem \add !(Jerusalem)\add* and in the country, on the new moon of the seventh month, and the children of Yisrael in their settlements.
+\v 37 The¦114119 priests¦114120 and¦114121 Levites, and¦114124 those who¦114125 were of¦114127 Yisrael \add !(Israel)\add*, lived in¦114129 Yerushalem \add !(Jerusalem)\add* and¦114131 in¦114132 the¦114133 country¦114134, on the¦114135 new¦114136 moon¦114136 of¦114137 the¦114139 seventh¦114140 month, and¦114141 the¦114142 children¦114143 of Yisrael in¦114145 their settlements.
 \p
-\v 38 The whole multitude gathered together with one accord into the broad place before the porch of the temple towards the east.\x + \xo 9:38 \xt Nehemiah 8:1\x*
-\v 39 They said to Ezra the priest and reader, “Bring the law of Mosheh \add !(Moses)\add* that was given by the master, the god of Yisrael.”
+\v 38 The¦114152 whole¦114151 multitude¦114153 gathered together with¦114159 one accord into¦114155 the¦114156 broad place before the¦114158 porch of¦114161 the¦114161 temple¦114162 towards the east.\x + \xo 9:38: \xt Neh 8:1.\x*
+\v 39 They said¦114165 to¦114165 Ezra the¦114167 priest¦114168 and¦114169 reader, “Bring Mosheh's \add !(Moses)\add* law¦114173 that¦114175 was given by¦114177 the master, the god¦114179 of Yisrael.”
 \p
-\v 40 So Ezra the chief priest brought the law to the whole multitude both of men and women, and to all the priests, to hear the law on the new moon of the seventh month.
-\v 41 He read in the broad place before the porch of the temple from morning until midday, before both men and women; and all the multitude gave attention to the law.
-\v 42 Ezra the priest and reader of the law stood up on the wooden pulpit which had been prepared.
-\v 43 Beside him stood Matityah \add !(Mattathias)\add*, Shema, Hananyah, Azaryah, Uriyah, Hilkiyah,\f + \fr 9:43 \fqa Hilkiah.\f* and Baalsamus on the right hand,
-\v 44 and on his left hand, Pedayah,\f + \fr 9:44 \fqa Pedaiah.\f* Mishael, Malkiyah, Hashum,\f + \fr 9:44 \fqa Hashuin.\f* Nabarias, and Zekaryah \add !(Zechariah)\add*.
-\v 45 Then Ezra took the book of the law before the multitude, and sat honourably in the first place before all.
-\v 46 When he opened the law, they all stood straight up. So Ezra blessed the master God Most High, the god of armies, the Almighty.
-\v 47 All the people answered, “Amen.” Lifting up their hands, they fell to the ground and worshipped the master.
-\v 48 Also Yeshua \add !(Jesus)\add*, Annus, Shereveyah, Yamin, Akuv, Shabtay, Hodiyah,\f + \fr 9:48 \fqa Hodiah.\f* Maiannas, Kelita, Azaryah, Yozavad, Hananyah, and Pelayah, the Levites, taught the law of the master, and\f + \fr 9:48 \ft Some authorities omit \fq and read…master.\f* read to the multitude the law of the master, explaining what was read.
+\v 40 So¦114181 Ezra the¦114184 chief priest¦114198 brought the¦114186 law¦114187 to the¦114189 whole multitude¦114190 both of men and women¦114194, and¦114195 to all¦114196 the¦114197 priests, to¦114199 hear¦114199 the¦114200 law¦114201 on the new¦114202 moon¦114202 of¦114203 the¦114203 seventh¦114204 month.
+\v 41 He read¦114207 in¦114208 the¦114209 broad place before¦114210 the porch of¦114211 the¦114211 temple¦114212 from¦114215 morning¦114216 until¦114217 midday, before¦114220 both¦114222 men¦114221 and¦114223 women¦114224; and¦114225 all¦114227 the¦114228 multitude¦114229 gave¦114226 attention to the¦114233 law¦114234.
+\v 42 Ezra the¦114238 priest¦114239 and¦114240 reader of¦114242 the¦114242 law¦114243 stood¦114236 up on¦114244 the wooden pulpit which had been prepared.
+\v 43 Beside him stood¦114251 Matityah \add !(Mattathias)\add*, Shema, Hananyah, Azaryah, Uriyah, Hilkiyah,\f + \fr 9:43 \fqa Hilkiah.\f* and¦114250 Baalsamus on the right¦114262 hand,
+\v 44 and¦114263 on his left¦114265 hand, Pedayah,\f + \fr 9:44 \fqa Pedaiah.\f* Mishael, Malkiyah, Hashum,\f + \fr 9:44 \fqa Hashuin.\f* Nabarias¦114271, and Zekaryah \add !(Zechariah)\add*.
+\v 45 Then Ezra took¦114274 the¦114276 book¦114277 of¦114279 the law before the multitude¦114280, and sat honourably in the first place before¦114283 all¦114284.
+\v 46 When¦114285 he opened the¦114289 law¦114290, they all¦114291 stood¦114293 straight up. So¦114294 Ezra blessed¦114295 the¦114297 master God¦114299 Most High, the god¦114301 of¦114302 armies, the Almighty.
+\v 47 All¦114306 the¦114307 people¦114308 answered, “Amen¦114309.” Lifting up¦114311 their hands¦114314, they fell to¦114316 the¦114317 ground¦114318 and worshipped¦114319 the¦114320 master.
+\v 48 Also Yeshua \add !(Jesus)\add*, Annus, Shereveyah, Yamin, Akuv, Shabtay, Hodiyah,\f + \fr 9:48 \fqa Hodiah.\f* Maiannas¦114333, Kelita, Azaryah, Yozavad, Hananyah, and Pelayah, the¦114342 Levites, taught¦114344 the¦114347 master's law¦114346, and¦114349\f + \fr 9:48 \ft Some authorities omit \fq and read…master.\f* read to¦114350 the¦114351 multitude¦114352 the¦114354 master's law¦114355, explaining what was read¦114361.
 \p
-\v 49 Then Attharates said to Ezra the chief priest and reader, and to the Levites who taught the multitude, even to all,
-\v 50 “This day is holy to the master—now they all wept when they heard the law—
-\v 51 go then, eat the fat, drink the sweet, and send portions to those who have nothing;
-\v 52 for the day is holy to the master. Don't be sorrowful, for the master will bring you to honour.”
-\v 53 So the Levites commanded all things to the people, saying, “This day is holy. Don't be sorrowful.”
-\v 54 Then they went their way, every one to eat, drink, enjoy themselves, to give portions to those who had nothing, and to rejoice greatly,
-\v 55 because they understood\f + \fr 9:55 \ft Or, \fqa were inspired by\f* the words they were instructed with, and for which they had been assembled.
+\v 49 Then¦114362 Attharates said¦114363 to¦114363 Ezra the¦114366 chief priest and¦114368 reader, and¦114370 to the¦114371 Levites who¦114373 taught the¦114375 multitude¦114376, even to¦114377 all¦114378,
+\v 50 “This¦114379 day¦114380 is¦114382 holy¦114383 to the¦114384 master—now they all¦114387 wept¦114388 when¦114386 they heard¦114391 the¦114392 law¦114393—
+\v 51 go then¦114395, eat¦114396 the fat, drink¦114399 the sweet, and send portions to those who have¦114406 nothing;
+\v 52 for¦114408 the¦114409 day¦114410 is holy¦114407 to the¦114411 master. Don't¦114414 be sorrowful, for the master will bring you to¦114419 honour¦114419.”
+\v 53 So¦114421 the¦114422 Levites commanded all¦114425 things to the¦114426 people¦114427, saying, “This¦114429 day¦114430 is holy¦114432. Don't¦114433 be sorrowful.”
+\v 54 Then¦114435 they went their way, every¦114437 one to¦114438 eat¦114438, drink¦114440, enjoy themselves, to¦114444 give¦114444 portions to those who¦114446 had¦114448 nothing, and¦114449 to¦114450 rejoice¦114450 greatly¦114451,
+\v 55 because¦114452 they understood\f + \fr 9:55 \ft Or, \fqa were inspired by\f* the¦114456 words they were instructed with, and for¦114453 which¦114458 they'd been assembled.

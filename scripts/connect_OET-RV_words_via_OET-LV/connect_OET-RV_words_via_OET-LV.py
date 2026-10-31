@@ -96,6 +96,7 @@ Versification: Use the explicit BOS OET-RV and OET-LV source profiles.
 
 CHANGELOG:
     2026-10-29 Include DC sources, independent word tables and conservative draft metadata.
+    2026-10-31 Route LAO, PSS and ODE through the DC word table.
     2026-10-22 Use BOS source profiles for mapped metadata, passages and export/navigation.
     2023-07-31 Added character marker checks for each RV line
     2023-08-29 Added nomina sacra (NS) for connected words in RV
@@ -260,7 +261,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-29'
+LAST_MODIFIED_DATE = '2026-10-31'
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '2.0.0'
@@ -335,7 +336,7 @@ def bookSegment(book):
         return 'NT'
     # The BOS deuterocanon category does not include every OET extra book.
     if book in {'TOB', 'JDT', 'ESG', 'WIS', 'SIR', 'BAR', 'DNG', 'MA1', 'MA2',
-                'MA3', 'MA4', 'GES', 'LES', 'MAN', 'PS2'}:
+                'MA3', 'MA4', 'GES', 'LES', 'MAN', 'PS2', 'PSS', 'ODE', 'LAO'}:
         return 'DC'
     raise ValueError(f'No word-table segment for {book}')
 
@@ -1364,7 +1365,7 @@ def matchVerseCandidates( BBB:str, c:int,v:int, lvWordList:List[str], reversedOr
             if row[header.index('GlossStatus')] in {'missing', 'ambiguous', 'unusable-gloss'} \
                     or not row[header.index('OETGlossWords')]:
                 # Retain its position as an unmatchable column; omitting it
-                # would join words that are not adjacent in the Greek source.
+                # would join words that are not adjacent in the source text.
                 columns.append(LVToken(f'⟦DC:{number}⟧', number))
                 continue
         # Hebrew transliterations can start with a modifier letter (ʼAhₐron,

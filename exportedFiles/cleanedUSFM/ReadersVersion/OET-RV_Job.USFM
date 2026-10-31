@@ -1,4 +1,4 @@
-\id JOB - Open English Translation—Readers’ Version (OET-RV) v0.2.0
+\id JOB - Open English Translation—Readers’ Version (OET-RV) v0.2.4
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JOB
@@ -10,7 +10,7 @@
 \mt1 Iyov
 \mt2 (Job)
 \is1 Introduction
-\ip \bk The account of Iyov\bk* (but commonly as known as ‘Job’ which is the English evolution of the Germanic adaptation of the Greek adaptation Ἰώβ (Iōb) of his actual Hebrew name ‘אִיּוֹב’) is an account about a godly man who was struck by a series of tragedies: all his children and their families were killed, all his extensive wealth was lost, and then he was struck with a terrible disease. By means of this seven-part account, the reader is informed about how Iyov and his friends react concerning those tragedies. Then finally, God reveals himself to Iyov and the others.
+\ip \bk The account of Iyov\bk* (but commonly as known as ‘Iyov’ which is the English evolution of the Germanic adaptation of the Greek adaptation Ἰώβ (Iōb) of his actual Hebrew name ‘אִיּוֹב’) is an account about a godly man who was struck by a series of tragedies: all his children and their families were killed, all his extensive wealth was lost, and then he was struck with a terrible disease. By means of this seven-part account, the reader is informed about how Iyov and his friends react concerning those tragedies. Then finally, God reveals himself to Iyov and the others.
 \ip Near the beginning of this document, God is told by Satan that it’s not good governing of his people if he always rewards those who obey him. What if people only obey God because they’re after the material blessings that would always follow. This would mean that their obedience no longer comes from their hearts. Yes, that’s what Satan said about Iyov, so God allowed Satan to test Iyov’s heart to see if he’d continue to trust God in times of suffering and misery.
 \ip Iyov’s traditional friends assumed that he must be suffering because he sinned. Surely he wouldn’t suffer all that if he’d been honest and righteous. None of them could understand why God might allow sickness or disease to strike someone if he was truly a righteous person, but this is too simplistic for Iyov to accept. Therefore he challenges God to present his case. In all of that, Iyov’s faith in God isn’t lost, but he desires to regain his honour as an honest and godly person.
 \ip God doesn’t answer Iyov’s questions but he responds by displaying his own power and wisdom and knowledge. So then Iyov acknowledges God as the wise creator and requests forgiveness for his angry words.
@@ -91,7 +91,7 @@
 \v 10 “You’re talking like a foolish \add person\add*,” \add Iyov\add* \add replied\add*. “Should we \add only\add* accept good from God and not receive the bad?” In all of that, Iyov didn’t sin \add in what he said\add*.
 \s1 Iyov’s three friends come
 \p
-\v 11 \add When\add* Iyov’s \add (Job)\add* three friends heard \add about all the troubles that had happened to\add* him, they each came from his place: Elifaz from Teyman, Bildad from Shuah, and Zofar from Naamah. They gathered together to come to console and comfort him.
+\v 11 \add When\add* Iyov’s \add (Job)\add* three friends heard \add about all the troubles that had happened to\add* him, they each came from his place: Elifaz from Teyman, Bildad from Shuah, and Tsofar from Na’amah. They gathered together to come to console and comfort him.
 \v 12 \add but when\add* they saw him from a distance, they \add barely\add* recognised him. They \add wailed loudly\add*, and they \add ripped their own clothes\add*, and they threw dust \add into the air so that it would fall\add* on their heads. \add (All three of those were traditional signs of mourning.)\add*
 \v 13 Then they sat with him \add there\add* on the ground for seven days and seven nights without saying a \add single\add* word to \add Iyov\add* because they had seen that \add his\add* suffering was extreme.
 \c 3
@@ -758,10 +758,10 @@
 \v 22 the land of gloom and deep darkness,
 \q1 disorderly and with gloomy light.
 \c 11
-\s1 Zofar’s first response to Iyov
+\s1 Tsofar’s first response to Iyov
 \p
-\v 1 Then Zofar (from Naamah) answered:
-\sp Zofar
+\v 1 Then Tsofar (from Na’amah) answered:
+\sp Tsofar
 \q1
 \v 2 Shouldn’t these many words be answered?
 \q1 Or is a man to be acquitted \add just by what comes from\add* \add his\add* lips.
@@ -824,9 +824,9 @@
 \q2 and the way of escape will be \add invisible\add* to them.
 \q1 Their hope will \add be limited to their last\add* gasp of life.
 \c 12
-\s1 Iyov’s first response to Zofar
+\s1 Iyov’s first response to Tsofar
 \p
-\v 1 Then Iyov \add (Job)\add* responded \add to Zofar\add*:
+\v 1 Then Iyov \add (Job)\add* responded \add to Tsofar\add*:
 \sp Iyov
 \q1
 \v 2 \add Ah,\add* you’re certainly ‘the people’
@@ -1471,10 +1471,10 @@
 \q2 because anger brings punishment by the sword,
 \q1 so that \add you\add* will know that \add there is\add* judgement.
 \c 20
-\s1 Zofar’s second response to Iyov
+\s1 Tsofar’s second response to Iyov
 \p
-\v 1 Then Zofar (from Naamah) \add responded to Iyov\add* \add (Job)\add*:
-\sp Zofar
+\v 1 Then Tsofar (from Na’amah) \add responded to Iyov\add* \add (Job)\add*:
+\sp Tsofar
 \q1
 \v 2 My anxious thoughts \add force\add* me to answer,
 \q1 because of the turmoil that’s within me.
@@ -1564,9 +1564,9 @@
 \v 29 That’s what God serves up to wicked \add people\add*,
 \q1 and the heritage that God has decreed for them.
 \c 21
-\s1 Iyov’s second response to Zofar
+\s1 Iyov’s second response to Tsofar
 \p
-\v 1 Then Iyov \add (Job)\add* \add responded to Zofar and the others\add*:
+\v 1 Then Iyov \add (Job)\add* \add responded to Tsofar and the others\add*:
 \sp Iyov
 \q1
 \v 2 Listen carefully to my words,
@@ -2409,7 +2409,7 @@
 \v 27 and my heart was secretly enticed,
 \q1 and my hand \add threw kisses\add* from my mouth,
 \q1
-\v 28 this would also be an evil deserving judgement,\x + \xo 31:28a \xt Yob 31:11b.\x*
+\v 28 this would also be an evil deserving judgement,\x + \xo 31:28a: \xt Yob 31:11b.\x*
 \q1 because I would have denied the god above.
 \q1
 \v 29 If I’ve been happy at the ruin of someone who hated me,
@@ -2458,14 +2458,14 @@
 \s1 Elihu’s response
 \p
 \v 1 \add After that\add* those three men stopped answering Iyov \add (Job)\add*, because \add they considered that he had just been trying to justify himself\add*.
-\v 2 Then Elihu (son of Barakel the Buzite, from the clan of Ram) \add got angry with\add* Iyov because \add Iyov\add* \add seemed to be\add* claiming that he was \add in the right\add* rather than God.
+\v 2 Then Elihu (son of Barak’el the Buzi, from the clan of Ram) \add got angry with\add* Iyov because \add Iyov\add* \add seemed to be\add* claiming that he was \add in the right\add* rather than God.
 \p
 \v 3 He was also \add angry\add* at \add Iyov’s\add* three friends, because they had declared that he was wrong, yet hadn’t found any \add reasonable justification for it\add*.
 \v 4 Elihu had \add waited to speak\add* because they were \add all\add* older than him,
 \v 5 \add but\add* when \add he\add* had seen that they \add didn’t really have any answer\add*, he \add got angry\add*.
 \s1 Elihu’s first speech to Iyov’s three friends
 \p
-\v 6 \add So\add* \add now\add* Elihu (son of Barakel the Buzite) \add spoke up\add*:
+\v 6 \add So\add* \add now\add* Elihu (son of Barak’el the Buzi) \add spoke up\add*:
 \sp Elihu
 \q1 I’m \add only\add* young and all of you are much older than me,
 \q1 so I was shy and reluctant to give you all my views.
@@ -2642,14 +2642,14 @@
 \v 4 Let’s choose justice for ourselves.
 \q1 Let’s discern among ourselves what is good.
 \q1
-\v 5 Because Iyov \add (Job)\add* has \add declared\add*, ‘I’m righteous,
+\v 5 Because Iyov has \add declared\add*, ‘I’m righteous,
 \q1 but God has deprived me of justice.
 \q1
 \v 6 Would I lie about my \add rights\add*?
 \q1 My wound is incurable despite not having disobeyed.’
 \b
 \q1
-\v 7 What other \add person\add* is like Iyov?
+\v 7 What other \add person\add* is like Iyov \add (Job)\add*?
 \q1 He drinks up mockery like \add drinking\add* water.
 \q1
 \v 8 He keeps company with those who do evil,
@@ -3243,7 +3243,7 @@
 \sp Yahweh
 \q1
 \v 7 \add Now\add* tuck up your robe like a man \add going into battle\add*.
-\q1 I will question you, and you must answer me.
+\q1 I’ll question you, and you must answer me.
 \q1
 \v 8 Would you actually invalidate my judgement?
 \q1 \add Would you\add* condemn me so you can \add declare yourself\add* right?
@@ -3267,7 +3267,7 @@
 \q1 that you \em can\em* save yourself \add with your own strength\add*.
 \b
 \q1
-\v 15 Now look at the \bd sauropod\bd* which I made \add on the same day\add* as you.
+\v 15 Now look at the \bd sauropod\bd* \add (behemoth)\add* which I made \add on the same day\add* as you.
 \q1 It eats grass like a cow.
 \q1
 \v 16 Notice the strength in his thighs,
@@ -3298,7 +3298,7 @@
 \q1 Is there anyone who can \add make\add* a \add snare\add* to pierce \add its\add* nose?
 \c 41
 \p
-\v 1 Can you pull \bd the sea dragon\bd* with a hook,\x + \xo 41:1: \xt Psa 74:14; 104:26; Isa 27:1.\x*
+\v 1 Can you pull \bd the sea dragon\bd* \add (leviathan)\add* with a hook,\x + \xo 41:1: \xt Psa 74:14; 104:26; Isa 27:1.\x*
 \q1 or tie his tongue down with a rope?
 \q1
 \v 2 Can you put a leash into its nose,
@@ -3429,7 +3429,7 @@
 \v 7 After Yahweh had said that to Iyov \add (Job)\add*, \add he\add* told Elifaz (from Teyman), “\add I’m angry\add* with you and your two friends, because what you all said about me wasn’t right, like what Iyov \add said\add*.
 \v 8 \add So\add* now get seven bulls and seven rams and go to my servant Iyov and offer \add them\add* as a burnt offering for yourselves. Then my servant Iyov will pray for you all. \add I’ll do what he asks and\add* not deal with you like your foolishness \add deserves\add*, because you all didn’t speak accurately about me like Iyov did.”
 \p
-\v 9 \add So\add* Elifaz (from Teyman) and Bildad (from Shuah) and Zofar (from Naamah) went and did what Yahweh had told them, and Yahweh accepted Iyov’s \add prayer\add*.
+\v 9 \add So\add* Elifaz (from Teyman) and Bildad (from Shuah) and Tsofar (from Na’amah) went and did what Yahweh had told them, and Yahweh accepted Iyov’s \add prayer\add*.
 \s1 Iyov’s doubled restoration
 \p
 \v 10 After Iyov \add (Job)\add* had prayed for his friends, Yahweh \add changed his situation\add* and \add gave\add* \add him\add* double \add what he had before\add*.\x + \xo 42:10: \xt Yob 1:1-3.\x*
@@ -3437,7 +3437,7 @@
 \p
 \v 12 Then Yahweh blessed the second part of Iyov’s \add life\add* more than the first, and he \add ended up with\add* 14,000 sheep, 6,000 camels, 1,000 \add working\add* pairs of cows, and 1,000 female donkeys.
 \v 13 He \add also\add* had seven \add more\add* sons and three \add more\add* daughters
-\v 14 who he named Yemimah, Ketsiah, and Keren-Hafuk.
+\v 14 who he named Yemimah, Ketsiah, and Keren-Hapuk.
 \v 15 No one in the whole country was as beautiful as Iyov’s daughters, and as well as their brothers, their father gave them \add each a piece of land\add* as an inheritance.
 \v 16 Iyov lived another 140 years after \add all\add* that, and was \add even\add* able to see his great-grandchildren.
 \v 17 Then Iyov died \add in good circumstances\add* and at a very old age.

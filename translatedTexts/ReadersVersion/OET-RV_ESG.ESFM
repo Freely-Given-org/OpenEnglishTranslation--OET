@@ -1,4 +1,5 @@
-\id ESG - Open English Translation—Readers' Version (OET-RV) v0.1.0
+\id ESG - Open English Translation—Readers' Version (OET-RV) v0.4.0
+\rem WORDTABLE OET-LV_DC_word_table.tsv
 \h Ester (Greek)
 \toc1 Ester (Greek)
 \toc2 Ester (Greek)
@@ -6,284 +7,317 @@
 \mt1 Ester
 \mt2 translated from the Greek Septuagint
 \is1 Introduction
+\ip This Greek account of \bk Ester\bk* follows a young Jewish woman who becomes queen in the empire of Paras (Persia). Her guardian Mordekai refuses to bow to the powerful official Haman, who responds by planning to destroy all the Yehudim (Jews) in the empire. Ester must decide whether to risk her own life by approaching the king and identifying herself with her threatened people.
+\ip Readers of the other OET account of Ester will recognise the main events, but this version also includes Mordekai's dream, prayers for rescue, royal letters, and further details about Ester's approach to the king. These passages explicitly describe the characters' dependence on God and his part in their rescue. The account also explains the celebration called ‘Purim’, when the people remember how their sorrow was turned into joy.
 \ip The book of Ester in the Greek Septuagint contains five additions that the traditional Hebrew text doesn't have. These additions are recognised as Deuterocanonical Scripture by the Romaios Catholic, Greek Orthodox, and Russian Orthodox Churches. Those additions are enclosed in [square brackets]. Because the additions by themselves make little sense without the broader context of the book, we present here a translation of the whole book of Ester from the Greek.
 \ip We have chosen not to distract the reader with confusing out-of-order chapter numbers that would result from using the KJB versification, but rather merge these 5 additions as extensions at the beginning of 1:1 and after 3:13, 4:17, 8:12, and 10:3. This makes some verses (1:1, 5:1, and 8:12) really long, but it also makes the verses line up with the same verse numbers in Ester as translated from the traditional Hebrew text. Some of the proper names in this book have been changed to the more familiar Hebrew form instead of the direct transliteration from the Greek.
+\iot Main components of this account
+\io1 Mordekai's dream and Ester's rise to become queen \ior 1:1–2:23\ior*
+\io1 Haman's threat and the prayers of Mordekai and Ester \ior 3:1–4:47\ior*
+\io1 Ester appeals to the king and Haman is executed \ior 5:1–7:10\ior*
+\io1 The Yehudim defend themselves and establish Purim \ior 8:1–9:32\ior*
+\io1 Mordekai's position and the explanation of his dream \ior 10:1-14\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
+\s1 Mordekai's dream and the plot against the king
 \p
-\v 1 [In the second year of the reign of Ahashverosh \add !(Ahasuerus)\add* the great king, on the first day of Nisan, Mordekai the son of Yair, the son of Shimei, the son of Kish, of the tribe of Benyamin, a Yehudi \add !(Jew)\add* dwelling in the city Shushan \add !(Susa)\add*, a great man, serving in the king's palace, saw a vision. Now he was one of the captives whom Nevukadnetsar \add !(Nebuchadnezzar)\add* king of Bavel \add !(Babylon)\add* had carried captive from Yerushalem \add !(Jerusalem)\add* with Yekaneyah the king of Yehudah \add !(Judea)\add*. This was his dream: Listen, voices and a noise, thunders and earthquake, tumult upon the earth. And, behold, two great serpents came out, both ready for conflict. A great voice came from them. Every nation was prepared for battle by their voice, even to fight against the nation of the just. Listen, a day of darkness and blackness, suffering and anguish, affection and tumult upon the earth. And all the righteous nation was troubled, fearing their own afflictions. They prepared to die, and cried to God. Something like a great river from a little spring with much water, came from their cry. Light and the sun arose, and the lowly were exalted, and devoured the honourable.
-\p Mordekai, who had seen this vision and what God desired to do, having arisen, kept it in his heart, and desired by all means to interpret it, even until night.
-\p Mordekai rested quietly in the palace with Gabatha and Teresh the king's two chamberlains, eunuchs who guarded the palace. He heard their conversation and searched out their plans. He learnt that they were preparing to lay hands on King Ahashverosh; and he informed the king concerning them. The king examined the two chamberlains. They confessed, and were led away and executed. The king wrote these things for a record. Mordekai also wrote concerning these matters. The king commanded Mordekai to serve in the palace, and gave gifts for this service. But Haman the son of Hamedata the Bugaean was honoured in the sight of the king, and he endeavoured to harm Mordekai and his people, because of the king's two chamberlains.]\f + \fr 1:1 \fl Note: \ft The \fl Hebrew \ft and some copies of LXX, don't have these first few lines.\f*
-\p And it came to pass after these things\f + \fr 1:1 \fl Greek \ft words.\f* in the days of Ahashverosh, —(this Ahashverosh ruled over one hundred and twenty-seven provinces from Hodu)—
-\v 2 in those days, when King Ahashverosh was on the throne in the city of Shushan,
-\v 3 in the third year of his reign, he made a feast for his friends, for people from the rest of the nations, for the nobles of the Persians and Madim \add !(Medes)\add*, and for the chief of the local governors.
-\v 4 After this—after he had shown them the wealth of his kingdom and the abundant glory of his wealth during one hundred and eighty days—
-\v 5 when the days of the wedding feast were completed, the king made a banquet lasting six days for the people of the nations who were present in the city, in the courtyard of the king's house,
-\v 6 which was adorned with fine linen and flax on cords of fine linen and purple, fastened to golden and silver studs on pillars of white marble and stone. There were golden and silver couches on a pavement of emerald stone, and of mother-of-pearl, and of white marble, with transparent coverings variously flowered, having roses arranged around it.
-\v 7 There were gold and silver cups, and a small cup of carbuncle set out, of the value of thirty thousand talents, with abundant and sweet wine, which the king himself drank.
-\v 8 This banquet was not according to the appointed law, but as the king desired to have it. He charged the stewards to perform his will and that of the company.
+\v 1 [In the second year of the reign of Ahashverosh \add !(Ahasuerus)\add* the great king, on the first day of Nisan, Mordekai the son of Yair, the son of Shimei, the son of Kish, of the tribe of Benyamin, a Yehudi \add !(Jew)\add* dwelling in the city Shushan \add !(Susa)\add*, a great man, serving in the king's palace, saw a vision. Now he was one of the captives whom Nevukadnetsar \add !(Nebuchadnezzar)\add* king of Bavel \add !(Babylon)\add* had carried captive from Yerushalem \add !(Jerusalem)\add* with Yekaneyah the king of Yehudah \add !(Judea)\add*. This was his dream: Listen, voices and a noise, thunders and earthquake, tumult on the earth. And two great serpents came out, both ready for conflict. A great voice came from them. Every nation was prepared for battle by their voice, even to fight against the nation of the just. Listen, a day of darkness and blackness, suffering and anguish, affection and tumult on the earth. And all the righteous nation was troubled, fearing their own afflictions. They prepared to die, and cried to God. Something like a great river from a little spring with much water, came from their cry. Light and the sun arose, and the lowly were exalted, and devoured the honourable.
+\p Mordekai, who'd seen this vision and what God desired to do, having arisen, kept it in his heart, and desired by all means to interpret it, even until night.
+\p Mordekai rested quietly in the palace with Gabatha and Teresh the king's two chamberlains, eunuchs who guarded the palace. He heard their conversation and searched out their plans. He learnt that they were preparing to lay hands on King Ahashverosh; and he informed the king about them. The king examined the two chamberlains. They confessed, and were led away and executed. The king wrote these things for a record. Mordekai also wrote about these matters. The king commanded Mordekai to serve in the palace, and gave gifts for this service. But Haman the son of Hamedata the Bugaean was honoured in the sight of the king, and he endeavoured to harm Mordekai and his people, because of the king's two chamberlains.]\f + \fr 1:1 \fl Note: \ft The \fl Hebrew \ft and some copies of LXX, don't have these first few lines.\f*
+\s1 King Ahashverosh's lavish feasts
+\p And it happened after these things\f + \fr 1:1 \fl Greek \ft words.\f* in the days of Ahashverosh, —(this Ahashverosh ruled over one hundred and twenty-seven provinces from Hodu)—
+\v 2 in¦14951 those days¦14954, when¦14955 King¦14957 Ahashverosh was on the throne in the¦14961 city¦14962 of Shushan,
+\v 3 in¦14963 the¦14964 third year¦14966 of his reign, he¦14968 made¦14970 a feast for his friends¦14972, for people from the¦14971 rest of the¦14974 nations¦14976, for the¦14978 nobles¦14982 of the Persians and¦14980 Madim \add !(Medes)\add*, and¦14983 for the¦14984 chief of the¦14986 local governors.
+\v 4 After¦14989 this¦14990—after¦14991 he'd¦14994 shown¦14993 them the¦14995 wealth¦14996 of his kingdom¦14998 and¦15000 the¦15001 abundant glory¦15002 of¦15005 his wealth¦15006 during¦15008 one hundred¦15010 and eighty¦15011 days¦15009—
+\v 5 when¦15012 the¦15015 days¦15016 of¦15017 the¦15017 wedding¦15018 feast were completed, the¦15020 king¦15021 made¦15019 a banquet lasting six¦15032 days for the people of the nations¦15024 who¦15025 were present in the¦15028 city¦15029, in¦15033 the courtyard¦15034 of¦15036 the¦15036 king's¦15037 house¦15035,
+\v 6 which was adorned with fine linen and¦15040 flax on¦15043 cords of fine linen and¦15046 purple, fastened to¦15048 golden and¦15051 silver studs on¦15053 pillars of white marble and¦15056 stone. There were golden and¦15060 silver couches on¦15062 a pavement of emerald stone¦15065, and of mother-of-pearl, and of white marble, with transparent coverings variously¦15074 flowered, having roses arranged around it.
+\v 7 There were gold¦15080 and¦15081 silver¦15082 cups, and¦15083 a small¦15085 cup¦15085 of carbuncle set¦15086 out, of the value of thirty thousand talents¦15088, with abundant and sweet wine¦15090, which¦15094 the¦15096 king¦15097 himself drank.
+\v 8 This banquet wasn't according¦15104 to¦15104 the appointed law¦15106, but¦15109 as the¦15111 king¦15112 desired to¦15114 have it. He charged the¦15115 stewards to¦15117 perform his will¦15119 and¦15121 that of the¦15122 company.
+\s1 Queen Vashti refuses the king's command
 \p
-\v 9 Also Vashti the queen made a banquet for the women in the palace where King Ahashverosh lived.
-\v 10 Now on the seventh day, the king, being merry, told Haman, Bazan, Teresh, Baraze, Zatholtha, Abataza, and Tharaba, the seven chamberlains, servants of King Ahashverosh,
-\v 11 to bring in the queen to him, to\f + \fr 1:11 \fl Greek \ft to make her queen.\f* enthrone her, and crown her with the diadem, and to show her to the princes, and her beauty to the nations, for she was beautiful.
-\v 12 But queen Vashti refused to come with the chamberlains; so the king was grieved and angered.
-\v 13 And he said to his friends, “This is what Vashti said. Therefore pronounce your legal judgement on this case.”
+\v 9 Also¦15124 Vashti the¦15126 queen¦15127 made¦15128 a banquet for the¦15130 women¦15131 in¦15132 the¦15133 palace¦15134 where King¦15137 Ahashverosh lived.
+\v 10 Now on¦15139 the¦15143 seventh¦15144 day¦15142, the¦15147 king¦15148, being merry, told¦15149 Haman, Bazan¦15153, Teresh, Baraze, Zatholtha¦15159, Abataza¦15161, and¦15162 Tharaba¦15163, the¦15164 seven¦15165 chamberlains, servants¦15168 of¦15169 King¦15170 Ahashverosh,
+\v 11 to¦15172 bring¦15172 in¦15172 the¦15173 queen to¦15175 him, to¦15177\f + \fr 1:11 \fl Greek \ft to make her queen.\f* enthrone her, and¦15179 crown her with the¦15182 diadem¦15183, and¦15184 to¦15185 show¦15185 her to the¦15187 princes, and¦15189 her beauty¦15193 to the¦15190 nations¦15191, for she¦15194 was¦15197 beautiful.
+\v 12 But¦15198 queen¦15204 Vashti refused to¦15205 come¦15205 with¦15206 the¦15207 chamberlains; so¦15209 the¦15211 king¦15212 was grieved¦15210 and¦15213 angered¦15214.
+\v 13 And¦15215 he¦15219 said to¦15220 his friends¦15218, “This¦15221 is what Vashti said. Therefore¦15225 pronounce your legal judgement¦15230 on this¦15227 case.”
 \p
-\v 14 So Arkesaeus, Sarsathaeus, and Malisear, the princes of the Persians and Madim \add !(Medes)\add*, who were near the king, who sat chief in rank by the king, drew near to him,
-\v 15 and reported to him according to the laws what it was proper to do to queen Vashti, because she had not done the things commanded by the king through the chamberlains.
-\v 16 And Memukan said to the king and to the princes, “Queen Vashti has not wronged the king only, but also all the king's rulers and princes;
-\v 17 for he has told them the words of the queen, and how she\f + \fr 1:17 \fl Greek \ft contradicted.\f* disobeyed the king. As she then refused to obey King Ahashverosh,
-\v 18 so this day the other wives of the chiefs of the Persians and Madim, having heard what she said to the king, will dare in the same way to dishonour their husbands.
-\v 19 If then it seems good to the king, let him make a royal decree, and let it be written according to the laws of the Madim and Persians, and let him not alter it: ‘Don't allow the queen to come in to him any more. Let the king give her royalty to a woman better than she.’
-\v 20 Let the law of the king which he will have made be widely proclaimed in his kingdom. Then all the women will give honour to their husbands, from the poor even to the rich.”
-\v 21 This advice pleased the king and the princes; and the king did as Memukan had said,
-\v 22 and sent into all his kingdom through the several provinces, according to their language, so that men might be feared in their own houses.
+\v 14 So Arkesaeus, Sarsathaeus, and Malisear, the princes of the Persians and¦15242 Madim \add !(Medes)\add*, who¦15244 were near¦15245 the¦15246 king¦15247, who¦15248 sat chief in rank by the¦15251 king¦15252, drew near to him,
+\v 15 and¦15253 reported to¦15254 him according¦15256 to¦15256 the¦15257 laws¦15258 what it was proper to¦15261 do¦15261 to¦15267 queen Vashti, because she hadn't done¦15267 the¦15268 things commanded by¦15269 the¦15270 king¦15271 through¦15273 the¦15274 chamberlains.
+\v 16 And¦15276 Memukan said¦15277 to¦15280 the¦15281 king¦15282 and¦15283 to the¦15284 princes, “Queen¦15293 Vashti hasn't wronged the¦15287 king¦15288 only¦15289, but¦15294 also¦15295 all¦15296 the¦15297 king's rulers¦15298 and¦15299 princes;
+\v 17 for¦15305 he's¦15307 told them the¦15310 queen's¦15311 words, and¦15312 how¦15313 she\f + \fr 1:17 \fl Greek \ft contradicted.\f* disobeyed the¦15315 king¦15316. As she then¦15318 refused to obey King¦15321 Ahashverosh,
+\v 18 so this day the other wives of the chiefs of the Persians and¦15332 Madim, having heard what she said to the¦15336 king¦15337, will dare in the¦15344 same way to dishonour their husbands.
+\v 19 If then¦15348 it seems good to¦15349 the¦15350 king¦15351, let him make a royal¦15353 decree, and¦15354 let it be written according¦15356 to¦15356 the¦15357 laws¦15358 of the Madim and¦15360 Persians, and¦15362 let him not¦15363 alter it: ‘Don't allow the¦15369 queen¦15370 to¦15371 come in to him any more. Let the¦15378 king¦15379 give¦15377 her royalty to a woman¦15380 better than she¦15382.’
+\v 20 Let the¦15389 king's¦15390 law¦15386 which¦15391 he'll have made¦15393 be widely proclaimed in¦15394 his kingdom¦15396. Then¦15398 all¦15400 the¦15401 women¦15402 will give honour¦15404 to their husbands, from¦15408 the poor even to the rich¦15411.”
+\v 21 This¦15414 advice pleased¦15413 the¦15416 king¦15417 and¦15418 the¦15419 princes; and¦15421 the¦15423 king¦15424 did as¦15425 Memukan had said,
+\v 22 and¦15429 sent¦15430 into all¦15432 his kingdom¦15434 through the several provinces, according to their language, so¦15441 that men might be¦15442 feared¦15443 in¦15445 their own houses.
 \c 2
+\s1 The search for a new queen
 \p
-\v 1 After this, the king's anger was pacified, and he no more mentioned Vashti, bearing in mind what she had said, and how he had condemned her.
-\v 2 Then the servants of the king said, “Let chaste, beautiful young virgins be sought for the king.
-\v 3 Let the king appoint local governors in all the provinces of his kingdom, and let them select beautiful, chaste young ladies and bring them to the city Shushan \add !(Susa)\add*, into the women's apartment. Let them be consigned to the king's chamberlain, the keeper of the women. Then let things for purification and other needs be given to them.
-\v 4 Let the woman who pleases the king be queen instead of Vashti.”
-\p This thing pleased the king; and he did so.
+\v 1 After¦15450 this, the¦15455 king's¦15456 anger was pacified, and¦15459 he no¦15460 more mentioned Vashti, bearing in mind what she'd said, and¦15468 how¦15469 he'd¦15471 condemned¦15470 her.
+\v 2 Then¦15472 the¦15476 king's¦15477 servants¦15475 said¦15473, “Let chaste, beautiful young virgins be sought for the¦15479 king¦15480.
+\v 3 Let the¦15488 king¦15489 appoint¦15487 local governors in¦15491 all¦15492 the¦15493 provinces of his kingdom¦15496, and let them select beautiful¦15524, chaste young ladies and bring them to the¦15507 city¦15508 Shushan \add !(Susa)\add*, into the women's apartment. Let them be consigned to the¦15516 king's¦15517 chamberlain, the¦15518 keeper of the¦15520 women¦15521. Then¦15522 let things for purification and¦15525 other needs be given to them.
+\v 4 Let the¦15530 woman¦15531 who pleases¦15534 the¦15535 king¦15536 be queen instead of Vashti.”
+\p This¦15544 thing pleased¦15541 the¦15542 king¦15543; and¦15546 he did¦15547 so.
 \p
-\v 5 Now there was a Yehudi \add !(Jew)\add* in the city Shushan, and his name was Mordekai, the son of Yair, the son of Shimei, the son of Kish, of the tribe of Benyamin.
-\v 6 He had been brought as a prisoner from Yerushalem \add !(Jerusalem)\add*, whom Nevukadnetsar \add !(Nebuchadnezzar)\add* king of Bavel \add !(Babylon)\add* had carried into captivity.
-\v 7 He had a foster child, daughter of Aminadav his father's brother. Her name was Ester. When her parents died, he brought her up to womanhood as his own. This lady was beautiful.
-\v 8 And because the king's ordinance was published, many ladies were gathered to the city of Shushan under the hand of Hegay; and Ester was brought to Hegay, the keeper of the women.
-\v 9 The lady pleased him, and she found favour in his sight. He hurried to give her the things for purification, her portion, and the seven maidens appointed her out of the palace. He treated her and her maidens well in the women's apartment.
-\v 10 But Ester didn't reveal her family or her kindred, for Mordekai had charged her not to tell.
-\v 11 But Mordekai used to walk every day by the women's courtyard, to see what would become of Ester.
+\v 5 Now there¦15559 was a¦15550 Yehudi \add !(Jew)\add* in¦15553 the¦15555 city¦15556 Shushan, and¦15557 his name¦15558 was Mordekai, the¦15561 son of¦15562 Yair, the¦15562 son of¦15564 Shimei, the¦15564 son of Kish, of the¦15566 tribe¦15569 of Benyamin.
+\v 6 He'd been¦15572 brought as a prisoner¦15573 from¦15574 Yerushalem \add !(Jerusalem)\add*, whom Nevukadnetsar \add !(Nebuchadnezzar)\add* king¦15579 of Bavel \add !(Babylon)\add* had carried into¦15577 captivity¦15577.
+\v 7 He¦15583 had a foster child¦15584, daughter¦15586 of Aminadav his father's¦15589 brother¦15588. Her name¦15592 was Ester. When¦15596 her parents¦15601 died, he¦15603 brought her up to¦15608 womanhood as his own. This lady¦15606 was beautiful.
+\v 8 And¦15614 because the¦15618 king's¦15619 ordinance was published, many ladies were gathered to¦15621 the¦15626 city¦15627 of Shushan under¦15628 Hegay's hand¦15629; and¦15631 Ester was brought¦15632 to¦15634 Hegay, the¦15636 keeper of the¦15638 women¦15639.
+\v 9 The lady pleased¦15641 him, and she found¦15646 favour in his sight. He¦15649 hurried to¦15652 give¦15652 her the things for purification, her portion, and the¦15660 seven¦15661 maidens appointed her out¦15666 of the¦15663 palace. He¦15665 treated her and¦15668 her maidens well¦15671 in¦15676 the¦15677 women's apartment.
+\v 10 But¦15679 Ester didn't reveal¦15681 her family¦15684 or her kindred, for¦15690 Mordekai had charged her not¦15694 to¦15695 tell¦15695.
+\v 11 But¦15698 Mordekai used to¦15700 walk¦15700 every day¦15699 by the women's courtyard¦15705, to see what'd become of Ester.
 \p
-\v 12 Now this was the time for a virgin to go into the king, when she had completed twelve months; for so are the days of purification fulfilled, six months while they are anointing themselves with oil of myrrh, and six months with spices and women's purifications.
-\v 13 And then the lady goes in to the king. The officer that he commands to do so will bring her to come in with him from the women's apartment to the king's chamber.
-\v 14 She enters in the evening, and in the morning she departs to the second women's apartment, where Hegay the king's chamberlain is keeper of the women. She doesn't go in to the king again, unless she is called by name.
-\v 15 And when the time was fulfilled for Ester the daughter of Aminadav the brother of Mordekai's father to go in to the king, she neglected nothing which the chamberlain, the women's keeper, commanded; for Ester found grace in the sight of all who looked at her.
-\v 16 So Ester went in to King Ahashverosh \add !(Ahasuerus)\add* in the twelfth month, which is Adar, in the seventh year of his reign.
-\v 17 The king loved Ester, and she found favour beyond all the other virgins. He put the queen's crown on her.
-\v 18 The king made a banquet for all his friends and great men for seven days, and he highly celebrated the marriage of Ester; and he granted a remission of taxes to those who were under his dominion.
+\v 12 Now this¦15712 was¦15714 the time¦15715 for a virgin to¦15717 go into¦15718 the¦15719 king¦15720, when¦15721 she'd completed twelve¦15724 months; for¦15726 so are the¦15728 days¦15729 of purification fulfilled¦15722, six¦15733 months while they're anointing themselves with oil¦15737 of myrrh, and¦15738 six¦15740 months with spices and¦15744 women's¦15749 purifications.
+\v 13 And¦15750 then¦15751 the lady goes in to the¦15754 king¦15755. The officer that¦15757 he commands to¦15759 do so will bring her to¦15760 come in with him from¦15764 the¦15765 women's apartment to the¦15768 king's chamber.
+\v 14 She enters¦15771 in the evening, and¦15772 in the morning she departs to the second¦15780 women's apartment, where Hegay the¦15783 king's chamberlain is keeper of¦15785 the women¦15790. She doesn't go in to the¦15796 king¦15797 again, unless she's called by name¦15801.
+\s1 Ester becomes queen
 \p
-\v 19 Meanwhile, Mordekai served in the courtyard.
-\v 20 Now Ester had not revealed her country, for so Mordekai commanded her, to fear God, and perform his commandments, as when she was with him. Ester didn't change her manner of life.
+\v 15 And¦15803 when the¦15806 time¦15807 was fulfilled for Ester the¦15809 daughter¦15810 of Aminadav the brother¦15812 of Mordekai's father¦15813 to¦15815 go in to¦15816 the¦15817 king¦15818, she neglected nothing which¦15821 the chamberlain, the women's¦15828 keeper, commanded; for¦15830 Ester found grace in the sight of all¦15835 who¦15836 looked at her.
+\v 16 So¦15839 Ester went in to King¦15845 Ahashverosh \add !(Ahasuerus)\add* in the¦15846 twelfth month¦15848, which¦15849 is¦15850 Adar¦15851, in the¦15852 seventh year¦15854 of his reign.
+\v 17 The¦15860 king¦15861 loved Ester, and¦15863 she found¦15864 favour beyond all¦15867 the¦15868 other virgins. He put¦15871 the queen's crown on¦15871 her.
+\v 18 The¦15879 king¦15880 made a banquet for all¦15882 his friends¦15884 and¦15886 great men for seven¦15891 days¦15890, and¦15892 he highly celebrated the¦15894 marriage of Ester; and¦15897 he granted a remission of taxes to¦15899 those who¦15900 were under¦15901 his dominion.
+\s1 Mordekai uncovers a plot against the king
 \p
-\v 21 Two chamberlains of the king, the chiefs of the body-guard, were grieved, because Mordekai was promoted; and they sought to kill King Ahashverosh.
-\v 22 And the matter was discovered by Mordekai, and he made it known to Ester, and she declared to the king the matter of the conspiracy.
-\v 23 And the king examined the two chamberlains and hanged them. Then the king gave orders to make a note for a memorial in the royal library of the goodwill shown by Mordekai, as a commendation.
+\v 19 Meanwhile, Mordekai served¦15908 in¦15909 the¦15910 courtyard¦15911.
+\v 20 Now Ester hadn't revealed her country, for¦15921 so Mordekai commanded her, to¦15925 fear¦15925 God¦15927, and¦15928 perform his commandments, as¦15933 when she was¦15934 with¦15935 him. Ester didn't change her manner of life.
+\p
+\v 21 Two¦15947 chamberlains of¦15949 the¦15949 king¦15950, the chiefs of the body-guard, were grieved¦15945, because¦15953 Mordekai was promoted; and¦15956 they sought¦15957 to¦15958 kill¦15958 King¦15961 Ahashverosh.
+\v 22 And¦15962 the¦15965 matter was discovered by Mordekai, and¦15967 he made¦15963 it known to¦15968 Ester, and¦15970 she¦15971 declared to the¦15973 king¦15974 the¦15975 matter of the¦15976 conspiracy.
+\v 23 And the king¦15980 examined the¦15982 two¦15983 chamberlains and¦15985 hanged them. Then¦15988 the¦15990 king¦15991 gave orders¦15989 to make a note for a memorial¦15994 in¦15995 the¦15996 royal library¦15998 of the¦16000 goodwill shown by Mordekai, as a commendation.
 \c 3
+\s1 Haman plans to annihilate the Yehudim
 \p
-\v 1 After this, King Ahashverosh highly honoured Haman the son of Hamedata, the Bugaean. He exalted him and set his seat above all his friends.
-\v 2 All in the palace bowed down to him, for so the king had given orders to do; but Mordekai didn't bow down to him.
-\v 3 And they in the king's palace said to Mordekai, “Mordekai, why do you transgress the commands of the king?”
-\v 4 They questioned him daily, but he didn't listen to them; so they reported to Haman that Mordekai resisted the commands of the king; and Mordekai had shown to them that he was a Yehudi \add !(Jew)\add*.
-\v 5 When Haman understood that Mordekai didn't bow down to him, he was greatly enraged,
-\v 6 and plotted to utterly destroy all the Yehudim \add !(Jews)\add* who were under the rule of Ahashverosh.
+\v 1 After¦16005 this, King¦16010 Ahashverosh highly honoured Haman the son of Hamedata, the Bugaean. He¦16017 exalted him and¦16018 set his seat above all¦16020 his friends¦16022.
+\v 2 All¦16025 in¦16027 the¦16028 palace¦16029 bowed down to¦16030 him, for¦16033 so the¦16035 king¦16036 had given orders¦16034 to¦16037 do¦16037; but¦16039 Mordekai didn't bow down to¦16042 him.
+\v 3 And¦16044 they in¦16047 the¦16048 king's palace¦16049 said to Mordekai, “Mordekai, why do you transgress the¦16059 king's¦16060 commands?”
+\v 4 They questioned him daily, but¦16067 he¦16070 didn't listen to them; so¦16071 they reported to Haman that¦16073 Mordekai resisted the¦16077 king's¦16078 commands; and¦16081 Mordekai had shown¦16082 to¦16082 them that¦16086 he¦16088 was¦16088 a Yehudi \add !(Jew)\add*.
+\v 5 When¦16089 Haman understood that¦16092 Mordekai didn't bow down to¦16094 him, he¦16095 was greatly enraged,
+\v 6 and¦16099 plotted to utterly destroy all¦16102 the¦16103 Yehudim \add !(Jews)\add* who were under¦16104 the¦16105 rule of Ahashverosh.
 \p
-\v 7 In the twelfth year of the reign of Ahashverosh, Haman made a decision by casting lots by day and month, to kill the race of Mordekai in one day. The lot fell on the fourteenth day of the month of Adar.
-\v 8 So he spoke to King Ahashverosh, saying, “There is a nation scattered amongst the nations in all your kingdom, and their laws differ from all the other nations. They disobey the king's laws. It is not expedient for the king to tolerate them.
-\v 9 If it seem good to the king, let him make a decree to destroy them, and I will remit into the king's treasury ten thousand talents of silver.”
+\v 7 In¦16112 the twelfth year¦16113 of Ahashverosh's reign, Haman made¦16110 a¦16111 decision by casting lots¦16120 by day and¦16124 month¦16125, to¦16129 kill¦16129 the race of Mordekai in¦16130 one¦16131 day¦16132. The¦16138 lot¦16139 fell on the¦16141 fourteenth¦16142 day of¦16143 the¦16143 month of Adar¦16147.
+\v 8 So¦16148 he spoke¦16149 to¦16150 King¦16152 Ahashverosh, saying, “There's¦16155 a nation¦16156 scattered among¦16158 the¦16159 nations¦16160 in¦16161 all¦16162 your kingdom¦16164, and¦16167 their laws differ from¦16171 all¦16172 the¦16173 other nations¦16174. They disobey the¦16178 king's¦16179 laws. It isn't expedient for the¦16184 king¦16185 to tolerate them.
+\v 9 If¦16188 it seem good to¦16189 the¦16190 king¦16191, let him make a decree to¦16193 destroy¦16193 them, and¦16195 I'll¦16195 remit into the¦16198 king's treasury¦16199 ten thousand talents¦16203 of¦16200 silver.”
 \p
-\v 10 So the king took off his ring, and gave it into the hands of Haman to seal the decrees against the Yehudim.
-\v 11 The king said to Haman, “Keep the silver, and treat the nation as you will.”
-\v 12 So the king's recorders were called in the first month, on the thirteenth day, and they wrote as Haman commanded to the captains and governors in every province, from Hodu even to Kush \add !(Ethiopia)\add*, to one hundred and twenty-seven provinces; and to the rulers of the nations according to their languages, in the name of King Ahashverosh.
-\v 13 The message was sent by couriers throughout the kingdom of Ahashverosh, to utterly destroy the race of the Yehudim on the first day of the twelfth month, which is Adar, and to plunder their goods.\f + \fr 3:13 \fl Note: \ft The part in brackets is not in \fl Hebrew\f* [The following is the copy of the letter. “From the great King Ahashverosh to the rulers and the governors under them of one hundred and twenty-seven provinces, from Hodu even to Kush, who hold authority under him:
-\p “Ruling over many nations and having obtained dominion over the whole world, I was determined (not elated by the confidence of power, but ever conducting myself with great moderation and gentleness) to make the lives of my subjects continually tranquil, desiring both to maintain the kingdom quiet and orderly to its utmost limits, and to restore the peace desired by all men. When I had asked my counsellors how this should be brought to pass, Haman, who excels in soundness of judgement amongst us, and has been manifestly well inclined without wavering and with unshaken fidelity, and had obtained the second post in the kingdom, informed us that a certain ill-disposed people is scattered amongst all the tribes throughout the world, opposed in their law to every other nation, and continually neglecting the commands of the king, so that the united government blamelessly administered by us is not quietly established. Having then conceived that this nation is continually set in opposition to every man, introducing as a change a foreign code of laws, and injuriously plotting to accomplish the worst of evils against our interests, and against the happy establishment of the monarchy, we instruct you in the letter written by Haman, who is set over the public affairs and is our second governor, to destroy them all utterly with their wives and children by the swords of the enemies, without pitying or sparing any, on the fourteenth day of the twelfth month Adar, of the present year; that the people aforetime and now ill-disposed to us having been violently consigned to death in one day, may hereafter secure to us continually a well constituted and quiet state of affairs.”]
-\v 14 Copies of the letters were published in every province; and an order was given to all the nations to be ready for that day.
-\v 15 This business was hastened also in Shushan \add !(Susa)\add*. The king and Haman began to drink, but the city was confused.
+\v 10 So the¦16207 king¦16208 took off his ring¦16210, and gave¦16211 it into Haman's hands¦16213 to¦16217 seal the¦16218 decrees against the¦16221 Yehudim.
+\v 11 The¦16225 king¦16226 said¦16224 to¦16232 Haman, “Keep the¦16233 silver, and¦16234 treat the nation¦16235 as you will.”
+\v 12 So¦16239 the king's recorders were called in the first¦16246 month¦16245, on the¦16247 thirteenth day, and¦16249 they wrote¦16250 as Haman commanded¦16252 to¦16252 the¦16254 captains and¦16256 governors in every¦16260 province, from¦16262 Hodu even to Kush \add !(Ethiopia)\add*, to one hundred¦16268 and twenty-seven¦16269 provinces; and to the rulers¦16273 of the¦16274 nations¦16275 according¦16276 to¦16276 their languages, in King¦16283 Ahashverosh's name.
+\v 13 The message was sent by couriers throughout Ahashverosh's kingdom, to utterly destroy the race of the Yehudim on the first day of the twelfth month, which is Adar, and to plunder their goods.\f + \fr 3:13 \fl Note: \ft The part in brackets is not in \fl Hebrew\f* [The following is the copy of the letter. “From the great King Ahashverosh to the rulers and the governors under them of one hundred and twenty-seven provinces, from Hodu even to Kush, who hold authority under him:
+\p “Ruling over many nations and having obtained dominion over the whole world, I was determined (not elated by the confidence of power, but ever conducting myself with great moderation and gentleness) to make the lives of my subjects continually tranquil, desiring both to maintain the kingdom quiet and orderly to its utmost limits, and to restore the peace desired by all men. When I'd asked my counsellors how this should be brought to pass, Haman, who excels in soundness of judgement among us, and has been manifestly well inclined without wavering and with unshaken fidelity, and had obtained the second post in the kingdom, informed us that a certain ill-disposed people is scattered among all the tribes throughout the world, opposed in their law to every other nation, and continually neglecting the king's commands, so that the united government blamelessly administered by us isn't quietly established. Having then conceived that this nation is continually set in opposition to every man, introducing as a change a foreign code of laws, and injuriously plotting to accomplish the worst of evils against our interests, and against the happy establishment of the monarchy, we instruct you in the letter written by Haman, who's set over the public affairs and is our second governor, to destroy them all utterly with their wives and children by the swords of the enemies, without pitying or sparing any, on the fourteenth day of the twelfth month Adar, of the present year; that the people formerly and now ill-disposed to us having been violently consigned to death in one day, may in the future secure to us continually a well constituted and quiet state of affairs.”]
+\v 14 Copies of the¦16553 letters were published in every province; and¦16554 an order was given to all¦16563 the¦16564 nations¦16565 to¦16567 be¦16567 ready¦16566 for that¦16569 day¦16570.
+\v 15 This¦16574 business was hastened also¦16576 in Shushan \add !(Susa)\add*. The¦16579 king¦16581 and¦16582 Haman began to drink, but¦16586 the¦16587 city¦16588 was confused.
 \c 4
+\s1 Mordekai asks Ester to help her people
 \p
-\v 1 But Mordekai, having perceived what was done, tore his garments, put on sackcloth, and sprinkled dust upon himself. Having rushed forth through the open street of the city, he cried with a loud voice, “A nation that has done no wrong is going to be destroyed!”
-\v 2 He came to the king's gate, and stood; for it was not lawful for him to enter into the palace wearing sackcloth and ashes.
-\v 3 And in every province where the letters were published, there was crying, lamentation, and great mourning on the part of the Yehudim. They wore sackcloth and ashes.
-\v 4 The queen's maids and chamberlains went in and told her; and when she had heard what was done, she was deeply troubled. She sent clothes to Mordekai to replace his sackcloth, but he refused.
-\v 5 So Ester called for her chamberlain Hatak, who waited upon her; and she sent to learn the truth from Mordekai.
-\v 7 Mordekai showed him what was done, and the promise which Haman had made the king of ten thousand talents to be paid into the treasury, that he might destroy the Yehudim.
-\v 8 And he gave him the copy of what was published in Shushan concerning their destruction to show to Ester; and told him to charge her to go in and entreat the king, and to beg him for the people. “Remember, he said, the days of your humble condition, how you were nursed by my hand; because Haman, who holds the next place to the king, has spoken against us to cause our death. Call upon the master, and speak to the king concerning us, to deliver us from death.”
+\v 1 But¦16590 Mordekai, having perceived what was done, tore¦16595 his clothes¦16597, put¦16600 on¦16600 sackcloth, and sprinkled dust on himself. Having rushed forth through¦16607 the open street of¦16607 the¦16610 city¦16611, he cried with a loud voice¦16613, “A nation¦16616 that's done no wrong is going to be destroyed!”
+\v 2 He came¦16620 to¦16620 the¦16624 king's¦16625 gate¦16623, and¦16626 stood¦16627; for¦16629 it wasn't lawful for him to¦16633 enter¦16633 into the¦16635 palace¦16636 wearing sackcloth and¦16639 ashes.
+\v 3 And¦16641 in¦16642 every¦16643 province where the¦16647 letters were published, there was crying, lamentation¦16651, and¦16652 great¦16654 mourning on the part of the Yehudim. They wore sackcloth and¦16658 ashes.
+\v 4 The¦16669 queen's¦16670 maids and chamberlains went in and told her; and when she'd heard¦16676 what was done, she was deeply troubled¦16675. She sent¦16680 clothes to Mordekai to replace his sackcloth, but¦16684 he¦16686 refused.
+\v 5 So¦16694 Ester called¦16696 for her chamberlain Hatak, who¦16698 waited on her; and she sent¦16705 to¦16706 learn¦16706 the truth from¦16708 Mordekai.
+\v 7 Mordekai showed¦16716 him what was done, and¦16720 the¦16721 promise¦16722 which¦16723 Haman had made the¦16726 king¦16727 of ten thousand talents¦16731 to be paid into the treasury, that he might destroy¦16734 the¦16735 Yehudim.
+\v 8 And¦16737 he¦16747 gave¦16748 him the copy of what was published in Shushan about their destruction¦16746 to¦16750 show¦16750 to Ester; and¦16753 told him to charge her to go in and entreat the¦16760 king¦16761, and¦16762 to beg him for the people. “Remember, he said¦16754, the¦16766 days¦16769 of your humble condition, how¦16772 you were nursed by my hand¦16775; because¦16777 Haman, who holds the next place to the¦16781 king¦16782, has spoken against us to¦16784 cause our death¦16787. Call on the¦16789 master, and¦16791 speak¦16783 to the¦16793 king¦16794 about¦16795 us, to¦16797 deliver¦16797 us from¦16799 death¦16800.”
 \p
-\v 9 So Hatak went in and told her all these words.
-\v 10 Ester said to Hatak, “Go to Mordekai, and say,
-\v 11 ‘All the nations of the empire know that any man or woman who goes in to the king into the inner courtyard without being called, that person must die, unless the king stretches out his golden sceptre; then he shall live. I haven't been called to go into the king for thirty days.’ ”
+\v 9 So Hatak went in and¦16802 told her all¦16807 these words¦16809.
+\v 10 Ester said¦16811 to Hatak, “Go to Mordekai, and¦16819 say¦16820,
+\v 11 ‘All the¦16822 nations¦16823 of the¦16825 empire know¦16827 that¦16828 any man¦16830 or¦16831 woman¦16832 who goes in to the¦16836 king¦16837 into the¦16841 inner¦16842 courtyard¦16840 without being¦16845 called, that¦16849 person must die, unless the¦16851 king¦16852 stretches out his golden¦16854 sceptre; then he'll¦16856 live. I¦16858 haven't been called to¦16861 go into¦16862 the¦16863 king¦16864 for thirty¦16868 days¦16867.’ ”
 \p
-\v 12 So Hatak reported to Mordekai all the words of Ester.
-\v 13 Then Mordekai said to Hatak, “Go, and say to her, ‘Ester, don't say to yourself that you alone will escape in the kingdom, more than all the other Yehudim.
-\v 14 Because if you keep quiet on this occasion, help and protection will come to the Yehudim from another place; but you and your father's house will perish. Who knows if you have been made queen for this occasion?’ ”
+\v 12 So¦16869 Hatak reported to¦16870 Mordekai all¦16873 Ester's words¦16875.
+\v 13 Then¦16877 Mordekai said¦16878 to Hatak, “Go, and¦16883 say to her, ‘Ester, don't¦16887 say to yourself that¦16890 you alone will escape in¦16893 the¦16894 kingdom¦16895, more than¦16896 all¦16897 the¦16898 other Yehudim.
+\v 14 Because¦16901 if¦16902 you keep quiet on¦16904 this occasion, help¦16909 and¦16910 protection will come to¦16912 the¦16913 Yehudim from another place; but you and your father's¦16921 house¦16919 will perish. Who knows if you've been made queen for this occasion?’ ”
 \p
-\v 15 And Ester sent the messenger who came to her to Mordekai, saying,
-\v 16 “Go and assemble the Yehudim that are in Shushan \add !(Susa)\add*, and all of you fast for me. Don't eat or drink for three days, night and day. My maidens and I will also fast. Then I will go in to the king contrary to the law, even if I must die.”
+\v 15 And¦16933 Ester sent¦16934 the messenger who came to her to Mordekai, saying,
+\v 16 “Go and assemble the¦16945 Yehudim that¦16947 are in¦16948 Shushan \add !(Susa)\add*, and all of you fast for me. Don't¦16955 eat¦16956 or drink¦16958 for three¦16961 days, night¦16962 and¦16963 day¦16964. My maidens and¦16965 I'll¦16965 also¦16966 fast. Then¦16973 I'll¦16970 go in to the¦16976 king¦16977 contrary to the¦16979 law¦16980, even if¦16981 I¦16984 must die.”
 \p
 \v 17 So Mordekai went and did all that Ester commanded him.\f + \fr 4:17 \ft Note: The part between brackets, \fl i.e. \ft to the end of chapter 5 is not in the Hebrew\f*
-\v 18 [He prayed to the master, making mention of all the works of the master.
-\v 19 He said, “master God, you are king ruling over all, for all things are in your power, and there is no one who can oppose you in your purpose to save Yisrael \add !(Israel)\add*;
-\v 20 for you have made the heaven and the earth and every wonderful thing under heaven.
-\v 21 You are master of all, and there is no one who can resist you, master.
-\v 22 You know all things. You know, master, that it is not in insolence, nor arrogance, nor love of glory, that I have done this, to refuse to bow down to the arrogant Haman.
-\v 23 Because I would gladly have kissed the soles of his feet for the safety of Yisrael.
-\v 24 But I have done this that I might not set the glory of man above the glory of God. I will not worship anyone except you, my master, and I will not do these things in arrogance.
-\v 25 And now, Oh master God, the King, the god of Avraham, spare your people, for our enemies are planning our destruction, and they have desired to destroy your ancient inheritance.
-\v 26 Do not overlook your people, whom you have redeemed for yourself out of the land of Mitsrayim \add !(Egypt)\add*.
+\s1 Mordekai prays for his people
+\p
+\v 18 [He prayed to the master, making mention of all the master's works.
+\v 19 He said, “master God, you're king ruling over all, for all things are in your power, and there's no one who can oppose you in your purpose to save Yisrael \add !(Israel)\add*;
+\v 20 for you've made the heaven and the earth and every wonderful thing under heaven.
+\v 21 You're master of all, and there's no one who can resist you, master.
+\v 22 You know all things. You know, master, that it isn't in insolence, nor arrogance, nor love of glory, that I've done this, to refuse to bow down to the arrogant Haman.
+\v 23 Because I'd gladly have kissed the soles of his feet for the safety of Yisrael.
+\v 24 But I've done this that I might not set the glory of man above God's glory. I won't worship anyone except you, my master, and I won't do these things in arrogance.
+\v 25 And now, Oh master God, the King, the god of Avraham, spare your people, for our enemies are planning our destruction, and they've desired to destroy your ancient inheritance.
+\v 26 Don't overlook your people, whom you've redeemed for yourself out of the land of Mitsrayim \add !(Egypt)\add*.
 \v 27 Listen to my prayer. Have mercy on your inheritance and turn our mourning into gladness, that we may live and sing praise to your name, Oh master. Don't utterly destroy the mouth of those who praise you, Oh master.”
 \p
 \v 28 All Yisrael cried with all their might, for death was before their eyes.
+\s1 Ester prays for courage and help
+\p
 \v 29 And queen Ester took refuge in the master, being taken as it were in the agony of death.
-\v 30 Having taken off her glorious apparel, she put on garments of distress and mourning. Instead of grand perfumes she filled her head with ashes and dung. She greatly humbled her body, and she filled every place of her glad adorning with her tangled hair.
-\v 31 She implored the master God of Yisrael, and said, “Oh my master, you alone are our king. Help me. I am destitute, and have no helper but you,
+\v 30 Having taken off her glorious clothing, she put on clothes of distress and mourning. Instead of grand perfumes she filled her head with ashes and dung. She greatly humbled her body, and she filled every place of her glad adorning with her tangled hair.
+\v 31 She implored the master God of Yisrael, and said, “Oh my master, you alone are our king. Help me. I'm destitute, and have no helper but you,
 \v 32 for my danger is near at hand.\f + \fr 4:32 \fl Greek \ft in my hand.\f*
-\v 33 I have heard from my birth in the tribe of my kindred that you, master, took Yisrael out of all the nations, and our fathers out of all their kindred for a perpetual inheritance, and have done for them all that you have said.
-\v 34 And now we have sinned before you, and you have delivered us into the hands of our enemies,
-\v 35 because we honoured their gods. You are righteous, Oh master.
-\v 36 But now they have not been content with the bitterness of our slavery, but have laid their hands on the hands of their idols
+\v 33 I've heard from my birth in the tribe of my kindred that you, master, took Yisrael out of all the nations, and our fathers out of all their kindred for a perpetual inheritance, and have done for them all that you've said.
+\v 34 And now we've sinned before you, and you've delivered us into our enemies' hands,
+\v 35 because we honoured their gods. You're righteous, Oh master.
+\v 36 But now they haven't been content with the bitterness of our slavery, but have laid their hands on the hands of their idols
 \v 37 to abolish the decree of your mouth, and utterly to destroy your inheritance, and to stop the mouth of those who praise you, and to extinguish the glory of your house and your altar,
 \v 38 and to open the mouth of the Gentiles to speak the\f + \fr 4:38 \fl Greek \ft virtues.\f* praises of vanities, and that a mortal king should be admired forever.
-\v 39 Oh master, don't surrender your sceptre to those who don't exist, and don't let them laugh at our fall, but turn their counsel against themselves, and make an example of him who has begun to injure us.
+\v 39 Oh master, don't surrender your sceptre to those who don't exist, and don't let them laugh at our fall, but turn their counsel against themselves, and make an example of him who's begun to injure us.
 \v 40 Remember us, Oh master! Manifest yourself in the time of our affliction. Encourage me, Oh King of gods, and ruler of all dominion!
 \v 41 Put harmonious speech into my mouth before the lion, and turn his heart to hate him who fights against us, to the utter destruction of those who agree with him.
 \v 42 But deliver us by your hand, and help me who am alone and have no one but you, Oh master.
 \v 43 You know all things, and know that I hate the glory of transgressors,\f + \fr 4:43 \fl Or, \ft opinion.\f* and that I abhor the bed of the uncircumcised and of every stranger.
-\v 44 You know my necessity, for I abhor the symbol of my proud station, which is upon my head in the days of my\f + \fr 4:44 \fl Greek \ft vision.\f* splendour. I abhor it as a menstruous cloth, and I don't wear it in the days of my tranquillity.
-\v 45 Your handmaid has not eaten at Haman's table, and I have not honoured the banquet of the king, neither have I drunk wine of libations.
+\v 44 You know my necessity, for I abhor the symbol of my proud station, which is on my head in the days of my\f + \fr 4:44 \fl Greek \ft vision.\f* splendour. I abhor it as a menstruous cloth, and I don't wear it in the days of my tranquillity.
+\v 45 Your handmaid hasn't eaten at Haman's table, and I haven't honoured the banquet of the king, neither have I drunk wine of libations.
 \v 46 Neither has your handmaid rejoiced since the day of my promotion until now, except in you, Oh master God of Avraham.
 \v 47 Oh god, who has power over all, listen to the voice of the desperate, and deliver us from the hand of those who devise mischief. Deliver me from my fear.]
 \c 5
+\s1 Ester approaches the king
 \p
-\v 1 It came to pass on the third day, when she had ceased praying, that she took off her servant's dress and put on her glorious apparel. Being splendidly dressed and having called upon God the Overseer and Preserver of all things, she took her two maids, and she leaned upon one, as a delicate female, and the other followed bearing her train. She was blooming in the perfection of her beauty. Her face was cheerful and looked lovely, but her heart was filled with fear. Having passed through all the doors, she stood before the king. He was sitting on his royal throne. He had put on all his glorious apparel, covered all over with gold and precious stones, and was very terrifying. And having raised his face resplendent with glory, he looked with intense anger. The queen fell, and changed her colour as she fainted. She bowed herself upon the head of the maid who went before her. But God changed the spirit of the king to gentleness, and in intense feeling, he sprang from off his throne, and took her into his arms, until she recovered. He comforted her with peaceful words, and said to her, “What is the matter, Ester? I am your relative. Cheer up! You shall not die, for our command is openly declared to you: ‘Draw near.’ ”\f + \fr 5:1 \ft From the first verse to the third, the \fl Greek widely differs from the \fl Hebrew\f*
+\v 1 On the third day, when she'd finished praying, she took off her servant's dress and put on her glorious clothing. Being splendidly dressed and having called on God the Overseer and Preserver of all things, she took her two maids, and she leaned on one, as a delicate female, and the other followed bearing her train. She was blooming in the perfection of her beauty. Her face was cheerful and looked lovely, but her heart was filled with fear. Having passed through all the doors, she stood before the king. He was sitting on his royal throne. He'd put on all his glorious clothing, covered all over with gold and precious stones, and was very terrifying. And having raised his face resplendent with glory, he looked with intense anger. The queen fell, and changed her colour as she fainted. She bowed herself on the head of the maid who went before her. But God changed the king's spirit to gentleness, and in intense feeling, he sprang from off his throne, and took her into his arms, until she recovered. He comforted her with peaceful words, and said to her, “What's the matter, Ester? I'm your relative. Cheer up! You won't die, for our command is openly declared to you: ‘Draw near.’ ”\f + \fr 5:1 \ft From the first verse to the third, the \fl Greek widely differs from the \fl Hebrew\f*
 \p
-\v 2 And having raised the golden sceptre, he laid it upon her neck, and embraced her. He said, “Speak to me.”
+\v 2 And having raised the golden sceptre, he laid it on her neck, and embraced her. He said, “Speak to me.”
 \p So she said to him, “I saw you, my lord, as an angel of God, and my heart was troubled for fear of your glory; for you, my lord, are to be wondered at, and your face is full of grace.” While she was speaking, she fainted and fell.
 \p Then the king was troubled, and all his servants comforted her.
-\v 3 The king said, “What do you desire, Ester? What is your request? Ask even to the half of my kingdom, and it shall be yours.”\f + \fr 5:3 \ft From the first verse to the third, the \fl Greek widely differs from the \fl Hebrew\f*
+\v 3 The¦17843 king¦17844 said¦17842, “What do you desire¦17846, Ester? What's¦17851 your request¦17853? Ask even to the¦17855 half¦17856 of my kingdom¦17858, and¦17860 it'll be¦17861 yours.”\f + \fr 5:3 \ft From the first verse to the third, the \fl Greek widely differs from the \fl Hebrew\f*
 \p
-\v 4 Ester said, “Today is a special day. So if it seems good to the king, let both him and Haman come to the feast which I will prepare this day.”
+\v 4 Ester said¦17863, “Today¦17869 is¦17870 a special day. So if¦17871 it seems good to¦17873 the¦17874 king¦17875, let both him and Haman come¦17876 to the¦17882 feast which¦17884 I'll prepare¦17885 this day.”
 \p
-\v 5 The king said, “Hurry and bring Haman here, that we may do as Ester said.” So they both came to the feast about which Ester had spoken.
-\v 6 At the banquet, the king said to Ester, “What is your request, queen Ester? You shall have all that you require.”
+\v 5 The¦17889 king¦17890 said, “Hurry and bring Haman here, that¦17893 we may do¦17894 as Ester said.” So¦17898 they both¦17900 came to the¦17902 feast about which¦17904 Ester had spoken.
+\v 6 At the¦17909 banquet, the¦17912 king¦17913 said¦17911 to¦17914 Ester, “What's¦17917 your request, queen¦17918 Ester? You'll have all that you require.”
 \p
-\v 7 She said, “My request and my petition is:
-\v 8 if I have found favour in the king's sight, let the king and Haman come again tomorrow to the feast which I shall prepare for them, and tomorrow I will do as I have done today.”
+\v 7 She said¦17925, “My request¦17927 and¦17929 my petition¦17931 is:
+\v 8 if¦17932 I've found¦17933 favour in the¦17936 king's¦17937 sight, let the¦17939 king¦17940 and¦17941 Haman come¦17938 again tomorrow¦17945 to the¦17947 feast which¦17949 I'll prepare¦17950 for them, and¦17952 tomorrow¦17953 I'll do¦17954 as I've done today.”
+\s1 Haman plans to hang Mordekai
 \p
-\v 9 So Haman went out from the king very glad and merry; but when Haman saw Mordekai the Yehudi \add !(Jew)\add* in the courtyard, he was greatly enraged.
-\v 10 Having gone into his own house, he called his friends, and his wife Zeresh.
-\v 11 He showed them his wealth and the glory with which the king had invested him, and how he had promoted him to be chief ruler in the kingdom.
-\v 12 Haman said, “The queen has called no one to the feast with the king but me, and I am invited tomorrow.
-\v 13 But these things don't please me while I see Mordekai the Yehudi in the courtyard.
+\v 9 So¦17957 Haman went¦17958 out¦17958 from¦17961 the¦17962 king¦17963 very¦17978 glad and merry; but when Haman saw Mordekai the Yehudi \add !(Jew)\add* in¦17974 the¦17975 courtyard¦17976, he was greatly enraged.
+\v 10 Having gone into¦17980 his own¦17983 house, he called¦17984 his friends¦17986, and¦17987 his wife¦17990 Zeresh.
+\v 11 He¦17994 showed¦17993 them his wealth¦17996 and¦17998 the¦17999 glory¦18000 with which¦18001 the¦18002 king¦18003 had invested¦18005 him, and¦18006 how¦18007 he'd¦18009 promoted him to¦18012 be chief ruler in the¦18013 kingdom¦18014.
+\v 12 Haman said¦18016, “The queen¦18021 has called¦18019 no¦18018 one to¦18019 the¦18020 feast with¦18022 the¦18023 king¦18024 but¦18029 me, and I'm¦18031 invited tomorrow¦18035.
+\v 13 But¦18037 these things don't please me while I¦18039 see Mordekai the¦18045 Yehudi in¦18047 the¦18048 courtyard¦18049.
 \p
-\v 14 Then Zeresh his wife and his friends said to him, “Let a fifty cubit tall\f + \fr 5:14 \fl Greek \ft a tree cut.\f* gallows be made for you. In the morning you speak to the king, and let Mordekai be hanged on the gallows; but you go in to the feast with the king, and be merry.”
-\p The saying pleased Haman, and the gallows was prepared.
+\v 14 Then Zeresh his wife¦18056 and¦18050 his friends¦18060 said¦18051 to¦18052 him, “Let a fifty¦18065 cubit¦18064 tall\f + \fr 5:14 \fl Greek \ft a tree cut.\f* gallows be made for you. In the morning¦18066 you¦18062 speak to¦18068 the¦18069 king¦18070, and¦18071 let Mordekai be hanged on¦18074 the¦18075 gallows; but you go in to¦18079 the¦18081 feast with¦18083 the¦18084 king¦18085, and be merry.”
+\p The saying pleased¦18089 Haman, and¦18094 the¦18096 gallows was prepared.
 \c 6
+\s1 The king honours Mordekai
 \p
-\v 1 The master removed sleep from the king that night; so he told his servant to bring in the\f + \fr 6:1 \fl Greek \ft letters.\f* books, the registers of daily events, to read to him.
-\v 2 And he found the\f + \fr 6:2 \fl Greek \ft letters.\f* records written concerning Mordekai, how he had told the king about the king's two chamberlains, when they were keeping guard, and sought to lay hands on Ahashverosh \add !(Ahasuerus)\add*.
-\v 3 The king said, “What honour or favour have we done for Mordekai?”
-\p The king's servants said, “You haven't done anything for him.”
+\v 1 The master removed sleep from¦18104 the¦18105 king¦18106 that¦18109 night¦18108; so¦18110 he told¦18111 his servant to¦18111 bring in the¦18112\f + \fr 6:1 \fl Greek \ft letters.\f* books, the¦18118 registers of daily events, to read to him.
+\v 2 And¦18123 he found¦18122 the¦18124\f + \fr 6:2 \fl Greek \ft letters.\f* records written¦18125 about¦18128 Mordekai, how¦18130 he'd told the¦18132 king¦18133 about¦18134 the¦18135 king's two¦18136 chamberlains, when they were keeping guard¦18142, and¦18144 sought¦18145 to¦18146 lay¦18146 hands¦18148 on¦18146 Ahashverosh \add !(Ahasuerus)\add*.
+\v 3 The¦18152 king¦18153 said, “What honour¦18155 or¦18156 favour have we done¦18158 for Mordekai?”
+\p The¦18165 king's¦18166 servants¦18164 said, “You haven't done¦18168 anything for him.”
 \p
-\v 4 And while the king was enquiring about the kindness of Mordekai, behold, Haman was in the courtyard. The king said, “Who is in the courtyard? Now Haman had come in to speak to the king about hanging Mordekai on the gallows which he had prepared.
-\v 5 The king's servants said, “Listen, Haman stands in the courtyard.”
-\p And the king said, “Call him!”
+\v 4 And¦18172 while the¦18175 king¦18176 was enquiring about¦18177 Mordekai's kindness, look¦18181, Haman was in¦18183 the¦18184 courtyard¦18185. The¦18188 king¦18189 said¦18198, “Who's in¦18191 the¦18192 courtyard¦18193? Now Haman had come in to¦18197 speak to the¦18199 king¦18200 about hanging Mordekai on¦18204 the¦18205 gallows which¦18207 he'd prepared¦18208.
+\v 5 The¦18213 king's¦18214 servants¦18212 said, “Listen, Haman stands¦18217 in¦18218 the¦18219 courtyard¦18220.”
+\p And¦18221 the¦18223 king¦18224 said, “Call¦18225 him!”
 \p
-\v 6 The king said to Haman, “What should I do for the man whom I wish to honour?”
-\p Haman said within himself, “Whom would the king honour but myself?”
-\v 7 He said to the king, “As for the man whom the king wishes to honour,
-\v 8 let the king's servants bring the robe of fine linen which the king puts on, and the horse on which the king rides,
-\v 9 and let him give it to one of the king's noble friends, and let him dress the man whom the king loves. Let him mount him on the horse, and proclaim through the\f + \fr 6:9 \fl Or, \ft wide space.\f* streets of the city, saying, “This is what will be done for every man whom the king honours!”
+\v 6 The¦18229 king¦18230 said to¦18234 Haman, “What should I do¦18234 for the¦18235 man¦18236 whom I¦18238 wish to honour¦18240?”
+\p Haman said¦18241 within himself¦18244, “Whom would¦18247 the¦18248 king¦18249 honour¦18250 but myself?”
+\v 7 He said¦18254 to¦18256 the¦18257 king¦18258, “As for the man¦18259 whom the¦18261 king¦18262 wishes to honour¦18264,
+\v 8 let the king's servants bring the robe¦18270 of fine linen which¦18272 the¦18273 king¦18274 puts on, and¦18276 the horse on¦18278 which¦18279 the¦18280 king¦18281 rides,
+\v 9 and¦18283 let him give¦18284 it to one¦18285 of¦18288 the¦18288 king's¦18289 noble friends¦18287, and¦18292 let him dress the¦18294 man¦18295 whom the¦18297 king¦18298 loves¦18299. Let him mount him on¦18303 the¦18304 horse, and¦18306 proclaim through¦18308 the\f + \fr 6:9 \fl Or, \ft wide space.\f* streets of the¦18311 city¦18312, saying, “This is what'll be¦18315 done for every¦18316 man¦18317 whom the¦18319 king¦18320 honours!”
 \p
-\v 10 Then the king said to Haman, “You have spoken well. Do so for Mordekai the Yehudi \add !(Jew)\add*, who waits in the palace, and let not a word of what you have spoken be neglected!”
+\v 10 Then¦18323 the¦18324 king¦18325 said¦18322 to Haman, “You've spoken well¦18328. Do¦18331 so for Mordekai the Yehudi \add !(Jew)\add*, who waits in¦18338 the¦18339 palace¦18340, and¦18341 let not¦18342 a word¦18345 of what you've spoken be neglected!”
 \p
-\v 11 So Haman took the robe and the horse, dressed Mordekai, mounted him on the horse, and went through the streets of the city, proclaiming, “This is what will be done for every man whom the king wishes to honour.”
-\v 12 Then Mordekai returned to the palace; but Haman went home mourning, with his head covered.
+\v 11 So Haman took¦18348 the¦18351 robe¦18352 and the horse, dressed Mordekai, mounted him on¦18363 the¦18364 horse, and¦18366 went through the streets of¦18368 the¦18371 city¦18372, proclaiming, “This is what'll be¦18377 done for every¦18378 man¦18379 whom the¦18381 king¦18382 wishes to honour¦18384.”
+\v 12 Then Mordekai returned¦18394 to¦18385 the¦18390 palace¦18391; but Haman¦18392 went home mourning, with his head¦18400 covered.
 \p
-\v 13 Haman related the events that had happened to him to Zeresh his wife and to his friends. His friends and his wife said to him, “If Mordekai is of the race of the Yehudim \add !(Jews)\add*, and you have begun to be humbled before him, you will assuredly fall; and you will not be able to withstand him, for the living god is with him.”
-\v 14 While they were still speaking, the chamberlains arrived to rush Haman to the banquet which Ester had prepared.
+\v 13 Haman related¦18402 the¦18404 events that'd¦18440 happened to him to Zeresh his wife and¦18411 to his friends. His friends and¦18414 his wife said¦18415 to¦18416 him, “If¦18423 Mordekai is of the race of the Yehudim \add !(Jews)\add*, and you've begun to¦18429 be humbled¦18429 before¦18430 him, you'll assuredly fall; and¦18434 you won't¦18436 be¦18437 able¦18437 to¦18442 withstand him, for the living¦18442 god¦18441 is with¦18443 him.”
+\v 14 While they were still¦18445 speaking¦18447, the chamberlains arrived to rush Haman to the¦18455 banquet which¦18457 Ester had prepared¦18458.
 \c 7
+\s1 Ester exposes Haman's plan
 \p
-\v 1 So the king and Haman went in to drink with the queen.
-\v 2 The king said to Ester at the banquet on the second day, “What is it, queen Ester? What is your request? What is your petition? It shall be done for you, up to half of my kingdom.”
+\v 1 So¦18461 the¦18462 king¦18463 and¦18464 Haman went in to drink with the¦18467 queen.
+\v 2 The¦18471 king¦18472 said¦18469 to Ester at the¦18474 banquet on¦18477 the¦18478 second day¦18476, “What's¦18481 it, queen¦18483 Ester? What's your request¦18487? What's your petition¦18492? It'll be done for you, up to half¦18498 of my kingdom¦18500.”
 \p
-\v 3 She answered and said, “If I have found favour in the sight of the king, let my life be granted as my petition, and my people as my request.
-\v 4 Because both I and my people are sold for destruction, pillage, and genocide. If both we and our children were sold for male and female slaves, I would not have bothered you, for this\f + \fr 7:4 \ft see \fqa Hebrew: slanderer\f* isn't worthy of the king's palace.”
+\v 3 She replied¦18504, “If¦18505 I've found¦18506 favour in the sight of the¦18509 king¦18510, let my life be granted as my petition, and¦18517 my people¦18519 as my request.
+\v 4 Because¦18525 both I and my people¦18530 are sold for destruction¦18533, pillage, and genocide. If both we¦18538 and¦18539 our children were sold for male and female slaves, I wouldn't have bothered you, for¦18550 this\f + \fr 7:4 \ft see \fqa Hebrew: slanderer\f* isn't worthy¦18551 of¦18556 the¦18556 king's¦18557 palace¦18555.”
 \p
-\v 5 The king said, “Who has dared to do this thing?”
+\v 5 The¦18560 king¦18561 said¦18558, “Who's¦18564 dared to¦18566 do¦18566 this¦18567 thing¦18568?”
 \p
-\v 6 Ester said, “The enemy is Haman, this wicked man!”
-\p Then Haman was terrified in the presence of the king and the queen.
-\v 7 The king rose up from the banquet to go into the garden. Haman began to beg the queen for mercy, for he saw that he was in serious trouble.
-\v 8 The king returned from the garden; and Haman had fallen upon the couch, begging the queen for mercy. The king said, “Will you even assault my wife in my house?”
-\p And when Haman heard it, he changed countenance.
-\v 9 And Bigtan, one of the chamberlains, said to the king, “Listen, Haman has also prepared a gallows for Mordekai, who spoke concerning the king, and a fifty cubit high gallows has been set up on Haman's property.”
-\p The king said, “Let him be\f + \fr 7:9 \fl Or, \ft impaled.\f* hanged on it!”
-\v 10 So Haman was hanged on the gallows that had been prepared for Mordekai. Then the king's wrath was abated.
+\v 6 Ester said¦18570, “The enemy¦18574 is Haman, this¦18576 wicked¦18577 man¦18573!”
+\p Then¦18580 Haman was terrified in the presence of¦18583 the¦18583 king¦18584 and¦18585 the¦18586 queen¦18587.
+\v 7 The¦18588 king¦18590 rose up from¦18592 the¦18593 banquet to go into the¦18596 garden¦18597. Haman began to beg the queen for mercy, for he saw that he was¦18609 in¦18607 serious trouble.
+\v 8 The¦18612 king¦18613 returned from¦18614 the¦18615 garden; and¦18618 Haman had fallen on¦18620 the¦18621 couch, begging the¦18624 queen for mercy. The¦18628 king¦18629 said, “Will you even assault my wife¦18633 in¦18635 my house¦18637?”
+\p And¦18640 when Haman heard¦18641 it, his expression¦18644 changed.
+\v 9 And¦18646 Bigtan, one¦18648 of the¦18649 chamberlains, said to¦18651 the¦18652 king¦18653, “Listen, Haman has also¦18655 prepared¦18657 a gallows for Mordekai, who¦18660 spoke about¦18662 the¦18663 king¦18664, and¦18665 a fifty¦18672 cubit¦18671 high gallows has been set up on Haman's property.”
+\p The¦18675 king¦18676 said, “Let him be\f + \fr 7:9 \fl Or, \ft impaled.\f* hanged on¦18678 it¦18679!”
+\v 10 So¦18680 Haman was hanged on¦18683 the¦18684 gallows that'd¦18686 been prepared for Mordekai. Then¦18690 the¦18691 king's¦18692 anger¦18695 was abated.
 \c 8
+\s1 The Yehudim are allowed to defend themselves
 \p
-\v 1 On that day, King Ahashverosh \add !(Ahasuerus)\add* gave to Ester all that belonged to Haman the slanderer. The king called Mordekai, for Ester had told that he was related to her.
-\v 2 The king took the ring which he had taken away from Haman and gave it to Mordekai. Ester appointed Mordekai over all that had been Haman's.
-\v 3 She spoke yet again to the king, and fell at his feet, and implored him to undo Haman's mischief and all that he had done against the Yehudim.
-\v 4 Then the king extended the golden sceptre to Ester; and Ester arose to stand near the king.
-\v 5 Ester said, “If it seems good to you, and I have found favour in your sight, let an order be sent that the letters sent by Haman may be reversed—letters that were written for the destruction of the Yehudim who are in your kingdom.
-\v 6 Because how could I see the affliction of my people, and how could I survive the destruction of my\f + \fr 8:6 \fl Greek \ft country.\f* kindred?”
+\v 1 On¦18697 that¦18699 day¦18700, King¦18702 Ahashverosh \add !(Ahasuerus)\add* gave¦18704 to¦18707 Ester all that¦18709 belonged to Haman the¦18710 slanderer. The¦18715 king¦18716 called Mordekai, for¦18718 Ester had told that¦18720 he¦18722 was related to her.
+\v 2 The¦18725 king¦18726 took the¦18727 ring¦18728 which¦18729 he'd taken away from Haman and¦18732 gave¦18733 it¦18734 to¦18737 Mordekai. Ester appointed¦18737 Mordekai over all¦18741 that'd¦18742 been Haman's.
+\v 3 She spoke¦18746 yet again to¦18747 the¦18748 king¦18749, and¦18750 fell¦18751 at his feet¦18754, and¦18756 implored him to undo Haman's mischief and¦18762 all that he'd done¦18764 against the¦18765 Yehudim.
+\v 4 Then¦18768 the¦18769 king¦18770 extended the¦18774 golden¦18775 sceptre to Ester; and¦18777 Ester arose to stand near the¦18780 king¦18781.
+\v 5 Ester said¦18783, “If¦18785 it seems good to¦18786 you¦18787, and¦18788 I've found¦18789 favour in your sight, let an order be sent that the¦18795 letters sent¦18796 by¦18797 Haman may be reversed—letters that were written¦18794 for the¦18799 destruction¦18801 of the¦18802 Yehudim who are¦18805 in¦18806 your kingdom¦18808.
+\v 6 Because how¦18810 could I see the¦18814 affliction of¦18816 my people¦18817, and¦18819 how¦18820 could I survive the¦18824 destruction¦18825 of my\f + \fr 8:6 \fl Greek \ft country.\f* kindred?”
 \p
-\v 7 Then the king said to Ester, “If I have given and freely granted you all that was Haman's, and hanged him on a gallows because he laid his hands upon the Yehudim \add !(Jews)\add*, what more do you seek?
-\v 8 Write in my name whatever seems good to you, and seal it with my ring; for whatever is written at the command of the king, and sealed with my ring, cannot be countermanded.
-\v 9 So the scribes were called in the first month, which is Nisan, on the twenty-third day of the same year; and orders were written to the Yehudim, whatever the king had commanded to the\f + \fr 8:9 \fl Greek \ft stewards.\f* local governors and chiefs of the local governors, from Hodu even to Kush—one hundred and twenty-seven local governors, according to the several provinces, in their own languages.
-\v 10 They were written by order of the king, sealed with his ring, and the letters were sent by the couriers.
-\v 11 In them, he charged them to use their own laws in every city, to help each other, and to treat their adversaries and those who attacked them as they pleased,
-\v 12 on one day in all the kingdom of Ahashverosh, on the thirteenth day of the twelfth month, which is Adar.
+\v 7 Then¦18829 the¦18831 king¦18832 said¦18830 to¦18833 Ester, “If¦18835 I've given¦18840 and¦18841 freely granted you¦18843 all¦18836 that¦18849 was Haman's, and¦18844 hanged him on¦18847 a gallows because he laid his hands¦18851 on the¦18853 Yehudim \add !(Jews)\add*, what more do you seek?
+\v 8 Write in my name¦18863 whatever seems good to¦18866 you¦18867, and¦18868 seal it with my ring; for¦18874 whatever is written at the¦18876 king's¦18877 command, and¦18879 sealed with my ring, can't be¦18885 countermanded.
+\v 9 So¦18889 the¦18890 scribes¦18891 were called in¦18892 the¦18893 first¦18894 month¦18895, which¦18896 is¦18897 Nisan¦18898, on the twenty-third day of¦18902 the¦18902 same year; and¦18905 orders¦18910 were written¦18906 to¦18906 the Yehudim, whatever the king had commanded to the¦18911\f + \fr 8:9 \fl Greek \ft stewards.\f* local governors and¦18913 chiefs of the local governors, from¦18918 Hodu even to Kush—one hundred¦18924 and twenty-seven¦18925 local governors, according to the¦18932 several provinces, in their own languages.
+\v 10 They were written¦18935 by order of the¦18938 king¦18939, sealed with his ring, and¦18940 the¦18942 letters were sent¦18946 by the¦18947 couriers.
+\v 11 In them, he charged them to use their own laws in¦18958 every¦18959 city¦18960, to¦18961 help¦18961 each¦18959 other, and to treat their adversaries and those who attacked them as they pleased,
+\v 12 on one day in all Ahashverosh's kingdom, on the thirteenth day of the twelfth month, which is Adar.
+\s1 The king's letter protecting the Yehudim
+\p
 \v 13 Let the copies be posted in conspicuous places throughout the kingdom. Let all the Yehudim be ready against this day, to fight against their enemies. The following is a copy of the letter containing orders:
-\p [The great King Ahashverosh \add !(Ahasuerus)\add* sends greetings to the rulers of provinces in one hundred and twenty-seven local governance regions, from Hodu to Kush \add !(Ethiopia)\add*, even to those who are faithful to our interests. Many who have been frequently honoured by the most abundant kindness of their\f + \fr 8:13 \ft perhaps rulers, see Luke 22. 25.\f* benefactors have conceived ambitious designs, and not only endeavour to hurt our subjects, but moreover, not being able to bear prosperity, they also endeavour to plot against their own benefactors. They not only would utterly abolish gratitude from amongst men, but also, elated by the boastings of men who are strangers to all that is good, they supposed that they would escape the sin-hating vengeance of the ever-seeing God. And oftentimes evil exhortation has made partakers of the guilt of shedding innocent blood, and has involved in irremediable calamities many of those who had been appointed to offices of authority, who had been entrusted with the management of their friends’ affairs; while men, by the false sophistry of an evil disposition, have deceived the simple goodwill of the ruling powers. And it is possible to see this, not so much from more ancient traditional accounts, as it is immediately in your power to see it by examining what things have been wickedly\f + \fr 8:13 \fl Greek \ft contrived.\f* perpetrated by the baseness of men unworthily holding power. It is right to take heed with regard to the future, that we may maintain the government in undisturbed peace for all men, adopting needful changes, and ever judging those cases which come under our notice with truly equitable decisions. Because whereas Haman, a person from Makedonia, the son of Hamedata, in reality an alien from the blood of the Persians, and differing widely from our mild course of government, having been hospitably entertained by us, obtained so large a share of our universal kindness as to be called our father, and to continue the person next to the royal throne, reverenced of all; he however, overcome by\f + \fr 8:13 \fl Greek \ft not having borne.\f* pride, endeavoured to deprive us of our dominion, and our life;\f + \fr 8:13 \fl Greek \ft spirit.\f* having by various and subtle artifices demanded for destruction both Mordekai our deliverer and perpetual benefactor, and Ester the blameless consort of our kingdom, along with their whole nation. Because by these methods he thought, having surprised us in a defenceless state, to transfer the dominion of the Persians to the people from Makedonia. But we find that the Yehudim, who have been consigned to destruction by the\f + \fr 8:13 \fl Greek \ft thrice guilty.\f* most abominable of men, are not malefactors, but living according to the most just laws, and being the sons of the living god, the most high and\f + \fr 8:13 \fl Greek \ft greatest.\f* mighty, who maintains the kingdom, to us as well as to our forefathers, in the most excellent order. You will therefore do well in refusing to obey the letter sent by Haman the son of Hamedata, because he who has done these things has been hanged with his whole family at the gates of Shushan \add !(Susa)\add*, Almighty God having swiftly returned to him a worthy punishment. We enjoin you then, having openly published a copy of this letter in every place, to give the Yehudim permission to use their own lawful customs and to strengthen them, that on the thirteenth of the twelfth month Adar, on the self-same day, they may defend themselves against those who attack them in a time of affliction. Because in the place of the destruction of the chosen race, Almighty God has granted them this time of gladness. Therefore you also, amongst your notable feasts, must keep a distinct day with all festivity, that both now and hereafter it may be a day of deliverance to us and who are well disposed towards the Persians, but to those that plotted against us a memorial of destruction. And every city and province collectively, which shall not do accordingly, shall be consumed with vengeance by spear and fire. It shall be made not only inaccessible to men, but most hateful to wild animals and birds forever.]\f + \fr 8:13 \ft the passages in brackets are not in the \fl Hebrew.\f* Let the copies be posted in conspicuous places throughout the kingdom and let all the Yehudim be ready against this day, to fight against their enemies.
-\v 14 So the horsemen went forth with haste to perform the king's commands. The ordinance was also published in Shushan.
+\p [The great King Ahashverosh \add !(Ahasuerus)\add* sends greetings to the rulers of provinces in one hundred and twenty-seven local governance regions, from Hodu to Kush \add !(Ethiopia)\add*, even to those who are faithful to our interests. Many who've been frequently honoured by the most abundant kindness of their\f + \fr 8:13 \ft perhaps rulers, see Luke 22. 25.\f* benefactors have conceived ambitious designs, and not only endeavour to hurt our subjects, but moreover, not being able to bear prosperity, they also endeavour to plot against their own benefactors. They not only would utterly abolish gratitude from among men, but also, elated by the boastings of men who are strangers to all that's good, they supposed that they'd escape the sin-hating vengeance of the ever-seeing God. And often evil exhortation has made partakers of the guilt of shedding innocent blood, and has involved in irremediable calamities many of those who'd been appointed to offices of authority, who'd been entrusted with the management of their friends’ affairs; while men, by the false sophistry of an evil disposition, have deceived the simple goodwill of the ruling powers. And it's possible to see this, not so much from more ancient traditional accounts, as it's immediately in your power to see it by examining what things have been wickedly\f + \fr 8:13 \fl Greek \ft contrived.\f* perpetrated by the baseness of men unworthily holding power. It's right to take heed with regard to the future, that we may maintain the government in undisturbed peace for all men, adopting needful changes, and ever judging those cases which come under our notice with truly equitable decisions. Because whereas Haman, a person from Makedonia, the son of Hamedata, in reality an alien from the blood of the Persians, and differing widely from our mild course of government, having been hospitably entertained by us, obtained so large a share of our universal kindness as to be called our father, and to continue the person next to the royal throne, reverenced of all; he however, overcome by\f + \fr 8:13 \fl Greek \ft not having borne.\f* pride, endeavoured to deprive us of our dominion, and our life;\f + \fr 8:13 \fl Greek \ft spirit.\f* having by various and subtle artifices demanded for destruction both Mordekai our deliverer and perpetual benefactor, and Ester the blameless consort of our kingdom¦19468, along with their whole nation. Because by these methods he thought, having surprised us in a defenceless state, to transfer the dominion of the Persians to the people from Makedonia. But we find that the Yehudim, who've been consigned to destruction by the\f + \fr 8:13 \fl Greek \ft thrice guilty.\f* most abominable of men, aren't malefactors, but living according to the most just laws, and being the sons of the living god, the most high and\f + \fr 8:13 \fl Greek \ft greatest.\f* mighty, who maintains the kingdom, to us as well as to our forefathers, in the most excellent order. You'll therefore do well in refusing to obey the letter sent by Haman the son of Hamedata, because he who's done these things has been¦19471 hanged with his whole family at Shushan's \add !(Susa)\add* gates, Almighty God having swiftly returned to him a worthy punishment. We enjoin you then, having openly published a copy of this letter in every place, to give the Yehudim permission to use their own lawful customs and to strengthen them, that on the thirteenth of the twelfth month Adar, on the self-same day, they may defend themselves against those who attack them in a time of affliction. Because in the place of the destruction of the chosen race, Almighty God has granted them this time of gladness. Therefore you also, among your notable feasts, must keep a distinct day with all¦19472 festivity, that both now and in the future it may be a day of deliverance to us and who¦19473 are well disposed towards¦19475 the Persians, but to those that plotted against us a memorial of destruction. And every city and province collectively, which won't do accordingly, will be consumed with vengeance by spear and fire. It'll¦19476 be made not only inaccessible to men, but most hateful to wild animals and birds forever.]\f + \fr 8:13 \ft the passages in brackets are not in the \fl Hebrew.\f* Let the copies be posted in conspicuous places throughout the kingdom and let all the Yehudim be ready against this day¦19478, to¦19479 fight¦19479 against their enemies.
+\v 14 So the¦19483 horsemen¦19486 went¦19487 forth¦19487 quickly to perform the¦19491 king's¦19492 commands. The¦19497 ordinance was also¦19499 published in¦19500 Shushan.
 \p
-\v 15 Mordekai went out robed in royal apparel, wearing a golden crown and a diadem of fine purple linen. The people in Shushan saw it and rejoiced.
-\v 16 The Yehudim had light and gladness
-\v 17 in every city and province where the ordinance was published. Wherever the \add official\add* announcement took place, the Yehudim had joy and gladness, feasting and mirth. Many of the Gentiles were circumcised and became Yehudim for fear of the Yehudim.
+\v 15 Mordekai went out robed¦19509 in royal¦19508 clothing, wearing a golden¦19513 crown¦19511 and¦19514 a diadem¦19515 of fine¦19516 purple¦19517 linen¦19516. The¦19520 people in¦19521 Shushan saw it and rejoiced¦19523.
+\v 16 The¦19524 Yehudim had light¦19528 and¦19529 gladness¦19530
+\v 17 in every city¦19532 and¦19533 province where the ordinance was published. Wherever the \add official\add* announcement took place, the Yehudim had joy¦19545 and¦19546 gladness¦19547, feasting and¦19551 mirth¦19552. Many of the¦19555 Gentiles were circumcised and¦19558 became Yehudim for¦19560 fear¦19562 of the¦19563 Yehudim.
 \c 9
+\s1 The Yehudim defeat their enemies
 \p
-\v 1 Now in the twelfth month, on the thirteenth day of the month, which is Adar, the letters written by the king arrived.
-\v 2 In that day, the adversaries of the Yehudim perished; for no one resisted, through fear of them.
-\v 3 Because the chiefs of the local governors, and the princes and the royal scribes, honoured the Yehudim; for the fear of Mordekai was upon them.
-\v 4 Because the order of the king was in force, that he should be celebrated in all the kingdom.
-\v 6 In the city Shushan the Yehudim killed five hundred men,
+\v 1 Now in¦19565 the¦19567 twelfth month¦19569, on the thirteenth day of¦19571 the¦19571 month, which¦19573 is¦19574 Adar¦19575, the¦19577 letters written¦19578 by¦19581 the¦19582 king¦19583 arrived.
+\v 2 In¦19584 that¦19586 day¦19587, the¦19589 adversaries of the¦19591 Yehudim perished; for¦19594 no one resisted, through fear¦19596 of them.
+\v 3 Because the¦19598 chiefs of the¦19601 local governors, and¦19603 the¦19604 princes and¦19606 the¦19607 royal scribes¦19609, honoured the Yehudim; for the fear¦19615 of Mordekai was on them.
+\v 4 Because¦19620 the¦19621 order¦19622 of¦19623 the¦19623 king¦19624 was in force, that he should be celebrated in¦19626 all¦19627 the¦19628 kingdom¦19629.
+\v 6 In¦19631 the¦19633 city¦19634 Shushan the¦19636 Yehudim killed¦19635 five hundred men¦19638,
 \v 7 including Pharsannes, Delphon, Phasga,
 \v 8 Pharadatha, Barea, Sarbaca,
-\v 9 Marmasima, Ruphaeus, Arsaeus, and Zabuthaeus,
-\v 10 the ten sons of Haman the son of Hamedata the Bugaean, the enemy of the Yehudim; and they plundered their property on the same day.
-\v 11 The number of those who perished in Shushan was reported to the king.
+\v 9 Marmasima¦19654, Ruphaeus, Arsaeus, and Zabuthaeus,
+\v 10 the¦19661 ten¦19662 sons of Haman the son¦19663 of¦19667 Hamedata the Bugaean, the¦19667 enemy¦19668 of the¦19669 Yehudim; and¦19671 they plundered their property on the same day.
+\v 11 The¦19679 number¦19680 of those who perished in Shushan was reported to the¦19681 king¦19682.
 \p
-\v 12 Then the king said to Ester, “The Yehudim have slain five hundred men in the city Shushan. What do you think they have done in the rest of the country? What more do you ask, that it may be done for you?”
+\v 12 Then¦19710 the¦19689 king¦19690 said¦19687 to¦19691 Ester, “The¦19694 Yehudim have slain five hundred men¦19700 in¦19696 the¦19698 city¦19699 Shushan. What do you think they've done in¦19702 the rest of the country? What more do you ask, that¦19709 it may be¦19714 done for you¦19715?”
 \p
-\v 13 Ester said to the king, “Let it be granted to the Yehudim to do the same to them tomorrow. Also, hang the bodies of the ten sons of Haman.”
+\v 13 Ester said¦19717 to¦19717 the¦19719 king¦19720, “Let it be granted to the¦19722 Yehudim to do the¦19726 same to them tomorrow¦19727. Also¦19716, hang the bodies of the¦19729 ten¦19730 sons¦19731 of Haman.”
 \p
-\v 14 He permitted it to be done; and he gave up to the Yehudim of the city the bodies of the sons of Haman to hang.
-\v 15 The Yehudim assembled in Shushan on the fourteenth day of Adar and killed three hundred men, but plundered no property.
+\v 14 He permitted¦19735 it to¦19737 be¦19737 done; and¦19738 he gave up to the¦19740 Yehudim of the¦19742 city¦19743 the¦19744 bodies¦19745 of the¦19746 sons¦19747 of Haman to hang.
+\v 15 The¦19752 Yehudim assembled¦19751 in Shushan on the¦19756 fourteenth¦19757 day of¦19758 Adar¦19759 and¦19760 killed¦19761 three hundred men¦19762, but¦19764 plundered no property.
 \p
-\v 16 The rest of the Yehudim who were in the kingdom assembled, and helped one another, and obtained rest from their enemies; for they destroyed fifteen thousand of them on the thirteenth day of Adar, but took no spoil.
-\v 17 They rested on the fourteenth of the same month, and kept it as a day of rest with joy and gladness.
+\v 16 The¦19767 rest of the¦19770 Yehudim who were in¦19773 the¦19774 kingdom¦19775 assembled¦19776, and¦19777 helped one another, and¦19780 obtained rest from¦19782 their enemies; for¦19786 they destroyed fifteen thousand¦19789 of them on the thirteenth day of Adar¦19793, but¦19794 took no spoil.
+\v 17 They rested on the¦19799 fourteenth¦19800 of¦19801 the¦19801 same month, and¦19804 kept it¦19806 as a day¦19807 of rest with¦19809 joy¦19810 and¦19811 gladness¦19812.
 \p
-\v 18 The Yehudim in the city of Shushan assembled also on the fourteenth day and rested; and they also observed the fifteenth with joy and gladness.
-\v 19 On this account then, the Yehudim dispersed in every foreign land keep the fourteenth of Adar as a\f + \fr 9:19 \fl Greek \ft good day.\f* holy day with joy, each sending gifts of food to his neighbour.
+\v 18 The¦19813 Yehudim in¦19816 the¦19818 city¦19819 of Shushan assembled¦19820 also¦19821 on the¦19822 fourteenth¦19823 day and¦19824 rested; and¦19827 they also¦19828 observed the¦19829 fifteenth with¦19831 joy¦19832 and¦19833 gladness¦19834.
+\v 19 On this¦19836 account then¦19837, the Yehudim dispersed in¦19842 every¦19843 foreign land keep the¦19848 fourteenth¦19849 of¦19850 Adar¦19851 as a\f + \fr 9:19 \fl Greek \ft good day.\f* holy day¦19852 with¦19854 joy¦19855, each¦19858 sending gifts of food to his neighbour¦19860.
+\s1 The celebration named ‘Purim’
 \p
-\v 20 Mordekai wrote these things in a book and sent them to the Yehudim, as many as were in the kingdom of Ahashverosh \add !(Ahasuerus)\add*, both those who were near and those who were far away,
-\v 21 to establish these as joyful days and to keep the fourteenth and fifteenth of Adar;
-\v 22 for on these days the Yehudim obtained rest from their enemies; and in that month, which was Adar, in which a change was made for them from mourning to joy, and from sorrow to a holiday, to spend the whole of it in good days of\f + \fr 9:22 \fl Greek \ft weddings.\f* feasting and gladness, sending portions to their friends and to the poor.
-\v 23 And the Yehudim consented to this as Mordekai wrote to them,
-\v 24 showing how Haman the son of Hamedata the person from Makedonia fought against them, how he made a decree and threw\f + \fr 9:24 \fl Greek \ft lot.\f* lots to destroy them utterly;
-\v 25 also how he went in to the king, telling him to hang Mordekai; but all the calamities he tried to bring upon the Yehudim came upon himself, and he was hanged, along with his children.
-\v 26 Therefore these days were called Purim, because of the lots (for in their language they are called Purim) because of the words of this letter, and because of all they suffered on this account, and all that happened to them.
-\v 27 Mordekai established it, and the Yehudim took upon themselves, upon their offspring, and upon those who were joined to them to observe it, neither would they on any account behave differently; but these days were to be a memorial kept in every generation, city, family, and province.
-\v 28 These days of Purim shall be kept forever, and their memorial shall not fail in any generation.
+\v 20 Mordekai wrote¦19861 these things in a book¦19868 and¦19869 sent¦19870 them to¦19870 the¦19871 Yehudim, as many as were¦19874 in¦19875 Ahashverosh's \add !(Ahasuerus)\add* kingdom¦19878, both those who¦19879 were near¦19880 and¦19881 those who¦19882 were far away¦19870,
+\v 21 to¦19884 establish these as joyful days¦19886 and to keep the¦19891 fourteenth¦19892 and¦19893 fifteenth of¦19896 Adar¦19897;
+\v 22 for on these days¦19902 the¦19904 Yehudim obtained rest from¦19906 their enemies¦19908; and¦19910 in that¦19911 month¦19912, which¦19917 was Adar¦19919, in¦19913 which¦19914 a change¦19915 was¦19918 made for them from¦19920 mourning to joy¦19923, and¦19924 from¦19925 sorrow to a holiday, to spend the whole¦19931 of it in good days¦19933 of\f + \fr 9:22 \fl Greek \ft weddings.\f* feasting and¦19935 gladness¦19936, sending portions to their friends¦19940 and¦19941 to the¦19942 poor¦19943.
+\v 23 And¦19944 the Yehudim consented to this as¦19948 Mordekai wrote¦19949 to them,
+\v 24 showing how¦19953 Haman the son of Hamedata the person from Makedonia fought against them, how he¦19959 made a¦19962 decree and¦19963 threw\f + \fr 9:24 \fl Greek \ft lot.\f* lots¦19964 to destroy them utterly;
+\v 25 also¦19967 how¦19968 he went in to the¦19971 king¦19972, telling¦19973 him to¦19973 hang Mordekai; but all the calamities he tried to¦19981 bring on the¦19982 Yehudim came on¦19985 himself, and¦19988 he¦19990 was¦19987 hanged, along with his children¦19993.
+\v 26 Therefore these days¦19999 were called Purim, because¦20002 of¦20002 the¦20003 lots¦20004 (for in their language¦20007 they're called¦20009 Purim) because¦20011 of¦20011 the¦20012 words¦20013 of this letter, and¦20017 because¦20020 of¦20020 all they suffered¦20019 on this¦20021 account, and¦20022 all that¦20005 happened to¦20025 them.
+\v 27 Mordekai established it, and the¦20030 Yehudim took on themselves, on their offspring, and¦20034 on¦20035 those who¦20036 were joined to¦20040 them to¦20043 observe it¦20044, neither would they on any account behave differently; but¦20050 these days¦20051 were to be a memorial¦20053 kept in every generation, city¦20060, family, and province.
+\v 28 These days¦20067 of Purim must be kept forever, and¦20076 their memorial¦20078 must never be forgotten in any generation¦20085.
 \p
-\v 29 Queen Ester the daughter of Aminadav and Mordekai the Yehudi \add !(Jew)\add* wrote all that they had done, and gave the confirmation of the letter about Purim.
-\v 31 Mordekai and Ester the queen established this decision on their own, pledging their own well-being to their plan.
-\v 32 And Ester established it by a command forever, and it was written for a memorial.
+\v 29 Queen¦20090 Ester the daughter¦20091 of Aminadav and¦20093 Mordekai the¦20095 Yehudi \add !(Jew)\add* wrote¦20087 all that¦20089 they'd done¦20098, and¦20100 gave the¦20102 confirmation of the¦20104 letter about Purim.
+\v 31 Mordekai and Ester the¦20110 queen¦20111 established this decision on their own, pledging their own well-being to their plan¦20125.
+\v 32 And¦20127 Ester established it by a command forever, and¦20134 it was written¦20135 for a memorial¦20137.
 \c 10
+\s1 Mordekai's greatness
 \p
-\v 1 The king levied a tax upon his kingdom both by land and sea.
-\v 2 As for his strength and valour, and the wealth and glory of his kingdom, behold, they are written in the book of the Persians and Madim \add !(Medes)\add* for a memorial.
+\v 1 The¦20140 king¦20141 levied a tax on¦20142 his kingdom¦20144 both¦20146 by land¦20147 and¦20148 sea¦20150.
+\v 2 As for his strength¦20153 and¦20155 valour, and¦20158 the wealth¦20157 and¦20159 glory¦20160 of his kingdom¦20162, look¦20164, they're written¦20165 in¦20166 the book¦20167 of the Persians and¦20170 Madim \add !(Medes)\add* for a memorial¦20173.
 \p
 \v 3 Mordekai\f + \fr 10:3 \fl Greek \ft succeeded to \fl Or, came into the place of.\f* was viceroy to King Ahashverosh \add !(Ahasuerus)\add*, and was a great man in the kingdom, honoured by the Yehudim \add !(Jews)\add*, and lived his life loved by all his nation.\f + \fr 10:3 \ft the passages in brackets are not in the \fl Hebrew.\f*
+\s1 Mordekai explains his dream
+\p
 \v 4 [Mordekai said, “These things have come from God.
-\v 5 Because I remember the dream which I had concerning these matters; for not one detail of them has failed.
+\v 5 Because I remember the dream which I had about these matters; for not one detail of them has failed.
 \v 6 There was the little spring which became a river, and there was light, and the sun and much water. The river is Ester, whom the king married and made queen.
 \v 7 The two serpents are Haman and me.
 \v 8 The nations are those which combined to destroy the name of the Yehudim.
-\v 9 But as for my nation, this is Yisrael \add !(Israel)\add*, even those who cried to God and were delivered; for the master delivered his people. The master rescued us out of all these calamities; and God worked such signs and great wonders as have not been done amongst the nations.
-\v 10 Therefore he ordained two lots. One for the people of God, and one for all the other nations.
+\v 9 But as for my nation, this is Yisrael \add !(Israel)\add*, even those who cried to God and were delivered; for the master delivered his people. The master rescued us out of all these calamities; and God worked such signs and great wonders as haven't been done among the nations.
+\v 10 Therefore he ordained two lots. One for God's people, and one for all the other nations.
 \v 11 And these two lots came for an appointed season, and for a day of judgement, before God, and for all the nations.
 \v 12 God remembered his people and vindicated his inheritance.
-\v 13 They shall observe these days in the month Adar, on the fourteenth and on the fifteenth day of the month, with an assembly, joy, and gladness before God, throughout the generations forever amongst his people Yisrael.
+\v 13 They must observe these days in the month Adar, on the fourteenth and on the fifteenth day of the month, with an assembly, joy, and gladness before God, throughout the generations forever among his people Yisrael.
 \v 14 In the fourth year of the reign of Ptolemaios \add !(Ptolemy)\add* and Kleopatra \add !(Cleopatra)\add*, Dositheos, who said he was a priest and Levite, and Ptolemaios his son brought this letter of Purim, which they said was authentic, and that Lusimakos the son of Ptolemaios, who was in Yerushalem \add !(Jerusalem)\add*, had interpreted.]

@@ -1,4 +1,4 @@
-\id MRK - Open English Translation—Readers’ Version (OET-RV) v0.4.2
+\id MRK - Open English Translation—Readers’ Version (OET-RV) v0.5.1
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MRK
@@ -11,27 +11,27 @@
 \mt1 Markos
 \is1 Introduction
 \is2 Author
-\ip This account about Yeshua’s activities and teachings was written by Markos (typically shortened to ‘Mark’ in English), the son of a Jewish family who lived in Yerushalem/Jerusalem. His mother was named Maria/Mary (Acts 12:12).
-\ip Many people think he was Yohan/John Markos, a cousin of Barnabas (Col. 4:10) who accompanied Paul on his first long-distance trip to spread the good message about Yeshua the messiah (Acts 12:25, 13:13). We also know that Markos accompanied Peter (1 Peter 5:13), and some consider that it might have been Peter who narrated to Markos what Yeshua had done and taught.
+\ip This account about Yeshua’s activities and teachings was written by Markos (typically shortened to ‘Mark’ in English), the son of a Jewish family who lived in Yerushalem/Jerusalem. His mother was named Miryam/Mary (Acts 12:12).
+\ip Many people think he was Yohan/John Markos, a cousin of Barnabas (Col. 4:10) who accompanied Paulos on his first long-distance trip to spread the good message about Yeshua the messiah (Acts 12:25, 13:13). We also know that Markos accompanied Kefa (1 Peter 5:13), and some consider that it might have been Kefa who narrated to Markos what Yeshua had done and taught.
 \is2 This account
-\ip This account seems to have been written for non-Jews, especially perhaps those familiar with Roman customs. So he didn’t use as much ink as Matthew or Luke explaining prophecies from the Jewish scriptures but he does however, take time to explain Jewish customs to help non-Jewish readers.
+\ip This account seems to have been written for non-Jews, especially perhaps those familiar with Romaios customs. So he didn’t use as much ink as Matay or Lukas explaining prophecies from the Jewish scriptures but he does however, take time to explain Jewish customs to help non-Jewish readers.
 \ip Markos explains here that Yeshua came to serve both God and the people, and he often refers to him as ‘the son of humanity’ (traditionally translated very literally from the Greek as the ‘Son of Man’). We can see that especially in 10:45: “Even the son of humanity didn’t come to be served, but to serve others and to give his life as a ransom to set many people free.” Markos wants his readers to know that Yeshua did incredible things, but especially focuses on Yeshua’s teaching. Markos confirms Yeshua’s power and authority by telling about the miracles that he did, his healing of the sick, and his exorcism of demons.
 \ip The ending of this account is often disputed, and scholars are still \jmp debating|link-href="https://textandcanon.org/a-case-for-the-longer-ending-of-mark"\jmp* about whether or not the longer ending (16:9-20) is original to Markos. The \em OET\em* includes the disputed longer ending, but displays it in a lighter colour to indicate its debatable status.
 \iot Main components of Markos’ account
 \io1 Preparation for and arrival of the messiah \ior 1:1-13\ior*
-\io1 Yeshua’s activities in and around Galilee \ior 1:14–9:50\ior*
-\io1 The transition from Galilee to Yerushalem \ior 10:1-52\ior*
+\io1 Yeshua’s activities in and around Galil \ior 1:14–9:50\ior*
+\io1 The transition from Galil to Yerushalem \ior 10:1-52\ior*
 \io1 The final week in Yerushalem \ior 11:1–15:47\ior*
 \io1 Yeshua comes back to life \ior 16:1-20\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \m
-\v 1 \add Here\add* begins the good message \add about\add*\f + \fr 1:1 \ft As well as ‘about’, the Greek construction can also have the connotation of ‘brought by’, or even imply both. (\xt Yohan 1:1 \ft also confirms that Yeshua was both the messenger and the message itself.)\f* \nd God’s\nd* son, \nd Yeshua\nd* \add the\add* \nd messiah\nd*:
+\v 1 \add Here\add* begins the good message \add about\add*\f + \fr 1:1 \ft As well as ‘about’, the Greek construction can also have the connotation of ‘brought by’, or even imply both. (\xt Yohan 1:1 \ft also confirms that Yeshua was both the messenger and the message itself.)\f* \nd God’s\nd* son, \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* \add the\add* \nd messiah\nd*:
 \s1 The ministry of Yohan the immerser (The return of ‘Eliyah’)
 \r (Mat. 3:1-12; Luke 3:1-18; Yhn. 1:19-28)
 \p
-\v 2 The prophet Yeshayah wrote:
+\v 2 The prophet Yeshayah \add (Isaiah)\add* wrote:
 \q1 “Look, I’m sending my messenger \add ahead of\add* you,
 \q1 \add the one\add* who’ll be preparing your path.\x + \xo 1:2: \xt Mal 3:1.\x*
 \q1
@@ -39,8 +39,8 @@
 \q2 ‘Get the path ready for \nd Yahweh\nd*—
 \q2 make it smooth for him \add to walk on\add*.’ ”\x + \xo 1:3: \xt Isa 40:3 (LXX).\x*
 \p
-\v 4 Yohan \add (John)\add* \add turned up\add* in the wilderness announcing that people should get \add immersed\add* \add in water\add* \add in order to show that\add* \add their\add* sins \add have been forgiven\add*,
-\v 5 and \add many\add* from the Yudean region and from Yerushalem \add (Jerusalem)\add* \add city\add* went out to \add hear\add* him, and \add asked Yohan\add* to immerse them in the Yarden \add (Jordan)\add* river as they confessed their sins.
+\v 4 Yohan \add (John; Grk. Yoannes)\add* \add turned up\add* in the wilderness announcing that people should get \add immersed\add* \add in water\add* \add in order to show that\add* \add their\add* sins \add have been forgiven\add*,
+\v 5 and \add many\add* from the Yehudah \add (Judea)\add* region and from Yerushalem \add (Jerusalem)\add* \add city\add* went out to \add hear\add* him, and \add asked Yohan\add* to immerse them in the Yarden \add (Jordan)\add* river as they confessed their sins.
 \p
 \v 6 Yohan was dressed in \add simple clothes made from\add* camel \add hair\add* with a leather belt around his waist,\x + \xo 1:6: \xt 2Ki 1:8.\x* and he \add lived on\add* locusts and wild honey.
 \v 7 He \add also\add* announced, “There’s a greater \add man\add* coming \add soon\add*—\add in fact\add* I’m not \add even good enough\add* to bend down and untie his sandal \add straps\add*.
@@ -48,7 +48,7 @@
 \s1 Yeshua gets immersed and then tempted
 \r (Mat. 3:13–4:11; Luke 3:21-22; 4:1-13)
 \p
-\v 9 \fig Yeshua was immersed by Yohan.|src="images/41_Mk_01_06_RG.jpg" size="col" loc="1:9" copy="© Sweet Publishing" ref="1:9"\fig*\add Then one day\add* \nd Yeshua\nd* came from Nazaret in the Galilee \add region\add*, and he got immersed in the Yarden \add river\add* by Yohan.
+\v 9 \fig Yeshua was immersed by Yohan.|src="images/41_Mk_01_06_RG.jpg" size="col" loc="1:9" copy="© Sweet Publishing" ref="1:9"\fig*\add Then one day\add* \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* came from Nazaret \add (Nazareth)\add* in the Galil \add region\add*, and he got immersed in the Yarden \add (Jordan)\add* \add river\add* by Yohan \add (John; Grk. Yoannes)\add*.
 \v 10 \add As\add* \add Yeshua\add* came up out of the water, he saw the sky being \add opened up\add*, and \add God’s\add* \nd spirit\nd* coming down on him like a dove.
 \v 11 And a voice came from the sky \add saying\add*, “You’re my son who I love \add and\add* \add am pleased with\add*.”\x + \xo 1:11: \xt Gen 22:2; Psa 2:7; Isa 42:1; Mat 3:17; 12:18; Mrk 9:7; Luk 3:22.\x*
 \p
@@ -57,34 +57,34 @@
 \s1 The selection of the first followers/apprentices
 \r (Mat. 4:12-22; Luke 4:14-15; 5:1-11)
 \p
-\v 14 After Yohan had been \add arrested\add*, \nd Yeshua\nd* went back up \add north\add* to Galilee, announcing the good news from \nd God\nd*
+\v 14 After Yohan \add (John; Grk. Yoannes)\add* had been \add arrested\add*, \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* went back up \add north\add* to Galil, announcing the good news from \nd God\nd*
 \v 15 saying, “\wj The \+add promised time is here\+add*, and \nd God’s\nd* kingdom is \+add now\+add* near. \+add Turn from your sins\+add* and believe this good news.\wj*”\x + \xo 1:15: \xt Mat 3:2.\x*
 \p
-\v 16 As he went around Lake Galilee, \add Yeshua\add* saw \add two\add* fishermen, Simon and \add his\add* brother Andrew, throwing a net into the lake
+\v 16 As he went around Lake Galil, \add Yeshua\add* saw \add two\add* fishermen, Shim’on \add (Simon)\add* and \add his\add* brother Andreas, throwing a net into the lake
 \v 17 and \add he\add* said to them, “\wj Come \+add with\+add* me and I’ll make you into fishers of people.\wj*”
 \v 18 \add So\add* they left their \add fishing work\add* and \add went off with\add* \add Yeshua\add*.
 \p
-\v 19 Then a bit further on he saw \add two\add* of Zebedee’s sons, Yacob and his brother Yohan, in a boat getting the nets ready.
-\v 20 \add Yeshua\add* called them and they \add too\add* \add went off with\add* him, leaving their father Zebedee in the boat with the hired workers.
+\v 19 Then a bit further on he saw \add two\add* of Zavday’s \add (Grk. Zebedaios)\add* sons, Ya’akov \add (James; Grk. Yakobos)\add* and his brother Yohan, in a boat getting the nets ready.
+\v 20 \add Yeshua\add* called them and they \add too\add* \add went off with\add* him, leaving their father Zavday in the boat with the hired workers.
 \s1 Yeshua drives out a demon
 \r (Luke 4:31-37)
 \p
-\v 21 They \add went on\add* into Capernaum \add where\add* as soon as a rest \add day\add* started, he would go into the \add Jewish meeting hall\add* \add (Grk: synagogue)\add* \add and\add* teach \add there\add*.
+\v 21 They \add went on\add* into Kafarnaoum \add (Capernaum)\add* \add where\add* as soon as a rest \add day\add* started, he would go into the \add Jewish meeting hall\add* \add (Grk. synagogue)\add* \add and\add* teach \add there\add*.
 \v 22 \add The congregation\add* was amazed at his teaching, because he taught like \add someone\add* with authority, not like the \add regular teachers\add* \add there\add*.\x + \xo 1:22: \xt Mat 7:28-29.\x*
 \p
 \v 23 Then a \add demon-possessed\add* man in the \add meeting hall\add* suddenly yelled out,
-\v 24 “What are we to you, \nd Yeshua\nd* of Nazaret? You’ve come to destroy us. I know that you’re \nd God’s\nd* holy \add one\add*.”
+\v 24 “What are we to you, \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* of Nazaret \add (Nazareth)\add*? You’ve come to destroy us. I know that you’re \nd God’s\nd* holy \add one\add*.”
 \p
 \v 25 But \nd Yeshua\nd* scolded \add it\add*,\f + \fr 1:25 \ft The Greek pronoun is masculine, implying that the man was the one being scolded, yet “Come out of him!” implies that the spirit is being spoken to.\f* saying, “\wj Keep quiet!\wj*”, and, “\wj Come out of him!\wj*”
 \p
 \v 26 Then the demon \add threw the man into a convulsion\add*, cried out \add loudly\add*, and \add left\add* him.
 \v 27 Everyone was astounded \add and asked each other\add*, “What \add just happened\add*? \add We\add* \add haven’t heard anything like this before\add*\add —he has authority to command demons, and they obey\add* him!”
-\v 28 \add So then\add* the news about \add Yeshua\add* spread all over \add that entire\add* Galilee region.
+\v 28 \add So then\add* the news about \add Yeshua\add* spread all over \add that entire\add* Galil region.
 \s1 Yeshua heals many others
 \r (Mat. 8:14-17; Luke 4:38-41)
 \p
-\v 29 After leaving the \add meeting hall\add*, \add Yeshua\add* went with Yacob and Yohan into the home of Simon and Andrew.
-\v 30 \add Inside,\add* Simon’s mother-in-law was lying down \add with a fever\add*, and \add the others\add* spoke to \add Yeshua\add* about her.
+\v 29 After leaving the \add meeting hall\add*, \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* went with Ya’akov \add (James; Grk. Yakobos)\add* and Yohan \add (John; Grk. Yoannes)\add* into the home of Shim’on \add (Simon)\add* and Andreas.
+\v 30 \add Inside,\add* Shim’on’s mother-in-law was lying down \add with a fever\add*, and \add the others\add* spoke to \add Yeshua\add* about her.
 \v 31 When \add he went up to her, and\add* took hold of her hand \add and\add* \add helped her up\add*, the fever left her and she \add prepared something for them to eat\add*.
 \p
 \v 32 \add That\add* evening when the sun set, \add the people\add* brought all those \add who were sick or\add* demon-possessed to \add Yeshua\add*.
@@ -93,16 +93,16 @@
 \s1 Yeshua prays before going preaching
 \r (Luke 4:42-44)
 \p
-\v 35 In the \add small hours of\add* the morning, \add Yeshua\add* \add got up\add* and went out to a quiet place and prayed there.
-\v 36 \add But\add* Simon and the others \add came\add* looking for him,
+\v 35 In the \add small hours of\add* the morning, \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add got up\add* and went out to a quiet place and prayed there.
+\v 36 \add But\add* Shim’on \add (Simon)\add* and the others \add came\add* looking for him,
 \v 37 and \add when\add* they found him they said, “Everyone’s \add looking for\add* you!”
 \p
 \v 38 “\wj \+add Well,\+add*\wj*” \add Yeshua\add* answered, “\wj we’ll be going into the \+add other villages around here\+add*, so that I can also tell \+add them\+add*. \+add That’s what I came here for\+add*.\wj*”
-\v 39 Then he went preaching in all their \add meeting halls\add* in Galilee, and \add driving\add* out demons.\x + \xo 1:39: \xt Mat 4:23; 9:35.\x*
+\v 39 Then he went preaching in all their \add meeting halls\add* in Galil, and \add driving\add* out demons.\x + \xo 1:39: \xt Mat 4:23; 9:35.\x*
 \s1 Yeshua heals a man with leprosy
 \r (Mat. 8:1-4; Luke 5:12-16)
 \p
-\v 40 \add One day,\add* a \add man with leprosy\add* came to \add Yeshua\add* asking him, “\add I know that you could heal me if you wanted to\add*.”
+\v 40 \add One day,\add* a \add man with leprosy\add* came to \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* asking him, “\add I know that you could heal me if you wanted to\add*.”
 \p
 \v 41 \add Yeshua\add* felt compassion \add for him\add*, \add reached\add* out his hand and touched \add him\add*, and said, “\wj \+add Yes, I will. Get well\+add*.\wj*”
 \v 42 Then immediately the leprosy \add disappeared\add* and he was \add well again\add*.
@@ -114,7 +114,7 @@
 \s1 Yeshua heals a paralysed man
 \r (Mat. 9:1-8; Luke 5:17-26)
 \p
-\v 1 \add When\add* \add Yeshua\add* went \add back\add* to Capernaum \add after a few\add* days, \add people soon\add* heard that he was \add back\add* in the house
+\v 1 \add When\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* went \add back\add* to Kafarnaoum \add (Capernaum)\add* \add after a few\add* days, \add people soon\add* heard that he was \add back\add* in the house
 \v 2 and \add so\add* many people \add turned up there\add* that there wasn’t any room left—not even in the doorway. \add Inside,\add* \add Yeshua\add* was \add explaining the scriptures\add* to them.
 \v 3 Four \add men arrived, carrying a paralysed man\add* to \add Yeshua\add*,
 \v 4 \add but\add* because of the crowd, \add they were unable to get close\add*. \add So\add* they \add climbed up onto the flat\add* roof, \add removed a section\add*, and lowered the \add paralysed man\add* lying on a pallet.
@@ -132,17 +132,17 @@
 \s1 Levi’s (Matthew’s) calling
 \r (Mat. 9:9-13; Luke 5:27-32)
 \p
-\v 13 \add Yeshua\add* went \add back\add* out beside the lake where \add crowds of people\add* kept coming to him and he taught them.
-\v 14 As he was passing by the tax office, he saw Levi Alfaeus sitting \add there\add* and said to him, “\add Come along with\add* me.” \add So\add* \add Levi\add* stood up and followed \add Yeshua\add*.
+\v 13 \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* went \add back\add* out beside the lake where \add crowds of people\add* kept coming to him and he taught them.
+\v 14 As he was passing by the tax office, he saw Levi Halfay \add (Grk. Halfaios)\add* sitting \add there\add* and said to him, “\add Come along with\add* me.” \add So\add* \add Levi\add* stood up and followed \add Yeshua\add*.
 \p
 \v 15 \add Yeshua\add* \add ended up having a meal\add* at \add Levi’s\add* \add place\add*, and many \add other\add* tax collectors and \add undesirables\add* were sitting \add there also\add*, along \nd with Yeshua\nd* and his followers, because \add by then\add*, many \add people\add* were following him \add around\add*.
-\v 16 \add When\add* the teachers from the Pharisee party \add noticed\add* that \add Yeshua\add* was eating \add beside undesirables\add* and tax-collectors, they \add asked\add* his followers, “\add How come\add* he eats with tax-collectors and \add other low-life\add*?”
+\v 16 \add When\add* the teachers from the Farisaios party \add noticed\add* that \add Yeshua\add* was eating \add beside undesirables\add* and tax-collectors, they \add asked\add* his followers, “\add How come\add* he eats with tax-collectors and \add other low-life\add*?”
 \p
 \v 17 \nd Yeshua\nd* \add overheard\add* them and said, “\wj Healthy people don’t need a doctor—it’s the sick ones that do. I didn’t come \+add here\+add* to \+add help those who think they have no needs\+add*, but \+add I came\+add* to call sinners.\wj*”
 \s1 The question of fasting
 \r (Mat. 9:14-17; Luke 5:33-39)
 \p
-\v 18 \add Now\add* the followers of Yohan-the-immerser, and \add members of\add* the Pharisee party, \add regularly\add* fasted. \add So\add* \add a small group\add* came to \add Yeshua\add* and asked, “\add How come\add* Yohan’s followers and the Pharisee party fast \add regularly\add*, yet your followers don’t?”
+\v 18 \add Now\add* the followers of Yohan-the-immerser, and \add members of\add* the Farisaios party, \add regularly\add* fasted. \add So\add* \add a small group\add* came to \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* and asked, “\add How come\add* Yohan’s \add (John; Grk. Yoannes)\add* followers and the Farisaios party fast \add regularly\add*, yet your followers don’t?”
 \p
 \v 19 “\wj Can the \+add groomsmen\+add* fast when they’re \+add celebrating\+add* along with him?\wj*” \nd Yeshua\nd* \add answered\add*, “\wj \+add No,\+add* as long as \+add he’s\+add* still there, they \+add won’t be\+add* fasting.\wj*
 \v 20 \wj But \+add in the future\+add*, the groom will be taken away from them, and \+em then\+em* they’ll be fasting.\wj*
@@ -152,28 +152,28 @@
 \s1 Working on the Rest Day
 \r (Mat. 12:1-8; Luke 6:1-5)
 \p
-\v 23 \add Then it so happened that\add* \add Yeshua\add* and his followers passed through some fields of grain on some days of rest. \add As they went through\add*, they plucked off some heads of grain,\x + \xo 2:23: \xt Deu 23:25.\x*
-\v 24 and \add some members of\add* the Pharisee party said, “\add Hey, it’s breaking the law to harvest grain\add* on a rest \add day\add*!”
+\v 23 \add Then it so happened that\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* and his followers passed through some fields of grain on some days of rest. \add As they went through\add*, they plucked off some heads of grain,\x + \xo 2:23: \xt Deu 23:25.\x*
+\v 24 and \add some members of\add* the Farisaios party said, “\add Hey, it’s breaking the law to harvest grain\add* on a rest \add day\add*!”
 \p
 \v 25 “\wj You’ve read \+add yourselves\+add*,\wj*” \add Yeshua\add* \add replied\add*, “\wj what David did when he and his men were hungry.\wj*
 \v 26 \wj \+add They\+add* went into \+nd God’s\+nd* \+add tent\+add* and ate the \+add sacred\+add* bread \+add representing\+add* \+add God’s\+add* presence. Only the priests \+add were allowed to eat that\+add*,\x + \xo 2:26: \xt Lev 24:9.\x* and yet \+add David\+add* even gave some to his \+add companions\+add*!\wj*”
-\v 27 Then he told the \add Pharisees\add*, “\wj The \+add days\+add* of rest \+add were created for people\+add*, not \+add people\+add* for the rest \+add days\+add*.\wj*
+\v 27 Then he told the \add Farisaios\add*, “\wj The \+add days\+add* of rest \+add were created for people\+add*, not \+add people\+add* for the rest \+add days\+add*.\wj*
 \v 28 \wj So \+add I\+add*, the son of humanity, \+add have authority also over\+add* the day of rest.\wj*”
 \c 3
 \s1 The man with the curled-up hand
 \r (Mat. 12:9-14; Luke 6:6-11)
 \p
-\v 1 Again \add at another time\add*, \add Yeshua\add* went into the \add Jewish meeting hall\add* and there was a man there with a curled-up hand.
+\v 1 Again \add at another time\add*, \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* went into the \add Jewish meeting hall\add* and there was a man there with a curled-up hand.
 \v 2 The \add religious leaders there\add* were watching him closely \add to see\add* if he would heal the man on the rest \add day\add*, \add and then if he did, they would have a case\add* against him.
 \v 3 Then \add Yeshua\add* said to the man with the flawed hand, “\wj \+add Stand up there\+add* in the middle.\wj*”
 \v 4 And he asked \add the leaders\add*, “\wj Is it allowable to do good on the rest \+add day\+add*, or \+add only\+add* to do evil? To save life, or to kill?\wj*” But they \add didn’t reply\add*.
 \p
 \v 5 After \add angrily\add* looking around at them, grieving at \add their complete lack of compassion\add*, he told the man, “\wj \+add Open up\+add* your hand!\wj*” The man stretched out \add his fingers\add*, and his hand \add became totally normal\add*.
-\v 6 \add But\add* the Pharisees \add quickly left\add*, and \add meeting\add* with \add King\add* Herod’s supporters, they \add conspired to kill\add* \add Yeshua\add*.
+\v 6 \add But\add* the Farisaios \add quickly left\add*, and \add meeting\add* with \add King\add* Herodes’s \add (Herod)\add* supporters, they \add conspired to kill\add* \add Yeshua\add*.
 \s1 Big crowds press against Yeshua
 \p
-\v 7 \add After that,\add* \nd Yeshua\nd* withdrew towards the lake with his apprentices \add as well as\add* a huge crowd \add of people\add* from the \add regions of both\add* Galilee and \add down in\add* Yudea,
-\v 8 \add along with others\add* from Yerushalem, Idumea, from across the Yordan \add River\add*, and from \add up\add* near Tsor \add (Tyre)\add* and Tsidon \add (Sidon)\add*. That huge crowd came \add because\add* they had heard about the \add amazing\add* things he had done.
+\v 7 \add After that,\add* \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* withdrew towards the lake with his apprentices \add as well as\add* a huge crowd \add of people\add* from the \add regions of both\add* Galil and \add down in\add* Yehudah \add (Judea)\add*,
+\v 8 \add along with others\add* from Yerushalem \add (Jerusalem)\add*, Idoumaia, from across the Yarden \add (Jordan)\add* \add River\add*, and from \add up\add* near Tsor \add (Tyre)\add* and Tsidon \add (Sidon)\add*. That huge crowd came \add because\add* they had heard about the \add amazing\add* things he had done.
 \v 9 \add So\add* \add Yeshua\add* asked his apprentices \add to organise\add* a small boat to be there for him so he wouldn’t be cramped by \add the press of\add* the crowd.\x + \xo 3:9-10: \xt Mrk 4:1; Luk 5:1-3.\x*
 \v 10 \add Virtually anyone who had any physical issues\add* was pressing towards him to touch him, because he had \add already\add* healed so many.
 \v 11 And the \add demons\add*, whenever they \add saw\add* \add Yeshua\add*, they fell \add to their knees on\add* the ground \add in front of\add* him and yelled out, “You are \nd God’s\nd* son!”
@@ -181,21 +181,21 @@
 \s1 Yeshua appoints his twelve representatives
 \r (Mat. 10:1-4; Luke 6:12-16)
 \p
-\v 13 As \add Yeshua\add* \add started\add* going up a hill, he called the followers \add that he had selected\add* and they went off with him.
+\v 13 As \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add started\add* going up a hill, he called the followers \add that he had selected\add* and they went off with him.
 \v 14 He appointed twelve \add of them\add* as his representatives so that they could \add stick\add* with him, and be sent off to be proclaiming \add his message\add*
 \v 15 and to also have authority to exorcise demons.
 \p
-\v 16 \add These are\add* the twelve that he appointed: Simon (but he appended the name “Peter”),
-\v 17 Yacob \add (James)\add* and \add his\add* brother Yohan \add (John)\add* who were Zebedee’s sons (and he nicknamed them the “sons of thunder”),
-\v 18 Andrew, Philip, Bartholomew, Matthew, Thomas, Yacob Alfaeus, Thaddeus, Simon \add from\add* Canaan,
-\v 19 and Yudas \add (Judas)\add* Iscariot who \add later\add* betrayed him.
+\v 16 \add These are\add* the twelve that he appointed: Shim’on \add (Simon)\add* (but he appended the name “Kefa \add (Peter; Grk. Petros)\add*”),
+\v 17 Ya’akov \add (James; Grk. Yakobos)\add* and \add his\add* brother Yohan \add (John; Grk. Yoannes)\add* who were Zavday’s \add (Grk. Zebedaios)\add* sons (and he nicknamed them the “sons of thunder”),
+\v 18 Andreas, Filippos \add (Philip)\add*, Bar-Talmay \add (Bartholomew; Grk. Bartholomaios)\add*, Matay \add (Matthew; Grk. Matthaios)\add*, Toma \add (Thomas)\add*, Ya’akov Halfay \add (Grk. Halfaios)\add*, Thaddaios \add (Thaddeus)\add*, Shim’on \add from\add* Kena’an \add (Canaan)\add*,
+\v 19 and Yehudah \add (Judas; Grk. Yudas)\add* Iskariot who \add later\add* betrayed him.
 \s1 The two opposing spiritual powers
 \r (Mat. 12:22-32; Luke 11:14-23; 12:10)
 \p
-\v 20 Then \add Yeshua\add* was approaching a house, but the crowd \add swarmed them\add* again so they \add had no opportunity\add* to eat.
+\v 20 Then \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* was approaching a house, but the crowd \add swarmed them\add* again so they \add had no opportunity\add* to eat.
 \v 21 The ones with him heard \add all the noise\add* and came to get him, because they were \add wondering if he was crazy\add*.
 \p
-\v 22 The \add religious teachers\add* had come \add up\add* from Yerushalem and were \add complaining\add*, “\add He’s possessed by the prince of demons\add*. He \add can command\add* \add them\add* because \add he rules\add* \add them\add*!”\x + \xo 3:22: \xt Mat 9:34; 10:25.\x*
+\v 22 The \add religious teachers\add* had come \add up\add* from Yerushalem \add (Jerusalem)\add* and were \add complaining\add*, “\add He’s possessed by the prince of demons\add*. He \add can command\add* \add them\add* because \add he rules\add* \add them\add*!”\x + \xo 3:22: \xt Mat 9:34; 10:25.\x*
 \p
 \v 23 \add But\add* \add Yeshua\add* \add addressed\add* them: “\wj How could Satan \+add command\+add* \+add himself\+add*?\wj*
 \v 24 \wj If a kingdom is divided against itself, that kingdom \+add could never prosper\+add*.\wj*
@@ -210,7 +210,7 @@
 \s1 Yeshua’s mother and brothers arrive
 \r (Mat. 12:46-50; Luke 8:19-21)
 \p
-\v 31 \add Now\add* \add Yeshua’s\add* mother and brothers came and were standing outside, and they \add asked someone to tell him that they were there\add*.
+\v 31 \add Now\add* \add Yeshua’s\add* \add (Jesus; Grk. Yesus)\add* mother and brothers came and were standing outside, and they \add asked someone to tell him that they were there\add*.
 \v 32 \add Some in\add* the crowd sitting around him told \add Yeshua\add* that his mother and brothers were \add waiting outside for him\add*.
 \p
 \v 33 \add But\add* \add Yeshua\add* answered, “\wj Who is my mother and \+add who are\+add* my brothers?\wj*”
@@ -220,7 +220,7 @@
 \s1 The parable about planting seed
 \r (Mat. 13:1-9; Luke 8:4-8)
 \p
-\v 1 Again \add Yeshua\add* started teaching \add by the edge of\add* the lake. A huge crowd gathered \add around\add* him, \add but\add* he had boarded a boat that was \add floating in the water\add*, and all the people were \add there\add* on the \add shore\add*.\x + \xo 4:1: \xt Luk 5:1-3.\x*
+\v 1 Again \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* started teaching \add by the edge of\add* the lake. A huge crowd gathered \add around\add* him, \add but\add* he had boarded a boat that was \add floating in the water\add*, and all the people were \add there\add* on the \add shore\add*.\x + \xo 4:1: \xt Luk 5:1-3.\x*
 \v 2 \add From there\add*, he taught them many \add different\add* things in parables, \add including this one\add*:
 \v 3 “\wj Listen. \+add Once there was a farmer\+add* who went to \+add spread some seed\+add*.\wj*
 \v 4 \wj \+add As he spread it\+add*, some landed on the path, and the birds came and \+add fed on\+add* it.\wj*
@@ -242,7 +242,7 @@
 \s1 The ground where the seed fell
 \r (Mat. 13:18-23; Luke 8:11-15)
 \p
-\v 13 Then \add Yeshua\add* said to them, “\wj \+add If you didn’t understand\+add* this parable, how will you \+add understand any others\+add*?\wj*
+\v 13 Then \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* said to them, “\wj \+add If you didn’t understand\+add* this parable, how will you \+add understand any others\+add*?\wj*
 \v 14 \wj The \+add person\+add* \+add spreading\+add* seed is \+add spreading\+add* the \+add good\+add* message,\wj*
 \v 15 \wj and \+add there are some\+add* along the path where the \+add good\+add* message is being \+add spread\+add*, who hear, \+add but\+add* Satan \+add turns up\+add* immediately and \+add snatches\+add* the message that had been \+add planted\+add* in them.\wj*
 \v 16 \wj Similarly, there’s \+add some seed\+add* that falls onto rocky places where \+add the people\+add* who hear the \+add good\+add* message \+add happily accept\+add* it,\wj*
@@ -253,7 +253,7 @@
 \s1 The light will shine on everything
 \r (Luke 8:16-18)
 \p
-\v 21 Then \add Yeshua\add* told them, “\wj \+add Obviously no one goes and gets a\+add* lamp, \+add and then\+add* puts it under a basket or under the bed, \+add but rather they place\+add* it \+add somewhere higher\+add* on a stand.\wj*\x + \xo 4:21: \xt Mat 5:15; Luk 11:33.\x*
+\v 21 Then \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* told them, “\wj \+add Obviously no one goes and gets a\+add* lamp, \+add and then\+add* puts it under a basket or under the bed, \+add but rather they place\+add* it \+add somewhere higher\+add* on a stand.\wj*\x + \xo 4:21: \xt Mat 5:15; Luk 11:33.\x*
 \v 22 \wj \+add You see, nothing\+add* is hidden \+add that won’t\+add* \+add eventually\+add* be disclosed, and there’s no secret that won’t \+add eventually\+add* \+add be revealed\+add*.\wj*\x + \xo 4:22: \xt Mat 10:26; Luk 12:2.\x*
 \v 23 \wj Anyone who \+add wants to understand must listen carefully\+add*,\wj*”
 \v 24 and he continued, “\wj \+add Take care what you listen to\+add*. \+add How much you all judge others, so too will judgement be handed out\+add* to you, and \+add even more\+add*.\wj*\x + \xo 4:24: \xt Mat 7:2; Luk 6:38.\x* DOUBLE-CHECK
@@ -271,12 +271,12 @@
 \v 31 \wj It’s like \+add planting\+add* a mustard seed in the ground—\+add a very small seed\+add*.\wj*
 \v 32 \wj \+add But\+add* when it’s \+add planted and grows up\+add*, it \+add forms a large bush with many\+add* branches so that birds can nest in its \+add shade\+add*.\wj*”
 \p
-\v 33 And \add so as much as they could handle it\add*, \add Yeshua\add* \add shared\add* the \add good\add* message with them \add via many similar word pictures\add*.
+\v 33 And \add so as much as they could handle it\add*, \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add shared\add* the \add good\add* message with them \add via many similar word pictures\add*.
 \v 34 He \add never spoke without those illustrations\add*, but he explained all of them to his \add close\add* followers.
 \s1 Yeshua halts the storm on the lake
 \r (Mat. 8:23-27; Luke 8:22-25)
 \p
-\v 35 \add It was already\add* becoming evening on that day, \add so\add* \add Yeshua\add* told \add his apprentices\add*, “\wj Let’s \+add all\+add* \+add go across to the other shore\+add*.\wj*”
+\v 35 \add It was already\add* becoming evening on that day, \add so\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* told \add his apprentices\add*, “\wj Let’s \+add all\+add* \+add go across to the other shore\+add*.\wj*”
 \v 36 Then after sending the crowd away, they got into the boat with him, plus there were \add some\add* other boats with \add them\add*.
 \v 37 \add Out on the lake,\add* a big storm \add came up with strong winds\add*, and the waves started breaking \add across\add* the boat and filling it \add with water\add*.
 \v 38 \add However,\add* \add Yeshua\add* \add was asleep\add* on a cushion in the back, \add so\add* they woke him, \add calling out\add*, “Teacher, don’t you care that we’re \add all about to drown\add*?”
@@ -289,8 +289,8 @@
 \s1 Yeshua sends the demons into pigs
 \r (Mat. 8:28-34; Luke 8:26-39)
 \p
-\v 1 \add So\add* they got \add safely\add* to the Gerasenes region on the \add other\add* side of the lake.
-\v 2 As \add Yeshua\add* \add climbed\add* out of the boat, a \add demon-possessed\add* man \add came\add* out of the tombs to meet him.
+\v 1 \add So\add* they got \add safely\add* to the Gerasainon region on the \add other\add* side of the lake.
+\v 2 As \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add climbed\add* out of the boat, a \add demon-possessed\add* man \add came\add* out of the tombs to meet him.
 \v 3 He \add lived\add* in \add those\add* tombs, and no one could tie him up, not even with \add chains\add*,
 \v 4 because he had often been tied up \add in the past\add* with shackles and chains but had always pulled the chains apart and \add smashed\add* the shackles, and no one was able to subdue him.
 \v 5 All through the day and night, \add whether\add* in the tombs or \add up\add* in the hills, he was yelling out and \add hurting\add* himself with stones.
@@ -320,11 +320,11 @@
 \s1 A woman healed as Yeshua goes to help a dying girl
 \r (Mat. 9:18-26; Luke 8:40-56)
 \p
-\v 21 \add When\add* \nd Yeshua\nd* had crossed in the boat \add to the other side\add* \add of the lake\add*, a large crowd \add of people\add* \add came out to the lake edge to see\add* him.
-\v 22 Then \add unexpectedly\add*, one of the \add religious\add* leaders named Yairos \add (Jairus)\add* came out, and \add when he found\add* \add Yeshua\add*, he fell \add to his knees in front of him\add*
+\v 21 \add When\add* \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* had crossed in the boat \add to the other side\add* \add of the lake\add*, a large crowd \add of people\add* \add came out to the lake edge to see\add* him.
+\v 22 Then \add unexpectedly\add*, one of the \add religious\add* leaders named Yair \add (Jairus)\add* came out, and \add when he found\add* \add Yeshua\add*, he fell \add to his knees in front of him\add*
 \v 23 and pleaded, “My \add young\add* daughter is \add critical and\add* \add just hanging on\add* for you to come and \add touch\add* her so that she’ll be healed and live.”
 \p
-\v 24 \add So\add* \add Yeshua\add* went off with \add Yairos\add*. The large crowd followed \add also\add*, and \add many were getting pressed against\add* \add Yeshua\add*.
+\v 24 \add So\add* \add Yeshua\add* went off with \add Yair\add*. The large crowd followed \add also\add*, and \add many were getting pressed against\add* \add Yeshua\add*.
 \p
 \v 25 Then a woman \add came who\add* \add had been losing\add* blood for twelve years,
 \v 26 and who’d endured much under \add various\add* doctors \add despite spending everything she had\add*. \add After all that, she’d ended up even\add* worse,
@@ -340,11 +340,11 @@
 \v 33 \add when\add* the woman, \add scared and shaking because of what was happening\add*, came and fell \add to her knees\add* \add in front of\add* \add Yeshua\add* and told him the \add whole story\add*.
 \v 34 “\wj Daughter, your faith has healed you,\wj*” \add Yeshua\add* said. “\wj Go in peace and \+add full health\+add*.\wj*”
 \p
-\v 35 While he was still speaking, \add messengers\add* came from \add the religious leader’s\add* house to tell \add Yairos\add*, “Your daughter has died. Why bother the teacher any more?”
+\v 35 While he was still speaking, \add messengers\add* came from \add the religious leader’s\add* house to tell \add Yair\add* \add (Jairus)\add*, “Your daughter has died. Why bother the teacher any more?”
 \p
 \v 36 But \nd Yeshua\nd* overheard them telling \add that\add* to the leader and told \add him\add*, “\wj Don’t be afraid—just keep believing.\wj*”
-\v 37 \add Yeshua\add* didn’t allow anyone to accompany him other than Peter, and Yacob \add (James)\add* and his brother, Yohan \add (John)\add*.
-\v 38 As they approached \add Yairos’\add* house, \add Yeshua\add* saw a \add big\add* commotion \add ahead of them\add*, with lots of wailing and crying \add going on\add*.
+\v 37 \add Yeshua\add* didn’t allow anyone to accompany him other than Kefa \add (Peter; Grk. Petros)\add*, and Ya’akov \add (James; Grk. Yakobos)\add* and his brother, Yohan \add (John; Grk. Yoannes)\add*.
+\v 38 As they approached \add Yair’\add* house, \add Yeshua\add* saw a \add big\add* commotion \add ahead of them\add*, with lots of wailing and crying \add going on\add*.
 \v 39 As he entered, he said, “\wj Why are you all crying \+add in distress\+add*? The child hasn’t died—she’s \+add just\+add* sleeping!\wj*”
 \p
 \v 40 \add But\add* they \add just\add* ridiculed \add Yeshua\add*, \add so\add* he \add sent them all outside\add*, \add just\add* taking the father and mother of the child, \add along with three\add* with him. He went in where the \add girl\add* was,
@@ -355,9 +355,9 @@
 \s1 Yeshua’s community can’t believe he’s from God
 \r (Mat. 13:53-58; Luke 4:16-30)
 \p
-\v 1 \add So\add* \add Yeshua\add* \add left\add* \add Capernaum\add* and \add went back with his followers\add* to \add Nazaret,\add* his \add birthplace\add*.
+\v 1 \add So\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add left\add* \add Kafarnaoum\add* \add (Capernaum)\add* and \add went back with his followers\add* to \add Nazaret\add* \add (Nazareth)\add* \add ,\add* his \add birthplace\add*.
 \v 2 \add It was now\add* the Rest Day and when he started teaching in the \add Jewish meeting hall\add*, many who heard him were astonished, saying, “Where did that man learn all that? \add How could he have such\add* wisdom and \add be able to do those\add* miracles?
-\v 3 Isn’t that the carpenter, the son of Maria \add (Mary)\add*, and the brother of Yacob and Yosef CHECK and Yudas and Simon? \add Don’t his sisters live around\add* here?” And they were offended by his \add teaching\add*.
+\v 3 Isn’t that the carpenter, the son of Maria \add (Mary; Heb. Miryam; Grk. Maria/Mariam)\add*, and the brother of Ya’akov \add (James; Grk. Yakobos)\add* and Yosef \add (Joseph)\add* CHECK and Yehudah \add (Judas; Grk. Yudas)\add* and Shim’on \add (Simon)\add*? \add Don’t his sisters live around\add* here?” And they were offended by his \add teaching\add*.
 \p
 \v 4 Then \nd Yeshua\nd* told them, “\wj A prophet is \+add only dishonoured\+add* in his \+add own\+add* home town, and among his \+add own\+add* relatives, and in his \+add own\+add* home.\wj*”\x + \xo 6:4: \xt Yhn 4:44.\x*
 \p
@@ -377,17 +377,17 @@
 \s1 The execution of Yohan-the-immerser
 \r (Mat. 14:1-12; Luke 9:7-9)
 \p
-\v 14 \add Yeshua\add* was \add now becoming well known\add* and King Herod \add Antipas\add* heard about him. \add He thought that maybe\add* Yohan-the-immerser had \add come back to life\add* and that’s why \add Yeshua\add* \add was able to do\add* miracles.\x + \xo 6:14-15: \xt Mat 16:14; Mrk 8:28; Luk 9:19.\x*
+\v 14 \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* was \add now becoming well known\add* and King Herodes \add (Herod)\add* \add Antipas\add* heard about him. \add He thought that maybe\add* Yohan-the-immerser had \add come back to life\add* and that’s why \add Yeshua\add* \add was able to do\add* miracles.\x + \xo 6:14-15: \xt Mat 16:14; Mrk 8:28; Luk 9:19.\x*
 \p
 \v 15 But others \add thought it was\add* \add the promised return of\add* Eliyah \add (Elijah)\add*, and \add yet\add* others \add thought he must be\add* \add another\add* prophet like the \add ones\add* \add in the Scriptures\add*.
 \p
-\v 16 But hearing \add about Yeshua\add*, Herod was \add telling people\add*, “That Yohan who I \add had\add* beheaded, \add he must have come back to life\add*!”
-\v 17 Because Herod himself had had Yohan arrested and \add put\add* in prison because he had married Herodias, his brother Philip’s wife.\x + \xo 6:17-18: \xt Luk 3:19-20.\x*
+\v 16 But hearing \add about Yeshua\add*, Herodes was \add telling people\add*, “That Yohan \add (John; Grk. Yoannes)\add* who I \add had\add* beheaded, \add he must have come back to life\add*!”
+\v 17 Because Herodes himself had had Yohan arrested and \add put\add* in prison because he had married Herodias, his brother Filippos’s \add (Philip)\add* wife.\x + \xo 6:17-18: \xt Luk 3:19-20.\x*
 \v 18 Yohan had been telling \add the king\add* that it was wrong for \add him\add* to \add marry\add* \add his\add* brother’s wife,
-\v 19 and \add so\add* Herodias resented him \add enough to\add* want to kill him, but \add Herod\add* hadn’t be able to
+\v 19 and \add so\add* Herodias resented him \add enough to\add* want to kill him, but \add Herodes\add* hadn’t be able to
 \v 20 because \add he\add* respected Yohan as a righteous and holy \add teacher\add* and \add so\add* \add he kept him alive\add*. He \add often\add* enjoyed hearing from \add Yohan\add* and \add thought a lot\add* \add about what he said\add*.
 \p
-\v 21 \add However,\add* an \add opportunity\add* came at Herod’s birthday \add celebration\add*, when he \add threw a feast\add* for his \add top officials\add* and generals, and for the leaders in Galilee.
+\v 21 \add However,\add* an \add opportunity\add* came at Herodes’s birthday \add celebration\add*, when he \add threw a feast\add* for his \add top officials\add* and generals, and for the leaders in Galil.
 \v 22 The daughter of Herodias came in and danced \add for them\add*, and the king and \add his party guests all enjoyed it\add*. \add So\add* the king said to the young woman, “\add Just\add* ask me \add for anything\add* and I’ll give it to you.”
 \v 23 Then he promised her, “\add Even if you asked for\add* half of my kingdom, I’d give it to you!”
 \p
@@ -402,7 +402,7 @@
 \s1 Yeshua feeds 5,000 people
 \r (Yhn 6:1-14; Mat. 14:13-21; Luke 9:10-17)
 \p
-\v 30 \add Now\add* the apprentices \add who had been sent out,\add* \add returned\add* back to \nd Yeshua\nd*, and they reported \add back\add* everything they had done and \add what they had been teaching\add* \add people\add*.
+\v 30 \add Now\add* the apprentices \add who had been sent out,\add* \add returned\add* back to \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add*, and they reported \add back\add* everything they had done and \add what they had been teaching\add* \add people\add*.
 \v 31 Then he told them \add to head to\add* a quiet place \add with him to take a break\add*. \add That was\add* because there were \add so many people always\add* coming and going, and \add sometimes\add* they didn’t even have \add a chance\add* to eat.
 \v 32 \add So\add* they went away by boat to a quiet place by themselves.
 \p
@@ -426,7 +426,7 @@
 \s1 Yeshua walks on the lake surface
 \r (Yhn 6:15-21; Mat. 14:22-33)
 \p
-\v 45 \add Straight after that,\add* \add Yeshua\add* \add sent\add* his apprentices \add off\add* in the boat to go \add across\add* to Bethsaida while he sent the crowd \add home\add*.
+\v 45 \add Straight after that,\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add sent\add* his apprentices \add off\add* in the boat to go \add across\add* to Beyt-Tsayda while he sent the crowd \add home\add*.
 \v 46 Then he said \add goodbye\add* to \add everyone\add*, \add and\add* \add climbed\add* the hill to pray.
 \v 47 \add Later in the night,\add* the boat was out in the middle of the lake, and only \add Yeshua\add* remained back there on the land.
 \v 48 He saw them \add struggling\add* to row \add against\add* the wind, and \add some time after 3am\add* he came \add out\add* to them, walking on the lake \add surface\add* \add as if to walk\add* past them.
@@ -435,23 +435,23 @@
 \p \add But\add* \add Yeshua\add* immediately spoke to them and told them, “\wj \+add Hey,\+add* \+add take heart\+add*, \+add it’s me\+add*, don’t be afraid!\wj*”
 \v 51 Then he \add climbed\add* up into the boat and the wind died down. They were all \add totally astounded\add*
 \v 52 because they hadn’t understood \add the implications of him feeding all the people\add* because their \add minds were closed\add*.
-\s1 Yeshua heals many people around Gennesaret
+\s1 Yeshua heals many people around Gennaisaret
 \r (Mat. 14:34-36)
 \p
-\v 53 \add After completing their crossing\add*, they anchored at Gennesaret.
-\v 54 \add When\add* they got out of the boat, \add again\add* \add people\add* recognised \add Yeshua\add*
+\v 53 \add After completing their crossing\add*, they anchored at Gennaisaret.
+\v 54 \add When\add* they got out of the boat, \add again\add* \add people\add* recognised \add Yeshua\add* \add (Jesus; Grk. Yesus)\add*
 \v 55 and ran around that \add region\add*, \add so next minute\add* \add people\add* began \add bringing all of\add* those \add who\add* were sick, carrying them on pallets to wherever they heard that \add Yeshua\add* was.
 \v 56 \add After that,\add* whenever \add Yeshua\add* entered villages or cities, or fields or marketplaces, they laid \add the sick\add* \add down there\add* and were imploring him that they might even just touch the \add edge\add* of his \add robe\add*, and anyone who \add did so\add* was healed.
 \c 7
 \s1 Yeshua suggests obeying God, not tradition
 \r (Mat. 15:1-9)
 \p
-\v 1 \add Some from\add* the Pharisee party and some of the law teachers had come from Yerushalem \add (Jerusalem)\add* \add to observe\add* \add Yeshua\add*
+\v 1 \add Some from\add* the Farisaios party and some of the law teachers had come from Yerushalem \add (Jerusalem)\add* \add to observe\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add*
 \v 2 and \add noticed\add* that some of his followers were eating \add their food\add* \add without following their religious customs, i.e.,\add* \add without washing their\add* hands.
-\v 3 (The Pharisees and, \add in fact,\add* all the Jewish \add religious leaders\add* don’t eat without \add first ceremonially\add* washing \add their\add* hands \add as taught by their\add* elders \add over the generations\add*.
+\v 3 (The Farisaios and, \add in fact,\add* all the Jewish \add religious leaders\add* don’t eat without \add first ceremonially\add* washing \add their\add* hands \add as taught by their\add* elders \add over the generations\add*.
 \v 4 They won’t eat at the market if they can’t do that \add first\add*, and have many other \add regulations about\add* \add ceremonial\add* \add washing\add* of cups and jugs and copper containers.)
 \p
-\v 5 Then the Pharisees and \add religious teachers\add* asked \add Yeshua\add*, “\add How come\add* your followers don’t \add respect\add* our \add Jewish\add* \add traditions\add*, but eat \add without the ceremonial washing of\add* hands?”
+\v 5 Then the Farisaios and \add religious teachers\add* asked \add Yeshua\add*, “\add How come\add* your followers don’t \add respect\add* our \add Jewish\add* \add traditions\add*, but eat \add without the ceremonial washing of\add* hands?”
 \p
 \v 6 “\wj Yeshayah \+add (Isaiah)\+add* \+add got it exactly right\+add*,\wj*” he answered, “\wj \+add when he expressed\+add* \+add God’s thoughts\+add* about you hypocrites \+add and wrote\+add*:\wj*
 \q1 \wj ‘These people honour me with \+add their\+add* lips,\wj*
@@ -462,7 +462,7 @@
 \p
 \v 8 \wj \+add You’ve ignored\+add* \nd God’s\nd* \+add commands\+add* \+add instead accepting\+add* human \+add traditions\+add*.\wj*
 \p
-\v 9 “\wj You all \+add simply\+add* dismiss \nd God’s\nd* \+add commands\+add* in \+add favour of\+add* your own customs,\wj* \add Yeshua\add* continued.
+\v 9 “\wj You all \+add simply\+add* dismiss \nd God’s\nd* \+add commands\+add* in \+add favour of\+add* your own customs,\wj* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* continued.
 \v 10 \wj Mosheh \+add (Moses)\+add* \+add teaches\+add* \+add us\+add*,\wj*
 \q1 \wj ‘Honour your \+add parents\+add*,’\wj*\x + \xo 7:10: \xt Exo 20:12; Deu 5:16.\x*
 \q1 \wj and\wj*
@@ -474,13 +474,13 @@
 \s1 Evil comes from inside a person
 \r (Mat. 15:10-20)
 \p
-\v 14 \add Yeshua\add* called out to the crowd, “\wj \+add Everyone listen to me carefully\+add*:\wj*
+\v 14 \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* called out to the crowd, “\wj \+add Everyone listen to me carefully\+add*:\wj*
 \v 15 \wj Nothing that enters \+add your mouth\+add* \+add makes you guilty in God’s eyes\+add*. It’s what comes \+em out\+em* of \+add you\+add* \+add that demonstrates your culpability\+add*.\wj*”
 \p
 \v 16 ◘
 \v 17 When \add Yeshua\add* came \add back inside\add*, his apprentices asked him \add what he meant\add*.
 \v 18 “\wj \+add Can’t you understand something so simple\+add*,\wj*” he \add scolded\add* them. “\wj \+add Can’t you see\+add* that anything from the outside that enters \+add your body\+add* \+add doesn’t make you guilty in God’s sight\+add*,\wj*
-\v 19 \wj because it doesn’t enter your \+add mind\+add* but \+add merely\+add* \+add goes into\+add* \+add your\+add* stomach and \+add ends up\+add* in the toilet.\wj*” (\add By saying this he clearly showed that\add* \add it was ok\add* \add for Jews to eat\add* any food.)
+\v 19 \wj because it doesn’t enter your \+add mind\+add* but \+add merely\+add* \+add goes into\+add* \+add your\+add* stomach and \+add ends up\+add* in the toilet.\wj*” (\add By saying this he clearly showed that\add* \add it was ok\add* \add for Yehudim\add* \add (Jews)\add* \add to eat\add* any food.)
 \p
 \v 20 “\wj It’s what comes out of \+add you\+add* that \+add makes you guilty in God’s eyes\+add*,\wj*” he \add continued\add*.
 \v 21-22 “\wj That’s because evil thoughts, \+add sexual immorality, theft, murder, adultery,\+add* greed, wickedness, deceit, arrogance, lust, slander, pride, and foolishness all come from \+em inside\+em* people’s \+add hearts\+add* \+add and minds\+add*.\wj*
@@ -488,9 +488,9 @@
 \s1 The bold faith of a non-Jewish woman
 \r (Mat. 15:21-28)
 \p
-\v 24 \add Yeshua\add* left \add that place\add* and went \add up north\add* into the regions of Tyre and Tsidon. He \add tried\add* to enter a house \add without being noticed\add* but \add didn’t succeed\add*,
+\v 24 \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* left \add that place\add* and went \add up north\add* into the regions of Tsor \add (Tyre)\add* and Tsidon \add (Sidon)\add*. He \add tried\add* to enter a house \add without being noticed\add* but \add didn’t succeed\add*,
 \v 25 and straight away a woman who had heard about him \add turned up\add*. \add She knelt in front of\add* him because she had a \add young\add* daughter who was \add demon-possessed\add*.
-\v 26 The woman was Greek from Phoenicia in Syria, and she begged \add Yeshua\add* to \add command\add* the demon \add to leave\add* her daughter.
+\v 26 The woman was Greek from Foinikai in Aram \add (Syria)\add*, and she begged \add Yeshua\add* to \add command\add* the demon \add to leave\add* her daughter.
 \v 27 “\wj Let the \+add Jewish\+add* children be \+add treated\+add* first,\wj*” he told her, “\wj because it’s not good to take the children’s food and \+add give\+add* it to the \+add household\+add* dogs.\wj*”
 \p
 \v 28 “Yes, \nd master\nd*,” she responded, “but the \add puppies\add* under the table \em do\em* get to eat the little crumbs that the children \add drop\add*.”
@@ -500,7 +500,7 @@
 \v 30 And when she \add got\add* home, the demon had \add indeed gone\add* and the \add young\add* girl was lying \add quietly\add* on \add her\add* bed.
 \s1 Yeshua heals a deaf man who couldn’t speak
 \p
-\v 31 \add Yeshua\add* left the Tyre \add region\add*, passed through Tsidon, and came down the \add eastern\add* side of Galilee Lake to the Decapolis \add region\add*.
+\v 31 \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* left the Tsor \add (Tyre)\add* \add region\add*, passed through Tsidon \add (Sidon)\add*, and came down the \add eastern\add* side of Galil Lake to the Dekapolis \add region\add*.
 \v 32 \add The people there\add* brought a man to him \add who couldn’t hear or speak\add*, and asked \add Yeshua\add* \add to heal\add* him.
 \v 33 \add So\add* \add Yeshua\add* took \add the man\add* back \add away\add* from the crowd, put his fingers in \add the man’s\add* ears, then he spat and touched the man’s tongue.
 \v 34 Looking up to the sky, he sighed and said, “\wj Open up!\wj*”
@@ -512,7 +512,7 @@
 \s1 Yeshua feeds 4,000 people
 \r (Mat. 15:32-39)
 \p
-\v 1 \add Another time\add* there was a large crowd again with nothing to eat. \add Yeshua\add* called his apprentices and told them,
+\v 1 \add Another time\add* there was a large crowd again with nothing to eat. \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* called his apprentices and told them,
 \v 2 “\wj I feel \+add sorry\+add* for \+add all these people\+add* because they’ve already been with us for three days and haven’t had anything to eat.\wj*
 \v 3 \wj I can’t send them home because they’re \+add too weak to walk\+add*, and \+add some have a long way to go\+add*.\wj*”
 \p
@@ -525,19 +525,19 @@
 \v 7 They also had a few small \add cooked\add* fish, so he blessed them \add too\add* and got them \add to distribute\add* them \add as well\add*.
 \v 8 After \add all the people\add* had eaten and were full, they collected seven basketfuls of \add leftovers\add*.
 \v 9 \add There were some four thousand people there\add* \add that day\add*, and \add Yeshua\add* sent them \add home\add* \add after\add* they’d eaten.
-\v 10 Then he \add and\add* his apprentices climbed into the boat and \add headed for\add* the Dalmanutha \add region\add*.
+\v 10 Then he \add and\add* his apprentices climbed into the boat and \add headed for\add* the Dalmanoutha \add region\add*.
 \s1 The religious leaders want to see a miracle
 \r (Mat. 16:1-4)
 \p
-\v 11 \add Some men from\add* the Pharisee \add party\add* came out \add to Yeshua\add* and started arguing with him. They were \add checking him out\add* \add and wanted to see him do a miracle\add*.\x + \xo 8:11: \xt Mat 12:38; Luk 11:16.\x*
+\v 11 \add Some men from\add* the Farisaios \add party\add* came out \add to Yeshua\add* \add (Jesus; Grk. Yesus)\add* and started arguing with him. They were \add checking him out\add* \add and wanted to see him do a miracle\add*.\x + \xo 8:11: \xt Mat 12:38; Luk 11:16.\x*
 \v 12 \add Yeshua\add* \add grieved inside and asked\add*, “\wj Why do \+add you people need to see a miracle\+add* \+add before you’ll believe me\+add*? \+add Actually, no miracle will be done for\+add* this generation.\wj*”\x + \xo 8:12: \xt Mat 12:39; Luk 11:29.\x*
 \p
 \v 13 \add So\add* \add Yeshua\add* \add left in the boat\add* again and \add crossed to the other side of the lake\add*.
 \s1 The apprentices miss the significance of what’s happening
 \r (Mat. 16:5-12)
 \p
-\v 14 \add But\add* \add Yeshua’s apprentices\add* forgot to take \add any food\add* other than one bun that \add someone in the boat had\add*.
-\v 15 He told them, “\wj Watch out for the yeast of the Pharisees\x + \xo 8:15: \xt Luk 12:1.\x* and of \+add King\+add* Herod.\wj*”
+\v 14 \add But\add* \add Yeshua’s\add* \add (Jesus; Grk. Yesus)\add* \add apprentices\add* forgot to take \add any food\add* other than one bun that \add someone in the boat had\add*.
+\v 15 He told them, “\wj Watch out for the yeast of the Farisaios\x + \xo 8:15: \xt Luk 12:1.\x* and of \+add King\+add* Herodes \+add (Herod)\+add*.\wj*”
 \p
 \v 16 \add They asked each other what it meant—was it because they forgot food?\add*
 \p
@@ -550,9 +550,9 @@
 \p “Seven,” they \add answered\add*.
 \p
 \v 21 “\wj \+add So\+add* how can you all \+add fail to understand\+add* \+add what’s going on right in front of you\+add*,\wj*” \add Yeshua\add* \add asked\add*.
-\s1 Yeshua heals a blind man near Bethsaida
+\s1 Yeshua heals a blind man near Beyt-Tsayda
 \p
-\v 22 \add As they entered\add* Bethsaida, \add the people\add* brought a blind \add man\add* to \add Yeshua\add* and asked him to touch him.
+\v 22 \add As they entered\add* Beyt-Tsayda, \add the people\add* brought a blind \add man\add* to \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* and asked him to touch him.
 \v 23 \add So\add* \add Yeshua\add* took the man’s hand and led him out of the village. Then he spat in his eyes, placed his hands on him, and asked him, “\wj Can you see anything?\wj*”
 \p
 \v 24 The man looked \add around and answered\add*, “I can see the people, \add but they just look like\add* trees.”
@@ -561,20 +561,20 @@
 \s1 Yeshua asks who they think he is
 \r (Mat. 16:13-20; Luke 9:18-21)
 \p
-\v 27 Then \nd Yeshua\nd* and his apprentices \add moved around\add* the \add various\add* villages of Caesaria Philippi. On the way, he asked \add them\add*, “\wj Who \+add does everyone think I am\+add*?\wj*”
+\v 27 Then \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* and his apprentices \add moved around\add* the \add various\add* villages of Kaisareia-Filippi \add (Caesarea Philippi)\add*. On the way, he asked \add them\add*, “\wj Who \+add does everyone think I am\+add*?\wj*”
 \p
-\v 28 “\add Some say\add* Yohan-the-immerser,” they said, “some \add say\add* Eliyah, \add and some\add* \add say\add* one of the prophets.”\x + \xo 8:28: \xt Mrk 6:14-15; Luk 9:7-8.\x*
+\v 28 “\add Some say\add* Yohan-the-immerser,” they said, “some \add say\add* Eliyah \add (Elijah)\add*, \add and some\add* \add say\add* one of the prophets.”\x + \xo 8:28: \xt Mrk 6:14-15; Luk 9:7-8.\x*
 \p
 \v 29 “\wj And what do you all \+add think\+add*?\wj*” he asked.
-\p “You are the \add promised one\add* \add sent by God\add*,” Peter answered him.\x + \xo 8:29: \xt Yhn 6:68-69.\x*
+\p “You are the \add promised one\add* \add sent by God\add*,” Kefa \add (Peter; Grk. Petros)\add* answered him.\x + \xo 8:29: \xt Yhn 6:68-69.\x*
 \p
 \v 30 Then \add Yeshua\add* warned them \add not to tell others\add* about him.
 \s1 Yeshua’s radical challenge to his would-be followers
 \r (Mat. 16:21-28; Luke 9:22-27)
 \p
-\v 31 Then \add Yeshua\add* began teaching \add his apprentices\add* that the son of humanity would need to suffer a lot, to be rejected by \add the religious leaders\add*, and so to be \add put to death\add* \add but to come back to life\add* after three days.
-\v 32 He taught this \add very\add* clearly, \add but\add* Peter took him aside \add and told him off\add*.
-\v 33 \add Yeshua\add* turned back and \add looked at the others\add*, then reprimanded Peter, “\wj \+add Stand back\+add*, Satan—you’re \+add applying human values instead of considering \nd God’s\nd* plan\+add*.\wj*”
+\v 31 Then \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* began teaching \add his apprentices\add* that the son of humanity would need to suffer a lot, to be rejected by \add the religious leaders\add*, and so to be \add put to death\add* \add but to come back to life\add* after three days.
+\v 32 He taught this \add very\add* clearly, \add but\add* Kefa \add (Peter; Grk. Petros)\add* took him aside \add and told him off\add*.
+\v 33 \add Yeshua\add* turned back and \add looked at the others\add*, then reprimanded Kefa, “\wj \+add Stand back\+add*, Satan—you’re \+add applying human values instead of considering \nd God’s\nd* plan\+add*.\wj*”
 \p
 \v 34 Calling out to them and to the crowd, he said, “\wj Anyone who wants to follow me must first put aside their own desires and then follow me—even through very difficult times.\wj*\x + \xo 8:34: \xt Mat 10:38; Luk 14:27.\x*
 \v 35 \wj Anyone who \+add worries about\+add* saving their own life will lose it, but anyone who \+add gives their life due to following\+add* me and \+add my\+add* \+add teaching\+add* will save \+add their life\+add*.\wj*\x + \xo 8:35: \xt Yhn 12:25; Mat 10:39; Luk 17:33.\x*
@@ -587,10 +587,10 @@
 \s1 Mosheh and Eliyah speak with Yeshua
 \r (Mat. 17:1-13; Luke 9:28-36)
 \p
-\v 2 Six days \add later\add*, \nd Yeshua\nd* took Peter and Yacob and Yohan, and \add just the four of them went\add* up onto a high hill. Then he was transformed \add right in front of their eyes\add*\x + \xo 9:2-7: \xt 2Pe 1:17-18.\x*
+\v 2 Six days \add later\add*, \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* took Kefa \add (Peter; Grk. Petros)\add* and Ya’akov \add (James; Grk. Yakobos)\add* and Yohan \add (John; Grk. Yoannes)\add*, and \add just the four of them went\add* up onto a high hill. Then he was transformed \add right in front of their eyes\add*\x + \xo 9:2-7: \xt 2Pe 1:17-18.\x*
 \v 3 and his clothes \add turned\add* incredibly shining white—\add whiter than any bleach could make them\add*.
-\v 4 Then Eliyah and Mosheh \add (Moses)\add* \add appeared beside\add* \nd Yeshua\nd* and \add started\add* talking with him.
-\v 5 Peter said \nd to Yeshua\nd*, “Teacher, it’s good that we’re here. Maybe we could make three shelters \add up here\add*: one for you, one for Mosheh, and one for Eliyah?”
+\v 4 Then Eliyah \add (Elijah)\add* and Mosheh \add (Moses)\add* \add appeared beside\add* \nd Yeshua\nd* and \add started\add* talking with him.
+\v 5 Kefa said \nd to Yeshua\nd*, “Teacher, it’s good that we’re here. Maybe we could make three shelters \add up here\add*: one for you, one for Mosheh, and one for Eliyah?”
 \v 6 \add He said that\add* because they were terrified \add and\add* didn’t know what to \add say\add*.
 \p
 \v 7 Then a cloud shadowed them \add from the sun\add*, and a voice came out of the cloud \add saying\add*, “This is my dear son. \add Listen\add* to him.”\x + \xo 9:7: \xt Mat 3:17; Mrk 1:11; Luk 3:22.\x*
@@ -601,12 +601,12 @@
 \v 10 \add They remembered that, although between all three of them they couldn’t understand the bit about coming back to life\add*,
 \v 11 \add so\add* they asked \add Yeshua\add*, “\add Isn’t\add* \add it written\add* that Eliyah will be the first \add to return\add*?”\x + \xo 9:11: \xt Mal 4:5; Mat 11:14.\x*
 \p
-\v 12 “\wj \+add Yes,\+add*\wj*” he \add answered\add*, “\wj Eliyah is indeed the one to come first to \+add start\+add* \+add the restoration\+add*. But \+add isn’t\+add* it also written that the son of humanity will be despised and will suffer a lot?\wj*
+\v 12 “\wj \+add Yes,\+add*\wj*” he \add answered\add*, “\wj Eliyah \+add (Elijah)\+add* is indeed the one to come first to \+add start\+add* \+add the restoration\+add*. But \+add isn’t\+add* it also written that the son of humanity will be despised and will suffer a lot?\wj*
 \v 13 \wj \+add You see,\+add* Eliyah has come \+add already\+add*, and they \+add treated him just however\+add* they liked, \+add just\+add* like it was written \+add that it would happen\+add*.\wj*”
 \s1 Yeshua drives out a stubborn demon
 \r (Mat. 17:14-21; Luke 9:37-43a)
 \p
-\v 14 When they got \add back\add* to \add his\add* \add other\add* followers, \add Yeshua\add* saw that \add they were surrounded by\add* a large crowd and the \add religious teachers\add* were debating with them.
+\v 14 When they got \add back\add* to \add his\add* \add other\add* followers, \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* saw that \add they were surrounded by\add* a large crowd and the \add religious teachers\add* were debating with them.
 \v 15 The crowd were very surprised when they \add noticed\add* \add Yeshua\add* and \add came\add* running to greet him.
 \v 16 He asked them, “\wj What were you all arguing with them about?\wj*”
 \p
@@ -635,14 +635,14 @@
 \s1 Yeshua talks again about being executed
 \r (Mat. 17:22-23; Luke 9:43b-45)
 \p
-\v 30 \add Then they left that place and were moving around\add* Galilee, because \add Yeshua\add* didn’t want \add people\add* to know where he was
+\v 30 \add Then they left that place and were moving around\add* Galil, because \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* didn’t want \add people\add* to know where he was
 \v 31 \add while\add* he was teaching his apprentices. He told them, “\wj The son of humanity will be arrested and \+add executed\+add*, \+add but\+add* after three days he’ll \+add come back to life\+add*.\wj*”
 \p
 \v 32 \add But\add* they didn’t know \add what that meant\add*, and they were \add too scared\add* to ask him.
 \s1 How to be the best
 \r (Mat. 18:1-5; Luke 9:46-48)
 \p
-\v 33 Then they went to Capernaum and \add when they arrived at\add* the house, \add Yeshua\add* asked them what they were \add discussing\add* on the way.
+\v 33 Then they went to Kafarnaoum \add (Capernaum)\add* and \add when they arrived at\add* the house, \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* asked them what they were \add discussing\add* on the way.
 \p
 \v 34 \add But they\add* \add didn’t reply\add* because while they were walking, they’d been \add talking about which of them\add* is the best.\x + \xo 9:34: \xt Luk 22:24.\x*
 \v 35 \add So\add* \add Yeshua\add* sat down \add and\add* called the twelve \add of them\add* and \add explained\add*, “\wj Anyone who wants to be \+add at the top\+add*, has to be \+add at the bottom and help all the others\+add*.\wj*”\x + \xo 9:35: \xt Mat 20:26-27; 23:11; Mrk 10:43-44; Luk 22:26.\x*
@@ -651,7 +651,7 @@
 \s1 Others are also serving Yeshua
 \r (Luke 9:49-50)
 \p
-\v 38 Yohan \add (John)\add* \add checked with\add* \add Yeshua\add*, “Teacher, we saw someone \add using your authority\add* to \add command demons to leave\add*, \add but\add* we \add told him off\add* because he wasn’t \add one of\add* us.”
+\v 38 Yohan \add (John; Grk. Yoannes)\add* \add checked with\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add*, “Teacher, we saw someone \add using your authority\add* to \add command demons to leave\add*, \add but\add* we \add told him off\add* because he wasn’t \add one of\add* us.”
 \p
 \v 39 \nd Yeshua\nd* \add responded\add*, “\wj \+add No, don’t stop\+add* him, because \+add anyone\+add* who does a miracle \+add using\+add* my name \+add won’t\+add* just quickly \+add turn around and\+add* \+add slander\+add* me.\wj*
 \v 40 \wj \+add Yes,\+add* anyone who’s not against us is for us.\wj*\x + \xo 9:40: \xt Mat 12:30; Luk 11:23.\x*
@@ -674,11 +674,11 @@
 \s1 It’s God that joins husband and wife
 \r (Mat. 19:1-12; Luke 16:18)
 \p
-\v 1 Then \add Yeshua\add* left \add Capernaum\add* and went down to the Yudean area and \add across\add* the Yordan \add river\add*. Again the crowds \add followed\add* him, and he taught them \add just like he usually did\add*.
+\v 1 Then \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* left \add Kafarnaoum\add* \add (Capernaum)\add* and went down to the Yehudah \add (Judea)\add* area and \add across\add* the Yarden \add (Jordan)\add* \add river\add*. Again the crowds \add followed\add* him, and he taught them \add just like he usually did\add*.
 \p
-\v 2 Some from the Pharisee party approached \add Yeshua\add* \add to check him out and\add* asked, “\add Does the law allow\add* a husband to dismiss \add his\add* wife?”
+\v 2 Some from the Farisaios party approached \add Yeshua\add* \add to check him out and\add* asked, “\add Does the law allow\add* a husband to dismiss \add his\add* wife?”
 \p
-\v 3 “\wj \+add Well\+add*, what \+add law\+add* did Mosheh \add (Moses)\add* \+add give to\+add* you all?\wj*” he \add asked\add*.
+\v 3 “\wj \+add Well\+add*, what \+add law\+add* did Mosheh \+add (Moses)\+add* \+add give to\+add* you all?\wj*” he \add asked\add*.
 \p
 \v 4 They \add answered\add*, “Mosheh \add said that a husband is allowed\add* to write a \add statement\add* of divorce and dismiss \add his wife with it\add*.”\x + \xo 10:4: \xt Deu 24:1-4; Mat 5:31.\x*
 \p
@@ -694,14 +694,14 @@
 \s1 Yeshua encourages childlike faith
 \r (Mat. 19:13-15; Luke 18:15-17)
 \p
-\v 13 \add The people\add* were bringing small children for \add Yeshua\add* to touch, but \add his\add* apprentices scolded them.
+\v 13 \add The people\add* were bringing small children for \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* to touch, but \add his\add* apprentices scolded them.
 \v 14 However, \nd Yeshua\nd* \add noticed\add* \add it\add* \add and was upset\add*, “\wj \+add Just\+add* let \+add those kids\+add* come. Don’t prevent them, because \nd God’s\nd* kingdom \+add consists of people like them\+add*.\wj*
 \v 15 \wj \+add Actually\+add*, you can’t \+add even\+add* \+add enter\+add* \nd God’s\nd* kingdom \+add unless you accept it just like a small child does\+add*.\wj*”\x + \xo 10:15: \xt Mat 18:3.\x*
 \v 16 \add So he continued hugging\add* \add the children\add* and \add commanding a good life for\add* them as he placed his hands on \add each one\add*.
 \s1 Leaving everything behind to be saved
 \r (Mat. 19:16-30; Luke 18:18-30)
 \p
-\v 17 \add One time when\add* \add Yeshua\add* was starting out on a trip, a man caught up to him and kneeling down \add in front\add* of him asked, “Good teacher, what do I have to do to inherit eternal life?”
+\v 17 \add One time when\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* was starting out on a trip, a man caught up to him and kneeling down \add in front\add* of him asked, “Good teacher, what do I have to do to inherit eternal life?”
 \p
 \v 18 “\wj Why do you call me \+em good\+em*?\wj*” \add he\add* \add asked\add*. “\wj No \+add person\+add* is good—only \+nd God\+nd* \+add is\+add*.\wj*
 \v 19 \wj You know \+add God’s\+add* \+add instructions\+add*: don’t murder,\x + \xo 10:19: \xt Exo 20:13; Deu 5:17.\x* don’t commit adultery,\x + \xo 10:19: \xt Exo 20:14; Deu 5:18.\x* don’t steal,\x + \xo 10:19: \xt Exo 20:15; Deu 5:19.\x* don’t \+add lie in court\+add*,\x + \xo 10:19: \xt Exo 20:16; Deu 5:20.\x* don’t defraud \+add others\+add*, and honour your \+add parents\+add*.\wj*”\x + \xo 10:19: \xt Exo 20:12; Deu 5:16.\x*
@@ -720,7 +720,7 @@
 \p
 \v 27 \nd Yeshua\nd* \add looked intently at\add* them, “\wj \+add Yes,\+add* \+add humanly\+add* it’s \+add quite\+add* impossible. But with \+nd God\+nd* \+add it’s different—God can do anything\+add*!\wj*”
 \p
-\v 28 Peter said, “\add Well\add*, we left everything \add and came\add* and followed you.”
+\v 28 Kefa \add (Peter; Grk. Petros)\add* said, “\add Well\add*, we left everything \add and came\add* and followed you.”
 \p
 \v 29 “\wj \+add Yes, I can assure\+add* you all,\wj*” \nd Yeshua\nd* \add answered\add*, “\wj that \+add anyone\+add* who left \+add their\+add* home or \+add farm\+add*, and \+add left\+add* \+add their\+add* \+add siblings or parents\+add* or children because of me and my \+add teaching\+add*,\wj*
 \v 30 \wj they’ll \+add be\+add* \+add rewarded\+add* one hundred times over with homes and farms and \+add siblings and parents\+add* and children along with \+add times of persecution\+add*, \+add but gaining eternal life in the next era\+add*.\wj*
@@ -728,13 +728,13 @@
 \s1 Yeshua’s third prediction about his execution
 \r (Mat. 20:17-19; Luke 18:31-34)
 \p
-\v 32 They were \add heading south\add* on \add their\add* way to Yerushalem with \nd Yeshua\nd* \add in front\add*, and \add his followers\add* were \add a bit surprised and a bit scared\add*. \add Yeshua\add* took the twelve \add aside\add*, and started telling them \add what\add* was going to happen to him,
+\v 32 They were \add heading south\add* on \add their\add* way to Yerushalem \add (Jerusalem)\add* with \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* \add in front\add*, and \add his followers\add* were \add a bit surprised and a bit scared\add*. \add Yeshua\add* took the twelve \add aside\add*, and started telling them \add what\add* was going to happen to him,
 \v 33 “\wj We’re on our way \+add down\+add* to Yerushalem and the son of humanity will be turned over to the chief priests and the \+add religious teachers\+add*, and they’ll \+add sentence him to be executed\+add* and hand him over to the \+add non-Jews\+add*.\wj*
 \v 34 \wj Then they’ll ridicule him and spit on him \+add before\+add* they beat him and execute him, \+add but he’ll come back to life again in\+add* three days \+add time\+add*.\wj*”
 \s1 How to become respected in God’s kingdom
 \r (Mat. 20:20-28)
 \p
-\v 35 Then Zebeddee’s two sons, Yacob and Yohan, approached \add Yeshua\add* \add and asked\add*, “Teacher, \add we’d like to ask a favour from you—please\add* \add don’t disappoint us\add*.”
+\v 35 Then Zavday’s \add (Grk. Zebedaios)\add* two sons, Ya’akov \add (James; Grk. Yakobos)\add* and Yohan \add (John; Grk. Yoannes)\add*, approached \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add and asked\add*, “Teacher, \add we’d like to ask a favour from you—please\add* \add don’t disappoint us\add*.”
 \p
 \v 36 “\wj What do you want \+add from me\+add*?\wj*” \add Yeshua\add* \add asked\add*.
 \p
@@ -746,33 +746,33 @@
 \p “\wj \+add And indeed you all will suffer like me and be enveloped in darkness like I will be\+add*,\wj*” \add responded\add* \nd Yeshua\nd*,
 \v 40 “\wj but \+add as for deciding who will sit next to\+add* me, \+add that’s not my decision to make because it’s already been decided\+add*.\wj*”
 \p
-\v 41 When the ten \add other apprentices\add* heard \add what those two had asked for\add*, they \add were upset at\add* Yacob and Yohan.
+\v 41 When the ten \add other apprentices\add* heard \add what those two had asked for\add*, they \add were upset at\add* Ya’akov \add (Jacob)\add* and Yohan \add (John; Grk. Yoannes)\add*.
 \v 42 \add But\add* \nd Yeshua\nd* called them \add over\add*, “\wj \+add Listen,\+add* \+add in most countries their rulers boss the people around and their leaders\+add* exert their authority over them.\wj*\x + \xo 10:42-43: \xt Luk 22:25-26.\x*
 \v 43 \wj But it \+add doesn’t work like\+add* that with you—anyone of you who wants to be \+add honoured\+add* must \+add serve the others\+add*,\wj*\x + \xo 10:43-44: \xt Mat 23:11; Mrk 9:35; Luk 22:26.\x*
 \v 44 \wj and anyone who wants to become the \+add most respected\+add* has to \+add work\+add* \+add like a slave does\+add*.\wj*
 \v 45 \wj Even the son of humanity didn’t come to be served, but to serve \+add others\+add* and to give his life as a ransom \+add to set many people free\+add*.\wj*”
-\s1 Blind Bartimayos gets his miracle
+\s1 Blind Bar-Timaios gets his miracle
 \r (Mat. 20:29-34; Luke 18:35-43)
 \p
-\v 46 They arrived at Yeriho \add (Jericho)\add*, and then \add when\add* \add Yeshua\add* and his apprentices were leaving \add again\add* with a large crowd following, \add they came across\add* blind Bartimayos (Timayos’ son) sitting beside the path \add begging\add*.
+\v 46 They arrived at Yeriho \add (Jericho)\add*, and then \add when\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* and his apprentices were leaving \add again\add* with a large crowd following, \add they came across\add* blind Bar-Timaios \add (Grk. Bartimaios)\add* (Timaios’ son) sitting beside the path \add begging\add*.
 \v 47 \add When\add* he heard that it was \nd Yeshua\nd* from Nazaret \add going past\add*, he \add yelled\add* out, “\nd Yeshua\nd*, \add promised\add* descendant of David, \add help me please\add*.”
 \p
 \v 48 When \add several people told him to stop\add*, he \add just yelled out even louder\add*, “\add Yeshua, promised\add* descendant of David, \add please help me\add*.”
 \p
 \v 49 Then \nd Yeshua\nd* stopped and \add got the people to call\add* \add the blind man\add*. \add So\add* they called him, “\add Hey,\add* be \add confident\add*! Get up \add and come because\add* he’s called for you.”
 \p
-\v 50 \add So\add* \add Bartimayos\add* threw off his jacket, jumped up, \add and\add* \add was led\add* to \nd Yeshua\nd*.
+\v 50 \add So\add* \add Bar-Timaios\add* threw off his jacket, jumped up, \add and\add* \add was led\add* to \nd Yeshua\nd*.
 \p
 \v 51 “\wj \+add Now,\+add* what do you want me to do for you?\wj*” \nd Yeshua\nd* \add asked\add*.
-\p “My teacher, \add I’d like to be able to see\add*,” \add Bartimayos\add* \add replied\add*.
+\p “My teacher, \add I’d like to be able to see\add*,” \add Bar-Timaios\add* \add replied\add*.
 \p
 \v 52 “\wj \+add Okay,\+add* \+add off you go\+add* \+add then\+add*,\wj*” \nd Yeshua\nd* \add responded\add*. “\wj Your faith has saved you.\wj*”
-\p Immediately \add Bartimayos\add* \add was able to see\add*, and followed along the path after \add Yeshua\add*.
+\p Immediately \add Bar-Timaios\add* \add was able to see\add*, and followed along the path after \add Yeshua\add*.
 \c 11
 \s1 Yeshua is treated like a king entering Yerushalem
 \r (Yhn 12:12-19; Mat. 21:1-11; Luke 19:28-40)
 \p
-\v 1 As they got close to Yerushalem and were passing Beyt-Fagey \add (Bethphage)\add* and Beyt-Ania \add (Bethany)\add* on the Mt. of Olives, \add Yeshua\add* sent two of his apprentices \add ahead\add*.
+\v 1 As they got close to Yerushalem \add (Jerusalem)\add* and were passing Beyt-Fagey \add (Bethphage)\add* and Beyt-Ania \add (Bethany)\add* on the Mt. of Olives, \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* sent two of his apprentices \add ahead\add*.
 \v 2 telling them, “\wj Go on to the \+add next\+add* village and \+add as\+add* you enter it, you’ll \+add see\+add* a \+add young donkey\+add* that \+add hasn’t ever been ridden yet\+add*. Untie it and bring it \+add back here\+add*.\wj*
 \v 3 \wj If anyone \+add asks\+add* what you’re doing, tell \+add them\+add* that the \+nd master\+nd* needs it and he’ll \+add return it later\+add*.\wj*”
 \p
@@ -785,17 +785,17 @@
 \v 9 \add Some went ahead and others came along behind\add*, shouting, “\add This is the saviour who comes with the authority and blessing from\add* \nd Yahweh\nd*\x + \xo 11:9: \xt Psa 118:25-26.\x*—
 \v 10 the \add promised\add* ancestor of \add King\add* David who is blessed \add as he ushers in\add* his kingdom—\add the blessed\add* saviour \add from heaven\add*.”
 \p
-\v 11 And \add so\add* \add Yeshua\add* arrived in Yerushalem and went into the temple and looked \add all\add* around, \add but\add* \add because it was now\add* evening, he went back out to Beyt-Ania \add village\add* \add (Bethany)\add* with \add his\add* twelve \add apprentices\add*.
+\v 11 And \add so\add* \add Yeshua\add* arrived in Yerushalem and went into the temple and looked \add all\add* around, \add but\add* \add because it was now\add* evening, he went back out to Beyt-Ania \add (Bethany)\add* \add village\add* \add (Bethany)\add* with \add his\add* twelve \add apprentices\add*.
 \s1 Yeshua curses a fig tree
 \r (Mat. 21:18-19)
 \p
-\v 12 The next day \add after they’d left\add* Beyt-Ania \add village\add* \add (Bethany)\add*, \add Yeshua\add* \add was hungry\add*.
+\v 12 The next day \add after they’d left\add* Beyt-Ania \add (Bethany)\add* \add village\add* \add (Bethany)\add*, \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add was hungry\add*.
 \v 13 \add From a distance he noticed\add* a fig tree \add that was in leaf\add* \add so\add* he \add went over to see if there was any fruit\add* on it, \add but\add* \add when he reached\add* it \add there was only\add* leaves because it wasn’t the \add right\add* season for figs.
 \v 14 \add So he spoke\add* to \add the tree\add*, “\wj \+add No one in this\+add* age will \+add ever\+add* eat fruit from you \+add again\+add*.\wj*” (His followers \add heard\add* \add him say that\add*.)
 \s1 Yeshua upsets the traders inside the temple
 \r (Yhn 2:13-22; Mat. 21:12-17; Luke 19:45-48)
 \p
-\v 15 Then they came \add back\add* into Yerushalem and on into the temple where \add Yeshua\add* started driving out the \add sellers\add* and the \add buyers\add* \add that were trading\add* in \add there\add*. Then he \add tipped over\add* the money-changers’ tables and the chairs of the ones selling doves,
+\v 15 Then they came \add back\add* into Yerushalem \add (Jerusalem)\add* and on into the temple where \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* started driving out the \add sellers\add* and the \add buyers\add* \add that were trading\add* in \add there\add*. Then he \add tipped over\add* the money-changers’ tables and the chairs of the ones selling doves,
 \v 16 and \add stopped others from carrying goods\add* through the temple.
 \v 17 He taught them, “\wj Isn’t it written \+add in the Scriptures\+add*,\wj*
 \q1 \wj ‘My house will be \+add known as\+add* a prayer house for all the nations \+add to use\+add*’?\wj*\x + \xo 11:17: \xt Isa 56:7.\x*
@@ -807,8 +807,8 @@
 \s1 Yeshua gives a lesson on moving mountains
 \r (Mat. 21:20-22)
 \p
-\v 20 \add As they entered the city again\add* in the morning, \add Yeshua’s apprentices\add* \add noticed\add* that the fig tree \add was totally dead\add*.
-\v 21 Peter remembered \add what he had said to the tree\add*, \add and\add* \add commented\add*, “\add Teacher\add*, \add that\add* fig tree that you cursed has withered up.”
+\v 20 \add As they entered the city again\add* in the morning, \add Yeshua’s\add* \add (Jesus; Grk. Yesus)\add* \add apprentices\add* \add noticed\add* that the fig tree \add was totally dead\add*.
+\v 21 Kefa \add (Peter; Grk. Petros)\add* remembered \add what he had said to the tree\add*, \add and\add* \add commented\add*, “\add Teacher\add*, \add that\add* fig tree that you cursed has withered up.”
 \p
 \v 22 “\wj \+add Use\+add* your faith \+add in\+add* \+nd God\+nd*,\wj* \nd Yeshua\nd* responded.
 \v 23 \wj \+add I can assure\+add* you all that if anyone tells a mountain to go away into the sea, and doesn’t doubt in their \+add mind\+add* but believes that what they’re saying will happen, \+add then\+add* it will.\wj*\x + \xo 11:23: \xt Mat 17:20; 1Cor 13:2.\x*
@@ -818,11 +818,11 @@
 \r (Mat. 21:23-27; Luke 20:1-8)
 \p
 \v 26 ◘
-\v 27 They \add continued on\add* into Yerushalem and \add on to\add* the temple where they \add were met by\add* the chief priests and the \add religious teachers\add* and the elders.
-\v 28 They \add asked\add* \add Yeshua\add*, “Did you have any authority to do \add what you did\add*? \add If so,\add* who gave \add it\add* to you?”
+\v 27 They \add continued on\add* into Yerushalem \add (Jerusalem)\add* and \add on to\add* the temple where they \add were met by\add* the chief priests and the \add religious teachers\add* and the elders.
+\v 28 They \add asked\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add*, “Did you have any authority to do \add what you did\add*? \add If so,\add* who gave \add it\add* to you?”
 \p
 \v 29 “\wj \+add Okay,\+add* I’ll also ask you \+add something\+add*,\wj*” \nd Yeshua\nd* \add replied\add*, \wj and \+add when you all\+add* answer me, I’ll tell you \+add about\+add* \+add my\+add* authority to do that:\wj*
-\v 30 \wj When Yohan \+add preached and\+add* \+add immersed\+add* \+add people\+add*, did the authority for that come from heaven or from \+add people here\+add*?\wj*”
+\v 30 \wj When Yohan \+add (John; Grk. Yoannes)\+add* \+add preached and\+add* \+add immersed\+add* \+add people\+add*, did the authority for that come from heaven or from \+add people here\+add*?\wj*”
 \p
 \v 31 They \add discussed\add* that among themselves, reasoning, “If we say it was from heaven, he’ll ask us why \add we\add* didn’t believe him \add then\add*.
 \v 32 But we \add can’t\add* say that it was just from \add people\add*.” (They said that because they were scared of the \add crowds\add*, \add knowing that\add* they believed that Yohan really was a prophet.)
@@ -849,12 +849,12 @@
 \v 11 \wj that was given by \+nd Yahweh\+nd*,\wj*
 \q1 \wj and \+add we think it’s incredible\+add*.’?\wj*”\x + \xo 12:10-11: \xt Psa 118:22-23.\x*
 \p
-\v 12 Then \add those leaders\add* tried to arrest him \add because\add* they knew that it was them that the parable was \add addressed at\add*, \add but\add* \add they couldn’t do it because Yeshua had the favour\add* of the crowd, so they \add just\add* left \add the area\add*.
+\v 12 Then \add those leaders\add* tried to arrest him \add because\add* they knew that it was them that the parable was \add addressed at\add*, \add but\add* \add they couldn’t do it because Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add had the favour\add* of the crowd, so they \add just\add* left \add the area\add*.
 \s1 Yeshua answers about paying taxes
 \r (Mat. 22:15-22; Luke 20:20-26)
 \p
-\v 13 Then \add the religious leaders\add* sent some \add members\add* of the Pharisee party and \add some\add* of the \add political\add* supporters of \add King\add* Herod \add to try to\add* catch \add Yeshua\add* \add out\add*.
-\v 14 \add So\add* they \add flattered\add* him, “Teacher, we know that you are \add honest even if it upsets others\add*, and that you teach the truth \add about\add* \nd God\nd* \add without caring about people’s opinions\add*. Is it \add right\add* \add for us Jews\add* to \add pay\add* the poll tax to \add the Roman emperor\add* or not? \add How should we handle this\add*?”
+\v 13 Then \add the religious leaders\add* sent some \add members\add* of the Farisaios party and \add some\add* of the \add political\add* supporters of \add King\add* Herodes \add (Herod)\add* \add to try to\add* catch \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add out\add*.
+\v 14 \add So\add* they \add flattered\add* him, “Teacher, we know that you are \add honest even if it upsets others\add*, and that you teach the truth \add about\add* \nd God\nd* \add without caring about people’s opinions\add*. Is it \add right\add* \add for us Yehudim\add* \add (Jews)\add* to \add pay\add* the poll tax to \add the Romaios emperor\add* or not? \add How should we handle this\add*?”
 \p
 \v 15 \add However,\add* knowing their hypocrisy, \add Yeshua\add* \add responded\add* to them, “\wj Why are all of you \+add trying to\+add* test me? Bring me a \+add coin\+add* so I can see it.\wj*”
 \p
@@ -866,7 +866,7 @@
 \s1 Yeshua explains that those who’ve died are alive
 \r (Mat. 22:23-33; Luke 20:27-40)
 \p
-\v 18 \add Another time\add*, \add members of\add* the Sadducee sect (which says that there’s no resurrection),\x + \xo 12:18: \xt Acts 23:8.\x* came to \add Yeshua\add* and asked,
+\v 18 \add Another time\add*, \add members of\add* the Saddoukaios \add (Sadducee)\add* sect (which says that there’s no resurrection),\x + \xo 12:18: \xt Acts 23:8.\x* came to \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* and asked,
 \v 19 “Teacher, Mosheh \add (Moses)\add* wrote that if a \add man’s\add* \add married\add* brother should die \add before\add* \add his\add* wife \add without having any\add* children, then his brother \add should marry\add* \add her\add* \add to produce descendants\add* \add in his brother’s name\add*.\x + \xo 12:19: \xt Deu 25:5.\x*
 \v 20 \add Now what if\add* there were seven brothers and the first \add one\add* \add got married\add* and died \add childless\add*.
 \v 21 \add So\add* then the second \add brother\add* took her in, \add but\add* \add again\add* died \add childless\add*, and then too the third.
@@ -875,12 +875,12 @@
 \p
 \v 24 “\wj \+add Actually you’re all quite wrong\+add*,\wj*” \nd Yeshua\nd* \add answered\add*, “\wj because \+add you ignore\+add* the scriptures and \+add also\+add* \+add because you haven’t experienced\+add* \nd God’s\nd* power.\wj*
 \v 25 \wj When the dead \+add do come back to life\+add*, they won’t be getting engaged or married, but will be like the messengers in the heavens.\wj*
-\v 26 \wj But \+add as for the state of those who’ve died\+add*, didn’t you all read in the \+add scriptures about\+add* Mosheh \+add when\+add* \+nd God\+nd* spoke to him \+add in front of\+add* the \+add burning\+add* thorn bush and said, ‘I \+em am\+em* the \+nd god\+nd* of Abraham and the \+nd god\+nd* of Isaac and the \+nd god\+nd* of Yacob’?\wj*\x + \xo 12:26: \xt Exo 3:6.\x*
-\v 27 \wj \+add So\+add* \+add God\+add* is not the \+nd god\+nd* of the dead, but of the living. You \+add Sadducees\+add* are \+add very wrong\+add*!\wj*”
+\v 26 \wj But \+add as for the state of those who’ve died\+add*, didn’t you all read in the \+add scriptures about\+add* Mosheh \+add when\+add* \+nd God\+nd* spoke to him \+add in front of\+add* the \+add burning\+add* thorn bush and said, ‘I \+em am\+em* the \+nd god\+nd* of Avraham and the \+nd god\+nd* of Yitshak \+add (Isaac)\+add* and the \+nd god\+nd* of Ya’akov’ \+add (Jacob)\+add*?\wj*\x + \xo 12:26: \xt Exo 3:6.\x*
+\v 27 \wj \+add So\+add* \+add God\+add* is not the \+nd god\+nd* of the dead, but of the living. You \+add Saddoukaios\+add* \+add (Sadducees)\+add* are \+add very wrong\+add*!\wj*”
 \s1 Yeshua answers about genuine obedience to God
 \r (Mat. 22:34-40; Luke 10:25-28)
 \p
-\v 28 Then one of the \add religious teachers\add* who had heard their \add question and\add* \add Yeshua’s\add* \add excellent answer\add*, \add came closer\add* \add and\add* asked, “Which of \add God’s\add* \add commands\add* is the \add most important\add*?”
+\v 28 Then one of the \add religious teachers\add* who had heard their \add question and\add* \add Yeshua’s\add* \add (Jesus; Grk. Yesus)\add* \add excellent answer\add*, \add came closer\add* \add and\add* asked, “Which of \add God’s\add* \add commands\add* is the \add most important\add*?”
 \p
 \v 29 “\wj \+add Well\+add*,\wj*” \nd Yeshua\nd* answered, “\wj the \+add most important\+add* is \+add this\+add*: ‘\+add Listen\+add*, Yisrael \+add (Israel)\+add*. Our \+nd God Yahweh\+nd* is \+add our\+add* \+nd master\+nd*.\wj*
 \v 30 \wj You \+add must love\+add* \+nd Yahweh God\+nd* with all your heart and all your soul, and with all your mind and all your strength.’\wj*\x + \xo 12:29-30: \xt Deu 6:4-5.\x*
@@ -894,7 +894,7 @@
 \s1 Yeshua asks about the messiah being David’s descendant
 \r (Mat. 22:41-46; Luke 20:41-44)
 \p
-\v 35 \add Later when\add* \nd Yeshua\nd* was teaching in the temple, \add he asked\add* \add the people\add*, “\wj How is it that the teachers \+add here\+add* say that the \+nd messiah\+nd* is a descendant of \+add King\+add* David?\wj*
+\v 35 \add Later when\add* \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* was teaching in the temple, \add he asked\add* \add the people\add*, “\wj How is it that the teachers \+add here\+add* say that the \+nd messiah\+nd* is a descendant of \+add King\+add* David?\wj*
 \v 36 \wj \+add Because\+add* David himself said \+add under the inspiration of\+add* the holy \+nd spirit\+nd*,\wj*
 \q1 \wj ‘\+nd Yahweh\+nd* told my \+nd master\+nd*,\wj*
 \q2 \wj “Sit there \+add in the position of honour\+add*\wj*
@@ -905,13 +905,13 @@
 \s1 Yeshua warns about well-dressed teachers
 \r (Mat. 23:1-36; Luke 20:45-47)
 \p
-\v 38 \add As\add* \add Yeshua\add* \add continued teaching\add*, he said, “\wj Watch out for those \+add religious teachers\+add* \+add who like to wear\+add* \+add fancy\+add* robes and be greeted in the \+add square\+add*,\wj*
+\v 38 \add As\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add continued teaching\add*, he said, “\wj Watch out for those \+add religious teachers\+add* \+add who like to wear\+add* \+add fancy\+add* robes and be greeted in the \+add square\+add*,\wj*
 \v 39 \wj and \+add have the\+add* best seats \+add at meetings\+add* and the best places at dinners.\wj*
 \v 40 \wj \+add Those people\+add* \+add trick widows out of their properties\+add*, \+add but offer\+add* long prayers \+add to cover it up\+add*. They will be getting a stricter judgement \+add than others\+add*.\wj*”
 \s1 A widow’s sacrificial donation
 \r (Luke 21:1-4)
 \p
-\v 41 \add As\add* he sat down in front of the \add temple\add* treasury, \add Yeshua\add* \add watched\add* the crowd as they threw \add coins\add* into the \add dish\add*, and some rich \add people\add* were \add donating quite valuable silver coins\add*.
+\v 41 \add As\add* he sat down in front of the \add temple\add* treasury, \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add watched\add* the crowd as they threw \add coins\add* into the \add dish\add*, and some rich \add people\add* were \add donating quite valuable silver coins\add*.
 \v 42 Then an impoverished widow came \add and\add* threw \add in\add* two \add small copper coins\add*.
 \v 43 \add Yeshua\add* called his followers and told them, “\wj \+add Honestly\+add*, that hard-up widow \+add gave\+add* more than all the \+add others\+add*.\wj*
 \v 44 \wj \+add You see, most\+add* \+add people\+add* \+add donate from their excess\+add* wealth, but this woman \+add even\+add* \+add gave\+add* \+add some of\+add* \+add the small amount that she needed to live on\+add*.\wj*”
@@ -919,13 +919,13 @@
 \s1 Yeshua predicts the temple’s total destruction
 \r (Mat. 24:1-2; Luke 21:5-6)
 \p
-\v 1 \add As\add* \add they\add* were leaving the temple \add area\add*, one of \add Yeshua’s\add* followers \add noted\add*, “Teacher, look at those \add large, chiselled\add* stones and those \add beautiful\add* buildings \add that they’ve been made into\add*.”
+\v 1 \add As\add* \add they\add* were leaving the temple \add area\add*, one of \add Yeshua’s\add* \add (Jesus; Grk. Yesus)\add* followers \add noted\add*, “Teacher, look at those \add large, chiselled\add* stones and those \add beautiful\add* buildings \add that they’ve been made into\add*.”
 \p
 \v 2 “\wj \+add Yes, incredible\+add* buildings,\wj*” \nd Yeshua\nd* \add responded\add*, “\wj \+add but\+add* \+add the time will come\+add* when they’re torn down—\+add not a single\+add* \+add piece of\+add* stone \+add will be left sitting in its place\+add*.\wj*”
 \s1 Yeshua talks about coming hardships
 \r (Mat. 24:3-14; Luke 21:7-19)
 \p
-\v 3 \add Later when they were over\add* on the Mt. of Olives \add overlooking\add* the temple, Peter and Yacob and Yohan and Andrew were \add with\add* \add Yeshua\add* \add and\add* asked
+\v 3 \add Later when they were over\add* on the Mt. of Olives \add overlooking\add* the temple, Kefa \add (Peter; Grk. Petros)\add* and Ya’akov \add (James; Grk. Yakobos)\add* and Yohan \add (John; Grk. Yoannes)\add* and Andreas were \add with\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add and\add* asked
 \v 4 when all that \add destruction\add* would happen, and what \add indications there would be that it would be about to happen\add*.
 \p
 \v 5 But \nd Yeshua\nd* told them, “\wj Be \+add careful\+add* so you all aren’t misled \+add by others\+add*.\wj*
@@ -941,7 +941,7 @@
 \s1 Yeshua warns about coming horror and deceptions
 \r (Mat. 24:15-28; Luke 21:20-24)
 \p
-\v 14 “\wj But whenever you all see the \+add most horrible thing that drives people\+add* \+add from God\+add*, standing where it shouldn’t be\x + \xo 13:14: \xt Dan 9:27; 11:31; 12:11.\x* (\+add and you\+add* \+add readers should understand that\+add*), then anyone in Yudea should flee into the hills,\wj*
+\v 14 “\wj But whenever you all see the \+add most horrible thing that drives people\+add* \+add from God\+add*, standing where it shouldn’t be\x + \xo 13:14: \xt Dan 9:27; 11:31; 12:11.\x* (\+add and you\+add* \+add readers should understand that\+add*), then anyone in Yehudah \+add (Judea)\+add* should flee into the hills,\wj*
 \v 15 \wj and anyone \+add upstairs\+add* \+add looking outside\+add* shouldn’t come down into \+add the bedrooms\+add* to get anything,\wj*\x + \xo 13:15-16: \xt Luk 17:31.\x*
 \v 16 \wj and anyone \+add working outside\+add* shouldn’t go back \+add inside to get a change of clothes\+add*.\wj*
 \v 17 \wj \+add It will be extremely difficult\+add* for \+add pregnant\+add* women and for \+add mothers\+add* who are breast-feeding \+add their children\+add* in those days.\wj*
@@ -979,12 +979,12 @@
 \s1 The leaders plan to eliminate Yeshua
 \r (Yhn 11:45-53; Mat. 26:1-5; Luke 22:1-2)
 \p
-\v 1 \add Now\add* it was two days \add before\add* the Passover Feast and the \it Flat Bread \+add Celebration\+add*\it*,\x + \xo 14:1: \xt Exo 12:1-27.\x* and the chief priests and the \add religious teachers\add* were \add trying to figure out\add* how they could have \add Yeshua\add* \add set up so they could arrest him and have him executed\add*,
+\v 1 \add Now\add* it was two days \add before\add* the Passover Feast and the \it Flat Bread \+add Celebration\+add*\it*,\x + \xo 14:1: \xt Exo 12:1-27.\x* and the chief priests and the \add religious teachers\add* were \add trying to figure out\add* how they could have \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add set up so they could arrest him and have him executed\add*,
 \v 2 \add but\add* they \add knew that the Feast wouldn’t be a good time because the people would protest\add* \add in Yeshua’s favour\add*.
 \s1 The woman anoints Yeshua for his burial
 \r (Yhn 12:1-8; Mat. 26:6-13)
 \p
-\v 3 \add Meanwhile,\add* \add Yeshua\add* was in Beyt-Ania \add (Bethany)\add* at the home of Simon who \add had previously\add* \add had leprosy\add*. \add Yeshua\add* was \add sitting\add* \add there when\add* a woman came \add in\add* with a \add hand-crafted container\add* of very expensive \add fragrant lotion\add*. Breaking \add open\add* the \add sealed\add* flask, she poured \add the fragrant oil\add* over \add Yeshua’s\add* head.\x + \xo 14:3: \xt Luk 7:37-38.\x*
+\v 3 \add Meanwhile,\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* was in Beyt-Ania \add (Bethany)\add* at the home of Shim’on \add (Simon)\add* who \add had previously\add* \add had leprosy\add*. \add Yeshua\add* was \add sitting\add* \add there when\add* a woman came \add in\add* with a \add hand-crafted container\add* of very expensive \add fragrant lotion\add*. Breaking \add open\add* the \add sealed\add* flask, she poured \add the fragrant oil\add* over \add Yeshua’s\add* head.\x + \xo 14:3: \xt Luk 7:37-38.\x*
 \v 4 \add Immediately\add* some \add in the room started\add* \add quietly grumbling about the extravagant waste\add*,
 \v 5 then they scolded \add the woman\add* because \add a flask of genuine\add* lotion like that could \add easily\add* \add fetch almost a year’s wages if\add* it was sold.
 \p
@@ -992,15 +992,15 @@
 \v 7 \wj You’ll always have poor \+add people\+add* \+add around\+add*,\x + \xo 14:7: \xt Deu 15:11.\x* and you \+add can help\+add* them whenever you want to, but \+add I won’t be around forever\+add*.\wj*
 \v 8 \wj She has \+add performed\+add* the \+add traditional\+add* anointing of my body \+add in advance\+add* of my burial,\wj*
 \v 9 \wj and I \+add can assure\+add* you all, that wherever the good message is proclaimed \+add around\+add* the world, what \+add she\+add* has done \+add today\+add* will \+add be part of the story and she’ll be remembered for it\+add*.\wj*”
-\s1 Yudas offers to hand Yeshua over
+\s1 Yehudah offers to hand Yeshua over
 \r (Mat. 26:14-16; Luke 22:3-6)
 \p
-\v 10 Then Yudas Iscariot, one of \add Yeshua’s\add* twelve \add apprentices\add*, \add visited\add* the chief priests \add to offer to hand\add* \add Yeshua\add* over to them.
-\v 11 When they heard \add that\add*, they were \add very pleased\add* and promised to \add pay him well\add*, and \add Yudas\add* \add asked them about the most convenient way for them to get hold of\add* \add Yeshua\add*.
+\v 10 Then Yehudah \add (Judas; Grk. Yudas)\add* Iskariot, one of \add Yeshua’s\add* \add (Jesus; Grk. Yesus)\add* twelve \add apprentices\add*, \add visited\add* the chief priests \add to offer to hand\add* \add Yeshua\add* over to them.
+\v 11 When they heard \add that\add*, they were \add very pleased\add* and promised to \add pay him well\add*, and \add Yehudah\add* \add asked them about the most convenient way for them to get hold of\add* \add Yeshua\add*.
 \s1 Yeshua’s apprentices prepare the Passover meal
 \r (Yhn 13:21-30; Mat. 26:17-25; Luke 22:7-14, 21-23)
 \p
-\v 12 On the first day of the \it Flat Bread \+add Celebration\+add*\it* when \add the lambs\add* \add would be slaughtered ready for the special Passover meal\add*, \add Yeshua’s\add* apprentices \add asked\add* him, “Where do you want \add us to get everything ready for our Passover meal\add*?”
+\v 12 On the first day of the \it Flat Bread \+add Celebration\+add*\it* when \add the lambs\add* \add would be slaughtered ready for the special Passover meal\add*, \add Yeshua’s\add* \add (Jesus; Grk. Yesus)\add* apprentices \add asked\add* him, “Where do you want \add us to get everything ready for our Passover meal\add*?”
 \p
 \v 13 \add So\add* \add Yeshua\add* sent off two of \add them\add* \add with these instructions\add*, “\wj Go into town and a man carrying a pitcher of water will meet you there. \+add Just\+add* follow him\wj*
 \v 14 \wj \+add until\+add* he goes into \+add a house\+add*. Then \+add find\+add* the owner of the house and tell him that the teacher \+add wants to know\+add* \+add the location of\+add* the guestroom where he and his apprentices can celebrate \+add their\+add* Passover meal.\wj*
@@ -1010,7 +1010,7 @@
 \s1 Yeshua shocks his apprentices at the Passover meal
 \r (Yhn 13:21-30; Mat. 26:20-30; Luke 22:14-23; 1 Cor. 11:23-25)
 \p
-\v 17 As the evening \add approached\add*, \add Yeshua\add* went in \add for dinner\add* with \add his\add* twelve \add apprentices\add*.
+\v 17 As the evening \add approached\add*, \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* went in \add for dinner\add* with \add his\add* twelve \add apprentices\add*.
 \v 18 \add As\add* they were sitting around eating, \add he\add* told them, “\wj I’ll tell you \+add frankly\+add* that one of you eating with me \+add here\+add* will hand me over \+add to be arrested\+add*.\wj*”\x + \xo 14:18: \xt Psa 41:9.\x*
 \v 19 \add That upset them\add*, and \add several of them individually asked\add*, “Surely it couldn’t be me?”
 \p
@@ -1027,38 +1027,38 @@
 \s1 Yeshua predicts Peters denials
 \r (Yhn 13:36-38; Mat. 26:31-35; Luke 22:31-34)
 \p
-\v 27 Then \nd Yeshua\nd* \add continued\add* his \add teaching\add*, “\wj All of you will stumble because it’s written \+add in the scriptures\+add*: ‘I’ll strike \+add down\+add* the shepherd and the sheep will get scattered.’\wj*\x + \xo 14:27: \xt Zech 13:7.\x*
-\v 28 \wj But after \+add I come back to life\+add*, I’ll go on ahead of you all \+add back\+add* to Galilee.\wj*”\x + \xo 14:28: \xt Mat 28:16.\x*
+\v 27 Then \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* \add continued\add* his \add teaching\add*, “\wj All of you will stumble because it’s written \+add in the scriptures\+add*: ‘I’ll strike \+add down\+add* the shepherd and the sheep will get scattered.’\wj*\x + \xo 14:27: \xt Zech 13:7.\x*
+\v 28 \wj But after \+add I come back to life\+add*, I’ll go on ahead of you all \+add back\+add* to Galil.\wj*”\x + \xo 14:28: \xt Mat 28:16.\x*
 \p
-\v 29 \add But\add* Peter \add contradicted\add* him, “Even if everyone \add else\add* stumbles, I won’t!”
+\v 29 \add But\add* Kefa \add (Peter; Grk. Petros)\add* \add contradicted\add* him, “Even if everyone \add else\add* stumbles, I won’t!”
 \p
 \v 30 “\wj I can assure you,\wj*” \nd Yeshua\nd* \add responded\add*, “\wj that you’ll renounce me three times this \+add very\+add* night, before the rooster crows \+add early tomorrow morning\+add*.\wj*”
 \p
-\v 31 But \add Peter\add* argued forcibly, “\add Even if I had\add* to die with you, I would \add never\add* disown you!”
+\v 31 But \add Kefa\add* argued forcibly, “\add Even if I had\add* to die with you, I would \add never\add* disown you!”
 \p And all \add the others\add* said similar \add things\add*.
-\s1 Yeshua, in distress, prays at Gethsemane
+\s1 Yeshua, in distress, prays at Gethsaimanai
 \r (Mat. 26:36-46; Luke 22:39-46)
 \p
-\v 32 They \add walked along until\add* they came to a \add piece of land called\add* Gethsemane where \add Yeshua\add* told his apprentices to sit down while \add he\add* prayed.
-\v 33 He took Peter and Yacob and Yohan \add further in\add* with him where he \add stared off in a daze\add* \add but\add* was \add obviously very\add* distressed.
+\v 32 They \add walked along until\add* they came to a \add piece of land called\add* Gethsaimanai where \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* told his apprentices to sit down while \add he\add* prayed.
+\v 33 He took Kefa \add (Peter; Grk. Petros)\add* and Ya’akov \add (James; Grk. Yakobos)\add* and Yohan \add (John; Grk. Yoannes)\add* \add further in\add* with him where he \add stared off in a daze\add* \add but\add* was \add obviously very\add* distressed.
 \v 34 He told \add the three of\add* them, “\wj My soul is \+add deathly sad\+add*! \+add You guys just\+add* stay here and \+add keep alert\+add*.\wj*”
 \p
 \v 35 He went ahead a little \add way\add*, where he knelt on the ground \add with his head down\add* and prayed—\add asking\add* if it was possible to avoid \add what was ahead of\add* him.
 \v 36 \add But\add* he said, “\wj Father, \+add I know that you can do anything\+add*. \+add Let me avoid this suffering\+add*, but \+add yes I do know, it doesn’t matter\+add* what I want but rather what you’ve \+add planned\+add*.\wj*”
 \p
-\v 37 Then he \add went back\add* and found the others sleeping. “\wj Simon, are you asleep?\wj*” he \add asked\add* Peter. “\wj \+add Couldn’t you stay awake\+add* \+add even for\+add* a \+add single\+add* hour?\wj*
+\v 37 Then he \add went back\add* and found the others sleeping. “\wj Shim’on \+add (Simon)\+add*, are you asleep?\wj*” he \add asked\add* Kefa. “\wj \+add Couldn’t you stay awake\+add* \+add even for\+add* a \+add single\+add* hour?\wj*
 \v 38 \wj You all \+add need to\+add* \+add stay alert and be careful\+add* not to \+add give\+add* into temptation. \+add I know your spirits are enthusiastic\+add* on one hand, \+add but it’s still easy to give in to the moment\+add*.\wj*”
 \p
 \v 39 Then \add he went further in\add* \add again and\add* prayed \add as before\add*,
 \v 40 \add but when he returned\add* again, he found them all asleep because \add they were tired\add*, \add but they couldn’t really find any excuse to give\add*.
 \p
-\v 41 The third time that \add Yeshua\add* returned, he said to them, “\wj \+add Ah,\+add* you’re all sleeping again \+add and having\+add* a \+add good\+add* rest. It’s \+add well-earned\+add* \+add but\+add* look, the \+add time\+add* has come for the son of humanity to be \+add handed\+add* over to \+add evil men\+add*.\wj*
+\v 41 The third time that \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* returned, he said to them, “\wj \+add Ah,\+add* you’re all sleeping again \+add and having\+add* a \+add good\+add* rest. It’s \+add well-earned\+add* \+add but\+add* look, the \+add time\+add* has come for the son of humanity to be \+add handed\+add* over to \+add evil men\+add*.\wj*
 \v 42 \wj \+add Come on—get up\+add*—we \+add need\+add* to go! Look, the one who’ll hand me over \+add is almost here\+add*.\wj*”
 \s1 Yeshua is arrested in the night
 \r (Yhn 18:3-12; Mat. 26:47-56; Luke 22:47-53)
 \p
-\v 43 \add Even while\add* \add Yeshua\add* was still speaking, Yudas (one of \add his\add* twelve \add apprentices\add*) \add reached him\add*, \add followed by\add* a crowd \add that included some of\add* the chief priests, the \add religious teachers\add*, and the \add Jewish\add* elders—\add many armed\add* with swords and clubs.
-\v 44 \add Yudas\add* had \add prearranged\add* a signal with them that the one \add he\add* \add greeted with a\add* kiss, \add they\add* should grab \add that person\add* and lead him away \add under guard\add*.
+\v 43 \add Even while\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* was still speaking, Yehudah \add (Judas; Grk. Yudas)\add* (one of \add his\add* twelve \add apprentices\add*) \add reached him\add*, \add followed by\add* a crowd \add that included some of\add* the chief priests, the \add religious teachers\add*, and the \add Jewish\add* elders—\add many armed\add* with swords and clubs.
+\v 44 \add Yehudah\add* had \add prearranged\add* a signal with them that the one \add he\add* \add greeted with a\add* kiss, \add they\add* should grab \add that person\add* and lead him away \add under guard\add*.
 \p
 \v 45 \add So he walked right up\add* to \add Yeshua\add* \add and\add* said, “My honoured teacher,” and \add greeted\add* him with a kiss.
 \v 46 Then \add the others with him\add* \add grabbed\add* \add Yeshua\add* and secured him.
@@ -1072,8 +1072,8 @@
 \s1 The mock trial where Yeshua is sentenced to death
 \r (Yhn 18:13-14,19-24; Mat. 26:57-68; Luke 22:54-55,63-71)
 \p
-\v 53 \add The guards\add* led \nd Yeshua\nd* away to the chief priest’s \add residence\add*, and all the chief priests and the elders and the \add religious teachers\add* gathered \add there\add* \add also\add*.
-\v 54 Peter followed along from a distance and went in as far as the courtyard of \add that residence\add*, where he \add joined\add* the servants who were sitting around the fire keeping warm.
+\v 53 \add The guards\add* led \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* away to the chief priest’s \add residence\add*, and all the chief priests and the elders and the \add religious teachers\add* gathered \add there\add* \add also\add*.
+\v 54 Kefa \add (Peter; Grk. Petros)\add* followed along from a distance and went in as far as the courtyard of \add that residence\add*, where he \add joined\add* the servants who were sitting around the fire keeping warm.
 \v 55 \add Inside,\add* the chief priests and all the council were \add trying to establish a case\add* against \nd Yeshua\nd* so he could be sentenced to death, but they weren’t \add coming up with anything\add*.
 \v 56 Several people were \add making up charges\add* against him, but \add none of the accusers’ stories agreed with each other\add*.
 \p
@@ -1092,68 +1092,68 @@
 \p \add So\add* the \add leaders\add* there agreed that \add Yeshua\add* \add needed to be\add* \add sentenced to\add* death.\x + \xo 14:64: \xt Lev 24:16.\x*
 \p
 \v 65 Then \add various people\add* started spitting on him, and blindfolding him and beating him saying, “\add Ha,\add* \add tell us who that was\add*!” \add Even\add* the servants \add joined in\add* \add to slap him\add*.
-\s1 Peter disowns Yeshua
+\s1 Kefa disowns Yeshua
 \r (Yhn 18:15-18,25-27; Mat. 26:69-75; Luke 22:56-62)
 \p
-\v 66 \add Meanwhile,\add* Peter was down in the courtyard \add when\add* one of the chief priest’s servant girls came \add outside\add*,
-\v 67 and seeing Peter warming himself, she looked more closely and said, “\add Hey,\add* you were with \add that\add* \nd Yeshua\nd* from Nazaret!”
+\v 66 \add Meanwhile,\add* Kefa \add (Peter; Grk. Petros)\add* was down in the courtyard \add when\add* one of the chief priest’s servant girls came \add outside\add*,
+\v 67 and seeing Kefa warming himself, she looked more closely and said, “\add Hey,\add* you were with \add that\add* \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* from Nazaret \add (Nazareth)\add*!”
 \p
 \v 68 But he denied it, “I don’t know him and I don’t know \add why you think I would\add*!” Then he \add moved away from the fire\add*.
 \p
 \v 69 \add But\add* the girl that had seen him said to \add some of the others\add* standing around, “That guy’s \add one\add* of them.”
 \p
-\v 70 But again \add Peter\add* denied it.
-\p A little while later, some of those standing there said \add the same thing\add* to \add him\add*, “You must \add be one of\add* them because you’re from Galilee.”
+\v 70 But again \add Kefa\add* denied it.
+\p A little while later, some of those standing there said \add the same thing\add* to \add him\add*, “You must \add be one of\add* them because you’re from Galil.”
 \p
-\v 71 \add Now\add* \add Peter\add* started swearing and cursing \add and said\add*, “I’ve \add never even met that fellow\add* that you’re all talking about!”
+\v 71 \add Now\add* \add Kefa\add* started swearing and cursing \add and said\add*, “I’ve \add never even met that fellow\add* that you’re all talking about!”
 \p
-\v 72 Right then the rooster crowed for the second time and Peter remembered \add now\add* what \nd Yeshua\nd* had told him—\add how\add* \add he\add* would renounce \add Yeshua\add* three times before the rooster crowed—and he broke down \add and\add* cried.
+\v 72 Right then the rooster crowed for the second time and Kefa remembered \add now\add* what \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* had told him—\add how\add* \add he\add* would renounce \add Yeshua\add* three times before the rooster crowed—and he broke down \add and\add* cried.
 \c 15
-\s1 Pilate tries to interrogate Yeshua
+\s1 Pilatos tries to interrogate Yeshua
 \r (Yhn 18:28-38; Mat. 27:1-2,11-14; Luke 23:1-5)
 \p
-\v 1 \add First thing\add* in the morning, the chief priests \add called a meeting\add* with the elders and the \add religious teachers\add* and all the council, and they ordered that \nd Yeshua\nd* be tied up and taken over to \add Governor\add* Pilate.
-\v 2 \add There\add* Pilate asked him, “Are you the king of the Jews?”
+\v 1 \add First thing\add* in the morning, the chief priests \add called a meeting\add* with the elders and the \add religious teachers\add* and all the council, and they ordered that \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* be tied up and taken over to \add Governor\add* Pilatos \add (Pilate)\add*.
+\v 2 \add There\add* Pilatos asked him, “Are you the king of the Yehudim \add (Jews)\add*?”
 \p “\wj You said it,\wj*” replied \add Yeshua\add*.
 \p
 \v 3 Then the chief priests \add started\add* \add hurling\add* \add accusations\add* against \add Yeshua\add*,
-\v 4 \add so\add* Pilate asked him again, “\add Don’t you have anything to say\add*? \add Listen to all those accusations they’re making\add* against you.”
+\v 4 \add so\add* Pilatos asked him again, “\add Don’t you have anything to say\add*? \add Listen to all those accusations they’re making\add* against you.”
 \p
-\v 5 \add But\add* Pilate was astounded that \nd Yeshua\nd* didn’t answer any further.
-\s1 Pilate agrees to execute an innocent man
+\v 5 \add But\add* Pilatos was astounded that \nd Yeshua\nd* didn’t answer any further.
+\s1 Pilatos agrees to execute an innocent man
 \r (Yhn 18:39–19:16; Mat. 27:15-26; Luke 23:13-25)
 \p
-\v 6 \add Now at time of\add* the \add Jewish\add* \add Passover\add*, at their request, \add Pilate\add* would \add normally\add* \add pardon\add* one prisoner for them.
-\v 7 There was \add another prisoner at that time\add* named Barabbas, \add who was an activist arrested for\add* murder.
-\v 8 \add By now the crowd had arrived\add*, and asked Pilate \add to release a prisoner\add* as \add usual\add* \add at Passover\add*,
-\v 9 \add so\add* \add he\add* \add asked\add* them, “Do you all want me to \add release\add* the King of the Jews for you?”
-\v 10 (\add That was\add* because \add Pilate\add* was \add well\add* aware that the chief priests had brought \add Yeshua\add* because they were jealous \add of his popularity\add*.)
-\v 11 But the chief priests stirred up the crowd \add to start saying\add* that it was Barabbas \add that they wanted released\add*,
-\v 12 \add so\add* Pilate asked again, “Then what should I do \add with\add* \add this man\add* that you call the King of the Jews?”
+\v 6 \add Now at time of\add* the \add Jewish\add* \add Passover\add*, at their request, \add Pilatos\add* \add (Pilate)\add* would \add normally\add* \add pardon\add* one prisoner for them.
+\v 7 There was \add another prisoner at that time\add* named Bar-Aba \add (Grk. Barabbas)\add*, \add who was an activist arrested for\add* murder.
+\v 8 \add By now the crowd had arrived\add*, and asked Pilatos \add to release a prisoner\add* as \add usual\add* \add at Passover\add*,
+\v 9 \add so\add* \add he\add* \add asked\add* them, “Do you all want me to \add release\add* the King of the Yehudim \add (Jews)\add* for you?”
+\v 10 (\add That was\add* because \add Pilatos\add* was \add well\add* aware that the chief priests had brought \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* because they were jealous \add of his popularity\add*.)
+\v 11 But the chief priests stirred up the crowd \add to start saying\add* that it was Bar-Aba \add that they wanted released\add*,
+\v 12 \add so\add* Pilatos asked again, “Then what should I do \add with\add* \add this man\add* that you call the King of the Yehudim?”
 \p
 \v 13 \add The crowd\add* yelled back, “Execute him on a post.”
 \p
-\v 14 “What has he \add even done wrong\add*?” Pilate \add demanded\add*.
+\v 14 “What has he \add even done wrong\add*?” Pilatos \add demanded\add*.
 \p But they \add just\add* yelled \add louder\add*, “Execute him on a post!”
 \p
-\v 15 \add Now\add* Pilate wanted to placate the crowd, so he had Barabbas released while he had \nd Yeshua\nd* flogged and then handed over \add to the execution squad\add*.
+\v 15 \add Now\add* Pilatos wanted to placate the crowd, so he had Bar-Aba released while he had \nd Yeshua\nd* flogged and then handed over \add to the execution squad\add*.
 \s1 The battalion plays with their mock ‘king’
 \r (Yhn 19:2-3; Mat. 27:27-31)
 \p
-\v 16 \add So\add* the soldiers led \add Yeshua\add* inside the palace that was the governor’s residence, and called in \add the rest of\add* the battalion.
+\v 16 \add So\add* the soldiers led \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* inside the palace that was the governor’s residence, and called in \add the rest of\add* the battalion.
 \v 17 They \add mocked Yeshua\add* by dressing him in a \add kingly\add* \add robe\add*, and after \add someone\add* twisted some thorns together into a \add mock\add* crown, they \add pressed it onto his head\add*,
-\v 18 and began saluting him, “Greetings, king of the Jews.”
+\v 18 and began saluting him, “Greetings, king of the Yehudim \add (Jews)\add*.”
 \v 19 They \add took turns\add* whacking his head with a stick and spitting on him, \add while\add* \add others\add* knelt down \add in front of\add* him and \add pretended\add* to be bowing to him.
 \v 20 \add After they’d finished having fun\add* mocking him, they took the purple robe off him, and put his own robe \add back\add* on him. Then they led him outside \add towards the execution area\add*.
 \s1 Yeshua is publicly executed beside thieves
 \r (Yhn 19:17-27; Mat. 27:32-44; Luke 23:26-43)
 \p
-\v 21 \add As they walked out of the city,\add* they \add came across\add* a man coming in from the country. \add He was\add* Simon from Kurene \add (Cyrene\add*—the father of Alexander and Rufus),\x + \xo 15:21: \xt Rom 16:13.\x* and \add the soldiers\add* forced him to carry the execution post,
+\v 21 \add As they walked out of the city,\add* they \add came across\add* a man coming in from the country. \add He was\add* Shim’on \add (Simon)\add* from Kurainai \add (Cyrene)\add* \add (Kurainai\add*—the father of Alexandros \add (Alexander)\add* and Rufos),\x + \xo 15:21: \xt Rom 16:13.\x* and \add the soldiers\add* forced him to carry the execution post,
 \v 22 and \add so\add* they \add all\add* arrived at Golgotha (which means ‘Place of the skull’).
-\v 23 \add There\add* \add the soldiers\add* \add went to\add* give \add some\add* \add spiced\add* wine to \add Yeshua\add*, but he \add declined\add* \add it\add*.
+\v 23 \add There\add* \add the soldiers\add* \add went to\add* give \add some\add* \add spiced\add* wine to \add Yeshua\add* \add (Jesus; Grk. Yesus)\add*, but he \add declined\add* \add it\add*.
 \v 24 \add So\add* they \add carried out the execution\add*, taking \add Yeshua’s\add* clothes and \add drawing straws\add* \add to see who would get what\add*.\x + \xo 15:24: \xt Psa 22:18.\x*
 \v 25 \add By now it was around 9am\add*, and they \add affixed\add* \add Yeshua\add* to the post.
-\v 26 The charge had been written out and \add attached at the top\add*: “The king of the Jews.”
+\v 26 The charge had been written out and \add attached at the top\add*: “The king of the Yehudim \add (Jews)\add*.”
 \v 27 \add That morning,\add* two thieves were \add also\add* executed there—one on \add each side\add* of \add Yeshua\add*.
 \p
 \v 28 ◘
@@ -1161,13 +1161,13 @@
 \v 30 come down from \add that\add* post \add and\add* save yourself.”
 \p
 \v 31 Similarly the chief priests and the \add religious teachers\add* \add laughed\add* together and mocked, “He \add did miracles for\add* others, but he can’t \add even\add* save himself.
-\v 32 \add Now\add* if that \add so-called\add* ‘\nd chosen\nd* \add one\add*’ or ‘king of Yisrael’ would \add just\add* come down from \add there\add*, \em then\em* we’d \add be able\add* to believe \add him\add*.”
+\v 32 \add Now\add* if that \add so-called\add* ‘\nd chosen\nd* \add one\add*’ or ‘king of Yisrael’ \add (Israel)\add* would \add just\add* come down from \add there\add*, \em then\em* we’d \add be able\add* to believe \add him\add*.”
 \p \add Even\add* the other \add two\add* being executed with him were deriding him.
 \s1 Yeshua breathes his last
 \r (Yhn 19:28-30; Mat. 27:45-56; Luke 23:44-49)
 \p
 \v 33 \add At noon\add*, it got \add dark\add* everywhere, until \add around\add* \add 3pm\add*,
-\v 34 \add when\add* \nd Yeshua\nd* shouted loudly, “\wj My \+nd god\+nd*, my \+nd god\+nd*, why have you abandoned me?\wj*”\x + \xo 15:34: \xt Psa 22:1.\x*
+\v 34 \add when\add* \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* shouted loudly, “\wj My \+nd god\+nd*, my \+nd god\+nd*, why have you abandoned me?\wj*”\x + \xo 15:34: \xt Psa 22:1.\x*
 \p
 \v 35 Some of the \add people\add* standing nearby \add thought\add* he was calling \add the prophet\add* Eliyah \add (Elijah)\add*.
 \v 36 One of them ran, and soaked a sponge in some sour wine, then put it on a stick and held it up for \add Yeshua\add* to drink,\x + \xo 15:36: \xt Psa 69:21.\x* saying, “\add Hang on\add*. Let’s see if Eliyah does come to get him down.”
@@ -1175,49 +1175,49 @@
 \v 37 But \add just then\add*, \nd Yeshua\nd* \add uttered\add* a loud cry and \add exhaled his last breath\add*.
 \p
 \v 38 (\add Back\add* in the temple, the curtain tore \add down the middle\add* from the top to the bottom.)\x + \xo 15:38: \xt Exo 26:31-33.\x*
-\v 39 \add When\add* \add Yeshua\add* \add died\add*, the \add Roman\add* \add commander\add* who had been standing \add back watching everything\add* said, “That man was \add definitely\add* \nd God’s\nd* son.”
+\v 39 \add When\add* \add Yeshua\add* \add died\add*, the \add Romaios\add* \add commander\add* who had been standing \add back watching everything\add* said, “That man was \add definitely\add* \nd God’s\nd* son.”
 \p
-\v 40 \add Further back\add*, there was also \add a group of\add* women observing \add everything\add*. \add They\add* \add included\add* Maria from Magdala, Maria the mother of \add young\add* Yacob and Yoses, and Salome,\x + \xo 15:40-41: \xt Luk 8:2-3.\x*
-\v 41 and others who had followed \add Yeshua\add* around Galilee and \add helped look after\add* him, along with many others who had come \add down\add* to Yerushalem with him.
+\v 40 \add Further back\add*, there was also \add a group of\add* women observing \add everything\add*. \add They\add* \add included\add* Miryam \add (Grk. Maria/Mariam)\add* from Magdala, Miryam the mother of \add young\add* Ya’akov \add (James; Grk. Yakobos)\add* and Yoseh, and Salome,\x + \xo 15:40-41: \xt Luk 8:2-3.\x*
+\v 41 and others who had followed \add Yeshua\add* around Galil and \add helped look after\add* him, along with many others who had come \add down\add* to Yerushalem \add (Jerusalem)\add* with him.
 \s1 Yosef boldly lays the body in a burial chamber
 \r (Yhn 19:38-42; Mat. 27:57-61; Luke 23:50-56)
 \p
 \v 42 As evening came, it was \add now\add* the Preparation Day, i.e., the \add day before\add* the Rest Day.
-\v 43 Yosef (who’d come from Arimathea \add city\add* and one who was waiting for the \add coming of\add* \nd God’s\nd* kingdom), a prominent council member, steeled himself up and went in to see \add the governor\add* to get \add permission\add* \add to transfer\add* \nd Yeshua’s\nd* body.
-\v 44 \add Governor\add* Pilate \add didn’t think he’d be dead yet\add*, so he called an \add army commander\add* to \add find out\add* if \add Yeshua\add* had indeed died.
+\v 43 Yosef \add (Joseph)\add* (who’d come from Arimathaia \add city\add* and one who was waiting for the \add coming of\add* \nd God’s\nd* kingdom), a prominent council member, steeled himself up and went in to see \add the governor\add* to get \add permission\add* \add to transfer\add* \nd Yeshua’s\nd* \add (Jesus; Grk. Yesus)\add* body.
+\v 44 \add Governor\add* Pilatos \add (Pilate)\add* \add didn’t think he’d be dead yet\add*, so he called an \add army commander\add* to \add find out\add* if \add Yeshua\add* had indeed died.
 \v 45 \add As soon as he found out\add*, he gave Yosef \add permission\add*,
 \v 46 \add so\add* \add Yosef\add* \add and his companions\add* went and bought some linen \add burial\add* cloth and then, removing \add Yeshua’s body\add* from the post, wrapped it in the cloth and placed it in a \add burial chamber\add* that had been chiselled into a rockface. Then they rolled a rock \add across\add* the opening.
-\v 47 \add Others\add* were watching \add and noted\add* where \add the body\add* had been laid, \add including\add* Maria from Magdala and Maria who was Yoses’ mother.
+\v 47 \add Others\add* were watching \add and noted\add* where \add the body\add* had been laid, \add including\add* Miryam \add (Grk. Maria/Mariam)\add* from Magdala and Miryam who was Yoseh’ mother.
 \c 16
 \s1 The massive shock at the burial chamber
 \r (Yhn 20:1-10; Mat. 28:1-8; Luke 24:1-12)
 \p
-\v 1 After the Rest Day was over, Maria from Magdala, Maria the mother of Yacob, and Salome, \add all\add* went and bought \add some traditional burial\add* spices \add that evening\add* to take \add to the burial chamber and\add* \add place with\add* \add the body\add*.
+\v 1 After the Rest Day was over, Miryam \add (Grk. Maria/Mariam)\add* from Magdala, Miryam the mother of Ya’akov \add (James; Grk. Yakobos)\add*, and Salome, \add all\add* went and bought \add some traditional burial\add* spices \add that evening\add* to take \add to the burial chamber and\add* \add place with\add* \add the body\add*.
 \v 2 Then very early on \add Sunday\add* \add morning\add* they went to the chamber, arriving \add just as\add* the sun was rising.
 \v 3 Then they \add realised that they\add* \add didn’t have anyone with them\add* \add to\add* roll the rock away \add that was covering the entrance\add*.
 \v 4 \add However\add* when they looked, they saw that the very large rock had \add already\add* been rolled away,
 \v 5 \add so\add* they went on into the \add burial chamber\add* and were totally stunned to find a young man dressed in white, sitting \add in there\add* \add at the side\add*.
 \p
-\v 6 He assured them, “Don’t be surprised. \add I know\add* you’re \add looking for\add* \nd Yeshua\nd* from Nazaret, the one who was executed on a post. \add But\add* see \add there\add* where his body was—he’s not there, because he \add came back to life\add*.
-\v 7 \add So\add* \add you three\add* should go and tell his apprentices, and Peter \add in particular\add*, that he’s going to go \add up\add* ahead of you all to Galilee and you’ll see him \add up there\add*, \add just\add* as he already told you all.”\x + \xo 16:7: \xt Mat 26:32; Mrk 14:28.\x*
+\v 6 He assured them, “Don’t be surprised. \add I know\add* you’re \add looking for\add* \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* from Nazaret \add (Nazareth)\add*, the one who was executed on a post. \add But\add* see \add there\add* where his body was—he’s not there, because he \add came back to life\add*.
+\v 7 \add So\add* \add you three\add* should go and tell his apprentices, and Kefa \add (Peter; Grk. Petros)\add* \add in particular\add*, that he’s going to go \add up\add* ahead of you all to Galil and you’ll see him \add up there\add*, \add just\add* as he already told you all.”\x + \xo 16:7: \xt Mat 26:32; Mrk 14:28.\x*
 \p
 \v 8 \add So\add* they left the chamber and \add took off running\add*, \add still\add* \add stunned\add* and shaking, and too scared \add to stop and\add* talk to anyone.
 \rem It’s not certain whether or not the following longer ending of this document was actually penned by the same author (Markos/Mark), or whether it was appended slightly later. Expert scholars are divided on this, and hence it’s included here for your consideration:
-\s1 \add The others don’t believe that Maria saw Yeshua\add*
+\s1 \add The others don’t believe that Miryam saw Yeshua\add*
 \r (Yhn 20:11-18; Mat. 28:9-10)
 \p
-\v 9 \add After coming back to life early on Sunday morning, Yeshua appeared first to Maria from Magdala. (She was the one that he had once commanded seven demons to leave.)\add*
+\v 9 \add After coming back to life early on Sunday morning, Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add appeared first to Miryam\add* \add (Grk. Maria/Mariam)\add* \add from Magdala. (She was the one that he had once commanded seven demons to leave.)\add*
 \v 10 \add After leaving him, she went and told his followers who were mourning and weeping at his loss.\add*
 \v 11 \add But when she told them that he is alive again and that she’d seen him, they simply didn’t believe her.\add*
 \s1 \add Yeshua appears to two of his followers\add*
 \r (Luke 24:13-35)
 \p
-\v 12 \add Later on, Yeshua appeared in a different form to two of his followers on the path as they left Yerushalem and headed out to the countryside,\add*
+\v 12 \add Later on, Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add appeared in a different form to two of his followers on the path as they left Yerushalem\add* \add (Jerusalem)\add* \add and headed out to the countryside,\add*
 \v 13 \add but when they hurried back and told the others, no one believed them.\add*
 \s1 \add Yeshua appears to his apprentices and instructs them\add*
 \r (Yhn 20:19-23; Mat. 28:16-20; Luke 24:36-49; Acts 1:6-8)
 \p
-\v 14 \add Later again when the eleven apprentices were sitting around eating, Yeshua appeared in the room and scolded them for not believing and for being so stubborn when they hadn’t believed others who had told them that he’d come back from the dead.\add*
+\v 14 \add Later again when the eleven apprentices were sitting around eating, Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add appeared in the room and scolded them for not believing and for being so stubborn when they hadn’t believed others who had told them that he’d come back from the dead.\add*
 \v 15 \add Then he instructed them, “\+wj Travel around all the world\+wj*\add* \add \+wj and tell everyone the good message.\+wj*\add*\x + \xo 16:15: \xt Acts 1:8.\x*
 \v 16 \add \+wj Anyone who believes and gets immersed in water will be saved, however, those who refuse to believe will be condemned to death.\+wj*\add*
 \v 17 \add \+wj Those who believe will be able to do miracles: they’ll be able to use my authority to command demons to leave and to speak new languages,\+wj*\add*
@@ -1225,5 +1225,5 @@
 \s1 \add Yeshua is lifted up to heaven\add*
 \r (Luke 24:50-53; Acts 1:9-11)
 \p
-\v 19 \add When Yeshua had finished speaking, he was lifted up into heaven\x + \xo 16:19: \xt Acts 1:9-11.\x* and seated in the honoured place\add* \add next to God.\add*
+\v 19 \add When Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add had finished speaking, he was lifted up into heaven\x + \xo 16:19: \xt Acts 1:9-11.\x* and seated in the honoured place\add* \add next to God.\add*
 \v 20 \add Then his followers went around preaching everywhere, and God worked through them and so they were able to confirm the truth of their preaching by doing miracles.\add*

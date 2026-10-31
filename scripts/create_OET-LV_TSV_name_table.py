@@ -22,6 +22,7 @@ CHANGELOG:
     2025-10-10 Added support for (OET) LV & RV names tables
     2026-10-21 Transliterate all NT name alternatives according to their script (including both Greek forms of Obed)
     2026-10-30 Include emitted DC name transliterations and preserve unchanged output timestamps.
+    2026-10-31 Report unchanged names tables without claiming that they were written.
 """
 from gettext import gettext as _
 # from typing import List, Tuple, Optional
@@ -36,7 +37,7 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-30' # by RJH
+LAST_MODIFIED_DATE = '2026-10-31'
 SHORT_PROGRAM_NAME = "create_OET-LV_TSV_name_table"
 PROGRAM_NAME = "Make OET-LV name table"
 PROGRAM_VERSION = '0.23'
@@ -225,9 +226,10 @@ def create_OET_LV_name_table() -> bool:
     if not OET_LV_NAMES_TSV_OUTPUT_FILEPATH.is_file() \
     or OET_LV_NAMES_TSV_OUTPUT_FILEPATH.read_text(encoding='utf-8') != outputText:
         OET_LV_NAMES_TSV_OUTPUT_FILEPATH.write_text(outputText, encoding='utf-8')
-
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(combinedSet):,} OET-LV names to {OET_LV_NAMES_TSV_OUTPUT_FILEPATH.name}." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(combinedSet):,} OET-LV names to {OET_LV_NAMES_TSV_OUTPUT_FILEPATH.name}." )
+    elif (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {OET_LV_NAMES_TSV_OUTPUT_FILEPATH.name} is unchanged ({len(combinedSet):,} OET-LV names); file not rewritten." )
     return True
 # end of create_OET-LV_TSV_name_table.spellCheckOET_RV
 

@@ -1,8 +1,8 @@
-\id WIS - Open English Translation—Readers' Version (OET-RV) v0.1.0
+\id WIS - Open English Translation—Readers' Version (OET-RV) v0.4.1
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 WIS
-\rem not WORDTABLE OET-LV_OT_word_table.tsv
+\rem WORDTABLE OET-LV_DC_word_table.tsv
 \rem Adapted from the Public Domain WEBBE courtesy of https://eBible.org
 \h Wisdom of Shelomoh
 \toc1 The Wisdom of Shelomoh
@@ -10,149 +10,163 @@
 \toc3 Wis
 \mt1 The Wisdom of Shelomoh
 \is1 Introduction
+\ip The \bk Wisdom of Shelomoh\bk* (Solomon) urges its readers, especially rulers, to seek wisdom and do what's right. It begins by comparing people who trust God with those who think that life is short and that they should take whatever pleasure and power they can get. The apparent success of wicked people and the suffering of good people don't tell the whole story: the book looks beyond death to God's judgement and the lasting life of those who belong to him.
+\ip The middle chapters describe a king's desire for wisdom and his prayer for God's help. Wisdom is pictured as a woman who can be loved and welcomed as a lifelong companion. She is worth more than wealth, power, beauty, or health, and enables people to understand what pleases God.
+\ip The final part looks back over the experiences of Yisrael (Israel), especially the escape from slavery in Mitsrayim (Egypt). It contrasts God's care for his people with the punishment of their oppressors, considers his patience with wrongdoers, and exposes the foolishness of worshipping created things. The book connects wise living with knowing the Creator and recognising his work in the world.
 \ip The \bk Wisdom of Shelomoh\bk* is recognised as Deuterocanonical Scripture by the Romaios Catholic, Greek Orthodox, and Russian Orthodox Churches.
+\iot Main components of this document
+\io1 The lives and destinies of the righteous and the wicked \ior 1:1–5:23\ior*
+\io1 The search for wisdom and a prayer to receive it \ior 6:1–9:18\ior*
+\io1 Wisdom's protection of God's people \ior 10:1–11:14\ior*
+\io1 God's power, patience, and mercy \ior 11:15–12:27\ior*
+\io1 The foolishness and harm of idol worship \ior 13:1–15:19\ior*
+\io1 God rescues his people and judges their oppressors \ior 16:1–19:22\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
+\s1 Seek God and do what's right
 \q1
-\v 1 Love righteousness, all you who are judges of the earth.
-\q2 Think of the master\f + \fr 1:1 \ft Gr. \fqa in goodness.\f* with a good mind.
-\q1 Seek him in singleness of heart,
+\v 1 Love¦20433 righteousness¦20434, all you who¦20435 are judges¦20436 of the¦20437 earth¦20438.
+\q2 Think of¦20441 the¦20441 master\f + \fr 1:1 \ft Grk. \fqa in goodness.\f* with a good mind.
+\q1 Seek him in singleness of heart¦20448,
 \q2
-\v 2 because he is found by those who don't put him to the test,
-\q2 and is manifested to those who trust him.
+\v 2 because¦20451 he's found by those who don't¦20454 put him to the test,
+\q2 and¦20458 is manifested to those who trust him.
 \q1
-\v 3 for crooked thoughts separate from God.
-\q2 His Power convicts when it is tested,
-\q2 and exposes the foolish;
+\v 3 for¦20464 crooked thoughts separate from¦20467 God¦20468.
+\q2 His Power¦20472 convicts when it's tested,
+\q2 and exposes the¦20474 foolish;
 \q1
-\v 4 because wisdom will not enter into a soul that devises evil,
-\q2 nor dwell in a body that is enslaved by sin.
+\v 4 because¦20476 wisdom¦20482 won't¦20483 enter¦20481 into a soul¦20479 that devises evil,
+\q2 nor live in¦20485 a body¦20486 that's enslaved by sin¦20488.
 \q1
-\v 5 Because a holy spirit of discipline will flee deceit,
-\q2 and will depart from thoughts that are without understanding,
-\q2 and will be ashamed when unrighteousness has come in.
+\v 5 Because a holy¦20489 spirit¦20491 of discipline¦20492 will flee¦20493 deceit¦20494,
+\q2 and¦20495 will depart from¦20497 thoughts¦20498 that are without understanding,
+\q2 and¦20500 will be ashamed when unrighteousness¦20503 has come in.
 \b
 \q1
-\v 6 Because\f + \fr 1:6 \ft Some authorities read \fqa the spirit of wisdom is loving to man.\f* wisdom is a spirit who loves man,
-\q2 and she will not hold a\f + \fr 1:6 \ft Or, \fqa reviler\f* blasphemer guiltless for his lips,
-\q2 because God is witness of his inmost self,
-\q2 and is a true overseer of his heart,
-\q2 and a hearer of his tongue.
+\v 6 Because\f + \fr 1:6 \ft Some authorities read \fqa the spirit of wisdom is loving to man.\f* wisdom¦20507 is a spirit¦20506 who loves man,
+\q2 and¦20508 she¦20514 won't hold a\f + \fr 1:6 \ft Or, \fqa reviler\f* blasphemer guiltless for his lips¦20513,
+\q2 because God¦20521 is witness¦20519 of his inmost self,
+\q2 and is a true¦20527 overseer¦20526 of his heart¦20524,
+\q2 and¦20528 a hearer of his tongue¦20530.
 \q1
-\v 7 Because the spirit of the master has filled\f + \fr 1:7 \ft Gr. \fqa the inhabited earth.\f* the world,
-\q2 and that which holds all things together knows what is said.
+\v 7 Because the master's spirit¦20533 has filled\f + \fr 1:7 \ft Grk. \fqa the inhabited earth.\f* the¦20536 world¦20537,
+\q2 and¦20538 that¦20532 which holds all¦20542 things together knows¦20543 what's said.
 \q1
-\v 8 Therefore no one who utters unrighteous things will be unseen;
-\q2 neither will Justice, when it convicts, pass him by.
+\v 8 Therefore no one who¦20558 utters unrighteous things will be unseen;
+\q2 neither will Justice, when¦20553 it¦20556 convicts, pass him by.
 \q1
-\v 9 Because in his counsels the ungodly will be searched out,
-\q2 and the sound of his words will come to the master to bring his lawless activities to conviction;
+\v 9 Because in¦20560 his counsels the ungodly will be¦20565 searched out,
+\q2 and¦20567 the sound of his words¦20566 will come to the master to bring his lawless activities to conviction;
 \q1
-\v 10 because a jealous ear listens to all things,
-\q2 and the noise of murmurings is not hidden.
+\v 10 because¦20577 a jealous ear¦20578 listens to all¦20582 things,
+\q2 and¦20583 the noise of murmurings¦20585 isn't hidden.
 \q1
-\v 11 Beware then of unprofitable murmuring,
-\q2 and keep your tongue from slander;
-\q2 because no secret utterance will go on its way void,
-\q2 and a lying mouth destroys a soul.
+\v 11 Beware then¦20589 of unprofitable murmuring,
+\q2 and¦20592 keep your tongue¦20596 from¦20593 slander¦20594;
+\q2 because¦20597 no¦20601 secret utterance¦20598 will go on its way void,
+\q2 and a lying mouth¦20603 destroys a soul¦20607.
+\s1 Don't invite death by doing evil
 \q1
-\v 12 Don't court death in the error of your life.
-\q2 Don't draw destruction upon yourselves by the works of your hands;
+\v 12 Don't¦20608 court death¦20610 in¦20611 the error¦20612 of your life¦20613.
+\q2 Don't draw destruction¦20617 on yourselves by the works¦20618 of your hands¦20619;
 \q2
-\v 13 because God didn't make death,
-\q2 neither does he delight when the living perish.
+\v 13 because¦20621 God¦20623 didn't¦20627 make¦20626 death¦20624,
+\q2 neither does he delight when¦20627 the living¦20631 perish.
 \q1
-\v 14 Because he created all things that they might have being.
-\q2 The generative powers of the world are wholesome,
-\q2 and there is no poison of destruction in them,
-\q2 nor has Haidais\f + \fr 1:14 \ft Or, \fqa a royal house\f* royal dominion upon earth;
+\v 14 Because he created¦20632 all¦20638 things that¦20635 they might have being¦20636.
+\q2 The generative powers of¦20643 the¦20643 world¦20644 are wholesome,
+\q2 and¦20645 there's no¦20646 poison of destruction in¦20648 them,
+\q2 nor has Haidais\f + \fr 1:14 \ft Or, \fqa a royal house\f* royal dominion on¦20655 earth¦20656;
 \q1
-\v 15 for righteousness is immortal,
+\v 15 for righteousness¦20657 is¦20660 immortal,
 \q2
-\v 16 but ungodly men by their hands and their words summon death;
-\q2 deeming him a friend they\f + \fr 1:16 \ft Or, \fqa were consumed \ft with love of him\f* pined away.
-\q1 They made a covenant with him,
-\q2 because they are worthy to belong with him.
+\v 16 but ungodly¦20661 men by their hands¦20664 and¦20665 their words¦20667 summon death;
+\q2 deeming him a friend¦20670 they\f + \fr 1:16 \ft Or, \fqa were consumed \ft with love of him\f* pined away.
+\q1 They made a covenant with¦20677 him,
+\q2 because¦20679 they're worthy¦20680 to¦20681 belong with him.
 \b
 \c 2
+\s1 The wicked plan to enjoy life and oppress the innocent
 \q1
-\v 1 Because they said\f + \fr 2:1 \ft Or, \fqa amongst\f* within themselves, with unsound reasoning,
-\q2 “Our life is short and sorrowful.
-\q2 There is no healing when a man comes to his end,
-\q2 and no one was ever known who\f + \fr 2:1 \ft Or, \fqa returned out of Hades\f* was released from Haidais.
+\v 1 Because they said¦20686\f + \fr 2:1 \ft Or, \fqa amongst\f* within themselves, with unsound reasoning,
+\q2 “Our life¦20697 is short and¦20699 sorrowful.
+\q2 There's no¦20700 healing¦20702 when a¦20705 man¦20705 comes to his end,
+\q2 and¦20706 no¦20707 one was ever known¦20708 who¦20709\f + \fr 2:1 \ft Or, \fqa returned out of Hades\f* was released from¦20711 Haidais.
 \q1
-\v 2 Because we were born by mere chance,
-\q2 and hereafter we will be as though we had never been,
-\q2 because the breath in our nostrils is smoke,
-\q2 and reason is a spark kindled by the beating of our heart,
+\v 2 Because¦20713 we were born by mere chance,
+\q2 and¦20716 in the future we'll be¦20719 as though we'd never been,
+\q2 because¦20723 the¦20725 breath¦20726 in¦20727 our nostrils is smoke¦20724,
+\q2 and¦20730 reason is a¦20733 spark¦20733 kindled by the beating of our heart¦20736,
 \q1
-\v 3 which being extinguished, the body will be turned into ashes,
-\q2 and the spirit will be dispersed as thin air.
+\v 3 which¦20738 being extinguished, the¦20742 body¦20743 will be turned into ashes,
+\q2 and¦20744 the¦20745 spirit¦20746 will be dispersed as thin air¦20750.
 \q1
-\v 4 Our name will be forgotten in time.
-\q2 No one will remember our works.
-\q2 Our life will pass away as the traces of a cloud,
-\q2 and will be scattered as is a mist,
-\q2 when it is chased by the rays of the sun,
-\q2 and\f + \fr 2:4 \ft Gr. \fqa weighed down.\f* overcome by its heat.
+\v 4 Our name¦20753 will be forgotten in¦20756 time¦20757.
+\q2 No one will remember our works¦20762.
+\q2 Our life¦20767 will pass¦20765 away as the¦20766 traces of a cloud¦20771,
+\q2 and¦20772 will be scattered as is a mist,
+\q2 when it's¦20783 chased by¦20777 the rays of the sun¦20779,
+\q2 and¦20780\f + \fr 2:4 \ft Grk. \fqa weighed down.\f* overcome by¦20781 its heat.
 \q1
-\v 5 Because our allotted time is the passing of a shadow,
-\q2 and our end doesn't retreat,
-\q2 because it is securely sealed, and no one\f + \fr 2:5 \ft Or, \fqa comes again\f* turns it back.
+\v 5 Because our allotted time is the passing¦20787 of a shadow,
+\q2 and¦20791 our end doesn't retreat,
+\q2 because it's¦20793 securely sealed, and¦20800 no¦20792 one\f + \fr 2:5 \ft Or, \fqa comes again\f* turns it back.
 \b
 \q1
-\v 6 “Come therefore and let's enjoy the good things that exist.
-\q2 Let's use the creation earnestly as in our youth.
+\v 6 “Come¦20803 therefore¦20804 and¦20805 let's enjoy the¦20807 good things that exist.
+\q2 Let's use the¦20812 creation¦20813 earnestly as in our youth.
 \q1
-\v 7 Let's fill ourselves with costly wine and perfumes,
-\q2 and let no spring flower pass us by.
+\v 7 Let's fill ourselves with costly wine¦20817 and¦20819 perfumes,
+\q2 and¦20822 let no spring flower¦20826 pass us by.
 \q1
 \v 8 Let's crown ourselves with rosebuds before they wither.
 \q1
-\v 9 Let none of us go without his share in our proud revelry.
-\q2 Let's leave tokens of mirth everywhere,
-\q2 because this is our portion, and this is our lot.
+\v 9 Let none of us go without his share¦20848 in our¦20838 proud revelry.
+\q2 Let's leave tokens of mirth¦20844 everywhere¦20840,
+\q2 because¦20845 this is our portion, and¦20850 this¦20851 is our lot¦20852.
 \q1
 \v 10 Let's oppress the righteous poor.
-\q2 Let's not spare the widow,
-\q2 nor regard the grey hair of the old man.
+\q2 Let's not¦20857 spare the widow¦20859,
+\q2 nor¦20860 regard the grey hair of the old man.
 \q1
-\v 11 But let our strength be a law of righteousness;
-\q2 for that which is weak is proven useless.
+\v 11 But¦20866 let our strength¦20869 be a law¦20870 of righteousness¦20872;
+\q2 for¦20874 that which is weak¦20875 is proven useless¦20876.
 \q1
-\v 12 But let's lie in wait for the righteous man,
-\q2 because he annoys us,
-\q2 is contrary to our works,
-\q2 reproaches us with sins against the law,
-\q2 and charges us with sins against our training.
+\v 12 But¦20879 let's lie in wait for the¦20880 righteous man,
+\q2 because¦20882 he¦20885 annoys us,
+\q2 is¦20885 contrary to our works¦20889,
+\q2 reproaches us with sins¦20894 against the law¦20895,
+\q2 and¦20896 charges us with sins¦20899 against our training.
 \q1
-\v 13 He professes to have knowledge of God,
-\q2 and calls himself a child of the master.
+\v 13 He professes to have¦20904 knowledge of God¦20905,
+\q2 and¦20906 calls himself a child¦20907 of the master.
 \q1
 \v 14 He became to us a reproof of our thoughts.
 \q1
-\v 15 He is grievous to us even to look at,
+\v 15 He's grievous to us even to look at,
 \q2 because his life is unlike other men's,
 \q2 and his paths are strange.
 \q1
-\v 16 We were regarded by him as something worthless,
+\v 16 We¦20942 were regarded by him as something worthless,
 \q2 and he abstains from our ways as from uncleanness.
-\q2 He calls the latter end of the righteous happy.
-\q2 He boasts that God is his father.
+\q2 He calls the latter end¦20947 of the righteous happy.
+\q2 He boasts that¦20943 God¦20952 is his father¦20951.
 \q1
-\v 17 Let's see if his words are true.
-\q2 Let's test what will happen at the end of his life.
+\v 17 Let's see if¦20954 his words¦20956 are true¦20958.
+\q2 Let's test what'll happen at the¦20961 end of his life.
 \q1
-\v 18 Because if the righteous man is God's son, he will uphold him,
-\q2 and he will deliver him out of the hand of his adversaries.
+\v 18 Because if¦20965 the¦20968 righteous man is¦20967 God's¦20971 son¦20970, he'll¦20973 uphold him,
+\q2 and¦20974 he'll deliver¦20975 him out¦20977 of the hand¦20978 of his adversaries.
 \q1
-\v 19 Let's test him with insult and torture,
-\q2 that we may find out how gentle he is,
-\q2 and test his patience.
+\v 19 Let's test him with insult and¦20981 torture,
+\q2 that¦20985 we may find out how gentle he¦20989 is,
+\q2 and¦20990 test his patience.
 \q1
-\v 20 Let's condemn him to a shameful death,
-\q2 for he will be protected, according to his words.”
+\v 20 Let's condemn him to a shameful death¦20995,
+\q2 for¦21000 he'll be¦20999 protected, according to his words¦21004.”
+\s1 The wicked misunderstand God's purposes
 \b
 \q1
 \v 21 Thus they reasoned, and they were led astray;
@@ -160,326 +174,334 @@
 \q1
 \v 22 and they didn't know the mysteries of God,
 \q2 neither did they hope for wages of holiness,
-\q2 nor did they discern that there is a prize for blameless souls.
+\q2 nor did they discern that there's a prize for blameless souls.
 \q1
-\v 23 Because God created man for incorruption,
-\q2 and made him an image of his own everlastingness;
+\v 23 Because¦21030 God¦21032 created¦21033 man¦21035 for incorruption,
+\q2 and¦21038 made¦21043 him an image¦21039 of his own¦21041 everlastingness;
 \q1
-\v 24 but death entered into the world by the envy of the devil,
-\q2 and those who belong to him experience it.
+\v 24 but¦21046 death¦21048 entered¦21049 into the¦21051 world¦21052 by the¦21056 envy¦21045 of the¦21057 devil¦21047,
+\q2 and¦21054 those who¦21058 belong to¦21060 him experience it.
 \c 3
+\s1 The righteous are safe in God's care
 \q1
-\v 1 But the souls of the righteous are in the hand of God,
-\q2 and no torment will touch them.
+\v 1 But¦21062 the souls¦21063 of the righteous are in¦21064 God's¦21066 hand¦21065,
+\q2 and¦21067 no¦21068 torment¦21072 will touch them.
 \q1
 \v 2 In the eyes of the foolish they seemed to have died.
 \q2 Their departure was considered a disaster,
 \q2
 \v 3 and their travel away from us ruin,
-\q2 but they are in peace.
+\q2 but they're in peace.
 \q1
-\v 4 Because even if in the sight of men they are punished,
-\q2 their hope is full of immortality.
+\v 4 Because¦21096 even if¦21100 in the¦21102 sight of men they're punished,
+\q2 their hope¦21103 is full¦21106 of immortality.
 \q1
-\v 5 Having borne a little chastening, they will receive great good;
-\q2 because God tested them, and found them worthy of himself.
+\v 5 Having borne a little¦21108 chastening, they'll receive great¦21110 good;
+\q2 because¦21112 God¦21114 tested¦21115 them, and¦21117 found¦21118 them worthy¦21120 of himself¦21121.
 \q1
-\v 6 He tested them like gold in the furnace,
-\q2 and he accepted them as a whole burnt offering.
+\v 6 He tested them like gold¦21123 in¦21124 the furnace,
+\q2 and¦21128 he accepted them as a¦21130 whole¦21130 burnt offering¦21130.
 \q1
-\v 7 In the time of their visitation they will shine.
-\q2 They will run back and forth like sparks amongst stubble.
+\v 7 In¦21135 the time¦21136 of their visitation they'll shine.
+\q2 They'll run back and¦21140 forth like sparks among¦21143 stubble¦21144.
 \q1
-\v 8 They will judge nations and have dominion over peoples.
-\q2 The master will reign over them forever.
+\v 8 They'll judge¦21146 nations¦21147 and¦21148 have dominion over peoples¦21150.
+\q2 The master will reign¦21152 over them forever.
 \q2
-\v 9 Those who trust him will understand truth.
-\q2 The faithful will live with him in love,
-\q2 because grace and mercy are with his chosen ones.
+\v 9 Those who¦21158 trust him will understand¦21162 truth¦21163.
+\q2 The¦21165 faithful¦21166 will live with him in¦21167 love¦21168,
+\q2 because¦21171 grace¦21172 and¦21173 mercy¦21174 are with his chosen ones.
+\s1 Goodness matters more than having children
 \b
 \q1
-\v 10 But the ungodly will be punished even as their reasoning deserves,
-\q2 those who neglected righteousness and revolted from the master;
+\v 10 But the ungodly¦21180 will be punished even as¦21181 their reasoning deserves,
+\q2 those who¦21185 neglected¦21186 righteousness and¦21189 revolted from the¦21190 master;
 \q2
-\v 11 for he who despises wisdom and discipline is miserable.
-\q1 Their hope is void and their toils unprofitable.
-\q2 Their works are useless.
+\v 11 for he who despises wisdom¦21193 and¦21195 discipline¦21196 is miserable.
+\q1 Their hope¦21203 is void and their toils unprofitable.
+\q2 Their works¦21212 are useless.
 \q1
 \v 12 Their wives are foolish and their children are wicked.
 \q2
 \v 13 Their descendants are cursed.
-\q1 Because the barren woman who is undefiled is happy,
-\q2 she who has not conceived in transgression.
-\q2 She will have fruit when God examines souls.
+\q1 Because the barren woman who's undefiled is happy,
+\q2 she who hasn't conceived in transgression.
+\q2 She'll have fruit when God examines souls.
 \q1
-\v 14 So is the eunuch which has done no lawless deed with his hands,
-\q2 nor imagined wicked things against the master;
-\q1 for a precious gift will be given to him for his faithfulness,
-\q2 and a delightful inheritance in the master's sanctuary.
+\v 14 So¦21243 is the eunuch¦21244 which has done no lawless deed with his hands¦21249,
+\q2 nor¦21251 imagined wicked¦21256 things against the¦21254 master;
+\q1 for a precious gift will be given¦21257 to¦21257 him for¦21258 his faithfulness¦21261,
+\q2 and¦21264 a delightful inheritance in¦21266 the master's sanctuary.
 \q1
-\v 15 Because good labours have fruit of great renown.
-\q2 The root of understanding can't fail.
+\v 15 Because¦21271 good labours have fruit¦21273 of great renown.
+\q2 The¦21277 root¦21278 of understanding can't fail.
 \q1
-\v 16 But children of adulterers will not come to maturity.
-\q2 The seed of an unlawful union will vanish away.
+\v 16 But¦21282 children¦21281 of adulterers won't come to¦21285 maturity.
+\q2 The seed¦21290 of an unlawful union will vanish away.
 \q1
-\v 17 Because if they live long, they will not be esteemed,
-\q2 and in the end, their old age will be without honour.
+\v 17 Because if¦21292 they live long, they won't be¦21296 esteemed,
+\q2 and¦21300 in the¦21304 end¦21303, their old¦21305 age¦21305 will be without honour.
 \q1
-\v 18 If they die young, they will have no hope,
-\q2 nor consolation in the day of judgement.
+\v 18 If¦21307 they die young, they'll have no¦21311 hope¦21313,
+\q2 nor consolation¦21318 in¦21315 the day¦21316 of judgement.
 \q1
-\v 19 Because the end of an unrighteous generation is always grievous.
+\v 19 Because¦21320 the¦21323 end of an unrighteous generation¦21319 is always grievous.
 \c 4
 \q1
-\v 1 It is better to be childless with virtue,
-\q2 for immortality is in the memory of virtue,
-\q2 because it is recognised both before God and before men.
+\v 1 It's better to be childless¦21326 with¦21327 virtue,
+\q2 for immortality¦21329 is in¦21332 the memory¦21333 of virtue,
+\q2 because it's¦21334 recognised both before God¦21338 and¦21340 before men.
 \q1
-\v 2 When it is present, people imitate it.
-\q2 They long after it when it has departed.
+\v 2 When it's present, people imitate it.
+\q2 They long after it when it's departed.
 \q1 Throughout all time it marches, crowned in triumph,
-\q2 victorious in the competition for the prizes that are undefiled.
+\q2 victorious in the¦21352 competition for the¦21356 prizes that¦21357 are undefiled.
 \q1
-\v 3 But the multiplying brood of the ungodly will be of no profit,
-\q2 and their illegitimate offshoots won't take deep root,
+\v 3 But¦21363 the multiplying brood of the ungodly¦21364 will be of no¦21366 profit,
+\q2 and¦21368 their illegitimate offshoots won't¦21377 take deep root¦21374,
 \q2 nor will they establish a sure hold.
 \q1
-\v 4 Because even if they grow branches and flourish for a season,
-\q2 standing unsure, they will be shaken by the wind.
-\q2 They will be uprooted by the violence of winds.
+\v 4 Because even¦21381 if¦21381 they grow branches¦21384 and flourish for¦21382 a season¦21386,
+\q2 standing unsure, they'll be shaken by¦21390 the wind¦21391.
+\q2 They'll be uprooted¦21397 by¦21394 the violence of winds¦21396.
 \q1
 \v 5 Their branches will be broken off before they come to maturity.
-\q2 Their fruit will be useless,
-\q2 never ripe to eat, and fit for nothing.
+\q2 Their fruit¦21403 will be useless¦21405,
+\q2 never ripe to eat¦21408, and¦21409 fit for nothing.
 \q1
-\v 6 Because unlawfully conceived children are witnesses of wickedness
-\q2 against parents when they are investigated.
+\v 6 Because¦21414 unlawfully conceived children¦21417 are witnesses¦21419 of wickedness¦21421
+\q2 against parents¦21423 when they're investigated.
+\s1 A good life matters more than a long life
 \b
 \q1
-\v 7 But a righteous man, even if he dies before his time, will be at rest.
+\v 7 But¦21428 a righteous man, even if¦21429 he dies before his time, will be¦21434 at rest.
 \q1
-\v 8 Because honourable old age is not that which stands in length of time,
-\q2 nor is its measure given by number of years,
+\v 8 Because honourable old¦21435 age¦21435 isn't¦21441 that¦21439 which stands in length of time,
+\q2 nor is its measure given by number¦21442 of years¦21443,
 \q2
-\v 9 but understanding is grey hair to men,
-\q2 and an unspotted life is ripe old age.
+\v 9 but¦21446 understanding¦21448 is grey hair¦21445 to¦21447 men,
+\q2 and¦21450 an unspotted life¦21453 is ripe old age¦21451.
 \b
 \q1
-\v 10 Being found well-pleasing to God, someone was loved.
-\q2 While living amongst sinners he was transported.
+\v 10 Being found well-pleasing¦21455 to God¦21457, someone was¦21458 loved.
+\q2 While living¦21461 among¦21462 sinners he was transported¦21464.
 \q1
-\v 11 He was caught away, lest evil should change his understanding,
-\q2 or guile deceive his soul.
+\v 11 He was caught away, so that evil¦21467 wouldn't change his understanding¦21469,
+\q2 or¦21471 guile deceive¦21472 his soul¦21474.
 \q1
-\v 12 Because the fascination of wickedness obscures the things which are good,
-\q2 and the whirl of desire perverts an innocent mind.
+\v 12 Because¦21477 the fascination of wickedness obscures the things which are good¦21481,
+\q2 and¦21482 the whirl of desire¦21484 perverts an innocent mind¦21486.
 \q1
-\v 13 Being made perfect quickly,
-\q2 he filled a long time;
+\v 13 Being made perfect¦21488 quickly,
+\q2 he filled a long time¦21492;
 \q2
 \v 14 for his soul was pleasing to the master.
-\q2 Therefore he hurried out of the midst of wickedness.
+\q2 Therefore he hurried away from wickedness.
 \q1
 \v 15 But the peoples saw and didn't understand,
 \q2 not considering this, that grace and mercy are with his chosen,
 \q2 and that he visits his holy ones;
 \q1
-\v 16 but a righteous man who is dead will condemn the ungodly who are living,
-\q2 and youth who is quickly perfected will condemn the many years of an unrighteous man's old age.
+\v 16 but a righteous man who's dead will condemn the ungodly¦21540 who are living¦21539,
+\q2 and¦21541 youth¦21542 who's quickly¦21544 perfected will condemn the many years of an unrighteous man's old¦21546 age¦21546.
 \q1
-\v 17 Because the ungodly will see a wise man's end,
-\q2 and won't understand what the master planned for him,
+\v 17 Because the ungodly will see¦21548 a wise man's end,
+\q2 and won't understand what the master planned for¦21549 him,
 \q2 and why he safely kept him.
 \q1
-\v 18 They will see, and they will despise;
+\v 18 They'll see, and they'll despise;
 \q2 but the master will laugh them to scorn.
-\q1 After this, they will become a dishonoured carcass
-\q2 and a reproach amongst the dead forever;
+\q1 After this, they'll become a dishonoured carcass
+\q2 and a reproach among the dead forever;
 \q1
-\v 19 because he will dash them speechless to the ground,
+\v 19 because he'll dash them speechless to the ground,
 \q2 and will shake them from the foundations.
-\q1 They will lie utterly waste.
-\q2 They will be in anguish
+\q1 They'll lie utterly waste.
+\q2 They'll be in anguish
 \q2 and their memory will perish.
 \b
 \q1
-\v 20 They will come with coward fear when their sins are counted.
-\q2 Their lawless activities will convict them to their face.
+\v 20 They'll come¦21611 with coward fear when¦21617 their sins¦21614 are counted.
+\q2 Their lawless activities will convict them to¦21618 their face.
 \c 5
+\s1 The wicked regret rejecting the righteous
 \q1
-\v 1 Then the righteous man will stand in great boldness
-\q2 before the face of those who afflicted him,
-\q2 and those who make his labours of no account.
+\v 1 Then¦21624 the righteous man will stand in¦21626 great boldness¦21627
+\q2 before the¦21629 face¦21632 of those who¦21633 afflicted him,
+\q2 and¦21636 those who make his labours of no account.
 \q1
-\v 2 When they see him, they will be troubled with terrible fear,
-\q2 and will be amazed at the marvel of salvation.
+\v 2 When they see him, they'll be troubled with terrible fear¦21644,
+\q2 and¦21646 will be amazed at the marvel of salvation¦21652.
 \q1
-\v 3 They will speak amongst themselves repenting,
-\q2 and for distress of spirit they will groan,
+\v 3 They'll speak among themselves repenting,
+\q2 and for distress of spirit they'll groan,
 \q2 “This was he whom we used to hold in derision,
 \q2 as a parable of reproach.
 \q1
 \v 4 We fools considered his life madness,
 \q2 and his end without honour.
 \q1
-\v 5 How was he counted amongst sons of God?
-\q2 How is his lot amongst saints?
+\v 5 How¦21684 was he counted among¦21686 sons¦21687 of God¦21688?
+\q2 How is his lot¦21693 among saints?
 \q1
-\v 6 Truly we went astray from the way of truth.
-\q2 The light of righteousness didn't shine for us.
-\q2 The sun didn't rise for us.
+\v 6 Truly we went astray from¦21698 the way of truth¦21700.
+\q2 The light¦21705 of righteousness¦21704 didn't shine¦21707 for us.
+\q2 The¦21710 sun¦21711 didn't rise¦21713 for us.
 \q1
-\v 7 We\f + \fr 5:7 \ft See Proverbs 14:14.\f* took our fill of the paths of lawlessness and destruction.
-\q2 We travelled through trackless deserts,
+\v 7 We\f + \fr 5:7 \ft See Proverbs 14:14.\f* took our fill of the paths of lawlessness¦21715 and¦21718 destruction¦21719.
+\q2 We travelled through trackless deserts¦21722,
 \q2 but we didn't know the master's way.
 \q1
 \v 8 What did our arrogance profit us?
-\q2 What good have riches and boasting brought us?
+\q2 What good have riches¦21737 and boasting brought us?
 \b
 \q1
-\v 9 Those things all passed away as a shadow,
-\q2 like a rumour that runs by,
+\v 9 Those things all¦21744 passed¦21742 away as a shadow¦21746,
+\q2 like a rumour that¦21743 runs by,
 \q2
-\v 10 like a ship passing through the billowy water,
-\q2 which, when it has gone by, there is no trace to be found,
-\q2 no pathway of its keel in the waves.
+\v 10 like a ship¦21752 passing through the billowy water¦21755,
+\q2 which¦21756, when¦21762 it's¦21765 gone by, there's no¦21758 trace to¦21759 be¦21759 found¦21761,
+\q2 no pathway of its keel in¦21766 the waves.
 \q1
-\v 11 Or it is like when a bird flies through the air,
-\q2 no evidence of its passage is found,
-\q2 but the light wind, lashed with the stroke of its pinions,
-\q2 and torn apart with the violent rush of the moving wings, is passed through.
-\q2 Afterwards no sign of its coming remains.
+\v 11 Or¦21768 it's like when a bird¦21770 flies through the air¦21772,
+\q2 no evidence of its passage is found¦21794,
+\q2 but¦21778 the light wind¦21777, lashed with the stroke of its pinions,
+\q2 and¦21783 torn apart with the violent rush of the moving wings¦21788, is passed through.
+\q2 Afterwards¦21791 no¦21793 sign¦21795 of its coming remains.
 \q1
-\v 12 Or it is like when an arrow is shot at a mark,
-\q2 the air it divided closes up again immediately,
-\q2 so that men don't know where it passed through.
+\v 12 Or¦21799 it's like when an arrow is shot at a mark,
+\q2 the¦21806 air¦21807 it divided closes up again immediately¦21808,
+\q2 so that men don't know where it¦21816 passed through.
 \q1
-\v 13 So we also, as soon as we were born, ceased to be;
-\q2 and we had no sign of virtue to show,
-\q2 but we were utterly consumed in our wickedness.”
+\v 13 So¦21818 we¦21819 also¦21822, as soon as we were born, ceased to be;
+\q2 and we had no sign¦21825 of virtue to¦21828 show¦21828,
+\q2 but¦21830 we¦21833 were utterly consumed in¦21829 our wickedness¦21832.”
 \q1
-\v 14 Because the hope of the ungodly man is like chaff carried by the wind,
-\q2 and\f + \fr 5:14 \ft Gr. \fqa like foam chased to thinness: \ft or, \fqa as thin foam chased.\f* as\f + \fr 5:14 \ft Most Greek authorities read \fqa hoar frost: \ft some authorities, perhaps rightly, \fqa a spider's web.\f* foam vanishing before a tempest;
-\q2 and is scattered like smoke by the wind,
-\q2 and passes by as the remembrance of a guest who stays just a day.
+\v 14 Because¦21835 the hope¦21836 of the ungodly man is like chaff carried by¦21841 the wind¦21842,
+\q2 and¦21843\f + \fr 5:14 \ft Grk. \fqa like foam chased to thinness: \ft or, \fqa as thin foam chased.\f* as\f + \fr 5:14 \ft Most Greek authorities read \fqa hoar frost: \ft some authorities, perhaps rightly, \fqa a spider's web.\f* foam vanishing before a tempest;
+\q2 and¦21850 is scattered like smoke¦21852 by¦21853 the wind¦21854,
+\q2 and¦21856 passes by as the remembrance¦21858 of a guest who stays just a day.
+\s1 God rewards the righteous and judges the world
 \b
 \q1
-\v 15 But the righteous live forever.
-\q2 Their reward is in the master,
-\q2 and the care for them with the Most High.
+\v 15 But¦21863 the¦21865 righteous live¦21867 forever.
+\q2 Their reward is in¦21869 the¦21871 master,
+\q2 and¦21874 the¦21875 care for them with¦21878 the Most High.
 \q1
-\v 16 Therefore they will receive the crown of royal dignity
-\q2 and the diadem of beauty from the master's hand,
-\q1 because he will cover them with his right hand,
-\q2 and he will shield them with his arm.
+\v 16 Therefore they'll receive¦21882 the crown of royal dignity
+\q2 and¦21887 the¦21888 diadem¦21889 of¦21890 beauty from¦21892 the master's hand¦21893,
+\q1 because¦21880 he'll¦21881 cover them with his right¦21897 hand,
+\q2 and¦21900 he'll shield them with his arm¦21902.
 \q1
-\v 17 He will take his zeal as complete armour,
-\q2 and will make the whole creation his weapons to punish his enemies:
+\v 17 He'll take¦21905 his zeal¦21908 as complete¦21906 armour¦21906,
+\q2 and¦21910 will make the¦21912 whole creation his weapons to punish his enemies¦21916:
 \q1
-\v 18 He will put on righteousness as a breastplate,
-\q2 and will wear impartial judgement as a helmet.
+\v 18 He'll put on righteousness¦21919 as a breastplate¦21918,
+\q2 and¦21920 will wear impartial judgement¦21923 as a helmet.
 \q1
-\v 19 He will take holiness as an invincible shield.
+\v 19 He'll take¦21925 holiness as an invincible shield.
 \q2
-\v 20 He will sharpen stern wrath for a sword.
-\q2 The universe will go with him to fight against his frenzied foes.
+\v 20 He'll sharpen stern anger¦21932 for a sword¦21934.
+\q2 The¦21938 universe will go with him to fight against his frenzied foes.
 \q1
 \v 21 Shafts of lightning will fly with true aim.
-\q2 They will leap to the mark from the clouds, as from a well-drawn bow.
+\q2 They'll leap to¦21943 the mark from¦21949 the¦21952 clouds, as from a well-drawn bow.
 \q1
-\v 22 Hailstones full of wrath will be hurled as from a catapult.
-\q2 The water of the sea will be angered against them.
-\q2 Rivers will sternly overwhelm them.
+\v 22 Hailstones full¦21961 of anger¦21960 will be hurled as from a catapult.
+\q2 The water¦21967 of the sea¦21968 will be angered against them.
+\q2 Rivers¦21969 will sternly overwhelm them.
 \q1
 \v 23 A mighty wind will encounter them.
-\q2 It will winnow them away like a tempest.
-\q1 So lawlessness will make all the land desolate.
-\q2 Their evil-doing will overturn the thrones of princes.
+\q2 It'll winnow them away like a tempest.
+\q1 So lawlessness¦21987 will make all¦21984 the¦21985 land¦21986 desolate.
+\q2 Their evil-doing will overturn the¦21989 thrones¦21992 of princes.
 \c 6
+\s1 Rulers must answer to God
 \q1
-\v 1 Hear therefore, you kings, and understand.
-\q2 Learn, you judges of the ends of the earth.
+\v 1 Hear¦21994 therefore¦21995, you kings¦21996, and¦21997 understand¦21998.
+\q2 Learn¦21999, you judges of the ends¦22001 of the earth¦22002.
 \q2
-\v 2 Give ear, you rulers who have dominion over many people,
-\q2 and make your boast\f + \fr 6:2 \ft Or, \fqa in the multitudes of your nations\f* in multitudes of nations,
+\v 2 Give ear, you rulers who¦22004 have dominion over many people,
+\q2 and¦22007 make your boast\f + \fr 6:2 \ft Or, \fqa in the multitudes of your nations\f* in multitudes¦22006 of nations¦22011,
 \q1
-\v 3 because your dominion was given to you from the master,
-\q2 and your sovereignty from the Most High.
-\q1 He will search out your works,
-\q2 and will enquire about your plans,
+\v 3 because¦22012 your dominion was given¦22013 to¦22013 you from¦22014 the¦22017 master,
+\q2 and¦22020 your sovereignty from¦22023 the¦22028 Most High.
+\q1 He'll search out your works¦22029,
+\q2 and¦22030 will enquire about¦22015 your plans¦22032,
 \q1
-\v 4 because being officers of his kingdom, you didn't judge rightly,
-\q2 nor did you keep the law,
-\q2 nor did you walk according to God's counsel.
+\v 4 because¦22034 being¦22036 officers of his kingdom¦22039, you didn't¦22043 judge rightly,
+\q2 nor did you keep¦22044 the law¦22045,
+\q2 nor did you walk according¦22047 to¦22047 God's¦22051 counsel.
 \q1
-\v 5 He will come upon you awfully and swiftly,
-\q2 because a stern judgement comes on those who are in high places.
+\v 5 He'll come on you¦22057 awfully and¦22054 swiftly,
+\q2 because¦22058 a stern judgement¦22059 comes on¦22061 those who¦22062 are¦22064 in high places.
 \q1
-\v 6 Because the man of low estate may be pardoned in mercy,
-\q2 but mighty men will be mightily tested.
+\v 6 Because the¦22065 man of low estate may be¦22069 pardoned in mercy¦22070,
+\q2 but¦22072 mighty men will be mightily¦22073 tested.
 \q1
-\v 7 Because the Sovereign master of all will not be impressed with anyone,
-\q2 neither will he show deference to greatness;
-\q1 because it is he who made both small and great,
-\q2 and cares about them all;
+\v 7 Because¦22076 the¦22079 Sovereign master¦22081 of all won't¦22082 be impressed with anyone,
+\q2 neither will he show deference to greatness¦22084;
+\q1 because¦22085 it's he who made¦22090 both small¦22086 and¦22087 great¦22088,
+\q2 and¦22092 cares¦22093 about¦22094 them all¦22095;
 \q1
-\v 8 but the scrutiny that comes upon the powerful is strict.
+\v 8 but¦22097 the scrutiny that comes on the powerful is strict.
 \q1
-\v 9 Therefore, my words are to you, Oh princes,
-\q2 that you may learn wisdom and not fall away.
+\v 9 Therefore¦22104, my words¦22108 are to¦22102 you¦22103, Oh¦22105 princes,
+\q2 that¦22110 you may learn¦22111 wisdom¦22112 and¦22113 not¦22114 fall away.
 \q1
-\v 10 Because those who have kept the things that are holy in holiness will be made holy.
-\q2 Those who have been taught them will find what to say in defence.
+\v 10 Because those who've¦22116 kept the¦22120 things that are holy in holiness will be made holy.
+\q2 Those who've¦22124 been taught them will find¦22127 what to say in defence¦22128.
 \q1
-\v 11 Therefore set your desire on my words.
-\q2 Long for them, and you princes will be instructed.
+\v 11 Therefore¦22130 set your desire on my words¦22132.
+\q2 Long for them, and¦22135 you princes will be instructed.
+\s1 Wisdom welcomes those who seek her
 \b
 \q1
-\v 12 Wisdom is radiant and doesn't fade away;
-\q2 and is easily seen by those who love her,
-\q2 and found by those who seek her.
+\v 12 Wisdom¦22142 is radiant and doesn't fade away;
+\q2 and is easily¦22144 seen by¦22146 those who¦22147 love¦22148 her,
+\q2 and¦22150 found by¦22152 those who¦22153 seek¦22154 her.
 \q1
-\v 13 She anticipates those who desire her, making herself known.
+\v 13 She anticipates those who¦22157 desire her, making herself known.
 \q1
-\v 14 He who rises up early to seek her won't have difficulty,
-\q2 for he will find her sitting at his gates.
+\v 14 He who¦22160 rises up early to¦22162 seek her won't have difficulty,
+\q2 for¦22167 he'll find¦22168 her sitting at his gates¦22170.
 \q2
-\v 15 Because to think upon her is perfection of understanding,
-\q2 and he who watches for her will quickly be free from care;
+\v 15 Because¦22182 to think on her is perfection¦22178 of understanding,
+\q2 and¦22179 he who¦22180 watches for her will quickly¦22184 be¦22186 free from care;
 \q1
-\v 16 because she herself goes around, seeking those who are worthy of her,
-\q2 and in their paths she appears to them graciously,
-\q2 and in every purpose she meets them.
+\v 16 because¦22187 she herself goes around, seeking those who¦22188 are worthy¦22189 of her,
+\q2 and¦22194 in¦22195 their paths she¦22199 appears to them graciously,
+\q2 and¦22201 in¦22202 every¦22203 purpose she¦22206 meets them.
 \q1
-\v 17 Because her true beginning is desire for instruction;
-\q2 and desire for instruction is love.
+\v 17 Because her true beginning¦22207 is desire for¦22208 instruction¦22212;
+\q2 and¦22215 desire for instruction¦22216 is love¦22217.
 \q1
-\v 18 And love is observance of her laws.
-\q2 To give heed to her laws confirms immortality.
+\v 18 And love¦22218 is observance of her laws.
+\q2 To give heed to her laws confirms¦22226 immortality.
 \q1
-\v 19 Immortality brings closeness to God.
+\v 19 Immortality brings closeness to God¦22233.
 \q2
-\v 20 So then desire for wisdom promotes to a kingdom.
+\v 20 So¦22235 then desire¦22234 for wisdom¦22236 promotes to¦22238 a kingdom¦22239.
 \b
 \q1
-\v 21 If therefore you delight in thrones and sceptres, you princes of peoples,
-\q2 honour wisdom, that you may reign forever.
+\v 21 If¦22240 therefore¦22241 you delight in thrones and¦22245 sceptres, you princes of peoples¦22248,
+\q2 honour¦22249 wisdom¦22250, that¦22251 you may reign forever.
 \q1
-\v 22 But what wisdom is, and how she came into being, I will declare.
-\q2 I won't hide mysteries from you;
-\q2 but I will explore from her first beginning,
-\q2 bring the knowledge of her into clear light,
-\q2 and I will not pass by the truth.
+\v 22 But¦22257 what wisdom¦22259 is, and¦22260 how¦22261 she came into being, I'll declare¦22263.
+\q2 I won't hide mysteries¦22268 from you¦22267;
+\q2 but¦22269 I'll explore from¦22270 her first beginning¦22271,
+\q2 bring the knowledge¦22280 of her into clear light,
+\q2 and¦22282 I won't¦22284 pass by the¦22286 truth¦22287.
 \q1
-\v 23 Indeed, I won't travel with consuming envy,
-\q2 because envy will have no fellowship with wisdom.
+\v 23 Indeed, I won't travel with consuming envy¦22290,
+\q2 because¦22293 envy will have no¦22295 fellowship with wisdom¦22297.
 \q1
-\v 24 But a multitude of wise men is salvation to the world,
-\q2 and an understanding king is stability for his people.
+\v 24 But a multitude¦22298 of wise¦22300 men is salvation¦22301 to the world¦22302,
+\q2 and¦22303 an understanding king¦22304 is stability for his people.
 \q1
-\v 25 Therefore be instructed by my words, and you will profit.
+\v 25 Therefore be instructed by my words, and¦22313 you'll profit.
 \c 7
+\s1 A king's search for wisdom
 \q1
 \v 1 I myself am also\f + \fr 7:1 \ft Many authorities read \fqa a mortal man.\f* mortal, like everyone else,
 \q2 and am a descendant of one formed first and born of the earth.
@@ -487,422 +509,430 @@
 \v 2 I moulded into flesh in the time of ten months in my mother's womb,
 \q2 being compacted in blood from the seed of man and pleasure of marriage.
 \q1
-\v 3 I also, when I was born, drew in the common air,
-\q2 and fell onto the kindred earth,
-\q1 uttering, like all, for my first voice, the same cry.
+\v 3 I also, when I was¦22347 born, drew in the¦22349 common¦22350 air¦22351,
+\q2 and¦22352 fell onto the¦22354 kindred earth¦22357,
+\q1 uttering, like¦22363 all¦22362, for my first¦22358 voice¦22359, the¦22360 same cry¦22364.
 \q1
 \v 4 I was nursed with care in swaddling clothes.
 \q1
-\v 5 Because no king had a different beginning,
+\v 5 Because¦22372 no king¦22373 had¦22375 a different beginning¦22377,
 \q2
-\v 6 but all men have one entrance into life, and a common departure.
+\v 6 but¦22379 all¦22380 men have one entrance into life¦22384, and a common departure¦22385.
 \b
 \q1
-\v 7 Because this cause I prayed, and understanding was given to me.
-\q2 I asked, and a spirit of wisdom came to me.
+\v 7 Because¦22388 this¦22389 cause I prayed, and¦22391 understanding¦22392 was given¦22393 to¦22393 me.
+\q2 I¦22394 asked, and¦22396 a spirit¦22399 of wisdom¦22400 came¦22397 to me.
 \q1
-\v 8 I preferred her before sceptres and thrones.
-\q2 I considered riches nothing in comparison to her.
+\v 8 I preferred her before sceptres and¦22404 thrones¦22405.
+\q2 I considered riches¦22407 nothing in¦22410 comparison to¦22409 her.
 \q1
 \v 9 Neither did I liken to her any priceless gem,
-\q2 because all gold in her presence is a little sand,
-\q2 and silver will be considered as clay before her.
+\q2 because¦22418 all¦22420 gold¦22421 in¦22422 her presence¦22432 is a little sand,
+\q2 and¦22427 silver¦22431 will be considered as clay¦22429 before her.
 \q1
-\v 10 I loved her more than health and beauty,
-\q2 and I chose to have her rather than light,
-\q2 because her bright shining is never laid to sleep.
+\v 10 I loved¦22438 her more than health and¦22436 beauty,
+\q2 and¦22440 I chose to¦22445 have¦22445 her rather than light¦22444,
+\q2 because¦22446 her bright shining¦22451 is never laid to sleep.
 \q1
-\v 11 All good things came to me with her,
-\q2 and innumerable riches are in her hands.
+\v 11 All¦22458 good things came¦22452 to me with¦22459 her,
+\q2 and¦22461 innumerable riches¦22463 are in¦22464 her hands¦22465.
 \q1
-\v 12 And I rejoiced over them all because wisdom leads them;
-\q2 although I didn't know that she was their mother.
+\v 12 And¦22468 I rejoiced over them all¦22470 because wisdom¦22474 leads them;
+\q2 although I didn't know that¦22471 she¦22477 was¦22479 their mother.
 \q1
-\v 13 As I learnt without guile, I impart without grudging.
-\q2 I don't hide her riches.
+\v 13 As I learnt¦22483 without guile, I impart without grudging.
+\q2 I don't hide her riches¦22488.
 \q1
-\v 14 Because she is a treasure for men that doesn't fail,
-\q2 and those who use it obtain friendship with God,
-\q2 commended by the gifts which they present through discipline.
+\v 14 Because she's¦22495 a¦22496 treasure¦22494 for men that doesn't fail,
+\q2 and those who¦22498 use it obtain friendship with¦22500 God¦22501,
+\q2 commended by the¦22505 gifts¦22508 which¦22497 they present through¦22504 discipline¦22507.
+\s1 Wisdom's knowledge and power
 \b
 \q1
-\v 15 But may God grant that I may speak his judgement,
-\q2 and to conceive thoughts worthy of what has been given me;
-\q2 because he is one who guides even wisdom and who corrects the wise.
+\v 15 But may God¦22514 grant that¦22523 I¦22510 may speak his judgement,
+\q2 and¦22511 to¦22512 conceive thoughts worthy of what's been given¦22512 me;
+\q2 because he's¦22524 one who guides¦22528 even wisdom¦22527 and¦22530 who corrects the wise¦22532.
 \q1
-\v 16 Because both we and our words are in his hand,
-\q2 with all understanding and skill in various crafts.
+\v 16 Because¦22535 both we¦22539 and¦22540 our words¦22542 are in his hand¦22536,
+\q2 with all¦22544 understanding¦22546 and¦22547 skill in various crafts.
 \q1
-\v 17 Because he himself gave me an unerring knowledge of the things that are,
-\q2 to know the structure of the universe and the operation of the elements;
+\v 17 Because he¦22550 himself gave¦22553 me an unerring knowledge of the¦22554 things that are¦22555,
+\q2 to¦22556 know¦22556 the structure of the universe and¦22561 the operation of the elements;
 \q2
-\v 18 the beginning, end, and middle of times;
-\q2 the alternations of the solstices and the changes of seasons;
+\v 18 the beginning¦22564, end, and middle of times¦22569;
+\q2 the alternations of the solstices and¦22572 the changes of seasons;
 \q2
-\v 19 the circuits of years and the positions of stars;
+\v 19 the circuits of years and¦22577 the positions of stars¦22578;
 \q2
-\v 20 the natures of living creatures and the raging of wild animals;
-\q2 the violence of\f + \fr 7:20 \ft Or, \fqa spirits\f* winds and the thoughts of men;
-\q2 the diversities of plants and the virtues of roots.
+\v 20 the natures of living¦22581 creatures and¦22582 the raging of wild¦22584 animals¦22584;
+\q2 the violence of\f + \fr 7:20 \ft Or, \fqa spirits\f* winds and¦22587 the thoughts of men;
+\q2 the diversities of plants and¦22592 the virtues of roots¦22594.
 \q1
 \v 21 All things that are either secret or manifest I learnt,
 \q2
-\v 22 for wisdom, that is the architect of all things, taught me.
+\v 22 for wisdom, that's the architect of all things, taught me.
 \b
-\q1 Because there is in her a spirit that is quick to understand, holy,
+\q1 Because there's in her a spirit that's quick to understand, holy,
 \q2 unique, manifold, subtle, freely moving, clear in utterance, unpolluted,
-\q2 distinct, invulnerable, loving what is good, keen, unhindered,
+\q2 distinct, invulnerable, loving what's good, keen, unhindered,
 \q2
 \v 23 beneficent, loving towards man, steadfast, sure, free from care, all-powerful, all-surveying,
 \q2 and penetrating through all spirits that are quick to understand, pure, most subtle.
 \q1
-\v 24 Because wisdom is more mobile than any motion.
-\q2 Yes, she pervades and penetrates all things by reason of her purity.
+\v 24 Because¦22643 wisdom¦22646 is more mobile than any motion.
+\q2 Yes, she pervades and penetrates all¦22652 things because¦22653 of¦22653 her purity.
 \q1
-\v 25 Because she is a breath of the power of God,
-\q2 and a pure emanation of the glory of the Almighty.
+\v 25 Because¦22670 she's¦22658 a breath of¦22660 God's¦22661 power¦22662,
+\q2 and¦22663 a pure¦22669 emanation of the¦22666 Almighty's¦22667 glory¦22668.
 \q1 Therefore nothing defiled can find entrance into her.
 \q1
-\v 26 Because she is a reflection of everlasting light,
-\q2 an unspotted mirror of the working of God,
-\q2 and an image of his goodness.
+\v 26 Because¦22678 she's¦22679 a reflection of eternal light¦22680,
+\q2 an unspotted mirror¦22683 of the working of God¦22687,
+\q2 and¦22689 an image¦22690 of his goodness.
 \q1
-\v 27 Although she is one, she has power to do all things.
-\q2 Remaining in herself, she renews all things.
-\q1 Throughout the generations passing into holy souls,
-\q2 she makes friends of God and prophets.
+\v 27 Although she's one¦22694, she has power to¦22696 do all¦22697 things.
+\q2 Remaining in¦22701 herself, she¦22702 renews all things.
+\q1 Throughout the¦22703 generations¦22708 passing into holy souls¦22710,
+\q2 she makes friends¦22713 of God¦22714 and¦22715 prophets¦22716.
 \q2
-\v 28 Because God loves nothing as much as one who dwells with wisdom.
+\v 28 Because¦22719 God¦22722 loves¦22720 nothing as much as one who¦22725 lives with wisdom¦22726.
 \q1
-\v 29 Because she is fairer than the sun,
-\q2 and above all the constellations of the stars.
-\q2 She is better than light.
+\v 29 Because¦22729 she's¦22730 fairer than the sun¦22732,
+\q2 and¦22733 above¦22734 all¦22735 the constellations of the stars¦22736.
+\q2 She's better than light¦22738.
 \q1
-\v 30 Because daylight yields to night,
-\q2 but evil does not prevail against wisdom.
+\v 30 Because¦22744 daylight yields to night¦22746,
+\q2 but¦22748 evil¦22751 doesn't prevail against wisdom¦22747.
 \c 8
 \q1
-\v 1 But she reaches from one end to the other with full strength,
-\q2 and orders all things well.
+\v 1 But¦22753 she reaches from¦22754 one end¦22757 to the¦22761 other with full strength,
+\q2 and orders all¦22762 things well.
+\s1 Choosing wisdom as a lifelong companion
 \b
 \q1
-\v 2 I loved her and sought her from my youth.
-\q2 I sought to take her for my bride.
+\v 2 I loved her and¦22766 sought her from¦22768 my youth¦22769.
+\q2 I¦22770 sought to take her for my bride¦22773.
 \q2 I became enamoured by her beauty.
 \q1
-\v 3 She glorifies her noble birth by living with God.
-\q2 The Sovereign master of all loves her.
+\v 3 She glorifies her noble birth by living with God¦22785.
+\q2 The¦22788 Sovereign master¦22790 of all¦22789 loves¦22791 her.
 \q1
-\v 4 Because she is initiated into the knowledge of God,
-\q2 and she chooses his works.
+\v 4 Because¦22794 she's¦22795 initiated into the¦22796 knowledge of¦22797 God¦22798,
+\q2 and¦22800 she chooses¦22801 his works¦22803.
 \q1
-\v 5 But if riches are a desired possession in life,
-\q2 what is richer than wisdom, which makes all things?
+\v 5 But if¦22805 riches¦22807 are¦22808 a desired possession¦22810 in¦22811 life,
+\q2 what's richer than wisdom¦22814, which¦22813 makes all¦22818 things?
 \q1
-\v 6 And if understanding is effective,
-\q2 who more than\f + \fr 8:6 \ft Gr. \fqa she.\f* wisdom is an architect of the things that exist?
+\v 6 And if¦22820 understanding¦22822 is effective,
+\q2 who¦22826 more¦22828 than\f + \fr 8:6 \ft Grk. \fqa she.\f* wisdom is¦22829 an architect of the things that exist?
 \q1
-\v 7 If a man loves righteousness,
-\q2 the fruits of wisdom's labour\f + \fr 8:7 \ft Gr. \fqa her labours\f* are virtues,
-\q2 for she teaches soberness, understanding, righteousness, and courage.
-\q2 There is nothing in life more profitable for people than these.
+\v 7 If¦22832 a man¦22835 loves¦22834 righteousness¦22833,
+\q2 the¦22836 fruits of wisdom's labour\f + \fr 8:7 \ft Grk. \fqa her labours\f* are¦22839 virtues,
+\q2 for¦22842 she¦22838 teaches soberness, understanding, righteousness¦22846, and¦22847 courage.
+\q2 There's¦22852 nothing in¦22853 life more profitable for people than these.
 \q1
-\v 8 And if anyone longs for wide experience,
-\q2 she knows the things of old, and infers the things to come.
-\q2 She understands subtleties of speeches and interpretations of dark sayings.
-\q2 She foresees signs and wonders, and the issues of seasons and times.
+\v 8 And if¦22856 anyone¦22861 longs for wide experience,
+\q2 she knows the¦22863 things of old, and¦22865 infers the¦22866 things to come.
+\q2 She understands¦22869 subtleties of speeches and¦22872 interpretations of dark sayings.
+\q2 She foresees signs¦22875 and¦22876 wonders¦22877, and¦22879 the issues of seasons and¦22882 times¦22883.
 \b
 \q1
 \v 9 Therefore I determined to take her to live with me,
-\q2 knowing that she is one who would give me good counsel,
-\q2 and encourage me in cares and grief.
+\q2 knowing that¦22891 she's¦22892 one who'd give me good counsel¦22894,
+\q2 and¦22896 encourage me in cares and¦22899 grief¦22900.
 \q1
-\v 10 Because of her, I will have glory amongst multitudes,
-\q2 and honour in the sight of elders, though I am young.
+\v 10 Because¦22902 of¦22902 her, I'll have glory¦22904 among¦22905 multitudes,
+\q2 and¦22907 honour¦22908 in the¦22911 sight of elders¦22910, though I'm young.
 \q1
-\v 11 I will be found keen when I give judgement.
-\q2 I will be admired in the presence of rulers.
+\v 11 I'll be found keen when¦22917 I give judgement¦22916.
+\q2 I'll be admired in¦22918 the presence of rulers.
 \q1
-\v 12 When I am silent, they will wait for me.
-\q2 When I open my lips, they will heed what I say.
-\q2 If I continue speaking, they will put their hands on their mouths.
+\v 12 When I'm¦22923 silent, they'll wait for me.
+\q2 When I open my lips, they'll heed what I say.
+\q2 If I continue speaking¦22929, they'll put¦22932 their hands¦22931 on¦22932 their mouths¦22934.
 \q1
-\v 13 Because of her, I will have immortality,
-\q2 and leave behind an eternal memory to those who come after me.
+\v 13 Because¦22937 of¦22937 her, I'll have immortality¦22939,
+\q2 and¦22940 leave behind an eternal¦22942 memory¦22941 to those who¦22943 come after me.
 \q1
-\v 14 I will govern peoples.
-\q2 Nations will be subjected to me.
+\v 14 I'll govern peoples.
+\q2 Nations¦22950 will be subjected¦22951 to¦22951 me.
 \q1
-\v 15 Dreaded monarchs will fear me when they hear of me.
-\q2 Amongst the people, I will show myself to be good, and courageous in war.
+\v 15 Dreaded monarchs will fear me when they hear¦22955 of me.
+\q2 Among¦22958 the people¦22959, I'll show myself to be good, and¦22962 courageous in¦22963 war¦22964.
 \q1
-\v 16 When I come into my house, I will find rest with her.
-\q2 Because conversation with her has no bitterness,
-\q2 and living with her has no pain, but gladness and joy.
+\v 16 When I come into¦22966 my house¦22969, I'll¦22970 find rest with her.
+\q2 Because¦22974 conversation with her has¦22975 no bitterness,
+\q2 and living¦22978 with¦22978 her has no pain, but¦22985 gladness and¦22987 joy¦22988.
 \q1
-\v 17 When I considered these things in myself,
-\q2 and thought in my heart how immortality is in kinship to wisdom,
+\v 17 When I considered these things in¦22991 myself¦22992,
+\q2 and¦22993 thought in¦22995 my heart¦22996 how immortality¦23000 is in¦23001 kinship to wisdom¦23003,
 \q1
-\v 18 and in her friendship is good delight,
-\q2 and in the labours of her hands is wealth that doesn't fail,
-\q2 and understanding is in her companionship,
-\q2 and great renown in having fellowship with her words,
-\q2 I went about seeking how to take her to myself.
+\v 18 and¦23004 in¦23005 her friendship¦23006 is good delight¦23008,
+\q2 and¦23010 in¦23011 the labours of her hands¦23013 is wealth¦23015 that¦23031 doesn't fail,
+\q2 and¦23017 understanding¦23022 is in her companionship,
+\q2 and¦23023 great renown in¦23025 having fellowship with her words¦23027,
+\q2 I went about seeking¦23030 how to¦23032 take¦23032 her to myself¦23035.
 \q1
-\v 19 Now I was a clever child, and received a good soul.
+\v 19 Now I was a clever child¦23036, and¦23037 received a good soul¦23040.
 \q2
-\v 20 Or rather, being good, I came into an undefiled body.
+\v 20 Or rather, being¦23047 good, I came¦23048 into an undefiled body¦23050.
 \q1
-\v 21 But perceiving that I could not otherwise possess wisdom unless God gave her to me—
-\q2 yes, and to know and understand by whom the grace is given—
-\q2 I pleaded with the master and implored him, and with my whole heart I said:
+\v 21 But¦23053 perceiving¦23070 that¦23054 I couldn't otherwise¦23056 possess wisdom unless God¦23062 gave her to¦23063 me—
+\q2 yes, and to¦23052 know¦23052 and understand by whom¦23069 the¦23072 grace¦23073 is given—
+\q2 I pleaded with the¦23075 master and implored him, and with my¦23079 whole¦23083 heart¦23085 I¦23086 said¦23081:
 \c 9
+\s1 A prayer for wisdom
 \q1
-\v 1 “O God of my ancestors and master of mercy,
-\q2 who made all things by your word;
+\v 1 “O God¦23087 of my ancestors and¦23089 master of¦23091 mercy¦23092,
+\q2 who¦23094 made¦23095 all¦23097 things by your word¦23099;
 \q1
-\v 2 and by your wisdom you formed man,
-\q2 that he should have dominion over the creatures that were made by you,
+\v 2 and¦23101 by your wisdom¦23103 you¦23104 formed man¦23106,
+\q2 that¦23107 he should have dominion over the¦23109 creatures¦23113 that were made by¦23110 you¦23111,
 \q1
-\v 3 and rule the world in holiness and righteousness,
-\q2 and execute judgement in uprightness of soul,
+\v 3 and¦23114 rule the¦23116 world¦23117 in¦23118 holiness¦23119 and¦23120 righteousness¦23121,
+\q2 and¦23122 execute judgement¦23127 in¦23123 uprightness of soul¦23125,
 \q2
-\v 4 give me wisdom, her who sits by you on your thrones.
-\q1 Don't reject me from amongst your\f + \fr 9:4 \ft Or, \fqa children\f* servants,
+\v 4 give¦23128 me wisdom¦23135, her who sits by you on your thrones¦23133.
+\q1 Don't¦23137 reject me from¦23140 among your\f + \fr 9:4 \ft Or, \fqa children\f* servants,
 \q2
-\v 5 because I am your servant and the son of your handmaid,
-\q2 a weak and short-lived man,
-\q2 with little power to understand judgement and laws.
+\v 5 because¦23143 I'm¦23144 your¦23146 servant¦23150 and¦23147 the son¦23148 of your handmaid,
+\q2 a weak¦23153 and short-lived man¦23152,
+\q2 with little power to understand¦23159 judgement¦23160 and¦23161 laws.
 \q1
-\v 6 Because even if a man is perfect amongst the sons of men,
-\q2 if the wisdom that comes from you is not with him, he will count for nothing.
+\v 6 Because even¦23163 if¦23163 a man¦23165 is¦23166 perfect¦23167 among¦23168 the sons¦23169 of men,
+\q2 if the¦23171 wisdom¦23174 that comes from¦23172 you¦23173 isn't with him, he'll count¦23178 for nothing.
 \q1
-\v 7 You chose me to be king of your people,
-\q2 and a judge for your sons and daughters.
+\v 7 You¦23179 chose me to be king¦23182 of your people¦23183,
+\q2 and¦23185 a judge for your sons¦23187 and¦23189 daughters¦23190.
 \q1
-\v 8 You gave a command to build a sanctuary on your holy mountain,
-\q2 and\f + \fr 9:8 \ft Or, \fqa a place of sacrifice\f* an altar in the city where you live,
-\q2 a copy of the holy tent which you prepared from the beginning.
+\v 8 You gave a command to¦23192 build¦23192 a sanctuary on¦23194 your holy mountain¦23195,
+\q2 and¦23198\f + \fr 9:8 \ft Or, \fqa a place of sacrifice\f* an altar¦23203 in¦23199 the city¦23200 where you¦23202 live,
+\q2 a copy of the holy tent¦23205 which¦23207 you prepared from¦23209 the beginning¦23210.
 \q1
-\v 9 Wisdom is with you and knows your works,
-\q2 and was present when you were making the world,
-\q2 and understands what is pleasing in your eyes,
-\q2 and what is right according to your commandments.
+\v 9 Wisdom¦23215 is with¦23212 you¦23213 and knows your works¦23219,
+\q2 and¦23221 was present when¦23223 you were making the¦23225 world¦23226,
+\q2 and¦23227 understands what's pleasing¦23230 in¦23231 your eyes¦23232,
+\q2 and¦23234 what's right according to your commandments¦23238.
 \q1
-\v 10 Send her from the holy heavens,
-\q2 and ask her to come from the throne of your glory,
-\q2 that being present with me she may work,
-\q2 and I may learn what pleases you well.
+\v 10 Send¦23250 her from¦23242 the holy¦23243 heavens¦23244,
+\q2 and¦23245 ask her to come from¦23246 the throne¦23247 of your glory¦23248,
+\q2 that¦23252 being¦23260 present with¦23261 me she may work,
+\q2 and I¦23254 may learn¦23257 what pleases you¦23262 well.
 \q1
-\v 11 Because she knows all things and understands,
-\q2 and she will guide me prudently in my actions.
-\q2 She will guard me in her glory.
+\v 11 Because¦23264 she knows all¦23266 things and¦23267 understands,
+\q2 and¦23269 she'll guide¦23270 me prudently in¦23272 my actions¦23274.
+\q2 She'll guard¦23278 me in¦23280 her glory¦23282.
 \q1
-\v 12 So my works will be acceptable.
-\q2 I will judge your people righteously,
-\q2 and I will be worthy of my father's\f + \fr 9:12 \ft Gr. \fqa thrones.\f* throne.
+\v 12 So¦23284 my works¦23288 will be¦23285 acceptable.
+\q2 I'll¦23289 judge¦23291 your people¦23293 righteously¦23295,
+\q2 and¦23296 I'll be¦23297 worthy¦23298 of my father's¦23300\f + \fr 9:12 \ft Grk. \fqa thrones.\f* throne¦23299.
 \q1
-\v 13 Because what man will know the counsel of God?
-\q2 Or who will conceive what the master wills?
+\v 13 Because¦23303 what man¦23304 will know¦23305 God's¦23307 counsel?
+\q2 Or¦23308 who'll¦23312 conceive what the¦23313 master wills?
 \q1
-\v 14 Because the thoughts of mortals are unstable,
-\q2 and our plans are prone to fail.
+\v 14 Because¦23316 the¦23321 thoughts of mortals are unstable,
+\q2 and¦23319 our plans are prone to fail.
 \q1
-\v 15 Because a corruptible body weighs down the soul.
-\q2 The earthy tent burdens a mind that is full of cares.
+\v 15 Because¦23325 a corruptible body¦23326 weighs down the soul¦23328.
+\q2 The¦23331 earthy tent¦23333 burdens a mind¦23334 that's full of cares.
 \q1
-\v 16 We can hardly guess the things that are on earth,
-\q2 and we find the things that are close at hand with labour;
-\q2 but who has traced out the things that are in the heavens?
+\v 16 We can hardly¦23337 guess the¦23339 things that are on¦23340 earth¦23341,
+\q2 and¦23342 we find¦23346 the¦23343 things that are close at hand¦23345 with¦23347 labour;
+\q2 but who's traced out the things that are in¦23351 the heavens¦23352?
 \q1
-\v 17 Who gained knowledge of your counsel, unless you gave wisdom,
-\q2 and sent your holy spirit from on high?
+\v 17 Who¦23367 gained knowledge¦23359 of your counsel, unless you¦23362 gave¦23363 wisdom¦23364,
+\q2 and¦23365 sent your holy¦23368 spirit¦23370 from¦23371 on high?
 \q1
-\v 18 It was thus that the ways of those who are on earth were corrected,
-\q2 and men were taught the things that are pleasing to you.
-\q2 They were saved through wisdom.”
+\v 18 It was thus that the¦23376 ways of those who are on¦23379 earth¦23380 were corrected,
+\q2 and¦23381 men were taught¦23385 the¦23382 things that are pleasing¦23383 to you¦23384.
+\q2 They were saved through wisdom¦23389.”
 \b
 \c 10
+\s1 Wisdom protects and rescues the faithful
 \q1
-\v 1 Wisdom\f + \fr 10:1 \ft Gr. \fqa She.\f* guarded to the end the first formed father of the world, who was created alone,
-\q2 and delivered him out of his own transgression,
+\v 1 Wisdom\f + \fr 10:1 \ft Grk. \fqa She.\f* guarded to the end the first formed father¦23393 of the world¦23394, who was created¦23396 alone¦23395,
+\q2 and¦23398 delivered him out of his own¦23403 transgression,
 \q1
-\v 2 and gave him strength to rule over all things.
+\v 2 and¦23405 gave¦23404 him strength¦23407 to¦23408 rule over all¦23409 things.
 \q1
-\v 3 But when an unrighteous man fell away from her in his anger,
-\q2 he perished himself in the rage with which he killed his brother.
+\v 3 But¦23411 when an unrighteous man fell away¦23412 from¦23412 her in his anger,
+\q2 he perished himself in the rage with¦23419 which he killed his brother.
 \q1
-\v 4 When for his cause the earth was drowning with a flood,
-\q1 wisdom again saved it,
-\q1 guiding the righteous man's course by a paltry piece of wood.
+\v 4 When for¦23421 his cause the earth¦23424 was drowning with a flood,
+\q1 wisdom¦23427 again¦23425 saved it,
+\q1 guiding the righteous man's course by a paltry piece of¦23428 wood¦23430.
 \b
 \q1
-\v 5 Moreover, when nations consenting together in wickedness had been confounded,
-\q2 wisdom\f + \fr 10:5 \ft Gr. \fqa she\f* knew the righteous man, and preserved him blameless to God,
-\q2 and kept him strong when his heart yearned towards his child.
+\v 5 Moreover, when nations¦23439 consenting together in¦23436 wickedness¦23438 had been confounded,
+\q2 wisdom\f + \fr 10:5 \ft Grk. \fqa she\f* knew the¦23442 righteous man, and¦23444 preserved him blameless to God¦23448,
+\q2 and¦23449 kept¦23454 him strong¦23453 when his heart yearned towards¦23450 his child¦23451.
 \b
 \q1
-\v 6 While the ungodly were perishing, wisdom\f + \fr 10:6 \ft Gr. \fqa she\f* delivered a righteous man,
-\q2 when he fled from the fire that descended out of heaven on the five cities.
+\v 6 While the ungodly¦23458 were perishing, wisdom\f + \fr 10:6 \ft Grk. \fqa she\f* delivered¦23459 a righteous man,
+\q2 when he fled from the fire¦23461 that descended out of heaven on the five cities.
 \q1
-\v 7 To whose wickedness a smoking waste still witnesses,
-\q2 and plants bearing fair fruit that doesn't ripen,
-\q2 a disbelieving soul has a memorial: a standing pillar of salt.
+\v 7 To whose wickedness¦23468 a smoking waste still¦23465 witnesses,
+\q2 and¦23472 plants bearing fair fruit that doesn't ripen,
+\q2 a disbelieving soul¦23478 has a memorial: a standing pillar of salt.
 \q1
-\v 8 Because having passed wisdom by,
-\q2 not only were they disabled from recognising the things which are good,
-\q2 but they also left behind them for their life a monument of their folly,
-\q2 to the end that where they stumbled, they might fail even to be unseen;
+\v 8 Because having passed wisdom¦23483 by,
+\q2 not only¦23487 were they disabled from recognising the things which¦23504 are good¦23493,
+\q2 but¦23494 they also¦23495 left¦23498 behind them for their life a monument of their folly,
+\q2 to¦23498 the¦23499 end that where they stumbled, they might fail even to be unseen;
 \q1
-\v 9 but wisdom delivered those who waited on her out of troubles.
+\v 9 but wisdom¦23509 delivered¦23516 those who¦23511 waited on her out¦23514 of troubles.
 \b
 \q1
-\v 10 When a righteous man was a fugitive from a brother's wrath,\f + \fr 10:10 \ft Gr. \fqa she.\f* wisdom guided him in straight paths.
-\q2 She showed him God's kingdom, and gave him knowledge of holy things.
-\q2 She prospered him in his toils, and multiplied the fruits of his labour.
+\v 10 When a righteous man was a fugitive from a brother's¦23520 anger¦23519,\f + \fr 10:10 \ft Grk. \fqa she.\f* wisdom guided him in¦23523 straight paths.
+\q2 She¦23527 showed¦23526 him God's¦23529 kingdom¦23528, and¦23530 gave¦23531 him knowledge¦23533 of holy¦23534 things.
+\q2 She¦23536 prospered him in¦23537 his toils, and¦23539 multiplied the¦23541 fruits of his labour.
 \q1
-\v 11 When in their covetousness men dealt harshly with him,
-\q2 she stood by him and made him rich.
+\v 11 When in¦23544 their covetousness men dealt harshly with him,
+\q2 she¦23547 stood¦23548 by¦23548 him and¦23549 made him rich.
 \q1
-\v 12 She guarded him from enemies,
-\q2 and she kept him safe from those who lay in wait.
+\v 12 She¦23553 guarded him from¦23554 enemies¦23555,
+\q2 and¦23556 she kept him safe¦23559 from those who lay in¦23565 wait.
 \q2 Over his severe conflict, she watched as judge,
-\q2 that he might know that godliness is more powerful than every one.
+\q2 that¦23565 he might know¦23566 that¦23567 godliness is¦23570 more powerful than every one.
 \b
 \q1
-\v 13 When a righteous man was sold,\f + \fr 10:13 \ft Gr. \fqa she.\f* wisdom didn't forsake him,
-\q2 but she delivered him from sin.
-\q2 She went down with him into a dungeon,
+\v 13 When a righteous man was sold,\f + \fr 10:13 \ft Grk. \fqa she.\f* wisdom didn't forsake him,
+\q2 but¦23577 she delivered¦23580 him from¦23578 sin¦23579.
+\q2 She¦23581 went down with him into a dungeon,
 \q1
-\v 14 and in bonds she didn't depart from him,
-\q2 until she brought him the sceptre of a kingdom,
-\q2 and authority over those that dealt like a tyrant with him.
-\q2 She also showed those who had mockingly accused him to be false,
-\q2 and gave him eternal glory.
+\v 14 and¦23586 in¦23587 bonds she¦23591 didn't depart from him,
+\q2 until¦23592 she¦23594 brought him the sceptre of a kingdom¦23596,
+\q2 and¦23597 authority¦23598 over those that dealt like a tyrant with him.
+\q2 She¦23600 also¦23602 showed¦23603 those who'd¦23604 mockingly accused him to be false¦23601,
+\q2 and¦23607 gave¦23608 him eternal¦23611 glory¦23610.
+\s1 Wisdom leads God's people out of slavery
 \b
 \q1
-\v 15 Wisdom\f + \fr 10:15 \ft Gr. \fqa she.\f* delivered a holy people and a blameless seed from a nation of oppressors.
+\v 15 Wisdom\f + \fr 10:15 \ft Grk. \fqa she.\f* delivered¦23618 a¦23613 holy people¦23613 and¦23615 a blameless seed¦23616 from¦23619 a nation¦23620 of oppressors.
 \q1
-\v 16 She entered into the soul of a servant of the master,
-\q2 and withstood terrible kings in wonders and signs.
+\v 16 She entered¦23622 into the soul¦23624 of a servant of the master,
+\q2 and¦23627 withstood terrible kings¦23629 in¦23631 wonders¦23632 and¦23633 signs¦23634.
 \q1
 \v 17 She rendered to holy men a reward of their toils.
-\q2 She guided them along a marvellous way,
-\q2 and became to them a covering in the day-time,
-\q2 and a starry flame through the night.
+\q2 She guided them along a marvellous¦23644 way,
+\q2 and¦23645 became to¦23646 them a covering in the day-time,
+\q2 and¦23651 a starry flame¦23653 through the¦23655 night¦23656.
 \q1
-\v 18 She brought them over the Red sea,
-\q2 and led them through much water;
+\v 18 She¦23658 brought them over the Red¦23660 sea¦23659,
+\q2 and¦23661 led them through¦23664 much¦23666 water¦23665;
 \q1
-\v 19 but she drowned their enemies,
-\q2 and she threw them up from the bottom of the deep.
+\v 19 but¦23668 she¦23670 drowned their enemies¦23669,
+\q2 and¦23672 she threw them up from¦23673 the bottom of the deep.
 \q1
-\v 20 Therefore the righteous plundered the ungodly,
-\q2 and they sang praise to your holy name, Oh master,
-\q2 and extolled with one accord your hand that fought for them,
+\v 20 Therefore the righteous plundered the ungodly¦23682,
+\q2 and¦23683 they sang praise to your holy¦23689 name¦23687, Oh master,
+\q2 and¦23692 extolled with one accord your hand¦23695 that fought for them,
 \q1
-\v 21 because wisdom opened the mouth of the mute,
-\q1 and made the tongues of babes to speak clearly.
+\v 21 because¦23698 wisdom¦23700 opened¦23701 the mouth¦23702 of the mute,
+\q1 and¦23704 made the tongues¦23705 of babes to¦23707 speak clearly.
 \b
 \c 11
 \q1
-\v 1 Wisdom prospered their works in the hand of a holy prophet.
+\v 1 Wisdom prospered their works¦23711 in¦23713 the hand¦23714 of a holy¦23716 prophet¦23715.
 \b
 \q1
-\v 2 They travelled through a desert without inhabitant,
-\q2 and they pitched their tents in trackless regions.
+\v 2 They travelled through a desert¦23718 without inhabitant,
+\q2 and¦23720 they pitched their tents¦23724 in¦23721 trackless regions.
 \q1
-\v 3 They withstood enemies and repelled foes.
+\v 3 They withstood enemies¦23729 and¦23727 repelled foes.
+\s1 Water for God's people and punishment for their enemies
 \q1
-\v 4 They thirsted, and they called upon you,
-\q2 and water was given to them out of the\f + \fr 11:4 \ft See Deuteronomy 8:15; Psalms 114:8.\f* flinty rock,
-\q2 and healing of their thirst out of the hard stone.\x + \xo 11:4: \xt Exo 17:1-6; Num 20:7-11.\x*
+\v 4 They thirsted, and¦23731 they called on you¦23733,
+\q2 and¦23734 water¦23740 was given¦23735 to¦23735 them out¦23737 of the\f + \fr 11:4 \ft See Deuteronomy 8:15; Psalms 114:8.\f* flinty rock¦23738,
+\q2 and¦23741 healing¦23742 of their thirst out¦23744 of the hard stone¦23745.\x + \xo 11:4: \xt Exo 17:1-6; Num 20:7-11.\x*
 \q1
 \v 5 Because by what things their foes were punished,
 \q2 by these they in their need were benefitted.
 \q1
-\v 6 When enemies were troubled with clotted blood
-\q2 instead of a river's ever-flowing fountain,\x + \xo 11:6: \xt Exo 7:19-21.\x*
+\v 6 When enemies were troubled with clotted blood¦23764
+\q2 instead of a river's¦23763 ever-flowing fountain,\x + \xo 11:6: \xt Exo 7:19-21.\x*
 \q1
-\v 7 to rebuke the decree for the slaying of babies,\x + \xo 11:7: \xt Exo 1:22.\x*
-\q2 you gave them abundant water beyond all hope,
+\v 7 to rebuke¦23768 the decree for the slaying of babies,\x + \xo 11:7: \xt Exo 1:22.\x*
+\q2 you gave¦23771 them abundant water¦23774 beyond all hope,
 \q1
-\v 8 having shown by the thirst which they had suffered
-\q2 how you punished the adversaries.
+\v 8 having shown by the¦23778 thirst which they'd suffered
+\q2 how¦23781 you punished the¦23782 adversaries.
 \q1
-\v 9 Because when they were tried, although chastened in mercy,
-\q2 they learnt how the ungodly were tormented, being judged with wrath.
+\v 9 Because when¦23785 they were tried, although¦23788 chastened in¦23789 mercy¦23790,
+\q2 they learnt how¦23793 the ungodly¦23797 were tormented, being judged¦23796 with anger¦23795.
 \q1
-\v 10 Because you tested these as a father admonishing them;
-\q2 but you searched out those as a stern king condemning them.
+\v 10 Because¦23801 you tested these as a father¦23803 admonishing them;
+\q2 but¦23807 you searched out those as a stern king¦23810 condemning them.
 \q1
-\v 11 Yes and whether they were far off or near,
+\v 11 Yes and¦23813 whether they were far off or near,
 \q2 they were equally distressed;
 \q1
-\v 12 for a double grief seized them,
-\q2 and a groaning at the memory of things past.
+\v 12 for¦23821 a double grief¦23824 seized them,
+\q2 and¦23825 a groaning¦23826 at the¦23828 memory of things past.
 \q1
-\v 13 Because when they heard that through their own punishments the others benefitted,
+\v 13 Because when¦23830 they heard¦23832 that through¦23833 their own¦23835 punishments the others benefitted,
 \q2 they recognised the master.
 \q1
-\v 14 Because him who long before was thrown out and exposed they stopped mocking.
-\q2 In the end of what happened, they marvelled,
-\q2 having thirsted in another manner than the righteous.
+\v 14 Because him who¦23842 long before was thrown out and exposed they stopped mocking.
+\q2 In¦23844 the end of¦23846 what happened, they marvelled¦23854,
+\q2 having thirsted in another manner than the¦23852 righteous.
+\s1 God's power and patience
 \b
 \q1
-\v 15 But in return for the senseless imaginings of their unrighteousness,
-\q2 wherein they were led astray to worship irrational reptiles and wretched vermin,
-\q2 you sent upon them a multitude of irrational creatures to punish them,
+\v 15 But in return for¦23859 the senseless imaginings of their unrighteousness¦23863,
+\q2 wherein they were led astray to worship irrational reptiles¦23870 and¦23871 wretched vermin,
+\q2 you sent on them a multitude¦23876 of irrational creatures to punish them,
 \q2
-\v 16 that they might learn that by what things a man sins, by these he is punished.
+\v 16 that¦23881 they might learn¦23882 that¦23883 by what things a man¦23886 sins¦23887, by these he's¦23889 punished.
 \q1
-\v 17 Because your all-powerful hand
-\q2 that created the world out of formless matter
-\q2 didn't lack means to send upon them a multitude of bears, fierce lions,
+\v 17 Because¦23892 your all-powerful¦23895 hand¦23897
+\q2 that created the¦23899 world¦23900 out¦23901 of formless matter
+\q2 didn't lack means to send on them a multitude¦23906 of bears, fierce lions,
 \q2
-\v 18 or newly-created and unknown wild animals, full of rage,
+\v 18 or¦23911 newly-created and unknown wild animals, full¦23914 of rage,
 \q2 either breathing out a blast of fiery breath,
-\q2 or belching out smoke,
-\q2 or flashing dreadful sparks from their eyes;
+\q2 or¦23921 belching out smoke¦23924,
+\q2 or¦23925 flashing dreadful sparks from¦23927 their eyes¦23928;
 \q1
-\v 19 which had power not only to consume them by their violence,
-\q2 but to destroy them even by the terror of their sight.
+\v 19 which¦23931 had power not only¦23933 to consume them by their violence,
+\q2 but¦23939 to destroy them even by the¦23941 terror of their sight.
 \q1
-\v 20 Yes and without these they might have fallen by a single breath,
-\q2 being pursued by Justice, and scattered abroad by the breath of your power;
-\q2 but you arranged all things by measure, number, and weight.
+\v 20 Yes and¦23945 without¦23946 these they might have fallen by a single¦23949 breath¦23950,
+\q2 being pursued by¦23953 Justice, and¦23957 scattered abroad by¦23959 the¦23954 breath¦23960 of your power¦23961;
+\q2 but you¦23962 arranged all¦23964 things by measure¦23965, number¦23967, and¦23968 weight.
 \b
 \q1
-\v 21 Because to be greatly strong is yours at all times.
-\q2 Who could withstand the might of your arm?
+\v 21 Because¦23972 to be greatly¦23973 strong¦23974 is yours at all times.
+\q2 Who could withstand the might of your arm¦23980?
 \q1
-\v 22 Because the whole world before you is as a grain in a balance,
-\q2 and as a drop of dew that comes down upon the earth in the morning.
+\v 22 Because the¦23990 whole¦23989 world¦23991 before you¦23993 is as a grain in a balance,
+\q2 and¦23994 as a drop¦23996 of dew that¦23984 comes down on¦24000 the earth¦24001 in the morning.
 \q1
-\v 23 But you have mercy on all men, because you have power to do all things,
-\q2 and you overlook the sins of men to the end that they may repent.
+\v 23 But¦24003 you have mercy on all¦24004 men, because you have power to do all¦24006 things,
+\q2 and¦24008 you overlook the sins¦24010 of men to the end that¦24005 they may repent¦24013.
 \q1
-\v 24 Because you love all things that are,
-\q2 and abhor none of the things which you made;
-\q2 Because you never would have formed anything if you hated it.
+\v 24 Because you love¦24014 all¦24018 things that are¦24017,
+\q2 and¦24019 abhor none¦24020 of the things which¦24022 you made¦24023;
+\q2 Because you never would have formed anything if¦24026 you hated¦24027 it.
 \q1
-\v 25 How would anything have endured unless you had willed it?
-\q2 Or that which was not called by you, how would it have been preserved?
+\v 25 How¦24030 would anything have endured unless you'd¦24037 willed it?
+\q2 Or¦24039 that¦24040 which wasn't¦24041 called¦24042 by¦24043 you¦24044, how would it have been preserved?
 \q1
-\v 26 But you spare all things, because they are yours,
-\q2 Oh Sovereign master, you who love the living.
+\v 26 But¦24047 you spare all¦24048 things, because¦24049 they're¦24051 yours,
+\q2 Oh Sovereign master¦24052, you who love the living.
 \c 12
 \q1
-\v 1 Because your incorruptible spirit is in all things.
+\v 1 Because¦24055 your incorruptible¦24056 spirit¦24058 is¦24059 in¦24060 all¦24061 things.
 \q1
 \v 2 Therefore you convict little by little those who fall from the right way,
-\q2 and, putting them in remembrance by the things wherein they sin, you admonish them,
-\q2 that escaping from their wickedness they may believe in you, Oh master.
+\q2 and¦24068, putting them in¦24069 remembrance by the things wherein they sin¦24071, you admonish them,
+\q2 that¦24074 escaping from their wickedness¦24077 they may believe in¦24078 you¦24080, Oh master.
+\s1 God gives the wicked time to change
 \b
 \q1
-\v 3 Because truly the old inhabitants of your holy land,
+\v 3 Because¦24083 truly the¦24084 old¦24085 inhabitants of your holy¦24088 land¦24090,
 \q2
-\v 4 hating them because they practised detestable works of enchantments and unholy rites—
+\v 4 hating them because they practised detestable works¦24096 of enchantments and¦24098 unholy rites—
 \q2
 \v 5 merciless slaughters of children
 \q2 and sacrificial banquets of men's flesh and of blood—
@@ -911,715 +941,730 @@
 \q2 and murderers of their own helpless babes,
 \q2 it was your counsel to destroy by the hands of our fathers;
 \q2
-\v 7 that the land which in your sight is most precious of all
-\q2 might receive a worthy colony of God's servants.\f + \fr 12:7 \ft Or, \fqa children\f*
+\v 7 that¦24127 the¦24133 land¦24138 which in your¦24135 sight is most precious of all¦24136
+\q2 might receive¦24130 a worthy colony of God's¦24131 servants.\f + \fr 12:7 \ft Or, \fqa children\f*
 \q1
 \v 8 Nevertheless you even spared these as men,
-\q2 and you sent hornets\f + \fr 12:8 \ft Or, \fqa wasps\f* as forerunners of your army,
+\q2 and¦24140 you sent¦24145 hornets\f + \fr 12:8 \ft Or, \fqa wasps\f* as forerunners of¦24148 your army,
 \q2 to cause them to perish little by little.
 \q1
-\v 9 Not that you were unable to subdue the ungodly under the hand of the righteous in battle,
-\q2 or by terrible wild animals or by a stern word to make away with them at once,
+\v 9 Not that you were unable¦24157 to subdue the ungodly¦24160 under the hand¦24163 of the righteous in battle,
+\q2 or¦24164 by terrible wild animals or¦24167 by a stern word¦24168 to make away with them at once,
 \q1
-\v 10 but judging them little by little you gave them a chance to repent,
-\q2 not being ignorant that their nature by birth was evil,
-\q2 their wickedness inborn,
-\q2 and that their manner of thought would never be changed.
+\v 10 but judging¦24173 them little by little you gave them a chance to repent¦24178,
+\q2 not being ignorant¦24180 that¦24181 their nature by birth was evil¦24182,
+\q2 their wickedness¦24189 inborn,
+\q2 and¦24191 that¦24192 their manner of thought¦24197 would never be changed.
 \q1
-\v 11 Because they were a cursed seed from the beginning.
-\q2 It wasn't through fear of any that you left them unpunished for their sins.
+\v 11 Because they were¦24204 a cursed seed¦24202 from¦24206 the beginning¦24207.
+\q2 It wasn't through fear of any that¦24212 you left them unpunished for their sins.
 \b
 \q1
-\v 12 Because who will say, “What have you done?”
-\q2 Or “Who will withstand your judgement?”
-\q1 Who will accuse you for the perishing of nations which you caused?
-\q2 Or who will come and stand before you as an avenger for unrighteous men?
+\v 12 Because¦24217 who'll say¦24218, “What have you done¦24220?”
+\q2 Or¦24221 “Who'll¦24224 withstand your judgement¦24225?”
+\q1 Who'll accuse¦24229 you¦24230 for the perishing of nations¦24232 which¦24234 you¦24235 caused?
+\q2 Or¦24237 who'll come¦24242 and stand before you as an avenger¦24243 for unrighteous men?
 \q1
-\v 13 Because there isn't any God beside you that cares for all,
-\q2 that you might show that you didn't judge unrighteously.
+\v 13 Because there isn't any God¦24249 beside you¦24252 that¦24253 cares for all¦24256,
+\q2 that¦24257 you might show that¦24259 you didn't judge¦24262 unrighteously.
 \q1
-\v 14 No king or prince will be able to confront you
-\q2 about those whom you have punished.
+\v 14 No king¦24264 or¦24265 prince will be¦24268 able¦24268 to confront you¦24269
+\q2 about¦24270 those whom you've punished.
 \q1
-\v 15 But being righteous, you rule all things righteously,
-\q2 deeming it a thing alien from your power
+\v 15 But¦24274 being righteous¦24276, you rule all¦24278 things righteously,
+\q2 deeming it¦24280 a thing alien from your¦24289 power¦24290
 \q2 to condemn one who doesn't deserve to be punished.
 \q1
-\v 16 Because your strength is the source of righteousness,
-\q2 and your sovereignty over all makes you to forbear all.
+\v 16 Because¦24292 your strength¦24293 is the source of righteousness¦24295,
+\q2 and¦24297 your sovereignty over all¦24299 makes¦24304 you¦24300 to forbear all¦24302.
 \q1
-\v 17 Because when men don't believe that you are perfect in power, you show your strength,
-\q2 and in dealing with those who think this, you confuse their boldness.
+\v 17 Because¦24306 when men don't believe that you're perfect in power¦24310, you show your strength¦24305,
+\q2 and¦24312 in¦24313 dealing with those who¦24314 think this¦24316, you confuse their boldness¦24317.
 \q1
-\v 18 But you, being sovereign in strength, judge in gentleness,
-\q2 and with great forbearance you govern us;
-\q2 for the power is yours whenever you desire it.
+\v 18 But you, being sovereign in strength¦24322, judge¦24325 in¦24323 gentleness¦24324,
+\q2 and¦24326 with¦24327 great forbearance you govern us;
+\q2 for¦24333 the power is yours whenever¦24335 you desire¦24336 it.
+\s1 Learning kindness from God's mercy
 \b
 \q1
-\v 19 But you taught your people by such works as these,
-\q2 how the righteous must be kind.
-\q1 You made your sons to have good hope,
-\q2 because you give repentance when men have sinned.
+\v 19 But¦24340 you¦24341 taught¦24339 your people¦24343 by such¦24346 works¦24347 as¦24346 these,
+\q2 how the¦24350 righteous must be¦24352 kind.
+\q1 You made¦24356 your sons¦24358 to have good hope,
+\q2 because¦24344 you¦24359 give repentance¦24364 when men have sinned.
 \q1
-\v 20 Because if on those who were enemies of your servants\f + \fr 12:20 \ft Or, \fqa children\f* and deserving of death,
-\q2 you took vengeance with so great deliberation and indulgence,
-\q2 giving them times and opportunities when they might escape from their wickedness,
+\v 20 Because¦24383 if¦24365 on those who were enemies¦24367 of your servants\f + \fr 12:20 \ft Or, \fqa children\f* and¦24370 deserving of death¦24372,
+\q2 you took vengeance with¦24373 so great deliberation and¦24377 indulgence,
+\q2 giving¦24379 them times¦24380 and¦24381 opportunities when they might escape from their wickedness¦24387,
 \q1
-\v 21 with how great care you judged your sons,
-\q2 to whose fathers you gave oaths and covenants of good promises!
+\v 21 with¦24388 how great care you judged¦24391 your sons¦24393,
+\q2 to whose fathers¦24397 you¦24394 gave¦24401 oaths¦24398 and¦24399 covenants of good promises!
 \q1
-\v 22 Therefore while you chasten us, you scourge our enemies ten thousand times more,
-\q2 to the intent that we may ponder your goodness when we judge,
-\q2 and when we are judged may look for mercy.
+\v 22 Therefore¦24405 while you chasten us, you scourge our enemies¦24408 ten thousand times more,
+\q2 to¦24413 the¦24415 intent that we may ponder your goodness when we judge,
+\q2 and¦24420 when we're judged may look for mercy¦24422.
 \b
 \q1
-\v 23 Therefore also the unrighteous that lived in a life of folly,
-\q2 you tormented through their own abominations.
+\v 23 Therefore also¦24424 the¦24425 unrighteous that lived in¦24426 a life¦24428 of folly,
+\q2 you tormented through¦24431 their own¦24433 abominations¦24435.
 \q1
-\v 24 Because truly they went astray very far in the ways of error,
-\q2 Taking as gods those animals\f + \fr 12:24 \ft Gr. \fqa living creatures: \ft and so elsewhere in this book.\f* which even amongst their enemies were held in dishonour,
-\q2 deceived like foolish babes.
+\v 24 Because¦24437 truly they went astray¦24442 very far in the¦24438 ways of error¦24439,
+\q2 Taking as gods¦24443 those animals\f + \fr 12:24 \ft Grk. \fqa living creatures: \ft and so elsewhere in this book.\f* which even among¦24447 their enemies¦24450 were held in dishonour,
+\q2 deceived like foolish¦24454 babes.
 \q1
-\v 25 Therefore, as to unreasoning children, you sent your judgement to mock them.
+\v 25 Therefore, as to unreasoning children¦24459, you sent your judgement¦24462 to mock them.
 \q1
-\v 26 But those who would not be admonished by mild correction
-\q2 will experience the deserved judgement of God.
+\v 26 But¦24467 those who wouldn't¦24470 be admonished by mild correction
+\q2 will experience the deserved judgement¦24474 of God¦24473.
 \q1
-\v 27 Because through the sufferings they were indignant of,
-\q2 being punished in these creatures which they supposed to be gods,
-\q2 they saw and recognised as the true God him whom they previously refused to know.
-\q2 Therefore also the result of extreme condemnation came upon them.
+\v 27 Because¦24478 through the sufferings¦24480 they were indignant of,
+\q2 being punished in¦24487 these creatures which¦24491 they supposed to¦24494 be gods,
+\q2 they saw and recognised as the true¦24497 God¦24495 him whom they previously refused to¦24496 know¦24496.
+\q2 Therefore also the result of extreme condemnation came¦24496 on¦24504 them.
 \b
 \c 13
+\s1 Recognising the Creator through creation
 \q1
-\v 1 Because truly all men who had no perception of God were foolish by nature,
-\q2 and didn't gain power to know him who exists from the good things that are seen.
-\q2 They didn't recognise the architect from his works.
+\v 1 Because¦24509 truly all¦24510 men who had no¦24522 perception of God¦24515 were foolish by nature¦24512,
+\q2 and¦24517 didn't gain power to¦24524 know¦24531 him who exists from the good things that are¦24526 seen.
+\q2 They didn't recognise the¦24528 architect from his works¦24529.
 \q1
-\v 2 But they thought that either fire, or wind, or swift air,
-\q2 or circling stars, or raging water, or luminaries of heaven
-\q2 were gods that rule the world.
+\v 2 But¦24534 they thought¦24554 that either fire¦24536, or¦24537 wind, or¦24539 swift air¦24541,
+\q2 or¦24542 circling stars¦24544, or¦24545 raging water¦24547, or¦24548 luminaries of heaven¦24550
+\q2 were gods¦24553 that rule the world¦24552.
 \q1
-\v 3 If it was through delight in their beauty that they took them to be gods,
-\q2 let them know how much better their Sovereign master is than these,
-\q2 for the first author of beauty created them.
+\v 3 If¦24556 it was through delight in their beauty¦24559 that they took them to be gods¦24561,
+\q2 let them know how¦24564 much¦24564 better¦24569 their Sovereign master¦24567 is¦24568 than these,
+\q2 for¦24571 the first author of¦24572 beauty created¦24575 them.
 \q1
-\v 4 But if it was through astonishment at their power and influence,
-\q2 then let them understand from them how much more powerful he who formed them is.
+\v 4 But if¦24577 it was through astonishment at their power¦24579 and¦24580 influence,
+\q2 then let them understand from¦24584 them how¦24586 much¦24586 more powerful he who¦24587 formed them is¦24591.
 \q1
-\v 5 Because from the greatness of the beauty of created things,
-\q2 mankind forms the corresponding perception of their Maker.\f + \fr 13:5 \ft Gr. \fqa is the first maker of them seen.\f*
+\v 5 Because from¦24592 the greatness of the beauty of created¦24599 things,
+\q2 mankind forms the corresponding perception of their Maker.\f + \fr 13:5 \ft Grk. \fqa is the first maker of them seen.\f*
 \q1
-\v 6 But yet for these men there is but small blame,
-\q2 for they too perhaps go astray
-\q2 while they are seeking God and desiring to find him.
+\v 6 But¦24602 yet for these men there's¦24606 but¦24609 small blame,
+\q2 for¦24610 they too perhaps¦24612 go astray¦24613
+\q2 while they're seeking¦24615 God¦24614 and¦24616 desiring¦24617 to¦24618 find¦24618 him.
 \q1
-\v 7 Because they diligently search while living amongst his works,
-\q2 and they trust their sight that the things that they look at are beautiful.
+\v 7 Because¦24620 they diligently search while living among¦24619 his works¦24622,
+\q2 and¦24626 they trust their sight that the things that they look¦24633 at are beautiful.
 \q1
-\v 8 But again even they are not to be excused.
+\v 8 But again¦24634 even they aren't¦24636 to be excused.
 \q1
-\v 9 Because if they had power to know so much,
-\q2 that they should be able to explore the world,
-\q2 how is it that they didn't find the Sovereign master sooner?
+\v 9 Because if¦24639 they had power to know so¦24641 much,
+\q2 that¦24644 they should be¦24645 able¦24645 to explore the world,
+\q2 how¦24652 is it that they didn't find¦24655 the Sovereign master¦24651 sooner?
+\s1 The foolishness of worshipping idols
 \b
 \q1
-\v 10 But they were miserable, and their hopes were in dead things,
-\q2 who called them gods which are works of men's hands,
-\q2 gold and silver, skilfully made, and likenesses of animals,
-\q2 or a useless stone, the work of an ancient hand.
+\v 10 But¦24657 they were miserable, and¦24658 their hopes were in¦24659 dead¦24660 things,
+\q2 who¦24661 called them gods¦24666 which¦24664 are works¦24667 of men's hands¦24668,
+\q2 gold¦24670 and¦24671 silver¦24672, skilfully made, and¦24675 likenesses of animals,
+\q2 or¦24678 a useless¦24680 stone¦24679, the work of an ancient hand.
 \q1
-\v 11 Yes and some\f + \fr 13:11 \ft Gr. \fqa carpenter who is a woodcutter.\f* woodcutter might saw down a tree that is easily moved,
-\q2 skilfully strip away all its bark,
-\q2 and fashion it in attractive form, make a useful vessel to serve his life's needs.
+\v 11 Yes and some\f + \fr 13:11 \ft Grk. \fqa carpenter who is a woodcutter.\f* woodcutter might saw down a¦24691 tree that's¦24696 easily moved,
+\q2 skilfully strip away all¦24695 its bark,
+\q2 and fashion it¦24698 in attractive form, make¦24702 a useful vessel¦24704 to serve his life's¦24707 needs.
 \q1
-\v 12 Burning the scraps from his handiwork to cook his food,
+\v 12 Burning the scraps from his handiwork to cook his food¦24715,
 \q2 he eats his fill.
 \q1
-\v 13 Taking a discarded scrap which served no purpose,
-\q2 a crooked piece of wood and full of knots,
+\v 13 Taking¦24731 a discarded scrap which served no purpose,
+\q2 a crooked piece of wood¦24726 and full of knots,
 \q2 he carves it with the diligence of his idleness,
 \q2 and shapes it by the skill of his idleness.
-\q1 He shapes it in the image of a man,
+\q1 He shapes it in¦24733 the image¦24744 of a¦24745 man¦24745,
 \q2
-\v 14 or makes it like some worthless animal,
+\v 14 or¦24746 makes it like some worthless animal,
 \q2 smearing it with something red, painting it red,
-\q2 and smearing over every stain in it.
+\q2 and¦24759 smearing over every¦24760 stain in¦24763 it¦24764.
 \q1
-\v 15 Having made a worthy chamber for it,
-\q2 he sets it in a wall, securing it with iron.
+\v 15 Having made¦24767 a worthy¦24770 chamber for it,
+\q2 he sets it in¦24772 a wall, securing it¦24775 with iron.
 \q1
-\v 16 He plans for it that it may not fall down,
-\q2 knowing that it is unable to help itself
-\q2 (for truly it is an image, and needs help).
+\v 16 He plans for it that¦24778 it may not¦24781 fall down,
+\q2 knowing that it's unable to¦24789 help¦24789 itself
+\q2 (for¦24791 truly it's¦24792 an image¦24793, and¦24794 needs¦24795 help).
 \q1
-\v 17 When he makes his prayer concerning goods and his marriage and children,
-\q2 he is not ashamed to speak to that which has no life.
+\v 17 When he makes his prayer about goods and his marriage and children,
+\q2 he isn't ashamed to speak to that which has no life.
 \q1
-\v 18 Yes, for health, he calls upon that which is weak.
+\v 18 Yes, for health, he calls on that which is weak.
 \q2 Because life, he implores that which is dead.
 \q2 Because aid, he supplicates that which has no experience.
 \q2 Because a good journey, he asks that which can't so much as move a step.
 \q1
-\v 19 And for profit in business and good success of his hands,
-\q2 he asks ability from that which has hands with no ability.
+\v 19 And for profit in business and good success of his hands¦24845,
+\q2 he asks ability from that which has hands¦24850 with no ability.
 \c 14
 \q1
-\v 1 Again, one preparing to sail, and about to journey over raging waves,
-\q2 calls upon a piece of wood more fragile than the vessel that carries him.
+\v 1 Again¦24855, one preparing to sail, and¦24857 about to¦24859 journey over raging waves¦24861,
+\q2 calls on a piece of¦24862 wood¦24867 more fragile than the vessel that carries him.
 \q1
-\v 2 Because the hunger for profit planned it,
-\q2 and wisdom was the craftsman who built it.
+\v 2 Because the hunger for¦24871 profit planned it,
+\q2 and¦24876 wisdom¦24877 was the craftsman¦24875 who built it.
 \q1
-\v 3 Your providence, Oh Father, guides it along,
-\q2 because even in the sea you gave a way,
-\q2 and in the waves a sure path,
+\v 3 Your¦24881 providence, Oh Father¦24882, guides it along,
+\q2 because¦24885 even in¦24888 the sea¦24889 you gave¦24886 a way,
+\q2 and¦24891 in¦24892 the waves a sure path¦24890,
 \q1
-\v 4 showing that you can save out of every danger,
-\q2 that even a man without skill may put to sea.
+\v 4 showing that¦24897 you can save¦24901 out¦24899 of every¦24900 danger,
+\q2 that¦24902 even¦24903 a man¦24906 without¦24904 skill¦24905 may put to sea.
 \q1
-\v 5 It is your will that the works of your wisdom should not be ineffective.
-\q2 Therefore men also entrust their lives to a little piece of wood,
-\q2 and passing through the surge on a raft come safely to land.
+\v 5 It's¦24919 your will¦24908 that¦24913 the¦24914 works¦24917 of¦24918 your wisdom¦24915 shouldn't¦24910 be¦24912 ineffective.
+\q2 Therefore men also¦24920 entrust their lives to¦24923 a¦24924 little piece of wood¦24922,
+\q2 and¦24926 passing¦24927 through¦24927 the surge on a¦24929 raft come safely to¦24930 land.
 \q1
-\v 6 Because\f + \fr 14:6 \ft The Greek text here may be corrupt.\f* in the old time also, when proud giants were perishing,
-\q2 the hope of the world, taking refuge on a raft,
-\q2 your hand guided the seed of generations of the race of men.
+\v 6 Because\f + \fr 14:6 \ft The Greek text here may be corrupt.\f* in the old time also¦24931, when proud giants were perishing,
+\q2 the¦24937 hope¦24938 of¦24939 the¦24939 world¦24940, taking refuge on¦24941 a raft,
+\q2 your¦24949 hand¦24951 guided the seed¦24946 of generations of the¦24948 race of men.
 \q1
-\v 7 Because blessed is wood through which comes righteousness;
+\v 7 Because¦24953 blessed is wood¦24954 through¦24955 which¦24956 comes righteousness¦24958;
 \q2
-\v 8 but the idol made with hands is accursed, itself and he that made it;
-\q2 because his was the working, and the corruptible thing was called a god.
+\v 8 but the¦24959 idol made with hands¦24970 is accursed, itself and¦24961 he¦24963 that¦24968 made¦24966 it¦24967;
+\q2 because his was the¦24969 working¦24971, and the corruptible thing was called¦24976 a god¦24975.
 \q1
-\v 9 Because both the ungodly and his ungodliness are alike hateful to God;
+\v 9 Because¦24979 both the¦24983 ungodly¦24984 and¦24985 his ungodliness are alike hateful to God¦24981;
 \q2
-\v 10 for truly the deed will be punished together with him who committed it.
+\v 10 for¦24990 truly the¦24991 deed will be punished together with¦24993 him who¦24994 committed it.
 \q2
-\v 11 Therefore also there will be a visitation amongst the idols of the nation,
-\q2 because, though formed of things which God created, they were made an abomination,
-\q2 stumbling blocks to the souls of men,
+\v 11 Therefore also¦24999 there'll be a visitation among¦25000 the idols of the nation¦25002,
+\q2 because¦24997, though formed of¦24997 things which¦25005 God¦25008 created, they were made an abomination¦25010,
+\q2 stumbling¦25014 blocks¦25014 to men's souls¦25015,
 \q2 and a snare to the feet of the foolish.
+\s1 The origin and harm of idol worship
 \b
 \q1
-\v 12 Because the devising of idols was the beginning of fornication,
-\q2 and the invention of them the corruption of life.
+\v 12 Because¦25022 the devising of idols¦25025 was the beginning¦25021 of fornication,
+\q2 and¦25027 the invention of them the corruption¦25029 of life¦25030.
 \q1
-\v 13 Because they didn't exist from the beginning, and they won't exist forever.
+\v 13 Because¦25032 they didn't exist from¦25034 the beginning¦25035, and they won't exist forever.
 \q1
-\v 14 Because by the boastfulness of men they entered into the world,
-\q2 and therefore a speedy end was planned for them.
+\v 14 Because¦25048 by the boastfulness of men they entered¦25044 into the world¦25046,
+\q2 and¦25047 therefore a speedy end was planned for them.
 \b
 \q1
-\v 15 Because a father worn with untimely grief,
-\q2 making an image of the child quickly taken away,
-\q2 now honoured him as a god which was then a dead human being,
-\q2 and delivered to those that were under him mysteries and solemn rites.
+\v 15 Because¦25055 a father¦25058 worn with untimely grief,
+\q2 making¦25064 an image¦25063 of¦25059 the¦25059 child¦25062 quickly¦25060 taken away,
+\q2 now¦25069 honoured him as a god¦25071 which¦25070 was then¦25066 a dead¦25067 human¦25068 being,
+\q2 and¦25073 delivered¦25074 to¦25074 those that¦25075 were under him mysteries¦25077 and¦25078 solemn rites.
 \q1
-\v 16 Afterward the ungodly custom, in process of time grown strong, was kept as a law,
+\v 16 Afterward the¦25084 ungodly custom¦25086, in process of time¦25082 grown strong, was kept as a law¦25088,
 \q2 and the engraved images received worship by the commandments of princes.
 \q1
-\v 17 And when men could not honour them in presence because they lived far off,
-\q2 imagining the likeness from afar,
-\q2 they made a visible image of the king whom they honoured,
-\q2 that by their zeal they might flatter the absent as if present.
+\v 17 And¦25090 when men couldn't¦25100 honour them in presence because¦25103 they lived¦25106 far off¦25108,
+\q2 imagining the¦25107 likeness from afar¦25108,
+\q2 they made¦25116 a visible image¦25112 of¦25113 the¦25113 king¦25115 whom¦25118 they honoured,
+\q2 that¦25117 by their zeal they might flatter the¦25124 absent as if present.
 \b
 \q1
-\v 18 But worship was raised to a yet higher pitch, even by those who didn't know him,
-\q2 urged forward by the ambition of the architect;
+\v 18 But¦25128 worship was raised to a yet higher pitch, even by those who¦25131 didn't know him,
+\q2 urged forward by the¦25133 ambition of¦25134 the¦25134 architect;
 \q1
-\v 19 for he, wishing perhaps to please his ruler,
-\q2 used his art to force the likeness towards a greater beauty.
+\v 19 for¦25140 he, wishing perhaps¦25141 to¦25145 please¦25145 his ruler,
+\q2 used his art to force the¦25149 likeness¦25150 towards¦25151 a greater beauty.
 \q1
-\v 20 So the multitude, allured by reason of the grace of his handiwork,
-\q2 now consider an object of devotion him that a little before was honoured as a man.
+\v 20 So¦25155 the¦25154 multitude¦25156, allured because¦25158 of¦25158 the grace of his handiwork,
+\q2 now¦25168 consider an object¦25169 of¦25169 devotion him that a little¦25165 before¦25164 was honoured as a¦25167 man¦25167.
 \q1
-\v 21 And this became an ambush,
-\q2 because men, in bondage either to calamity or to tyranny,
-\q2 invested stones and stocks with the Name that shouldn't be shared.
+\v 21 And¦25171 this¦25172 became an ambush,
+\q2 because men, in bondage either to¦25173 calamity or to tyranny,
+\q2 invested stones¦25188 and stocks with the¦25185 Name¦25187 that¦25178 shouldn't be shared.
 \b
 \q1
-\v 22 Afterward it was not enough for them to go astray concerning the knowledge of God,
-\q2 but also, while they live in a great war of ignorance, they call a multitude of evils peace.
+\v 22 Afterward it wasn't enough for them to go astray about¦25197 the¦25198 knowledge of¦25199 God¦25200,
+\q2 but¦25202 also¦25203, while they live¦25205 in a great war¦25207 of ignorance¦25206, they call a multitude of evils¦25210 peace¦25211.
 \q1
-\v 23 Because either slaughtering children in solemn rites, or celebrating secret mysteries,
-\q2 or holding frenzied revels of strange customs,
+\v 23 Because¦25214 either slaughtering children in solemn rites, or¦25217 celebrating secret mysteries¦25219,
+\q2 or¦25220 holding frenzied revels of strange customs,
 \q1
-\v 24 no longer do they guard either life or purity of marriage,
-\q2 but one brings upon another either death by treachery, or anguish by adultery.
+\v 24 no longer do they guard¦25233 either life or purity of marriage,
+\q2 but¦25235 one brings on another either death by treachery, or anguish by adultery.
 \q1
-\v 25 And all things confusedly are filled with blood and murder, theft and deceit,
-\q2 corruption, faithlessness, tumult, perjury,
+\v 25 And all¦25243 things confusedly are filled with blood¦25247 and¦25248 murder¦25249, theft¦25250 and¦25251 deceit¦25252,
+\q2 corruption¦25253, faithlessness, tumult, perjury,
 \q1
-\v 26 confusion about what is good, forgetfulness of favours,
+\v 26 confusion about what's good, forgetfulness of favours,
 \q2 ingratitude for benefits,
-\q2 defiling of souls, confusion of sex,
-\q2 disorder in marriage, adultery and wantonness.
+\q2 defiling of souls¦25261, confusion of sex,
+\q2 disorder in marriage, adultery¦25267 and¦25268 wantonness.
 \q2
-\v 27 Because the worship of idols that may not be named\x + \xo 14:27 \xt Exodus 23:13; Psalms 16:4; Hosea 2:17; Wisdom 14:21\x*
-\q2 is a beginning and cause and end of every evil.
+\v 27 Because¦25271 the¦25272 worship of idols¦25274 that may not be named\x + \xo 14:27: \xt Exo 23:13; Psa 16:4; Hos 2:17; Wis 14:21.\x*
+\q2 is a beginning¦25277 and¦25279 cause¦25280 and¦25281 end¦25282 of every evil¦25278.
 \q1
-\v 28 Because their worshippers either make merry to madness, or prophesy lies,
-\q2 or live unrighteously, or lightly commit perjury.
+\v 28 Because¦25285 their worshippers either make merry to¦25292 madness, or¦25288 prophesy lies,
+\q2 or¦25291 live¦25292 unrighteously, or¦25294 lightly commit perjury.
 \q1
-\v 29 Because putting their trust in lifeless idols,
-\q2 when they have sworn a wicked oath, they expect not to suffer harm.
+\v 29 Because¦25298 putting their trust in lifeless idols,
+\q2 when they've sworn a wicked oath, they expect not to suffer harm.
 \q1
-\v 30 But on both counts, the just doom will pursue them,
-\q2 because they had evil thoughts of God by giving heed to idols,
-\q2 and swore unrighteously in deceit through contempt for holiness.
+\v 30 But on both¦25306 counts, the¦25310 just¦25311 doom will pursue them,
+\q2 because¦25312 they had evil thoughts of God¦25316 by giving heed to idols,
+\q2 and¦25319 swore unrighteously in¦25322 deceit¦25323 through contempt for holiness.
 \q1
-\v 31 Because it is not the power of things by which men swear,
-\q2 but it is the just penalty for those who sin
-\q2 that always visits the transgression of the unrighteous.
+\v 31 Because it isn't the power¦25331 of things by which men swear,
+\q2 but¦25332 it's the¦25333 just penalty for those who¦25334 sin¦25335
+\q2 that always¦25338 visits the¦25339 transgression of the¦25340 unrighteous.
 \b
 \c 15
+\s1 Knowing the true God
 \q1
-\v 1 But you, our god, are gracious and true,
-\q2 patient, and in mercy ordering all things.
+\v 1 But you¦25343, our god¦25346, are gracious and¦25349 true¦25350,
+\q2 patient, and¦25352 in¦25353 mercy¦25354 ordering all¦25357 things.
 \q1
-\v 2 Because even if we sin, we are yours, knowing your dominion;
-\q2 but we will not sin, knowing that we have been accounted yours.
+\v 2 Because¦25359 even if¦25360 we sin, we're yours, knowing your¦25362 dominion;
+\q2 but¦25370 we won't sin, knowing that¦25372 we've been accounted yours.
 \q1
-\v 3 Because to be acquainted with you is\f + \fr 15:3 \ft Gr. \fqa entire.\f* perfect righteousness,
-\q2 and to know your dominion is the root of immortality.
+\v 3 Because¦25376 to be acquainted with you¦25378 is\f + \fr 15:3 \ft Grk. \fqa entire.\f* perfect righteousness¦25380,
+\q2 and¦25381 to¦25382 know your dominion is the¦25383 root¦25386 of immortality.
 \q1
-\v 4 Because we weren't led astray by any evil plan of men's,
+\v 4 Because¦25389 we weren't led¦25390 astray¦25390 by any evil plan of men's,
 \q2 nor yet by painters’ fruitless labour,
-\q2 a form stained with varied colours,
+\q2 a¦25392 form stained with varied colours,
 \q1
-\v 5 the sight of which leads fools into\f + \fr 15:5 \ft Some authorities read \fqa reproach.\f* lust.
-\q2 Their desire is for the breathless form of a dead image.
+\v 5 the sight of which¦25403 leads fools into¦25408\f + \fr 15:5 \ft Some authorities read \fqa reproach.\f* lust.
+\q2 Their desire is for the breathless form of a dead image¦25412.
 \q1
-\v 6 Lovers of evil things, and worthy of such hopes,
+\v 6 Lovers of evil¦25415 things, and worthy¦25417 of such¦25419 hopes,
 \q2 are those who make, desire, and worship them.
+\s1 The potter who makes a god
 \b
 \q1
-\v 7 Because a potter, kneading soft earth,
-\q2 laboriously moulds each article for our service.
-\q1 He fashions out of the same clay
-\q2 both the vessels that minister to clean uses, and those of a contrary sort,
-\q2 all in like manner.
-\q1 What shall be the use of each article of either sort,
-\q2 the potter is the judge.
+\v 7 Because a potter¦25432, kneading soft earth¦25434,
+\q2 laboriously moulds each¦25441 article for our service.
+\q1 He fashions out¦25443 of¦25444 the¦25444 same clay¦25446
+\q2 both¦25449 the¦25450 vessels¦25454 that minister to clean uses, and those of a contrary sort,
+\q2 all in the same way.
+\q1 What'll be¦25465 the¦25466 use¦25467 of each article of either sort,
+\q2 the potter is the judge¦25468.
 \q1
-\v 8 Also, labouring to an evil end, he moulds a vain god out of the same clay,
-\q2 he who, having but a little before been made of earth,
-\q2 after a short space goes his way to the earth out of which he was taken,
-\q2 when he is required to render back the\f + \fr 15:8 \ft Or, \fqa life\f* soul which was lent him.
+\v 8 Also¦25471, labouring to an evil end, he moulds a vain god¦25473 out¦25475 of¦25476 the¦25476 same clay¦25479,
+\q2 he who, having but a little¦25487 before¦25481 been made of earth¦25484,
+\q2 after¦25486 a short space goes his way to¦25488 the earth out¦25489 of which¦25490 he was taken,
+\q2 when he's required to render back the¦25493\f + \fr 15:8 \ft Or, \fqa life\f* soul¦25494 which was lent him.
 \q1
-\v 9 However he has anxious care,
-\q2 not because his powers must fail,
-\q2 nor because his span of life is short;
-\q1 But he compares himself with goldsmiths and silversmiths,
-\q2 and he imitates moulders in\f + \fr 15:9 \ft Or, \fqa copper\f* brass,
-\q2 and considers it great that he moulds counterfeit gods.
+\v 9 However he¦25499 has anxious care,
+\q2 not¦25505 because his powers must fail,
+\q2 nor because his span of life¦25508 is short;
+\q1 But¦25510 he compares himself with goldsmiths and¦25514 silversmiths,
+\q2 and¦25517 he imitates moulders in\f + \fr 15:9 \ft Or, \fqa copper\f* brass,
+\q2 and¦25519 considers it great that¦25522 he moulds counterfeit gods.
 \q1
-\v 10 His heart is ashes.
-\q2 His hope is of less value than earth.
-\q2 His life is of less honour than clay,
+\v 10 His heart¦25527 is ashes¦25525.
+\q2 His hope¦25533 is of less value than earth¦25530.
+\q2 His life¦25539 is of less honour than clay,
 \q1
 \v 11 because he was ignorant of him who moulded him,
-\q2 and of him that inspired into him\f + \fr 15:11 \ft Gr. \fqa a soul that moves to activity.\f* an active\f + \fr 15:11 \ft Or, \fqa life\f* soul,
-\q2 and breathed into him a vital spirit.
+\q2 and¦25546 of him that¦25541 inspired into him\f + \fr 15:11 \ft Grk. \fqa a soul that moves to activity.\f* an active\f + \fr 15:11 \ft Or, \fqa life\f* soul¦25550,
+\q2 and¦25552 breathed into him a vital spirit¦25554.
 \q1
-\v 12 But\f + \fr 15:12 \ft Some authorities read \fqa they accounted.\f* he accounted our life to be a game,
-\q2 and our\f + \fr 15:12 \ft Or, \fqa way of life\f* lifetime a festival for profit;
-\q1 for, he says, one must get gain however one can, even if it is by evil.
+\v 12 But¦25556\f + \fr 15:12 \ft Some authorities read \fqa they accounted.\f* he accounted our life to¦25559 be¦25559 a game,
+\q2 and¦25563 our\f + \fr 15:12 \ft Or, \fqa way of life\f* lifetime¦25565 a festival for profit;
+\q1 for, he says¦25570, one must get gain however one can, even¦25573 if¦25573 it's by evil¦25575.
 \q1
-\v 13 Because this man, beyond all others, knows that he sins,
-\q2 out of earthy matter making brittle vessels and engraved images.
+\v 13 Because this¦25577 man, beyond all¦25580 others, knows that¦25582 he sins¦25583,
+\q2 out of earthy matter making brittle vessels¦25587 and¦25588 engraved images.
 \q1
-\v 14 But most foolish and more miserable than a baby,
-\q2 are the enemies of your people, who oppressed them;
+\v 14 But¦25592 most foolish and¦25594 more miserable than a baby¦25598,
+\q2 are your people's¦25602 enemies¦25600, who¦25599 oppressed them;
 \q1
-\v 15 because they even considered all the idols of the nations to be gods,
-\q2 which have neither the use of eyes for seeing,
+\v 15 because¦25606 they even considered all¦25608 the idols¦25609 of the¦25610 nations¦25611 to be gods¦25613,
+\q2 which¦25614 have neither¦25615 the use¦25617 of eyes¦25616 for seeing,
 \q2 nor nostrils for drawing breath,
-\q2 nor ears to hear,
+\q2 nor ears¦25626 to¦25627 hear¦25627,
 \q2 nor fingers for handling,
-\q2 and their feet are helpless for walking.
+\q2 and¦25633 their feet¦25635 are helpless for walking.
 \q1
-\v 16 Because a man made them,
-\q2 and one whose own spirit is borrowed moulded them;
-\q2 for no one has power as a man to mould a god like himself.
+\v 16 Because a¦25640 man¦25640 made¦25642 them,
+\q2 and¦25644 one whose own spirit¦25646 is borrowed moulded them;
+\q2 for¦25651 no one has power as a¦25654 man¦25654 to mould a god¦25657 like¦25653 himself.
 \q1
-\v 17 But, being mortal, he makes a dead thing by the work of lawless hands;
-\q2 for he is better than the objects of his worship,
-\q2 since he indeed had life, but they never did.
+\v 17 But¦25659, being¦25660 mortal¦25658, he makes a dead¦25661 thing by the work¦25662 of lawless¦25664 hands;
+\q2 for¦25666 he's¦25667 better than the¦25668 objects of his worship,
+\q2 since he indeed had life¦25674, but¦25676 they never¦25677 did.
 \b
 \q1
-\v 18 Yes, and they worship the creatures that are most hateful,
-\q2 for, being compared as to lack of sense, these are worse than all others;
+\v 18 Yes, and¦25678 they worship the¦25679 creatures that¦25682 are most hateful,
+\q2 for¦25686, being compared as to lack of sense, these are worse¦25691 than¦25691 all others;
 \q1
-\v 19 Neither, as seen beside other creatures, are they beautiful, so that one should desire them,
-\q2 but they have escaped both the praise of God and his blessing.
+\v 19 Neither, as¦25693 seen¦25698 beside other creatures, are they beautiful, so¦25702 that one should desire them,
+\q2 but¦25703 they've escaped both the¦25704 praise of¦25705 God¦25706 and¦25708 his blessing.
 \c 16
+\s1 Animals bring punishment and rescue
 \q1
-\v 1 Because this cause, they were deservedly punished through creatures like those which they worship,
-\q2 and tormented through a multitude of vermin.
+\v 1 Because¦25712 this¦25713 cause, they were deservedly punished through¦25714 creatures like those which they worship,
+\q2 and¦25718 tormented through¦25719 a multitude¦25720 of vermin.
 \q1
-\v 2 Instead of this punishment, you, giving benefits to your people,
-\q2 prepared quails for food,
-\q1 a delicacy to satisfy the desire of their appetite,
+\v 2 Instead of this¦25727 punishment, you, giving benefits to your people¦25728,
+\q2 prepared¦25736 quails for food¦25735,
+\q1 a delicacy to satisfy the desire¦25731 of their appetite,
 \q1
-\v 3 to the end that your enemies, desiring food,
-\q2 might for the hideousness of the creatures sent amongst them,
+\v 3 to¦25738 the end that¦25739 your enemies, desiring food¦25742,
+\q2 might for¦25743 the hideousness of the creatures sent among them,
 \q2 loathe even the necessary appetite;
-\q1 but these, your people, having for a short time suffered lack,
+\q1 but¦25754 these, your people, having for a short time suffered lack,
 \q2 might even partake of delicacies.
 \q1
-\v 4 Because it was necessary that inescapable lack should come upon those oppressors,
-\q2 but that to these it should only be showed how their enemies were tormented.
+\v 4 Because it was necessary¦25763 that¦25765 inescapable lack should come on¦25766 those oppressors,
+\q2 but¦25772 that to these it should only¦25773 be showed how¦25775 their enemies¦25777 were tormented.
 \q1
-\v 5 Because even when terrible raging of wild animals came upon your people,
-\q2 and they were perishing by the bites of crooked serpents,
-\q2 your wrath didn't continue to the uttermost;
+\v 5 Because¦25781 even when¦25782 terrible raging of wild¦25786 animals¦25786 came on your people,
+\q2 and¦25789 they were perishing by the bites of crooked serpents,
+\q2 your anger didn't continue to¦25796 the¦25797 uttermost;
 \q1
-\v 6 but for admonition were they troubled for a short time,
-\q2 having a token of salvation
-\q2 to put them in remembrance of the commandment of your law;
+\v 6 but for admonition¦25801 were they troubled¦25805 for a¦25806 short time,
+\q2 having¦25807 a token of salvation¦25808
+\q2 to put them in remembrance¦25810 of the commandment¦25811 of your law¦25812;
 \b
 \q1
-\v 7 for he who turned towards it was not saved because of that which was seen,
-\q2 but because of you, the Saviour of all.
+\v 7 for¦25815 he who turned¦25816 towards it wasn't saved because¦25818 of¦25818 that¦25819 which was seen,
+\q2 but¦25822 because¦25823 of¦25823 you¦25824, the¦25825 Saviour¦25827 of all¦25826.
 \q1
-\v 8 Yes, and in this you persuaded our enemies
-\q2 that you are he who delivers out of every evil.
+\v 8 Yes, and¦25828 in¦25829 this you persuaded our enemies¦25834
+\q2 that¦25836 you're¦25838 he who¦25839 delivers¦25840 out¦25841 of every¦25842 evil¦25843.
 \q1
-\v 9 Because the bites of locusts and flies truly killed them.
-\q2 No healing for their life was found,
-\q2 because they were worthy to be punished by such things.
+\v 9 Because the bites of locusts¦25847 and¦25848 flies truly killed¦25850 them.
+\q2 No¦25853 healing¦25855 for their life was found¦25854,
+\q2 because they were worthy¦25860 to¦25861 be¦25861 punished by¦25862 such¦25863 things.
 \q1
-\v 10 But your children weren't overcome by the very fangs of venomous dragons,
-\q2 for your mercy passed by where they were and healed them.
+\v 10 But¦25866 your children¦25867 weren't overcome by the¦25874 very fangs of venomous dragons,
+\q2 for your mercy¦25875 passed¦25878 by where they were and¦25879 healed¦25880 them.
 \q1
-\v 11 Because they were bitten to put them in remembrance of your oracles,
-\q2 and were quickly saved, lest, falling into deep forgetfulness,
-\q2 they should become unable to respond to your kindness.
+\v 11 Because¦25883 they were bitten to put them in remembrance¦25884 of your oracles¦25886,
+\q2 and¦25889 were quickly saved, so that¦25892 they wouldn't fall into deep forgetfulness¦25897
+\q2 and become unable to respond to your¦25901 kindness.
 \q1
-\v 12 Because truly it was neither herb nor poultice that cured them,
-\q2 but your word, Oh master, which heals all people.
+\v 12 Because¦25904 truly it¦25910 was neither herb nor poultice that cured them,
+\q2 but¦25911 your¦25913 word¦25915, Oh master, which heals all¦25917 people.
 \q1
-\v 13 Because you have authority over life and death,
-\q2 and you lead down to the gates of Haidais, and lead up again.
+\v 13 Because you¦25919 have authority¦25924 over life¦25921 and¦25922 death¦25923,
+\q2 and you lead down to¦25925 Haidais' gates¦25929, and¦25931 lead up again.
 \q1
-\v 14 But though a man kills by his wickedness,
-\q2 he can't retrieve the spirit that has departed
-\q2 or release the imprisoned soul.
+\v 14 But though a¦25933 man¦25936 kills¦25935 by his wickedness¦25938,
+\q2 he¦25939 can't¦25945 retrieve the spirit¦25942 that's departed
+\q2 or release the imprisoned soul¦25947.
+\s1 Hail for Mitsrayim and food for God's people
 \b
 \q1
-\v 15 But it is not possible to escape your hand;
+\v 15 But¦25950 it isn't possible to escape your¦25951 hand¦25952;
 \q1
-\v 16 for ungodly men, refusing to know you, were scourged in the strength of your arm,
-\q2 pursued with strange rains and hails and relentless storms,
-\q2 and utterly consumed with fire.
+\v 16 for¦25957 ungodly¦25960 men, refusing to know you, were scourged in¦25961 the strength¦25962 of your arm¦25963,
+\q2 pursued¦25972 with strange rains and¦25968 hails and¦25970 relentless storms,
+\q2 and¦25974 utterly consumed with fire¦25975.
 \q1
-\v 17 Because, what was most marvellous,
-\q2 in the water which quenches all things, the fire burnt hotter;
-\q2 for the world fights for the righteous.
+\v 17 Because¦25978, what was most marvellous,
+\q2 in¦25980 the¦25981 water¦25984 which quenches all¦25982 things, the¦25987 fire¦25988 burnt hotter;
+\q2 for¦25990 the¦25991 world¦25992 fights for the righteous.
 \q1
-\v 18 Because at one time the flame was restrained,
-\q2 that it might not burn up the creatures sent against the ungodly,
-\q2 but that these themselves as they looked might see that they were chased by the judgement of God.
+\v 18 Because at one¦25996 time the flame¦25999 was restrained,
+\q2 that¦26000 it might not¦26001 burn up the¦26003 creatures sent¦26006 against¦26004 the ungodly¦26005,
+\q2 but¦26008 that these themselves as they looked might see¦26010 that¦26012 they were chased by God's¦26013 judgement¦26014.
 \q1
-\v 19 At another time even in the midst of water it burns more intensely than fire,
-\q2 that it may destroy the produce of an unrighteous land.
+\v 19 At another time even surrounded by water¦26020 it burns more intensely than fire¦26023,
+\q2 that¦26026 it may destroy the produce of an unrighteous land¦26028.
 \q1
-\v 20 Instead of these things, you gave your people angels’ food to eat,
-\q2 and you provided ready-to-eat bread for them from heaven without toil,
-\q2 having the virtue of every pleasant flavour,
-\q2 and agreeable to every taste.
+\v 20 Instead of these things, you gave your people angels¦26033’ food¦26034 to eat,
+\q2 and you provided ready-to-eat bread¦26041 for them from¦26043 heaven¦26044 without toil,
+\q2 having the virtue of every¦26047 pleasant flavour,
+\q2 and¦26050 agreeable to¦26051 every¦26052 taste.
 \q1
-\v 21 Because your nature showed your sweetness towards your children,
-\q2 while that bread, serving the desire of the eater,
-\q2 changed itself according to every man's choice.
+\v 21 Because¦26057 your nature showed your sweetness towards your children¦26064,
+\q2 while that¦26066 bread, serving the¦26068 desire¦26070 of the¦26073 eater,
+\q2 changed itself according to¦26075 every man's choice.
 \q1
-\v 22 But snow and ice endured fire, and didn't melt,
-\q2 that people might know that fire was destroying the fruits of the enemies,
-\q2 burning in the hail and flashing in the rains;
+\v 22 But snow¦26077 and ice endured¦26081 fire¦26082, and¦26083 didn't melt,
+\q2 that¦26086 people might know¦26087 that¦26088 fire was destroying the¦26089 fruits¦26092 of the¦26090 enemies¦26091,
+\q2 burning¦26094 in¦26096 the¦26097 hail¦26098 and¦26099 flashing in¦26100 the¦26101 rains;
 \q1
-\v 23 and that this fire, again, in order that righteous people may be nourished,
-\q2 has even forgotten its own power.
+\v 23 and that this¦26104 fire, again¦26105, so¦26106 that¦26107 righteous people may be nourished,
+\q2 has even forgotten its own¦26112 power¦26114.
 \q1
-\v 24 Because the creation, ministering to you, its maker,
-\q2 strains its force against the unrighteous for punishment
-\q2 and in kindness, slackens it on behalf of those who trust in you.
+\v 24 Because the¦26115 creation¦26117, ministering to you¦26118, its maker,
+\q2 strains its force against the¦26119 unrighteous for punishment¦26124
+\q2 and¦26128 in kindness, slackens it on behalf of those who¦26133 trust in you¦26135.
 \q1
-\v 25 Therefore at that time also, converting itself into all forms,
+\v 25 Therefore at that time also¦26139, converting itself into all¦26142 forms,
 \q2 it ministered to your all-nourishing bounty,
-\q2 according to the desire of those who had need,
+\q2 according to the¦26150 desire of those who¦26151 had need,
 \q1
-\v 26 that your children, whom you loved, Oh master, might learn
-\q2 that it is not the growth of crops that nourishes a man,
-\q2 but that your word preserves those who trust you.
+\v 26 that¦26154 your children¦26157, whom¦26156 you¦26158 loved¦26160, Oh master, might learn
+\q2 that¦26162 it isn't the¦26164 growth of crops that¦26166 nourishes a¦26169 man¦26169,
+\q2 but¦26170 that¦26171 your word preserves those who¦26174 trust¦26176 you.
 \q1
-\v 27 Because that which was not destroyed by fire,
-\q2 melted away when it was simply warmed by a faint sunbeam,
+\v 27 Because that¦26178 which wasn't destroyed by¦26180 fire¦26181,
+\q2 melted away when it was simply warmed¦26189 by¦26185 a faint sunbeam,
 \q1
-\v 28 that it might be known that we must rise before the sun to give you thanks,
-\q2 and must pray to you at the dawning of the light;
+\v 28 that¦26191 it might be¦26193 known that¦26194 we must rise before the¦26197 sun¦26198 to¦26199 give you¦26201 thanks,
+\q2 and¦26202 must pray to¦26203 you at the dawning of the light¦26205;
 \q1
-\v 29 for the hope of the unthankful will melt as the winter's hoar frost,
-\q2 and will flow away as water that has no use.
+\v 29 for¦26209 the hope¦26210 of the unthankful will melt as the winter's hoar frost¦26213,
+\q2 and¦26215 will flow away as water¦26218 that has no use.
 \b
 \c 17
+\s1 Mitsrayim's darkness and fear
 \q1
-\v 1 Because your judgements are great, and hard to interpret;
-\q2 therefore undisciplined souls went astray.
+\v 1 Because¦26227 your judgements¦26224 are great¦26220, and¦26225 hard to interpret;
+\q2 therefore undisciplined souls¦26230 went astray¦26231.
 \q1
-\v 2 Because when lawless men had supposed that they held a holy nation in their power,
-\q2 they, prisoners of darkness, and bound in the fetters of a long night,
+\v 2 Because¦26233 when lawless men had supposed that they held a holy¦26236 nation¦26235 in their power,
+\q2 they, prisoners¦26238 of darkness¦26239, and¦26240 bound in the fetters of a long night¦26243,
 \q2 kept close beneath their roofs,
-\q2 lay exiled from the eternal providence.
+\q2 lay exiled from the¦26247 eternal¦26248 providence.
 \q1
-\v 3 Because while they thought that they were unseen in their secret sins,
+\v 3 Because¦26252 while they thought¦26253 that they were unseen in their secret sins,
 \q2 they were divided from one another by a dark curtain of forgetfulness,
-\q2 stricken with terrible awe, and very troubled by apparitions.
+\q2 stricken with terrible awe, and¦26263 very troubled by apparitions.
 \q1
-\v 4 Because neither did the dark recesses that held them guard them from fears,
-\q2 but terrifying sounds rang around them,
-\q2 and dismal phantoms appeared with unsmiling faces.
+\v 4 Because¦26267 neither did the¦26268 dark recesses that held¦26269 them guard them from fears,
+\q2 but¦26275 terrifying sounds rang around them,
+\q2 and¦26279 dismal phantoms appeared with unsmiling faces.
 \q1
-\v 5 And no power of fire prevailed to give light,
-\q2 neither were the brightest flames of the stars strong enough to illuminate that gloomy night;
+\v 5 And¦26285 no power of fire¦26286 prevailed to give light,
+\q2 neither¦26292 were the brightest flames of the stars¦26293 strong enough to illuminate that¦26300 gloomy night¦26301;
 \q1
-\v 6 but only the glimmering of a self-kindled fire appeared to them, full of fear.
-\q2 In terror, they considered the things which they saw
-\q2 to be worse than that sight, on which they could not gaze.
+\v 6 but¦26303 only¦26305 the glimmering of a self-kindled fire¦26307 appeared to them, full¦26309 of fear¦26308.
+\q2 In terror, they considered the¦26312 things which they saw¦26320
+\q2 to¦26320 be worse than that¦26315 sight, on which they couldn't gaze.
 \q1
-\v 7 The mockeries of their magic arts were powerless, now,
-\q2 and a shameful rebuke of their boasted understanding:
+\v 7 The¦26327 mockeries of their magic arts were powerless, now,
+\q2 and a shameful rebuke¦26331 of their boasted understanding¦26329:
 \q1
-\v 8 Because those who promised to drive away terrors and disorders from a sick soul,
+\v 8 Because those who¦26333 promised to drive away terrors and¦26337 disorders from a sick soul¦26340,
 \q2 these were sick with a ludicrous fearfulness.
 \q1
-\v 9 Because even if no troubling thing frighted them,
+\v 9 Because¦26347 even if¦26348 no troubling thing frighted them,
 \q2 yet, scared with the creeping of vermin and hissing of serpents,
 \q1
 \v 10 they perished trembling in fear,
-\q2 refusing even to look at the air, which could not be escaped on any side.
+\q2 refusing even to look at the¦26362 air¦26365, which couldn't be escaped on any side.
 \q1
-\v 11 Because wickedness, condemned by a witness within, is a coward thing,
-\q2 and, being pressed hard by conscience, always has added forecasts of the worst.
+\v 11 Because¦26369 wickedness¦26371, condemned by a witness within, is a coward thing,
+\q2 and¦26375, being pressed hard by conscience¦26381, always¦26374 has added forecasts of the worst.
 \q2
-\v 12 Because fear is nothing else but a surrender of the help which reason offers;
+\v 12 Because¦26383 fear¦26385 is nothing else but a surrender of the¦26389 help which reason offers;
 \q2
-\v 13 and from within, the expectation of being less
-\q2 prefers ignorance of the cause that brings the torment.
+\v 13 and from within¦26393, the¦26397 expectation¦26398 of being less
+\q2 prefers ignorance¦26402 of the cause¦26407 that brings the torment.
 \q1
-\v 14 But they, all through the night which was powerless indeed,
-\q2 and which came upon them out of the recesses of powerless Haidais,
+\v 14 But¦26409 they, all through the¦26410 night¦26413 which was powerless indeed,
+\q2 and¦26414 which came on them out¦26415 of the recesses of powerless Haidais,
 \q2 sleeping the same sleep,
 \q2
 \v 15 now were haunted by monstrous apparitions,
-\q2 and now were paralysed by their soul's surrendering;
-\q2 for sudden and unexpected fear came upon them.
+\q2 and¦26430 now were paralysed by their soul's¦26432 surrendering;
+\q2 for sudden¦26435 and¦26438 unexpected fear¦26440 came on them.
 \q1
-\v 16 So then whoever it might be, sinking down in his place,
-\q2 was kept captive, shut up in that prison which was not barred with iron;
+\v 16 So then¦26446 whoever it might be¦26447, sinking down in his place,
+\q2 was kept captive, shut up in that¦26452 prison which¦26444 wasn't barred with iron;
 \q1
-\v 17 for whether he was a farmer, or a shepherd,
-\q2 or a labourer whose toils were in the wilderness,
-\q2 he was overtaken, and endured that inescapable sentence;
-\q2 for they were all bound with one chain of darkness.
+\v 17 for whether¦26456 he was a farmer¦26458, or¦26461 a shepherd¦26462,
+\q2 or¦26463 a labourer whose toils were in the¦26464 wilderness,
+\q2 he was overtaken, and endured that¦26470 inescapable sentence;
+\q2 for¦26475 they were all¦26478 bound with one chain¦26476 of darkness¦26477.
 \q1
-\v 18 Whether there was a whistling wind,
-\q2 or a melodious sound of birds amongst the spreading branches,
-\q2 or a measured fall of water running violently,
+\v 18 Whether¦26480 there was a whistling wind,
+\q2 or¦26483 a melodious sound¦26488 of birds among the spreading branches¦26486,
+\q2 or¦26490 a¦26491 measured fall of water¦26492 running violently,
 \q2
-\v 19 or a harsh crashing of rocks hurled down,
-\q2 or the swift course of animals bounding along unseen,
-\q2 or the voice of wild animals harshly roaring,
-\q2 or an echo rebounding from the hollows of the mountains,
+\v 19 or¦26500 a harsh crashing of rocks hurled down,
+\q2 or¦26505 the swift course of animals bounding along unseen,
+\q2 or the voice¦26509 of wild¦26508 animals harshly roaring,
+\q2 or¦26510 an¦26515 echo¦26515 rebounding from the hollows of the mountains¦26514,
 \q2 all these things paralysed them with terror.
 \q1
-\v 20 Because the whole world was illuminated with clear light,
-\q2 and was occupied with unhindered works,
+\v 20 Because¦26520 the¦26521 whole¦26519 world¦26522 was illuminated with clear light¦26525,
+\q2 and¦26526 was occupied with unhindered works¦26529,
 \q2
-\v 21 while over them alone was spread a heavy night,
-\q2 an image of the darkness that should afterward receive them;
-\q2 but to themselves, they were heavier than darkness.
+\v 21 while over them alone¦26530 was spread a heavy night¦26535,
+\q2 an image¦26536 of¦26537 the¦26537 darkness¦26541 that¦26532 should afterward receive them;
+\q2 but¦26543 to¦26544 themselves, they were¦26544 heavier than darkness¦26546.
 \c 18
+\s1 Light for God's people
 \q1
-\v 1 But for your holy ones there was great light.
-\q2 Their enemies, hearing their voice but not seeing their form,
+\v 1 But¦26548 for your holy ones there was¦26552 great light¦26553.
+\q2 Their enemies, hearing¦26557 their voice¦26555 but¦26559 not seeing¦26561 their form¦26558,
 \q2 counted it a happy thing that they too had suffered,
 \q1
-\v 2 yet for that they do not hurt them, though wronged by them before, they are thankful;
-\q2 and because they had been at variance with them, they begged for pardon.
+\v 2 yet for that¦26568 they don't hurt them, though wronged by them before, they're thankful;
+\q2 and because¦26577 they'd been at variance with them, they begged for pardon.
 \q1
-\v 3 Therefore you provided a burning pillar of fire,
-\q2 to be a guide for your people's unknown journey,
-\q2 and a harmless sun for their glorious exile.
+\v 3 Therefore you provided a burning pillar¦26582 of fire,
+\q2 to be a guide¦26583 for your people's unknown journey¦26586,
+\q2 and a harmless sun¦26587 for their glorious exile.
 \q1
-\v 4 Because the Mitsrim \add !(Egyptians)\add* well deserved to be deprived of light and imprisoned by darkness,
-\q2 they who had imprisoned your children,
-\q2 through whom the incorruptible light of the law was to be given to the race of men.
+\v 4 Because¦26595 the Mitsrim \add !(Egyptians)\add* well deserved to be deprived of light¦26598 and¦26599 imprisoned by darkness¦26602,
+\q2 they who'd imprisoned your children¦26607,
+\q2 through¦26609 whom the¦26612 incorruptible¦26613 light of the law¦26614 was to be given to the¦26616 race of men.
+\s1 The death of Mitsrayim's firstborn
 \b
 \q1
-\v 5 After they had taken counsel to kill the babes of the holy ones,
-\q2 and when a single child had been abandoned and saved to convict them of their sin,
-\q2 you took away from them their multitude of children,
-\q2 and destroyed all their army together in a mighty flood.
+\v 5 After they'd taken counsel to¦26625 kill¦26625 the babes of the holy ones,
+\q2 and¦26627 when a single¦26628 child¦26630 had been abandoned and¦26631 saved to convict them of their sin,
+\q2 you took away from them their multitude¦26638 of children¦26639,
+\q2 and¦26640 destroyed all their army together in¦26643 a mighty flood.
 \q1
-\v 6 Our fathers were made aware of that night beforehand,
-\q2 that, having sure knowledge, they might be cheered by the oaths which they had trusted.
+\v 6 Our fathers¦26650 were made aware of that¦26646 night¦26648 beforehand,
+\q2 that¦26652, having sure knowledge, they might be cheered by the oaths which¦26655 they'd trusted¦26656.
 \q1
-\v 7 Salvation of the righteous and destruction of the enemies was expected by your people.
+\v 7 Salvation¦26664 of the righteous and¦26668 destruction¦26669 of the enemies¦26667 was expected by your people.
 \q1
-\v 8 Because as you took vengeance on the adversaries,
-\q2 by the same means, calling us to yourself, you glorified us.
+\v 8 Because¦26671 as you took vengeance on the adversaries,
+\q2 by the same means, calling¦26677 us to¦26677 yourself, you glorified us.
 \q1
-\v 9 Because holy children of good men offered sacrifice in secret,
-\q2 and with one consent they agreed to the covenant of the divine law,
-\q2 that they would partake alike in the same good things and the same perils,
-\q2 the fathers already leading the sacred songs of praise.
+\v 9 Because¦26680 holy¦26702 children of good men offered sacrifice in¦26679 secret¦26679,
+\q2 and¦26685 with one consent they agreed to the¦26686 covenant of the¦26687 divine law¦26689,
+\q2 that they'd partake alike in¦26690 the¦26693 same good things and the same perils,
+\q2 the fathers¦26703 already¦26704 leading the sacred songs of praise.
 \q1
-\v 10 But the discordant cry of the enemies echoed back,
-\q2 and a pitiful voice of lamentation for children was spread abroad.
+\v 10 But¦26708 the discordant¦26709 cry of the enemies¦26710 echoed back,
+\q2 and¦26712 a pitiful voice of lamentation for children¦26716 was spread¦26714 abroad.
 \q1
-\v 11 Both servant and master were punished with the same just doom,
-\q2 and the commoner suffering the same as king;
+\v 11 Both servant and¦26718 master¦26722 were punished with the same just doom,
+\q2 and¦26724 the¦26727 commoner suffering¦26729 the same as king¦26726;
 \q1
-\v 12 Yes, they all together, under one form of death,
-\q2 had corpses without number.
-\q1 Because the living were not sufficient even to bury them,
-\q2 Since at a single stroke, their most cherished offspring was consumed.
+\v 12 Yes, they all¦26732 together, under one¦26734 form of death¦26736,
+\q2 had¦26738 corpses without number.
+\q1 Because¦26741 the living¦26746 weren't¦26747 sufficient¦26748 even to¦26744 bury¦26744 them,
+\q2 Since¦26749 at a single¦26751 stroke, their most cherished offspring was consumed.
 \q1
-\v 13 Because while they were disbelieving all things by reason of the enchantments,
-\q2 upon the destruction of the firstborn they confessed the people to be God's children.
+\v 13 Because¦26761 while they were disbelieving all¦26758 things because¦26759 of¦26761 the¦26762 enchantments,
+\q2 on¦26764 the¦26765 destruction of the¦26766 firstborn¦26767 they confessed the people¦26772 to¦26773 be¦26773 God's¦26770 children¦26771.
 \q1
-\v 14 Because while peaceful silence wrapped all things,
-\q2 and night in her own swiftness was half spent,
+\v 14 Because¦26775 while peaceful silence¦26776 wrapped all¦26779 things,
+\q2 and¦26780 night¦26781 in¦26782 her own¦26783 swiftness was half spent,
 \q1
-\v 15 your all-powerful word leapt from heaven, from the royal throne,
-\q2 a stern warrior, into the midst of the doomed land,
+\v 15 your all-powerful¦26787 word¦26789 leapt from¦26790 heaven¦26791, from¦26792 the royal throne¦26793,
+\q2 a stern warrior¦26796, into the middle¦26798 of the¦26799 doomed land¦26802,
 \q1
 \v 16 bearing as a sharp sword your authentic commandment,
-\q2 and standing, it filled all things with death,
-\q2 and while it touched the heaven it stood upon the earth.
+\q2 and¦26810 standing¦26811, it filled all¦26814 things with death¦26815,
+\q2 and¦26816 while it touched the heaven¦26817 it stood on¦26822 the earth¦26823.
 \q1
-\v 17 Then immediately apparitions in dreams terribly troubled them,
-\q2 and unexpected fears came upon them.
+\v 17 Then¦26824 immediately apparitions in dreams terribly¦26829 troubled them,
+\q2 and¦26833 unexpected fears¦26832 came on them.
 \q1
-\v 18 And each, one thrown here half dead, another there,
+\v 18 And¦26836 each, one thrown here half dead, another¦26837 there,
 \q2 made known why he was dying;
 \q1
-\v 19 for the dreams, disturbing them, forewarned them of this,
-\q2 that they might not perish without knowing why they were afflicted.
+\v 19 for¦26847 the dreams, disturbing them, forewarned them of this¦26851,
+\q2 that¦26853 they might not¦26854 perish without knowing why they were afflicted.
+\s1 A priest pleads for the people
 \b
 \q1
-\v 20 The experience of death also touched the righteous,
-\q2 and a multitude were destroyed in the wilderness,
-\q2 but the wrath didn't last long.
+\v 20 The experience of death¦26866 also touched the righteous,
+\q2 and¦26867 a¦26868 multitude¦26872 were destroyed in the wilderness,
+\q2 but¦26873 the¦26878 anger¦26879 didn't last long.
 \q1
-\v 21 Because a blameless man hurried to be their champion,
-\q2 bringing the weapon of his own ministry,
-\q2 prayer, and the atoning sacrifice of incense.
-\q1 He withstood the indignation and set an end to the calamity,
-\q2 showing that he was your servant.
+\v 21 Because¦26881 a blameless¦26883 man¦26882 hurried to be their champion,
+\q2 bringing the weapon¦26889 of his own¦26887 ministry¦26888,
+\q2 prayer¦26890, and¦26891 the atoning sacrifice of incense¦26892.
+\q1 He withstood the¦26896 indignation and¦26898 set¦26900 an end¦26899 to¦26900 the¦26901 calamity,
+\q2 showing that¦26904 he¦26906 was¦26906 your¦26905 servant¦26907.
 \q1
-\v 22 And he overcame the anger,
-\q2 not by strength of body, not by force of weapons,
-\q2 but by his word, he subdued the avenger
-\q2 by bringing to remembrance oaths and covenants made with the fathers.
+\v 22 And¦26909 he overcame the¦26910 anger,
+\q2 not by strength¦26913 of¦26914 body¦26915, not by force of weapons¦26917,
+\q2 but¦26919 by his word¦26920, he subdued the¦26921 avenger
+\q2 by bringing to¦26923 remembrance oaths¦26924 and¦26926 covenants made with the fathers¦26925.
 \q1
-\v 23 Because when the dead had already fallen in heaps one upon another,
-\q2 he intervened and stopped the wrath,
-\q2 and cut off its way to the living.
+\v 23 Because¦26930 when the dead¦26935 had already¦26931 fallen in heaps one¦26934 on another¦26934,
+\q2 he intervened and stopped the¦26939 anger¦26940,
+\q2 and¦26941 cut off its way to¦26944 the¦26945 living¦26946.
 \q1
-\v 24 Because the whole world was pictured on his long robe,
-\q2 and the glories of the fathers were upon the engraving of the four rows of precious stones,
-\q2 and your majesty was upon the diadem on his head.
+\v 24 Because¦26949 the¦26954 whole¦26953 world¦26955 was pictured on his long robe,
+\q2 and¦26956 the glories of the fathers¦26957 were on¦26959 the engraving of the four rows of precious stones¦26961,
+\q2 and¦26963 your majesty¦26964 was on¦26966 the diadem on his head¦26968.
 \q1
-\v 25 The destroyer yielded to these, and they feared;
-\q2 for it was enough only to test the wrath.
+\v 25 The¦26972 destroyer yielded to¦26973 these, and¦26975 they feared¦26976;
+\q2 for¦26978 it was¦26977 enough only to test¦26981 the¦26982 anger¦26983.
 \b
 \c 19
+\s1 The sea destroys the pursuing army
 \q1
-\v 1 But indignation without mercy came upon the ungodly to the end;
-\q2 for God also foreknew their future,
+\v 1 But¦26986 indignation without mercy came on the ungodly¦26987 to¦26992 the end;
+\q2 for¦26994 God also¦26996 foreknew their future,
 \q1
-\v 2 how, having changed their minds to let your people go,
+\v 2 how, having changed their minds to¦27001 let your people go,
 \q2 and having sped them eagerly on their way,
-\q2 they would change their minds and pursue them.
+\q2 they'd change¦27001 their minds and¦27004 pursue¦27009 them.
 \q1
-\v 3 Because while they were yet in the midst of their mourning,
-\q2 and lamenting at the graves of the dead,
-\q2 they made another foolish decision,
-\q2 and pursued as fugitives those whom they had begged to leave and driven out.
+\v 3 Because¦27012 while they were still¦27011 mourning,
+\q2 and¦27018 lamenting at the graves¦27020 of the dead¦27021,
+\q2 they made another foolish¦27025 decision,
+\q2 and¦27026 pursued¦27033 as fugitives those whom they'd begged to leave and driven out.
 \q1
-\v 4 Because the doom which they deserved was drawing them to this end,
-\q2 and it made them forget the things that had happened to them,
-\q2 that they might fill up the punishment which was yet lacking from their torments,
+\v 4 Because¦27035 the¦27037 doom which they deserved was drawing them to¦27039 this end¦27042,
+\q2 and¦27044 it made them forget the¦27045 things that'd happened¦27046 to¦27049 them,
+\q2 that¦27050 they might fill up the¦27052 punishment¦27055 which was yet lacking from their torments¦27053,
 \q2
-\v 5 and that your people might journey on by a marvellous road,
-\q2 but they themselves might find a strange death.
+\v 5 and¦27056 that¦27064 your people might journey on¦27058 by a¦27059 marvellous road,
+\q2 but¦27065 they themselves might find¦27067 a strange death¦27068.
+\s1 Creation serves God's people
 \b
 \q1
-\v 6 Because the whole creation, each part in its diverse kind, was made new again,
+\v 6 Because¦27070 the¦27071 whole creation¦27072, each part in¦27073 its diverse kind, was made new again,
 \q2 complying with your commandments,
-\q2 that your servants might be kept unharmed.
+\q2 that¦27083 your¦27085 servants might be kept unharmed.
 \q1
-\v 7 Then the cloud that overshadowed the camp was seen,
-\q2 and dry land rising up out of what had been water,
-\q2 out of the Red sea an unhindered highway,
-\q2 and a grassy plain out of the violent surge,
+\v 7 Then the cloud¦27093 that overshadowed the camp was seen,
+\q2 and¦27095 dry¦27098 land¦27100 rising up¦27098 out of what had been water¦27097,
+\q2 out¦27102 of the Red sea¦27104 an unhindered highway,
+\q2 and¦27107 a grassy plain¦27109 out¦27110 of the violent surge,
 \q2
-\v 8 by which they passed over with all their army,
-\q2 these who were covered with your hand,
-\q2 having seen strange marvels.
+\v 8 by which¦27114 they passed¦27116 over with all their army,
+\q2 these who were covered with your¦27119 hand¦27121,
+\q2 having seen¦27122 strange marvels.
 \q1
-\v 9 Because like horses they roamed at large,
-\q2 and they skipped about like lambs,
-\q2 praising you, Oh master, who was their deliverer.
+\v 9 Because¦27126 like horses they roamed at large,
+\q2 and¦27129 they skipped about like lambs,
+\q2 praising¦27133 you¦27134, Oh master, who¦27136 was their deliverer.
 \q1
-\v 10 Because they still remembered the things that happened in the time of their sojourning,
-\q2 how instead of bearing cattle, the land brought forth lice,
-\q2 and instead of fish, the river spewed out a multitude of frogs.
+\v 10 Because¦27140 they still¦27141 remembered the¦27142 things that happened in¦27143 the¦27144 time of their sojourning¦27145,
+\q2 how¦27147 instead of bearing cattle, the¦27153 land¦27154 brought forth lice,
+\q2 and¦27157 instead of fish, the¦27160 river¦27161 spewed out¦27152 a multitude¦27162 of frogs.
 \q1
-\v 11 But afterwards, they also saw a new kind of birds,
-\q2 when, led on by desire, they asked for luxurious dainties;
+\v 11 But¦27166 afterwards, they also¦27168 saw a new¦27169 kind of birds,
+\q2 when, led on by desire¦27173, they asked¦27175 for luxurious dainties;
 \q1
-\v 12 for, to comfort them, quails came up for them from the sea.
+\v 12 for¦27179, to comfort¦27180 them, quails came up for them from¦27183 the sea¦27184.
+\s1 Punishment for mistreating strangers
 \b
 \q1
-\v 13 Punishments came upon the sinners,
-\q2 not without the signs that were given beforehand by the violence of the thunder,
-\q2 for they justly suffered through their own wickednesses,
-\q2 for the hatred which they practised towards guests was grievous indeed.
+\v 13 Punishments came on the sinners,
+\q2 not without¦27193 the¦27194 signs that were given beforehand by the¦27197 violence of the¦27199 thunder,
+\q2 for¦27202 they justly suffered through their own¦27205 wickednesses,
+\q2 for¦27209 the hatred which they practised towards guests was grievous indeed.
 \q1
-\v 14 Because while the others didn't receive the strangers when they came to them,
+\v 14 Because while the¦27213 others didn't receive the¦27216 strangers when¦27222 they came to them,
 \q2 the Mitsrim \add !(Egyptians)\add* made slaves of guests who were their benefactors.
 \q1
-\v 15 And not only so, but while punishment of some sort will come upon the former,
-\q2 since they received as enemies those who were aliens;
+\v 15 And¦27226 not only¦27228 so, but¦27229 while punishment of some sort will come on the former,
+\q2 since¦27234 they received as enemies those who¦27237 were aliens;
 \q2
 \v 16 because these first welcomed with feastings,
-\q2 and then afflicted with dreadful toils,
-\q2 those who had already shared with them in the same rights.
+\q2 and¦27240 then afflicted with¦27241 dreadful toils,
+\q2 those who'd¦27244 already¦27245 shared with them in the¦27246 same rights.
 \q1
-\v 17 And moreover they were stricken with loss of sight
-\q2 (even as were those others at the righteous man's doors),
-\q2 when, being surrounded with yawning darkness,
-\q2 they each looked for the passage through his own door.
+\v 17 And moreover they were stricken with loss of¦27261 sight
+\q2 (even as¦27257 were those others at the¦27260 righteous man's doors¦27263),
+\q2 when¦27264, being surrounded with yawning darkness¦27267,
+\q2 they each¦27268 looked for the¦27269 passage through his own door¦27271.
 \b
 \q1
-\v 18 Because as the notes of a lute vary the character of the rhythm,
-\q2 even so the elements, changing their order one with another,
-\q2 continuing always in its sound,
-\q2 as may clearly be conjectured from the sight of the things that have happened.
+\v 18 Because¦27275 as the notes of¦27275 a lute vary the¦27278 character of¦27285 the¦27285 rhythm,
+\q2 even so the¦27287 elements, changing their order one with another,
+\q2 continuing always¦27290 in its sound¦27292,
+\q2 as may clearly be¦27294 conjectured from¦27296 the¦27297 sight of the¦27298 things that have happened.
 \q1
-\v 19 Because creatures of the dry land were turned into creatures of the waters,
-\q2 and creatures that swim moved upon the land.
+\v 19 Because¦27303 creatures of the dry land were turned into creatures of the waters,
+\q2 and¦27307 creatures that swim moved on¦27310 the land¦27311.
 \q1
-\v 20 Fire kept the mastery of its own power in water,
-\q2 and water forgot its quenching nature.
+\v 20 Fire¦27312 kept the¦27316 mastery of its own¦27317 power¦27318 in water,
+\q2 and¦27319 water¦27320 forgot its quenching nature.
 \q1
-\v 21 On the contrary, flames didn't consume flesh of perishable creatures that walked amongst them,
-\q2 neither did they melt the crystalline grains of ambrosial food that were melted easily.
+\v 21 On the contrary, flames didn't¦27333 consume flesh¦27331 of perishable creatures that walked among them,
+\q2 neither did they melt the crystalline grains of ambrosial food¦27339 that were melted easily.
 \b
 \q1
-\v 22 Because in all things, Oh master, you magnified your people,
+\v 22 Because in all¦27341 things, Oh master, you magnified your people¦27346,
 \q2 and you glorified them and didn't lightly regard them,
-\q2 standing by their side in every time and place.
+\q2 standing by their side in¦27353 every¦27354 time¦27355 and¦27356 place¦27357.

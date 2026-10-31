@@ -1,8 +1,8 @@
-\id 4MA - Open English Translation—Readers' Version (OET-RV) v0.1.0
+\id 4MA - Open English Translation—Readers' Version (OET-RV) v0.4.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MA4
-\rem not WORDTABLE OET-LV_OT_word_table.tsv
+\rem WORDTABLE OET-LV_DC_word_table.tsv
 \rem Adapted from the Public Domain WEBBE courtesy of https://eBible.org
 \h 4 Maccabees
 \toc1 The Fourth Document about the Maccabees
@@ -11,564 +11,598 @@
 \mt2 The fourth document about
 \mt1 the Maccabees
 \is1 Introduction
+\ip \bk The Fourth Document about the Maccabees\bk* is a sustained argument about faith, clear thinking, and self-control. The writer asks whether reason guided by devotion to God can govern desires and emotions such as greed, anger, fear, and pain. The point isn't that faithful people feel nothing, but that they can choose to obey God's instructions even when their feelings pull them strongly in another direction.
+\ip After explaining this argument and giving examples, the writer retells the suffering of Eleazar, seven brothers, and their mother under King Antiokos (Antiochus). These are the people whose deaths are also described in chapters 6–7 of \bk The Second Document about the Maccabees\bk*. Here their speeches and endurance become the main examples supporting the argument.
+\ip The closing chapters dwell on the brothers' love for one another and their mother's love for them. The writer praises their faithfulness, presents their endurance as a victory over the king's cruelty, and encourages readers to follow their devotion to God. This is a reflection on the meaning of their suffering, with the argument and the account woven together throughout.
 \ip \bk The Fourth Document about the Maccabees\bk* appears in an appendix to the Greek Septuagint. It is considered to be apocrypha by most church traditions. It is preserved here for its supplementary historical value.
 \ip Makabi (from which the term Maccabee is derived) is an acronym formed from the first letters of Exodus 15:11: “Mi kamokha ba'elim YHWH” — “Who is like you among the gods, Yahweh?”
+\iot Main components of this document
+\io1 How faithful reasoning can govern the emotions \ior 1:1–3:18\ior*
+\io1 The background to Antiokos' persecution \ior 3:19–4:26\ior*
+\io1 Eleazar's refusal, suffering, and example \ior 5:1–7:25\ior*
+\io1 The seven brothers remain faithful through torture and death \ior 8:1–12:20\ior*
+\io1 The brothers' unity and their mother's courage \ior 13:1–17:24\ior*
+\io1 The closing appeal and the family's teaching \ior 18:1-24\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
+\s1 Faith and reason can govern our emotions
 \p
-\v 1 As I am going to demonstrate a most philosophical proposition, namely, that religious reasoning is absolute master of the emotions. I would willingly advise you to give the utmost heed to philosophy.
-\v 2 Because reason is necessary to everyone as a step to science. In addition, it embraces the praise of self-control, the highest virtue.
-\v 3 If, then, reasoning appears to hold the mastery over the emotions which stand in the way of temperance, such as gluttony and lust,
-\v 4 it surely also and manifestly rules over the affections which are contrary to justice, such as malice, and of those which are hindrances to courage, such as wrath, pain, and fear.
+\v 1 As I'm going to¦97666 demonstrate a most philosophical proposition, namely, that¦97679 religious reasoning is absolute¦97668 master¦97668 of the emotions. I'd willingly advise you¦97677 to give the¦97682 utmost heed to philosophy¦97683.
+\v 2 Because¦97685 reason is necessary¦97686 to everyone¦97689 as a step to science. In addition¦97692, it embraces the¦97694 praise¦97702 of self-control, the highest virtue.
+\v 3 If¦97703, then, reasoning appears¦97711 to hold the mastery over the emotions which stand in the way of temperance, such as gluttony and lust,
+\v 4 it surely also and¦97718 manifestly rules over the affections which are contrary to¦97723 justice, such¦97726 as¦97726 malice¦97727, and¦97728 of those which are hindrances to¦97733 courage, such as anger¦97734, pain, and fear¦97739.
 \v 5 Perhaps some may ask, “How is it, then, that reasoning, if it rules the emotions, isn't also master of forgetfulness and ignorance?” They attempt a ridiculous argument.
-\v 6 Because reasoning does not rule over its own emotions, but over those that are contrary to justice, courage, temperance, and self-control; and yet over these, so as to withstand, without destroying them.
+\v 6 Because reasoning doesn't rule over its own emotions, but over those that are contrary to justice, courage, temperance, and self-control; and yet over these, so as to withstand, without destroying them.
 \p
-\v 7 I might prove to you from many other considerations, that religious reasoning is sole master of the emotions;
-\v 8 but I will prove it with the greatest force from the fortitude of Eleazar, and seven kindred, and their mother, who suffered death in defence of virtue.
-\v 9 Because all these, treating pains with contempt even to death, by this contempt, demonstrated that reasoning has command over the emotions.
-\v 10 Because their virtues, then, it is right that I should commend those men who died with their mother at this time on behalf of nobility and goodness; and for their honours, I may count them blessed.
+\v 7 I might prove¦97798 to you from many other considerations, that¦97799 religious reasoning is¦97801 sole master of the emotions;
+\v 8 but¦97808 I'll prove it¦97810 with the greatest¦97809 force from¦97812 the fortitude of Eleazar, and seven¦97822 kindred, and¦97824 their mother¦97827, who suffered death in defence of virtue¦97817.
+\v 9 Because all¦97828 these, treating pains with contempt even to death¦97833, by this contempt, demonstrated that¦97838 reasoning has command over the emotions.
+\v 10 Because their virtues, then, it's right that I should commend those men who died with their mother at this time on behalf of nobility and goodness; and for their honours, I may count them blessed.
 \v 11 Because they, winning admiration not only from men in general, but even from the persecutors, for their courage and endurance, became the means of the destruction of the tyranny against their nation, having conquered the tyrant by their endurance, so that by them their country was purified.
-\v 12 But we may now at once enter upon the question, having commenced, as is our custom, with laying down the doctrine, and so proceed to the account of these people, giving glory to the all-wise God.
+\v 12 But¦97908 we may now¦97912 at once enter on the¦97918 question, having commenced, as¦97920 is our custom, with laying down the doctrine, and so¦97914 proceed to the¦97926 account of these people, giving¦97932 glory¦97931 to¦97932 the¦97933 all-wise God¦97935.
+\s1 Reason, wisdom, and the emotions
 \p
-\v 13 Therefore the question whether reasoning is absolute master of the emotions.
-\v 14 Let's determine, then, what reasoning is and what emotion is, and how many forms of emotion there are, and whether reasoning rules over all of these.
-\v 15 Reasoning is intellect accompanied by a life of righteousness, putting foremost the consideration of wisdom.
-\v 16 Wisdom is a knowledge of divine and human things, and of their causes.
-\v 17 This is contained in the education of the law, by means of which we learn divine things reverently and human things profitably.
-\v 18 The forms of wisdom are self-control, justice, courage, and temperance.
-\v 19 The leading one of these is self-control, by whose means, indeed, it is that reasoning rules over the emotions.
-\v 20 Of the emotions, pleasure and pain are the two most comprehensive; and they also by nature refer to the soul.
-\v 21 There are many attendant affections surrounding pleasure and pain.
-\v 22 Before pleasure is lust; and after pleasure, joy.
-\v 23 Before pain is fear; and after pain is sorrow.
-\v 24 Wrath is an affection, common to pleasure and to pain, if any one will pay attention when it comes upon him.
-\v 25 There exists in pleasure a malicious disposition, which is the most complex of all the affections.
-\v 26 In the soul, it is arrogance, love of money, thirst for honour, contention, faithlessness, and the evil eye.
-\v 27 In the body, it is greediness, indiscriminate eating, and solitary gluttony.
+\v 13 Therefore the question whether reasoning is¦97941 absolute master of the¦97943 emotions.
+\v 14 Let's determine, then¦97948, what reasoning is¦97949 and¦97951 what emotion is, and¦97954 how¦97955 many¦97955 forms of emotion there are, and¦97958 whether reasoning rules over all¦97960 of these.
+\v 15 Reasoning is¦97969 intellect accompanied by a life¦97973 of righteousness, putting foremost the¦97975 consideration of wisdom¦97976.
+\v 16 Wisdom¦97978 is¦97981 a knowledge¦97982 of divine and¦97984 human¦97985 things¦97986, and¦97987 of their causes.
+\v 17 This¦97991 is¦97994 contained in the¦97995 education of¦97996 the¦97996 law¦97997, by means of¦97999 which¦98000 we learn divine things reverently and¦98004 human things profitably.
+\v 18 The¦98009 forms of wisdom¦98011 are self-control, justice, courage¦98018, and¦98019 temperance.
+\v 19 The¦98023 leading one of these is self-control, by whose means, indeed, it's that reasoning rules over the emotions.
+\v 20 Of the emotions, pleasure¦98040 and¦98034 pain are¦98036 the¦98037 two¦98039 most comprehensive; and they also by nature refer to the¦98049 soul¦98050.
+\v 21 There are many attendant affections surrounding pleasure¦98057 and¦98058 pain.
+\v 22 Before¦98064 pleasure is¦98069 lust; and after¦98071 pleasure¦98074, joy¦98075.
+\v 23 Before¦98076 pain is¦98080 fear¦98081; and after¦98082 pain is sorrow.
+\v 24 Anger¦98087 is an affection, common¦98089 to¦98091 pleasure and¦98093 to pain, if¦98095 any one¦98097 will pay attention when¦98098 it¦98099 comes on¦98100 him.
+\v 25 There exists in¦98101 pleasure¦98104 a malicious disposition¦98109, which is the most complex of all¦98111 the¦98112 affections.
+\v 26 In the soul¦98117, it's arrogance, love¦98120 of¦98120 money¦98120, thirst for honour, contention, faithlessness, and the evil eye.
+\v 27 In the¦98130 body¦98131, it's greediness, indiscriminate¦98132 eating¦98132, and solitary gluttony.
 \p
-\v 28 As pleasure and pain are, therefore, two growths out of the body and the soul, so there are many offshoots of these emotions.
-\v 29 Reasoning, the universal farmer, purging and pruning each of these, tying up, watering, and transplanting, in every way improves the materials of the morals and affections.
-\v 30 Because reasoning is the leader of the virtues, but it is the sole ruler of the emotions.
-\p Observe then first, through the very things which stand in the way of temperance, that reasoning is absolute ruler of the emotions.
-\v 31 Now temperance consists of a command over the lusts.
-\v 32 But of the lusts, some belong to the soul and others to the body. Reasoning appears to rule over both.
-\v 33 Otherwise, how is it that when urged on to forbidden meats, we reject the gratification which would come from them? Isn't it because reasoning is able to command the appetites? I believe so.
-\v 34 Hence it is, then, that when craving seafood, birds, four-footed animals, and all kinds of food which are forbidden to us by the law, we withhold ourselves through the mastery of reasoning.
-\v 35 Because the affections of our appetites are resisted by the temperate understanding, and bent back again, and all the impulses of the body are reined in by reasoning.
+\v 28 As¦98137 pleasure and pain are, therefore¦98138, two growths out of¦98140 the¦98140 body¦98141 and¦98142 the¦98143 soul¦98144, so there are¦98155 many offshoots of these emotions.
+\v 29 Reasoning, the¦98159 universal farmer, purging and pruning each¦98158 of these, tying up, watering, and transplanting, in every¦98171 way¦98172 improves the¦98175 materials of the¦98176 morals and¦98178 affections.
+\v 30 Because reasoning is the¦98181 leader of the¦98184 virtues, but it's¦98187 the sole ruler¦98188 of the¦98189 emotions.
+\p Observe then¦98195 first¦98196, through¦98197 the very things which stand in the way of temperance, that¦98203 reasoning is absolute¦98204 ruler of the emotions.
+\v 31 Now temperance consists of a command over the¦98215 lusts.
+\v 32 But¦98218 of the¦98220 lusts, some belong to¦98222 the¦98224 soul and others to the¦98230 body. Reasoning appears¦98233 to¦98233 rule over both¦98229.
+\v 33 Otherwise, how¦98235 is it that¦98247 when urged on to¦98237 forbidden meats, we reject the gratification which would come from¦98243 them? Isn't it because reasoning is¦98248 able¦98248 to command the appetites? I¦98254 believe so.
+\v 34 Hence it is, then¦98260, that when¦98262 craving seafood, birds, four-footed¦98263 animals, and all kinds of food¦98265 which are forbidden to¦98269 us by the¦98270 law¦98271, we withhold ourselves through¦98273 the¦98274 mastery of¦98275 reasoning.
+\v 35 Because¦98279 the affections of our appetites are resisted by the¦98285 temperate understanding, and bent back again, and all¦98291 the¦98292 impulses of¦98293 the¦98293 body¦98294 are reined in by¦98296 reasoning.
 \c 2
+\s1 Controlling desire and anger
 \p
-\v 1 Is it any wonder? If the lusts of the soul, after participation with what is beautiful, are frustrated,
-\v 2 on this ground, therefore, the temperate Yosef \add !(Joseph)\add* is praised in that by reasoning, he subdued, on reflection, the indulgence of the senses.
-\v 3 Because, although young, and ripe for sexual intercourse, he nullified by reasoning the stimulus of his emotions.
-\v 4 It isn't merely the stimulus of sensual indulgence, but that of every desire, that reasoning is able to master.
-\v 5 Because instance, the law says, “You shall not covet your neighbour's wife, nor anything that belongs to your neighbour.”
-\v 6 Now, then, since it is the law which has forbidden us to desire, I shall much the more easily persuade you, that reasoning is able to govern our lusts, just as it does the affections which are impediments to justice.
-\v 7 Since in what way is a solitary eater, a glutton, and a drunkard reclaimed, unless it is clear that reasoning is lord of the emotions?
-\v 8 Therefore, a man who regulates his course by the law, even if he is a lover of money, immediately puts pressure on his own disposition by lending to the needy without interest, and cancelling the debt on the seventh year.
-\v 9 If a man is greedy, he is ruled by the law acting through reasoning, so that he doesn't glean his harvest crops or vintage. In reference to other points we may perceive that it is reasoning that conquers his emotions.
-\v 10 Because the law conquers even affection towards parents, not surrendering virtue on their account.
-\v 11 It prevails over love for one's wife, rebuking her when she breaks the law.
+\v 1 Is it any wonder? If¦98302 the¦98303 lusts of the¦98304 soul¦98305, after participation with¦98307 what's beautiful, are frustrated,
+\v 2 on this¦98313 ground, therefore, the¦98315 temperate Yosef \add !(Joseph)\add* is praised in that¦98319 by reasoning, he subdued, on reflection, the¦98320 indulgence of the¦98324 senses.
+\v 3 Because, although young, and¦98329 ripe for¦98327 sexual intercourse, he nullified by reasoning the stimulus of his emotions.
+\v 4 It isn't merely the stimulus of sensual indulgence, but¦98351 that of every¦98353 desire¦98354, that reasoning is able to master.
+\v 5 For example, the¦98357 law¦98358 says¦98355, “You¦98365 mustn't¦98366 desire your neighbour's¦98369 wife¦98362, nor anything that¦98368 belongs to¦98371 your neighbour.”
+\v 6 Now, then¦98373, since it's the¦98378 law¦98379 which has forbidden us to¦98381 desire¦98387, I'll much¦98380 the more easily persuade you¦98384, that¦98385 reasoning is¦98389 able¦98389 to govern our lusts, just¦98392 as¦98392 it does the affections which are impediments to¦98398 justice.
+\v 7 Since¦98399 in what way¦98401 is¦98404 a solitary eater, a glutton, and a drunkard¦98410 reclaimed, unless it's clear¦98414 that¦98415 reasoning is lord¦98416 of the emotions?
+\v 8 Therefore, a man¦98429 who regulates his course by the¦98424 law¦98425, even¦98427 if¦98427 he's¦98430 a lover of money, immediately puts pressure on his own disposition by lending to¦98431 the needy without¦98438 interest, and¦98440 cancelling the¦98441 debt¦98442 on the¦98443 seventh year.
+\v 9 If¦98447 a man¦98449 is¦98450 greedy, he's ruled by¦98451 the¦98452 law¦98453 acting through¦98455 reasoning, so that he doesn't glean his harvest crops or vintage. In reference to¦98467 other¦98469 points we may perceive that¦98473 it's¦98476 reasoning that conquers his emotions.
+\v 10 Because¦98493 the¦98480 law¦98482 conquers even affection towards parents¦98486, not¦98489 surrendering virtue¦98492 on their account.
+\v 11 It prevails over love for¦98500 one's wife, rebuking her when¦98495 she¦98502 breaks the¦98496 law.
 \v 12 It lords it over the love of parents towards their children, for they punish them for vice. It domineers over the intimacy of friends, reproving them when wicked.
-\v 13 Don't think it is a strange assertion that reasoning can on behalf of the law conquer even enmity.
-\v 14 It doesn't allow cutting down the fruit trees of an enemy, but preserves them from the destroyers, and collects their fallen ruins.
-\v 15 Reason appears to be master of the more violent emotions, like love of empire, empty boasting, and slander.
-\v 16 Because the temperate understanding repels all these malignant emotions, as it does wrath; for it masters even this.
-\v 17 Thus Mosheh \add !(Moses)\add*, when angered against Datan and Aviram, did nothing to them in wrath, but regulated his anger by reasoning.
-\v 18 Because the temperate mind is able, as I said, to be superior to the emotions, and to correct some and destroy others.
-\v 19 Because why else did our most wise father Ya’akov \add !(Jacob)\add* blame Shim’on \add !(Simeon)\add* and Levi for having irrationally slain the whole race of the Shechemites, saying, “Cursed be their anger!”?
-\v 20 Because if reasoning didn't possess the power of subduing angry affections, he would not have said this.
-\v 21 Because at the time when God created man, he implanted within him his emotions and moral nature.
-\v 22 At that time he enthroned the mind above all as the holy leader, through the medium of the senses.
-\v 23 He gave a law to this mind, by living according to which it will maintain a temperate, just, good, and courageous reign.
-\v 24 How, then, a man may say, if reasoning is master of the emotions, has it no control over forgetfulness and ignorance?
+\v 13 Don't think it's a strange assertion that reasoning can on behalf of the law conquer even enmity.
+\v 14 It doesn't allow cutting down the¦98530 fruit trees of¦98534 an enemy¦98547, but preserves them from the¦98548 destroyers, and¦98551 collects their fallen ruins.
+\v 15 Reason appears¦98563 to be master of the¦98561 more violent emotions, like love of empire, empty boasting, and slander.
+\v 16 Because¦98574 the temperate understanding repels all¦98573 these malignant emotions, as¦98583 it does anger¦98586; for¦98588 it masters even this.
+\v 17 Thus Mosheh \add !(Moses)\add*, when angered against Datan and¦98597 Aviram, did¦98604 nothing to them in anger¦98608, but regulated his anger by reasoning.
+\v 18 Because¦98611 the¦98612 temperate mind¦98614 is able¦98610, as I said, to be superior to the emotions, and to correct some and destroy others.
+\v 19 Because¦98630 why¦98631 else did our most wise father¦98635 Ya'akov \add !(Jacob)\add* blame Shim'on \add !(Simeon)\add* and¦98640 Levi for having irrationally slain the¦98645 whole¦98647 race of the Shechemites, saying, “Cursed¦98650 be their anger!”?
+\v 20 Because if¦98654 reasoning didn't¦98655 possess the¦98658 power of subduing angry affections, he wouldn't¦98655 have said¦98665 this¦98660.
+\v 21 Because¦98668 at the¦98669 time when¦98667 God¦98670 created man¦98672, he¦98676 implanted within him his emotions and¦98677 moral¦98679 nature.
+\v 22 At that time he enthroned the mind¦98689 above all¦98685 as the¦98686 holy leader¦98688, through¦98690 the medium of¦98690 the¦98691 senses.
+\v 23 He¦98695 gave¦98697 a law¦98696 to¦98697 this mind, by living according¦98698 to¦98698 which¦98699 it'll maintain a temperate, just¦98706, good, and courageous reign¦98701.
+\v 24 How¦98711, then¦98712, a man¦98714 may say, if reasoning is master of the emotions, has it no¦98725 control over forgetfulness and¦98723 ignorance¦98724?
 \c 3
 \p
-\v 1 The argument is exceedingly ridiculous, for reasoning doesn't appear to rule over its own affections, but over those of the body,
-\v 2 in such a way as that any one of you may not be able to root out desire, but reasoning will enable you to avoid being enslaved to it.
-\v 3 One may not be able to root out anger from the soul, but it is possible to withstand anger.
-\v 4 Any one of you may not be able to eradicate malice, but reasoning has force to work with you to prevent you yielding to malice.
-\v 5 Because reasoning is not an eradicator, but an antagonist of the emotions.
+\v 1 The argument is¦98727 extremely ridiculous, for¦98734 reasoning doesn't appear¦98741 to rule over its own affections, but¦98742 over those of the¦98743 body,
+\v 2 in such¦98745 a way as¦98745 that any one¦98747 of you¦98748 may not be¦98750 able¦98750 to root out desire, but¦98752 reasoning will enable you to avoid being enslaved to it.
+\v 3 One¦98762 may not be¦98764 able¦98764 to root out anger from the¦98767 soul¦98768, but¦98769 it's possible to¦98773 withstand anger.
+\v 4 Any one¦98775 of you¦98776 may not be¦98778 able¦98778 to eradicate malice, but¦98780 reasoning has force to work with you to prevent you yielding to malice¦98785.
+\v 5 Because¦98791 reasoning isn't¦98797 an eradicator, but¦98798 an antagonist of the emotions.
+\s1 David's example of self-control
 \p
-\v 6 This may be more clearly comprehended from the thirst of King David.
-\v 7 Because after David had been attacking the Pelishtim the whole day, he with the soldiers of his nation killed many of them;
-\v 8 then when evening came, sweating and very weary, he came to the royal tent, around which the entire army of our ancestors was encamped.
-\v 9 Now all the rest of them were at supper;
-\v 10 but the king, being very much thirsty, although he had numerous springs, could not by their means quench his thirst;
-\v 11 but a certain irrational longing for the water in the enemy's camp grew stronger and fiercer upon him, undid and consumed him.
-\v 12 Therefore his bodyguards being troubled at this longing of the king, two valiant young soldiers, respecting the desire of the king, fully armed themselves, and taking a pitcher, got over the ramparts of the enemies.
-\v 13 Unperceived by the guardians of the gate, they went throughout the whole camp of the enemy in quest.
-\v 14 Having boldly discovered the fountain, they filled out of it the drink for the king.
-\v 15 But he, though parched with thirst, reasoned that a drink regarded of equal value to blood would be terribly dangerous to his soul.
-\v 16 Therefore, setting up reasoning in opposition to his desire, he poured out the drink to God.
+\v 6 This may be¦98800 more clearly comprehended from the¦98804 thirst of¦98806 King¦98807 David.
+\v 7 Because¦98813 after David had been attacking the¦98817 Pelishtim the¦98819 whole day¦98815, he¦98822 with¦98824 the¦98825 soldiers¦98828 of¦98826 his nation¦98827 killed¦98823 many¦98814 of them;
+\v 8 then¦98829 when¦98830 evening¦98832 came, sweating and¦98834 very¦98835 weary, he came to¦98837 the¦98838 royal tent¦98840, around¦98842 which¦98843 the¦98844 entire¦98845 army of our ancestors¦98847 was encamped.
+\v 9 Now all¦98854 the¦98856 rest of them were¦98858 at supper;
+\v 10 but¦98860 the king¦98861, being very much thirsty, although¦98865 he had¦98867 numerous springs, couldn't¦98870 by their means quench his thirst¦98864;
+\v 11 but¦98876 a certain irrational longing for the water¦98885 in the enemy's camp grew stronger and fiercer on him, undid and consumed him.
+\v 12 Therefore his bodyguards being troubled at this longing of¦98896 the¦98896 king¦98897, two¦98900 valiant young¦98901 soldiers¦98902, respecting the¦98905 desire of¦98906 the¦98906 king¦98907, fully armed themselves, and¦98912 taking¦98914 a pitcher, got over the¦98916 ramparts of the¦98917 enemies.
+\v 13 Unperceived by the¦98922 guardians of the¦98923 gate¦98924, they went throughout the whole¦98929 camp¦98933 of the enemy in quest.
+\v 14 Having boldly discovered the¦98937 fountain, they filled¦98941 out¦98939 of it¦98940 the drink for the¦98942 king¦98943.
+\v 15 But¦98947 he, though parched with thirst, reasoned that¦98950 a drink regarded of equal value to¦98955 blood¦98963 would be¦98955 terribly dangerous to his soul¦98958.
+\v 16 Therefore, setting up reasoning in opposition to his desire¦98967, he poured out the¦98971 drink¦98972 to God¦98974.
 \v 17 Because the temperate mind has power to conquer the pressure of the emotions, to quench the fires of excitement,
 \v 18 and to wrestle down the pains of the body, however excessive, and through the excellency of reasoning, to spurn all the assaults of the emotions.
-\v 19 But the occasion now invites us to give an illustration of temperate reasoning from history.
-\v 20 Because at a time when our fathers were in possession of undisturbed peace through obedience to the law and were prosperous, so that Seleukos \add !(Seleucus)\add* Nikanor, the king of Asia, both assigned them money for divine service, and accepted their form of government,
-\v 21 then certain people, bringing in new things contrary to the public harmony, in various ways fell into calamities.
+\v 19 But¦99012 the¦99014 occasion now invites us to give an illustration of¦99023 temperate reasoning from history.
+\v 20 Because at a time when our fathers¦99034 were in possession of undisturbed peace¦99029 through¦99030 obedience to¦99036 the law and¦99037 were prosperous, so¦99040 that¦99042 Seleukos \add !(Seleucus)\add* Nikanor, the¦99043 king¦99045 of Asia, both assigned them money¦99050 for divine service, and¦99056 accepted their form of government,
+\v 21 then¦99061 certain people, bringing in new things contrary to¦99064 the¦99065 public harmony, in various ways fell into calamities.
 \c 4
+\s1 Corruption and conflict in Yerushalem
 \p
-\v 1 Because a certain man named Shim’on \add !(Simon)\add*, who was in opposition to an honourable and good man who once held the high priesthood for life, named Honyo \add !(Onias)\add*. After slandering Honyo in every way, Shim’on couldn't injure him with the people, so he went away as an exile, with the intention of betraying his country.
-\v 2 When coming to Apolonios, the military governor of Aram \add !(Syria)\add*, Foinikai, and Kilikia, he said,
-\v 3 “Having good will to the king's affairs, I have come to inform you that tens of thousands in private wealth is laid up in the treasuries of Yerushalem \add !(Jerusalem)\add* which do not belong to the temple, but belong to King Seleukos.”
-\v 4 Apolonios, acquainting himself with the particulars of this, praised Shim’on for his care of the king's interests, and going up to Seleukos informed him of the treasure.
-\v 5 Getting authority about it, and quickly advancing into our country with the accursed Shim’on and a very heavy force,
-\v 6 he said that he came with the commands of the king that he should take the private money of the treasury.
-\v 7 The nation, indignant at this proclamation, and replying to the effect that it was extremely unfair that those who had committed deposits to the sacred treasury should be deprived of them, resisted as well as they could.
-\v 8 But Apolonios went away with threats into the temple.
-\v 9 The priests, with the women and children, asked God to throw his shield over the holy, despised place,
-\v 10 and Apolonios was going up with his armed force to seize the treasure, when angels from heaven appeared riding on horseback, all radiant in armour, filling them with much fear and trembling.
-\v 11 Apolonios fell half dead on the courtyard which is open to all nations, and extended his hands to heaven, and implored the Ivrim \add !(Hebrews)\add*, with tears, to pray for him, and take away the wrath of the heavenly army.
-\v 12 Because he said that he had sinned, so as to be consequently worthy of death, and that if he were saved, he would proclaim to all people the blessedness of the holy place.
-\v 13 Honyo the high priest, induced by these words, although for other reasons anxious that King Seleukos wouldn't suppose that Apolonios was slain by human device and not by Divine punishment, prayed for him;
-\v 14 and he being thus unexpectedly saved, departed to report to the king what had happened to him.
-\v 15 But on the death of Seleukos the king, his son Antiokos \add !(Antiochus)\add* Epifanes \add !(Epiphanes)\add* succeeded to the kingdom—a terrible man of arrogant pride.
+\v 1 Because¦99083 a certain man named Shim'on \add !(Simon)\add*, who was in opposition to¦99075 an honourable and good¦99085 man who¦99078 once¦99079 held the¦99080 high priesthood for life¦99084, named Honyo \add !(Onias)\add*. After slandering Honyo in every¦99090 way¦99091, Shim'on couldn't injure him with the¦99094 people, so he went away as an¦99099 exile¦99099, with the¦99101 intention of betraying his country¦99095.
+\v 2 When coming to¦99106 Apolonios, the¦99108 military governor of Aram \add !(Syria)\add*, Foinikai, and Kilikia, he said,
+\v 3 “Having good will to¦99118 the¦99120 king's¦99121 affairs, I've come¦99123 to¦99123 inform you that tens of thousands in private wealth is laid up in¦99129 the¦99130 treasuries of Yerushalem \add !(Jerusalem)\add* which don't¦99136 belong to the¦99134 temple¦99135, but¦99138 belong to King¦99143 Seleukos.”
+\v 4 Apolonios, acquainting himself with the particulars of this, praised Shim'on for his care of the¦99154 king's¦99155 interests, and¦99159 going up to¦99162 Seleukos informed him of the treasure¦99167.
+\v 5 Getting¦99169 authority¦99173 about¦99171 it¦99172, and quickly¦99174 advancing into our country with¦99179 the¦99180 accursed Shim'on and¦99183 a very heavy force,
+\v 6 he said that¦99187 he came with the¦99188 king's¦99189 commands that¦99193 he should take¦99198 the¦99194 private money¦99199 of¦99196 the¦99196 treasury¦99197.
+\v 7 The¦99201 nation¦99202, indignant at this¦99204 proclamation, and¦99208 replying to¦99210 the effect that it was¦99210 extremely unfair that those who'd¦99214 committed deposits to¦99216 the¦99217 sacred treasury¦99219 should be deprived of them, resisted as well as they could.
+\v 8 But Apolonios went away with¦99226 threats¦99227 into the¦99233 temple¦99234.
+\v 9 The¦99235 priests¦99237, with¦99238 the women¦99239 and¦99240 children¦99241, asked God¦99247 to throw his shield over the¦99249 holy, despised place¦99252,
+\v 10 and¦99254 Apolonios was going up with¦99255 his armed force to¦99261 seize the treasure, when angels¦99269 from¦99266 heaven¦99266 appeared riding on horseback, all radiant in armour, filling them with much¦99274 fear¦99276 and trembling.
+\v 11 Apolonios fell half dead on the¦99285 courtyard which is open to¦99287 all nations, and extended his hands¦99294 to¦99295 heaven¦99298, and implored the Ivrim \add !(Hebrews)\add*, with¦99299 tears, to pray for him, and take away the anger of the¦99308 heavenly¦99309 army.
+\v 12 Because¦99313 he said that he'd sinned, so¦99315 as to¦99317 be consequently worthy¦99318 of death¦99317, and that if he were saved, he'd proclaim to¦99319 all¦99320 people the¦99325 blessedness of¦99326 the¦99326 holy place¦99328.
+\v 13 Honyo the¦99332 high priest, induced by these words¦99333, although¦99337 for other reasons anxious that¦99343 King¦99344 Seleukos¦99345 wouldn't suppose that Apolonios was slain by human¦99347 device and¦99349 not¦99350 by Divine¦99351 punishment, prayed for him;
+\v 14 and¦99359 he being thus unexpectedly saved, departed to report to the¦99366 king¦99367 what had happened to him.
+\v 15 But¦99372 on the death of¦99374 Seleukos the¦99374 king¦99375, his son¦99380 Antiokos \add !(Antiochus)\add* Epifanes \add !(Epiphanes)\add* succeeded to the kingdom—a terrible man¦99384 of arrogant¦99385 pride.
+\s1 Yason and Antiokos undermine God's law
 \p
 \v 16 He, having deposed Honyo \add !(Onias)\add* from the high priesthood, appointed his brother Yason to be high priest,
-\v 17 who had made a covenant, if he would give him this authority, to pay yearly three thousand and six hundred and sixty talents.
-\v 18 He committed to him the high priesthood and rulership over the nation.
-\v 19 He both changed the manner of living of the people, and perverted their civil customs into all lawlessness.
-\v 20 So that he not only erected a gymnasium on the very citadel of our country, but neglected the guardianship of the temple.
-\v 21 Because of that, Divine vengeance was grieved and instigated Antiokos himself against them.
-\v 22 Because being at war with Ptolemaios \add !(Ptolemy)\add* in Mitsrayim \add !(Egypt)\add*, he heard that on a report of his death being spread abroad, the inhabitants of Yerushalem \add !(Jerusalem)\add* had exceedingly rejoiced, and he quickly marched against them.
-\v 23 Having subdued them, he established a decree that if any of them lived according to the ancestral laws, he should die.
-\v 24 When he could by no means destroy by his decrees the obedience to the law of the nation, but saw all his threats and punishments without effect,
-\v 25 for even women, because they continued to circumcise their children, were flung down a precipice along with them, knowing beforehand of the punishment.
-\v 26 When, therefore, his decrees were disregarded by the people, he himself compelled by means of tortures every one of this race, by tasting forbidden meats, to renounce the Jewish religion.
+\v 17 who'd made a covenant, if he'd give him this authority, to pay yearly three thousand and six hundred and sixty talents.
+\v 18 He¦99416 committed to¦99415 him the high priesthood and¦99418 rulership over the¦99419 nation¦99420.
+\v 19 He both changed the manner of living of the people, and¦99427 perverted their civil customs into¦99429 all¦99430 lawlessness.
+\v 20 So¦99432 that he not¦99433 only¦99434 erected a gymnasium on¦99435 the very citadel of our country, but neglected the guardianship of¦99445 the¦99445 temple¦99446.
+\v 21 Because of that, Divine vengeance was grieved and instigated Antiokos himself against¦99448 them.
+\v 22 Because being at war¦99461 with Ptolemaios \add !(Ptolemy)\add* in Mitsrayim \add !(Egypt)\add*, he heard¦99467 that¦99469 on a report of his death being¦99462 spread abroad, the¦99465 inhabitants of Yerushalem \add !(Jerusalem)\add* had greatly rejoiced, and¦99468 he¦99475 quickly¦99482 marched against¦99483 them.
+\v 23 Having subdued them, he¦99489 established a decree¦99490 that¦99492 if¦99493 any of them lived according to the¦99497 ancestral laws¦99500, he should die.
+\v 24 When¦99502 he could by no means destroy¦99508 by his decrees¦99511 the¦99510 obedience to the¦99512 law of¦99513 the¦99513 nation¦99514, but¦99516 saw all¦99517 his threats¦99520 and¦99521 punishments¦99522 without effect,
+\v 25 for even women¦99527, because¦99528 they continued to circumcise their children¦99531, were flung down a precipice along with¦99532 them, knowing beforehand of the¦99533 punishment.
+\v 26 When, therefore¦99541, his decrees¦99543 were disregarded by¦99546 the¦99547 people¦99548, he¦99549 himself compelled by means of¦99550 tortures every one¦99552 of this¦99554 race, by tasting forbidden meats, to renounce the¦99561 Jewish religion.
 \c 5
+\s1 Antiokos pressures Eleazar to disobey God's law
 \p
-\v 1 The tyrant Antiokos, therefore, sitting in public state with his assessors upon a certain lofty place, with his armed troops standing in a circle around him,
+\v 1 The tyrant Antiokos, therefore, sitting in public state with his assessors on a certain lofty place, with his armed troops standing in a circle around him,
 \v 2 commanded his spearbearers to seize every one of the Ivrim \add !(Hebrews)\add*, and to compel them to taste swine's flesh and things offered to idols.
-\v 3 Should any of them be unwilling to eat the accursed food, they were to be tortured on the wheel and so killed.
-\v 4 When many had been seized, a foremost man of the assembly, a Hebrew, by name Eleazar, a priest by family, by profession a lawyer, and advanced in years, and for this reason known to many of the king's followers, was brought near to him.
+\v 3 Should any of them be unwilling to eat the accursed food, they were to be tortured on the wheel and¦99599 so killed.
+\v 4 When¦99608 many had been seized, a foremost man¦99610 of the¦99613 assembly, a Hebrew, by name¦99616 Eleazar, a priest¦99620 by family¦99619, by profession a lawyer¦99623, and¦99624 advanced in years, and¦99628 for this reason known to many of¦99634 the¦99635 king's followers, was brought near¦99639 to him.
 \p
-\v 5 Antiokos, seeing him, said,
-\v 6 “I would counsel you, old man, before your tortures begin, to taste the swine's flesh, and save your life; for I feel respect for your age and hoary head, which since you have had so long, you appear to me to be no philosopher in retaining the superstition of the Yehudim \add !(Jews)\add*.
-\v 7 Because therefore, since nature has conferred upon you the most excellent flesh of this animal, do you loathe it?
-\v 8 It seems senseless not to enjoy what is pleasant, yet not disgraceful; and from notions of sinfulness, to reject the gifts of nature.
-\v 9 You will be acting, I think, still more senselessly, if you follow vain conceits about the truth.
+\v 5 Antiokos, seeing him, said¦99646,
+\v 6 “I'd counsel you, old man, before your tortures begin, to taste the swine's flesh, and save your life; for I feel respect for your age and hoary head, which since you've had so long, you appear to me to be no philosopher in retaining the superstition of the Yehudim \add !(Jews)\add*.
+\v 7 Because therefore, since nature has conferred on you the most excellent flesh of this animal, do you loathe it?
+\v 8 It seems senseless not to enjoy what's pleasant, yet not disgraceful; and from notions of sinfulness, to reject the¦99688 gifts of nature¦99689.
+\v 9 You'll be acting, I think, still more senselessly, if you follow vain conceits about¦99710 the truth.
 \v 10 You will, moreover, be despising me to your own punishment.
 \v 11 won't you awake from your trifling philosophy, give up the folly of your notions, and regaining understanding worthy of your age, search into the truth of an expedient course?
-\v 12 won't you respect my kindly admonition and have pity on your own years?
-\v 13 Because bear in mind that if there is any power which watches over this religion of yours, it will pardon you for all transgressions of the law which you commit through compulsion.”
+\v 12 won't you respect my kindly admonition and¦99761 have pity on your own years?
+\v 13 Because bear in mind that¦99774 if¦99775 there's¦99778 any power¦99783 which watches over this¦99780 religion¦99781 of yours, it'll pardon you¦99785 for all¦99787 transgressions of the law which you commit through compulsion.”
+\s1 Eleazar refuses to eat forbidden food
 \p
-\v 14 While the tyrant incited him in this manner to the unlawful eating of meat, Eleazar begged permission to speak.
-\v 15 Having received permission to speak, he began to address the people as follows:
-\v 16 “We, Oh Antiokos \add !(Antiochus)\add*, who are persuaded that we live under a divine law, consider no compulsion to be so forcible as obedience to that law.
-\v 17 Therefore we consider that we ought not to transgress the law in any way.
-\v 18 Indeed, were our law (as you suppose) not truly divine, and if we wrongly think it divine, we would have no right even in that case to destroy our sense of religion.
-\v 19 Don't think that eating unclean meat is a trifling offence.
-\v 20 Because transgression of the law, whether in small or great matters, is of equal importance;
-\v 21 for in either case the law is equally slighted.
-\v 22 But you deride our philosophy, as though we lived in it irrationally.
-\v 23 Yet it instructs us in self-control, so that we are superior to all pleasures and lusts; and it trains us in courage, so that we cheerfully undergo every grievance.
-\v 24 It instructs us in justice, so that in all our dealings we render what is due. It teaches us piety, so that we properly worship the one and only God.
-\v 25 That is why we don't eat the unclean; for believing that the law was established by God, we are convinced that the Creator of the world, in giving his laws, sympathises with our nature.
-\v 26 Those things which are suitable for our souls, he has directed us to eat; but those which are not, he has forbidden.
-\v 27 But, tyrant-like, you not only force us to break the law, but also to eat, that you may ridicule us as we thus profanely eat.
-\v 28 But you won't have this cause of laughter against me,
-\v 29 nor will I transgress the sacred oaths of my forefathers to keep the law.
-\v 30 No, not if you pluck out my eyes, and consume my entrails.
-\v 31 I am not so old, and void of courage as to not be youthful in reason and in defence of my religion.
-\v 32 Now then, prepare your wheels, and kindle a fiercer flame.
-\v 33 I will not so pity my old age, as on my account to break the law of my country.
-\v 34 I will not play false to you, Oh law, my instructor, or forsake you, Oh beloved self-control!
-\v 35 I will not put you to shame, Oh philosopher Reason, or deny you, Oh honoured priesthood and knowledge of the law.
-\v 36 Mouth! You shall not pollute my old age, nor the full stature of a perfect life.
-\v 37 My ancestors will receive me as pure, not having feared your compulsion, even to death.
-\v 38 Because you will rule like a tyrant over the ungodly, but you will not lord it over my thoughts about religion, either by your arguments, or through actions.”
+\v 14 While the¦99793 tyrant¦99801 incited him in this manner to¦99795 the¦99796 unlawful eating of¦99800 meat, Eleazar begged permission to speak.
+\v 15 Having received permission to¦99809 speak¦99809, he began to address the people as follows:
+\v 16 “We, Oh Antiokos \add !(Antiochus)\add*, who are persuaded that we live under a divine law¦99818, consider no compulsion to¦99823 be¦99823 so forcible as obedience to¦99826 that¦99827 law¦99828.
+\v 17 Therefore we consider that we ought not to¦99833 transgress the law in any way¦99835.
+\v 18 Indeed, were¦99845 our law¦99847 (as you¦99850 suppose) not truly divine¦99852, and¦99854 if¦99840 we¦99848 wrongly think it¦99856 divine¦99858, we'd¦99862 have no right¦99843 even in that¦99864 case to¦99865 destroy our sense of religion.
+\v 19 Don't¦99870 think that¦99875 eating unclean meat is¦99873 a trifling offence.
+\v 20 Because transgression of the¦99879 law, whether in small or great matters, is¦99888 of equal importance;
+\v 21 for¦99891 in either case the¦99894 law¦99895 is equally slighted.
+\v 22 But¦99898 you deride our philosophy, as¦99902 though we¦99899 lived in¦99906 it¦99907 irrationally.
+\v 23 Yet it instructs us in self-control, so¦99910 that we're¦99912 superior to all¦99915 pleasures¦99917 and¦99918 lusts; and¦99921 it trains us in courage, so¦99924 that we cheerfully undergo every¦99925 grievance.
+\v 24 It instructs¦99931 us in justice, so¦99932 that in all¦99934 our dealings we render what's due. It teaches¦99940 us piety¦99939, so¦99941 that we properly worship the one and only¦99942 God¦99945.
+\v 25 That's why we don't eat the unclean; for believing that the¦99955 law¦99956 was established by God¦99953, we're convinced that¦99958 the¦99965 Creator¦99968 of¦99966 the¦99966 world¦99967, in giving his laws, sympathises with our nature¦99961.
+\v 26 Those things which are suitable for our souls¦99974, he's directed us to¦99976 eat¦99976; but¦99978 those which aren't, he has forbidden.
+\v 27 But¦99983, tyrant-like, you not only¦99985 force us to¦99986 break the law, but¦99989 also¦99990 to¦99991 eat¦99991, that¦99992 you may ridicule us as we¦99995 thus profanely eat.
+\v 28 But¦100000 you won't have this cause of laughter against me,
+\v 29 nor will I transgress the sacred oaths¦100018 of¦100014 my forefathers to¦100015 keep¦100015 the¦100016 law¦100017.
+\v 30 No, not¦100021 if¦100022 you pluck out my eyes¦100026, and¦100027 consume my entrails¦100029.
+\v 31 I'm¦100036 not so¦100039 old¦100035, and¦100037 void of¦100041 courage as to not¦100044 be youthful in reason and in defence of my religion.
+\v 32 Now then, prepare your wheels, and¦100052 kindle a fiercer flame¦100054.
+\v 33 I won't so¦100063 pity¦100059 my old¦100062 age¦100062, as on my account to break the law¦100070 of my country.
+\v 34 I won't¦100076 play false to you, Oh law, my instructor, or forsake you, Oh beloved self-control¦100080!
+\v 35 I won't¦100081 put you to¦100082 shame, Oh philosopher Reason, or deny you, Oh honoured priesthood¦100089 and¦100091 knowledge¦100093 of the law.
+\v 36 Mouth¦100100! You mustn't¦100101 disgrace my old age¦100104, nor the full stature of a perfect life¦100103.
+\v 37 My ancestors will receive me as pure¦100105, not¦100110 having feared your compulsion, even to death¦100115.
+\v 38 Because¦100119 you'll rule like a tyrant over the¦100121 ungodly¦100117, but¦100122 you won't lord it over my¦100123 thoughts¦100127 about¦100124 religion, either by your arguments, or through¦100132 actions¦100133.”
 \c 6
+\s1 Eleazar endures torture
 \p
-\v 1 When Eleazar had in this manner answered the exhortations of the tyrant, the spearbearers came up, and rudely dragged Eleazar to the instruments of torture.
-\v 2 First, they stripped the old man, adorned as he was with the beauty of piety.
-\v 3 Then tying back his arms and hands, they disdainfully flogged him.
-\v 4 A herald opposite cried out, “Obey the commands of the king!”
+\v 1 When Eleazar had in this manner answered the exhortations of¦100139 the¦100139 tyrant¦100140, the¦100143 spearbearers came up, and rudely dragged Eleazar to¦100147 the instruments of torture.
+\v 2 First¦100153, they stripped the¦100156 old man¦100154, adorned as he was with the¦100160 beauty of piety¦100161.
+\v 3 Then¦100163 tying back his arms and hands, they disdainfully flogged him.
+\v 4 A herald opposite cried out, “Obey the¦100170 king's¦100171 commands!”
 \p
-\v 5 But the high-minded and truly noble Eleazar, as one tortured in a dream, ignored it.
+\v 5 But the¦100176 high-minded¦100178 and¦100179 truly¦100182 noble¦100180 Eleazar, as¦100184 one tortured¦100187 in¦100185 a dream, ignored it.
 \v 6 But raising his eyes on high to heaven, the old man's flesh was stripped off by the scourges, and his blood streamed down, and his sides were pierced through.
 \v 7 Falling on the ground from his body having no power to endure the pains, he still kept his reasoning upright and unbending.
-\v 8 Then one of the harsh spearbearers rushed at him and began to kick him in the side to force him to get up again after he fell.
-\v 9 But he endured the pains, despised the cruelty, and persevered through the indignities.
-\v 10 Like a noble athlete, the old man, when struck, vanquished his torturers.
-\v 11 His face sweating, and he panting for breath, he was admired even by the torturers for his courage.
+\v 8 Then one¦100239 of the harsh spearbearers rushed at him and began to kick him in the side to force him to get up again after he fell.
+\v 9 But¦100250 he endured the¦100252 pains, despised the¦100256 cruelty, and¦100258 persevered through the¦100260 indignities.
+\v 10 Like¦100263 a noble athlete, the old¦100271 man¦100271, when¦100262 struck, vanquished his torturers.
+\v 11 His face¦100276 sweating, and he panting for breath, he was admired even by¦100281 the torturers for his courage.
+\s1 Eleazar refuses to pretend
 \p
 \v 12 Therefore, partly in pity for his old age,
 \v 13 partly from the sympathy of acquaintance, and partly in admiration of his endurance, some of the attendants of the king said,
 \v 14 “Why do you unreasonably destroy yourself, Oh Eleazar, with these miseries?
-\v 15 We will bring you some meat cooked by yourself, and you can save yourself by pretending that you have eaten swine's flesh.”
+\v 15 We'll¦100325 bring you¦100331 some meat cooked by yourself, and¦100332 you can save yourself by pretending that¦100334 you've eaten¦100329 swine's flesh.”
 \p
-\v 16 Eleazar, as though the advice more painfully tortured him, cried out,
-\v 17 “Let us who are children of Avraham not be so evil advised as by giving way to make use of an unbecoming pretence.
-\v 18 Because it would be irrational, if having lived up to old age in all truth, and having scrupulously guarded our character for it, we would now turn back
-\v 19 and ourselves become a pattern of impiety to the young, as being an example of eating pollution.
-\v 20 It would be disgraceful if we would live on some short time, and that scorned by all men for cowardice,
+\v 16 Eleazar, as¦100341 though the¦100344 advice more painfully tortured him, cried¦100347 out¦100347,
+\v 17 “Let us who¦100352 are children of Avraham not be so¦100355 evil advised as by giving way to make use of an unbecoming pretence.
+\v 18 Because it'd be irrational, if¦100364 having lived¦100371 up to¦100365 old age in all truth¦100366, and¦100372 having scrupulously guarded¦100378 our character for it¦100375, we'd now¦100379 turn back
+\v 19 and¦100381 ourselves become a¦100391 pattern of impiety to¦100392 the¦100393 young, as being an example¦100389 of eating pollution.
+\v 20 It'd be disgraceful if we'd live on some short time, and that scorned by all men for cowardice,
 \v 21 and be condemned by the tyrant for cowardice by not contending to the death for our divine law.
-\v 22 Therefore you, Oh children of Avraham, die nobly for your religion.
-\v 23 You spearbearers of the tyrant, why do you linger?”
+\v 22 Therefore you¦100427, Oh¦100429 children of Avraham, die nobly for¦100433 your religion.
+\v 23 You spearbearers of¦100439 the¦100439 tyrant¦100440, why do you linger?”
+\s1 Eleazar's final prayer and death
 \p
-\v 24 Listening him so high-minded against misery, and not changing at their pity, they led him to the fire.
-\v 25 Then with their wickedly contrived instruments they burnt him on the fire, and poured stinking fluids down into his nostrils.
+\v 24 Listening him so high-minded against misery, and¦100451 not changing at their pity, they led him to¦100453 the¦100454 fire¦100459.
+\v 25 Then with their wickedly contrived instruments they burnt him on the¦100473 fire, and¦100469 poured stinking fluids down into his nostrils.
 \p
 \v 26 He being at length burnt down to the bones, and about to expire, raised his eyes Godward, and said,
-\v 27 “You know, Oh God, that when I might have been saved, I am slain for the sake of the law by tortures of fire.
+\v 27 “You know, Oh God, that when I might have been saved, I'm slain for the sake of the law by tortures of fire.
 \v 28 Be merciful to your people, and be satisfied with the punishment of me on their account.
-\v 29 Let my blood be a purification for them, and take my life in exchange for theirs.”
-\v 30 Thus speaking, the holy man departed, noble in his torments, and even to the agonies of death resisted in his reasoning for the sake of the law.
-\v 31 Confessedly, therefore, religious reasoning is master of the emotions.
-\v 32 Because had the emotions been superior to reasoning, I would have given them the witness of this mastery.
-\v 33 But now, since reasoning conquered the emotions, we befittingly award it the authority of first place.
-\v 34 It is only fair that we should allow that the power belongs to reasoning, since it masters external miseries.
-\v 35 It would be ridiculous if it weren't so. I prove that reasoning has not only mastered pains, but that it is also superior to the pleasures, and withstands them.
+\v 29 Let my¦100522 blood¦100523 be a purification for them, and¦100524 take¦100527 my¦100529 life in exchange for theirs.”
+\v 30 Thus speaking, the¦100534 holy man¦100536 departed, noble in his torments¦100539, and¦100541 even to the¦100543 agonies of¦100544 death¦100545 resisted in his reasoning for the¦100548 sake of¦100550 the¦100551 law¦100552.
+\v 31 Confessedly, therefore, religious reasoning is master¦100555 of the emotions.
+\v 32 Because¦100563 had the emotions been superior to reasoning, I'd have given them the witness of¦100566 this mastery.
+\v 33 But now¦100576, since reasoning conquered the emotions, we befittingly award it¦100583 the authority¦100589 of first place.
+\v 34 It's only fair that we should allow that the power belongs to reasoning, since it masters external miseries.
+\v 35 It'd be ridiculous if it weren't so. I prove that reasoning hasn't only mastered pains, but that it's also superior to the pleasures, and withstands them.
 \c 7
+\s1 Eleazar's example of faith and self-control
 \p
-\v 1 The reasoning of our father Eleazar, like a first-rate pilot, steering the vessel of piety in the sea of emotions,
-\v 2 and flouted by the threats of the tyrant, and overwhelmed with the breakers of torture,
-\v 3 in no way shifted the rudder of piety until it sailed into the harbour of victory over death.
-\v 4 No besieged city has ever held out against many and various war machines as that holy man did when his pious soul was tried with the fiery trial of tortures and rackings and moved his besiegers through the religious reasoning that shielded him.
-\v 5 Because father Eleazar, projecting his disposition, broke the raging waves of the emotions as with a jutting cliff.
-\v 6 Oh priest worthy of the priesthood! You didn't pollute your sacred teeth, nor make your appetite, which had always embraced the clean and lawful, a partaker of profanity.
-\v 7 Oh harmoniser with the law, and sage devoted to a divine life!
-\v 8 Of such a character ought those to be who perform the duties of the law at the risk of their own blood, and defend it with generous sweat by sufferings even to death.
-\v 9 You, father, have gloriously established our right government by your endurance; and making of much account our past service, prevented its destruction, and by your actions, have made credible the words of philosophy.
-\v 10 Oh aged man of more power than tortures, elder more vigorous than fire, greatest king over the emotions, Eleazar!
-\v 11 Because as father Aharon \add !(Aaron)\add*, armed with a censer, hastening through the consuming fire, vanquished the flame-bearing angel,
-\v 12 so, Eleazar, the descendant of Aharon, wasted away by the fire, didn't give up his reasoning.
-\v 13 What is most wonderful is that though he was an old man, though the labours of his body were now spent, his muscles were relaxed, and his sinews worn out, he recovered youth.
-\v 14 By the spirit of reasoning, and the reasoning of Yitshak \add !(Isaac)\add*, he rendered powerless the many-headed rack.
-\v 15 Oh blessed old age, and reverend hoar head, and life obedient to the law, which the faithful seal of death perfected.
-\v 16 If, then, an old man, through religion, despised tortures even to death, then certainly religious reasoning is ruler of the emotions.
-\v 17 But perhaps some might say, “It is not all who conquer emotions, as not all possess wise reasoning.”
-\v 18 But those who have meditated upon religion with their whole heart, these alone can master the emotions of the flesh:
-\v 19 they who believe that to God they don't die; for, as our forefathers, Avraham, Yitshak, and Ya’akov \add !(Jacob)\add*, they live to God.
-\v 20 This circumstance, then, is by no means an objection, that some who have weak reasoning are governed by their emotions,
-\v 21 since what person, walking religiously by the whole rule of philosophy, and believing in God,
-\v 22 and knowing that it is a blessed thing to endure all kinds of hardships for virtue, would not, for the sake of religion, master his emotion?
-\v 23 Because only the wise and brave man is lord over his emotions.
-\v 24 This is why even boys, trained with the philosophy of religious reasoning, have conquered still more bitter tortures;
-\v 25 for when the tyrant was manifestly vanquished in his first attempt, in being unable to force the old man to eat the unclean thing,
+\v 1 The¦100631 reasoning of¦100632 our father¦100633 Eleazar, like a first-rate pilot, steering the vessel of piety¦100640 in¦100642 the sea¦100646 of emotions,
+\v 2 and¦100647 flouted by the¦100649 threats of¦100650 the¦100650 tyrant¦100651, and¦100653 overwhelmed with the breakers of torture,
+\v 3 in no way¦100661 shifted the rudder of piety¦100665 until¦100667 it sailed into¦100670 the harbour¦100675 of victory over death¦100673.
+\v 4 No¦100676 besieged city¦100678 has ever held out against many and¦100680 various¦100681 war machines as that holy man did when¦100684 his pious soul¦100692 was tried with the fiery trial of tortures and¦100694 rackings and¦100695 moved his besiegers through¦100701 the¦100702 religious reasoning that shielded him.
+\v 5 Because¦100708 father¦100715 Eleazar, projecting his disposition, broke the¦100719 raging waves of the¦100721 emotions as with a jutting cliff.
+\v 6 Oh¦100724 priest worthy of the¦100726 priesthood¦100727! You didn't¦100734 pollute your sacred teeth¦100733, nor make your appetite, which had always embraced the¦100735 clean¦100738 and¦100737 lawful, a partaker of profanity.
+\v 7 Oh¦100743 harmoniser with the law¦100745, and¦100746 sage devoted to a divine life¦100749!
+\v 8 Of such¦100750 a character ought those to¦100752 be¦100752 who perform the duties of the¦100755 law¦100756 at the risk of their own¦100757 blood¦100758, and¦100759 defend it with generous sweat by sufferings even to death¦100764.
+\v 9 You¦100767, father¦100768, have gloriously established our right government by your endurance; and making of¦100772 much account our past service, prevented its destruction, and¦100778 by your actions, have made credible the¦100779 words¦100792 of¦100785 philosophy¦100791.
+\v 10 Oh¦100793 aged man¦100796 of more power than tortures, elder more vigorous than fire¦100797, greatest king¦100803 over the emotions, Eleazar¦100804!
+\v 11 Because as¦100805 father¦100808 Aharon \add !(Aaron)\add*, armed with a censer, hastening through¦100813 the¦100814 consuming fire, vanquished the¦100817 flame-bearing angel¦100820,
+\v 12 so, Eleazar, the¦100822 descendant of Aharon, wasted away by the¦100826 fire¦100827, didn't give up his reasoning.
+\v 13 What's most wonderful is that though he was an¦100836 old¦100836 man¦100836, though the¦100841 labours of¦100842 his body¦100843 were now spent, his muscles were relaxed, and his sinews worn out, he recovered youth.
+\v 14 By the¦100856 spirit¦100857 of¦100858 reasoning, and¦100860 the¦100861 reasoning of Yitshak \add !(Isaac)\add*, he rendered powerless the¦100864 many-headed rack.
+\v 15 Oh¦100868 blessed¦100869 old age, and¦100871 reverend hoar head, and¦100874 life¦100875 obedient to the law, which¦100877 the faithful¦100878 seal¦100880 of death¦100879 perfected¦100881.
+\v 16 If¦100882, then¦100884, an¦100885 old¦100885 man¦100885, through¦100891 religion, despised tortures even to¦100895 death¦100888, then certainly religious reasoning is¦100895 ruler¦100894 of the emotions.
+\v 17 But perhaps¦100901 some might say, “It isn't all¦100909 who¦100911 conquer emotions, as not¦100912 all¦100913 possess wise reasoning.”
+\v 18 But¦100918 those who've meditated on religion with their whole¦100923 heart¦100924, these alone¦100926 can master the¦100929 emotions of the¦100930 flesh¦100931:
+\v 19 they who¦100933 believe that¦100935 to God¦100936 they don't die¦100938; for¦100940, as¦100939 our forefathers, Avraham, Yitshak, and Ya'akov \add !(Jacob)\add*, they live¦100947 to God¦100949.
+\v 20 This circumstance, then¦100951, is by no means an objection, that¦100953 some who¦100958 have weak¦100959 reasoning are governed by their emotions,
+\v 21 since¦100961 what person, walking religiously by the whole¦100964 rule¦100968 of philosophy¦100967, and¦100971 believing in¦100972 God¦100973,
+\v 22 and¦100974 knowing that¦100976 it's a blessed¦100983 thing to endure all¦100980 kinds of hardships for virtue¦100979, wouldn't, for the¦100988 sake of¦100990 religion, master his emotion?
+\v 23 Because¦100994 only the¦100995 wise¦100996 and¦100997 brave man is¦101000 lord¦101003 over his emotions.
+\v 24 This is why even boys, trained with the philosophy of¦101004 religious reasoning, have conquered still more bitter tortures;
+\v 25 for¦101019 when the¦101021 tyrant¦101027 was manifestly vanquished in his first¦101022 attempt, in being unable to force the¦101026 old man¦101048 to eat the¦101033 unclean thing,
 \c 8
 \nb
-\v 1 then, indeed, vehemently swayed with emotion, he commanded to bring others of the adult Ivrim \add !(Hebrews)\add*, and if they would eat of the unclean thing, to let them go when they had eaten; but if they objected, to torment them more grievously.
-\v 2 The tyrant having given this charge, seven kindred were brought into his presence, along with their aged mother. They were handsome, modest, well-born, and altogether comely.
-\v 3 When the tyrant saw them encircling their mother as in a dance, he was pleased with them. Being struck with their becoming and innocent manner, smiled at them, and calling them near, said,
-\v 4 “O youths, with favourable feelings, I admire the beauty of each of you. Greatly honouring so numerous a band of kindred, I not only counsel you not to share the madness of the old man who has been tortured before,
-\v 5 but I beg you to yield, and to enjoy my friendship; for I possess the power, not only of punishing those who disobey my commands, but of doing good to those who obey them.
-\v 6 Put confidence in me, then, and you will receive places of authority in my government, if you forsake your national way of life,
-\v 7 and, conforming to the Greek way of life, alter your rule and revel in youth's delights.
-\v 8 Because if you provoke me by your disobedience, you will compel me to destroy every one of you with terrible punishments by tortures.
-\v 9 Have mercy, then, upon your own selves, whom I, although an enemy, am compassionate for your age and attractive appearance.
-\v 10 won't you consider this: that if you disobey, there will be nothing left for you but to die in torture?”
+\s1 Seven brothers face the king's threats
 \p
-\v 11 When he had said this, he ordered the instruments of torture to be brought forward, that fear might prevail upon them to eat unclean meat.
+\v 1 then¦101034, indeed, vehemently swayed with emotion, he commanded to¦101038 bring¦101045 others of the¦101041 adult Ivrim \add !(Hebrews)\add*, and if they'd eat of the¦101043 unclean thing, to¦101045 let them go when they'd eaten; but if¦101047 they objected, to¦101050 torment them more grievously.
+\v 2 The¦101059 tyrant¦101060 having given this¦101057 charge, seven¦101066 kindred were brought into his presence, along with¦101063 their aged mother¦101065. They were handsome, modest, well-born, and altogether comely.
+\v 3 When the¦101080 tyrant¦101081 saw them encircling their mother¦101088 as¦101082 in¦101083 a dance, he¦101091 was pleased with them. Being struck with their becoming and innocent manner, smiled at them, and calling¦101103 them near¦101102, said¦101104,
+\v 4 “O youths, with favourable feelings, I admire the beauty of each of you. Greatly honouring so numerous a band of kindred, I not only counsel you not to share the madness of the old man who's been tortured before,
+\v 5 but I beg you to yield, and to enjoy my friendship; for I possess the power, not only of punishing those who disobey my commands, but of doing good to those who obey them.
+\v 6 Put confidence in me, then¦101154, and¦101155 you'll receive¦101162 places of authority in my¦101159 government, if you forsake your national way of life,
+\v 7 and¦101170, conforming to the Greek way of life¦101173, alter your rule and¦101174 revel in youth's delights.
+\v 8 Because¦101180 if¦101181 you provoke me by your disobedience¦101187, you'll¦101188 compel me to¦101191 destroy¦101200 every one of you with terrible punishments by tortures.
+\v 9 Have mercy, then¦101202, on your¦101203 own selves, whom I, although an enemy, am compassionate for your age¦101211 and¦101212 attractive appearance.
+\v 10 won't you consider this¦101218: that¦101219 if you¦101221 disobey¦101222, there'll be nothing left for you but¦101223 to¦101227 die¦101227 in torture?”
+\p
+\v 11 When he'd¦101229 said this¦101234, he ordered¦101232 the¦101237 instruments of torture to be brought forward, that¦101239 fear¦101243 might prevail on them to eat unclean meat.
 \v 12 When the spearman brought forward the wheels, the racks, the hooks, racks, cauldrons, pans, finger-racks, iron hands and wedges, and bellows, the tyrant continued:
 \v 13 “Fear, young men, and the righteousness which you worship will be merciful to you if you transgress because of compulsion.”
 \p
-\v 14 Now they having listened to these words of persuasion, and seeing the fearful instruments, not only were not afraid, but even answered the arguments of the tyrant, and through their good reasoning destroyed his power.
-\v 15 Now let's consider the matter. Had any of them been weak-spirited and cowardly amongst them, what reasoning would they have employed but these?
-\v 16 “O wretched that we are, and exceedingly senseless! When the king exhorts us, and calls us to his bounty, should we not obey him?
-\v 17 Why do we cheer ourselves with vain counsels, and venture upon a disobedience bringing death?
-\v 18 Shall we not fear, Oh kindred, the instruments of torture and weigh the threatenings of torment and shun this vain-glory and destructive pride?
-\v 19 Let's have compassion upon our age and relent over the years of our mother.
-\v 20 Let's bear in mind that we will be dying as rebels.
-\v 21 Divine Justice will pardon us if we fear the king through necessity.
-\v 22 Why withdraw ourselves from a most sweet life, and deprive ourselves of this pleasant world?
-\v 23 Let's not oppose necessity, nor seek vain-glory by our own torture.
-\v 24 The law itself wouldn't arbitrarily put us to death because we dread torture.
-\v 25 Why has such angry zeal taken root in us, and such fatal obstinacy approved itself to us, when we might live unmolested by the king?”
+\v 14 Now they having listened to¦101296 these words of persuasion, and¦101298 seeing¦101299 the fearful instruments, not only¦101302 weren't afraid¦101304, but¦101305 even answered the arguments of the¦101308 tyrant¦101309, and¦101310 through¦101311 their good reasoning destroyed his power.
+\v 15 Now let's consider the matter. Had any of them been¦101324 weak-spirited and¦101325 cowardly among¦101327 them, what reasoning would they've employed but these?
+\v 16 “O wretched that we¦101337 are, and¦101338 extremely senseless! When the king¦101341 exhorts us, and¦101344 calls us to¦101345 his bounty, shouldn't¦101348 we obey him?
+\v 17 Why do we cheer ourselves with vain counsels, and¦101356 venture on a disobedience¦101358 bringing death?
+\v 18 Shouldn't we fear, Oh kindred, the¦101364 instruments of torture and¦101366 weigh the threatenings of torment and¦101372 shun this vain-glory and¦101377 destructive pride?
+\v 19 Let's have compassion on our age¦101383 and¦101384 relent over the years of our mother¦101388.
+\v 20 Let's bear in mind that¦101392 we'll be dying as rebels.
+\v 21 Divine Justice will pardon us if we¦101397 fear the¦101399 king¦101405 through¦101402 necessity¦101403.
+\v 22 Why withdraw ourselves from a most sweet life¦101412, and¦101413 deprive ourselves of¦101416 this pleasant world¦101418?
+\v 23 Let's not¦101419 oppose necessity¦101422, nor¦101423 seek vain-glory by our own torture¦101428.
+\v 24 The¦101431 law itself wouldn't arbitrarily put us to death because we¦101434 dread torture.
+\v 25 Why has such angry zeal taken root in us, and¦101445 such fatal obstinacy approved itself to us, when we¦101440 might live unmolested by the¦101454 king¦101455?”
 \p
-\v 26 But the young men didn't say or think anything of this kind when about to be tortured.
+\v 26 But¦101457 the young men didn't¦101465 say¦101460 or think anything of this¦101461 kind when¦101465 about to¦101464 be tortured.
 \v 27 Because they were well aware of the sufferings, and masters of the pains.
 \v 28-29 So that as soon as the tyrant had ceased counselling them to eat the unclean, they all with one voice, as from the same heart said,
 \c 9
 \nb
-\v 1 “Why do you delay, Oh tyrant? Because we are more ready to die than to transgress the injunctions of our fathers.
-\v 2 We would be disgracing our fathers if we didn't obey the law, and take knowledge for our guide.
-\v 3 Oh tyrant, counsellor of law-breaking, do not, hating us as you do, pity us more than we pity ourselves.
-\v 4 Because we consider your escape to be worse than death.
-\v 5 You try to scare us by threatening us with death by tortures, as though you had learnt nothing by the death of Eleazar.
-\v 6 But if aged men of the Ivrim \add !(Hebrews)\add* have died in the cause of religion after enduring torture, more rightly should we younger men die, scorning your cruel tortures, which our aged instructor overcame.
-\v 7 Make the attempt, then, Oh tyrant. If you put us to death for our religion, don't think that you harm us by torturing us.
-\v 8 Because we through this ill-treatment and endurance will gain the rewards of virtue.
-\v 9 But you, for the wicked and despotic slaughter of us, will, from the Divine vengeance, endure eternal torture by fire.”
+\v 1 “Why do you delay, Oh¦101498 tyrant¦101499? Because¦101501 we're¦101502 more ready¦101500 to¦101503 die¦101503 than¦101504 to transgress the¦101506 injunctions of our fathers.
+\v 2 We'd be disgracing our fathers if¦101516 we didn't¦101517 obey the¦101519 law¦101520, and¦101522 take knowledge¦101524 for our guide.
+\v 3 Oh tyrant¦101527, counsellor of law-breaking, don't¦101529, hating¦101531 us as you do, pity us more than we¦101534 pity ourselves.
+\v 4 Because¦101537 we consider your escape to¦101542 be¦101542 worse than death¦101540.
+\v 5 You try to scare us by threatening us with death¦101559 by tortures, as¦101561 though you'd learnt¦101567 nothing by the death of Eleazar.
+\v 6 But¦101569 if aged men of the¦101570 Ivrim \add !(Hebrews)\add* have died in the¦101572 cause of¦101574 religion after enduring torture, more rightly should we younger men die¦101580, scorning your cruel tortures, which¦101593 our aged instructor¦101596 overcame.
+\v 7 Make the attempt, then¦101602, Oh tyrant¦101601. If¦101606 you put us to death for¦101608 our religion, don't¦101611 think that¦101609 you harm us by torturing us.
+\v 8 Because we¦101616 through¦101619 this¦101621 ill-treatment and¦101623 endurance will gain the rewards of virtue.
+\v 9 But you¦101630, for the wicked and¦101631 despotic slaughter of¦101632 us, will, from the¦101639 Divine¦101640 vengeance, endure eternal¦101642 torture by fire¦101645.”
+\s1 The first two brothers are killed
 \p
-\v 10 When they had said this, the tyrant was not only exasperated against them for being disobedient, but enraged with them for being ungrateful.
-\v 11 So, at his bidding, the torturers brought the oldest of them, and tearing through his tunic, bound his hands and arms on each side with straps.
-\v 12 When they had laboured hard without effect in scourging him, they hurled him on the wheel.
-\v 13 The noble youth, extended upon this, became dislocated.
-\v 14 With every member disjointed, he denounced the tyrant, saying,
-\v 15 “O most accursed tyrant, and enemy of heavenly justice, and cruel-hearted, I am no murderer, nor sacrilegious man, whom you torture, but a defender of the Divine law.”
+\v 10 When¦101659 they'd said this¦101646, the¦101655 tyrant¦101656 wasn't only¦101650 exasperated against them for being disobedient¦101653, but¦101657 enraged with them for being ungrateful.
+\v 11 So, at his bidding, the¦101664 torturers brought the¦101669 oldest of them, and¦101671 tearing¦101672 through his tunic¦101674, bound his hands¦101677 and¦101679 arms on each side with straps¦101682.
+\v 12 When¦101685 they'd laboured hard without effect in scourging him, they hurled him on¦101694 the¦101695 wheel¦101696.
+\v 13 The¦101700 noble¦101701 youth, extended on this, became dislocated.
+\v 14 With every¦101707 member¦101708 disjointed, he denounced the tyrant, saying,
+\v 15 “O most accursed tyrant¦101712, and¦101714 enemy¦101718 of heavenly¦101716 justice, and¦101719 cruel-hearted, I'm no¦101721 murderer, nor sacrilegious man, whom¦101726 you torture, but¦101730 a defender of the Divine law¦101732.”
 \p
-\v 16 And when the spearmen said, “Consent to eat, that you may be released from your tortures,”
-\v 17 he answered, “Not so powerful, Oh accursed lackeys, is your wheel, as to stifle my reasoning. Cut my limbs, and burn my flesh, and twist my joints.
-\v 18 Because through all my torments I will convince you that the children of the Ivrim \add !(Hebrews)\add* are alone unconquered on behalf of virtue.”
+\v 16 And¦101734 when the¦101735 spearmen said, “Consent to¦101739 eat¦101739, that¦101742 you may be released from your tortures,”
+\v 17 he answered, “Not so¦101757 powerful, Oh accursed lackeys, is your wheel, as to stifle my reasoning. Cut my limbs, and¦101765 burn my flesh¦101768, and¦101769 twist my joints.
+\v 18 Because through all¦101774 my torments I'll convince you¦101776 that¦101780 the children of the Ivrim \add !(Hebrews)\add* are alone¦101781 unconquered on behalf of virtue.”
 \p
-\v 19 While he was saying this, they heaped up fuel, and setting fire to it, strained him on the wheel still more.
-\v 20 The wheel was defiled all over with blood. The hot ashes were quenched by the droppings of gore, and pieces of flesh were scattered about the axles of the machine.
-\v 21 Although the framework of his bones was now destroyed, the high-minded and Abrahamic youth didn't groan.
-\v 22 But, as though transformed by fire into immortality, he nobly endured the rackings, saying,
+\v 19 While he was saying this, they heaped up fuel, and setting fire¦101791 to it, strained him on the¦101795 wheel¦101796 still more.
+\v 20 The¦101802 wheel¦101803 was defiled all¦101800 over with blood¦101801. The hot ashes were quenched by the droppings of gore, and¦101814 pieces of flesh were scattered about¦101815 the¦101816 axles of¦101818 the machine.
+\v 21 Although the framework of¦101830 his bones¦101829 was now destroyed, the¦101831 high-minded¦101832 and¦101833 Abrahamic youth didn't groan¦101837.
+\v 22 But¦101838, as¦101839 though transformed by fire¦101841 into¦101845 immortality, he nobly endured¦101845 the¦101847 rackings, saying,
 \v 23 “Imitate me, Oh kindred. Never desert your station, nor renounce my brotherhood in courage. Fight the holy and honourable fight of religion,
 \v 24 by which means our just and paternal Providence, becoming merciful to the nation, will punish the pestilent tyrant.”
-\v 25 Saying this, the revered youth abruptly closed his life.
+\v 25 Saying¦101891 this¦101892, the¦101896 revered youth abruptly closed his life.
 \p
-\v 26 When all admired his courageous soul, the spearmen brought forward him who was second oldest, and having put on iron gauntlets with sharp hooks, bound him to the rack.
-\v 27 When, on enquiring whether he would eat before he was tortured, they heard his noble sentiment.
-\v 28 After they with the iron gauntlets had violently dragged all the flesh from the neck to the chin, the panther-like animals tore off the very skin of his head, but he, bearing with firmness this misery, said,
-\v 29 “How sweet is every form of death for the religion of our fathers!” Then he said to the tyrant,
-\v 30 “Don't you think, most cruel of all tyrants, that you are now tortured more than I, finding your arrogant conception of tyranny conquered by our perseverance in behalf of our religion?
-\v 31 Because I lighten my suffering by the pleasures which are connected with virtue.
-\v 32 But you are tortured with threatenings for impiety. You won't escape, most corrupt tyrant, the vengeance of Divine wrath.”
+\v 26 When¦101899 all¦101900 admired his courageous soul¦101903, the¦101905 spearmen brought forward him who was second¦101912 oldest, and¦101913 having put on iron gauntlets with sharp hooks, bound him to the rack.
+\v 27 When¦101926, on enquiring whether he'd eat¦101928 before¦101930 he was tortured, they heard¦101936 his noble sentiment.
+\v 28 After they with the iron gauntlets had violently dragged all¦101950 the¦101948 flesh¦101949 from the neck to the chin, the panther-like animals tore off the very skin of his head¦101954, but¦101961 he¦101962, bearing with firmness this¦101964 misery, said,
+\v 29 “How¦101968 sweet is every¦101970 form of death¦101972 for¦101973 the religion of our fathers!” Then¦101979 he said¦101978 to¦101980 the¦101981 tyrant¦101982,
+\v 30 “Don't you think¦101984, most cruel of all¦101985 tyrants¦101987, that you're¦101990 now¦101991 tortured more than I, finding your arrogant conception of tyranny conquered by¦102001 our perseverance¦102007 in behalf of our religion?
+\v 31 Because¦102012 I lighten my suffering by the¦102013 pleasures¦102015 which are connected with virtue¦102014.
+\v 32 But you're tortured with threatenings for impiety. You¦102019 won't escape¦102028, most corrupt tyrant¦102031, the vengeance of Divine¦102034 anger¦102035.”
 \c 10
+\s1 The third and fourth brothers remain faithful
 \p
-\v 1 Now this one endured this praiseworthy death. The third was brought along, and exhorted by many to taste and save his life.
-\v 2 But he cried out and said, “Don't you know that the father of those who are dead is my father also, and that the same mother bore me, and that I was brought up in the same way?
+\v 1 Now this¦102038 one endured this¦102039 praiseworthy death¦102041. The¦102043 third¦102044 was brought¦102045 along, and exhorted by¦102048 many to taste and save his life.
+\v 2 But he cried out and said¦102056, “Don't you know that¦102059 the father of those who are dead is my father also, and¦102066 that the¦102067 same mother¦102069 bore me, and¦102071 that I was brought up in the¦102073 same way?
 \v 3 I don't renounce the noble relationship of my kindred.
 \v 4 Now then, whatever instrument of vengeance you have, apply it to my body, for you aren't able to touch my soul, even if you want to.”
-\v 5 But they, highly incensed at his boldness of speech, dislocated his hands and feet with racking engines, and wrenching them from their sockets, dismembered him.
-\v 6 They dragged around his fingers, his arms, his legs, and his ankles.
+\v 5 But¦102104 they, highly incensed at his boldness¦102108 of¦102109 speech, dislocated his hands¦102114 and¦102116 feet¦102118 with racking engines, and¦102120 wrenching them from¦102121 their sockets, dismembered him.
+\v 6 They dragged around his fingers¦102127, his arms, his legs¦102133, and¦102134 his ankles.
 \v 7 Not being able by any means to strangle him, they tore off his skin, together with the extreme tips of his fingers, and then dragged him to the wheel,
 \v 8 around which his vertebral joints were loosened, and he saw his own flesh torn to shreds, and streams of blood flowing from his entrails.
-\v 9 When about to die, he said,
-\v 10 “We, Oh accursed tyrant, suffer this for the sake of Divine education and virtue.
-\v 11 But you, for your impiety and blood shedding, will endure unceasing torments.”
+\v 9 When¦102178 about to¦102179 die¦102179, he said,
+\v 10 “We¦102181, Oh¦102183 accursed tyrant¦102185, suffer¦102192 this¦102191 for¦102186 the sake of¦102186 Divine education and¦102188 virtue¦102189.
+\v 11 But you¦102193, for¦102195 your impiety and¦102198 blood shedding, will endure unceasing torments.”
 \p
-\v 12 Thus having died worthily of his kindred, they dragged forward the fourth, saying,
-\v 13 “Don't share the madness of your kindred, but respect the king and save yourself.”
+\v 12 Thus having died worthily of his kindred, they dragged forward the¦102207 fourth¦102208, saying,
+\v 13 “Don't¦102211 share the madness of your¦102219 kindred, but¦102221 respect the¦102223 king¦102224 and save yourself¦102226.”
 \p
-\v 14 But he said to them, “You don't have a fire so scorching as to make me play the coward.
-\v 15 By the blessed death of my kindred, and the eternal punishment of the tyrant, and the glorious life of the pious, I will not repudiate the noble brotherhood.
-\v 16 Invent, Oh tyrant, tortures, that you may learn, even through them, that I am the brother of those tormented before.”
+\v 14 But¦102228 he¦102229 said¦102230 to¦102234 them, “You don't have¦102234 a fire¦102238 so¦102239 scorching as to make me play the coward.
+\v 15 By¦102242 the¦102243 blessed¦102244 death¦102248 of my kindred, and¦102249 the¦102250 eternal¦102251 punishment of¦102252 the¦102252 tyrant¦102253, and¦102255 the glorious life¦102260 of the pious, I won't repudiate the noble brotherhood¦102265.
+\v 16 Invent, Oh tyrant¦102267, tortures, that¦102269 you may learn, even through¦102271 them, that¦102274 I'm¦102276 the¦102277 brother¦102275 of those tormented before.”
 \p
-\v 17 When he had said this, the blood-thirsty, murderous, and unholy Antiokos \add !(Antiochus)\add* ordered his tongue to be cut out.
-\v 18 But he said, “Even if you take away the organ of speech, God still hears the silent.
-\v 19 Listen, my tongue is extended, cut it off; for in spite of that you won't silence our reasoning.
-\v 20 We gladly lose our limbs on behalf of God.
-\v 21 But God will speedily find you, since you cut off the tongue, the instrument of divine melody.”
+\v 17 When he'd said this¦102279, the¦102281 blood-thirsty, murderous, and unholy Antiokos \add !(Antiochus)\add* ordered¦102288 his tongue to¦102288 be cut out.
+\v 18 But¦102294 he said¦102295, “Even¦102296 if¦102296 you take away the organ of speech, God¦102306 still hears¦102304 the¦102305 silent.
+\v 19 Listen, my tongue¦102310 is extended, cut it¦102315 off; for¦102313 in spite of that¦102316 you won't silence our reasoning.
+\v 20 We gladly¦102320 lose our limbs on behalf of¦102322 God¦102323.
+\v 21 But¦102330 God¦102334 will speedily find you, since you cut off the¦102335 tongue, the¦102337 instrument of divine melody.”
 \c 11
+\s1 The fifth and sixth brothers face death
 \p
-\v 1 When he had died, disfigured in his torments, the fifth leapt forward, and said,
-\v 2 “I don't intend, Oh tyrant, to get excused from the torment which is on behalf of virtue.
-\v 3 But I have come of my own accord, that by my death you may owe heavenly vengeance and punishment for more crimes.
-\v 4 Oh you hater of virtue and of men, what have we done that you thus revel in our blood?
-\v 5 Does it seem evil to you that we worship the Founder of all things, and live according to his surpassing law?
+\v 1 When he'd¦102346 died, disfigured in his torments¦102348, the¦102351 fifth¦102352 leapt forward, and said,
+\v 2 “I don't intend, Oh tyrant¦102357, to¦102358 get excused¦102364 from the torment¦102363 which is on behalf of virtue.
+\v 3 But¦102366 I've¦102371 come of my own accord, that¦102370 by my death you may owe heavenly¦102378 vengeance and punishment for more crimes.
+\v 4 Oh¦102381 you hater of virtue and¦102383 of men, what have we¦102387 done that¦102390 you thus revel in our blood?
+\v 5 Does it seem evil¦102393 to you¦102394 that¦102396 we worship the¦102397 Founder of all¦102398 things, and¦102401 live¦102406 according¦102402 to¦102402 his surpassing law¦102407?
 \v 6 But this is worthy of honours, not torments,
-\v 7 if you had been capable of the higher feelings of men, and possessed the hope of salvation from God.
+\v 7 if you'd been capable of the higher feelings of men, and possessed the hope of salvation from God.
 \v 8 Listen now, being alien from God, you make war against those who are religious towards God.”
 \p
-\v 9 As he said this, the spearbearers bound him and drew him to the rack,
-\v 10 to which binding him at his knees, and fastening them with iron fetters, they bent down his loins upon the wedge of the wheel; and his body was then dismembered, scorpion-fashion.
+\v 9 As¦102436 he said this¦102436, the¦102438 spearbearers bound¦102440 him and drew¦102442 him to¦102443 the¦102444 rack,
+\v 10 to¦102446 which¦102447 binding¦102448 him at his knees¦102452, and¦102453 fastening them with iron fetters, they bent down his loins¦102459 on¦102461 the¦102462 wedge of the¦102470 wheel; and his body was then dismembered, scorpion-fashion.
 \v 11 With his breath thus confined, and his body strangled, he said,
-\v 12 “A great favour you bestow upon us, Oh tyrant, by enabling us to manifest our adherence to the law by means of nobler sufferings.”
+\v 12 “A great favour you bestow on us, Oh tyrant, by enabling us to manifest our adherence to the law by means of nobler sufferings.”
 \p
-\v 13 He also being dead, the sixth, quite a youth, was brought out. On the tyrant asking him whether he would eat and be delivered, he said,
-\v 14 “I am indeed younger than my brothers, but in understanding I am as old;
-\v 15 for having been born and reared to the same end. We are bound to die also on behalf of the same cause.
-\v 16 So that if you think it is proper to torment us for not eating the unclean, then torment!”
+\v 13 He¦102510 also being dead, the¦102511 sixth¦102512, quite a youth, was brought¦102513 out. On the¦102517 tyrant¦102518 asking him whether he'd eat and¦102524 be delivered, he said¦102525,
+\v 14 “I'm¦102526 indeed younger than my brothers¦102531, but in understanding I'm¦102533 as old;
+\v 15 for¦102542 having been born and reared to the¦102548 same end. We're bound to¦102551 die¦102551 also on behalf of the same cause.
+\v 16 So¦102554 that if¦102555 you¦102556 think¦102557 it's proper to torment us for not¦102559 eating the unclean, then torment!”
 \p
-\v 17 As he said this, they brought him to the wheel.
-\v 18 Extended upon this, with limbs racked and dislocated, he was gradually roasted from beneath.
-\v 19 Having heated sharp spits, they approached them to his back; and having transfixed his sides, they burnt away his entrails.
-\v 20 He, while tormented, said, “O good and holy contest, in which for the sake of religion, we kindred have been called to the arena of pain, and have not been conquered.
-\v 21 Because religious understanding, Oh tyrant, is unconquered.
-\v 22 Armed with upright virtue, I also will depart with my kindred.
-\v 23 I, too, bearing with me a great avenger, Oh inventor of tortures, and enemy of the truly pious.
-\v 24 We six youths have destroyed your tyranny.
-\v 25 Because isn't your inability to overrule our reasoning, and to compel us to eat the unclean, your destruction?
-\v 26 Your fire is cold to us. Your racks are painless, and your violence harmless.
-\v 27 Because the guards not of a tyrant but of a divine law are our defenders. Through this we keep our reasoning unconquered.”
+\v 17 As he said¦102564 this, they brought him to¦102566 the¦102567 wheel¦102568.
+\v 18 Extended on¦102569 this, with limbs racked and¦102573 dislocated, he was gradually roasted from beneath.
+\v 19 Having heated sharp¦102578 spits, they approached them to¦102582 his back; and¦102583 having transfixed his sides, they burnt away¦102587 his entrails¦102589.
+\v 20 He, while tormented, said, “O good and¦102592 holy contest, in which¦102599 for¦102600 the sake of¦102600 religion, we kindred have been called to the¦102601 arena of pain, and haven't been conquered.
+\v 21 Because¦102612 religious understanding, Oh¦102614 tyrant¦102615, is unconquered.
+\v 22 Armed¦102620 with upright virtue, I¦102622 also will depart with¦102623 my¦102626 kindred.
+\v 23 I, too, bearing with me a great¦102627 avenger, Oh inventor of tortures, and enemy of the¦102638 truly¦102639 pious.
+\v 24 We six¦102641 youths have destroyed your tyranny.
+\v 25 Because¦102648 isn't¦102649 your inability to overrule our reasoning, and to compel us to eat the unclean, your destruction?
+\v 26 Your fire¦102666 is cold to us. Your racks are painless, and your violence harmless.
+\v 27 Because¦102680 the guards not of a tyrant¦102681 but¦102682 of a divine law¦102684 are our defenders. Through¦102689 this we keep our reasoning unconquered.”
 \c 12
+\s1 The youngest brother refuses to give in
 \p
-\v 1 When he, too, had undergone blessed martyrdom, and died in the cauldron into which he had been thrown, the seventh, the youngest of all, came forward,
-\v 2 whom the tyrant pitying, though he had been dreadfully reproached by his kindred,
+\v 1 When¦102697 he, too, had undergone blessed martyrdom, and¦102698 died in the cauldron into which¦102696 he'd¦102699 been thrown, the¦102705 seventh¦102706, the youngest of all¦102708, came forward,
+\v 2 whom the¦102712 tyrant¦102713 pitying, though¦102714 he'd been dreadfully reproached by¦102716 his kindred,
 \v 3 seeing him already encompassed with chains, had him brought nearer, and endeavoured to counsel him, saying,
-\v 4 “You see the end of the madness of your kindred, for they have died in torture through disobedience. You, if disobedient, having been miserably tormented, will yourself perish prematurely.
-\v 5 But if you obey, you will be my friend, and have a charge over the affairs of the kingdom.”
-\v 6 Having thus exhorted him, he sent for the boy's mother, that, by showing compassion to her for the loss of so many sons, he might incline her, through the hope of safety, to render the survivor obedient.
+\v 4 “You see the end of the madness of your kindred, for they've died in torture through disobedience. You, if disobedient, having been miserably tormented, will yourself perish prematurely.
+\v 5 But¦102762 if you obey, you'll be my friend¦102763, and¦102765 have a charge over the¦102766 affairs of the¦102768 kingdom¦102769.”
+\v 6 Having thus exhorted him, he¦102773 sent for the¦102775 boy's mother¦102776, that¦102780, by showing compassion to her for the loss of so¦102772 many sons¦102783, he might incline her, through the hope of safety, to render the survivor obedient.
 \p
-\v 7 He, after his mother had urged him on in the Hebrew tongue, (as we will soon relate) said,
+\v 7 He, after his mother had urged him on in the Hebrew tongue, (as we'll soon relate) said,
 \v 8 “Release me that I may speak to the king and all his friends.”
-\v 9 They, rejoicing exceedingly at the promise of the youth, quickly let him go.
-\v 10 He, running up to the pans, said,
-\v 11 “Impious tyrant, and most blasphemous man, were you not ashamed, having received prosperity and a kingdom from God, to kill His servants, and to rack the doers of godliness?
-\v 12 Therefore the divine vengeance is reserving you for eternal fire and torments, which will cling to you for all time.
-\v 13 Weren't you ashamed, man as you are, yet most savage, to cut out the tongues of men of like feeling and origin, and having thus abused to torture them?
-\v 14 But they, bravely dying, fulfilled their religion towards God.
-\v 15 But you will groan as you deserve for having slain without cause the champions of virtue.
-\v 16 Therefore,” he continued, “I myself, being about to die,
-\v 17 will not forsake my kindred.
-\v 18 I call upon the god of my fathers to be merciful to my race.
-\v 19 But you, both living and dead, he will punish.”
-\v 20 Thus having prayed, he hurled himself into the pans; and so expired.
+\v 9 They, rejoicing greatly at the¦102822 promise¦102823 of¦102824 the¦102824 youth, quickly¦102826 let him go.
+\v 10 He, running up to¦102831 the¦102833 pans, said¦102835,
+\v 11 “Impious tyrant¦102843, and most blasphemous man, were you not ashamed, having received prosperity and a kingdom¦102854 from¦102846 God¦102848, to¦102849 kill His servants, and to rack the doers of godliness?
+\v 12 Therefore the divine vengeance is reserving you¦102867 for eternal fire and torments¦102876, which¦102877 will cling to you for all¦102879 time.
+\v 13 Weren't you ashamed, man¦102887 as you are, yet most savage, to¦102888 cut out¦102893 the¦102890 tongues of men of like¦102891 feeling and¦102892 origin, and¦102899 having thus abused to¦102904 torture¦102904 them?
+\v 14 But¦102905 they, bravely dying¦102909, fulfilled¦102910 their religion towards God¦102914.
+\v 15 But you'll groan as you¦102916 deserve for having slain without cause the champions of virtue¦102923.
+\v 16 Therefore,” he¦102929 continued, “I myself, being about to¦102930 die¦102930,
+\v 17 won't forsake my kindred.
+\v 18 I call¦102940 on¦102940 the¦102942 god¦102944 of my fathers to be merciful to my race.
+\v 19 But you¦102949, both living and dead, he'll punish.”
+\v 20 Thus having prayed, he¦102960 hurled himself¦102962 into¦102964 the¦102965 pans; and¦102967 so expired.
 \c 13
+\s1 The brothers' faith overcomes suffering
 \p
-\v 1 If then, the seven kindred despised troubles even to death, it is admitted on all sides that righteous reasoning is absolute master over the emotions.
-\v 2 Because just as if they had eaten of the unholy as slaves to the emotions, we would have said that they had been conquered by them.
-\v 3 Now it is not so. But by means of the reasoning which is praised by God, they mastered their emotions.
-\v 4 It is impossible to overlook the leadership of reflection, for it gained the victory over both emotions and troubles.
-\v 5 How, then, can we avoid according to these men mastery of emotion through right reasoning, since they didn't withdraw from the pains of fire?
-\v 6 Because just as by means of towers projecting in front of harbours men break the threatening waves, and thus assure a still course to vessels entering port,
-\v 7 so that seven-towered right-reasoning of the young men, securing the harbour of religion, conquered the tempest of emotions.
-\v 8 Because having arranged a holy choir of piety, they encouraged one another, saying,
-\v 9 “Brothers, may we die brotherly for the law. Let us imitate the three young men in Ashur \add !(Assyria)\add* who despised the equally afflicting furnace.
-\v 10 Let's not be cowards in the manifestation of piety.”
-\v 11 One said, “Courage, brother!” and another, “Nobly endure!”
-\v 12 Another said, “Remember of what stock you are;” and by the hand of our father Yitshak \add !(Isaac)\add* endured to be slain for the sake of piety.
-\v 13 One and all, looking at each other serene and confident, said, “Let's sacrifice with all our heart our souls to God who gave them, and employ our bodies for the keeping of the law.
-\v 14 Let's not fear him who thinks he kills;
-\v 15 for great is the trial of soul and danger of eternal torment laid up for those who transgress the commandment of God.
-\v 16 Let's arm ourselves, therefore, in the self-control, which is divine reasoning.
-\v 17 If we suffer like this, Avraham, Yitshak, and Ya’akov \add !(Jacob)\add* will receive us, and all the fathers will commend us.
-\v 18 As each one of the kindred was hauled away, the rest exclaimed, “Don't disgrace us, Oh brother, nor falsify those who died before you!”
+\v 1 If¦102970 then¦102972, the¦102978 seven¦102979 kindred despised troubles even to death¦102975, it's admitted on all¦102982 sides¦102982 that¦102983 righteous reasoning is absolute¦102984 master¦102984 over the emotions.
+\v 2 Because just¦102991 as¦102991 if¦102993 they'd eaten of the unholy as slaves to the emotions, we'd have said that¦103001 they'd been conquered by them.
+\v 3 Now¦103003 it isn't so¦103004. But¦103007 by means of the reasoning which is praised by God, they mastered their emotions.
+\v 4 It's¦103017 impossible to¦103017 overlook the¦103019 leadership of reflection, for¦103022 it gained the victory over both emotions and troubles.
+\v 5 How¦103027, then¦103028, can we avoid according to¦103030 these men mastery of emotion through¦103039 right reasoning, since they didn't withdraw from the pains of¦103039 fire¦103040?
+\v 6 Because just¦103044 as¦103044 by means of towers projecting in front of harbours men break the¦103049 threatening waves¦103050, and thus assure a still course to¦103054 vessels entering port,
+\v 7 so that¦103060 seven-towered¦103061 right-reasoning of the young men, securing the harbour¦103069 of religion, conquered¦103073 the tempest of emotions.
+\v 8 Because¦103076 having arranged a holy choir of piety¦103077, they encouraged one¦103081 another¦103081, saying,
+\v 9 “Brothers¦103085, may we die brotherly for the¦103087 law¦103088. Let us imitate the¦103090 three¦103091 young men in Ashur \add !(Assyria)\add* who despised the equally afflicting furnace¦103099.
+\v 10 Let's not¦103101 be cowards in the manifestation of piety¦103106.”
+\v 11 One¦103110 said, “Courage, brother¦103112!” and¦103115 another, “Nobly endure!”
+\v 12 Another said, “Remember¦103121 of what stock you are;” and by the hand¦103127 of¦103129 our father¦103126 Yitshak \add !(Isaac)\add* endured¦103132 to be slain for the sake of piety¦103131.
+\v 13 One¦103135 and¦103136 all, looking at each¦103137 other serene and confident, said, “Let's sacrifice with all our heart¦103155 our souls¦103159 to¦103148 God¦103150 who gave¦103157 them, and¦103160 employ our bodies¦103168 for the¦103162 keeping of the¦103164 law¦103165.
+\v 14 Let's not¦103169 fear¦103170 him who¦103171 thinks¦103172 he kills;
+\v 15 for great¦103174 is the trial of soul and¦103178 danger¦103179 of eternal torment laid¦103183 up for those who¦103184 transgress God's¦103189 commandment¦103187.
+\v 16 Let's arm ourselves, therefore¦103191, in the self-control, which is divine reasoning.
+\v 17 If we suffer¦103198 like this, Avraham, Yitshak, and¦103201 Ya'akov \add !(Jacob)\add* will receive us, and¦103204 all¦103205 the¦103206 fathers¦103207 will commend us.
+\v 18 As each¦103211 one of the¦103212 kindred was hauled away, the¦103217 rest exclaimed, “Don't¦103219 disgrace us, Oh brother, nor falsify those who¦103227 died before you!”
 \p
-\v 19 Now you are not ignorant of the charm of brotherhood, which the Divine and all wise Providence has imparted through fathers to children, and has engendered through the mother's womb.
-\v 20 In which these brothers having remained an equal time, and having been formed for the same period, and been increased by the same blood, and having been perfected through the same principle of life,
-\v 21 and having been brought forth at equal intervals, and having sucked milk from the same springs, hence their brotherly souls are reared up lovingly together,
-\v 22 and increase the more powerfully by reason of this simultaneous rearing, and by daily companionship, and by other education, and exercise in the law of God.
+\v 19 Now you aren't¦103230 ignorant¦103230 of the charm of brotherhood, which the Divine and all wise Providence has imparted through fathers to children, and has engendered through the¦103243 mother's womb.
+\v 20 In¦103247 which¦103248 these brothers¦103251 having remained an equal¦103250 time¦103253, and¦103254 having been formed for the¦103256 same period¦103258, and¦103260 been increased by the¦103262 same blood¦103264, and¦103266 having been perfected through¦103267 the same principle of life,
+\v 21 and¦103272 having been brought forth at equal intervals, and¦103278 having sucked milk from the same springs, hence their brotherly souls¦103290 are reared up lovingly together,
+\v 22 and¦103291 increase the more powerfully because¦103294 of¦103294 this simultaneous rearing, and by daily companionship, and by other education, and exercise in¦103308 God's¦103310 law¦103309.
 \p
-\v 23 Brotherly love being thus sympathetically constituted, the seven kindred had a more sympathetic mutual harmony.
-\v 24 Because being educated in the same law, and practising the same virtues, and reared up in a just course of life, they increased this harmony with each other.
-\v 25 Because the same ardour for what is right and honourable increased their goodwill and harmony towards each other.
-\v 26 Because it acting along with religion, made their brotherly feeling more desirable to them.
-\v 27 And yet, although nature, companionship, and virtuous morals increased their brotherly love, those who were left endured to see their kindred, who were mistreated for their religion, tortured even to death.
+\v 23 Brotherly¦103317 love¦103317 being thus sympathetically constituted, the¦103319 seven¦103320 kindred had¦103323 a more sympathetic mutual harmony.
+\v 24 Because¦103329 being educated in the¦103330 same law¦103328, and¦103333 practising the¦103334 same virtues¦103337, and¦103338 reared up in a just¦103340 course of life, they increased this harmony with each other.
+\v 25 Because the¦103347 same ardour for¦103348 what's right and honourable increased their goodwill and harmony towards each other.
+\v 26 Because¦103359 it¦103363 acting along with religion, made their brotherly¦103366 feeling more desirable to them.
+\v 27 And yet, although¦103369 nature¦103371, companionship, and virtuous morals increased their brotherly love, those who were left endured to¦103396 see¦103396 their kindred, who were mistreated for¦103387 their religion, tortured¦103399 even to death¦103398.
 \c 14
 \p
-\v 1 More that this, they even urged them on to this mistreatment; so that they not only despised pains themselves, but they even got the better of their affections of brotherly love.
-\v 2 Reasoning is more royal than a king, and freer than freemen!
-\v 3 What a sacred and harmonious concert of the seven kindred as concerning piety!
-\v 4 None of the seven youths turned cowardly or shrank back from death.
-\v 5 But all of them, as though running the road to immortality, hastened on to death through tortures.
-\v 6 Because just as hands and feet are moved sympathetically with the directions of the soul, so those holy youths agreed to death for religion's sake, as through the immortal soul of religion.
-\v 7 Oh holy seven of harmonious kindred! Because as the seven days of creation, about religion,
-\v 8 so the youths, circling around the number seven, annulled the fear of torments.
-\v 9 We now shudder at the recital of the affliction of those young men; but they not only saw, and not only heard the immediate execution of the threat, but undergoing it, persevered; and that through the pains of fire.
-\v 10 What could be more painful? Because the power of fire, being sharp and quick, speedily dissolved their bodies.
-\v 11 Don't think it wonderful that reasoning ruled over those men in their torments, when even a woman's mind despised more manifold pains.
-\v 12 Because the mother of those seven youths endured the rackings of each of her children.
+\v 1 More that this, they even urged them on to¦103402 this¦103403 mistreatment; so that they not¦103407 only¦103408 despised pains themselves, but¦103413 they even got the better of their affections of brotherly¦103418 love¦103418.
+\v 2 Reasoning is more royal than a king¦103422, and¦103425 freer than freemen!
+\v 3 What a sacred and¦103429 harmonious concert of the¦103434 seven¦103435 kindred as about¦103431 piety¦103433!
+\v 4 None¦103438 of the¦103440 seven¦103441 youths turned cowardly or shrank back from death¦103447.
+\v 5 But¦103449 all¦103450 of them, as¦103451 though running¦103455 the road¦103454 to¦103455 immortality, hastened on to¦103456 death¦103461 through¦103458 tortures.
+\v 6 Because just¦103463 as¦103463 hands¦103465 and¦103466 feet¦103467 are moved sympathetically with the directions of the soul, so those holy youths agreed to¦103485 death¦103490 for religion's sake, as through¦103480 the immortal soul of religion.
+\v 7 Oh¦103491 holy seven of harmonious kindred! Because as¦103497 the seven days¦103502 of creation, about¦103503 religion,
+\v 8 so the youths, circling around the number seven, annulled the fear¦103517 of torments.
+\v 9 We now¦103519 shudder at the recital of the affliction of those young men; but¦103529 they not only¦103531 saw¦103532, and¦103534 not¦103534 only¦103535 heard¦103536 the immediate execution of the threat¦103539, but¦103541 undergoing it, persevered; and that¦103526 through¦103548 the pains of¦103548 fire¦103549.
+\v 10 What could be¦103553 more painful? Because¦103556 the¦103559 power¦103563 of¦103560 fire¦103561, being¦103562 sharp¦103555 and¦103557 quick¦103564, speedily dissolved their bodies¦103567.
+\s1 A mother's love and faith
 \p
-\v 13 Consider how comprehensive is the love of offspring, which draws every one to sympathy of affection,
-\v 14 where irrational animals possess a similar sympathy and love for their offspring with men.
-\v 15 The tame birds frequenting the roofs of our houses defend their fledglings.
-\v 16 Others build their nests, and hatch their young, on the tops of mountains and in the precipices of valleys, and the holes and tops of trees, and keep away the intruder.
-\v 17 If not able to do this, they fly circling round them in agony of affection, calling out in their own note, and save their offspring in whatever manner they are able.
-\v 18 But why should we point attention to the sympathy towards children shown by irrational animals?
-\v 19 Even bees, at the season of honey-making, attack all who approach, and pierce with their sting, as with a sword, those who draw near their hive, and repel them even to death.
-\v 20 But sympathy with her children didn't turn away the mother of the young men, who had a spirit kindred with that of Avraham.
+\v 11 Don't¦103569 think¦103574 it wonderful that¦103578 reasoning ruled over those men¦103577 in¦103579 their torments¦103581, when¦103584 even a woman's¦103585 mind¦103586 despised more manifold pains.
+\v 12 Because the¦103590 mother¦103591 of those seven¦103594 youths endured the¦103597 rackings of each¦103600 of her children¦103602.
+\p
+\v 13 Consider¦103604 how¦103606 comprehensive is¦103608 the love of offspring, which draws every¦103614 one to¦103615 sympathy of affection,
+\v 14 where irrational animals possess a¦103638 similar sympathy and¦103622 love for their offspring with¦103628 men.
+\v 15 The¦103641 tame birds¦103642 frequenting the roofs of our houses defend their fledglings.
+\v 16 Others build their nests, and¦103654 hatch their young, on the¦103656 tops of mountains¦103658 and in the precipices of valleys, and the holes and tops of trees¦103663, and keep away the intruder.
+\v 17 If¦103675 not¦103678 able¦103679 to¦103680 do this, they fly circling round them in agony of affection, calling out in their own¦103689 note, and save their offspring in whatever manner they're¦103693 able¦103693.
+\v 18 But¦103698 why should we point attention to¦103708 the¦103709 sympathy towards children¦103710 shown by irrational animals?
+\v 19 Even bees, at the season¦103720 of honey-making, attack all who¦103722 approach, and¦103724 pierce with their sting, as¦103725 with a sword, those who draw near their hive, and¦103735 repel them even to death¦103738.
+\v 20 But¦103739 sympathy with her children¦103751 didn't¦103740 turn away the mother¦103746 of the¦103749 young men, who had a spirit kindred with that of Avraham.
 \c 15
 \p
-\v 1 Oh reasoning of the sons, lord over the emotions, and religion more desirable to a mother than children!
-\v 2 The mother, when two things were set before her, religion and the safety of her seven sons for a time, on the conditional promise of a tyrant,
-\v 3 rather elected the religion which according to God preserves to eternal life.
-\v 4 In what way can I describe ethically the affections of parents towards their children, the resemblance of soul and of form impressed into the small type of a child in a wonderful manner, especially through the greater sympathy of mothers with the feelings of those born of them!
-\v 5 Because by how much mothers are by nature weak in disposition and prolific in offspring, by so much the fonder they are of children.
-\v 6 Of all mothers, the mother of the seven was the fondest of children, who in seven childbirths had deeply engendered love towards them.
-\v 7 Through her many pains undergone in connection with each one, she was compelled to feel sympathy with them;
-\v 8 yet, through fear of God, she neglected the temporary salvation of her children.
-\v 9 Not only so, but on account of the excellent disposition to the law, her maternal affection towards them was increased.
-\v 10 Because they were both just and temperate, and courageous, high-minded, fond of their kindred, and so fond of their mother that even to death they obeyed her by observing the law.
+\v 1 Oh¦103752 reasoning of the sons, lord over the emotions, and¦103757 religion more desirable to a mother¦103759 than children¦103760!
+\v 2 The mother¦103762, when two things were set before her, religion and¦103766 the¦103767 safety of her seven¦103768 sons¦103769 for a time, on the¦103773 conditional promise of¦103774 a tyrant¦103775,
+\v 3 rather elected the religion which according¦103786 to¦103786 God¦103787 preserves to eternal¦103784 life¦103785.
+\v 4 In what way¦103790 can I describe ethically the affections of parents¦103793 towards¦103800 their children, the resemblance of soul¦103795 and of form impressed into the small¦103801 type of a child¦103802 in a wonderful manner, especially¦103806 through¦103807 the greater sympathy of mothers¦103814 with the feelings of those born of them!
+\v 5 Because by how¦103817 much¦103817 mothers are by nature weak in disposition and prolific in offspring, by so¦103825 much the fonder they're¦103827 of children.
+\v 6 Of all¦103829 mothers, the mother¦103837 of the¦103839 seven¦103841 was the fondest of children, who in seven childbirths had deeply engendered love towards them.
+\v 7 Through¦103849 her many pains undergone in connection with each¦103853 one, she was compelled to¦103860 feel sympathy with them;
+\v 8 yet, through¦103862 fear¦103867 of¦103862 God¦103866, she neglected the temporary¦103872 salvation¦103873 of her children¦103871.
+\v 9 Not only so¦103876, but¦103877 on account of¦103879 the excellent disposition to¦103886 the¦103887 law¦103888, her maternal affection towards them was increased.
+\v 10 Because¦103899 they were¦103900 both just and temperate, and courageous, high-minded, fond of their kindred, and so¦103920 fond of their mother that even to death¦103923 they obeyed her by observing the¦103924 law.
 \p
-\v 11 Yet, though there were so many circumstances connected with love of children to draw on a mother to sympathy, in the case of none of them were the various tortures able to pervert her principle.
-\v 12 But she inclined each one separately and all together to death for religion.
-\v 13 Oh holy nature and parental feeling, and reward of bringing up children, and unconquerable maternal affection!
-\v 14 At the racking and roasting of each one of them, the observant mother was prevented by religion from changing.
-\v 15 She saw her children's flesh dissolving around the fire, and their extremities quivering on the ground, and the flesh of their heads dropped forward down to their beards, like masks.
+\v 11 Yet, though there were so¦103933 many circumstances connected with love of children to¦103934 draw on a mother¦103942 to¦103943 sympathy, in the case of none¦103944 of them were the various tortures able to pervert her principle.
+\v 12 But¦103953 she inclined each one¦103956 separately and¦103958 all¦103960 together¦103959 to¦103963 death¦103968 for religion.
+\v 13 Oh¦103969 holy nature¦103970 and parental feeling, and reward of bringing up children, and unconquerable maternal affection!
+\v 14 At the racking and roasting of each one¦103985 of¦103993 them, the¦103994 observant mother was prevented by religion from changing.
+\v 15 She saw her children's¦103999 flesh¦103997 dissolving around¦104001 the¦104002 fire¦104003, and¦104005 their extremities quivering on the ground¦104013, and¦104015 the flesh¦104024 of their heads¦104018 dropped forward down to their beards, like¦104025 masks.
 \p
-\v 16 Oh you mother, who was tried at this time with bitterer pangs than those at birth!
-\v 17 Oh you only woman who have produced perfect holiness!
-\v 18 Your firstborn, expiring, didn't turn you, nor the second, looking miserable in his torments, nor the third, breathing out his soul.
-\v 19 You didn't weep when you saw each of their eyes looking sternly at their tortures, and their nostrils foreboding death!
-\v 20 When you saw children's flesh heaped upon children's flesh that had been torn off, heads decapitated upon heads, dead falling upon the dead, and a choir of children turned through torture into a burying ground, you didn't lament.
-\v 21 Not so do siren melodies or songs of swans attract the hearers to listening, Oh voices of children calling on your mother in the middle of torments!
-\v 22 With what and what manner of torments was the mother herself tortured, as her sons were undergoing the wheel and the fires!
-\v 23 But religious reasoning, having strengthened her courage in the middle of sufferings, enabled her to forego, for the time, parental love.
+\v 16 Oh¦104028 you mother¦104032, who was tried at this time with bitterer pangs than¦104035 those at birth!
+\v 17 Oh¦104040 you only woman¦104042 who've¦104043 produced perfect holiness!
+\v 18 Your firstborn¦104050, expiring, didn't¦104052 turn you, nor the second¦104053, looking miserable in¦104057 his torments¦104058, nor the third¦104060, breathing out his soul.
+\v 19 You didn't¦104062 weep when you saw each¦104066 of their eyes¦104064 looking sternly at their tortures, and¦104076 their nostrils foreboding death¦104082!
+\v 20 When you saw children's¦104087 flesh¦104089 heaped on children's¦104090 flesh that'd been torn off, heads decapitated on heads, dead¦104099 falling on the dead¦104100, and¦104102 a¦104103 choir of children¦104106 turned through¦104108 torture into a burying ground, you didn't lament.
+\v 21 Not¦104117 so¦104117 do siren melodies or songs of swans attract the¦104122 hearers to¦104123 listening¦104123, Oh¦104125 voices of children¦104126 calling on your mother¦104130 in the middle of torments!
+\v 22 With what and¦104133 what manner of torments¦104146 was the¦104136 mother¦104137 herself tortured, as her sons¦104139 were undergoing the¦104138 wheel and the fires!
+\v 23 But¦104147 religious reasoning, having strengthened her courage in¦104154 the¦104156 middle of sufferings, enabled her to forego, for the¦104160 time, parental love.
 \p
-\v 24 Although seeing the destruction of seven children, the noble mother, after one embrace, stripped off her feelings through faith in God.
-\v 25 Because just as in a council room, seeing in her own soul vehement counsellors, nature and parentage and love of her children, and the racking of her children,
-\v 26 she holding two votes, one for the death, the other for the preservation of her children,
-\v 27 didn't lean to that which would have saved her children for the safety of a brief space.
-\v 28 But this daughter of Avraham remembered his holy fortitude.
+\v 24 Although¦104164 seeing the destruction¦104168 of seven¦104165 children¦104166, the¦104170 noble mother¦104172, after one embrace, stripped off her feelings through¦104174 faith¦104178 in God¦104177.
+\v 25 Because just¦104179 as¦104179 in a council room, seeing in her own soul¦104185 vehement counsellors, nature¦104189 and¦104190 parentage and¦104192 love of her children, and¦104194 the racking of her children¦104195,
+\v 26 she holding two¦104197 votes, one for the death, the other for the preservation of her children,
+\v 27 didn't lean to that which would have saved her children¦104212 for the safety of a brief¦104214 space.
+\v 28 But¦104217 this daughter¦104223 of Avraham remembered¦104224 his holy fortitude.
 \p
-\v 29 Oh holy mother of a nation, avenger of the law, defender of religion, and prime bearer in the battle of the affections!
-\v 30 Oh you nobler in endurance than males, and more courageous than men in perseverance!
-\v 31 Because like Noah's ship, bearing the world in the world-filling flood, bore up against the waves,
-\v 32 so you, the guardian of the law, when surrounded on every side by the flood of emotions, and assaulted by violent storms which were the torments of your children, bore up nobly against the storms against religion.
+\v 29 Oh¦104225 holy mother¦104226 of a nation¦104227, avenger of¦104229 the¦104229 law¦104230, defender of religion, and¦104231 prime bearer in the¦104233 battle of¦104236 the¦104236 affections!
+\v 30 Oh¦104241 you nobler in endurance than males, and¦104246 more courageous than men¦104247 in perseverance¦104249!
+\v 31 Because like Noah's ship, bearing the¦104253 world in¦104256 the¦104257 world-filling flood, bore up against the¦104263 waves,
+\v 32 so you¦104266, the¦104267 guardian of¦104268 the¦104268 law¦104268, when surrounded on every¦104269 side¦104269 by the flood of emotions, and¦104276 assaulted by violent storms which were the torments¦104283 of your children¦104282, bore up nobly against the storms against religion.
 \c 16
+\s1 The mother encourages her sons to remain faithful
 \p
-\v 1 If, then, even a woman, and that an aged one, and the mother of seven children, endured to see her children's torments even to death, it must be admitted that religious reasoning is master even of the emotions.
-\v 2 I have proved, then, that not only men have obtained the mastery of their emotions, but also that a woman despised the greatest torments.
-\v 3 The lions around Daniyel were not so fierce, nor the furnace of Mishael burning with most vehement fires as that natural love of children burnt within her, when she saw her seven sons tortured.
-\v 4 But with the reasoning of religion the mother quenched emotions so great and powerful.
-\v 5 Because we must consider also this: that, had the woman been faint hearted, as being their mother, she would have lamented over them, and perhaps might have spoken thus:
-\v 6 “Ah! I am wretched and many times miserable, who having born seven sons, have become the mother of none.
-\v 7 Oh seven useless childbirths, and seven profitless periods of labour, and fruitless givings of suck, and miserable nursings at the breast.
-\v 8 Vainly, for your sakes, Oh sons, have I endured many pangs, and the more difficult anxieties of rearing.
-\v 9 Alas, of my children, some of you unmarried, and some who have married to no profit, I will not see your children, nor have the joy of being a grandmother.
-\v 10 Ah, that I who had many and fair children, should be a lone widow full of sorrows!
-\v 11 Nor, should I die, will I have a son to bury me.” But with such a lament as this, the holy and God-fearing mother wept for none of them.
-\v 12 Nor did she divert any of them from death, nor grieve for them as for the dead.
-\v 13 But as one possessed with an adamant mind, and as one bringing forth again her full number of sons to immortality, she rather urged them to death on behalf of religion.
-\v 14 Oh woman, soldier of God for religion, you, aged and a female, have conquered through endurance even a tyrant; and even though weak, have been found more powerful in actions and words.
-\v 15 Because when you were seized along with your children, you stood looking at Eleazar in torture, and said to your sons in the Hebrew tongue,
-\v 16 “O sons, the contest is noble, to which you being called as a witness for the nation, strive zealously for the laws of your country.
-\v 17 Because it would be disgraceful if this old man endured pains for the sake of righteousness, and that you who are younger would be afraid of the tortures.
-\v 18 Remember that through God, you obtained existence and have enjoyed it.
-\v 19 Therefore, you ought to bear every affliction because of God.
-\v 20 Because him also our father Avraham was zealous to sacrifice Yitshak \add !(Isaac)\add* our progenitor, and didn't shudder at the sight of his own paternal hand descending down with the sword upon him.
-\v 21 The righteous Daniyel was thrown to the lions; and Hananyah, Azaryah, and Mishael were hurled into a fiery furnace, yet they endured through God.
-\v 22 You, then, having the same faith towards God, don't be troubled.
-\v 23 Because it is unreasonable that they who know religion wouldn't stand up against troubles.
-\v 24 With these arguments, the mother of seven, exhorting each of her sons, encouraged and persuaded them not to transgress God's commandment.
-\v 25 They saw this, too, that those who die for God, live to God, like Avraham, Yitshak, Ya’akov \add !(Jacob)\add*, and all the patriarchs.
+\v 1 If¦104291, then¦104293, even a woman¦104295, and¦104296 that an aged one, and¦104298 the mother¦104301 of seven¦104299 children¦104300, endured¦104302 to¦104302 see her children's¦104309 torments even to¦104312 death¦104305, it must be¦104312 admitted that religious reasoning is master even of the¦104315 emotions.
+\v 2 I've proved, then¦104319, that¦104320 not only¦104322 men¦104325 have obtained the¦104323 mastery of their emotions, but¦104327 also¦104328 that a woman¦104329 despised the¦104330 greatest torments.
+\v 3 The¦104337 lions around¦104338 Daniyel weren't¦104341 so¦104343 fierce, nor the furnace¦104346 of Mishael burning with most vehement fires¦104348 as that¦104353 natural¦104354 love of children burnt within her, when she saw her seven¦104358 sons¦104359 tortured¦104360.
+\v 4 But¦104361 with the¦104362 reasoning of religion the¦104364 mother¦104372 quenched emotions so¦104367 great¦104367 and¦104368 powerful¦104369.
+\v 5 Because we must consider also this¦104375: that¦104377, had the¦104381 woman¦104382 been faint hearted, as being their mother¦104384, she'd¦104389 have lamented over them, and¦104390 perhaps¦104391 might have spoken thus:
+\v 6 “Ah! I'm¦104396 wretched and¦104399 many times miserable, who¦104402 having born seven¦104403 sons, have become the mother¦104407 of none¦104406.
+\v 7 Oh¦104409 seven¦104411 useless childbirths, and¦104413 seven¦104415 profitless periods of labour, and¦104417 fruitless givings of suck, and¦104420 miserable nursings at the breast.
+\v 8 Vainly¦104423, for your sakes, Oh¦104426 sons, have I endured many pangs, and¦104431 the more difficult anxieties of rearing.
+\v 9 Alas, of my¦104437 children¦104438, some of you unmarried, and¦104443 some who've married to no¦104446 profit, I won't¦104450 see¦104447 your children¦104449, nor have the joy of being a grandmother¦104451.
+\v 10 Ah, that I who¦104455 had many¦104456 and fair children¦104456, should be a lone widow¦104461 full of sorrows!
+\v 11 Nor, should I die, will I have a son¦104470 to bury me.” But with such a lament as this, the holy and God-fearing mother wept for none of them.
+\v 12 Nor did she divert any of them from death, nor grieve¦104494 for them as for the dead.
+\v 13 But¦104495 as¦104496 one possessed with an adamant mind¦104500, and¦104501 as one bringing forth again her full number¦104508 of sons¦104507 to immortality¦104503, she rather urged them to¦104513 death¦104515 on behalf of religion.
+\v 14 Oh¦104519 woman¦104526, soldier of¦104520 God¦104522 for religion, you, aged and¦104525 a female, have conquered through¦104527 endurance even a tyrant¦104530; and¦104532 even though weak, have been found more powerful in actions¦104533 and¦104535 words¦104536.
+\v 15 Because when¦104541 you were seized along with¦104543 your children¦104545, you stood looking at Eleazar in torture¦104550, and¦104551 said to your sons in¦104555 the¦104556 Hebrew tongue,
+\v 16 “O sons, the contest is noble, to¦104559 which¦104565 you being called as a witness for¦104567 the nation¦104571, strive zealously for¦104574 the laws of your country.
+\v 17 Because¦104586 it'd¦104583 be disgraceful¦104579 if this¦104585 old man endured pains for the sake of¦104586 righteousness, and that¦104587 you¦104590 who¦104592 are younger would be afraid of the¦104595 tortures.
+\v 18 Remember that¦104598 through¦104599 God¦104601, you obtained existence and¦104605 have enjoyed it.
+\v 19 Therefore, you ought to¦104612 bear every¦104613 affliction because¦104616 of¦104616 God¦104618.
+\v 20 Because¦104619 him also¦104621 our father¦104623 Avraham was zealous to¦104626 sacrifice Yitshak \add !(Isaac)\add* our progenitor, and¦104632 didn't shudder at the¦104633 sight of his own paternal hand¦104635 descending down with the sword on¦104638 him.
+\v 21 The¦104645 righteous Daniyel was thrown¦104649 to¦104649 the lions; and Hananyah, Azaryah, and Mishael were hurled into a fiery furnace¦104657, yet they endured¦104661 through¦104662 God¦104664.
+\v 22 You¦104666, then¦104667, having the¦104668 same faith¦104670 towards God¦104673, don't¦104675 be troubled.
+\v 23 Because¦104678 it's unreasonable that they who¦104683 know religion wouldn't stand up against troubles.
+\v 24 With these arguments, the¦104689 mother¦104690 of¦104690 seven¦104690, exhorting each¦104692 of¦104702 her sons¦104694, encouraged and persuaded them not to transgress God's¦104703 commandment¦104701.
+\v 25 They saw this¦104707, too, that¦104709 those who die¦104713 for God¦104712, live¦104714 to God¦104716, like¦104717 Avraham, Yitshak, Ya'akov \add !(Jacob)\add*, and all¦104724 the¦104725 patriarchs¦104726.
 \c 17
+\s1 The mother's death and the martyrs' reward
 \p
-\v 1 Some of the spearbearers said that when she herself was about to be seized for the purpose of being put to death, she threw herself on the pile, rather than let them touch her body.
-\v 2 Oh you mother, who together with seven children destroyed the violence of the tyrant, and rendered void his wicked intentions, and exhibited the nobleness of faith!
-\v 3 Because you, like a house bravely built on the pillar of your children, bore the shock of tortures without swaying.
-\v 4 Cheer up, therefore, Oh holy-minded mother! Hold the firm hope of your steadfastness with God.
-\v 5 Not so gracious does the moon appear with the stars in heaven, as you are established as honourable before God, and fixed in the sky with your sons whom you illuminated with religion to the stars.
-\v 6 Because your bearing of children was after the manner of a child of Avraham.
+\v 1 Some of the¦104730 spearbearers said that¦104733 when¦104734 she herself was about to be seized for the purpose of being put to¦104739 death¦104740, she threw herself on the¦104745 pile, rather than let them touch her body¦104746.
+\v 2 Oh¦104753 you mother¦104754, who together with¦104755 seven¦104756 children¦104757 destroyed the¦104759 violence of¦104760 the¦104760 tyrant¦104761, and¦104763 rendered void his wicked intentions, and¦104769 exhibited the nobleness of faith¦104773!
+\v 3 Because¦104789 you¦104777, like a house bravely built on¦104779 the pillar of your children¦104783, bore the¦104788 shock of tortures without swaying.
+\v 4 Cheer up, therefore¦104794, Oh¦104795 holy-minded mother¦104796! Hold the¦104798 firm hope¦104799 of your steadfastness with¦104804 God¦104805.
+\v 5 Not so gracious does the moon¦104808 appear with¦104811 the¦104817 stars¦104819 in heaven, as you're established as honourable¦104826 before God¦104828, and¦104829 fixed in¦104831 the sky¦104832 with your sons whom you illuminated with religion to the stars.
+\v 6 Because your bearing of children was¦104835 after the¦104837 manner of¦104842 a child¦104843 of Avraham.
 \p
-\v 7 If it were lawful for us to paint as on a tablet the religion of your story, the spectators wouldn't shudder at seeing the mother of seven children enduring for the sake of religion various tortures even to death.
-\v 8 It would have been a worthwhile thing to have inscribed on the tomb itself these words as a memorial to those of the nation,
-\v 9 “Here an aged priest, and an aged woman, and seven sons, are buried through the violence of a tyrant, who wished to destroy the society of the Ivrim \add !(Hebrews)\add*.
-\v 10 These also avenged their nation, looking to God, and enduring torments to death.”
-\v 11 Because it was truly a divine contest which was carried through by them.
-\v 12 Because at that time virtue presided over the contest, approving the victory through endurance, namely, immortality, eternal life.
+\v 7 If¦104844 it¦104846 were lawful for us to¦104848 paint as¦104849 on a tablet the¦104852 religion of your story, the¦104853 spectators wouldn't shudder at seeing¦104861 the¦104860 mother¦104862 of seven¦104863 children¦104864 enduring for¦104865 the sake of¦104865 religion various tortures even to death¦104870.
+\v 8 It'd have been¦104875 a worthwhile thing to¦104877 have inscribed on the tomb itself these words as a memorial¦104889 to those of¦104886 the¦104886 nation¦104887,
+\v 9 “Here¦104891 an¦104892 aged priest¦104893, and¦104894 an aged woman, and¦104897 seven¦104898 sons, are buried through¦104901 the violence of¦104901 a tyrant¦104902, who¦104904 wished to¦104907 destroy¦104907 the society of the Ivrim \add !(Hebrews)\add*.
+\v 10 These also¦104910 avenged their nation¦104913, looking to God¦104915, and enduring torments to death¦104919.”
+\v 11 Because¦104924 it was¦104925 truly¦104923 a divine¦104927 contest which was carried through¦104929 by them.
+\v 12 Because¦104933 at that time virtue¦104935 presided over the contest, approving the¦104939 victory¦104940 through endurance, namely, immortality, eternal life¦104944.
 \v 13 Eleazar was the first to contend. The mother of the seven children entered the contest, and the kindred contended.
 \v 14 The tyrant was the antagonist; and the world and living men were the spectators.
-\v 15 Reverence for God conquered, and crowned her own athletes.
-\v 16 Who didn't admire those champions of true legislation? Who were not amazed?
-\v 17 The tyrant himself, and all their council, admired their endurance,
-\v 18 through which, they also now stand beside the divine throne and live a blessed life.
-\v 19 Because Mosheh \add !(Moses)\add* says, “All the saints are under your hands.”
-\v 20 These, therefore, having been sanctified through God, have been honoured not only with this honour, but that also by the fact that because of them, the enemy didn't overcome our nation.
+\v 15 Reverence¦104972 for¦104972 God¦104972 conquered, and¦104973 crowned her own athletes.
+\v 16 Who¦104982 didn't admire those champions of true legislation? Who weren't¦104989 amazed¦104989?
+\v 17 The¦104993 tyrant¦104994 himself, and¦104995 all¦104996 their council¦104998, admired their endurance,
+\v 18 through¦105004 which¦105005, they also¦105006 now¦105009 stand beside the divine throne¦105011 and¦105012 live a blessed¦105014 life.
+\v 19 Because¦105018 Mosheh \add !(Moses)\add* says¦105019, “All¦105023 the¦105024 saints are under¦105026 your hands¦105028.”
+\v 20 These, therefore¦105032, having been sanctified through¦105034 God¦105035, have been honoured not only¦105038 with this honour¦105042, but¦105043 that also¦105044 by the¦105045 fact that because¦105046 of¦105046 them, the¦105048 enemy didn't overcome our nation¦105049.
 \v 21 That tyrant was punished and their country purified.
-\v 22 Because they became the ransom to the sin of the nation. The Divine Providence saved Yisrael \add !(Israel)\add*, which was afflicted before, by the blood of those pious ones and the death that appeased wrath.
-\v 23 Because the tyrant Antiokos \add !(Antiochus)\add*, looking to their courageous virtue and to their endurance in torture, proclaimed that endurance as an example to his soldiers.
-\v 24 They proved to be to him noble and brave for land battles and for sieges; and he conquered and stormed the towns of all his enemies.
+\v 22 Because they became the ransom to the sin of the nation. The Divine Providence saved Yisrael \add !(Israel)\add*, which was afflicted before, by the blood of those pious ones and the death that appeased anger.
+\v 23 Because¦105090 the¦105103 tyrant¦105104 Antiokos \add !(Antiochus)\add*, looking to their courageous virtue and¦105096 to¦105098 their endurance in torture¦105100, proclaimed that¦105114 endurance as an example¦105112 to his soldiers¦105109.
+\v 24 They proved to be to him noble and¦105117 brave for land battles and¦105120 for sieges; and¦105124 he¦105118 conquered¦105128 and¦105126 stormed the towns of all¦105129 his enemies.
 \c 18
+\s1 A call to follow their example
 \p
-\v 1 Oh Israeli children, descendants of the seed of Avraham, obey this law and in every way be religious,
-\v 2 knowing that religious reasoning is lord of the emotions, and those not only inward but outward.
+\v 1 Oh¦105132 Israeli children, descendants of the¦105133 seed¦105135 of Avraham, obey this¦105140 law¦105141 and¦105143 in every¦105144 way¦105145 be religious,
+\v 2 knowing¦105147 that¦105148 religious reasoning is¦105152 lord of the¦105153 emotions, and¦105156 those not only¦105158 inward but¦105161 outward.
 \p
-\v 3 Therefore those people who gave up their bodies to pains for the sake of religion were not only admired by men, but were deemed worthy of a divine portion.
-\v 4 The nation through them obtained peace, and having renewed the observance of the law in their country, drove the enemy out of the land.
-\v 5 The tyrant Antiokos was both punished on earth, and is punished now that he is dead; for when he was quite unable to compel the Israelis to adopt foreign customs, and to desert the manner of life of their fathers,
+\v 3 Therefore those people who gave up their bodies¦105173 to pains for the¦105174 sake of religion weren't only¦105178 admired by¦105179 men, but¦105183 were deemed worthy¦105187 of a divine¦105185 portion.
+\v 4 The¦105192 nation¦105193 through¦105189 them obtained peace, and¦105194 having renewed the¦105195 observance of the¦105197 law in their country, drove the¦105199 enemy out of the¦105203 land.
+\v 5 The¦105206 tyrant¦105207 Antiokos was both punished on¦105210 earth¦105211, and¦105213 is punished now that¦105216 he's dead; for¦105217 when he was quite unable to compel the¦105222 Israelis to adopt foreign customs, and¦105225 to desert the manner of life of their fathers,
 \v 6 then, departing from Yerushalem \add !(Jerusalem)\add*, he made war against the Persians.
 \v 7 The righteous mother of the seven children spoke also as follows to her offspring: “I was a pure virgin, and didn't go beyond my father's house, but I took care of the rib from which woman was made.
 \v 8 No destroyer of the desert or ravisher of the plain injured me, nor did the destructive, deceitful snake make plunder of my chaste virginity. I remained with my husband during the time of my maturity.
-\v 9 When these, my children, arrived at maturity, their father died. He was blessed! Because having sought out a life of fertility in children, he was not grieved with a period of loss of children.
-\v 10 He used to teach you, when yet with you, the law and the prophets.
-\v 11 He used to read to you about the slaying of Hevel \add !(Abel)\add* by Kayin \add !(Cain)\add*, the offering up of Yitshak \add !(Isaac)\add*, and the imprisonment of Yosef \add !(Joseph)\add*.
-\v 12 He used to tell you of the zealous Pinhas, and informed you of Hananyah, Azaryah, and Mishael in the fire.
-\v 13 He used to glorify Daniyel, who was in the den of lions, and pronounce him blessed.
-\v 14 He used to remind you of the scripture of Yeshayah \add !(Isaiah)\add*, which says, “Even if you pass through the fire, it won't burn you.”
-\v 15 He chanted to you David, the hymn writer, who says, “Many are the afflictions of the just.”
-\v 16 He declared the proverbs of Shelomoh \add !(Solomon)\add*, who says, “He is a tree of life to all those who do His will.”
-\v 17 He used to confirm what Yehezkel \add !(Ezekiel)\add* said: “Will these dry bones live?”
-\v 18 Because he didn't forget the song which Mosheh \add !(Moses)\add* taught, proclaiming, “I will kill, and I will make alive.”
+\v 9 When these, my children, arrived at maturity, their father died. He was blessed! Because having sought out a life of fertility in children, he wasn't grieved with a period of loss of children.
+\v 10 He used to¦105315 teach¦105315 you¦105316, when yet with¦105319 you¦105320, the¦105321 law¦105322 and¦105323 the¦105324 prophets¦105325.
+\v 11 He used to¦105331 read¦105331 to you about the slaying of Hevel \add !(Abel)\add* by Kayin \add !(Cain)\add*, the offering up of Yitshak \add !(Isaac)\add*, and¦105338 the¦105339 imprisonment of Yosef \add !(Joseph)\add*.
+\v 12 He used to¦105343 tell¦105343 you of the¦105346 zealous Pinhas, and¦105350 informed you¦105351 of Hananyah, Azaryah, and Mishael in¦105353 the fire¦105354.
+\v 13 He used to¦105360 glorify¦105360 Daniyel, who¦105363 was in¦105364 the den of lions¦105366, and¦105369 pronounce him blessed.
+\v 14 He used to remind you¦105373 of the scripture of Yeshayah \add !(Isaiah)\add*, which says¦105378, “Even¦105379 if¦105379 you pass through¦105380 the fire¦105381, it won't burn¦105385 you¦105386.”
+\v 15 He chanted to¦105393 you¦105390 David, the hymn writer, who says¦105393, “Many are the¦105395 afflictions of the¦105397 just¦105398.”
+\v 16 He declared the¦105399 proverbs of Shelomoh \add !(Solomon)\add*, who¦105403 says¦105404, “He's a tree of life¦105406 to¦105407 all¦105408 those who¦105409 do¦105410 His will¦105413.”
+\v 17 He used to¦105418 confirm what Yehezkel \add !(Ezekiel)\add* said: “Will these dry¦105424 bones live¦105420?”
+\v 18 Because he didn't forget the song which Mosheh \add !(Moses)\add* taught, proclaiming, “I'll kill, and I'll make alive.”
 \v 19 This is our life and the length of our days.
 \p
-\v 20 Oh that bitter, and yet not bitter, day when the bitter tyrant of the Hellains \add !(Greeks)\add*, quenching fire with fire in his cruel cauldrons, brought with boiling rage the seven sons of the daughter of Avraham to the rack, and to all his torments!
-\v 21 He pierced the balls of their eyes, and cut out their tongues, and put them to death with varied tortures.
-\v 22 Therefore divine retribution pursued and will pursue the pestilent wretch.
-\v 23 But the children of Avraham, with their victorious mother, are assembled together to the choir of their father, having received pure and immortal souls from God.
-\v 24 To him be glory forever and ever. Amen.
+\v 20 Oh¦105450 that bitter, and yet not bitter, day¦105454 when¦105458 the¦105459 bitter¦105460 tyrant¦105462 of the Hellains \add !(Greeks)\add*, quenching fire with fire in his cruel cauldrons, brought with boiling rage the¦105479 seven¦105480 sons of the daughter of Avraham to the rack, and to all his torments!
+\v 21 He pierced the balls of their eyes¦105486, and¦105489 cut out their tongues¦105490, and¦105492 put them to¦105495 death with varied tortures.
+\v 22 Therefore divine retribution pursued and¦105502 will pursue the¦105504 pestilent wretch.
+\v 23 But the children of Avraham, with their victorious mother¦105513, are assembled together to the choir of their father¦105515, having received pure and¦105519 immortal souls from¦105522 God¦105524.
+\v 24 To¦105525 him be glory¦105527 forever and ever. Amen¦105533.

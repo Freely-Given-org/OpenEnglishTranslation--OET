@@ -1,8 +1,8 @@
-\id 3MA - Open English Translation—Readers' Version (OET-RV) v0.1.0
+\id 3MA - Open English Translation—Readers' Version (OET-RV) v0.4.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MA3
-\rem not WORDTABLE OET-LV_OT_word_table.tsv
+\rem WORDTABLE OET-LV_DC_word_table.tsv
 \rem Adapted from the Public Domain WEBBE courtesy of https://eBible.org
 \h 3 Maccabees
 \toc1 The Third Document about the Maccabees
@@ -11,261 +11,290 @@
 \mt2 The third document about
 \mt1 the Maccabees
 \is1 Introduction
+\ip \bk The Third Document about the Maccabees\bk* tells about the threatened destruction of the Yehudim (Jews) living in Mitsrayim (Egypt) under King Ptolemaios (Ptolemy) Filopator. The central characters are this king and the Jewish community, rather than the family whose battles are described in the first two Maccabees books. It shares their concern with remaining faithful to God under persecution.
+\ip After a military victory, the king visits Yerushalem (Jerusalem) and insists on entering the temple's inner sanctuary. God prevents him from doing so after the high priest Shim'on (Simon) prays. The king's anger then turns against the Yehudim in his own kingdom. They are rounded up and imprisoned, and he plans to have them trampled by elephants.
+\ip The account repeatedly contrasts the king's power and changing decisions with God's care for his people. Their prayers are answered, the intended massacre is overturned, and the survivors celebrate their rescue and return home. Prayer, perseverance, and public thanksgiving are central to the story.
 \ip \bk The Third Document about the Maccabees\bk* is recognised as Deuterocanonical Scripture by the Greek Orthodox and Russian Orthodox Churches. It is considered to be apocrypha by most other church traditions.
 \ip Makabi (from which the term Maccabee is derived) is an acronym formed from the first letters of Exodus 15:11: “Mi kamokha ba'elim YHWH” — “Who is like you among the gods, Yahweh?”
+\iot Main components of this account
+\io1 The king's victory and his attempt to enter the temple \ior 1:1–2:24\ior*
+\io1 The persecution and imprisonment of the Yehudim \ior 2:25–4:21\ior*
+\io1 The plan to kill the prisoners is repeatedly delayed \ior 5:1-51\ior*
+\io1 Eleazar's prayer, God's rescue, and the celebration \ior 6:1-41\ior*
+\io1 The king's letter and the people's return home \ior 7:1-23\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
+\s1 Filopator wins the battle against Antiokos
 \p
-\v 1 Now Filopator, on learning from those who came back that Antiokos \add !(Antiochus)\add* had made himself master of the places which belonged to himself, sent orders to all his infantry and cavalry, took with him his sister Arsinoe, and marched out as far as the parts of Rafiah, where Antiokos and his forces encamped.
-\v 2 And one Theodotos, intending to carry out his design, took with him the bravest of the armed men who had been before committed to his trust by Ptolemaios \add !(Ptolemy)\add*, and got through at night to the tent of Ptolemaios, to kill him on his own responsibility, and so to end the war.
-\v 3 But Dositheos, called the son of Drimulos, by birth a Yehudi \add !(Jew)\add*, afterward a renegade from the laws and observances of his country, conveyed Ptolemaios away, and made an obscure person lie down in his stead in the tent. It turned out that this man received the fate which was meant for the other.
-\v 4 A fierce battle then took place. The men of Antiokos were prevailing. Arsinoe continually went up and down the ranks, and with dishevelled hair, with tears and entreaties, begged the soldiers to fight bravely for themselves, their children, and wives, and promised that if they proved conquerors, she would give them each two minas of gold.
-\v 5 It thus fell out that their enemies were defeated in hand-to-hand encounter, and that many of them were taken prisoners.
-\v 6 Having vanquished this attempt, the king then decided to proceed to the neighbouring cities, and encourage them.
-\v 7 By doing this, and by making donations to their temples, he inspired his subjects with confidence.
+\v 1 Now Filopator¦92550, on learning¦92551 from¦92552 those who¦92553 came back that¦92555 Antiokos \add !(Antiochus)\add* had made himself master of the¦92557 places which belonged to¦92558 himself¦92559, sent orders¦92565 to¦92565 all¦92567 his infantry and cavalry, took¦92578 with¦92578 him his sister¦92576 Arsinoe, and marched out as far as the parts of Rafiah, where Antiokos and his forces encamped.
+\v 2 And¦92591 one Theodotos¦92590, intending to¦92597 carry out his design, took¦92597 with him the bravest of¦92609 the¦92609 armed men who'd been before committed to his trust by Ptolemaios \add !(Ptolemy)\add*, and got through at night to Ptolemaios' tent¦92611, to kill him on¦92617 his own responsibility, and so to end the¦92620 war¦92621.
+\v 3 But¦92623 Dositheos¦92625, called the¦92626 son of Drimulos, by birth a Yehudi \add !(Jew)\add*, afterward a renegade from the¦92629 laws and¦92633 observances of his country, conveyed Ptolemaios away, and¦92637 made an obscure person lie down in his stead in the¦92646 tent¦92647. It turned out that¦92652 this man¦92643 received the fate which¦92648 was meant for the¦92651 other.
+\v 4 A fierce battle then took place. The men of Antiokos were¦92654 prevailing. Arsinoe continually went up and down the ranks, and with dishevelled hair, with tears and¦92674 entreaties, begged the¦92676 soldiers to fight bravely for themselves, their children¦92684, and¦92681 wives, and¦92682 promised that¦92683 if they proved conquerors, she'd give them each¦92691 two¦92692 minas¦92693 of gold¦92694.
+\v 5 It thus fell out that¦92698 their enemies were defeated in¦92700 hand-to-hand encounter, and that many of them were taken¦92707 prisoners.
+\v 6 Having vanquished this¦92710 attempt, the¦92713 king then decided to¦92716 proceed to¦92717 the neighbouring cities¦92715, and encourage them.
+\v 7 By doing¦92718 this¦92720, and¦92721 by making donations to¦92729 their temples, he inspired his subjects with confidence.
+\s1 Filopator tries to enter the temple
 \p
-\v 8 The Yehudim \add !(Jews)\add* sent some of their council and of their elders to him. The greetings, welcoming gifts, and congratulations of the past, given by them, filled him with the greater eagerness to visit their city.
-\v 9 Having arrived at Yerushalem \add !(Jerusalem)\add*, sacrificed, and offered thank offerings to the Greatest God, and done whatever else was suitable to the sanctity of the place, and entered the inner courtyard,
-\v 10 he was so impressed with the magnificence of the place, and so wondered at the orderly arrangements of the temple, that he considered entering the sanctuary itself.
-\v 11 When they told him that this was not permissible, none of the nation, not even the priests in general, but only the supreme high priest of all, and he only once in a year, was allowed to go in, he would by no means give way.
-\v 12 Then they read the law to him, but he persisted in intruding, exclaiming that he ought to be allowed. He said, “Even if they were deprived of this honour, I shouldn't be.”
-\v 13 He asked why, when he entered all the other temples, did none of the priests who were present forbid him.
-\v 14 He was thoroughly answered by someone, that he did wrong to boast of this.
-\v 15 “Well, since I have done this,” said he, “be the cause what it may, shall I not enter with or without your consent?”
+\v 8 The¦92730 Yehudim \add !(Jews)\add* sent some of their council and¦92731 of their elders¦92741 to¦92734 him. The¦92737 greetings, welcoming gifts, and¦92739 congratulations of the past, given by them, filled him with the greater eagerness to visit their city.
+\v 9 Having arrived at Yerushalem \add !(Jerusalem)\add*, sacrificed, and offered thank offerings to the¦92768 Greatest God¦92770, and done¦92780 whatever else was suitable to¦92783 the sanctity of the¦92785 place¦92786, and¦92787 entered the¦92788 inner courtyard,
+\v 10 he was so impressed with the magnificence of the place, and so wondered at the¦92796 orderly arrangements of¦92797 the¦92797 temple¦92798, that he considered entering¦92802 the¦92804 sanctuary itself.
+\v 11 When¦92807 they told him that¦92814 this¦92816 wasn't permissible, none of¦92818 the¦92818 nation¦92819, not even the¦92824 priests in general, but¦92826 only the¦92829 supreme high priest¦92825 of all¦92831, and¦92833 he¦92834 only once¦92835 in a year¦92837, was allowed to go in, he'd by¦92838 no¦92838 means¦92838 give way.
+\v 12 Then they read the¦92841 law¦92843 to him, but¦92852 he persisted in intruding, exclaiming that¦92854 he ought to be allowed. He said, “Even if¦92853 they were deprived of this¦92857 honour¦92858, I¦92859 shouldn't be.”
+\v 13 He asked why, when¦92862 he¦92868 entered¦92867 all¦92870 the other temples, did none¦92872 of the priests who were present forbid him.
+\v 14 He was thoroughly answered by someone¦92877, that he did wrong to¦92879 boast of this¦92882.
+\v 15 “Well, since I've done this,” he¦92887 said¦92886, “be the cause¦92890 what it may, won't¦92891 I enter¦92893 with or without your consent?”
 \p
-\v 16 When the priests fell down in their sacred vestments imploring the Greatest God to come and help in time of need, and to avert the violence of the fierce aggressor, and when they filled the temple with lamentations and tears,
-\v 17 then those who had been left behind in the city were scared, and rushed out, uncertain of the event.
-\v 18 Virgins, who had been shut up within their chambers, came out with their mothers, scattering dust and ashes on their heads, and filling the streets with outcries.
-\v 19 Women who had recently been arrayed for marriage left their bridal chambers, left the reserve that befitted them, and ran around the city in a disorderly manner.
-\v 20 New-born babes were deserted by the mothers or nurses who waited upon them—some here, some there, in houses, or in fields; these now, with an ardour which could not be checked, swarmed into the Most High temple.
-\v 21 Various prayers were offered up by those who assembled in this place because of the unholy attempt of the king.
-\v 22 Along with these there were some of the citizens who took courage and would not submit to his obstinacy and his intention of carrying out his purpose.
-\v 23 Calling out to arms, and to die bravely in defence of the law of their fathers, they created a great uproar in the place, and were with difficulty brought back by the aged and the elders to the station of prayer which they had occupied before.
-\v 24 During this time, the multitude kept on praying.
-\v 25 The elders who surrounded the king tried in many ways to divert his arrogant mind from the design which he had formed.
-\v 26 He, in his hardened mood, insensible to all persuasion, was going onward with the view of carrying out this design.
-\v 27 Yet even his own officers, when they saw this, joined the Yehudim \add !(Jews)\add* in an appeal to Him who has all power to aid in the present crisis, and not wink at such haughty lawlessness.
-\v 28 Such was the frequency and the vehemence of the cry of the assembled crowd, that an indescribable noise ensued.
-\v 29 Not the men only, but the very walls and floor seemed to sound out, all things preferring death rather than to see the place defiled.
+\v 16 When the¦92899 priests¦92901 fell down in¦92902 their sacred¦92904 vestments imploring the¦92903 Greatest God¦92911 to come and¦92907 help in time of¦92909 need, and¦92916 to avert the¦92917 violence of¦92919 the¦92919 fierce aggressor, and¦92924 when they filled the¦92927 temple¦92928 with lamentations and tears,
+\v 17 then those who'd¦92930 been left behind in the¦92932 city¦92933 were scared, and rushed¦92936 out¦92936, uncertain of the¦92939 event.
+\v 18 Virgins¦92944, who'd¦92941 been shut up within their chambers, came out with¦92947 their mothers, scattering dust and¦92951 ashes¦92952 on their heads¦92956, and filling the¦92962 streets with outcries.
+\v 19 Women who'd¦92965 recently been arrayed for marriage left their bridal chambers, left the¦92970 reserve that befitted them, and¦92975 ran around the¦92983 city¦92984 in a disorderly manner.
+\v 20 New-born babes were deserted by the mothers or nurses who waited on¦93003 them—some here, some there, in houses¦93005, or in fields; these now, with an ardour which¦93006 couldn't be checked, swarmed into¦93008 the Most High temple¦93015.
+\v 21 Various prayers¦93025 were¦93019 offered up by those who¦93020 assembled in this¦93022 place because of the¦93024 unholy attempt of the¦93027 king.
+\v 22 Along with¦93032 these there were some of the¦93035 citizens¦93037 who¦93036 took courage and wouldn't submit to¦93043 his obstinacy and¦93044 his intention of carrying out his purpose¦93047.
+\v 23 Calling out to arms, and to die bravely in defence of¦93062 the¦93062 law¦93064 of their fathers, they created a great uproar in¦93068 the¦93069 place¦93070, and¦93073 were with difficulty brought back by¦93074 the¦93076 aged and¦93078 the¦93079 elders¦93080 to¦93082 the station of prayer¦93086 which they'd occupied before.
+\v 24 During this time, the multitude¦93092 kept on¦93095 praying.
+\v 25 The¦93099 elders¦93104 who surrounded the¦93102 king¦93103 tried¦93106 in¦93105 many¦93105 ways¦93105 to¦93106 divert his arrogant mind¦93110 from the¦93112 design which he'd formed.
+\v 26 He, in his hardened mood, insensible to all¦93118 persuasion, was going onward with the view of carrying out this design.
+\v 27 Yet even his own officers, when¦93130 they saw¦93136 this¦93139, joined the¦93141 Yehudim \add !(Jews)\add* in an appeal to¦93143 Him who¦93144 has all¦93145 power¦93146 to¦93147 aid in the¦93148 present¦93149 crisis, and not¦93151 wink at such haughty lawlessness.
+\v 28 Such was the frequency and the vehemence of the cry of the assembled crowd¦93166, that an indescribable noise ensued.
+\v 29 Not¦93176 the men only¦93177, but¦93180 the¦93182 very walls¦93183 and¦93184 floor seemed to sound out, all things preferring death¦93194 rather than to see the¦93198 place¦93199 defiled.
 \c 2
+\s1 Shim'on prays for the temple's protection
 \p
-\v 1 Now it was that the high priest Shim’on \add !(Simon)\add* bowed his knees near the holy place, spread out his hands in reverent form, and uttered the following prayer:
-\v 2 “O master, master, King of the heavens, and Ruler of the whole creation, Holy amongst the holy, sole Governor, Almighty, give ear to us who are oppressed by a wicked and profane one, who celebrates in his confidence and strength.
-\v 3 It is you, the Creator of all, the master of the universe, who are a righteous Governor, and judge all who act with pride and insolence.
-\v 4 It was you who destroyed the former workers of unrighteousness, amongst whom were the giants, who trusted in their strength and daring, by covering them with a measureless flood.
-\v 5 It was you who made the Sodomites, those workers of exceedingly iniquity, men notorious for their vices, an example to later generations, when you covered them with fire and brimstone.\f + \fr 2:5 \ft or, sulfur\f*
-\v 6 You made known your power when you caused the bold Par’oh \add !(Pharaoh)\add*, the enslaver of your people, to pass through the ordeal of many and diverse inflictions.
-\v 7 You rolled the depths of the sea over him when he pursued with chariots and with a multitude of followers, and gave a safe passage to those who put their trust in you, the master of the whole creation.
-\v 8 These saw and felt the works of your hands, and praised you, the Almighty.
-\v 9 You, Oh King, when you created the immeasurable and measureless earth, chose this city. You made this place sacred to your name, even though you need nothing. You glorified it with your illustrious presence, after constructing it to the glory of your great and honourable name.
-\v 10 You promised, out of love for the people of Yisrael \add !(Israel)\add*, that if we fall away from you, become afflicted, and then come to this house and pray, you would hear our prayer.
-\v 11 Truly you are faithful and true.
-\v 12 When you often aided our fathers when hard pressed and humiliated, and delivered them out of great dangers,
-\v 13 see now, holy King, how through our many and great sins we are crushed and made subject to our enemies, and have become weak and powerless.
-\v 14 In our low condition, this bold and profane man seeks to dishonour this your holy place, consecrated out of the earth to the name of your Majesty.
-\v 15 Your dwelling place, the heaven of heavens, is indeed unapproachable to men.
-\v 16 But since it seemed good to you to exhibit your glory amongst your people Yisrael, you sanctified this place.
-\v 17 Don't punish us by means of the uncleanness of their men, and don't chastise us by means of their profanity, lest the lawless ones should boast in their rage, and exult in exuberant pride of speech, and say,
-\v 18 ‘We have trampled upon the holy house, as idolatrous houses are trampled upon.’
-\v 19 Blot out our iniquities, do away with our errors, and show your compassion in this hour.
-\v 20 Let your mercies quickly go before us. Grant us peace, that the downcast and broken hearted may praise you with their mouth.”
+\v 1 Now it was that¦93201 the high priest Shim'on \add !(Simon)\add* bowed his knees¦93211 near the holy place, spread out his hands in reverent form, and¦93212 uttered the¦93218 following prayer¦93219:
+\v 2 “O master, master, King¦93223 of the¦93224 heavens¦93225, and¦93226 Ruler of the whole¦93228 creation¦93229, Holy¦93230 among¦93231 the holy¦93232, sole Governor, Almighty¦93234, give ear to us who are oppressed by¦93238 a wicked and¦93240 profane one, who celebrates in his confidence and¦93243 strength.
+\v 3 It's you¦93246, the¦93248 Creator¦93249 of all, the master of the universe, who are¦93258 a righteous Governor¦93256, and¦93259 judge¦93266 all who¦93260 act with pride and¦93262 insolence.
+\v 4 It was you¦93267 who destroyed the former workers of unrighteousness¦93270, among whom were¦93276 the giants, who trusted in¦93272 their strength and¦93278 daring, by covering them with a measureless flood.
+\v 5 It was you¦93286 who made¦93289 the¦93292 Sodomites, those workers of great wickedness, men notorious for their vices, an example to later generations, when you covered them with fire¦93295 and¦93296 brimstone.\f + \fr 2:5 \ft or, sulfur\f*
+\v 6 You¦93303 made known your power¦93329 when you¦93310 caused the¦93311 bold Par'oh \add !(Pharaoh)\add*, the¦93320 enslaver of your¦93321 people, to pass through the¦93326 ordeal of many and¦93315 diverse inflictions.
+\v 7 You rolled the depths of the sea¦93340 over him when¦93330 he¦93332 pursued with¦93333 chariots and¦93335 with a multitude¦93337 of followers, and¦93342 gave a safe passage to¦93344 those who put their trust in you¦93345, the¦93346 master of the¦93347 whole creation¦93349.
+\v 8 These saw and felt the works¦93356 of your¦93357 hands¦93358, and praised you¦93360, the¦93361 Almighty.
+\v 9 You¦93363, Oh King¦93364, when you created¦93365 the¦93366 immeasurable and¦93368 measureless earth¦93370, chose this¦93372 city¦93373. You¦93382 made¦93393 this place¦93378 sacred to your name¦93381, even though you need nothing. You glorified it with your illustrious presence, after constructing it to the glory¦93396 of¦93397 your great¦93398 and¦93399 honourable name¦93401.
+\v 10 You promised, out of love¦93404 for Yisrael's \add !(Israel)\add* people, that¦93411 if¦93412 we¦93414 fall away from you, become afflicted, and¦93416 then¦93420 come¦93421 to this house¦93406 and pray, you'd hear our prayer¦93429.
+\v 11 Truly you're faithful¦93433 and¦93435 true¦93436.
+\v 12 When you often aided our fathers¦93442 when hard pressed and humiliated, and delivered them out¦93452 of great¦93453 dangers,
+\v 13 see¦93455 now¦93457, holy¦93458 King¦93459, how through¦93460 our many and¦93463 great¦93464 sins¦93466 we're¦93465 crushed and made subject to our enemies, and have become weak and powerless.
+\v 14 In¦93477 our¦93480 low condition, this¦93482 bold¦93483 and¦93484 profane¦93485 man seeks to¦93490 dishonour this¦93496 your holy¦93499 place¦93500, consecrated out of the¦93491 earth¦93492 to the¦93494 name¦93495 of your Majesty.
+\v 15 Your dwelling¦93504 place, the heaven¦93506 of¦93507 heavens¦93508, is¦93511 indeed unapproachable to¦93511 men.
+\v 16 But since¦93513 it seemed good to you to exhibit your glory¦93516 among¦93518 your people¦93520 Yisrael, you¦93521 sanctified this¦93524 place¦93525.
+\v 17 Don't¦93527 punish us by means of the¦93531 uncleanness of their men, and don't¦93540 chastise us by means of their profanity, or those lawless people might boast¦93541 in¦93544 their rage, speak¦93553 with excessive pride¦93550, and say¦93553,
+\v 18 ‘We've¦93554 trampled on the¦93556 holy house¦93557, as idolatrous houses are trampled on.’
+\v 19 Blot out our iniquities, do away with our errors, and show your compassion in this hour¦93582.
+\v 20 Let your mercies quickly¦93584 go before us. Grant¦93591 us peace¦93603, that the¦93587 downcast and broken hearted may praise you¦93589 with their mouth¦93594.”
+\s1 God stops Filopator entering the temple
 \p
-\v 21 At that time God, who sees all things, who is beyond all Holy amongst the holy, heard that prayer, so suitable, and scourged the man who was greatly uplifted with scorn and insolence.
-\v 22 Shaking him back and forth as a reed is shaken with the wind, he threw him down on the pavement, powerless, with limbs paralysed, and by a righteous judgement deprived of the ability to speak.
-\v 23 His friends and bodyguards, seeing the swift recompense which had suddenly overtaken him, struck with exceeding terror, and fearing that he would die, speedily removed him.
-\v 24 When in course of time he had come to himself, this severe punishment caused no repentance within him, but he departed with bitter threatenings.
+\v 21 At that time God¦93608, who sees all things, who's beyond all Holy¦93612 among¦93613 the holy¦93614, heard that prayer, so suitable, and scourged the¦93616 man who was greatly¦93623 uplifted with scorn and insolence.
+\v 22 Shaking him back and¦93628 forth as a reed¦93633 is shaken with the wind¦93635, he threw him down on the pavement, powerless, with limbs paralysed, and¦93641 by a righteous judgement¦93650 deprived of the¦93642 ability to¦93646 speak.
+\v 23 His friends¦93654 and¦93655 bodyguards, seeing the¦93656 swift¦93661 recompense which had suddenly overtaken him, struck with exceeding terror, and¦93669 fearing that¦93670 he'd¦93674 die, speedily removed him.
+\v 24 When in¦93679 course of time¦93680 he'd come¦93688 to himself¦93684, this severe punishment caused no¦93685 repentance within him, but he departed with¦93690 bitter threatenings.
+\s1 Filopator turns against the Yehudim in Mitsrayim
 \p
-\v 25 He proceeded to Mitsrayim \add !(Egypt)\add*, grew worse in wickedness through his previously mentioned companions in wine, who were lost to all goodness,
-\v 26 and not satisfied with countless acts of impiety, his audacity so increased that he raised evil reports there, and many of his friends, watching his purpose attentively, joined in furthering his will.
-\v 27 His purpose was to inflict a public stigma upon our race. Therefore he erected a stone pillar in the courtyard, and caused the following inscription to be engraved upon it:
-\v 28 “Entrance to this temple is to be refused to all those who would not sacrifice. All the Yehudim \add !(Jews)\add* were to be registered amongst the slaves. Those who resisted are to be forcibly seized and put to death.
-\v 29 Those who are thus registered are to be marked on their persons by the ivy-leaf symbol of Dionusos, and to be reduced to these limited rights.”
-\v 30 To do away with the appearance of hating them all, he had it written underneath, that if any of them should elect to enter the community of those initiated in the rites, these should have equal rights with the Alexandrians.
+\v 25 He proceeded to Mitsrayim \add !(Egypt)\add*, grew worse in wickedness¦93703 through¦93705 his previously mentioned companions in wine, who¦93707 were lost to all¦93713 goodness,
+\v 26 and¦93723 not satisfied with countless acts of impiety, his audacity so increased that¦93748 he raised evil reports there, and¦93734 many of¦93741 his friends¦93737, watching his purpose¦93743 attentively, joined in furthering his will.
+\v 27 His purpose was to¦93750 inflict a public¦93752 stigma on¦93759 our race. Therefore he erected a stone pillar in the¦93762 courtyard¦93763, and caused the following inscription to¦93766 be engraved on it:
+\v 28 “Entrance to this temple is to be refused to all those who wouldn't¦93771 sacrifice. All the Yehudim \add !(Jews)\add* were to be registered among the slaves. Those who resisted are to be forcibly seized and put to death.
+\v 29 Those who are thus registered are to be marked on their persons by the ivy-leaf symbol of¦93801 Dionusos, and¦93810 to be reduced to these limited rights.”
+\v 30 To¦93816 do away with the¦93819 appearance of hating them all¦93820, he had it written underneath, that if¦93824 any of them should elect to enter the community of those initiated in¦93830 the¦93831 rites, these should have equal rights with the¦93833 Alexandrians.
 \p
-\v 31 Some of those who were over the city, therefore, abhorring any approach to the city of piety, unhesitatingly gave in to the king, and expected to derive some great honour from a future connection with him.
-\v 32 A nobler spirit, however, prompted the majority to cling to their religious observances, and by paying money that they might live unmolested, these sought to escape the registration,
-\v 33 cheerfully looking forward to future aid, they abhorred their own apostates, considering them to be national foes, and depriving them of common fellowship and mutual help.
+\v 31 Some of those who were over the city, therefore¦93843, abhorring any approach to¦93844 the¦93847 city¦93848 of piety¦93849, unhesitatingly gave¦93854 in to the¦93863 king¦93864, and expected to derive some great¦93856 honour from¦93860 a future connection with him.
+\v 32 A nobler spirit, however, prompted the majority to cling to their religious observances, and by paying money¦93879 that they might live¦93882 unmolested, these sought to¦93885 escape the¦93889 registration,
+\v 33 cheerfully looking forward to future aid, they abhorred their own apostates, considering them to be national foes, and depriving them of¦93905 common¦93910 fellowship and¦93912 mutual help.
 \c 3
+\s1 The king orders the arrest of the Yehudim
 \p
-\v 1 On discovering this, so incensed was the wicked king, that he no longer confined his rage to the Yehudim in Alexandria. Laying his hand more heavily upon those who lived in the country, he gave orders that they should be quickly collected into one place, and most cruelly deprived of their lives.
-\v 2 While this was going on, a hostile rumour was uttered abroad by men who had banded together to injure the Jewish race. The pretext of their charge was that the Yehudim kept them away from the ordinances of the law.
-\v 3 Now the Yehudim always maintained a feeling of unwavering loyalty towards the kings,
-\v 4 yet, as they worshipped God and observed his law, they made certain distinctions, and avoided certain things. Hence they appeared hateful to some people,
-\v 5 although, as they adorned their conversation with works of righteousness, they had established themselves in the good opinion of the world.
-\v 6 What all the rest of mankind said was, however, disregarded by the foreigners,
-\v 7 who said much of the exclusiveness of the Yehudim with regard to their worship and meats. They alleged that they were unsociable men, hostile to the king's interests, refusing to associate with him or his troops. By this way of speaking, they brought much hatred on them.
-\v 8 This unexpected uproar and sudden gathering of people was observed by the Hellains \add !(Greeks)\add* who lived in the city, concerning men who had never harmed them. Yet to aid them was not in their power, since all was oppression around, but they encouraged them in their troubles, and expected a favourable turn of affairs.
-\v 9 He who knows all things will not, they said, disregard so great a people.
-\v 10 Some of the neighbours, friends, and business associates of the Yehudim even called them secretly to an interview, pledged them their assistance, and promised to do their very utmost for them.
+\v 1 On discovering this¦93918, so incensed was the wicked king, that he no¦93924 longer confined his rage to the Yehudim in Alexandria. Laying his hand more heavily on those who lived in the¦93934 country¦93935, he gave orders that they should be quickly collected into¦93941 one place, and¦93944 most cruelly deprived of¦93947 their lives¦93948.
+\v 2 While this¦93950 was going on, a¦93959 hostile rumour was uttered abroad by men who'd banded together to¦93956 injure the Jewish race. The pretext of¦93957 their charge was that the¦93957 Yehudim kept them away¦93969 from¦93969 the ordinances of the law.
+\v 3 Now the Yehudim always maintained a feeling of unwavering loyalty towards the kings¦93981,
+\v 4 yet, as they worshipped God¦93991 and¦93992 observed his law¦93995, they made¦93998 certain distinctions, and avoided certain things. Hence they appeared hateful to some people,
+\v 5 although, as they adorned their conversation with works of righteousness, they'd established themselves in the good opinion of the world.
+\v 6 What all¦94028 the¦94031 rest of mankind said was, however, disregarded by¦94033 the foreigners,
+\v 7 who said much of the exclusiveness of the Yehudim with regard to their worship and¦94040 meats. They alleged that they were unsociable men, hostile to¦94044 the¦94046 king's¦94047 interests, refusing to associate with him or his troops. By this way of speaking, they brought much hatred on them.
+\v 8 This¦94070 unexpected uproar and¦94071 sudden gathering of people was observed by the Hellains \add !(Greeks)\add* who lived in the¦94073 city¦94074, about¦94080 men who'd¦94081 never harmed them. Yet to aid them wasn't¦94087 in their power, since all was¦94094 oppression around, but¦94098 they encouraged them in their troubles, and expected a favourable turn of affairs.
+\v 9 He who knows all things won't¦94106, they said, disregard so great a people.
+\v 10 Some of the neighbours¦94118, friends¦94121, and¦94122 business associates of the Yehudim even called them secretly to¦94128 an interview, pledged them their assistance, and¦94130 promised to¦94134 do their very utmost for them.
+\s1 The king's letter condemning the Yehudim
 \p
-\v 11 Now the king, elated with his prosperous fortune, and not regarding the superior power of God, but thinking to persevere in his present purpose, wrote the following letter to the prejudice of the Yehudim:
-\v 12 “King Ptolemaios \add !(Ptolemy)\add* Filopator, to the commanders and soldiers in Mitsrayim \add !(Egypt)\add*, and in all places, health and happiness!
-\v 13 I am doing well, and so, too, are my affairs.
-\v 14 Since our Asiatic campaign, the particulars of which you know, and which by the aid of the gods, not lightly given, and by our own vigour, has been brought to a successful conclusion according to our expectation,
-\v 15 we resolved, not with strength of spear, but with gentleness and much humanity, as it were to nurse the inhabitants of Coele-Syria and Foinikai, and to be their willing benefactors.
-\v 16 So, having bestowed considerable sums of money upon the temples of the several cities, we proceeded even as far as Yerushalem \add !(Jerusalem)\add*, and went up to honour the temple of these wretched beings who never cease from their folly.
-\v 17 To outward appearance they received us willingly, but belied that appearance by their actions. When we were eager to enter their temple, and to honour it with the most beautiful and exquisite gifts,
-\v 18 they were so carried away by their old arrogance as to forbid us the entrance, while we, out of our forbearance towards all men, refrained from exercising our power upon them.
-\v 19 Thus, exhibiting their enmity against us, they alone amongst the nations lift up their heads against kings and benefactors, as men unwilling to submit to any reasonable thing.
-\v 20 We then, having endeavoured to make allowance for the madness of these people, and on our victorious return treating all people in Mitsrayim courteously, acted in a manner which was befitting.
-\v 21 Accordingly, bearing no ill will against their kinsmen, but rather remembering our connection with them, and the numerous matters with sincere heart from a remote period entrusted to them, we wished to venture a total alteration of their state, by giving them the rights of citizens of Alexandria, and to admit them to the everlasting rites of our solemnities.
-\v 22 All this, however, they have taken in a very different spirit. With their innate malignity, they have spurned the fair offer, and constantly inclining to evil,
-\v 23 have rejected the inestimable rights. Not only so, but by using speech, and by refraining from speech, they abhor the few amongst them who are heartily disposed towards us, ever deeming that their infamous way of life will force us to do away with our reform.
-\v 24 Having then received certain proofs that these Yehudim \add !(Jews)\add* bear us every sort of ill will, we must look forward to the possibility of some sudden tumult amongst ourselves when these impious men may turn traitors and barbarous enemies.
-\v 25 Therefore, as soon as the contents of this letter become known to you, in that same hour we order those Yehudim who dwell amongst you, with wives and children, to be sent to us, vilified and abused, in chains of iron, to undergo a cruel and shameful death, suitable to enemies.
-\v 26 Because by the punishment of them in one body we perceive that we have found the only means of establishing our affairs for the future on a firm and satisfactory basis.
-\v 27 Anyone who protects a Yehudi \add !(Jew)\add*, whether it be old man, child, or nursing baby, shall with his whole house be tortured to death.
-\v 28 Anyone who informs against the Yehudim, besides receiving the property of the person charged, shall be presented with two thousand drachmas\f + \fr 3:28 \ft a drachma was about a day's pay for an agricultural labourer\f* from the royal treasury, shall be made free, and shall be crowned.
-\v 29 Whatever place shelters a Yehudi shall be made unapproachable and shall be put under the ban of fire, and be forever rendered useless to every living being for all time to come.”
-\v 30 The king's letter was written in the above form.
+\v 11 Now the king, elated with his prosperous fortune, and¦94145 not regarding the¦94148 superior power¦94152 of¦94149 God¦94151, but¦94154 thinking to persevere in¦94156 his present¦94142 purpose, wrote¦94161 the¦94157 following letter to¦94162 the prejudice of the Yehudim:
+\v 12 “King¦94166 Ptolemaios¦94167 \add !(Ptolemy)\add* Filopator¦94168, to the¦94169 commanders and¦94172 soldiers¦94177 in Mitsrayim \add !(Egypt)\add*, and¦94176 in all places¦94174, health and¦94179 happiness!
+\v 13 I'm¦94184 doing well, and¦94186 so, too, are my affairs.
+\v 14 Since our Asiatic campaign, the particulars of which¦94198 you know, and¦94200 which by the¦94202 aid of the¦94203 gods, not lightly given, and¦94209 by our¦94211 own vigour, has been brought to a successful conclusion according¦94214 to¦94214 our expectation,
+\v 15 we resolved, not¦94221 with strength of spear, but with gentleness¦94224 and much¦94227 humanity, as it were to nurse the¦94230 inhabitants of Coele-Syria and Foinikai, and to be their willing benefactors.
+\v 16 So¦94241, having bestowed considerable sums of money on the temples of the several cities¦94244, we proceeded even as far as Yerushalem \add !(Jerusalem)\add*, and¦94250 went up to¦94254 honour the¦94256 temple¦94257 of these wretched beings who never¦94261 cease from their folly¦94264.
+\v 17 To¦94271 outward appearance they received¦94271 us willingly, but belied that¦94273 appearance by their actions. When¦94274 we¦94278 were eager to¦94279 enter¦94279 their temple¦94282, and to honour it¦94283 with the¦94285 most beautiful and¦94287 exquisite gifts,
+\v 18 they were so carried away by their old arrogance as to¦94292 forbid us the entrance, while we¦94295, out of¦94302 our forbearance towards all¦94306 men, refrained from exercising our power on them.
+\v 19 Thus, exhibiting their enmity against us, they alone among the nations¦94320 lift up their heads against kings¦94321 and¦94322 benefactors, as men unwilling to submit to any reasonable thing.
+\v 20 We¦94331 then¦94332, having endeavoured to¦94352 make¦94352 allowance for the¦94333 madness of these people, and on our victorious return treating all¦94346 people in Mitsrayim courteously, acted in a manner which was befitting.
+\v 21 Accordingly, bearing no ill will against their kinsmen, but¦94354 rather remembering our connection with¦94356 them, and the numerous matters with sincere heart from a remote period entrusted to them, we wished to venture a total alteration of their state, by giving them the rights of citizens¦94379 of Alexandria, and¦94383 to admit them to the¦94385 eternal rites of our solemnities.
+\v 22 All this, however, they've taken in a very different spirit. With their innate malignity, they've spurned the fair offer, and constantly inclining to¦94399 evil¦94404,
+\v 23 have rejected the inestimable rights. Not only¦94407 so, but¦94412 by using speech, and¦94417 by refraining from speech, they abhor the¦94419 few among¦94420 them who¦94430 are heartily disposed towards us, ever deeming that their infamous way of¦94433 life will force us to do away with our reform.
+\v 24 Having then¦94440 received certain proofs¦94441 that¦94444 these Yehudim \add !(Jews)\add* bear us every¦94446 sort of ill will, we¦94448 must look forward to¦94451 the¦94458 possibility of some sudden tumult among ourselves when these impious men may turn traitors and¦94464 barbarous enemies.
+\v 25 Therefore, as soon as the¦94470 contents of this¦94472 letter become known to you, in that¦94474 same hour we order those Yehudim who¦94476 live among you, with¦94478 wives and¦94480 children¦94481, to¦94486 be sent¦94486 to us, vilified and abused, in chains of iron, to undergo a cruel and shameful death, suitable to enemies.
+\v 26 Because by the¦94506 punishment of them in one body we perceive that we've found the only means of establishing our affairs for¦94501 the¦94511 future on¦94513 a firm and¦94515 satisfactory basis.
+\v 27 Anyone¦94523 who¦94524 protects a Yehudi \add !(Jew)\add*, whether it be old man¦94523, child¦94529, or nursing baby, will with¦94536 his whole¦94536 house¦94536 be tortured to death.
+\v 28 Anyone who¦94539 informs against¦94541 the Yehudim, besides receiving the property¦94555 of¦94553 the¦94553 person charged, will be presented with two thousand¦94557 drachmas¦94556\f + \fr 3:28 \ft a drachma was about a day's pay for an agricultural labourer\f* from the¦94559 royal treasury, will be made free¦94560, and¦94562 will be crowned.
+\v 29 Whatever place¦94566 shelters a Yehudi will be made unapproachable and will be put under the ban of fire, and be forever rendered useless¦94584 to¦94585 every living being for all time¦94589 to come.”
+\v 30 The¦94591 king's letter was written in the¦94593 above form.
 \c 4
+\s1 The Yehudim are rounded up and imprisoned
 \p
-\v 1 Wherever this decree was received, the people kept up a revelry of joy and shouting, as if their long-pent-up, hardened hatred would now show itself openly.
-\v 2 The Yehudim suffered great throes of sorrow and wept much, while their hearts, all things around being lamentable, were set on fire as they bewailed the sudden destruction which was decreed against them.
-\v 3 What home, or city, or any inhabited place, or what streets were there, which their condition didn't fill with wailing and lamentation?
-\v 4 They were sent out unanimously by the generals in various cities, with such stern and pitiless feeling that the exceptional nature of the infliction moved even some of their enemies. These, influenced by sentiments of common humanity, and reflecting upon the uncertain issue of life, shed tears at their miserable expulsion.
-\v 5 A multitude of aged hoary-haired old men were driven along with halting bending feet, urged onward by the impulse of a violent, shameless force to quick speed.
-\v 6 Girls who had entered the bridal chamber quite lately, to enjoy the partnership of marriage, exchanged pleasure for misery; and with dust scattered upon their myrrh-anointed heads, were hurried along unveiled; and, in the middle of outlandish insults, set up with one accord a lamentable cry instead of the marriage hymn.
-\v 7 Bound and exposed to public gaze, they were hurried violently on board ship.
-\v 8 The husbands of these, in the prime of their youthful vigour, instead of crowns, wore ropes round their necks. Instead of feasting and youthful celebration, they spent the rest of their nuptial days in wailing, and saw only the grave at hand.
-\v 9 They were dragged along by unyielding chains, like wild animals. Of these, some had their necks thrust into the benches of the rowers, while the feet of others were enclosed in hard fetters.
-\v 10 The planks of the deck above them blocked out the light and shut out the day on every side, so that they might be treated like traitors during the whole voyage.
+\v 1 Wherever this decree was received, the people kept up a revelry of joy¦94613 and shouting, as if¦94615 their long-pent-up, hardened hatred would now show itself openly.
+\v 2 The¦94626 Yehudim suffered great throes of sorrow and¦94627 wept much, while their hearts¦94642, all¦94641 things around being¦94631 lamentable¦94633, were set on fire as they bewailed the sudden¦94646 destruction which was decreed against them.
+\v 3 What home, or¦94652 city¦94653, or¦94654 any inhabited¦94658 place¦94659, or¦94660 what streets were there, which¦94661 their condition didn't fill with wailing and¦94664 lamentation?
+\v 4 They were sent out unanimously by¦94677 the¦94678 generals in various cities¦94680, with such stern and¦94689 pitiless feeling that¦94691 the¦94695 exceptional nature of the¦94697 infliction moved even some of their enemies¦94692. These, influenced by sentiments of common¦94698 humanity, and¦94700 reflecting on¦94685 the¦94702 uncertain issue of¦94704 life¦94705, shed tears at their miserable expulsion.
+\v 5 A multitude¦94714 of aged hoary-haired old men were driven along with halting bending feet¦94722, urged onward by the impulse¦94725 of a violent, shameless force to¦94730 quick speed.
+\v 6 Girls who'd entered the bridal chamber quite lately, to enjoy the partnership of marriage, exchanged pleasure for misery; and with dust scattered on their myrrh-anointed heads, were hurried along unveiled; and, in the middle of outlandish insults, set up with one accord a lamentable cry instead of the marriage hymn.
+\v 7 Bound and¦94767 exposed to public gaze, they were hurried violently on board ship.
+\v 8 The¦94778 husbands of these, in the¦94785 prime of their youthful vigour, instead of crowns, wore ropes round their necks. Instead of feasting and youthful celebration, they spent the rest of their nuptial days¦94802 in¦94803 wailing, and saw¦94811 only the¦94809 grave at hand.
+\v 9 They were dragged along by unyielding chains, like wild¦94815 animals¦94815. Of these, some had their necks thrust into the benches of the rowers, while the feet¦94832 of others were enclosed in hard fetters¦94835.
+\v 10 The planks of the deck above them blocked out the light¦94844 and shut out the day on every¦94847 side¦94847, so that¦94846 they might be treated like traitors during the¦94855 whole voyage.
 \p
-\v 11 They were carried like this in this vessel, and at the end of it arrived at Schedia. The king had ordered them to be thrown into the vast hippodrome, which was built in front of the city. This place was well adapted by its situation to expose them to the gaze of all comers into the city, and of those who went from the city into the country. Thus they could hold no communication with his forces. They weren't deemed worthy of any civilized accommodation.
-\v 12 When this was done, the king, hearing that their kindred in the city often went out and lamented the melancholy distress of these victims,
+\v 11 They were carried like this in this vessel, and at the end of it arrived at Schedia. The¦94872 king¦94873 had ordered¦94874 them to be thrown into¦94876 the¦94877 vast hippodrome, which was built in¦94878 front¦94878 of¦94878 the¦94879 city¦94880. This place was well adapted by its situation to expose them to the gaze of all¦94892 comers into the¦94896 city¦94897, and¦94898 of those who¦94899 went from¦94900 the city into the¦94903 country¦94904. Thus they could hold no communication with his forces. They weren't deemed worthy of any civilized accommodation.
+\v 12 When this¦94922 was¦94923 done, the king, hearing¦94924 that¦94925 their kindred in the¦94927 city¦94928 often¦94932 went out¦94926 and lamented the melancholy distress of these victims,
 \v 13 was full of rage, and commanded that they should be carefully subjected to the same—and not one bit milder—treatment.
 \v 14 The whole nation was now to be registered. Every individual was to be specified by name, not for that hard servitude of labour which we have a little before mentioned, but that he might expose them to the before-mentioned tortures; and finally, in the short space of a day, might exterminate them by his cruelties.
-\v 15 The registering of these men was carried on cruelly, zealously, assiduously, from the rising of the sun to its going down, and was not brought to an end in forty days.
-\v 16 The king was filled with great and constant joy, and celebrated banquets before the temple idols. His erring heart, far from the truth, and his profane mouth gave glory to idols, deaf and incapable of speaking or aiding, and uttered unworthy speech against the Greatest God.
+\v 15 The registering of these men was¦94988 carried on¦94989 cruelly, zealously, assiduously, from¦95000 the rising of the sun¦95002 to its going down, and wasn't brought to an end in forty¦95011 days¦95010.
+\v 16 The¦95016 king¦95017 was filled with great¦95012 and constant joy¦95018, and celebrated banquets before the¦95023 temple idols¦95024. His erring heart, far¦95027 from the¦95028 truth¦95029, and¦95031 his profane mouth¦95033 gave glory to idols, deaf and incapable of speaking¦95041 or¦95042 aiding, and¦95046 uttered unworthy speech against the¦95047 Greatest God¦95049.
 \v 17 At the end of the above-mentioned interval of time, the registrars brought word to the king that the multitude of the Yehudim \add !(Jews)\add* was too great for registration,
-\v 18 inasmuch as there were many still left in the land, of whom some were in inhabited houses, and others were scattered about in various places, so that all the commanders in Mitsrayim \add !(Egypt)\add* were insufficient for the work.
-\v 19 The king threatened them, and charged them with taking bribes, in order to contrive the escape of the Yehudim, but was clearly convinced of the truth of what had been said.
-\v 20 They said, and proved, that paper and pens had failed them for the carrying out of their purpose.
-\v 21 Now this was an active interference of the unconquerable Providence which assisted the Yehudim from heaven.
+\v 18 since there were many still left in the land, of whom some were in inhabited houses, and others were scattered about in various places, so that all the commanders in Mitsrayim \add !(Egypt)\add* were insufficient for the work.
+\v 19 The king threatened them, and charged them with taking bribes, in order to¦95117 contrive the escape of the Yehudim, but was clearly¦95118 convinced of the truth of what had been said.
+\v 20 They said, and¦95126 proved, that¦95127 paper and¦95130 pens had failed them for the¦95131 carrying out of their purpose.
+\v 21 Now this¦95138 was¦95140 an active¦95141 interference of¦95143 the¦95143 unconquerable Providence which assisted the¦95145 Yehudim from¦95147 heaven¦95148.
 \c 5
+\s1 The king orders elephants to crush the prisoners
 \p
-\v 1 Then he called Hermon, who had charge of the elephants. Full of rage, altogether fixed in his furious design,
-\v 2 he commanded him, with a quantity of unmixed wine with handfuls of incense infused, to drug the elephants early on the following day. These five hundred elephants were, when infuriated by the copious drinks of frankincense, to be led up to the execution of death upon the Yehudim.
-\v 3 The king, after issuing these orders, went to his feasting, and gathered together all those of his friends and of the army who hated the Yehudim the most.
-\v 4 The master of the elephants, Hermon, fulfilled his commission punctually.
-\v 5 The servants appointed for the purpose went out about evening and bound the hands of the miserable victims, and took other precautions for their security at night, thinking that the whole race would perish together.
-\v 6 The heathen believed the Yehudim to be destitute of all protection, for chains bound them.
-\v 7 They invoked the Almighty master, and ceaselessly implored with tears their merciful God and Father, Ruler of all, master of every power,
-\v 8 to overthrow the evil purpose which had gone out against them, and to deliver them by extraordinary manifestation from that death which was in store for them.
-\v 9 Their earnest entreaty went up to heaven.
-\v 10 Then Hermon, who had filled his merciless elephants with copious drinks of mixed wine and frankincense, came early to the palace to report on these preparations.
-\v 11 He, however, who has sent his good creature sleep from all time by night or by day thus gratifying whom he wills, diffused a portion of it now upon the king.
-\v 12 By this sweet and profound influence of the master, he was held fast, and thus his unjust purpose was quite frustrated, and his unflinching resolve greatly falsified.
-\v 13 But the Yehudim, having escaped the hour which had been fixed, praised their holy God, and again prayed him who is easily reconciled to display the power of his powerful hand to the arrogant Gentiles.
-\v 14 The middle of the tenth hour had nearly arrived, when the person who sent invitations, seeing the guests who were invited present, came and shook the king.
-\v 15 He gained his attention with difficulty, and hinting that the mealtime was getting past, talked the matter over with him.
-\v 16 The king listened to this, and then turning aside to his drinking, commanded the guests to sit down before him.
-\v 17 This done, he asked them to enjoy themselves, and to indulge in mirth at this somewhat late hour of the banquet.
-\v 18 Conversation grew on, and the king sent for Hermon, and enquired of him, with fierce denunciations, why the Yehudim had been allowed to outlive that day.
-\v 19 Hermon explained that he had done his bidding over night; and in this he was confirmed by his friends.
-\v 20 The king, then, with a barbarity exceeding that of Falaris, said, “They might thank his sleep of that day. Lose no time, and get ready the elephants against tomorrow, as you did before, for the destruction of these accursed Yehudim.”
-\v 21 When the king said this, the company present were glad, and approved. Then each man went to his own home.
-\v 22 They didn't employ the night in sleep, but in contriving cruel mockeries for those deemed miserable.
-\v 23 The morning cock had just crowed, and Hermon, having harnessed the brutes, was stimulating them in the great colonnade.
-\v 24 The city crowds were collected together to see the hideous spectacle, and waited impatiently for the dawn.
-\v 25 The Yehudim, breathless with momentary suspense, stretched out their hands and prayed the Greatest God, in mournful strains, again to help them speedily.
-\v 26 The sun's rays were not yet shining and the king was waiting for his friends when Hermon came to him, calling him out, and saying that his desires could now be realised.
-\v 27 The king, receiving him, was astonished at his unusual invitation. Overwhelmed with a spirit of oblivion about everything, enquired about the object of this earnest preparation.
-\v 28 But this was the working of that Almighty God who had made him forget all his purpose.
-\v 29 Hermon and all his friends pointed out the preparation of the animals. They are ready, Oh king, according to your own strict injunction.
-\v 30 The king was filled with fierce anger at these words, for, by the Providence of God regarding these things, his mind had become entirely confused. He looked hard at Hermon, and threatened him as follows:
-\v 31 “Your parents, or your children, were they here, would have given a large meal to these wild animals, not these innocent Yehudim, who have loyally served me and my forefathers.
-\v 32 Had it not been for familiar friendship, and the claims of your office, your life should have gone for theirs.”
+\v 1 Then¦95151 he called¦95152 Hermon, who had charge of the elephants. Full of rage, altogether fixed in his furious design,
+\v 2 he commanded him, with a quantity of unmixed wine¦95177 with handfuls of incense infused, to¦95168 drug the elephants early on the following day¦95172. These five hundred elephants were, when¦95188 infuriated by the copious drinks of frankincense, to¦95195 be led up to¦95196 the execution of death on the Yehudim.
+\v 3 The king, after issuing these orders, went to his feasting, and gathered together all those of his friends¦95214 and¦95215 of the¦95216 army¦95217 who hated the Yehudim the most.
+\v 4 The¦95223 master of¦95225 the elephants¦95225, Hermon¦95229, fulfilled his commission punctually.
+\v 5 The¦95231 servants appointed for the¦95237 purpose went out about¦95249 evening¦95238 and bound the hands¦95244 of the¦95245 miserable victims, and¦95246 took other precautions for their security¦95251 at¦95252 night¦95252, thinking¦95253 that¦95256 the¦95259 whole race would perish together¦95254.
+\v 6 The heathen believed the Yehudim to be¦95267 destitute of¦95271 all¦95273 protection, for chains¦95277 bound them.
+\v 7 They invoked the¦95279 Almighty master, and¦95282 ceaselessly implored with tears their merciful God¦95287 and¦95289 Father¦95290, Ruler of all¦95293, master of every power¦95284,
+\v 8 to overthrow the evil purpose which had gone out¦95310 against them, and to deliver them by extraordinary manifestation from that death which was in¦95314 store for them.
+\v 9 Their earnest entreaty¦95322 went up to heaven¦95325.
+\s1 God delays the planned massacre
 \p
-\v 33 Hermon, being threatened in this unexpected and alarming manner, was troubled in his eyes, and his face fell.
-\v 34 The friends, too, stole out one by one, and dismissed the assembled multitudes to their respective occupations.
-\v 35 The Yehudim, having heard of these events, praised the glorious God and King of kings, because they had obtained this help, too, from him.
-\v 36 Now the king arranged another banquet in the same way, and proclaimed an invitation to mirth.
-\v 37 He summoned Hermon to his presence, and said, with threats, “How often, Oh wretch, must I repeat my orders to you about these same persons?
-\v 38 Once more, arm the elephants for the extermination of the Yehudim tomorrow!”
-\v 39 His kinsmen, who were reclining with him, wondered at his instability, and thus expressed themselves:
-\v 40 “O king, how long do you test us, as of men bereft of reason? This is the third time that you have ordered their destruction. When the thing is to be done, you change your mind, and recall your instructions.
-\v 41 Because of this, the feeling of expectation causes tumult in the city. It swarms with factions, and is continually on the point of being plundered.”
+\v 10 Then¦95327 Hermon¦95328, who'd filled his merciless elephants with copious drinks of¦95335 mixed wine¦95336 and¦95339 frankincense, came early to¦95344 the¦95345 palace¦95346 to report on these preparations.
+\v 11 He¦95353, however, who's sent¦95375 his good¦95359 creature¦95358 sleep¦95373 from¦95355 all¦95368 time¦95357 by night¦95361 or by day¦95363 thus gratifying whom he wills¦95372, diffused a portion of¦95366 it¦95371 now on the¦95377 king¦95378.
+\v 12 By this sweet and profound influence of¦95386 the master, he was held fast, and thus his unjust purpose¦95391 was quite frustrated, and¦95395 his unflinching resolve greatly falsified.
+\v 13 But the Yehudim, having escaped the hour¦95405 which had been fixed, praised their holy¦95408 God¦95410, and¦95412 again¦95413 prayed him who's¦95415 easily reconciled to¦95417 display¦95417 the power¦95421 of his powerful hand¦95420 to the arrogant¦95423 Gentiles.
+\v 14 The¦95424 middle¦95424 of the¦95427 tenth hour¦95429 had nearly¦95430 arrived, when the person who sent invitations, seeing the guests who were invited present, came¦95441 and shook the¦95442 king¦95443.
+\v 15 He gained his attention with difficulty, and¦95444 hinting that¦95448 the¦95449 mealtime was getting past, talked the¦95454 matter over with him.
+\v 16 The¦95460 king¦95461 listened to¦95462 this, and¦95463 then turning aside to¦95468 his drinking, commanded the guests to¦95475 sit down before him.
+\v 17 This done, he asked them to enjoy themselves, and¦95478 to indulge in mirth at this¦95485 somewhat late hour of the¦95487 banquet.
+\v 18 Conversation grew on, and¦95496 the¦95503 king¦95504 sent for¦95510 Hermon, and enquired of¦95510 him, with¦95505 fierce denunciations, why the¦95513 Yehudim had been allowed to outlive that¦95515 day¦95517.
+\v 19 Hermon explained that he'd done his bidding over night¦95522; and¦95528 in this¦95529 he¦95531 was confirmed by his friends¦95530.
+\v 20 The¦95533 king, then, with a barbarity exceeding that of Falaris, said¦95538, “They might thank his sleep¦95542 of¦95543 that day¦95551. Lose no time, and get ready¦95555 the¦95556 elephants against¦95558 tomorrow, as you did before, for the destruction of these accursed Yehudim.”
+\v 21 When the¦95566 king¦95567 said¦95564 this, the company present¦95573 were glad, and approved. Then each¦95580 man¦95578 went to his own¦95578 home¦95579.
+\v 22 They didn't employ the¦95590 night¦95591 in sleep, but in contriving cruel mockeries for those deemed miserable.
+\v 23 The morning¦95605 cock had just crowed, and¦95606 Hermon¦95611, having harnessed the brutes, was stimulating them in¦95612 the¦95613 great¦95614 colonnade.
+\v 24 The¦95620 city¦95621 crowds were collected together to¦95624 see¦95627 the¦95625 hideous spectacle, and waited impatiently for the¦95629 dawn.
+\v 25 The¦95633 Yehudim, breathless with momentary suspense, stretched out their hands¦95648 and¦95634 prayed the Greatest God¦95655, in mournful strains, again¦95656 to¦95658 help¦95658 them speedily.
+\v 26 The sun's¦95662 rays weren't¦95660 yet¦95660 shining and the¦95666 king¦95667 was waiting¦95670 for his friends¦95669 when Hermon¦95672 came to¦95675 him, calling him out, and saying that his desires could now be realised.
+\v 27 The king, receiving him, was astonished at his unusual invitation. Overwhelmed with¦95707 a spirit of oblivion about everything, enquired about the object of this earnest preparation.
+\v 28 But¦95711 this was¦95712 the¦95713 working of¦95715 that Almighty God¦95718 who'd¦95719 made him forget¦95723 all¦95716 his purpose.
+\v 29 Hermon¦95729 and¦95731 all¦95732 his friends¦95734 pointed out the preparation of the animals¦95736. They're ready, Oh king¦95741, according¦95742 to¦95742 your¦95744 own strict injunction.
+\v 30 The¦95747 king was filled with fierce anger at these words, for, by the¦95750 Providence of¦95755 God¦95760 regarding these things, his mind¦95765 had become entirely confused. He looked hard at Hermon, and threatened¦95768 him as follows:
+\v 31 “Your parents¦95772, or¦95774 your children¦95775, were they here, would have given a large meal to these wild animals, not these innocent Yehudim, who've¦95784 loyally served me and¦95787 my¦95789 forefathers.
+\v 32 Had it not¦95799 been for¦95800 familiar friendship, and¦95805 the claims of¦95800 your office, your life¦95809 should have gone for¦95810 theirs.”
 \p
-\v 42 The king, just like another Falaris, a prey to thoughtlessness, made no account of the changes which his own mind had undergone, issuing in the deliverance of the Yehudim. He swore a fruitless oath, and determined immediately to send them to hades, crushed by the knees and feet of the elephants.
-\v 43 He would also invade Yehudah \add !(Judea)\add*, level its towns with fire and the sword, destroy that temple which the heathen might not enter, and prevent sacrifices ever after being offered up there.
-\v 44 Joyfully his friends broke up, together with his kinsmen; and, trusting in his determination, arranged their forces in guard at the most convenient places of the city.
-\v 45 The master of the elephants urged the animals into an almost maniacal state, drenched them with incense and wine, and decked them with frightful devices.
-\v 46 About early morning, when the city was filled with an immense number of people at the hippodrome, he entered the palace and called the king to the business in hand.
-\v 47 The king's heart teemed with impious rage; and he rushed forth with the mass, along with the elephants. With unsoftened feelings and pitiless eyes, he longed to gaze at the hard and wretched doom of the previously mentioned Yehudim.
-\v 48 But the Yehudim, when the elephants went out at the gate, followed by the armed force. When they saw the dust raised by the throng, and heard the loud cries of the crowd,
-\v 49 thought that they had come to the last moment of their lives, to the end of what they had tremblingly expected. They gave way, therefore, to lamentations and moans. They kissed each other. Those nearest of kin to each other hung around one another's necks—fathers hugging their sons and mothers their daughters. Other women held their infants to their breasts, which drew what seemed their last milk.
-\v 50 Nevertheless, when they reflected upon the help previously granted them from heaven, they prostrated themselves with one accord, removed even the sucking children from the breasts, and
-\v 51 sent up an exceedingly great cry asking the master of all power to reveal himself, and have mercy upon those who now lay at the gates of hades.
+\v 33 Hermon¦95815, being threatened¦95819 in this unexpected and alarming manner, was troubled in his eyes, and his face¦95825 fell.
+\v 34 The¦95827 friends¦95831, too, stole out one by¦95828 one¦95828, and¦95829 dismissed the assembled multitudes to their respective occupations.
+\v 35 The Yehudim, having heard¦95849 of¦95847 these events, praised the¦95850 glorious¦95851 God¦95852 and¦95853 King¦95854 of kings¦95856, because they'd obtained this¦95860 help, too, from him.
+\s1 The king renews his order to kill the Yehudim
+\p
+\v 36 Now the¦95869 king¦95870 arranged another banquet in the¦95873 same¦95872 way, and proclaimed an invitation to¦95878 mirth.
+\v 37 He summoned¦95882 Hermon to¦95882 his presence, and said¦95885, with¦95883 threats¦95884, “How¦95886 often¦95886, Oh wretch, must I repeat my orders to you¦95887 about¦95889 these same persons?
+\v 38 Once more, arm the elephants for the extermination of the Yehudim tomorrow¦95902!”
+\v 39 His kinsmen, who¦95908 were reclining with¦95910 him, wondered at his instability, and¦95909 thus expressed themselves:
+\v 40 “O king¦95919, how¦95922 long do you test us, as of men bereft of reason? This is the third¦95928 time that you've ordered their destruction. When the thing¦95935 is to be done, you change your mind, and recall your instructions.
+\v 41 Because¦95943 of¦95943 this, the feeling of¦95946 expectation causes tumult in the¦95947 city¦95945. It swarms with factions, and is continually on the point of being plundered.”
+\p
+\v 42 The¦95959 king¦95963, just¦95967 like another Falaris¦95962, a prey to thoughtlessness, made no account of the¦95971 changes which his own mind had undergone, issuing in¦95973 the deliverance of the Yehudim. He swore a fruitless oath¦95983, and determined immediately to send them to hades¦95990, crushed by the knees¦95992 and¦95993 feet¦95994 of the elephants.
+\v 43 He'd also¦95998 invade Yehudah \add !(Judea)\add*, level its towns with fire¦96003 and the¦96009 sword, destroy that temple¦96013 which the heathen might not enter, and prevent sacrifices¦96022 ever after being offered up there¦96021.
+\v 44 Joyfully his friends¦96032 broke up, together with his kinsmen; and¦96033, trusting in his determination, arranged their forces in guard at the most convenient places¦96043 of the¦96044 city¦96045.
+\v 45 The¦96048 master of¦96050 the elephants¦96050 urged the¦96051 animals¦96052 into¦96054 an almost maniacal state, drenched them with incense and wine¦96061, and decked them with frightful devices.
+\v 46 About¦96066 early morning, when the¦96069 city¦96070 was filled with an immense number of¦96075 people at the¦96075 hippodrome, he entered¦96078 the¦96080 palace¦96081 and called the¦96083 king¦96087 to¦96084 the¦96086 business in hand.
+\v 47 The¦96088 king's heart¦96104 teemed with impious rage; and¦96089 he rushed forth with the¦96096 mass, along with¦96098 the¦96099 elephants. With unsoftened feelings and¦96105 pitiless eyes¦96107, he longed to¦96108 gaze at¦96108 the¦96109 hard and¦96111 wretched doom of the¦96113 previously mentioned Yehudim.
+\v 48 But¦96117 the Yehudim, when the elephants went¦96120 out¦96120 at the gate¦96122, followed by the armed force. When they saw the¦96130 dust¦96133 raised by the throng, and¦96135 heard¦96138 the loud cries of the crowd¦96131,
+\v 49 thought¦96146 that¦96145 they'd come to the last moment of their lives¦96142, to¦96147 the end of what they'd tremblingly expected¦96152. They gave way, therefore, to lamentations and¦96155 moans. They kissed¦96158 each other. Those nearest of kin to¦96158 each other hung around one¦96159 another's¦96159 necks—fathers hugging their sons and¦96169 mothers their daughters. Other¦96172 women held their infants¦96178 to their breasts, which drew what seemed their last milk¦96181.
+\v 50 Nevertheless, when they reflected on the¦96187 help¦96191 previously granted them from¦96192 heaven¦96193, they prostrated themselves with one accord, removed even the¦96200 sucking children from the¦96203 breasts, and
+\v 51 sent up a very¦96208 great¦96207 cry asking the master of all power to¦96219 reveal himself, and have mercy on those who now lay at the gates of hades¦96221.
 \c 6
+\s1 Eleazar prays for rescue
 \p
-\v 1 Then Eleazar, an illustrious priest of the country, who had attained to length of days, and whose life had been adorned with virtue, caused the elders who were around him to cease to cry out to the holy God, and prayed this:
-\v 2 “O king, mighty in power, most high, Almighty God, who regulates the whole creation with your tender mercy,
-\v 3 look at the seed of Avraham, at the children of the sanctified Ya’akov \add !(Jacob)\add*, your sanctified inheritance, Oh Father, now being wrongfully destroyed as foreigners in a foreign land.
-\v 4 You destroyed Par’oh \add !(Pharaoh)\add* with his army of chariots when that lord of this same Mitsrayim \add !(Egypt)\add* was uplifted with lawless daring and loud-sounding tongue. Shedding the beams of your mercy upon the race of Yisrael \add !(Israel)\add*, you overwhelmed him and his proud army.
-\v 5 When Sanheriv \add !(Sennacherib)\add*, the grievous king of the Assyrians, exulting in his countless army, had subdued the whole land with his spear and was lifting himself against your holy city with boastings grievous to be endured, you, Oh master, demolished him and displayed your might to many nations.
-\v 6 When the three friends in the land of Bavel \add !(Babylon)\add* of their own will exposed their lives to the fire rather than serve vain things, you sent a moist coolness through the fiery furnace, and brought the fire on all their adversaries.
-\v 7 It was you who, when Daniyel was hurled, through slander and envy, as a prey to lions down below, brought him back again unharmed to light.
-\v 8 When Yonah \add !(Jonah)\add* was pining away in the belly of the sea-born monster, you looked at him, Oh Father, and recovered him to the sight of his own.
-\v 9 Now, you who hate insolence, you who abound in mercy, you who are the protector of all things, appear quickly to those of the race of Yisrael, who are insulted by abhorred, lawless gentiles.
-\v 10 If our life during our exile has been stained with iniquity, deliver us from the hand of the enemy, and destroy us, Oh master, by the death which you prefer.
-\v 11 Don't let the vain-minded congratulate vain idols at the destruction of your beloved, saying, ‘Their god didn't deliver them.’
-\v 12 You who are All-powerful and Almighty, Oh Eternal One, behold! Have mercy on us who are being withdrawn from life, like traitors, by the unreasoning insolence of lawless men.
-\v 13 Let the heathen cower before your invincible might today, Oh glorious One, who have all power to save the race of Ya’akov \add !(Jacob)\add*.
-\v 14 The whole band of infants and their parents ask you with tears.
-\v 15 Let it be shown to all the nations that you are with us, Oh master, and have not turned your face away from us, but as you said that you would not forget them even in the land of their enemies, so fulfil this saying, Oh master.”
+\v 1 Then¦96224 Eleazar, an illustrious priest¦96232 of the¦96230 country¦96231, who'd attained to length of days, and whose life¦96244 had been adorned with virtue¦96245, caused the¦96247 elders¦96251 who were around¦96248 him to¦96250 cease to¦96252 cry¦96252 out to the¦96253 holy¦96254 God¦96255, and prayed¦96256 this¦96257:
+\v 2 “O king¦96258, mighty in power, most high, Almighty¦96261 God¦96262, who regulates the whole¦96264 creation with your tender mercy,
+\v 3 look¦96269 at the seed¦96272 of Avraham, at the children¦96275 of the sanctified Ya'akov \add !(Jacob)\add*, your sanctified inheritance, Oh Father¦96287, now being wrongfully destroyed as foreigners in a foreign¦96284 land¦96283.
+\v 4 You¦96288 destroyed Par'oh \add !(Pharaoh)\add* with his army of chariots when that¦96292 lord of this¦96295 same Mitsrayim \add !(Egypt)\add* was uplifted with lawless daring and¦96300 loud-sounding tongue¦96301. Shedding the¦96304 beams of your mercy¦96311 on the race of Yisrael \add !(Israel)\add*, you overwhelmed him and his proud army.
+\v 5 When Sanheriv \add !(Sennacherib)\add*, the¦96315 grievous king¦96322 of the Assyrians, exulting in his countless army, had subdued the whole¦96325 land¦96329 with his spear and¦96330 was lifting himself against¦96332 your holy¦96334 city¦96336 with boastings grievous to¦96338 be endured, you, Oh master¦96342, demolished him and displayed your¦96349 might to many¦96325 nations¦96346.
+\v 6 When the three¦96356 friends in the¦96359 land of Bavel \add !(Babylon)\add* of their own will exposed their lives to the¦96364 fire rather than serve vain things, you sent a moist coolness through the¦96367 fiery furnace¦96371, and brought the fire on all¦96377 their adversaries.
+\v 7 It was you¦96381 who¦96382, when Daniyel was hurled, through slander and envy¦96384, as a prey to lions down below, brought him back again unharmed to light¦96393.
+\v 8 When Yonah \add !(Jonah)\add* was pining away in¦96399 the belly¦96400 of the sea-born monster¦96401, you looked at him, Oh Father¦96409, and recovered him to the sight of his own.
+\v 9 Now¦96411, you who hate insolence, you who abound in mercy, you who are the protector of all things, appear quickly to those of the race of Yisrael, who are insulted by¦96424 abhorred, lawless¦96427 gentiles.
+\v 10 If¦96430 our life¦96437 during our exile has been stained with iniquity, deliver us from¦96442 the hand¦96444 of the enemy¦96443, and destroy us, Oh master¦96447, by the death which¦96445 you prefer.
+\v 11 Don't¦96451 let the vain-minded congratulate vain idols at the destruction¦96462 of your beloved, saying, ‘Their god¦96466 didn't deliver¦96468 them.’
+\v 12 You¦96470 who¦96472 are All-powerful and¦96475 Almighty, Oh Eternal One, look¦96481! Have¦96482 mercy¦96482 on us who¦96484 are being withdrawn from¦96489 life¦96491, like traitors, by the unreasoning insolence of lawless¦96487 men.
+\v 13 Let the heathen cower before your¦96499 invincible might today¦96502, Oh glorious One, who have¦96505 all power to¦96506 save the race of Ya'akov \add !(Jacob)\add*.
+\v 14 The¦96512 whole¦96513 band of infants and¦96517 their parents¦96520 ask you with¦96521 tears.
+\v 15 Let it be shown to all¦96524 the nations¦96525 that¦96526 you're with¦96527 us, Oh master, and¦96531 haven't turned your face¦96535 away¦96537 from¦96537 us, but¦96539 as¦96540 you said¦96541 that¦96542 you wouldn't¦96543 forget them even in¦96544 the¦96545 land¦96546 of their enemies¦96548, so fulfil this¦96547 saying, Oh master.”
+\s1 God rescues the Yehudim
 \p
-\v 16 Now, at the time that Eleazar had ended his prayer, the king came along to the hippodrome with the wild animals, and with his tumultuous power.
-\v 17 When the Yehudim saw this, they uttered a loud cry to heaven so that the adjacent valleys resounded and caused an irrepressible lamentation throughout the army.
-\v 18 Then the all-glorious, all-powerful, and true God, displayed his holy countenance, and opened the gates of heaven, from which two angels, dreadful of form, came down and were visible to all but the Yehudim.
-\v 19 They stood opposite, and filled the enemies’ army with confusion and cowardice, and bound them with immoveable shackles.
-\v 20 A cold shudder came over the person of the king, and oblivion paralysed the vehemence of his spirit.
-\v 21 They turned back the animals on the armed forces who followed them; and the animals trampled them and destroyed them.
-\v 22 The king's wrath was converted into compassion; and he wept at the things he had devised.
-\v 23 Because when he heard the cry, and saw them all on the verge of destruction, with tears he angrily threatened his friends, saying,
-\v 24 “You have governed badly, and have exceeded tyrants in cruelty. You have laboured to deprive me, your benefactor, at once of my dominion and my life, by secretly devising measures injurious to the kingdom.
-\v 25 Who has gathered here, unreasonably removing each from his home, those who, in fidelity to us, had held the fortresses of the country?
-\v 26 Who has consigned to unmerited punishments those who in good will towards us from the beginning have in all things surpassed all nations, and who often have engaged in the most dangerous undertakings?
-\v 27 Loose, loose the unjust bonds! Send them to their homes in peace, begging pardon for what has been done.
-\v 28 Release the sons of the almighty living god of heaven, who from our ancestors’ times until now has granted a glorious and uninterrupted prosperity to our affairs.”
-\v 29 He said these things, and they, released the same moment, having now escaped death, praised God their holy Saviour.
+\v 16 Now¦96560, at the¦96561 time that Eleazar had ended his prayer¦96562, the¦96563 king¦96564 came along to the hippodrome with¦96565 the¦96566 wild animals, and¦96568 with his tumultuous power¦96572.
+\v 17 When¦96578 the Yehudim saw¦96579 this¦96580, they uttered a loud cry to heaven¦96584 so¦96586 that the adjacent valleys resounded and caused an irrepressible lamentation throughout the army.
+\v 18 Then¦96598 the¦96599 all-glorious, all-powerful¦96601, and¦96602 true¦96603 God¦96604, displayed his holy¦96607 face¦96609, and opened¦96610 the¦96611 gates¦96613 of heaven, from¦96614 which¦96615 two¦96617 angels¦96619, dreadful of form, came¦96620 down¦96620 and were visible to all¦96622 but¦96623 the¦96624 Yehudim.
+\v 19 They stood opposite, and filled the enemies’ army with confusion and¦96635 cowardice, and¦96637 bound¦96639 them with immoveable shackles.
+\v 20 A cold shudder came over the¦96644 person of¦96645 the¦96645 king¦96646, and¦96649 oblivion paralysed the vehemence of his spirit.
+\v 21 They turned back the¦96659 animals¦96660 on¦96661 the armed forces who followed them; and¦96666 the animals trampled them and¦96669 destroyed them.
+\v 22 The¦96673 king's¦96674 anger¦96676 was converted into compassion; and¦96679 he wept at the¦96682 things he'd¦96684 devised.
+\v 23 Because when he heard¦96686 the¦96688 cry, and¦96690 saw them all¦96693 on the¦96695 verge of destruction¦96696, with¦96698 tears he angrily threatened his friends¦96701, saying,
+\v 24 “You've governed badly, and¦96705 have exceeded tyrants¦96706 in cruelty. You've¦96713 laboured to deprive me, your benefactor, at once of¦96720 my dominion and my life, by secretly devising measures injurious to the¦96728 kingdom¦96729.
+\v 25 Who's gathered here, unreasonably removing each¦96743 from his home¦96741, those who, in¦96734 fidelity to us, had held the¦96736 fortresses of the¦96737 country¦96738?
+\v 26 Who's¦96748 consigned to unmerited punishments those who in good will towards us from the beginning have in all¦96754 things surpassed all¦96756 nations¦96757, and¦96758 who often have engaged in the most dangerous undertakings?
+\v 27 Loose, loose the¦96774 unjust bonds! Send them to their homes in peace¦96777, begging pardon for what's been done.
+\v 28 Release the¦96783 sons¦96784 of¦96785 the¦96785 almighty¦96786 living¦96789 god¦96788 of heaven¦96787, who from¦96791 our¦96792 ancestors¦96796’ times until¦96793 now¦96795 has granted a glorious¦96799 and uninterrupted prosperity to our¦96803 affairs.”
+\v 29 He¦96808 said these things, and¦96811 they, released the¦96816 same moment, having now¦96822 escaped death¦96824, praised God¦96819 their holy¦96817 Saviour¦96818.
+\s1 A feast celebrates their rescue
 \p
-\v 30 The king then departed to the city, and called his financier to himself, and asked him provide a seven days’ quantity of wine and other materials for feasting for the Yehudim \add !(Jews)\add*. He decided that they should keep a cheerful festival of deliverance in the very place in which they expected to meet with their destruction.
-\v 31 Then they who were before despised and near to hades, yes, rather advanced into it, partook of the cup of salvation, instead of a grievous and lamentable death. Full of exultation, they apportioned the place intended for their fall and burial into banqueting booths.
-\v 32 Ceasing their miserable strain of woe, they took up the subject of their fatherland, singing in praise to God their wonder-working Saviour. All groans and all wailing were laid aside. They formed dances as a sign of peaceful joy.
-\v 33 So the king also collected a number of guests for the occasion, and returned unceasing thanks with much magnificence for the unexpected deliverance afforded him.
-\v 34 Those who had marked them out as for death and for carrion, and had registered them with joy, howled aloud, and were clothed with shame, and had the fire of their rage ingloriously put out.
-\v 35 But the Yehudim, as we just said, instituted a dance, and then gave themselves up to feasting, glad thanksgiving, and psalms.
-\v 36 They made a public ordinance to commemorate these things for generations to come, as long as they should be sojourners. They thus established these days as days of mirth, not for the purpose of drinking or luxury, but because God had saved them.
-\v 37 They requested the king to send them back to their homes.
-\v 38 They were being enrolled from the twenty-fifth of Pachon to the fourth of Epifi, a period of forty days. The measures taken for their destruction lasted from the fifth of Epifi till the seventh, that is, three days.
-\v 39 The Ruler over all during this time manifested his mercy gloriously, and delivered them all together unharmed.
-\v 40 They feasted upon the king's provision up to the fourteenth day, then asked to be sent away.
-\v 41 The king commended them, and wrote the following letter, of magnanimous import for them, to the commanders of every city:
+\v 30 The¦96827 king¦96828 then¦96826 departed to the¦96830 city¦96831, and called¦96837 his financier to himself, and¦96840 asked him provide a seven¦96852 days¦96851’ quantity of wine and¦96841 other materials for feasting for the Yehudim \add !(Jews)\add*. He¦96854 decided that¦96859 they should keep a cheerful¦96865 festival of deliverance in¦96855 the very place¦96857 in which¦96856 they expected to¦96868 meet with their destruction.
+\v 31 Then¦96869 they who¦96870 were before¦96871 despised and¦96873 near¦96874 to hades¦96876, yes, rather advanced into¦96879 it¦96880, partook of the cup of salvation, instead of a grievous and¦96884 lamentable death. Full¦96900 of exultation, they apportioned the¦96890 place¦96897 intended for their fall¦96892 and¦96894 burial into¦96896 banqueting booths.
+\v 32 Ceasing their miserable strain of woe, they took up the¦96910 subject of their fatherland, singing¦96908 in praise¦96914 to God¦96915 their wonder-working Saviour¦96911. All groans and all wailing were laid aside. They formed dances as a sign¦96926 of peaceful joy¦96924.
+\v 33 So the¦96930 king¦96931 also collected a number of guests for the occasion, and returned unceasing thanks with much magnificence for the unexpected deliverance afforded him.
+\v 34 Those who'd¦96948 marked them out as for death and¦96949 for carrion, and¦96953 had registered them with¦96958 joy¦96959, howled aloud, and were clothed with shame, and had the¦96967 fire of their rage ingloriously put out.
+\v 35 But the¦96972 Yehudim, as we just said, instituted a dance, and then gave themselves up to¦96976 feasting, glad thanksgiving, and¦96986 psalms¦96987.
+\v 36 They made a public ordinance to¦96995 commemorate these things for generations¦97001 to come, as long as they should be sojourners. They thus established these days as days of mirth, not for the purpose of¦97010 drinking or luxury, but¦97014 because¦97016 God¦97017 had saved them.
+\v 37 They requested the¦97022 king¦97023 to send them back to their homes.
+\v 38 They were being enrolled from¦97034 the twenty-fifth of Pachon to the¦97041 fourth¦97042 of¦97043 Epifi¦97044, a period of forty¦97047 days. The¦97051 measures taken for their destruction¦97052 lasted from¦97053 the fifth of Epifi¦97056 till¦97057 the seventh¦97058, that is, three¦97060 days.
+\v 39 The Ruler¦97072 over all during¦97061 this¦97066 time manifested his mercy¦97067 gloriously, and delivered¦97075 them all together unharmed.
+\v 40 They feasted on the¦97081 king's¦97082 provision up to the¦97085 fourteenth day, then¦97089 asked to be sent away.
+\v 41 The¦97100 king¦97101 commended them, and wrote¦97102 the¦97104 following letter, of magnanimous import for them, to¦97107 the¦97108 commanders of every city¦97110:
 \c 7
+\s1 The king's letter protecting the Yehudim
 \p
-\v 1 “King Ptolemaios \add !(Ptolemy)\add* Filopator to the commanders throughout Mitsrayim \add !(Egypt)\add*, and to all who are set over affairs, joy and strength.
-\v 2 We, too, and our children are well. God has directed our affairs as we wish.
-\v 3 Certain of our friends out of malice vehemently urged us to punish the Yehudim \add !(Jews)\add* of our realm in a body, with the infliction of a monstrous punishment.
-\v 4 They pretended that our affairs would never be in a good state till this took place. Such, they said, was the hatred borne by the Yehudim to all other people.
-\v 5 They brought them fettered in grievous chains as slaves, no, as traitors. Without enquiry or examination they endeavoured to annihilate them. They buckled themselves with a savage cruelty, worse than Skuthais custom.
-\v 6 Because this cause we severely threatened them; yet, with the clemency which we usually extend to all men, we at length permitted them to live. Finding that the god of heaven threw a shield of protection over the Yehudim so as to preserve them, and that he fought for them as a father always fights for his sons,
-\v 7 and taking into consideration their constancy and fidelity towards us and towards our ancestors, we have, as we ought, acquitted them of every sort of charge.
-\v 8 We have dismissed them to their several homes, telling all men everywhere to do them no wrong, or unrighteously revile them about the past.
-\v 9 Because know this, that should we conceive any evil design, or in any way aggrieve them, we shall ever have as our adversary, not man, but the highest God, the ruler of all might. From Him there will be no escape, as the avenger of such actions. Farewell.”
+\v 1 “King¦97116 Ptolemaios¦97117 \add !(Ptolemy)\add* Filopator¦97119 to the commanders throughout Mitsrayim \add !(Egypt)\add*, and to all¦97125 who¦97126 are set over affairs, joy and¦97131 strength.
+\v 2 We, too, and our children¦97139 are well. God¦97145 has directed our affairs as¦97148 we wish.
+\v 3 Certain of our friends¦97151 out of malice¦97153 vehemently urged us to punish the Yehudim \add !(Jews)\add* of our realm in a body, with the infliction of a monstrous punishment.
+\v 4 They pretended that our affairs would never be in a good state till this¦97181 took place. Such, they said, was the hatred borne by the Yehudim to¦97182 all¦97183 other people.
+\v 5 They brought¦97194 them fettered in grievous chains as slaves, no, as traitors. Without¦97204 enquiry or examination they endeavoured to annihilate them. They buckled themselves with¦97210 a savage cruelty, worse than Skuthais custom.
+\v 6 Because this cause we severely threatened them; yet, with the clemency which¦97223 we usually extend to¦97225 all¦97226 men, we at length permitted them to¦97231 live¦97231. Finding that the¦97235 god¦97237 of heaven¦97236 threw a shield of protection over the Yehudim so as to preserve them, and that he fought for them as a father¦97244 always¦97247 fights for¦97245 his sons¦97246,
+\v 7 and¦97250 taking into¦97254 consideration their constancy and fidelity towards us and towards our ancestors, we have¦97254, as we ought, acquitted them of every¦97266 sort of charge¦97269.
+\v 8 We've dismissed them to¦97278 their several homes, telling all¦97280 men everywhere to¦97288 do them no wrong, or unrighteously revile¦97288 them about¦97289 the¦97290 past.
+\v 9 Because¦97326 know¦97294 this, that¦97296 should we conceive any evil¦97302 design, or¦97303 in any way aggrieve them, we'll ever have as our adversary, not man¦97309, but¦97310 the¦97311 highest God¦97315, the¦97321 ruler of all might. From Him there'll be no¦97308 escape, as the avenger of such actions. Farewell¦97329.”
+\s1 Punishment for those who abandoned their faith
 \p
-\v 10 When they had received this letter, they didn't hurry to depart immediately. They petitioned the king to be allowed to inflict fitting punishment upon those of their race who had willingly transgressed the holy god, and the law of God.
-\v 11 They alleged that men who had for their bellies’ sake transgressed the ordinances of God, would never be faithful to the interests of the king.
-\v 12 The king admitted the truth of this reasoning, and commended them. Full power was given them, without warrant or special commission, to destroy those who had transgressed the law of God boldly in every part of the king's dominions.
-\v 13 Their priests, then, as it was appropriate, saluted him with good wishes, and all the people echoed with the “Hallelujah!” Then they joyfully departed.
-\v 14 Then they punished and shamefully destroyed every polluted Yehudi \add !(Jew)\add* that fell in their way,
-\v 15 slaying this way, in that day, more than three hundred men, and esteeming this destruction of the wicked a season of joy.
-\v 16 They themselves having held closely to their god to death, and having enjoyed a full deliverance, departed from the city garlanded with sweet-flowered wreaths of every kind. Uttering exclamations of joy, with songs of praise, and melodious hymns, they thanked the god of their fathers, the eternal Saviour of Yisrael \add !(Israel)\add*.
-\v 17 Having arrived at Ptolemais, called from the specialty of that district “Rose-bearing”, where the fleet, in accordance with the general wish, waited for them seven days,
-\v 18 they partook of a banquet of deliverance, for the king generously granted them all the means of securing a return home.
-\v 19 They were accordingly brought back in peace, while they gave utterance to appropriate thanks; and they determined to observe these days during their sojourn as days of joyfulness.
-\v 20 These they registered as sacred upon a pillar, when they had dedicated the place of their festivity to be one of prayer. They departed unharmed, free, abundant in joy, preserved by the king's command, by land, by sea, and by river, each to his own home.
-\v 21 They had more weight than before amongst their enemies, and were honoured and feared. No one in any way robbed them of their goods.
-\v 22 Every man received back his own, according to inventory, those who had obtained their goods, giving them up with the greatest terror. Because the greatest God made perfect wonders for their salvation.
-\v 23 Blessed be the Redeemer of Yisrael forever! Amen.
+\v 10 When¦97331 they'd received this letter, they didn't hurry to depart immediately¦97337. They petitioned the¦97343 king¦97344 to be allowed to inflict fitting punishment on those of¦97348 their race who'd¦97350 willingly transgressed the¦97352 holy¦97353 god¦97354, and¦97357 God's¦97359 law¦97361.
+\v 11 They alleged that men who¦97369 had for¦97371 their bellies’ sake transgressed the ordinances of God, would never¦97376 be faithful to the¦97379 interests of¦97380 the¦97380 king¦97381.
+\v 12 The king¦97408 admitted the truth of this reasoning, and commended them. Full power was given¦97391 them, without warrant or special commission, to destroy those who'd¦97395 transgressed God's¦97399 law¦97401 boldly in every¦97404 part of the king's dominions.
+\v 13 Their priests¦97427, then¦97419, as it¦97421 was appropriate, saluted him with good wishes, and¦97428 all¦97429 the¦97430 people¦97431 echoed with the¦97433 “Hallelujah¦97434!” Then they joyfully departed.
+\v 14 Then¦97438 they punished and¦97448 shamefully destroyed every polluted Yehudi \add !(Jew)\add* that fell in their way,
+\v 15 slaying this way, in that¦97452 day¦97455, more than three hundred men¦97460, and¦97453 esteeming this¦97454 destruction of the¦97458 wicked a season of joy¦97465.
+\s1 The Yehudim return home in peace
+\p
+\v 16 They themselves having held closely to their god to death¦97473, and having enjoyed a full deliverance, departed from¦97482 the¦97483 city¦97484 garlanded with¦97489 sweet-flowered wreaths of every kind. Uttering exclamations of joy¦97490, with songs of praise, and melodious hymns¦97497, they thanked¦97498 the¦97499 god¦97500 of their fathers¦97502, the eternal Saviour¦97505 of¦97506 Yisrael \add !(Israel)\add*.
+\v 17 Having arrived at Ptolemais, called from the¦97512 specialty of¦97514 that¦97515 district “Rose-bearing”, where the¦97516 fleet, in¦97520 accordance¦97526 with the¦97524 general wish, waited for them seven¦97531 days¦97530,
+\v 18 they partook of a banquet of deliverance, for the¦97536 king¦97537 generously granted them all¦97545 the¦97549 means of securing a return home¦97551.
+\v 19 They were accordingly brought¦97552 back in peace¦97555, while they gave utterance to¦97562 appropriate thanks; and¦97563 they determined to¦97565 observe these days¦97567 during their sojourn¦97571 as days of joyfulness.
+\v 20 These they registered as sacred on¦97578 a¦97579 pillar, when they'd dedicated the place¦97584 of their festivity to be one of prayer¦97585. They departed unharmed, free¦97589, abundant in joy, preserved by the¦97600 king's¦97601 command¦97602, by land¦97593, by sea¦97595, and¦97596 by river¦97597, each¦97603 to his own¦97606 home.
+\v 21 They had more weight than¦97609 before¦97610 among¦97611 their enemies, and were honoured and feared¦97619. No one in any way robbed them of their goods.
+\v 22 Every man¦97638 received back his own, according to¦97632 inventory, those who'd¦97637 obtained their goods, giving them up with¦97639 the¦97644 greatest terror. Because the¦97646 greatest God¦97648 made perfect wonders for their salvation¦97652.
+\v 23 Blessed be the Redeemer of Yisrael forever! Amen¦97662.

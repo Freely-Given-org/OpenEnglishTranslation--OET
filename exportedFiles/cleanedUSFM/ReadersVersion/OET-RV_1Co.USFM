@@ -1,24 +1,24 @@
-\id 1CO - Open English Translation—Readers’ Version (OET-RV) v0.1.62
+\id 1CO - Open English Translation—Readers’ Version (OET-RV) v0.2.2
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CO1
 \rem WORDTABLE OET-LV_NT_word_table.tsv
-\h 1 Corinthians
-\toc1 1 Corinthians
-\toc2 1 Corinthians
+\h 1 Korinthios
+\toc1 1 Korinthios
+\toc2 1 Korinthios
 \toc3 1 Cor.
-\mt2 Paul’s first letter to the believers in
-\mt1 Corinth
+\mt2 Paulos’s first letter to the believers in
+\mt1 Korinthos
 \is1 Introduction
-\ip This is Paul’s first letter to the believers in Corinth that we have in our Bibles, but could easily have been his second letter to them. We deduce this from his reference to other letters, e.g., see https://www.GotQuestions.org/how-many-letters-Corinthians.html, but we don’t have copies of them.
-\ip In this letter from Paul to the believers in Corinth, he wrote about his time preaching in Ephesus. He wrote this in order to help with problems experienced by various groups of believers that he founded there in Corinth. Corinth was the mother city of province of Achaia and Achaia was a province of Rome. At that time, Corinth was a large city that Greeks, Romans, and Jews all lived in, and because it was at the edge of the ocean, many buyers and sellers travelled there to board ships. So the city became famous because of its wealth, and many religions thrived there. There was also a lot of sexual immorality there as well as other ancient traditions. Paul lived there for almost two years in order to preach, and many people believed (Acts 18).
-\ip After around three years had passed while Paul was there in Ephesus preaching, he received a letter from the believers in Corinth (1 Cor. 7:1). Again he heard about the persecution of the believers and of other problems that faced the assembly of believers. In this letter, he advised them about those, and stressed to need to removal sexual offenders from their assembly. Then he answered questions concerning marriage, widows, spiritual gifts, and the dead coming back to life.
+\ip This is Paulos’s first letter to the believers in Korinthos that we have in our Bibles, but could easily have been his second letter to them. We deduce this from his reference to other letters, e.g., see https://www.GotQuestions.org/how-many-letters-Corinthians.html, but we don’t have copies of them.
+\ip In this letter from Paulos to the believers in Korinthos, he wrote about his time preaching in Efesos. He wrote this in order to help with problems experienced by various groups of believers that he founded there in Korinthos. Korinthos was the mother city of province of Akaia and Akaia was a province of Romai. At that time, Korinthos was a large city that Hellains, Romaios, and Yehudim all lived in, and because it was at the edge of the ocean, many buyers and sellers travelled there to board ships. So the city became famous because of its wealth, and many religions thrived there. There was also a lot of sexual immorality there as well as other ancient traditions. Paulos lived there for almost two years in order to preach, and many people believed (Acts 18).
+\ip After around three years had passed while Paulos was there in Efesos preaching, he received a letter from the believers in Korinthos (1 Cor. 7:1). Again he heard about the persecution of the believers and of other problems that faced the assembly of believers. In this letter, he advised them about those, and stressed to need to removal sexual offenders from their assembly. Then he answered questions concerning marriage, widows, spiritual gifts, and the dead coming back to life.
 \ip In chapter 13, it tells how love is an amazing gift from God to his people, in fact that’s the overall theme of this document.
 \ip It’s helpful to understand that this letter (and most Biblical documents) were dictated to scribes (who didn’t have word processors) so in terms of sentence structure, the discourses are often not edited or placed in their time sequences more correctly as we would do with modern documents, but rather we notice a lot of long, rambling, run-on sentences (like this one) which we sometimes break into shorter sentences to help our readers, but try not to do it too often as it tends to remove the connections between the thoughts and can even lead to the bad habit of people quoting verses out of the context in which they were written.
-\iot Main components of Paul’s letter
+\iot Main components of Paulos’s letter
 \io1 Introduction \ior 1:1-9\ior*
 \io1 Divisions in the assembly \ior 1:10–4:21\ior*
-\io1 Paul scolds the assembly about sexual immorality \ior 5:1-13\ior*
+\io1 Paulos scolds the assembly about sexual immorality \ior 5:1-13\ior*
 \io1 Handling persecution \ior 6:1-11\ior*
 \io1 Use of expulsion as believers \ior 6:12-20\ior*
 \io1 Answers about marriage \ior 7:1-40\ior*
@@ -27,20 +27,20 @@
 \io1 Proper celebration of the master’s dinner \ior 11:17-34\ior*
 \io1 Giftings given by the spirit and their use within the assembly \ior 12:1–14:40\ior*
 \io1 The coming to life of the messiah and of believers \ior 15:1-58\ior*
-\io1 The collection of aid for Christians in Yudea \ior 16:1-4\ior*
-\io1 Paul’s future plans and conclusion \ior 16:5-24\ior*
+\io1 The collection of aid for Christians in Yehudah \ior 16:1-4\ior*
+\io1 Paulos’s future plans and conclusion \ior 16:5-24\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \p
-\v 1 \add This letter is from\add* Paul, a missionary \nd of Messiah Yeshua\nd* by \nd God’s\nd* will, and from our brother, Sosthenes.
+\v 1 \add This letter is from\add* Paulos, a missionary \nd of Messiah Yeshua\nd* \add (Jesus; Grk. Yesus)\add* by \nd God’s\nd* will, and from our brother, Sosthenes.
 \p
-\v 2 \add It’s written\add* to \nd God’s\nd* assembly there in Corinth\x + \xo 1:2: \xt Acts 18:1.\x*—to those believers in \nd Messiah Yeshua\nd* who’ve been declared guiltless \add and\add* who’ve been called to live holy lives, along with all those who appeal to the \add power\add* of our and their \nd master Yeshua Messiah\nd*, everywhere.
+\v 2 \add It’s written\add* to \nd God’s\nd* assembly there in Korinthos\x + \xo 1:2: \xt Acts 18:1.\x*—to those believers in \nd Messiah Yeshua\nd* who’ve been declared guiltless \add and\add* who’ve been called to live holy lives, along with all those who appeal to the \add power\add* of our and their \nd master Yeshua Messiah\nd*, everywhere.
 \p
 \v 3 Grace and peace to you all from \nd God\nd* our father and from \nd the master Yeshua Messiah\nd*.
-\s1 Paul thanks God for what he’s done
+\s1 Paulos thanks God for what he’s done
 \p
-\v 4 I always thank my \nd God\nd* for you because of \add his\add* grace that he’s given you in \nd Messiah Yeshua\nd*—
+\v 4 I always thank my \nd God\nd* for you because of \add his\add* grace that he’s given you in \nd Messiah Yeshua\nd* \add (Jesus; Grk. Yesus)\add*—
 \v 5 \add thanking him\add* that through him, you’ve all been enriched in every way: in all speech and in all knowledge
 \v 6 as \add our\add* testimony about the \nd messiah\nd*\f + \fr 1:6 \ft Or alternatively: as the messiah’s testimony…\f* was confirmed in you all
 \v 7 so that you all aren’t missing out on any \add spiritual\add* gift as you eagerly wait for our \nd master Yeshua Messiah\nd* to \add be revealed\add*.
@@ -48,14 +48,14 @@
 \v 9 The \nd God\nd* who called you into fellowship with his son \nd Yeshua Messiah\nd*, our \nd master\nd*, is faithful.
 \s1 Follow Yeshua, not your leaders
 \p
-\v 10 Now \add brothers and sisters\add*, I appeal to you in the name of our \nd master Yeshua Messiah\nd*, that you all agree together \add so\add* that there’ll be no divisions among you, but rather that you’ll be united in your thinking and in your purpose,
-\v 11 because, my \add brothers and sisters\add*, it’s been made clear to me by some from Chloe’s household, that you are quarrelling among yourselves.
-\v 12 What I am talking about is how many of you are claiming that you belong to Paul’s group, \add for example,\add* or that you belong to Apollos’ group,\x + \xo 1:12: \xt Acts 18:24.\x* or that you belong to Cephas’ group, or that you belong to \nd Messiah’s\nd* group.
-\v 13 Has \nd the messiah\nd* been divided? Was it Paul who was executed for you? Or were you immersed \add in water\add* in the Paul’s name?
+\v 10 Now \add brothers and sisters\add*, I appeal to you in the name of our \nd master Yeshua \+add (Jesus; Grk. Yesus)\+add* Messiah\nd*, that you all agree together \add so\add* that there’ll be no divisions among you, but rather that you’ll be united in your thinking and in your purpose,
+\v 11 because, my \add brothers and sisters\add*, it’s been made clear to me by some from Kloe’s household, that you are quarrelling among yourselves.
+\v 12 What I am talking about is how many of you are claiming that you belong to Paulos’s group, \add for example,\add* or that you belong to Apollos’ group,\x + \xo 1:12: \xt Acts 18:24.\x* or that you belong to Kefa’ \add (Cephas; Grk. Kefas)\add* group, or that you belong to \nd Messiah’s\nd* group.
+\v 13 Has \nd the messiah\nd* been divided? Was it Paulos who was executed for you? Or were you immersed \add in water\add* in the Paulos’s name?
 \p
-\v 14 I thank God that I didn’t immerse any of you other than Crispus\x + \xo 1:14: \xt Acts 18:8.\x* and Gaius,\x + \xo 1:14: \xt Acts 19:29; Rom 16:23.\x*
+\v 14 I thank God that I didn’t immerse any of you other than Krispos\x + \xo 1:14: \xt Acts 18:8.\x* and Gaios,\x + \xo 1:14: \xt Acts 19:29; Rom 16:23.\x*
 \v 15 so that no one can say that I had immersed you into my \add own\add* name.
-\v 16 (\add Oh yes,\add* I also immersed Stephanas and his household,\x + \xo 1:16: \xt 1Cor 16:15.\x* but I don’t think I immersed anyone else.)
+\v 16 (\add Oh yes,\add* I also immersed Stefanas and his household,\x + \xo 1:16: \xt 1Cor 16:15.\x* but I don’t think I immersed anyone else.)
 \v 17 Because \nd Messiah\nd* didn’t send me to immerse people \add in water\add*, but to preach the good message—\add but\add* not with words of wisdom just in case the messiah’s \add execution on the\add* post gets deprived of importance.
 \s1 The messiah is God’s power and wisdom
 \p
@@ -67,22 +67,22 @@
 \v 20 Where is the wise \add person\add*? Where is the scholar? Where is the debater of this age?\x + \xo 1:20: \xt Yob 12:17; Isa 19:12; 33:18.\x* Hasn’t \nd God\nd* turned the wisdom of the world into \add foolishness\add*?\x + \xo 1:20: \xt Isa 44:25.\x*
 \p
 \v 21 Because since the world, in \nd God’s\nd* wisdom, didn’t know \add about\add* God through \add their\add* wisdom, \nd God\nd* was pleased to save those who believe through the ‘\add foolish\add*’ message that was preached.
-\v 22 Jews ask for miraculous signs and Greeks search for wisdom,
-\v 23 but we preach \add about how\add* \nd Messiah\nd* was executed—something the Jews can’t logic out, and which the Greeks see as \add total\add* foolishness.
-\v 24 Yet to those who \add God\add* calls, whether Jews or Greeks, \nd Messiah\nd* is \add both\add* \nd God’s\nd* power and his wisdom,
+\v 22 Yehudim \add (Jews)\add* ask for miraculous signs and Hellains \add (Greeks)\add* search for wisdom,
+\v 23 but we preach \add about how\add* \nd Messiah\nd* was executed—something the Yehudim can’t logic out, and which the Hellains see as \add total\add* foolishness.
+\v 24 Yet to those who \add God\add* calls, whether Yehudim or Hellains, \nd Messiah\nd* is \add both\add* \nd God’s\nd* power and his wisdom,
 \v 25 because \nd God’s\nd* \add foolishness\add* is better than humankind’s wisdom, and \nd God’s\nd* weakness is greater than humankind’s strength.
 \p
 \v 26 So \add brothers and sisters\add*, think about how \add God\add* called you. Not many of you were wise by human standards, not many were powerful, and not many were of noble birth,
 \v 27 but \nd God\nd* chose the foolish \add things\add* of the world to shame those \add considered to be\add* wise, and \add he\add* chose the weak \add things\add* of the world to shame those \add considered to be\add* strong.
 \v 28 \add He\add* chose the lowly and despised things of the world, and the things that are not, to nullify the things that are,
 \v 29 so that no human can boast to \nd God\nd*.
-\v 30 But because of him, you are in \nd Messiah Yeshua\nd*, who was made to become wisdom from \nd God\nd* for us, and to become righteousness, and also sanctification and redemption,
+\v 30 But because of him, you are in \nd Messiah Yeshua\nd* \add (Jesus; Grk. Yesus)\add*, who was made to become wisdom from \nd God\nd* for us, and to become righteousness, and also sanctification and redemption,
 \v 31 so that, as per the scriptures: ‘Let anyone who boasts, boast about \nd Yahweh\nd*.’\x + \xo 1:31: \xt Jer 9:24.\x*
 \c 2
-\s1 Paul’s preaching based on God’s power
+\s1 Paulos’s preaching based on God’s power
 \p
 \v 1 \add Brothers and sisters\add*, when I visited you all, I didn’t try to impress you with flowery words or great wisdom when I taught you \nd about God’s\nd* \add incredible plan\add*,
-\v 2 because I had decided \add in advance\add* to display knowledge about nothing else other than \nd Yeshua Messiah\nd* and his execution.
+\v 2 because I had decided \add in advance\add* to display knowledge about nothing else other than \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* Messiah\nd* and his execution.
 \v 3 And so I \add came\add* to you all in weakness and fear and with a lot of trembling,\x + \xo 2:3: \xt Acts 18:9.\x*
 \v 4 and my message and my preaching wasn’t delivered with persuasive words of wisdom, but \add rather\add* \add demonstrating\add* \add God’s\add* \nd spirit\nd* and power,
 \v 5 so that your faith wouldn’t be based on human wisdom, but on \nd God’s\nd* power.
@@ -113,16 +113,16 @@
 \v 1 \add So\add* \add brothers and sisters\add*, because you were baby Christians \add when I visited\add*, I wasn’t able to speak to you all like spiritual \add people\add*, but \add only\add* like worldly \add people\add*.
 \v 2 I gave you all milk to drink, because you weren’t ready for solid food, in fact, you still aren’t\x + \xo 3:2: \xt Heb 5:12-13.\x*
 \v 3 because you’re still worldly, because \add seeing\add* the jealousy and dissension among you \add tells us\add* that you’re all still worldly and just living by human \add values\add*.
-\v 4 Yes, when one person says, ‘I follow Paul,’ and another person says, ‘I follow Apollos’,\x + \xo 3:4: \xt 1Cor 1:12.\x* doesn’t that show that you’re \add just\add* worldly?
+\v 4 Yes, when one person says, ‘I follow Paulos,’ and another person says, ‘I follow Apollos’,\x + \xo 3:4: \xt 1Cor 1:12.\x* doesn’t that show that you’re \add just\add* worldly?
 \p
-\v 5 Indeed, who’s Apollos? Who’s Paul? We’re just servants \add who brought you all the message\add* when you believed, each one as the \nd master\nd* led them.\f + \fr 3:5 \ft (NEEDS MORE RESEARCH BUT) It seems unclear here who the final part of the verse is referring to: a/ those who brought the message, or b/ those who received it. (We’ve chosen b/ in the OET-RV rendering.)\f*
+\v 5 Indeed, who’s Apollos? Who’s Paulos? We’re just servants \add who brought you all the message\add* when you believed, each one as the \nd master\nd* led them.\f + \fr 3:5 \ft (NEEDS MORE RESEARCH BUT) It seems unclear here who the final part of the verse is referring to: a/ those who brought the message, or b/ those who received it. (We’ve chosen b/ in the OET-RV rendering.)\f*
 \v 6 I planted \add the seed\add*\x + \xo 3:6: \xt Acts 18:4-11.\x* and Apollos watered it,\x + \xo 3:6: \xt Acts 18:24-28.\x* but \nd God\nd* made it grow.
 \v 7 That means that neither the planter or the waterer counts for anything, only the grower, \nd God\nd*.
 \v 8 The planter and the waterer work together, and each of them will be rewarded for their work,
 \v 9 because we are \nd God’s\nd* co-workers.
 \p You all are God’s field, or \add in a different image,\add* \add his\add* building.
 \v 10 Using the \add gifts\add* that \nd God\nd* has given me as a wise master-builder, I laid down a foundation and then someone else is building on it. But they need to \add take care\add* \nd about\nd* how they build on it
-\v 11 because no one can lay a different foundation than the one already laid down, and that foundation is \nd Yeshua Messiah\nd*.
+\v 11 because no one can lay a different foundation than the one already laid down, and that foundation is \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* Messiah\nd*.
 \v 12 Now if anyone builds on \add top of\add* the foundation with gold, silver, precious stones, wood, hay, or straw,
 \v 13 then their work will become obvious because it will be revealed on the day \add of judgement\add* because it will be shown up by fire. The fire will expose what sort of \add building\add* their work \add created\add*:
 \v 14 if anyone’s work that they built survives the fire, \add those people\add* will be rewarded,
@@ -135,7 +135,7 @@
 \v 19 because this world’s wisdom is foolishness with \nd God\nd*, because as it’s written: ‘He catches out the wise in their craftiness.’\x + \xo 3:19: \xt Yob 5:13.\x*
 \v 20 And further: ‘\nd Yahweh\nd* knows that the thoughts of wise \add people\add* are useless.’\x + \xo 3:20: \xt Psa 94:11.\x*
 \v 21 So then, don’t let anyone boast about people, because everything \add already\add* belongs to all of you.
-\v 22 \add Don’t boast about\add* Paul or Apollos or Cephas, or the world or life or death, or the present or the future. All of them belong to you,
+\v 22 \add Don’t boast about\add* Paulos or Apollos or Kefa \add (Cephas; Grk. Kefas)\add*, or the world or life or death, or the present or the future. All of them belong to you,
 \v 23 and you belong to \nd Messiah\nd*, and \nd Messiah\nd* belongs to \nd God\nd*.
 \c 4
 \s1 Status of the missionaries
@@ -157,9 +157,9 @@
 \v 13 When people slander us, we answer gently. We’ve become like the scum of the world, the world’s trash, even until now.
 \p
 \v 14 I’m not writing this to shame you all, but to correct you as if you were my \add own\add* dear children,
-\v 15 because if you all would have thousands of guardians in \nd Messiah\nd*, yet you wouldn’t have many ‘fathers’, because I fathered you in \nd Messiah Yeshua\nd* by means of the good message.
+\v 15 because if you all would have thousands of guardians in \nd Messiah\nd*, yet you wouldn’t have many ‘fathers’, because I fathered you in \nd Messiah Yeshua\nd* \add (Jesus; Grk. Yesus)\add* by means of the good message.
 \v 16 That’s why I urge you all to imitate me,\x + \xo 4:16: \xt 1Cor 11:1; Php 3:17.\x*
-\v 17 and that’s why I sent Timothy to \add visit\add* you. He’s like my own dear son in \nd Yahweh\nd*, and he’ll remind you all about my ways in \nd Messiah Yeshua\nd*, just like I teach everywhere in every church.
+\v 17 and that’s why I sent Timotheos to \add visit\add* you. He’s like my own dear son in \nd Yahweh\nd*, and he’ll remind you all about my ways in \nd Messiah Yeshua\nd*, just like I teach everywhere in every church.
 \p
 \v 18 \add Now\add* some of you have become arrogant, as if I’m not able to come back to see you all,
 \v 19 but if the \nd master\nd* allows it, I’ll come and visit you all \add again\add* soon. Then I won’t just see what any puffed-up people are \em saying\em*, but I’ll also see what \em power\em* they have,
@@ -171,7 +171,7 @@
 \v 1 Actually, we’ve been hearing that there’s sexual immorality there among you all, and so bad that even non-believers don’t do it: a man is sleeping with his step-mother!\x + \xo 5:1: \xt Deu 22:30.\x*
 \v 2 Then instead of being upset, you all \add seem\add* proud of it. This man should have been expelled out of your \add group\add*,
 \v 3 because even though I’m not there physically, I am present in the spirit, and I’ve already made my \add judgement\add* about the man who’s doing this, as if I were present.
-\v 4 When you assemble together in the name of our \nd master Yeshua\nd*, my spirit \add is there\add* along with the \nd master Yeshua’s\nd* power,
+\v 4 When you assemble together in the name of our \nd master Yeshua\nd* \add (Jesus; Grk. Yesus)\add*, my spirit \add is there\add* along with the \nd master Yeshua’s\nd* power,
 \v 5 \add then you should\add* hand this man over to Satan to \add punish\add* his body, so that his spirit can be saved for when the \nd master\nd* \add returns\add*.
 \p
 \v 6 It isn’t good how you all boast. Don’t you realise that a little bit of yeast can raise a whole loaf \add of bread\add*?\x + \xo 5:6: \xt Gal 5:9.\x*
@@ -199,7 +199,7 @@
 \p
 \v 9 Or don’t you all know that \add those who disobey\add* \nd God\nd* won’t inherit his kingdom? Don’t let yourselves be deceived: those who are sexually immoral or idolaters or adulterers, or men who submit to or perform homosexual acts,
 \v 10 or thieves or the greedy, or drunkards or slanderers or swindlers, will inherit \nd God’s\nd* kingdom.
-\v 11 Now some of you all were like that, but now you’ve been washed and declared guiltless, and been declared innocent by the \add authority\add* of the \nd master Yeshua Messiah\nd*, and by our \nd god’s spirit\nd*.
+\v 11 Now some of you all were like that, but now you’ve been washed and declared guiltless, and been declared innocent by the \add authority\add* of the \nd master Yeshua \+add (Jesus; Grk. Yesus)\+add* Messiah\nd*, and by our \nd god’s spirit\nd*.
 \s1 Avoid sexual immorality
 \p
 \v 12 Some might say, ‘Everything is permissible for me,’ but not everything is beneficial. Everything might be permissible for me, but I don’t want those things to \add have control over\add* me.\x + \xo 6:12: \xt 1Cor 10:23.\x*
@@ -245,7 +245,7 @@
 \v 21 Were you a slave when you were called? Don’t be concerned about that (but indeed, if you’re able to become free, then take the opportunity)
 \v 22 because anyone who was a slave when they were called by \nd Yahweh\nd* is free in \nd Yahweh’s\nd* \add sight\add*. Conversely, anyone who was free when they were called is the \nd messiah’s\nd* slave.
 \v 23 You all were bought \add by God\add* for a price, \add so\add* don’t become slaves of people.
-\v 24 \add Again\add* \add brothers and sisters\add*, each person should remain in the position they were in when they were called, \add but now serving\add* \nd God\nd*.\x + \xo 7:24 \xt 7:20\x*
+\v 24 \add Again\add* \add brothers and sisters\add*, each person should remain in the position they were in when they were called, \add but now serving\add* \nd God\nd*.\x + \xo 7:24: \xt 7:20.\x*
 \s1 Suggestions about the unmarried and about widows
 \p
 \v 25 Now concerning unmarried women, I don’t have instructions from \nd Yahweh\nd* but I’ll give \add my\add* \add opinions\add* as someone who’s trustworthy thanks to \nd Yahweh’s\nd* mercy.
@@ -279,7 +279,7 @@
 \p
 \v 4 Now \add back to\add* eating \add food\add* that’s been offered to idols, we know that there’s \add only one\add* \nd God\nd* and so worldly idols are \add really\add* nothing \add at all\add*.
 \v 5 Even though there are many so-called ‘gods’ and ‘masters’ \add said to\add* live in the \add heavens\add* or earth,
-\v 6 we know there’s \add only\add* one \nd God\nd*, who is the Father who created everything and we exist \add to honour him\add*. And we only have one \nd master\nd*, \nd Yeshua Messiah\nd* who created everything and \add is also the source of our existence\add*.
+\v 6 we know there’s \add only\add* one \nd God\nd*, who is the Father who created everything and we exist \add to honour him\add*. And we only have one \nd master\nd*, \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* Messiah\nd* who created everything and \add is also the source of our existence\add*.
 \p
 \v 7 But not everyone knows this. Some people have been so used to \add trusting\add* idols that \add even now as believers\add* when they eat food that’s been sacrificed to idols, \add they still think it’s wrong\add* and so their weak \add consciences\add* become defiled.
 \v 8 But food doesn’t bring us closer \nd to God\nd*—what we eat makes us no better or worse off \add spiritually\add*.
@@ -292,16 +292,16 @@
 \c 9
 \s1 The missionary’s responsibilities
 \p
-\v 1 Aren’t I free? Aren’t I a missionary? Haven’t I seen \nd Yeshua\nd* our \nd master\nd*? Aren’t you all \add the result of\add* my work for \nd Yahweh\nd*?
+\v 1 Aren’t I free? Aren’t I a missionary? Haven’t I seen \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* our \nd master\nd*? Aren’t you all \add the result of\add* my work for \nd Yahweh\nd*?
 \v 2 If I’m not a missionary to others, at least I am to all of you, because you’re \nd the\nd* proof that I’m a missionary for \nd Yahweh\nd*.
 \v 3 That’s my defence to those who are questioning my role.
 \p
 \v 4 Don’t we have a right to eat and drink?
-\v 5 Don’t we have a right to take along a believing wife like the rest of the missionaries and the \nd master’s\nd* brothers and Peter?
+\v 5 Don’t we have a right to take along a believing wife like the rest of the missionaries and the \nd master’s\nd* brothers and Kefa \add (Peter; Grk. Petros)\add*?
 \v 6 Or it is only Barnabas and I who have to work \add to support ourselves\add*?
 \v 7 What soldier has to pay his own expenses? Who plants a vineyard and isn’t \add allowed\add* to eat its fruit? Or who shepherds a flock and isn’t \add allowed\add* to drink the milk \add they produce\add*?
 \p
-\v 8 Am I \add just\add* saying this from a human perspective? Doesn’t \add Mosheh’s\add* law also teach that?
+\v 8 Am I \add just\add* saying this from a human perspective? Doesn’t \add Mosheh’s\add* \add (Moses)\add* law also teach that?
 \v 9 \add He\add* wrote in those \add laws\add*: ‘Don’t prevent the ox from eating when it’s \add working to\add* thresh the grain.’\x + \xo 9:9: \xt Deu 25:4; 1Tim 5:18.\x*
 \v 10 \add Isn’t\add* he saying that on \em our\em* behalf? \add Yes,\add* it was written for our sake \add saying\add* that anyone who’s ploughing \add a field\add* should expect \add to be paid\add*, and anyone who threshes \add the grain\add* should expect a share of the harvest.
 \v 11 If we sowed spiritual \add things\add* among you, is it too much to expect a material ‘harvest’ from you?\x + \xo 9:11: \xt Rom 15:27.\x*
@@ -316,7 +316,7 @@
 \v 18 So, what’s my reward? It’s preaching the good message and \add the privilege of\add* doing it free of charge, so as not to \add take advantage of\add* the right that the good message \add gives me\add*.
 \p
 \v 19 Although I have no obligation to any person, I made myself a slave of everyone in order to win over as many as possible.
-\v 20 To the Jews, I behave like the Jew \add that I am\add* in order to win them. To those under the \add traditional\add* rules, I behave like one of them (although I myself am not under those rules) in order to win them over.
+\v 20 To the Yehudim \add (Jews)\add*, I behave like the Yehudi \add (Jew)\add* \add that I am\add* in order to win them. To those under the \add traditional\add* rules, I behave like one of them (although I myself am not under those rules) in order to win them over.
 \v 21 To those outside \add our religious\add* rules, I behave like them (although not so far as to disobey \nd God’s\nd* law, because I’m under \nd Messiah’s\nd* law) in order to win them over.
 \v 22 To the weak, I become weak to win them over. \add Yes,\add* I’ve become all things to all people so\f + \fr 9:27 \ft TODO: Investigate why so many other translations translate πάντως something like ‘by all means’ here (whereas our OET-LV gloss is ‘certainly’).\f* that I might be certain of saving some.
 \p
@@ -329,7 +329,7 @@
 \s1 Learn from history
 \p
 \v 1 Now \add brothers and sisters\add*, I don’t want you all to be \add ignorant\add* about how our \add Jewish\add* ancestors sheltered under the cloud\x + \xo 10:1: \xt Exo 13:21-22.\x* and then they all passed through the sea,\x + \xo 10:1: \xt Exo 14:22-29.\x*
-\v 2 \add so\add* they were all immersed ‘into Mosheh’ in \add both\add* the cloud and the sea.
+\v 2 \add so\add* they were all immersed ‘into Mosheh’ \add (Moses)\add* in \add both\add* the cloud and the sea.
 \v 3 They all ate the same supernatural food\x + \xo 10:3: \xt Exo 16:35.\x*
 \v 4 and they all drank the same supernatural drink, because they drank from a supernatural rock that followed them,\x + \xo 10:4: \xt Exo 17:6; Num 20:11.\x* and that rock was the \nd messiah\nd*.
 \v 5 Despite that, \nd God\nd* wasn’t \add very\add* happy with most of them, and they \add ended up dying\add* in the wilderness.\x + \xo 10:5: \xt Num 14:29-30.\x*
@@ -368,7 +368,7 @@
 \v 30 As long as I’ve \add thanked\add* \add God\add* for what I eat, why should I then criticise it?
 \p
 \v 31 So whether you’re eating or drinking or doing whatever, always ensure that \nd God\nd* gets honoured.
-\v 32 Try not to offend the Jews or the Greeks or the people in \nd God’s\nd* assembly,
+\v 32 Try not to offend the Yehudim \add (Jews)\add* or the Hellains \add (Greeks)\add* or the people in \nd God’s\nd* assembly,
 \v 33 just like I \add work to\add* please everyone—not for my own benefit but rather, trying to benefit everyone else so that they might get saved.
 \c 11
 \nb
@@ -420,7 +420,7 @@
 \p
 \v 1 Now \add brothers and sisters\add*, I don’t want you all to be \add ignorant\add* about spiritual \add matters\add*.
 \v 2 You all know that when you were \add still\add* pagans, you were enticed and led astray in front of idols that \add can’t even speak\add*.
-\v 3 So now I’m informing you all that a person who curses Yeshua, doesn’t speak with \nd the\nd* power \nd of God’s\nd* spirit. On the other hand, a person who says that \nd Yeshua\nd* is \nd Yahweh\nd* must \nd be\nd* speaking with \add the power of\add* \nd the\nd* holy spirit.
+\v 3 So now I’m informing you all that a person who curses Yeshua \add (Jesus; Grk. Yesus)\add*, doesn’t speak with \nd the\nd* power \nd of God’s\nd* spirit. On the other hand, a person who says that \nd Yeshua\nd* is \nd Yahweh\nd* must \nd be\nd* speaking with \add the power of\add* \nd the\nd* holy spirit.
 \p
 \v 4 Now there are varieties of gifts, but the same \nd spirit\nd*,\x + \xo 12:4-11: \xt Rom 12:6-8.\x*
 \v 5 and there are varieties of ministries, but the same \nd master\nd*.
@@ -433,7 +433,7 @@
 \s1 One body with many parts
 \p
 \v 12 Just like a \add human\add* body is a unit but has many parts which are all components, no matter how many, making up that one body, so too is the \nd messiah\nd*.\x + \xo 12:12: \xt Rom 12:4-5.\x*
-\v 13 \add Yes,\add* in one \nd spirit\nd* we were all immersed into one body, whether \add we were\add* Jews or Greeks, whether slaves or free, and we all were given one \nd spirit\nd* to drink. MEANING?
+\v 13 \add Yes,\add* in one \nd spirit\nd* we were all immersed into one body, whether \add we were\add* Yehudim \add (Jews)\add* or Hellains \add (Greeks)\add*, whether slaves or free, and we all were given one \nd spirit\nd* to drink. MEANING?
 \p
 \v 14 \add Yes,\add* indeed the body is not one part, but many.
 \v 15 If \add your\add* foot said, “Since I’m not a hand, I’m not part of the body,” that wouldn’t make it any less a part of the body,
@@ -505,7 +505,7 @@
 \v 19 but with the assembly, I’d prefer to speak five words with my mind so that I can instruct others, rather than thousands of words in another language.
 \p
 \v 20 \add Brothers and sisters\add*, don’t be childish in your thinking. You all can be like infants with respect to \em evil\em*, but \add in everything else\add*, be mature in your thinking.
-\v 21 \add The prophet Yeshayah\add* wrote:
+\v 21 \add The prophet Yeshayah\add* \add (Isaiah)\add* wrote:
 \q1 ‘I’ll speak to this nation
 \q2 through foreign languages and strangers’ lips,
 \q1 but even then they won’t listen to me,’
@@ -526,7 +526,7 @@
 \v 32 The prophet’s spirits \add are under the control of\add* the prophets,
 \v 33 because \nd God\nd* isn’t \add a god\add* of disorder, but of peace.
 \p As in all the assemblies of believers,
-\v 34 the women should stay silent in the assemblies, because they’re not permitted to speak, but must be in submission as \add Mosheh’s\add* law says.
+\v 34 the women should stay silent in the assemblies, because they’re not permitted to speak, but must be in submission as \add Mosheh’s\add* \add (Moses)\add* law says.
 \v 35 But if they want to know more about anything, they should ask their own husbands at home, because it’s shameful for a woman to speak in the assembly.
 \p
 \v 36 Did \nd God’s\nd* message \em originate\em* from you all, or did it only \em come\em* to you?
@@ -543,9 +543,9 @@
 \p
 \v 3 \add Yes,\add* first of all, I passed onto you all what I \add myself\add* had received: that \nd Messiah\nd* died for our sins as the scriptures \add had predicted\add*,\x + \xo 15:3: \xt Isa 53:5-12.\x*
 \v 4 and that he was buried and then \add brought back to life\add* on the third day as per the scriptures \add again\add*,\x + \xo 15:4: \xt Psa 16:8-10; Mat 12:40; Acts 2:24-32.\x*
-\v 5 and that he was seen by Cephas\x + \xo 15:5: \xt Luk 24:34.\x* and then by the twelve.\x + \xo 15:5: \xt Mat 28:16-17; Mrk 16:14; Luk 24:36; Yhn 20:19.\x*
+\v 5 and that he was seen by Kefa \add (Cephas; Grk. Kefas)\add*\x + \xo 15:5: \xt Luk 24:34.\x* and then by the twelve.\x + \xo 15:5: \xt Mat 28:16-17; Mrk 16:14; Luk 24:36; Yhn 20:19.\x*
 \v 6 Then he was seen by more than 500 believers at once—most of whom are still living, although some have already \add passed away\add*.
-\v 7 Then he was seen by Yacob, and then by all the ambassadors.
+\v 7 Then he was seen by Ya’akov \add (James; Grk. Yakobos)\add*, and then by all the ambassadors.
 \p
 \v 8 Then last of all, as if I’d been born at the wrong time, he appeared to me also,\x + \xo 15:8: \xt Acts 9:3-6.\x*
 \v 9 because I’m the least of the ambassadors—quite unworthy of that title because I persecuted \nd God’s\nd* assembly.\x + \xo 15:9: \xt Acts 8:3.\x*
@@ -574,8 +574,8 @@
 \p
 \v 29 Otherwise, what will the people do who are being immersed \add in water\add* for the dead? If the dead don’t \add come back to life\add*, why would they get immersed for them? TODO: WHAT’S THIS ABOUT?
 \v 30 \add As for us,\add* why do we \add place ourselves\add* in danger all the time?
-\v 31 I’m dying every day by your boasting \add brothers and sisters\add*, which I have in \nd Messiah Yeshua\nd* our \nd master\nd*. TODO: WHAT DOES THIS MEAN?
-\v 32 If I fought with wild animals at Ephesus for human \add purposes\add*, what did I gain? If the dead aren’t \add brought back to life\add*, then ‘Let’s eat and drink, because tomorrow we’ll die \add anyway\add*.’\x + \xo 15:32: \xt Isa 22:13.\x*
+\v 31 I’m dying every day by your boasting \add brothers and sisters\add*, which I have in \nd Messiah Yeshua\nd* \add (Jesus; Grk. Yesus)\add* our \nd master\nd*. TODO: WHAT DOES THIS MEAN?
+\v 32 If I fought with wild animals at Efesos for human \add purposes\add*, what did I gain? If the dead aren’t \add brought back to life\add*, then ‘Let’s eat and drink, because tomorrow we’ll die \add anyway\add*.’\x + \xo 15:32: \xt Isa 22:13.\x*
 \p
 \v 33 Don’t be fooled: ‘Evil conversations corrupt good character.’
 \v 34 Sober up as you should, and stop sinning, because some of you are \add quite\add* \add ignorant\add* \nd about God\nd*. (I say that to your shame.)
@@ -611,7 +611,7 @@
 \q1 \add Yes\add* death, where is your sting?’\x + \xo 15:55: \xt Hos 13:14 (LXX).\x*
 \m
 \v 56 Sin is the sting of death, and sin’s power is The Law,
-\v 57 but \add be thankful\add* \nd to God\nd* because it’s him who gives us the victory through our \nd master Yeshua Messiah\nd*.
+\v 57 but \add be thankful\add* \nd to God\nd* because it’s him who gives us the victory through our \nd master Yeshua \+add (Jesus; Grk. Yesus)\+add* Messiah\nd*.
 \p
 \v 58 Therefore my dear \add brothers and sisters\add*, be strong and stand firm, always doing the \nd master’s\nd* work enthusiastically, knowing that your work for \nd Yahweh\nd* isn’t wasted.
 \c 16
@@ -619,18 +619,18 @@
 \p
 \v 1 Now concerning the fund-raising for the believers:\x + \xo 16:1: \xt Rom 15:25-26.\x* You all must do the same as what I got the assemblies in Galatia to do.
 \v 2 Every Sunday, each one of you should put something aside from whatever you’ve earnt, so that when I come we won’t need any collections then.
-\v 3 Then, when I arrive, I’ll \add write\add* letters to send with those you recommend to take to Jerusalem with your gift,
+\v 3 Then, when I arrive, I’ll \add write\add* letters to send with those you recommend to take to Yerushalem \add (Jerusalem)\add* with your gift,
 \v 4 but if it’s appropriate for me to go as well, then they can travel with me.
 \s1 Instructions for travellers
 \p
-\v 5 After I’ve been to Macedonia I’ll come there. \add Yes,\add* I’m going through Macedonia,\x + \xo 16:5: \xt Acts 19:21.\x*
+\v 5 After I’ve been to Makedonia I’ll come there. \add Yes,\add* I’m going through Makedonia,\x + \xo 16:5: \xt Acts 19:21.\x*
 \v 6 but perhaps I’ll spend some time with you—maybe even the whole winter. That way, you all could help me on my way wherever I decide to go next,
 \v 7 because I don’t want to see you all now \add just\add* in passing, but I’d like to stay with you all for a some time if the \nd master\nd* permits.
 \p
-\v 8 But I’ll stay \add here\add* at Ephesus until the Pentecost celebrations\x + \xo 16:8: \xt Lev 23:15-21; Deu 16:9-11.\x*
+\v 8 But I’ll stay \add here\add* at Efesos until the Pentecost celebrations\x + \xo 16:8: \xt Lev 23:15-21; Deu 16:9-11.\x*
 \v 9 because a wide door has opened for me to be effective \add here\add*, even though many are opposing \add me\add*.
 \p
-\v 10 Now if Timothy\x + \xo 16:10: \xt 1Cor 4:17.\x* arrives, make sure that he has nothing for him to be afraid \nd of\nd* there, because he’s doing \nd Yahweh’s\nd* work just like me.
+\v 10 Now if Timotheos\x + \xo 16:10: \xt 1Cor 4:17.\x* arrives, make sure that he has nothing for him to be afraid \nd of\nd* there, because he’s doing \nd Yahweh’s\nd* work just like me.
 \v 11 So don’t let anyone despise him, but help him on his way in peace, so that he can come to me because I’m expecting him along with the brothers.
 \p
 \v 12 And then concerning the brother Apollos, I strongly urged him to go to you with the brothers. He didn’t want to go at the present time, but he’ll go when he has \add another\add* opportunity.
@@ -639,21 +639,21 @@
 \v 13 Stay alert and stay grounded in the faith. Be strong and courageous.
 \v 14 Everything you do, do in love.
 \p
-\v 15 Now \add brothers and sisters\add*, you all know that Stephanas’ \add family\add*\x + \xo 16:15: \xt 1Cor 1:16.\x* were the first ones in Achaia to believe, and \add since then\add* they’ve devoted themselves to serving the believers, so I urge you all
+\v 15 Now \add brothers and sisters\add*, you all know that Stefanas’ \add family\add*\x + \xo 16:15: \xt 1Cor 1:16.\x* were the first ones in Akaia to believe, and \add since then\add* they’ve devoted themselves to serving the believers, so I urge you all
 \v 16 to submit yourselves to people like them, \add in fact\add* to everyone who works and cooperates.
 \p
-\v 17 I’m pleased that Stefanas, Fortunatus, and Achaicus came because they’ve given what you all couldn’t,
+\v 17 I’m pleased that Stefanas, Fortunatos, and Akaikos came because they’ve given what you all couldn’t,
 \v 18 because they refreshed my spirit and yours also, so you should show appreciation to such people.
 \p
 \v 19 The assemblies in \add the province of\add* Asia \add Minor\add* send their greetings.\x + \xo 16:19: \xt Acts 18:2.\x*
 \v 20 All the \add brothers and sisters\add* here send their greetings.
 \p Greet each other with an innocent kiss.
 \p
-\v 21 \sig I, Paul, am sending this greeting in my own handwriting.\sig*
+\v 21 \sig I, Paulos, am sending this greeting in my own handwriting.\sig*
 \p
 \v 22 \sig If there’s anyone there who doesn’t love the \nd master\nd*, let him be cursed.\sig*
 \p \sig Come, master!\sig*
 \p
-\v 23 \sig May the grace from \+add our\+add* \+nd master Yeshua\+nd* be with all of you.\sig*
+\v 23 \sig May the grace from \+add our\+add* \+nd master Yeshua\+nd* \+add (Jesus; Grk. Yesus)\+add* be with all of you.\sig*
 \p
 \v 24 \sig My love to all of you in \+nd Messiah Yeshua\+nd*. \+add May it be so\+add*.\sig*

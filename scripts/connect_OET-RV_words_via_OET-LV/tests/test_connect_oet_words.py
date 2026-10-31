@@ -161,7 +161,8 @@ class BookPassTests(unittest.TestCase):
 
 class SegmentTests(unittest.TestCase):
     def test_extra_books_and_filename_aliases_use_dc(self):
-        for book in ('DAG', 'DNG', 'ES1', 'GES', 'ES2', 'LES', 'MA3', 'MA4', 'PS2', 'TOB'):
+        for book in ('DAG', 'DNG', 'ES1', 'GES', 'ES2', 'LES', 'MA3', 'MA4', 'PS2', 'TOB',
+                     'PSS', 'ODE', 'LAO'):
             with self.subTest(book=book):
                 self.assertEqual(connect.bookSegment(book), 'DC')
         self.assertEqual(connect.bookSegment('RUT'), 'OT')

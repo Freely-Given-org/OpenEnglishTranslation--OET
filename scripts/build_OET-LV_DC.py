@@ -34,6 +34,8 @@ INTERMEDIATE = ROOT / 'intermediateTexts/glossed_DC'
 OUTPUT = ROOT / 'derivedTexts/auto_edited_DC_ESFM'
 OVERRIDES = SCRIPT_DIR / 'DC/gloss_overrides.tsv'
 NAME_ALIASES = SCRIPT_DIR / 'DC/proper_name_aliases.tsv'
+LATIN_GLOSSES = SCRIPT_DIR / 'DC/LAO_latin_glosses.tsv'
+LATIN_SOURCE = 'Lightfoot-1875.html'
 SPELLING_DIR = SCRIPT_DIR / 'ScriptedDCUpdates'
 EDITOR = ROOT.parent / 'ScriptedBibleEditor/Rust/scripted_bible_editor/target/release/scripted_bible_editor'
 EDITOR_CONTROL = 'ScriptedBibleEditor.control.toml'
@@ -62,16 +64,18 @@ BOOKS = {
     # Append new books so existing DC word numbers remain stable.
     'PSS': ('PSS', 'Psalms of Solomon', []),
     'ODE': ('ODA', 'Biblical Odes', []),
+    'LAO': ('LAO', 'Letter to the Laodiceans', []),
 }
+BOOK_LANGUAGES = {'LAO': 'lat'}  # Other current DC inputs are Ancient Greek (grc).
 TEI_SOURCES = {
     'PSS': ('tlg0527.tlg035.1st1K-grc1.xml', 18),
     'ODE': ('tlg0527.tlg028.1st1K-grc1.xml', 14),
 }
 TEI_NS = '{http://www.tei-c.org/ns/1.0}'
-SOURCE_REVIEW_FIELDS = ['Ref', 'GreekWord', 'Reason', 'SourceRef', 'SourceFile']
-DRAFT_REVIEW_FIELDS = ['GreekWord', 'Gloss', 'Status', 'Occurrences', 'FirstRef']
-SPELLING_REVIEW_FIELDS = ['Ref', 'GreekWord', 'BeforeGloss', 'AfterGloss']
-FIELDS = ['Ref', 'GreekWord', 'Lemma', 'Morphology', 'LexiconGloss',
+SOURCE_REVIEW_FIELDS = ['Ref', 'SourceWord', 'Reason', 'SourceRef', 'SourceFile']
+DRAFT_REVIEW_FIELDS = ['SourceWord', 'Gloss', 'Status', 'Occurrences', 'FirstRef']
+SPELLING_REVIEW_FIELDS = ['Ref', 'SourceWord', 'BeforeGloss', 'AfterGloss']
+FIELDS = ['Ref', 'SourceWord', 'Lemma', 'Morphology', 'LexiconGloss',
           'OETGlossWords', 'GlossStatus', 'GlossSource', 'Candidates',
           'SourceRef', 'SourceFile', 'Before', 'After']
 WORD_RE = re.compile(r"(?:[^\W\d_]|[\u0300-\u036f])+[’ʼ᾽']?", re.UNICODE)
@@ -579,7 +583,7 @@ def load_verses(cache: Path) -> dict[str, list[Verse]]:
             if match:
                 source_books[match[1]] = name
         for book, (_, _, components) in BOOKS.items():
-            if book in TEI_SOURCES:
+            if book in TEI_SOURCES or book == 'LAO':
                 continue
             result[book] = []
             for source_book, only_chapter, target_chapter in components:
@@ -602,6 +606,78 @@ def load_verses(cache: Path) -> dict[str, list[Verse]]:
                 raise ValueError(f'Missing or duplicate target verses in {book}')
     for book, (filename, _) in TEI_SOURCES.items():
         result[book] = parse_swete_tei((cache / filename).read_text(encoding='utf-8'), book, filename)
+    result['LAO'] = parse_lightfoot_lao((cache / LATIN_SOURCE).read_text(encoding='utf-8'))
+    return result
+
+
+def parse_lightfoot_lao(text: str) -> list[Verse]:
+    """Extract only Lightfoot's Latin text (pp. 353–355), never his retroversion.
+
+    Retain editorial [reliquum]. Repair the transcription's broken verse-13
+    link, and split the final clause of printed 16 into OET 17 (James's labels).
+    This changes no Latin words and keeps both halves' source references explicit.
+    """
+    start = "<h3 class='c019'>AD LAODICENSES.</h3>"
+    if text.count(start) != 1:
+        raise ValueError('Missing/duplicate Lightfoot Latin heading')
+    section = text.split(start)[1].split("<p class='c021'>", 1)[0]
+    paragraphs = re.findall(r"<p class='c000'>(.*?)</p>", section, re.DOTALL)
+    if len(paragraphs) != 8:
+        raise ValueError('Unexpected Lightfoot Latin paragraph count')
+    body = ' '.join(paragraphs)
+    body = re.sub(r"<span class='pageno' id='Page_35[45]'>35[45]</span>", '', body)
+    if body.count('#<sup>13</sup>al_13#') != 1:
+        raise ValueError('Lightfoot verse-13 transcription anchor changed')
+    body = body.replace('#<sup>13</sup>al_13#', '<sup>13</sup>')
+    body = re.sub(r'<sup>(\d+)</sup>', r'\n\1|', body)
+    body = re.sub(r'</?(?:span|a)\b[^>]*>', '', body)
+    if '<' in body or '>' in body or '#' in body:
+        raise ValueError('Unsupported Lightfoot Latin markup')
+    parts = re.split(r'\n(\d+)\|', html.unescape(body))
+    printed = {'1': ' '.join(parts[0].split())}
+    for number, content in zip(parts[1::2], parts[2::2]):
+        if number in printed:
+            raise ValueError('Duplicate Lightfoot verse')
+        printed[number] = ' '.join(content.split())
+    if list(printed) != [str(n) for n in range(1, 21) if n != 17]:
+        raise ValueError('Unexpected Lightfoot Latin verse sequence')
+    split = 'et erit vobis pax.'
+    if not printed['16'].endswith('; ' + split):
+        raise ValueError('Lightfoot 16/17 boundary changed')
+    verses = []
+    for number in range(1, 21):
+        source_ref = f'LAO_1:{number}'
+        if number == 16:
+            content = printed['16'][:-len(split)].rstrip()
+            source_ref = 'LAO_1:16a'
+        elif number == 17:
+            content, source_ref = split, 'LAO_1:16b'
+        else:
+            content = printed[str(number)]
+        if not content or not re.fullmatch(r'[A-Za-z ,.;:\[\]]+', content):
+            raise ValueError(f'Unexpected Latin source text at {source_ref}')
+        verses.append(Verse('LAO', 1, str(number), content, source_ref, LATIN_SOURCE))
+    return verses
+
+
+def read_latin_glosses(path: Path) -> dict:
+    """Occurrence glosses are OET editorial work, not downloaded annotations."""
+    result = {}
+    with path.open(encoding='utf-8', newline='') as source:
+        reader = csv.DictReader(source, delimiter='\t', quoting=csv.QUOTE_NONE)
+        if reader.fieldnames != ['Ref', 'LatinWord', 'Gloss', 'Note']:
+            raise ValueError('Unexpected Latin gloss columns')
+        for row in reader:
+            if (None in row or any(not value or not value.strip() for value in row.values())
+                    or not re.fullmatch(r'LAO_1:[1-9]\d?w[1-9]\d*', row['Ref'])
+                    or not re.fullmatch('[A-Za-z]+', row['LatinWord'])
+                    or not usable_gloss(row['Gloss'])
+                    or any(c in row['Gloss'] for c in '\\¦\t\r\n⟦⟧')):
+                raise ValueError(f'Malformed Latin occurrence gloss: {row}')
+            key = (row['Ref'], row['LatinWord'])
+            if key in result:
+                raise ValueError(f'Duplicate Latin occurrence gloss: {key}')
+            result[key] = row
     return result
 
 
@@ -635,14 +711,28 @@ def read_overrides(path: Path) -> dict:
     return overrides
 
 
-def make_rows(verses: dict, lexicon: Lexicon, overrides: dict) -> list[dict]:
+def make_rows(verses: dict, lexicon: Lexicon, overrides: dict, latin_glosses: dict | None = None) -> list[dict]:
     rows = []
     used = set()
+    latin_used = set()
+    if latin_glosses is None:
+        latin_glosses = read_latin_glosses(LATIN_GLOSSES) if 'LAO' in verses else {}
     for book_verses in verses.values():
         for verse in book_verses:
             for index, (word, before, after) in enumerate(tokenise(verse.text), 1):
                 ref = f'{verse.book}_{verse.chapter}:{verse.verse}w{index}'
-                row = dict(Ref=ref, GreekWord=word, **lexicon.lookup(word),
+                if BOOK_LANGUAGES.get(verse.book, 'grc') == 'lat':
+                    key = (ref, word)
+                    if key not in latin_glosses:
+                        raise ValueError(f'Missing/stale Latin occurrence gloss: {key}')
+                    gloss = latin_glosses[key]
+                    rows.append(dict(Ref=ref, SourceWord=word, Lemma='', Morphology='', LexiconGloss='',
+                                     OETGlossWords=gloss['Gloss'], GlossStatus='latin-editorial-draft',
+                                     GlossSource='OET Latin occurrence gloss: ' + gloss['Note'], Candidates='[]',
+                                     SourceRef=verse.source_ref, SourceFile=verse.source_file, Before=before, After=after))
+                    latin_used.add(key)
+                    continue
+                row = dict(Ref=ref, SourceWord=word, **lexicon.lookup(word),
                            SourceRef=verse.source_ref, SourceFile=verse.source_file, Before=before, After=after)
                 # Apply a global form override, then a more specific occurrence.
                 for key in [('*', normalise(word)), (ref, word)]:
@@ -654,12 +744,14 @@ def make_rows(verses: dict, lexicon: Lexicon, overrides: dict) -> list[dict]:
     unused = set(overrides) - used
     if unused:
         raise ValueError(f'Unused/stale overrides (including changed Greek source words): {sorted(unused)[:10]}')
+    if set(latin_glosses) != latin_used:
+        raise ValueError('Unused/stale Latin occurrence glosses')
     return rows
 
 
 def render_word(row: dict, number: int) -> str:
     unresolved = not row['OETGlossWords']
-    gloss = row['OETGlossWords'] or row['GreekWord']
+    gloss = row['OETGlossWords'] or row['SourceWord']
     if any(c in gloss for c in '\\¦\t\n\r'):
         raise ValueError(f"Unsafe gloss at {row['Ref']}")
     # The existing ESFM convention repeats the word link on each English component.
@@ -671,6 +763,8 @@ def render_word(row: dict, number: int) -> str:
     gloss = '_'.join(components)
     if unresolved:
         gloss = '⟦' + gloss + '⟧'
+    if row.get('Ref', '').startswith('LAO_'):
+        return row['Before'] + gloss + row['After']
     punct = lambda s: s.replace('·', ';').replace('·', ';').replace(';', '?')
     # Ordinary ASCII semicolon in a Greek source is also a question mark.
     before = punct(row['Before'].replace(';', '?'))
@@ -708,6 +802,18 @@ def render_books(verses: dict, rows: list[dict]) -> dict[str, str]:
             lines[13:13] = [
                 '\\rem Swete Odes order: IV(a)/IV(b) are chapter 4 with a/b verse suffixes.',
                 '\\rem Chapter 14 uses XML hymn lines 1-47 as local verse segments. This is not Rahlfs numbering.',
+            ]
+        if book == 'LAO':
+            lines[5:14] = [
+                '\\rem DRAFT: OET occurrence glosses in Latin order; contextual translation requires editorial review.',
+                '\\rem Source: J. B. Lightfoot (1875), pp. 353-355, Latin text; public domain, via Project Gutenberg.',
+                '\\rem Source language: Latin (lat). Lightfoot\'s reconstructed Greek is not used.',
+                '\\rem Glosses: scripts/DC/LAO_latin_glosses.tsv; original OET draft work, not STEP annotations.',
+                '\\rem Names use explicit OET editorial spellings; no Greek transliteration is applied to Latin.',
+                '\\rem Changes: HTML extraction, documented 16/17 verse split, occurrence glosses, ScriptedBibleEditor spelling, ESFM conversion.',
+                '\\rem Verses 16 and 17 split Lightfoot 16 (SourceRef 16a/16b), following James (1924); all Latin words retained.',
+                '\\rem Square brackets in verse 13 retain Lightfoot\'s editorial supplement [reliquum].',
+                '\\rem No automatic word alignment to OET-RV is asserted. See scripts/DC/README.md.',
             ]
         chapter = None
         for v in book_verses:
@@ -750,10 +856,10 @@ def audit_rv(verses: dict, rv_dir: Path) -> list[dict]:
 
 def source_review(rows: list[dict]) -> list[dict]:
     """Flag visible transcription problems without guessing a corrected word."""
-    return [dict(Ref=r['Ref'], GreekWord=r['GreekWord'],
+    return [dict(Ref=r['Ref'], SourceWord=r['SourceWord'],
                  Reason='Latin letter in Greek source token; inspect the printed edition',
                  SourceRef=r['SourceRef'], SourceFile=r['SourceFile'])
-            for r in rows if re.search('[A-Za-z]', r['GreekWord'])]
+            for r in rows if not r['Ref'].startswith('LAO_') and re.search('[A-Za-z]', r['SourceWord'])]
 
 
 def draft_review(rows: list[dict]) -> list[dict]:
@@ -761,11 +867,11 @@ def draft_review(rows: list[dict]) -> list[dict]:
     counts, first_refs = Counter(), {}
     for row in rows:
         status = row['GlossStatus']
-        if row['OETGlossWords'] and ('candidate' in status or status.startswith('name-') or status == 'draft-alternatives'):
-            key = (row['GreekWord'], row['OETGlossWords'], status)
+        if row['OETGlossWords'] and ('candidate' in status or status.startswith('name-') or status in {'draft-alternatives', 'latin-editorial-draft'}):
+            key = (row['SourceWord'], row['OETGlossWords'], status)
             counts[key] += 1
             first_refs.setdefault(key, row['Ref'])
-    return [dict(GreekWord=word, Gloss=gloss, Status=status, Occurrences=count, FirstRef=first_refs[(word, gloss, status)])
+    return [dict(SourceWord=word, Gloss=gloss, Status=status, Occurrences=count, FirstRef=first_refs[(word, gloss, status)])
             for (word, gloss, status), count in counts.most_common()]
 
 
@@ -864,7 +970,7 @@ def reconcile_spelling(rendered: dict[str, str], edited: dict[str, str], rows: l
                 gloss = re.sub('[A-Za-z]+', lambda _: next(letters), row['OETGlossWords'])
                 output[number - 1]['OETGlossWords'] = gloss
                 output[number - 1]['GlossSource'] += '; spelling: ScriptedBibleEditor/' + SPELLING_TABLE
-                audit.append(dict(Ref=row['Ref'], GreekWord=row['GreekWord'],
+                audit.append(dict(Ref=row['Ref'], SourceWord=row['SourceWord'],
                                   BeforeGloss=row['OETGlossWords'], AfterGloss=gloss))
                 new_pos = match.end()
             old_pos = start + len(word)
@@ -877,7 +983,8 @@ def build(args) -> None:
     manifest = load_manifest(args.manifest)
     sources(manifest, args.cache)
     verses = load_verses(args.cache)
-    rows = make_rows(verses, Lexicon.load(args.cache, args.name_aliases), read_overrides(args.overrides))
+    rows = make_rows(verses, Lexicon.load(args.cache, args.name_aliases), read_overrides(args.overrides),
+                     read_latin_glosses(args.latin_glosses))
     rendered = render_books(verses, rows)
     spelling = spelling_inputs(args.editor, args.spelling_dir)
     print('Applying the DC spelling table with ScriptedBibleEditor…', flush=True)
@@ -894,15 +1001,17 @@ def build(args) -> None:
         selected = [r for r in rows if r['Ref'].startswith(book + '_')]
         glossed = sum(bool(r['OETGlossWords']) for r in selected)
         per_book[book] = dict(words=len(selected), glossed=glossed, unresolved=len(selected) - glossed,
+                              source_language=BOOK_LANGUAGES.get(book, 'grc'),
                               draft_coverage_percent=round(100 * glossed / len(selected), 2),
                               statuses=dict(Counter(r['GlossStatus'] for r in selected)),
                               chapters=len({v.chapter for v in verses[book] if v.chapter}),
                               verse_segments=sum(v.chapter != 0 for v in verses[book]),
                               prologue_segments=sum(v.chapter == 0 for v in verses[book]))
-    report = dict(schema_version=1, status='lexical draft; not a completed translation',
+    report = dict(schema_version=2, status='lexical/editorial draft; not a completed translation',
                   source_manifest_sha256=hashlib.sha256(args.manifest.read_bytes()).hexdigest(),
                   overrides_sha256=hashlib.sha256(args.overrides.read_bytes()).hexdigest(),
                   name_aliases_sha256=hashlib.sha256(args.name_aliases.read_bytes()).hexdigest(),
+                  latin_glosses_sha256=hashlib.sha256(args.latin_glosses.read_bytes()).hexdigest(),
                   transliteration=transliteration_info(),
                   spelling=spelling,
                   books=per_book, words=len(rows), glossed=sum(bool(r['OETGlossWords']) for r in rows),
@@ -918,16 +1027,18 @@ def build(args) -> None:
                                'Brenton source spelling and verse labels are not silently corrected.',
                                'PSS/ODE use an unreviewed Swete/First1KGreek transcription, with visible OCR errors retained.',
                                'ODE keeps Swete order: IV(a)/IV(b) use chapter 4 with a/b suffixes; XIV uses 47 XML lines as local verse segments, not Rahlfs references or printed line numbers.',
+                               'LAO uses Lightfoot Latin and original OET occurrence glosses requiring human review, not Greek lexical data. Lemma, Morphology and LexiconGloss are deliberately empty for Latin.',
+                               'LAO 16/17 split Lightfoot 16 into source references 16a/16b without changing words; verse 13 retains his editorial [reliquum]. Verse 5 has difficult Latin syntax.',
                                'Equal RV/source verse labels do not prove content alignment.',
                                'Word numbers are 1-based data rows, excluding the header, and rebuild with the complete fixed book order.'],
                   source_files=manifest['files'])
     table = tsv_text(FIELDS, rows)
-    unresolved = [dict(Ref=r['Ref'], GreekWord=r['GreekWord'], Status=r['GlossStatus'], Candidates=r['Candidates']) for r in rows if not r['OETGlossWords']]
-    frequency = Counter((r['GreekWord'], r['GlossStatus']) for r in rows if not r['OETGlossWords'])
+    unresolved = [dict(Ref=r['Ref'], SourceWord=r['SourceWord'], Status=r['GlossStatus'], Candidates=r['Candidates']) for r in rows if not r['OETGlossWords']]
+    frequency = Counter((r['SourceWord'], r['GlossStatus']) for r in rows if not r['OETGlossWords'])
     first_refs = {}
     for r in unresolved:
-        first_refs.setdefault((r['GreekWord'], r['Status']), r['Ref'])
-    review = [dict(GreekWord=word, Status=status, Occurrences=count, FirstRef=first_refs[(word, status)])
+        first_refs.setdefault((r['SourceWord'], r['Status']), r['Ref'])
+    review = [dict(SourceWord=word, Status=status, Occurrences=count, FirstRef=first_refs[(word, status)])
               for (word, status), count in frequency.most_common()]
     # All source parsing, rendering, and override validation precedes any writes.
     write_if_changed(args.intermediate / TABLE, table)
@@ -935,16 +1046,16 @@ def build(args) -> None:
     for book, content in rendered.items():
         write_if_changed(args.output / f'OET-LV_{book}.ESFM', content)
     write_if_changed(args.output / 'build_report.json', json_text(report))
-    write_if_changed(args.intermediate / 'unresolved_words.tsv', tsv_text(['Ref', 'GreekWord', 'Status', 'Candidates'], unresolved))
-    write_if_changed(args.intermediate / 'review_by_frequency.tsv', tsv_text(['GreekWord', 'Status', 'Occurrences', 'FirstRef'], review))
+    write_if_changed(args.intermediate / 'unresolved_words.tsv', tsv_text(['Ref', 'SourceWord', 'Status', 'Candidates'], unresolved))
+    write_if_changed(args.intermediate / 'review_by_frequency.tsv', tsv_text(['SourceWord', 'Status', 'Occurrences', 'FirstRef'], review))
     write_if_changed(args.intermediate / 'rv_verse_label_differences.tsv', tsv_text(['Book', 'Ref', 'Status'], differences))
     write_if_changed(args.intermediate / 'source_text_review.tsv', tsv_text(SOURCE_REVIEW_FIELDS, source_review(rows)))
     write_if_changed(args.intermediate / 'draft_gloss_review.tsv', tsv_text(DRAFT_REVIEW_FIELDS, draft_review(rows)))
     write_if_changed(args.intermediate / 'spelling_changes.tsv', tsv_text(SPELLING_REVIEW_FIELDS, spelling_changes))
     source_rows = [dict(Ref=f'{v.book}_{v.chapter}:{v.verse}', SourceRef=v.source_ref,
-                        SourceFile=v.source_file, GreekText=v.text)
+                        SourceFile=v.source_file, SourceText=v.text)
                    for items in verses.values() for v in items]
-    write_if_changed(args.intermediate / 'source_verses.tsv', tsv_text(['Ref', 'SourceRef', 'SourceFile', 'GreekText'], source_rows))
+    write_if_changed(args.intermediate / 'source_verses.tsv', tsv_text(['Ref', 'SourceRef', 'SourceFile', 'SourceText'], source_rows))
     check(args)
     for book, summary in per_book.items():
         print(f"{book}: {summary['glossed']:,}/{summary['words']:,} words have draft glosses/names ({summary['draft_coverage_percent']}%)")
@@ -972,7 +1083,7 @@ def check(args) -> None:
             key = f'{verse.book}_{verse.chapter}:{verse.verse}'
             expected_refs.add(key)
             selected = by_verse[key]
-            if ''.join(r['Before'] + r['GreekWord'] + r['After'] for r in selected) != verse.text:
+            if ''.join(r['Before'] + r['SourceWord'] + r['After'] for r in selected) != verse.text:
                 raise ValueError(f'Source reconstruction failed: {key}')
             if [r['Ref'] for r in selected] != [f'{key}w{i}' for i in range(1, len(selected) + 1)]:
                 raise ValueError(f'Non-sequential word references: {key}')
@@ -1007,6 +1118,13 @@ def check(args) -> None:
         raise ValueError('Draft gloss review does not match word table')
     if report['source_manifest_sha256'] != hashlib.sha256(args.manifest.read_bytes()).hexdigest() or report['overrides_sha256'] != hashlib.sha256(args.overrides.read_bytes()).hexdigest():
         raise ValueError('Outputs are stale: sources or overrides changed; rebuild LV_DC')
+    if report.get('latin_glosses_sha256') != hashlib.sha256(args.latin_glosses.read_bytes()).hexdigest():
+        raise ValueError('Outputs are stale: Latin occurrence glosses changed; rebuild LV_DC')
+    if any(report['books'][book].get('source_language') != BOOK_LANGUAGES.get(book, 'grc') for book in verses):
+        raise ValueError('Incorrect book source language in report')
+    # Unlike inferred Greek lexical candidates, LAO has a complete editable
+    # occurrence table: validate its source identities even on check-only runs.
+    make_rows({'LAO': verses['LAO']}, Lexicon(), {}, read_latin_glosses(args.latin_glosses))
     if (report.get('name_aliases_sha256') != hashlib.sha256(args.name_aliases.read_bytes()).hexdigest()
             or report.get('transliteration') != transliteration_info()):
         raise ValueError('Outputs are stale: name recognition or NT transliterator changed; rebuild LV_DC')
@@ -1026,7 +1144,7 @@ def check(args) -> None:
         raise ValueError('Spelling audit coverage does not match word table')
     for change in changes:
         row = indexed[change['Ref']]
-        if (change['GreekWord'] != row['GreekWord'] or change['AfterGloss'] != row['OETGlossWords']
+        if (change['SourceWord'] != row['SourceWord'] or change['AfterGloss'] != row['OETGlossWords']
                 or change['BeforeGloss'] == change['AfterGloss']):
             raise ValueError(f'Spelling audit does not match {change["Ref"]}')
     print(f'Checked {len(BOOKS)} DC ESFM files, {len(rows):,} source words, and all word-table links.')
@@ -1037,6 +1155,7 @@ def main() -> int:
     parser.add_argument('command', choices=['fetch', 'build', 'check'])
     for name, default in [('manifest', MANIFEST), ('cache', CACHE), ('intermediate', INTERMEDIATE),
                           ('output', OUTPUT), ('overrides', OVERRIDES), ('name-aliases', NAME_ALIASES), ('rv-dir', RV),
+                          ('latin-glosses', LATIN_GLOSSES),
                           ('editor', EDITOR), ('spelling-dir', SPELLING_DIR)]:
         parser.add_argument('--' + name, type=Path, default=default)
     args = parser.parse_args()

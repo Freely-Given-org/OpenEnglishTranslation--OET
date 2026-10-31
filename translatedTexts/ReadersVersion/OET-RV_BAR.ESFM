@@ -1,8 +1,8 @@
-\id BAR - Open English Translation—Readers' Version (OET-RV) v0.1.0
+\id BAR - Open English Translation—Readers' Version (OET-RV) v0.4.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 BAR
-\rem not WORDTABLE OET-LV_OT_word_table.tsv
+\rem WORDTABLE OET-LV_DC_word_table.tsv
 \rem Adapted from the Public Domain WEBBE courtesy of https://eBible.org
 \h Baruk
 \toc1 Baruk
@@ -10,250 +10,270 @@
 \toc3 Bar
 \mt1 Baruk
 \is1 Introduction
+\ip The book of \bk Baruk\bk* is set among the people taken into exile in Bavel (Babylon) after Yerushalem (Jerusalem) was captured. It opens with Baruk reading to the exiles, who weep, pray, and send money and a message to the people still in Yerushalem. The prayer that follows openly acknowledges their disobedience and asks God to show mercy and bring his people home.
+\ip The book then calls Yisrael (Israel) to seek wisdom in God's instructions. Yerushalem is pictured as a grieving mother whose children have been taken away, but who can look forward to their return. These sections move from confession and sorrow to renewed hope in God's faithfulness.
+\ip The final chapter contains \bk The Letter of Yirmiyah\bk* (Jeremiah), addressed to people facing exile. It warns them not to be impressed or frightened by the idols they will see in Bavel. Again and again, it points out that these objects can't speak, protect themselves, or help their worshippers.
 \ip The book of \bk Baruk\bk* is recognised as Deuterocanonical Scripture by the Romaios Catholic, Greek Orthodox, and Russian Orthodox Churches. In some Bibles, Baruk chapter 6 is listed as a separate book called \bk The Letter of Yirmiyah/Jeremiah\bk*, reflecting its separation from Baruk in some copies of the Greek Septuagint.
+\iot Main components of this document
+\io1 The exiles send gifts and a message to Yerushalem \ior 1:1-14\ior*
+\io1 Confession and a prayer for mercy \ior 1:15–3:8\ior*
+\io1 Finding wisdom in God's instructions \ior 3:9–4:4\ior*
+\io1 Yerushalem's sorrow and the promise of restoration \ior 4:5–5:9\ior*
+\io1 Yirmiyah's letter warning against idols \ior 6:1-73\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
+\s1 The exiles send gifts and a message to Yerushalem
 \p
-\v 1 These are the words of the book which Baruk the son of Neriyah, the son of Mahseyah, the son of Tsidkiyah \add !(Zedekiah)\add*, the son of Hasadyah, the son of Hilkiyah, wrote in Bavel \add !(Babylon)\add*,
-\v 2 in the fifth year, in the seventh day of the month, at the time when the Kasdim \add !(Chaldeans)\add* took Yerushalem \add !(Jerusalem)\add* and burnt it with fire.
-\v 3 Baruk read the words of this book in the hearing of Yekonias the son of Yehoyakim king of Yehudah \add !(Judah)\add*, and in the hearing of all the people who came to hear the book,
-\v 4 and in the hearing of the mighty men, and of the kings' sons, and in the hearing of the elders, and in the hearing of all the people, from the least to the greatest, even of all those who lived at Bavel by the river Sud.
-\v 5 Then they wept, fasted,\f + \fr 1:5 \ft Another reading is, \fqa and vowed vows.\f* and prayed before the master.
-\v 6 They also made a collection of money according to every man's ability;
-\v 7 and they sent it to Yerushalem to Yehoyakim the high priest, the son of Hilkiyah, the son of Shalum, and to the priests and to all the people who were found with him at Yerushalem,
-\v 8 at the same time when he took the vessels of the house of the master, that had been carried out of the temple, to return them into the land of Yehudah, the tenth day of Sivan—silver vessels which Tsidkiyah the son of Yoshiyah \add !(Josiah)\add* king of Yehudah had made,
-\v 9 after Nevukadnetsar \add !(Nebuchadnezzar)\add* king of Bavel had carried away Yekonias, the princes, the captives, the mighty men, and the people of the land from Yerushalem, and brought them to Bavel.
+\v 1 These are the¦45965 words¦45966 of¦45967 the¦45967 book¦45968 which¦45969 Baruk the son¦45972 of Neriyah, the son¦45974 of Mahseyah, the son¦45976 of Tsidkiyah \add !(Zedekiah)\add*, the son¦45978 of Hasadyah, the son¦45980 of Hilkiyah, wrote¦45970 in¦45982 Bavel \add !(Babylon)\add*,
+\v 2 in¦45984 the¦45985 fifth year¦45986, in the seventh¦45990 day of¦45991 the¦45991 month, at the¦45994 time¦45995 when the Kasdim \add !(Chaldeans)\add* took¦45997 Yerushalem \add !(Jerusalem)\add* and¦46002 burnt it¦46004 with fire¦46006.
+\v 3 Baruk read the¦46010 words¦46011 of¦46012 this¦46014 book in¦46015 the hearing of Yekonias the son¦46018 of Yehoyakim king¦46020 of Yehudah \add !(Judah)\add*, and¦46022 in¦46023 the hearing of all¦46025 the¦46026 people¦46027 who¦46028 came¦46029 to¦46030 hear the¦46031 book,
+\v 4 and¦46033 in¦46034 the hearing of the mighty men, and¦46038 of the¦46040 kings'¦46041 sons¦46039, and¦46042 in¦46043 the hearing of the elders¦46046, and¦46047 in¦46048 the hearing of all the¦46051 people¦46052, from¦46053 the least to the greatest¦46056, even of all¦46057 those who¦46058 lived¦46059 at Bavel by the river¦46063 Sud.
+\v 5 Then¦46065 they wept¦46066, fasted,\f + \fr 1:5 \ft Another reading is, \fqa and vowed vows.\f* and prayed¦46070 before the master.
+\v 6 They also¦46073 made a collection of money¦46075 according to every man's ability;
+\v 7 and¦46081 they sent¦46082 it to¦46082 Yerushalem to¦46085 Yehoyakim the high priest, the son of Hilkiyah, the son of Shalum, and¦46093 to¦46094 the¦46095 priests¦46096 and¦46097 to¦46098 all¦46099 the¦46100 people¦46101 who¦46102 were found with¦46104 him at Yerushalem,
+\v 8 at the¦46109 same time when he¦46111 took¦46110 the¦46112 vessels¦46113 of the¦46116 master's house¦46114, that'd been carried out¦46118 of¦46119 the¦46119 temple¦46120, to return them into the land¦46123 of Yehudah, the¦46125 tenth¦46126 day of¦46127 Sivan—silver¦46130 vessels which¦46131 Tsidkiyah the son¦46134 of Yoshiyah \add !(Josiah)\add* king¦46136 of Yehudah had made¦46132,
+\v 9 after¦46138 Nevukadnetsar \add !(Nebuchadnezzar)\add* king¦46142 of Bavel had carried away¦46160 Yekonias, the princes, the captives, the mighty men, and the people of the¦46158 land¦46159 from Yerushalem, and¦46162 brought¦46163 them to¦46163 Bavel.
 \p
-\v 10 And they said: Listen, we have sent you money; therefore buy with the money burnt offerings, sin offerings, and incense, and prepare an oblation, and offer on the altar of the master our god;
-\v 11 and pray for the life of Nevukadnetsar king of Bavel, and for the life of Belshatsar \add !(Belshazzar)\add* his son, that their days may be\f + \fr 1:11 \ft See Deuteronomy 11:21.\f* as the days of heaven above the earth.
-\v 12 The master will give us strength and light to our eyes. We will live under the shadow of Nevukadnetsar king of Bavel and under the shadow of Belshatsar his son, and we shall serve them many days, and find favour in their sight.
-\v 13 Pray for us also to the master our god, for we have sinned against the master our god. To this day the wrath of the master and his indignation is not turned from us.
-\v 14 You shall read this book which we have sent to you, to make confession in the house of the master on the day of the feast and on the days of the solemn assembly.
+\v 10 And¦46167 they said¦46168: Listen, we've¦46195 sent you¦46172 money¦46173; therefore buy¦46175 with the¦46176 money¦46177 burnt¦46178 offerings¦46178, sin¦46181 offerings, and¦46182 incense, and¦46184 prepare¦46185 an oblation, and¦46187 offer on¦46189 the¦46190 altar¦46191 of¦46193 the¦46193 master our god¦46194;
+\v 11 and¦46196 pray for the¦46199 life¦46200 of Nevukadnetsar king¦46202 of Bavel, and¦46204 for the life¦46206 of Belshatsar \add !(Belshazzar)\add* his son¦46208, that¦46210 their days may be¦46211\f + \fr 1:11 \ft See Deuteronomy 11:21.\f* as the days of¦46218 heaven¦46219 above the¦46221 earth¦46222.
+\v 12 The master will give¦46224 us strength¦46226 and¦46228 light to¦46229 our eyes¦46231. We'll¦46232 live under¦46235 the¦46236 shadow¦46237 of Nevukadnetsar king¦46239 of Bavel and¦46241 under¦46242 the¦46243 shadow¦46244 of Belshatsar his son¦46246, and¦46248 we'll serve them many days¦46251, and¦46253 find¦46254 favour in¦46256 their sight.
+\v 13 Pray for us also¦46258 to¦46262 the¦46264 master our god¦46265, for we've¦46266 sinned against the¦46269 master our god¦46271. To this day¦46287 the anger of the master and his indignation isn't turned from us.
+\v 14 Read this¦46291 book¦46292 which¦46294 we've sent to¦46296 you¦46297, to make confession in¦46299 the master's house¦46300 on¦46302 the day¦46303 of the feast and¦46305 on¦46306 the days¦46307 of the solemn assembly.
+\s1 The people confess their disobedience
 \p
-\v 15 You shall say: To the master our god belongs righteousness, but to us confusion of face, as at this day—to the men of Yehudah, to the inhabitants of Yerushalem,
-\v 16 to our kings, to our princes, to our priests, to our prophets, and to our fathers,
-\v 17 because we have sinned before the master.
-\v 18 We have disobeyed him and have not listened to the voice of the master our god, to walk in the commandments of the master that he has set before us.
-\v 19 Since the day that the master brought our fathers out of the land of Mitsrayim \add !(Egypt)\add* to this present day, we have been disobedient to the master our god, and we have been negligent in not listening to his voice.
-\v 20 Therefore the \add ≈deadly diseases\add* have clung to us, along with the curse which the master declared through Mosheh \add !(Moses)\add* his servant in the day that he brought our fathers out of the land of Mitsrayim to give us a land that flows with milk and honey, as at this day.
-\v 21 Nevertheless we didn't listen to the voice of the master our god, according to all the words of the prophets whom he sent to us,
-\v 22 but we each walked in the imagination of his own wicked heart, to serve strange gods and to do what is evil in the sight of the master our god.
+\v 15 Say¦46310: To the¦46311 master our god¦46313 belongs righteousness¦46316, but¦46318 to us confusion of face¦46321, as at this¦46323 day¦46324—to the¦46329 men of Yehudah, to¦46330 the inhabitants¦46330 of Yerushalem,
+\v 16 to our kings¦46334, to our princes, to our priests¦46342, to our prophets¦46346, and¦46348 to our fathers¦46350,
+\v 17 because we've sinned before¦46354 the master.
+\v 18 We've disobeyed him and haven't listened to¦46361 the¦46362 voice¦46363 of the master our god¦46365, to¦46367 walk in the¦46368 master's commandments that¦46371 he's¦46358 set before us.
+\v 19 Since the¦46377 day¦46378 that¦46379 the¦46382 master brought our fathers¦46383 out¦46385 of the land¦46386 of Mitsrayim \add !(Egypt)\add* to this¦46390 present day¦46391, we've been¦46393 disobedient¦46394 to¦46395 the master our god¦46397, and¦46399 we've been negligent in not¦46403 listening¦46404 to¦46404 his voice¦46406.
+\v 20 Therefore the \add ≈deadly diseases\add* have clung to us, along with the¦46415 curse¦46416 which¦46417 the¦46420 master declared through Mosheh \add !(Moses)\add* his servant in¦46424 the day¦46425 that¦46426 he brought our fathers¦46429 out¦46427 of the¦46428 land¦46432 of Mitsrayim to¦46434 give¦46434 us a land¦46436 that flows with milk¦46438 and¦46439 honey¦46440, as at this¦46442 day¦46443.
+\v 21 Nevertheless we didn't listen¦46447 to¦46447 the¦46448 voice¦46449 of¦46451 the¦46451 master our god¦46452, according¦46454 to¦46454 all¦46455 the¦46456 words¦46457 of the¦46458 prophets¦46459 whom he sent¦46461 to¦46462 us,
+\v 22 but we each¦46466 walked in¦46467 the¦46471 imagination of his own wicked¦46472 heart¦46469, to¦46473 serve strange gods¦46474 and to¦46476 do¦46476 what is evil in the sight of the master our god¦46482.
 \c 2
 \p
 \v 1 Therefore the master has made good his word which he pronounced against us, and against our judges who judged Yisrael \add !(Israel)\add*, and against our kings, and against our princes, and against the men of Yisrael and Yehudah \add !(Judah)\add*,
-\v 2 to bring \add ≈terrible deadly diseases\add* onto us such as never happened before under the whole heaven,\f + \fr 2:2 \ft Another reading is, \fqa even as he has done.\f* as it came to pass in Yerushalem \add !(Jerusalem)\add*, according to the things that are written in the law of Mosheh,
-\v 3 that we should each eat the flesh of our own son, and each eat the flesh of our own daughter.
-\v 4 Moreover he has given them to be in subjection to all the kingdoms that are around us, to be a reproach and a desolation amongst all the people around us, where the master has scattered them.
-\v 5 Thus they were thrown down and not exalted, because we sinned against the master our god in not listening to his voice.
-\v 6 To the master our god belongs righteousness, but to us and to our fathers confusion of face, as at this day.
-\v 7 All these \add ≈deadly diseases\add* have come onto us which the master has pronounced against us.
-\v 8 Yet have we not entreated the favour of the master by everyone turning from the thoughts of his wicked heart.
-\v 9 Therefore the master has kept watch over the \add ≈deadly diseases\add*. The master has brought them onto us, because the master is righteous in all his works which he has commanded us.
-\v 10 Yet we have not listened to his voice, to walk in the commandments of the master that he has set before us.
+\v 2 to bring \add ≈terrible deadly diseases\add* onto us such as never happened before under the whole heaven,\f + \fr 2:2 \ft Another reading is, \fqa even as he has done.\f* as it happened in Yerushalem \add !(Jerusalem)\add*, according to the things that are written in Mosheh's law,
+\v 3 that we¦46545 should each eat the flesh¦46547 of our own son¦46548, and¦46550 each eat the flesh¦46552 of our own daughter¦46553.
+\v 4 Moreover he's given¦46556 them to be in subjection to all¦46559 the¦46560 kingdoms that¦46562 are around us, to be a reproach¦46566 and¦46567 a desolation among¦46569 all¦46570 the¦46571 people¦46572 around us, where the¦46573 master has scattered them.
+\v 5 Thus they were¦46581 thrown down and¦46583 not exalted, because¦46586 we¦46590 sinned against the¦46592 master our god¦46589 in not¦46593 listening¦46594 to¦46594 his voice¦46596.
+\v 6 To the¦46598 master our god¦46600 belongs righteousness¦46603, but¦46605 to us and¦46606 to our fathers¦46608 confusion of face¦46613, as at this¦46615 day¦46616.
+\v 7 All¦46623 these \add ≈deadly diseases\add* have come¦46628 onto us which the master has pronounced against¦46629 us.
+\v 8 Yet we haven't asked for the¦46634 favour of¦46637 the¦46637 master by everyone turning from¦46640 the thoughts of his wicked¦46647 heart¦46644.
+\v 9 Therefore the master has kept¦46649 watch¦46649 over the \add ≈deadly diseases\add*. The master has brought them onto us, because¦46659 the¦46661 master is righteous in all¦46664 his works¦46666 which¦46668 he's¦46667 commanded us.
+\v 10 Yet we haven't listened to¦46673 his voice¦46675, to¦46677 walk in the¦46678 master's commandments that¦46681 he's¦46676 set before us.
+\s1 A prayer for mercy
 \p
-\v 11 And now, Oh master, you God of Yisrael \add !(Israel)\add* who have brought your people out of the land of Mitsrayim \add !(Egypt)\add* with a mighty hand, with signs, with wonders, with great power, and with a high arm, and have gotten yourself a name, as at this day:
-\v 12 Oh master our god, we have sinned. We have been ungodly. We have done wrong in all your ordinances.
-\v 13 Let your wrath turn from us, for we are but a few left amongst the heathen where you have scattered us.
-\v 14 Hear our prayer, Oh master, and our petition, and deliver us for your own sake. Give us favour in the sight of those who have led us away captive,
-\v 15 that all the earth may know that you are the master our god, because Yisrael and his posterity is called by your name.
-\v 16 Oh master, look down from your holy house and consider us. Incline your ear, Oh master, and hear.
-\v 17 Open your eyes, and see; for the dead that are in Haidais, whose breath is taken from their bodies, will give to the master neither glory nor righteousness;
-\v 18 but the soul who is greatly vexed, who goes stooping and feeble, and the eyes that fail, and the hungry soul, will declare your glory and righteousness, Oh master.
+\v 11 And¦46686 now¦46687, Oh master, you God¦46690 of Yisrael \add !(Israel)\add* who've¦46694 brought your people¦46695 out¦46697 of the land¦46698 of Mitsrayim \add !(Egypt)\add* with a mighty hand¦46701, with signs¦46705, with wonders¦46708, with great¦46712 power¦46711, and¦46713 with a high arm¦46715, and¦46717 have gotten yourself¦46719 a name¦46720, as at this¦46722 day¦46723:
+\v 12 Oh master our god¦46730, we've sinned. We've been ungodly. We've done wrong in all¦46733 your ordinances.
+\v 13 Let your anger¦46739 turn from¦46741 us, for we're¦46742 but a few¦46745 left among¦46746 the¦46747 heathen where you've scattered us.
+\v 14 Hear our prayer¦46756, Oh master, and¦46758 our petition¦46760, and¦46762 deliver us for¦46765 your own sake. Give¦46768 us favour in the sight of¦46770 those who've¦46773 led us away captive,
+\v 15 that¦46776 all¦46778 the¦46779 earth¦46780 may know¦46777 that¦46781 you're¦46782 the¦46784 master our god¦46785, because¦46787 Yisrael and¦46794 his posterity is called¦46791 by your¦46798 name.
+\v 16 Oh master, look down from¦46801 your holy¦46805 house¦46803 and consider us. Incline your ear¦46815, Oh master, and¦46817 hear.
+\v 17 Open¦46819 your eyes¦46820, and¦46822 see¦46823; for the dead that¦46824 are in¦46828 Haidais, whose breath¦46834 is taken from¦46836 their bodies, will give¦46840 to the master neither glory¦46841 nor righteousness¦46843;
+\v 18 but¦46846 the¦46847 soul¦46848 who's greatly vexed, who goes stooping and¦46857 feeble, and¦46859 the¦46860 eyes¦46861 that¦46862 fail, and¦46864 the¦46865 hungry soul¦46866, will declare your glory¦46871 and¦46872 righteousness¦46873, Oh master.
 \p
-\v 19 Because we do not present our supplication before you, Oh master our god, for the righteousness of our fathers and of our kings.
-\v 20 Because you have sent your wrath and your indignation onto us, as you have spoken by your servants the prophets, saying,
-\v 21 “The master says, ‘Bow your shoulders to serve the king of Bavel \add !(Babylon)\add*, and remain in the land that I gave to your fathers.
-\v 22 But if you won't hear the voice of the master to serve the king of Bavel,
-\v 23 I will cause to cease out of the cities of Yehudah \add !(Judah)\add* and from the region near Yerushalem \add !(Jerusalem)\add* the voice of mirth, the voice of gladness, voice of the bridegroom, and the voice of the bride. The whole land will be desolate without inhabitant.’ ”
-\v 24 But we wouldn't listen to your voice, to serve the king of Bavel. Therefore you have made good your words that you spoke by your servants the prophets, that the bones of our kings and the bones of our fathers would be taken out of their places.
-\v 25 Listen, they are thrown out to the heat by day and to the frost by night. They died in great miseries by famine, by sword, and by\f + \fr 2:25 \ft See Yirmeyah/Jeremiah 32:36.\f* pestilence.
-\v 26 You have made the house that's called by your name as it is today because of the wickedness of the house of Yisrael \add !(Israel)\add* and the house of Yehudah.
+\v 19 Because¦46875 we don't¦46879 present our supplication before you¦46893, Oh master our god¦46896, for the¦46880 righteousness of our fathers¦46881 and¦46883 of our kings¦46885.
+\v 20 Because¦46898 you've¦46902 sent your anger and¦46903 your indignation onto us, as¦46909 you've¦46915 spoken by your servants the¦46916 prophets¦46917, saying,
+\v 21 “The master says¦46919, ‘Bow your shoulders to serve the¦46927 king¦46928 of Bavel \add !(Babylon)\add*, and¦46930 remain in the¦46933 land¦46934 that¦46935 I gave¦46936 to¦46936 your fathers¦46938.
+\v 22 But¦46940 if¦46941 you won't¦46942 hear¦46943 the¦46944 master's voice¦46945 to serve the¦46948 king¦46949 of Bavel,
+\v 23 I'll cause¦46952 to¦46952 cease out¦46953 of the cities¦46954 of Yehudah \add !(Judah)\add* and¦46956 from the region near Yerushalem \add !(Jerusalem)\add* the voice¦46959 of mirth¦46960, the voice¦46962 of gladness, voice¦46964 of the bridegroom¦46965, and¦46966 the voice¦46967 of the bride¦46968. The¦46972 whole¦46971 land¦46973 will be desolate without inhabitant.’ ”
+\v 24 But¦46978 we wouldn't listen¦46980 to¦46980 your voice¦46982, to serve the¦46985 king¦46986 of Bavel. Therefore you've¦46992 made good your words¦46991 that you¦46999 spoke by your servants the¦47000 prophets¦47001, that the bones of our kings¦47006 and¦47008 the bones of our fathers¦47012 would be taken out¦47014 of¦47015 their places¦47016.
+\v 25 Listen, they're¦47020 thrown out to¦47020 the heat by day¦47025 and¦47026 to the frost by night¦47030. They died in great miseries by famine, by sword¦47040, and¦47041 by\f + \fr 2:25 \ft See Yirmeyah/Jeremiah 32:36.\f* pestilence.
+\v 26 You've made the¦47046 house¦47047 that's¦47048 called¦47049 by your name as it's today because¦47059 of¦47059 the wickedness¦47060 of the house¦47061 of Yisrael \add !(Israel)\add* and¦47063 the house¦47064 of Yehudah.
+\s1 God's promise to bring his people home
 \p
-\v 27 Yet, Oh master our god, you have dealt with us after all your kindness and according to all your great mercy,
-\v 28 as you spoke by your servant Mosheh \add !(Moses)\add* in the day when you commanded him to write your law in the presence of the children of Yisrael, saying,
-\v 29 “If you won't hear my voice, surely this very great multitude will be turned into a small number amongst the nations where I will scatter them.
-\v 30 Because I know that they won't listen to me, because they're a stiff-necked people; but in the land of their captivity they will take it to heart,
-\v 31 and will know that I am the master their god. I will give them a heart and ears to hear.
-\v 32 Then they will praise me in the land of their captivity, and think about my name,
-\v 33 and will return from their stiff neck and from their wicked actions; because they will remember the way of their fathers who sinned before the master.
-\v 34 I will bring them again into the land which I promised to their fathers, to Avraham, to Yitshak \add !(Isaac)\add*, and to Ya’akov \add !(Jacob)\add*, and they will rule over it. I will increase them, and they won't be diminished.
-\v 35 And I will make an everlasting covenant with them to be their god, and they will be my people. I will no more remove my people Yisrael out of the land that I have given them.”
+\v 27 Yet, Oh master our god¦47072, you have dealt with us after all your kindness and¦47078 according¦47079 to¦47079 all¦47080 your great¦47084 mercy,
+\v 28 as¦47085 you¦47090 spoke¦47104 by your servant Mosheh \add !(Moses)\add* in¦47092 the day¦47093 when you¦47095 commanded him to¦47097 write¦47097 your law¦47099 in¦47101 the presence¦47101 of¦47101 the children¦47089 of Yisrael, saying,
+\v 29 “If¦47105 you won't¦47106 hear¦47107 my voice¦47109, surely¦47111 this very¦47118 great¦47116 multitude will be turned¦47120 into a small¦47122 number among¦47123 the¦47124 nations¦47125 where I'll scatter them.
+\v 30 Because¦47130 I know¦47131 that¦47132 they won't¦47134 listen¦47135 to¦47135 me, because¦47137 they're a¦47138 stiff-necked¦47139 people; but¦47141 in¦47146 the land¦47147 of their captivity they'll take it¦47149 to¦47143 heart¦47144,
+\v 31 and¦47150 will know¦47151 that¦47152 I'm¦47153 the¦47155 master their god¦47156. I'll give¦47159 them a heart¦47161 and¦47162 ears¦47163 to¦47164 hear¦47164.
+\v 32 Then¦47165 they'll praise me in¦47168 the land¦47169 of¦47174 their captivity, and¦47172 think about my name¦47175,
+\v 33 and¦47177 will return¦47178 from¦47179 their stiff neck and¦47185 from¦47186 their wicked¦47187 actions; because¦47190 they'll remember the¦47192 way of their fathers¦47194 who¦47196 sinned before¦47198 the master.
+\v 34 I'll bring them again into the¦47204 land¦47205 which¦47206 I promised to¦47207 their fathers¦47209, to Avraham, to Yitshak \add !(Isaac)\add*, and to Ya'akov \add !(Jacob)\add*, and they'll rule over it. I'll increase them, and they won't¦47227 be diminished.
+\v 35 And¦47229 I'll make an eternal¦47233 covenant¦47232 with them to¦47235 be¦47235 their god¦47239, and¦47240 they'll be¦47242 my people¦47245. I'll no¦47247 more remove my people¦47251 Yisrael out of the¦47255 land¦47256 that¦47257 I've given¦47258 them.”
 \c 3
 \p
-\v 1 Oh master Almighty, you God of Yisrael, the soul in anguish and the troubled spirit cries to you.
-\v 2 Hear, Oh master, and have mercy; for you are a merciful God. Yes, have mercy upon us, because we have sinned before you.
-\v 3 Because you are enthroned forever, and we keep perishing.
-\v 4 Oh master Almighty, you God of Yisrael, hear now the prayer of the dead Israelis, and of the children of those who were sinners before you, who didn't listen to the voice of you their god; because of this, these \add ≈deadly diseases\add* cling to us.
-\v 5 Don't remember the iniquities of our fathers, but remember your power and your name at this time.
-\v 6 Because you are the master our god, and we will praise you, Oh master.
-\v 7 Because this cause, you have put your fear in our hearts, to the intent that we should call upon your name. We will praise you in our captivity, for we have called to mind all the iniquity of our fathers who sinned before you.
-\v 8 Listen, we are yet this day in our captivity where you have scattered us, for a reproach and a curse, and to be subject to penalty according to all the iniquities of our fathers who departed from the master our god.
+\v 1 Oh master Almighty¦47261, you God¦47263 of Yisrael, the soul¦47265 in¦47266 anguish and¦47268 the troubled spirit¦47269 cries¦47271 to¦47272 you¦47273.
+\v 2 Hear, Oh master, and¦47276 have mercy; for you're a merciful God. Yes, have mercy on us, because¦47278 we've sinned before you¦47281.
+\v 3 Because¦47282 you're¦47283 enthroned forever, and¦47287 we¦47288 keep perishing.
+\v 4 Oh master Almighty¦47293, you God¦47295 of Yisrael, hear¦47312 now the¦47299 prayer¦47300 of the¦47301 dead Israelis, and¦47304 of the¦47306 children¦47305 of¦47308 those who were sinners before you¦47309, who¦47310 didn't listen to the¦47313 voice¦47314 of you¦47315 their god¦47316; because of this, these \add ≈deadly diseases\add* cling to us.
+\v 5 Don't¦47323 remember¦47324 the iniquities of our fathers¦47326, but¦47328 remember¦47329 your power and¦47332 your name¦47333 at this¦47336 time¦47337.
+\v 6 Because¦47339 you're¦47340 the¦47342 master our god¦47343, and¦47345 we'll¦47344 praise you¦47347, Oh master.
+\v 7 Because¦47350 this cause, you've put your fear¦47354 in our hearts, to¦47356 the intent that we¦47358 should call¦47360 on¦47360 your name¦47362. We'll praise you in¦47367 our captivity, for we've¦47370 called to mind¦47374 all¦47376 the¦47380 iniquity of¦47382 our fathers¦47378 who sinned before you¦47383.
+\v 8 Listen, we're¦47385 yet this day in¦47387 our captivity where you've scattered us, for a reproach¦47396 and¦47397 a curse, and¦47400 to be subject to penalty according¦47403 to¦47403 all¦47404 the¦47405 iniquities of our fathers¦47407 who¦47409 departed from¦47411 the master our god¦47413.
+\s1 Finding the way to wisdom
 \p
-\v 9 Hear, Oh Yisrael, the commandments of life! Give ear to understand wisdom!
-\v 10 How is it, Oh Yisrael, that you are in your enemies’ land, that you have become old in a strange country, that you are defiled with the dead,
-\v 11 that you are counted with those who are in Haidais?
-\v 12 You have forsaken the fountain of wisdom.
-\v 13 If you had walked in the way of God, you would have dwelled in peace forever.
-\v 14 Learn where there is wisdom, where there is strength, and where there is understanding, that you may also know where there is length of days and life, where there is the light of the eyes and peace.
-\v 15 Who has found out her place? Who has come into her treasuries?
-\v 16 Where are the princes of the heathen, and those who ruled the \add wild\add* animals that are on the earth,
-\v 17 those who had their pastime with the fowls of the air, and those who hoarded up silver and gold, in which people trust, and of their getting there is no end?
-\v 18 Because those who diligently sought silver, and were so anxious, and whose works are past finding out,
-\v 19 they have vanished and gone down to Haidais, and others have come up in their place.
+\v 9 Hear¦47415, Oh Yisrael, the commandments¦47417 of life¦47418! Give ear to understand¦47420 wisdom!
+\v 10 How is it, Oh Yisrael, that you're in your enemies’ land, that you've become old in a strange country, that you're defiled with the dead,
+\v 11 that you're counted with those who are in Haidais?
+\v 12 You've forsaken the fountain of wisdom¦47448.
+\v 13 If you'd walked in the¦47449 way of¦47451 God¦47452, you'd have dwelled in¦47457 peace¦47458 forever.
+\v 14 Learn where¦47462 there's¦47463 wisdom¦47464, where¦47465 there's¦47466 strength¦47467, and where¦47468 there's¦47469 understanding¦47470, that you may also know¦47472 where¦47474 there's¦47475 length of days and¦47477 life¦47478, where¦47479 there's¦47480 the light¦47481 of the eyes¦47482 and¦47483 peace¦47484.
+\v 15 Who's found¦47486 out her place¦47488? Who's¦47494 come into her treasuries¦47495?
+\v 16 Where¦47497 are¦47498 the¦47499 princes of the¦47501 heathen, and¦47503 those who¦47504 ruled the¦47506 \add wild\add* animals¦47507 that¦47508 are on¦47509 the¦47510 earth¦47511,
+\v 17 those who¦47512 had their pastime with the¦47514 fowls of¦47516 the¦47516 air, and¦47519 those who¦47520 hoarded up silver and¦47523 gold¦47525, in which¦47526 people trust, and¦47529 of their getting there's no¦47530 end?
+\v 18 Because¦47536 those who diligently sought silver, and¦47541 were so anxious, and¦47543 whose works¦47548 are¦47545 past finding¦47546 out¦47546,
+\v 19 they've vanished and¦47551 gone down¦47554 to Haidais, and others have come¦47554 up in their place.
 \p
-\v 20 Younger men have seen the light and lived upon the earth, but they haven't known the way of knowledge,
-\v 21 nor understood its paths. Their children haven't embraced it. They are far off from their way.
-\v 22 It has not been heard of in Kena’an \add !(Canaan)\add*, neither has it been seen in Teyman.
-\v 23 The sons also of Hagar who seek understanding, which are in the land, the merchants of Merran and Teyman, and the authors of fables, and the searchers out of understanding—none of these have known the way of wisdom or remembered her paths.
+\v 20 Younger men have seen the light¦47562 and¦47563 lived on¦47565 the¦47566 earth¦47567, but¦47569 they haven't known¦47572 the way of knowledge,
+\v 21 nor understood¦47574 its paths¦47575. Their children¦47581 haven't embraced it. They're far¦47587 off from their way.
+\v 22 It hasn't¦47589 been heard¦47590 of in¦47591 Kena'an \add !(Canaan)\add*, neither has it been seen¦47594 in¦47595 Teyman.
+\v 23 The¦47600 sons¦47598 also of Hagar who¦47602 seek understanding¦47603, which are in the land¦47607, the¦47608 merchants¦47609 of Merran and¦47612 Teyman, and¦47614 the¦47615 authors of fables, and¦47617 the searchers out of understanding¦47621—none of these have known¦47626 the way of wisdom¦47624 or remembered¦47628 her paths¦47630.
 \p
-\v 24 Oh Yisrael \add !(Israel)\add*, how great is the house of God! How large is the place of his possession!
-\v 25 It is great and has no end. It is high and unmeasurable.
-\v 26 Giants were born that were famous of old, great of stature, and expert in war.
-\v 27 God didn't choose these, nor did he give the way of knowledge to them,
-\v 28 so they perished, because they had no wisdom. They perished through their own foolishness.
-\v 29 Who has gone up into heaven, taken her, and brought her down from the clouds?
-\v 30 Who has gone over the sea, found her, and will bring her for choice gold?
-\v 31 There is no one who knows her way, nor any who comprehend her path.
-\v 32 But he that knows all things knows her, he found her out with his understanding. He who prepared the earth for all time has filled it with four-footed animals.
-\v 33 It is he who sends forth the light, and it goes. He called it, and it obeyed him with fear.
-\v 34 The stars shone in their watches, and were glad. When he called them, they said, “Here we are.” They shone with gladness to him who made them.
-\v 35 This is our god. No other can be compared to him.
-\v 36 He has found out all the way of knowledge, and has given it to Ya’akov \add !(Jacob)\add* his servant and to Yisrael \add !(Israel)\add* who is loved by him.
-\v 37 Afterward she appeared upon earth, and lived with men.
+\v 24 Oh¦47632 Yisrael \add !(Israel)\add*, how¦47634 great¦47635 is God's¦47639 house¦47637! How large is the¦47642 place¦47643 of his possession!
+\v 25 It's great¦47647 and¦47648 has no¦47649 end. It's high¦47652 and¦47653 unmeasurable.
+\v 26 Giants were born that were¦47663 famous of old, great of stature, and expert in war¦47666.
+\v 27 God¦47671 didn't¦47672 choose these, nor did he¦47668 give¦47675 the¦47670 way of knowledge to¦47675 them,
+\v 28 so¦47677 they perished, because they had¦47682 no wisdom. They perished through¦47685 their own foolishness.
+\v 29 Who's¦47692 gone up into heaven¦47693, taken¦47695 her, and¦47697 brought her down from¦47700 the¦47701 clouds¦47702?
+\v 30 Who's gone over the¦47706 sea¦47707, found¦47709 her, and¦47711 will bring¦47712 her for choice gold¦47714?
+\v 31 There's no¦47716 one who¦47718 knows¦47719 her way, nor any who¦47720 comprehend her path¦47721.
+\v 32 But¦47729 he that knows all¦47733 things knows¦47734 her, he found her out with his understanding¦47739. He¦47740 who¦47741 prepared¦47742 the¦47743 earth¦47744 for all time¦47748 has filled¦47749 it¦47750 with four-footed¦47752 animals¦47751.
+\v 33 It's he who¦47753 sends forth the¦47755 light¦47756, and¦47757 it goes. He called¦47759 it¦47760, and¦47761 it¦47763 obeyed¦47762 him with fear.
+\v 34 The¦47765 stars¦47767 shone in¦47769 their watches¦47771, and¦47773 were glad. When he¦47776 called¦47775 them, they said¦47778, “Here we are.” They shone with¦47781 gladness¦47782 to him who made¦47784 them.
+\v 35 This is our god¦47788. No¦47790 other¦47792 can be compared to¦47793 him.
+\v 36 He's found out all¦47796 the way of knowledge, and¦47799 has given¦47800 it to Ya'akov \add !(Jacob)\add* his servant and¦47806 to Yisrael \add !(Israel)\add* who's loved¦47809 by¦47810 him.
+\v 37 Afterward she¦47813 appeared on¦47814 earth¦47816, and¦47818 lived with men.
 \c 4
 \p
-\v 1 This is the book of God's commandments and the law that endures forever. All those who hold it fast will live, but those who leave it will die.
-\v 2 Turn, Oh Ya’akov, and take hold of it. Walk towards the shining of its light.
-\v 3 Don't give your glory to another, nor the things that are to your advantage to a foreign nation.
-\v 4 Oh Yisrael, we are happy; for the things that are pleasing to God are made known to us.
+\v 1 This¦47823 is the¦47824 book¦47825 of¦47828 God's¦47829 commandments and¦47830 the¦47831 law¦47832 that endures forever. All¦47838 those who¦47839 hold it¦47841 fast will live¦47843, but those who leave¦47846 it'll¦47847 die.
+\v 2 Turn, Oh Ya'akov, and¦47851 take hold of it¦47853. Walk towards the¦47856 shining of¦47859 its light¦47860.
+\v 3 Don't¦47862 give¦47863 your glory¦47866 to another¦47873, nor the¦47869 things that are to your advantage to a foreign nation¦47872.
+\v 4 Oh Yisrael, we're¦47875 happy¦47874; for the things that¦47877 are pleasing¦47879 to God¦47881 are¦47884 made known to us.
+\s1 Yerushalem mourns for her children
 \p
-\v 5 Be of good cheer, my people, the memorial of Yisrael.
-\v 6 You were not sold to the nations for destruction, but because you moved God to wrath, you were delivered to your adversaries.
-\v 7 Because you provoked him who made you by sacrificing to demons and not to God.
-\v 8 You forgot the everlasting God who brought you up. You also grieved Yerushalem \add !(Jerusalem)\add*, who nursed you.
-\v 9 Because she saw the wrath that came upon you from God, and said, “Listen, you who dwell near Tsiyon \add !(Zion)\add*; for God has brought upon me great mourning.
-\v 10 Because I have seen the captivity of my sons and daughters, which the Everlasting has brought upon them.
-\v 11 Because with joy I nourished them, but sent them away with weeping and mourning.
-\v 12 Let no man rejoice over me, a widow and forsaken by many. Because the sins of my children, I am left desolate, because they turned away from the law of God
-\v 13 and had no regard for his statutes. They didn't walk in the ways of God's commandments or tread in the paths of discipline in his righteousness.
-\v 14 Let those who dwell near Tsiyon come and remember the captivity of my sons and daughters, which the Everlasting has brought upon them.
-\v 15 Because he has brought a nation upon them from afar, a shameless nation with a strange language, who didn't respect old men or pity children.
-\v 16 They have carried away the dear beloved sons of the widow, and left her who was alone desolate of her daughters.”
+\v 5 Be of good cheer, my people¦47886, the memorial¦47888 of Yisrael.
+\v 6 You weren't sold to the¦47891 nations¦47892 for destruction¦47895, but because¦47896 you¦47899 moved God¦47901 to¦47902 anger, you were delivered¦47902 to your adversaries.
+\v 7 Because¦47906 you provoked him who¦47907 made you¦47909 by sacrificing to demons¦47911 and¦47912 not to God¦47914.
+\v 8 You forgot the eternal¦47920 God¦47919 who brought you up. You also grieved Yerushalem \add !(Jerusalem)\add*, who¦47924 nursed you.
+\v 9 Because she saw the¦47930 anger¦47933 that came on you from¦47934 God¦47936, and¦47937 said¦47938, “Listen¦47939, you who live near Tsiyon \add !(Zion)\add*; for God¦47946 has brought on me great¦47948 mourning.
+\v 10 Because¦47950 I've seen the¦47951 captivity¦47952 of my sons¦47954 and¦47956 daughters¦47958, which¦47959 the¦47962 Eternal¦47963 has brought on them.
+\v 11 Because¦47965 with¦47967 joy¦47968 I nourished them, but¦47970 sent them away with¦47971 weeping and¦47973 mourning.
+\v 12 Let no man rejoice over me, a widow¦47979 and¦47980 forsaken by¦47982 many. Because¦47985 the¦47986 sins¦47987 of my children¦47989, I'm¦47990 left desolate, because¦47991 they turned¦47992 away from God's¦47995 law¦47994
+\v 13 and¦47996 had no¦47999 regard for his statutes. They didn't¦48001 walk in the ways of God's¦48005 commandments¦48004 or tread in the paths¦48007 of discipline¦48008 in¦48009 his righteousness¦48010.
+\v 14 Let those who¦48014 live near Tsiyon come and¦48017 remember¦48018 the¦48019 captivity¦48020 of my sons¦48022 and¦48024 daughters¦48025, which¦48026 the¦48029 Eternal¦48030 has brought on them.
+\v 15 Because¦48032 he's¦48034 brought a nation¦48035 on¦48033 them from¦48036 afar¦48036, a shameless nation¦48037 with a strange language, who didn't¦48045 respect old men or pity children¦48046.
+\v 16 They've carried away¦48049 the¦48050 dear beloved sons of the¦48052 widow¦48053, and¦48054 left her who was alone¦48059 desolate of her daughters¦48057.”
 \p
 \v 17 But I—how can I help you?
-\v 18 Because he who brought these calamities upon you will deliver you from the hand of your enemies.
-\v 19 Go your way, Oh my children. Go your way, for I am left desolate.
-\v 20 I have put off the garment of peace, and put on the sackcloth of my petition. I will cry to the Everlasting as long as I live.
+\v 18 Because he who brought these calamities on you'll deliver you from your enemies' hand.
+\v 19 Go your way, Oh my children¦48079. Go your way, for¦48082 I'm¦48081 left desolate.
+\v 20 I've put off the garment of peace¦48089, and¦48091 put on the¦48093 sackcloth of my petition¦48094. I'll¦48095 cry to¦48097 the¦48098 Eternal¦48099 as long as I¦48103 live.
+\s1 God will bring the exiles back
 \p
-\v 21 Take courage, my children. Cry to God, and he will deliver you from the power and hand of the enemies.
-\v 22 Because I have trusted in the Everlasting, that he will save you; and joy has come to me from the Holy One, because of the mercy that will soon come to you from your Everlasting Saviour.
-\v 23 Because I sent you out with mourning and weeping, but God will give you to me again with joy and gladness forever.
-\v 24 Because as now those who dwell near Tsiyon \add !(Zion)\add* have seen your captivity, so they will shortly see your salvation from our god which will come upon you with great glory and brightness of the Everlasting.
-\v 25 My children, suffer patiently the wrath that has come upon you from God, for your enemy has persecuted you; but shortly you will see his destruction and will tread upon their necks.
-\v 26 My delicate ones have travelled rough roads. They were taken away like a flock carried off by enemies.
+\v 21 Take courage, my children¦48105. Cry to¦48107 God¦48109, and¦48110 he'll deliver you¦48112 from the power and hand¦48116 of the enemies¦48117.
+\v 22 Because I've¦48118 trusted in the¦48122 Eternal, that¦48124 he'll save you¦48126; and¦48127 joy¦48130 has come to me from¦48131 the¦48132 Holy¦48133 One, because of the¦48135 mercy that'll¦48137 soon come to you¦48139 from¦48142 your Eternal¦48144 Saviour¦48145.
+\v 23 Because¦48148 I¦48156 sent you¦48149 out with¦48150 mourning and¦48152 weeping, but¦48155 God¦48158 will give¦48154 you¦48159 to me again with¦48160 joy¦48163 and¦48162 gladness forever.
+\v 24 Because as¦48167 now¦48169 those who live near Tsiyon \add !(Zion)\add* have seen your¦48175 captivity¦48176, so they'll shortly see¦48178 your salvation¦48186 from¦48182 our god¦48184 which¦48187 will come on you¦48189 with¦48190 great¦48192 glory¦48191 and¦48193 brightness of¦48195 the¦48195 Eternal¦48196.
+\v 25 My children¦48197, suffer patiently¦48198 the¦48199 anger¦48205 that's come on you from¦48200 God¦48202, for your enemy¦48209 has persecuted you¦48204; but shortly you'll¦48207 see¦48211 his destruction¦48214 and¦48217 will tread on¦48218 their necks.
+\v 26 My delicate ones have travelled¦48225 rough roads¦48226. They were taken away like a flock¦48230 carried off by¦48232 enemies¦48233.
 \p
-\v 27 Take courage, my children, and cry to God; for you will be remembered by him who has brought this upon you.
-\v 28 Because as it was your decision to go astray from God, return and seek him ten times more.
-\v 29 Because he who brought these calamities upon you will bring you everlasting joy again with your salvation.
-\v 30 Take courage, Oh Yerushalem, for he who called you by name will comfort you.
-\v 31 Miserable are those who afflicted you and rejoiced at your fall.
-\v 32 Miserable are the cities which your children served. Miserable is she who received your sons.
-\v 33 Because as she rejoiced at your fall and was glad of your ruin, so she will be grieved at her own desolation.
-\v 34 And I will take away her pride in her great multitude and her boasting will be turned into mourning.
-\v 35 Because fire will come upon her from the Everlasting for many days; and she will be inhabited by demons for a long time.
+\v 27 Take courage, my children¦48235, and¦48236 cry to¦48238 God¦48240; for¦48242 you'll¦48243 be¦48241 remembered¦48247 by¦48244 him who's brought this on you.
+\v 28 Because as¦48248 it was¦48250 your decision to¦48250 go astray from¦48257 God¦48259, return and seek¦48262 him ten times more.
+\v 29 Because he who¦48264 brought these calamities on you'll¦48267 bring you¦48271 eternal¦48273 joy again with¦48275 your salvation¦48277.
+\v 30 Take¦48279 courage¦48279, Oh Yerushalem, for he who¦48283 called you by name will comfort you.
+\v 31 Miserable are those who¦48287 afflicted you¦48288 and¦48290 rejoiced at your¦48293 fall.
+\v 32 Miserable are the¦48296 cities¦48297 which¦48298 your children¦48301 served. Miserable is she who¦48304 received¦48305 your sons¦48307.
+\v 33 Because as¦48309 she rejoiced¦48311 at your¦48314 fall and¦48316 was glad of your¦48326 ruin, so she'll be grieved at her own desolation.
+\v 34 And¦48328 I'll take away her pride in her great multitude and¦48335 her boasting will be turned into mourning.
+\v 35 Because fire¦48341 will come on her from¦48345 the¦48346 Eternal¦48347 for many days¦48349; and¦48351 she'll be inhabited by¦48353 demons¦48354 for a long time¦48357.
+\s1 Yerushalem's sorrow will turn to joy
 \p
-\v 36 Oh Yerushalem \add !(Jerusalem)\add*, look around you towards the east, and behold the joy that comes to you from God.
-\v 37 Listen, your sons come, whom you sent away. They come gathered together from the east to the west at the word of the Holy One, rejoicing in the glory of God.
+\v 36 Oh Yerushalem \add !(Jerusalem)\add*, look around you towards the east, and¦48362 see¦48363 the¦48366 joy that comes¦48371 to you from¦48367 God¦48369.
+\v 37 Listen, your sons¦48375 come¦48373, whom¦48374 you¦48376 sent away¦48381. They come gathered together from¦48381 the east¦48382 to the west¦48384 at the¦48385 word of¦48387 the¦48387 Holy¦48388 One, rejoicing¦48389 in God's¦48392 glory¦48393.
 \c 5
 \p
-\v 1 Take off the garment of your mourning and affliction, Oh Yerushalem, and put on forever the beauty of the glory from God.
-\v 2 Put on the robe of the righteousness from God. Set on your head a diadem of the glory of the Everlasting.
-\v 3 Because God will show your splendour everywhere under heaven.
-\v 4 Because your name will be called by God forever “Righteous Peace, Godly Glory”.
+\v 1 Take off the¦48396 garment of¦48398 your mourning and¦48400 affliction, Oh Yerushalem, and¦48404 put on forever the beauty of¦48410 the¦48410 glory¦48412 from God¦48411.
+\v 2 Put on the robe of¦48421 the¦48421 righteousness¦48423 from God¦48422. Set on¦48427 your head¦48429 a diadem of the¦48431 glory¦48432 of¦48433 the¦48433 Eternal¦48434.
+\v 3 Because¦48436 God¦48437 will show¦48438 your splendour everywhere¦48442 under¦48440 heaven¦48441.
+\v 4 Because¦48447 your name¦48450 will be called¦48446 by God¦48453 forever “Righteous¦48458 Peace¦48457, Godly Glory¦48460”.
 \p
-\v 5 Arise, Oh Yerushalem, and stand upon the height. Look around you towards the east and see your children gathered from the going down of the sun to its rising at the word of the Holy One, rejoicing that God has remembered them.
-\v 6 Because they went from you on foot, being led away by their enemies, but God brings them in to you carried on high with glory, on a royal throne.
-\v 7 Because God has appointed that every high mountain and the everlasting hills should be made low, and the valleys filled up to make the ground level, that Yisrael \add !(Israel)\add* may go safely in the glory of God.
-\v 8 Moreover the woods and every sweet smelling tree have shaded Yisrael by the commandment of God.
-\v 9 Because God will lead Yisrael with joy in the light of his glory with the mercy and righteousness that come from him.
+\v 5 Arise¦48462, Oh Yerushalem, and¦48464 stand¦48465 on¦48466 the¦48467 height. Look¦48474 around you¦48478 towards the¦48476 east¦48483 and see your children¦48477 gathered from¦48479 the¦48484 going down of¦48486 the¦48486 sun¦48480 to its rising at the¦48489 word of¦48490 the¦48490 Holy¦48487 One, rejoicing that God¦48491 has remembered¦48492 them.
+\v 6 Because they went¦48493 from¦48495 you¦48496 on foot, being led away by¦48499 their enemies¦48500, but¦48502 God¦48505 brings them in to¦48506 you¦48507 carried on high with¦48509 glory¦48510, on a royal throne¦48512.
+\v 7 Because¦48515 God¦48517 has appointed that every¦48519 high¦48521 mountain¦48520 and¦48522 the eternal hills should be made low, and¦48525 the valleys filled up to make the ground¦48531 level, that Yisrael \add !(Israel)\add* may go safely in¦48532 God's¦48538 glory¦48539.
+\v 8 Moreover the¦48543 woods¦48547 and¦48545 every¦48546 sweet smelling tree have shaded Yisrael by God's¦48553 commandment.
+\v 9 Because¦48555 God¦48557 will lead Yisrael with¦48559 joy¦48560 in the¦48561 light¦48562 of his glory¦48564 with¦48566 the mercy and¦48568 righteousness¦48569 that¦48570 come from¦48571 him.
 \c 6
 \s1 The Letter of Yirmiyah (Yirmeyah/Jeremiah)
 \p
-\v 1 A copy of a letter that Yirmiyah \add !(Jeremiah)\add* sent to those who were to be led captives into Bavel \add !(Babylon)\add* by the king of the Babylonians, to give them the message that God commanded him.
+\v 1 A copy of a letter that Yirmiyah \add !(Jeremiah)\add* sent¦48576 to¦48578 those who¦48579 were to be led captives into Bavel \add !(Babylon)\add* by¦48584 the¦48585 king¦48586 of the¦48587 Babylonians, to¦48589 give them the message¦48589 that God¦48604 commanded him.
 \p
-\v 2 Because of the sins which you have committed before God, you will be led away captives to Bavel by Nevukadnetsar \add !(Nebuchadnezzar)\add* king of the Babylonians.
-\v 3 So when you come to Bavel, you will remain there many years, and for a long season, even for seven generations. After that, I will bring you out peacefully from there.
-\v 4 But now you will see in Bavel gods of silver, gold, wood carried on shoulders, which cause the nations to fear.
+\v 2 Because of the sins which you've committed before God, you'll be¦48618 led away captives to Bavel by Nevukadnetsar \add !(Nebuchadnezzar)\add* king of the Babylonians.
+\v 3 So when you come to¦48638 Bavel, you'll remain there many years, and for a long season, even for seven generations. After that¦48652, I'll bring you out peacefully from there.
+\v 4 But now you'll see in Bavel gods of silver, gold, wood carried on shoulders, which cause the nations to fear.
 \v 5 Beware therefore that you in no way become like these foreigners. Don't let fear take hold of you because of them when you see the multitude before them and behind them, worshipping them.
-\v 6 But say in your hearts, “O master, we must worship you.”
-\v 7 Because my angel is with you, and I myself care for your souls.
-\v 8 Because their tongue is polished by the workman, and they themselves are overlaid with gold and with silver; yet they are only fake, and can't speak.
+\v 6 But¦48693 say in your hearts, “O master, we¦48688 must worship you.”
+\v 7 Because my angel is with you, and I myself care for¦48699 your souls.
+\s1 Lifeless idols dressed like kings
+\p
+\v 8 Because their tongue is polished by the workman, and¦48717 they themselves are overlaid with gold¦48722 and with silver; yet they're only fake, and can't speak.
 \v 9 And taking gold, as if it were for a virgin who loves to be happy, they make crowns for the heads of their gods.
 \v 10 Sometimes also the priests take gold and silver from their gods, and spend it on themselves.
-\v 11 They will even give some of it to the common prostitutes. They dress them like men with garments, even the gods of silver, gods of gold, and gods of wood.
-\v 12 Yet these gods can't save themselves from rust and moths, even though they are covered with purple garments.
-\v 13 They wipe their faces because of the dust of the temple, which is thick upon them.
-\v 14 And he who can't put to death one who offends against him holds a sceptre, as though he were judge of a country.
+\v 11 They'll even give some of it to the common prostitutes. They dress them like men with clothes, even the gods of silver, gods of gold, and gods of wood.
+\v 12 Yet these gods can't save themselves from rust and¦48799 moths, even though they're covered with¦48812 purple clothes.
+\v 13 They wipe their faces because of the dust of the temple, which is thick on them.
+\v 14 And he who can't¦48833 put to¦48835 death one who offends against him holds a sceptre, as though he¦48836 were judge of a country.
 \v 15 He has also a dagger in his right hand, and an axe, but can't deliver himself from war and robbers.
-\v 16 By this they are known not to be gods. Therefore don't fear them.
-\v 17 Because like a vessel that a man uses is worth nothing when it is broken, even so it is with their gods. When they are set up in the temples, their eyes are full of dust through the feet of those who come in.
-\v 18 As the courtyards are secured on every side upon him who offends the king, as being committed to suffer death, even so the priests secure their temples with doors, with locks, and bars, lest they be carried off by robbers.
-\v 19 They light candles for them, yes, more than for themselves, even though they can't see one.
-\v 20 They are like one of the beams of the temple. Men say their hearts are eaten out when things creeping out of the earth devour both them and their clothing. They don't feel it
-\v 21 when their faces are blackened through the smoke that comes out of the temple.
-\v 22 Bats, swallows, and birds land on their bodies and heads. So do the cats.
-\v 23 By this you may know that they are no gods. Therefore don't fear them.
-\v 24 Notwithstanding the gold with which they are covered to make them beautiful, unless someone wipes off the tarnish, they won't shine; for they didn't even feel it when they were molten.
-\v 25 Things in which there is no breath are bought at any cost.
-\v 26 Having no feet, they are carried upon shoulders. By this, they declare to men that they are worth nothing.
-\v 27 Those who serve them are also ashamed, for if they fall to the ground at any time, they can't rise up again by themselves. If they are bowed down, they can't make themselves straight; but the offerings are set before them, as if they were dead men.
-\v 28 And the things that are sacrificed to them, their priests sell and spend. In like manner, their wives also lay up part of it in salt; but to the poor and to the impotent they give none of it.
-\v 29 The menstruous woman and the woman in childbed touch their sacrifices, knowing therefore by these things that they are no gods. Don't fear them.
+\v 16 By this they're known not to be gods. Therefore don't fear them.
+\v 17 Because like¦48866 a vessel that¦48890 a man¦48867 uses is¦48871 worth nothing when it's¦48880 broken, even so it's with their gods. When they're set up in the temples¦48879, their eyes are full of dust through¦48891 the feet of those who come in.
+\v 18 As the courtyards are secured on every side on him who offends the king, as being committed to¦48897 suffer death, even so the priests secure their temples with doors, with locks, and¦48898 bars, so that¦48902 robbers won't carry them off.
+\v 19 They light candles for them, yes, more than for themselves, even though they can't see one¦48907.
+\v 20 They're like one of¦48939 the¦48939 beams of¦48941 the¦48941 temple. Men say their hearts are eaten out when things creeping out of the¦48943 earth devour both them and their clothing. They don't feel it¦48937
+\v 21 when¦48949 their faces are blackened through the¦48951 smoke that¦48958 comes out of the¦48963 temple.
+\v 22 Bats, swallows, and birds land on their bodies and heads. So¦48972 do the cats.
+\v 23 By this you may know that they're no¦48988 gods. Therefore don't fear them.
+\v 24 Notwithstanding the gold with which¦49002 they're covered to make them beautiful, unless someone wipes off the tarnish, they won't shine; for they didn't even feel it when they were¦49004 molten.
+\v 25 Things in which there's no breath are bought at any cost.
+\v 26 Having no feet, they're carried on shoulders. By this, they declare to men that they're worth nothing.
+\v 27 Those who serve them are also ashamed, for if they fall to the ground at any time, they can't rise up again by themselves. If they're bowed down, they can't make themselves straight; but the offerings are set before them, as if they were dead men.
+\v 28 And the things that are sacrificed to them, their priests sell and spend. In the same way, their wives also lay up part of it in salt; but to the poor and to the impotent they give none of it.
+\v 29 The menstruous woman¦49102 and the woman in childbed touch their sacrifices, knowing therefore by these things that¦49101 they're no gods¦49104. Don't fear them.
 \v 30 Because how can they be called gods? Because women set food before the gods of silver, gold, and wood.
-\v 31 And in their temples the priests sit on seats, having their clothes torn and their heads and beards shaven, and nothing on their heads.
-\v 32 They roar and cry before their gods, as men do at the feast when one is dead.
-\v 33 The priests also take off garments from them and clothe their wives and children with them.
-\v 34 Whether it is evil or good what one does to them, they are not able to repay it. They can't set up a king or put him down.
-\v 35 In like manner, they can neither give riches nor money. Though a man make a vow to them and doesn't keep it, they will never exact it.
-\v 36 They can save no man from death. They can't deliver the weak from the mighty.
-\v 37 They can't restore a blind man to his sight, or deliver anyone who is in distress.
+\v 31 And¦49135 in¦49137 their temples the¦49138 priests sit on seats, having their clothes torn and their heads and beards shaven, and nothing on their heads.
+\v 32 They roar and¦49157 cry before their gods, as men do at the¦49158 feast when one is dead.
+\v 33 The priests also take off clothes from them and clothe their wives and children with them.
+\v 34 Whether it's evil or good what one does to them, they aren't¦49183 able¦49184 to¦49185 repay it¦49189. They can't set up a¦49188 king or put him down.
+\v 35 In the same way, they can neither¦49202 give riches nor money. Though a¦49198 man¦49198 make a vow to them and doesn't keep it, they'll never exact it.
+\v 36 They can save no¦49212 man¦49217 from death. They can't¦49220 deliver the weak from the mighty.
+\v 37 They can't¦49224 restore a blind man to¦49229 his sight, or deliver anyone who's in distress.
 \v 38 They can show no mercy to the widow, or do good to the fatherless.
-\v 39 They are like the stones that are cut out of the mountain, these gods of wood that are overlaid with gold and with silver. Those who minister to them will be confounded.
+\v 39 They're like the stones that are cut out of the mountain, these gods of wood that are overlaid with gold and with silver. Those who minister to them will be confounded.
+\s1 Why idols aren't gods
 \p
-\v 40 How could a man then think or say that they are gods, when even the Kasdim \add !(Chaldeans)\add* themselves dishonour them?
-\v 41 If they shall see one mute who can't speak, they bring him and ask him to call upon Bel, as though he were able to understand.
+\v 40 How could a man then think or say that they're gods, when even the Kasdim \add !(Chaldeans)\add* themselves dishonour them?
+\v 41 If they see one mute who can't speak, they bring him and¦49283 ask him to call on Bel, as though he were¦49285 able¦49285 to¦49293 understand.
 \v 42 Yet they can't perceive this themselves, and forsake them; for they have no understanding.
-\v 43 The women also with cords around them sit in the ways, burning bran for incense; but if any of them, drawn by someone who passes by, lies with him, she reproaches her fellow, that she was not thought as worthy as herself and her cord wasn't broken.
-\v 44 Whatever is done amongst them is false. How could a man then think or say that they are gods?
-\v 45 They are fashioned by carpenters and goldsmiths. They can be nothing else than what the workmen make them to be.
-\v 46 And they themselves who fashioned them can never continue long. How then should the things that are fashioned by them?
-\v 47 Because they have left lies and reproaches to those who come after.
-\v 48 Because when there comes any war or \add ≈deadly disease\add* onto them, the priests consult with themselves, where they may be hidden with them.
-\v 49 How then can't men understand that they are no gods, which can't save themselves from war or from \add ≈deadly diseases\add*?
-\v 50 Because seeing they are only wood and overlaid with gold and silver, it will be known hereafter that they are false.
-\v 51 It will be manifest to all nations and kings that they are no gods, but the works of men's hands, and that there is no work of God in them.
-\v 52 Who then may not know that they are not gods?
+\v 43 The women also with cords around them sit in the ways, burning bran for incense; but if any of them, drawn by someone who passes by, lies with him, she reproaches her fellow, that she wasn't thought as worthy as herself and her cord wasn't broken.
+\v 44 Whatever is¦49332 done among¦49333 them is¦49335 false. How¦49337 could a man then¦49338 think or¦49340 say that¦49342 they're gods¦49343?
+\v 45 They're fashioned by¦49346 carpenters and¦49348 goldsmiths. They can be nothing else than¦49356 what the workmen make them to¦49362 be¦49362.
+\v 46 And¦49364 they themselves who¦49365 fashioned them can never continue long. How¦49372 then¦49373 should the¦49376 things that are fashioned by¦49377 them?
+\v 47 Because they've left¦49380 lies and¦49383 reproaches to those who¦49385 come after.
+\v 48 Because¦49388 when¦49393 there comes any war¦49392 or \add ≈deadly disease\add* onto them, the¦49398 priests¦49399 consult with themselves, where¦49400 they may be hidden with¦49402 them.
+\v 49 How¦49404 then¦49405 can't men understand that¦49409 they're no¦49410 gods¦49412, which¦49413 can't save themselves from¦49417 war or from¦49420 \add ≈deadly diseases\add*?
+\v 50 Because seeing they're¦49422 only wood¦49424 and overlaid with¦49430 gold and silver, it'll¦49431 be known¦49429 in the future that¦49432 they're false.
+\v 51 It'll be¦49433 manifest¦49441 to¦49442 all¦49437 nations¦49436 and¦49439 kings¦49440 that¦49443 they're no¦49444 gods¦49446, but¦49447 the works¦49448 of men's hands¦49449, and¦49451 that there's no work of God¦49453 in¦49455 them.
+\v 52 Who then¦49459 may not know that¦49462 they aren't¦49464 gods¦49465?
 \p
-\v 53 Because they can't set up a king in a land or give rain to men.
-\v 54 They can't judge their own cause, or redress a wrong, being unable; for they are like crows between heaven and earth.
-\v 55 Because even when fire falls upon the house of gods of wood overlaid with gold or with silver, their priests will flee away, and escape, but they themselves will be burnt apart like beams.
-\v 56 Moreover they can't withstand any king or enemies. How could a man then admit or think that they are gods?
+\v 53 Because¦49467 they can't¦49470 set up a king¦49466 in a¦49474 land or give¦49477 rain¦49473 to¦49477 men.
+\v 54 They can't judge¦49478 their own cause, or redress a wrong, being¦49489 unable; for¦49491 they're like crows between heaven¦49495 and¦49496 earth¦49498.
+\v 55 Because¦49500 even when¦49501 fire¦49511 falls¦49502 on the¦49507 house¦49504 of gods of wood overlaid with gold or¦49509 with silver, their priests will flee¦49515 away, and¦49516 escape, but¦49519 they themselves will be burnt apart like¦49520 beams.
+\v 56 Moreover they can't withstand any king or enemies. How could a man then admit or think that they're gods?
 \v 57 Those gods of wood overlaid with silver or with gold aren't able to escape from thieves or robbers.
-\v 58 The gold, silver, and garments with which they are clothed—those who are strong will take from them, and go away with them. They won't be able to help themselves.
-\v 59 Therefore it is better to be a king who shows his manhood, or else a vessel in a house profitable for whatever the owner needs, than such false gods—or even a door in a house, to keep the things safe that are in it, than such false gods; or better to be a pillar of wood in a palace than such false gods.
+\v 58 The¦49558 gold¦49559, silver, and clothes with which¦49554 they're clothed¦49565—those who¦49555 are¦49556 strong¦49556 will take from them, and go¦49569 away¦49569 with them. They won't be able to help themselves.
+\v 59 Therefore it's better to¦49578 be¦49578 a king¦49579 who¦49581 shows his manhood, or¦49584 else a vessel¦49585 in¦49586 a house¦49587 profitable¦49588 for whatever the¦49592 owner needs, than¦49594 such false¦49596 gods¦49597—or¦49598 even a door¦49600 in¦49601 a house¦49602, to keep the¦49604 things safe that are in¦49605 it¦49606, than¦49608 such false¦49610 gods¦49611; or better to be a pillar¦49614 of wood in¦49615 a palace¦49616 than¦49617 such false¦49619 gods¦49620.
 \p
-\v 60 Because sun, moon, and stars, being bright and sent to do their jobs, are obedient.
-\v 61 Likewise also the lightning when it flashes is beautiful to see. In the same way, the wind also blows in every country.
-\v 62 And when God commands the clouds to go over the whole world, they do as they are told.
-\v 63 And the fire sent from above to consume mountains and woods does as it is commanded; but these are to be compared to them neither in show nor power.
-\v 64 Therefore a man shouldn't think or say that they are gods, seeing they aren't able to judge causes or to do good to men.
-\v 65 Knowing therefore that they are no gods, don't fear them.
-\v 66 Because they can neither curse nor bless kings.
-\v 67 They can't show signs in the heavens amongst the nations, or shine as the sun, or give light as the moon.
-\v 68 The wild animals are better than they; for they can get under a covert, and help themselves.
-\v 69 In no way then is it manifest to us that they are gods. Therefore don't fear them.
-\v 70 Because as a scarecrow in a garden of cucumbers that keeps nothing, so are their gods of wood overlaid with gold and silver.
-\v 71 Likewise also their gods of wood overlaid with gold and with silver, are like a white thorn in an orchard that every bird sits upon. They are also like a dead body that is thrown out into the dark.
-\v 72 You will know them to be no gods by the bright purple that rots upon them. They themselves will be consumed afterwards, and will be a reproach in the country.
-\v 73 Better therefore is the just man who has no idols; for he will be far from reproach.
+\v 60 Because sun¦49621, moon¦49625, and¦49626 stars¦49627, being¦49628 bright¦49629 and¦49630 sent¦49631 to do their jobs, are¦49635 obedient.
+\v 61 Likewise¦49636 also¦49637 the lightning¦49638 when¦49639 it¦49645 flashes is¦49642 beautiful to¦49651 see. In the same way, the wind also blows¦49651 in¦49648 every¦49649 country¦49650.
+\v 62 And when God commands the clouds to go over the whole world, they do as they're told.
+\v 63 And the fire sent from above to consume mountains and woods does as it's commanded; but these are to be compared to them neither in show nor power.
+\v 64 Therefore a¦49709 man¦49709 shouldn't think or say that they're¦49696 gods¦49698, seeing they aren't able to¦49705 judge¦49705 causes or to¦49708 do¦49708 good to men.
+\v 65 Knowing¦49710 therefore¦49711 that¦49712 they're no¦49713 gods¦49715, don't¦49716 fear¦49717 them.
+\v 66 Because they can neither¦49719 curse nor bless kings¦49721.
+\v 67 They can't show signs¦49728 in the heavens¦49733 among the nations¦49731, or shine as the¦49739 sun¦49740, or give light as the¦49745 moon¦49746.
+\v 68 The¦49747 wild¦49748 animals¦49748 are better than they; for they can get under a covert, and help themselves.
+\v 69 In no way¦49762 then is¦49764 it manifest¦49765 to us that¦49766 they're¦49767 gods¦49768. Therefore don't¦49770 fear¦49771 them.
+\v 70 Because¦49774 as a scarecrow in¦49775 a garden of cucumbers that¦49781 keeps nothing, so are their gods¦49782 of wood overlaid with gold and silver.
+\v 71 Likewise¦49803 also their gods¦49812 of wood overlaid with gold and¦49793 with silver, are like a white thorn in¦49795 an orchard that¦49799 every¦49800 bird¦49801 sits on¦49798. They're also like a dead body that's thrown out into¦49808 the¦49811 dark¦49809.
+\v 72 You'll know them to be no¦49832 gods¦49834 by the¦49821 bright purple¦49822 that¦49831 rots on¦49827 them. They themselves will be¦49833 consumed afterwards, and will be¦49841 a reproach in¦49843 the¦49844 country¦49845.
+\v 73 Better therefore is the just¦49849 man¦49848 who has no¦49850 idols¦49852; for¦49854 he'll be far from¦49856 reproach.

@@ -1,26 +1,26 @@
-\id EPH - Open English Translation—Readers’ Version (OET-RV) v0.1.58
+\id EPH - Open English Translation—Readers’ Version (OET-RV) v0.2.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EPH
 \rem WORDTABLE OET-LV_NT_word_table.tsv
-\h Ephesians
-\toc1 Ephesians
-\toc2 Ephesians
+\h Efesos
+\toc1 Efesos
+\toc2 Efesos
 \toc3 Eph.
-\mt2 Paul’s letter to the believers in
-\mt1 Ephesus
+\mt2 Paulos’s letter to the believers in
+\mt1 Efesos
 \is1 Introduction
 \is2 The author
-\ip This \bk Letter to the believers in Ephesus\bk* was written by Paul from prison in Rome.
+\ip This \bk Letter to the believers in Efesos\bk* was written by Paulos from prison in Romai.
 \is2 This letter
-\ip This letter wasn’t just written for the assembly of believers there in Ephesus, but also for other assemblies of believers.
-\ip Paul’s main theme is about God’s plan that ‘at the right time he will gather everything, whether in heaven or here on earth, for the messiah’ (1:10).
-\ip In the first part of letter, he wrote about unity. Paul carefully explained about how God the father chooses his people, about forgiving and saving them from their sins through his son, Yeshua the messiah.
-\ip In the second part of letter, Paul urges the reader that the believers need to be united in the messiah by means of their unity with each other.
-\ip Paul uses many allegories about the unity of people with God via the messiah: the believers are the body of the messiah, he is the head; it’s like a house, with the messiah as the foundation stone; the believers are also like a bride with the messiah as the groom.
+\ip This letter wasn’t just written for the assembly of believers there in Efesos, but also for other assemblies of believers.
+\ip Paulos’s main theme is about God’s plan that ‘at the right time he will gather everything, whether in heaven or here on earth, for the messiah’ (1:10).
+\ip In the first part of letter, he wrote about unity. Paulos carefully explained about how God the father chooses his people, about forgiving and saving them from their sins through his son, Yeshua the messiah.
+\ip In the second part of letter, Paulos urges the reader that the believers need to be united in the messiah by means of their unity with each other.
+\ip Paulos uses many allegories about the unity of people with God via the messiah: the believers are the body of the messiah, he is the head; it’s like a house, with the messiah as the foundation stone; the believers are also like a bride with the messiah as the groom.
 \ip It’s also explained here about the correct behaviour for couples, of parents and children, and for slaves and masters. Then in concluding his letter, it’s explained about the armour that’s given to believers for them to use to stand against Satan’s attacks.
 \ip It should be noted here that this letter, like most of the scriptures, was dictated to a scribe (See 2 Thess 3:17), so it was an oral letter, quite different from our modern letters which we edit with word-processing software, adding a word back in a previous sentence, combining two short sentences, or breaking an over-long sentence. Oral letters tend to contain a lot of \it run-on sentences\it* where the thoughts keep flowing without a break, thus 1:3-14 is considered by most Greek experts to be one long sentence (like this one is 😀), however for us as readers, a sentence with some two hundred words is very difficult for us to absorb, hence this \em Readers’ Version\em* breaks that single Greek sentence into a number of smaller sentences, in fact, this kind of adjustment is regularly done throughout the Bible by all major English translations in order to make them easier for us to read, but the disadvantage is that we can sometimes lose whatever the connection was between the consecutive thoughts. The \em OET\em* tries to be more transparent about such adjustments by placing the \em Literal Version\em* right beside this text so that the serious student can compare the two.
-\iot Main components of Paul’s letter
+\iot Main components of Paulos’s letter
 \io1 Introduction \ior 1:1-2\ior*
 \io1 Spiritual blessings from the messiah \ior 1:3–3:21\ior*
 \io1 Proper behaviour for believers \ior 4:1–6:20\ior*
@@ -29,13 +29,13 @@
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \p
-\v 1 \add This letter is from\add* Paul, a missionary \nd of Yeshua the messiah\nd* by the will \nd of God\nd*.
-\p To the godly people \add there\add* in Ephesus\x + \xo 1:1: \xt Acts 18:19-21; 19:1.\x* who are faithful to \nd Yeshua the messiah\nd*.
+\v 1 \add This letter is from\add* Paulos, a missionary \nd of Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd* by the will \nd of God\nd*.
+\p To the godly people \add there\add* in Efesos\x + \xo 1:1: \xt Acts 18:19-21; 19:1.\x* who are faithful to \nd Yeshua the messiah\nd*.
 \p
 \v 2 May our father \nd God\nd* and \add our\add* \nd master Yeshua the messiah\nd* give grace and peace to you all.
 \s1 Spiritual blessings
 \p
-\v 3 We praise \nd God\nd*, the father of our \nd master Yeshua the messiah\nd*.\f + \fr 1:3 \ft Verses 3-14 seem to be just one long, rambling sentence in the Greek, and it’s not totally clear what each part means, or how they all connect logically together in sequence. We have split it into smaller sentence chunks to try to help our readers extract some meaning out of it.\f* He is the \nd one\nd* who’s blessed us with every spiritual blessing in heavenly places—blessings that come from \nd the messiah\nd*.
+\v 3 We praise \nd God\nd*, the father of our \nd master Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd*.\f + \fr 1:3 \ft Verses 3-14 seem to be just one long, rambling sentence in the Greek, and it’s not totally clear what each part means, or how they all connect logically together in sequence. We have split it into smaller sentence chunks to try to help our readers extract some meaning out of it.\f* He is the \nd one\nd* who’s blessed us with every spiritual blessing in heavenly places—blessings that come from \nd the messiah\nd*.
 \v 4 He chose us to follow him even before the creation of the world, so that we could become pure and blameless in front of him. Because of \add his\add* love
 \v 5 he \add decided in advance\add* to \add adopt\add* us as his children through \nd Yeshua the messiah\nd*. His decision gave him great pleasure
 \v 6 and \add now\add* he’s praised for the greatness of his grace which favoured us, as the one he loved
@@ -47,9 +47,9 @@
 \v 12 so that we, the ones who first \add put our trust in\add* the \nd messiah\nd*, would praise his greatness.
 \v 13 And you people also, after hearing the message of truth, the good message about being saved, were confirmed by receiving the \nd spirit\nd* of pure promise after you believed.
 \v 14 This spirit is the deposit on our inheritance until we procure the freedom which has been bought for us, leading us to praise \add God’s\add* greatness.
-\s1 Paul’s prayer for them
+\s1 Paulos’s prayer for them
 \p
-\v 15 Because of that, and because I heard about your faith in the \nd master Yeshua\nd* and your \add acceptance\add* of all the pure believers,
+\v 15 Because of that, and because I heard about your faith in the \nd master Yeshua\nd* \add (Jesus; Grk. Yesus)\add* and your \add acceptance\add* of all the pure believers,
 \v 16 I don’t stop giving thanks for all of you, mentioning you in my prayers,
 \v 17 asking the \nd God\nd* of our \nd master Yeshua the messiah\nd* to give you spiritual wisdom and to \add reveal\add* the knowledge about him.
 \v 18 I ask that your inner thoughts will be enlightened so that you’ll all know the expectation of what he’s calling you to—the riches of the greatness of his inheritance for the believers
@@ -67,19 +67,19 @@
 \p
 \v 4 But \nd God\nd* was generous with his mercy because of the great love that he loved us with,
 \v 5 so although we were dead as a result of our disobedience, he make us alive along with the \nd messiah\nd*. Yes, \add we\add* have been saved by \add God’s\add* grace.
-\v 6 And \add God\add* lifted us up and sat us together with \nd Yeshua the messiah\nd* in the heavenly \add domains\add*
+\v 6 And \add God\add* lifted us up and sat us together with \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd* in the heavenly \add domains\add*
 \v 7 so that for the ages to come, he could display the overflowing riches of his grace through \add his\add* kindness to us via \nd Yeshua the messiah\nd*.
 \v 8 It’s \add God’s\add* grace that allows you all to be saved through faith. That \add grace\add* doesn’t come from you, but rather it’s a gift from \nd God\nd*—
 \v 9 it doesn’t originate from \add your\add* actions so no one can brag about it.
 \v 10 We are \nd \+add God’s\+add*\nd* workmanship and he’s created us to do good things by following \nd Yeshua\nd* the \nd messiah\nd*. \nd God\nd* has already planned these things for us to do.
-\s1 Jews and non-Jews can be united
+\s1 Yehudim and non-Jews can be united
 \p
-\v 11 Because of that, \add don’t forget\add* that you all were once fleshly unbelievers (nicknamed ‘the \add uncircumcised\add* ones’ by \add circumcised\add* Jews who mark the bodies \add of their males\add* with human hands).
+\v 11 Because of that, \add don’t forget\add* that you all were once fleshly unbelievers (nicknamed ‘the \add uncircumcised\add* ones’ by \add circumcised\add* Yehudim \add (Jews)\add* who mark the bodies \add of their males\add* with human hands).
 \v 12 At that time you were separated from the \add citizens\add* of Yisrael \add (Israel)\add* and were strangers to the agreements involving \add God’s\add* promise. You didn’t have any future hope as you lived in the world without \add knowing\add* God.
 \p
-\v 13 But now \add thanks to\add* \nd Yeshua the messiah\nd*, you all who were once far \add from God\add* have become close by means of the \nd messiah’s\nd* blood.
-\v 14 He is \add the source\add* of peace \add between Jews and non-Jews\add*, having broken the dividing wall that fenced them apart and making the two into one. He took the hostility onto himself,
-\v 15 having declared the \add old\add* commands to be \add now\add* void so that Jews and non-Jews can \add now\add* be peaceably united.\x + \xo 2:15: \xt Col 2:14.\x*
+\v 13 But now \add thanks to\add* \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd*, you all who were once far \add from God\add* have become close by means of the \nd messiah’s\nd* blood.
+\v 14 He is \add the source\add* of peace \add between Yehudim and non-Jews\add*, having broken the dividing wall that fenced them apart and making the two into one. He took the hostility onto himself,
+\v 15 having declared the \add old\add* commands to be \add now\add* void so that Yehudim and non-Jews can \add now\add* be peaceably united.\x + \xo 2:15: \xt Col 2:14.\x*
 \v 16 By \add his death\add* on the pole, any hostility is destroyed and both groups \add now\add* become just one body in \nd God’s\nd* sight.\x + \xo 2:16: \xt Col 1:20.\x*
 \v 17 When the messiah came, he announced the good message: peace to you all who were far \add from God\add*, and peace also to the ones who were near,\x + \xo 2:17: \xt Isa 57:19.\x*
 \v 18 so now both groups have access to the father by means of one \nd spirit\nd* through \add the work of\add* the messiah.
@@ -89,9 +89,9 @@
 \v 21 He joins the entire building together, growing us all into a dedicated temple for \nd Yahweh\nd*.
 \v 22 You all are being built together by following him, becoming a place for \nd God’s spirit\nd* to live in.
 \c 3
-\s1 Paul’s assignment to non-Jews
+\s1 Paulos’s assignment to non-Jews
 \p
-\v 1 That’s the reason that I, Paul, am a prisoner \add due to my serving\add* \nd Yeshua\nd* the \nd messiah\nd* for you non-Jews.
+\v 1 That’s the reason that I, Paulos, am a prisoner \add due to my serving\add* \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* the \nd messiah\nd* for you non-Jews.
 \v 2 Certainly you have heard that \nd God\nd* assigned me the task of passing on \nd God’s\nd* grace to you.
 \v 3 He \add revealed\add* his incredible plan as I wrote briefly previously
 \v 4 and which you are all able to read to understand my insight into the incredible plan about the \nd messiah\nd*.\x + \xo 3:4-6: \xt Col 1:26-27.\x*
@@ -105,7 +105,7 @@
 \v 11 God did this according to his plan for the ages which he established in our \nd master Yeshua\nd* the \nd messiah\nd*.
 \v 12 It’s through our faith in \add Yeshua\add* that we can have boldness and \add confident\add* access \add to God\add*.
 \v 13 Because of that, I’m asking you not to become discouraged over my current difficulties as I \add serve\add* you all, in fact you are honoured by them.
-\s1 Paul prays for those in Ephesus
+\s1 Paulos prays for those in Efesos
 \p
 \v 14 That’s why I’m kneeling to \add ask\add* the father
 \v 15 (the one that every father in the heavens and on earth is named after)
@@ -114,7 +114,7 @@
 \v 18 so that just like the dedicated \add ones\add*, you all will also \add be strong\add* enough to understand the width and length and height and depth of
 \v 19 the \nd messiah’s\nd* love, and to know that having this love exceeds having knowledge so that you all can be filled with \nd God’s\nd* completeness.
 \p
-\v 20-21 Now \add we offer praise\add* to \add God\add* in the church and for all the generations to come and to \nd Yeshua the messiah\nd*—\add God\add* who, through the power that works in us, is able to do far more than we can ask for or even understand. \add May it be so\add*.
+\v 20-21 Now \add we offer praise\add* to \add God\add* in the church and for all the generations to come and to \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd*—\add God\add* who, through the power that works in us, is able to do far more than we can ask for or even understand. \add May it be so\add*.
 \c 4
 \s1 Many parts and gifts but one body
 \p
@@ -146,7 +146,7 @@
 \v 19 They stopped caring \add about what’s right and wrong\add*, and then \add greedily\add* indulged themselves in their own \add impure\add* lusts.
 \p
 \v 20 But you all didn’t learn that about the \nd messiah\nd*.
-\v 21 If you had heard him and listened to his teaching, you would have heard the truth from \nd Yeshua\nd*:
+\v 21 If you had heard him and listened to his teaching, you would have heard the truth from \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add*:
 \v 22 that you reject the former conduct of the old corrupted you, those \add seductive\add* desires,\x + \xo 4:22: \xt Col 3:9.\x*
 \v 23 and allow the spirit driving your thoughts to be renewed
 \v 24 and so to remodel yourself\x + \xo 4:24: \xt Col 3:10.\x* as a godly person\x + \xo 4:24: \xt Gen 1:26.\x* created to obey \nd God\nd* and follow the pure truth.
@@ -188,7 +188,7 @@
 \p
 \v 18 And don’t get drunk on alcohol because that’s excessive. Instead, be filled with \add God’s\add* \nd spirit\nd*,
 \v 19 sharing scriptures with each other and singing hymns and songs to praise \nd Yahweh\nd*,\x + \xo 5:19-20: \xt Col 3:16-17.\x*
-\v 20 always expressing thanks for everything \nd to\nd* \add our\add* father \nd God\nd* in the \add authority and name\add* of our \nd master Yeshua the messiah\nd*.
+\v 20 always expressing thanks for everything \nd to\nd* \add our\add* father \nd God\nd* in the \add authority and name\add* of our \nd master Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd*.
 \v 21 And show your honour \nd of the messiah\nd* by \add placing yourselves under each other’s authority\add*.
 \s1 Married couples
 \p
@@ -239,9 +239,9 @@
 \v 20 that’s led me as a missionary to \add now\add* be in prison. Ask that I would speak boldly as I should.
 \s1 Update
 \p
-\v 21 Now Tychicus,\x + \xo 6:21: \xt Acts 20:4; 2Tim 4:12.\x* a dear brother and faithful servant of \nd Yahweh\nd*, will let you know about me and how I’m doing.
+\v 21 Now Tukikos,\x + \xo 6:21: \xt Acts 20:4; 2Tim 4:12.\x* a dear brother and faithful servant of \nd Yahweh\nd*, will let you know about me and how I’m doing.
 \v 22 I’ve sent him to you for that reason—so that you all will know about us \add here\add* and that he would comfort your hearts.
 \s1 Blessings
 \p
-\v 23 Peace, love, and faith to the \add brothers and sisters\add* from \nd God\nd* the father and from \nd Yeshua the messiah\nd*.
+\v 23 Peace, love, and faith to the \add brothers and sisters\add* from \nd God\nd* the father and from \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd*.
 \v 24 Grace to all who love our \nd master Yeshua the messiah\nd*, with a love that won’t decay.

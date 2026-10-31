@@ -50,7 +50,7 @@ class SourceTests(unittest.TestCase):
 
     def test_tsv_is_compatible_with_bos_literal_tab_reader(self):
         candidates = json.dumps([{'lemma': 'λόγος', 'gloss': '"word"'}], ensure_ascii=False)
-        table = dc.tsv_text(['GreekWord', 'Candidates'], [{'GreekWord': 'λόγος', 'Candidates': candidates}])
+        table = dc.tsv_text(['SourceWord', 'Candidates'], [{'SourceWord': 'λόγος', 'Candidates': candidates}])
         fields = table.splitlines()[1].split('\t')
         self.assertEqual(json.loads(fields[1])[0]['gloss'], '"word"')
         with self.assertRaises(ValueError):
@@ -133,13 +133,13 @@ class GlossTests(unittest.TestCase):
         self.assertEqual(len(json.loads(result['Candidates'])), 2)
 
     def test_draft_review_includes_filled_alternatives_and_names(self):
-        rows = [dict(Ref='TOB_1:1w1', GreekWord='Τωβιὴλ', OETGlossWords='Tōbiaʸl', GlossStatus='name-transliteration'),
-                dict(Ref='TOB_1:1w2', GreekWord='Η', OETGlossWords='or/the', GlossStatus='draft-alternatives'),
-                dict(Ref='TOB_1:1w3', GreekWord='ἄγνωστον', OETGlossWords='', GlossStatus='missing')]
-        self.assertEqual([r['GreekWord'] for r in dc.draft_review(rows)], ['Τωβιὴλ', 'Η'])
+        rows = [dict(Ref='TOB_1:1w1', SourceWord='Τωβιὴλ', OETGlossWords='Tōbiaʸl', GlossStatus='name-transliteration'),
+                dict(Ref='TOB_1:1w2', SourceWord='Η', OETGlossWords='or/the', GlossStatus='draft-alternatives'),
+                dict(Ref='TOB_1:1w3', SourceWord='ἄγνωστον', OETGlossWords='', GlossStatus='missing')]
+        self.assertEqual([r['SourceWord'] for r in dc.draft_review(rows)], ['Τωβιὴλ', 'Η'])
 
     def test_missing_word_remains_visible_and_linked(self):
-        row = dict(OETGlossWords='', GreekWord='ἄγνωστον', Before='', After=';')
+        row = dict(OETGlossWords='', SourceWord='ἄγνωστον', Before='', After=';')
         self.assertEqual(dc.render_word(row, 12), '⟦ἄγνωστον¦12⟧?')
 
     def test_compound_tagnt_analysis_is_not_an_english_gloss(self):
@@ -149,11 +149,11 @@ class GlossTests(unittest.TestCase):
         self.assertEqual(lexicon.lookup('τίνα')['OETGlossWords'], '')
 
     def test_lexical_punctuation_follows_word_link(self):
-        row = dict(OETGlossWords='look!', GreekWord='ἰδού', Before='', After=' ')
+        row = dict(OETGlossWords='look!', SourceWord='ἰδού', Before='', After=' ')
         self.assertEqual(dc.render_word(row, 6), 'look¦6! ')
 
     def test_multiword_gloss_repeats_the_correct_link(self):
-        row = dict(OETGlossWords='to be', GreekWord='εἰμί', Before='', After='·')
+        row = dict(OETGlossWords='to be', SourceWord='εἰμί', Before='', After='·')
         self.assertEqual(dc.render_word(row, 9), 'to¦9_be¦9;')
 
 
@@ -165,7 +165,11 @@ class SpellingTests(unittest.TestCase):
                   for book in books}
         if 'SIR' in books:
             verses['SIR'].insert(0, dc.Verse('SIR', 0, '1', 'πόνος.', 'SIR_1:1', 'fixture'))
-        rows = dc.make_rows(verses, lexicon, {})
+        latin = {}
+        if 'LAO' in books:
+            verses['LAO'] = [dc.Verse('LAO', 1, '1', 'labor;', 'LAO_1:1', 'fixture')]
+            latin = {('LAO_1:1w1', 'labor'): dict(Gloss=gloss, Note='spelling fixture')}
+        rows = dc.make_rows(verses, lexicon, {}, latin)
         return verses, rows, dc.render_books(verses, rows)
 
     def test_reconciliation_keeps_links_separators_and_dictionary_evidence(self):
@@ -177,7 +181,7 @@ class SpellingTests(unittest.TestCase):
         self.assertEqual(revised[0]['Candidates'], rows[0]['Candidates'])
         self.assertEqual(rows[0]['OETGlossWords'], 'to labor/hard_labor')
         self.assertEqual(dc.render_books(verses, revised), edited)
-        self.assertEqual(audit, [dict(Ref='TOB_1:1w1', GreekWord='πόνος',
+        self.assertEqual(audit, [dict(Ref='TOB_1:1w1', SourceWord='πόνος',
                                      BeforeGloss='to labor/hard_labor', AfterGloss='to labour/hard_labour')])
 
     def test_structural_editor_changes_are_rejected(self):
@@ -192,7 +196,7 @@ class SpellingTests(unittest.TestCase):
     def test_greek_and_transliterated_names_are_protected(self):
         for gloss, status, greek, old, new in [('', 'missing', 'ΕBOΗΣA', 'BO', 'BOU'),
                                               ('Labor', 'name-transliteration', 'Λαβορ', 'Labor', 'Labour')]:
-            row = dict(Ref='TOB_1:1w1', GreekWord=greek, OETGlossWords=gloss,
+            row = dict(Ref='TOB_1:1w1', SourceWord=greek, OETGlossWords=gloss,
                        GlossStatus=status, GlossSource='fixture', Before='', After='.')
             original = {'TOB': dc.render_word(row, 1)}
             with self.subTest(status=status), self.assertRaisesRegex(ValueError, 'protected Greek/name'):
@@ -286,7 +290,7 @@ class SweteTests(unittest.TestCase):
     def test_visible_ocr_error_is_preserved_and_flagged(self):
         verses = {'PSS': [dc.Verse('PSS', 1, '1', 'ΕBOΗΣA θεός', 'PSS_1:1', 'fixture.xml')]}
         rows = dc.make_rows(verses, dc.Lexicon(), {})
-        self.assertEqual(rows[0]['GreekWord'], 'ΕBOΗΣA')
+        self.assertEqual(rows[0]['SourceWord'], 'ΕBOΗΣA')
         review = dc.source_review(rows)
         self.assertEqual(len(review), 1)
         self.assertEqual(review[0]['Ref'], 'PSS_1:1w1')
@@ -320,6 +324,78 @@ class OverrideTests(unittest.TestCase):
                 path.write_text(header + body)
                 with self.subTest(body=body), self.assertRaises(ValueError):
                     dc.read_overrides(path)
+
+
+@unittest.skipUnless(HAVE_SOURCES, 'downloaded Latin source integration check')
+class LatinTests(unittest.TestCase):
+    def setUp(self):
+        self.text = (dc.CACHE / dc.LATIN_SOURCE).read_text(encoding='utf-8')
+        self.verses = dc.parse_lightfoot_lao(self.text)
+        self.glosses = dc.read_latin_glosses(dc.LATIN_GLOSSES)
+
+    def test_latin_boundaries_supplement_and_twenty_verse_mapping(self):
+        self.assertEqual([v.verse for v in self.verses], [str(n) for n in range(1, 21)])
+        self.assertEqual({v.chapter for v in self.verses}, {1})
+        self.assertTrue(self.verses[0].text.startswith('Paulus Apostolus non ab hominibus'))
+        self.assertIn('quod est [reliquum]', self.verses[12].text)
+        self.assertEqual(self.verses[15].text, 'Et quae audistis et accepistis in corde retinete;')
+        self.assertEqual(self.verses[16].text, 'et erit vobis pax.')
+        self.assertEqual([v.source_ref for v in self.verses[15:17]], ['LAO_1:16a', 'LAO_1:16b'])
+        self.assertEqual(self.verses[-1].text, 'Et facite legi Colosensibus et Colosensium vobis.')
+        self.assertEqual(sum(len(list(dc.tokenise(v.text))) for v in self.verses), 245)
+
+    def test_no_apparatus_greek_retroversion_or_html_leaks_into_source(self):
+        for v in self.verses:
+            self.assertNotRegex(v.text, r'[<>#0-9\u0370-\u03ff\u1f00-\u1fff]')
+        for bad in [self.text.replace('<sup>20</sup>', '<sup>21</sup>'),
+                    self.text.replace('retinete; et erit vobis pax.', 'retinete; pax.'),
+                    self.text.replace('#<sup>13</sup>al_13#', '')]:
+            with self.assertRaises(ValueError):
+                dc.parse_lightfoot_lao(bad)
+
+    def test_every_latin_occurrence_is_glossed_without_greek_lookup(self):
+        class NoGreek:
+            def lookup(self, word):
+                raise AssertionError('Latin must never reach the Greek lexicon')
+        rows = dc.make_rows({'LAO': self.verses}, NoGreek(), {}, self.glosses)
+        self.assertEqual(len(rows), 245)
+        self.assertTrue(all(r['OETGlossWords'] and r['GlossStatus'] == 'latin-editorial-draft' for r in rows))
+        self.assertTrue(all(not r['Lemma'] and not r['Morphology'] and not r['LexiconGloss'] for r in rows))
+        self.assertEqual(dc.source_review(rows), [])
+        rendered = dc.render_books({'LAO': self.verses}, rows)['LAO']
+        self.assertNotIn('⟦', rendered)
+        self.assertIn('Latin (lat)', rendered)
+        self.assertNotIn('STEPBible.org', rendered)
+        self.assertNotIn('?', rendered)  # Latin semicolons are not Greek question marks.
+        for row in rows:
+            if ';' in row['After']:
+                self.assertIn(';', dc.render_word(row, 1))
+
+    def test_stale_missing_extra_and_injected_glosses_fail(self):
+        for key in [('LAO_1:1w1', 'Paulus'), ('LAO_1:20w7', 'vobis')]:
+            incomplete = dict(self.glosses)
+            del incomplete[key]
+            with self.assertRaisesRegex(ValueError, 'Missing/stale Latin'):
+                dc.make_rows({'LAO': self.verses}, dc.Lexicon(), {}, incomplete)
+        extra = dict(self.glosses)
+        extra[('LAO_1:21w1', 'Et')] = dict(Gloss='and', Note='unexpected')
+        with self.assertRaisesRegex(ValueError, 'Unused/stale Latin'):
+            dc.make_rows({'LAO': self.verses}, dc.Lexicon(), {}, extra)
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'glosses.tsv'
+            header = 'Ref\tLatinWord\tGloss\tNote\n'
+            for bad in ['LAO_1:1w1\tPaulus\tPaul¦99\tbad\n',
+                        'LAO_1:1w1\tPaulus\t\tnote\n',
+                        'LAO_1:1w1\tPaulus\tPaul\tnote\n' * 2]:
+                path.write_text(header + bad)
+                with self.assertRaises(ValueError):
+                    dc.read_latin_glosses(path)
+
+    def test_lao_is_appended_after_all_existing_source_words(self):
+        verses = dc.load_verses(dc.CACHE)
+        self.assertEqual(list(verses)[-1], 'LAO')
+        self.assertEqual(sum(len(list(dc.tokenise(v.text))) for b, vs in verses.items()
+                             if b != 'LAO' for v in vs), 123885)
 
 
 class CachedSourceTests(unittest.TestCase):
@@ -359,7 +435,7 @@ class CachedSourceTests(unittest.TestCase):
     @unittest.skipUnless(HAVE_SOURCES, 'downloaded Swete source integration check')
     def test_swete_chapters_word_counts_and_unusual_references(self):
         verses = dc.load_verses(dc.CACHE)
-        self.assertEqual(list(verses)[-2:], ['PSS', 'ODE'])
+        self.assertEqual(list(verses)[-3:], ['PSS', 'ODE', 'LAO'])
         self.assertEqual({v.chapter for v in verses['PSS']}, set(range(1, 19)))
         self.assertEqual({v.chapter for v in verses['ODE']}, set(range(1, 15)))
         self.assertEqual(len(verses['PSS']), 332)

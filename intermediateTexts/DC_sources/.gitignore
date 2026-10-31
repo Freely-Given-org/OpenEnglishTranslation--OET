@@ -3,3 +3,6 @@
 !.gitignore
 # eBible's URL is mutable; retain this modest snapshot for reproducibility.
 !grcbrent_usfm.zip
+# Public-domain LAO editions: preserve the exact downloaded HTML snapshots.
+!Lightfoot-1875.html
+!James-1924-LAO.html

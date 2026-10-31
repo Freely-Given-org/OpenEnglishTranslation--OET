@@ -1,23 +1,26 @@
 # OET-LV deuterocanonical lexical drafts
 
 This is a reproducible starting point for DC translation work, **not a completed
-OET-LV translation**. It downloads Greek source text and English lexical data,
+OET-LV translation**. It downloads Greek and Latin source text and English lexical data,
 creates a source-linked word table, applies persistent editorial overrides, and
-generates 16 draft ESFM books. Grammar, contextual senses, English word order,
+generates 17 draft ESFM books. LAO uses explicit OET Latin occurrence glosses.
+Grammar, contextual senses, English word order,
 OET terminology and names, and alignment to the RV still need editorial work.
 
-The current draft has 123,885 source tokens: 104,215 (84.12%) have a draft
+The current draft has 124,130 source tokens: 104,460 (84.15%) have a draft
 English gloss, gloss alternatives, or name transliteration; 19,670 remain visible
-as `⟦GreekWord¦number⟧`. This is 6,445 more filled occurrences than the preceding
-97,770-token draft. All source tokens, punctuation, references and word numbers
-are unchanged. The report separates the statuses, including 4,012 name
+as `⟦SourceWord¦number⟧`. The Greek gloss improvements filled 6,445 more occurrences than the preceding
+97,770-token draft; LAO adds 245 Latin occurrences, all with provisional glosses.
+All earlier Greek source tokens, punctuation, references and word numbers
+are unchanged. The report separates the statuses, including 4,012 Greek name
 transliterations and 3,232 sets of lexical alternatives. Coverage is not a measure
 of translation accuracy. In particular, `to be`, `I/we`, and `the/this/who` are
 upstream dictionary aids, not inflected English renderings.
 
 The original 14 books contained 114,896 source tokens. Psalms of Solomon
-(PSS, 18 chapters, 4,830 tokens) and Biblical Odes (ODE, 14 chapters, 4,159 tokens)
-were appended, preserving the original word numbers. Here `DC` is a project
+(PSS, 18 chapters, 4,830 tokens), Biblical Odes (ODE, 14 chapters, 4,159 tokens),
+and Laodiceans (LAO, one chapter, 20 verses, 245 tokens) were appended,
+preserving the original word numbers. Here `DC` is a project
 umbrella for the explicitly listed books, not a declaration of a particular canon.
 
 ## Run it
@@ -30,6 +33,8 @@ make -C scripts check_DC
 ```
 
 From the `scripts/` directory, use `make LV_DC` and `make check_DC`.
+`make LV_LAO` is an alias for the complete DC build, because LAO's word links
+depend on the shared table's preceding rows. It also runs the DC spelling step.
 `LV` (and therefore `BOTH`/`ALL`) now includes this stage. It is deliberately
 separate from the current 66-book HTML, clean USFM, and VREF pipelines.
 Those exporters do not yet support these draft DC word tables and source
@@ -118,6 +123,8 @@ kept under `intermediateTexts/DC_sources/`.
 | [Open Greek and Latin / First1KGreek](https://github.com/OpenGreekAndLatin/First1KGreek/tree/ed91552c52530c8f5a3ddf2dd767e899372a804c/data/tlg0527) | CC BY-SA 4.0, as specified in each XML header; Harvard College Library and Digital Divide Data | PSS and ODE: transcription of H. B. Swete, *The Old Testament in Greek*, volume III (1905); original TEI files retain attribution, apparatus and source-scan links |
 | [STEPBible TBESG and TAGNT](https://github.com/STEPBible/STEPBible-Data) | CC BY 4.0; STEPBible.org, based on work at Tyndale House Cambridge | English dictionary glosses; attested NT surface forms, lemma candidates and possible morphology |
 | [Open Scriptures Greek Word List](https://github.com/openscriptures/GreekResources) | CC BY 4.0; credit the Open Scriptures Septuagint Project | Additional headword definitions, spelling aliases, and proper-name recognition |
+| [J. B. Lightfoot, *St. Paul's Epistles to the Colossians and Philemon* (1875)](https://www.gutenberg.org/ebooks/50857) | Public domain; digitised by Project Gutenberg, KD Weeks, Colin Bell and the Online Distributed Proofreading Team | LAO Latin text on printed pp. 353–355; no reconstructed Greek is used |
+| [M. R. James, *The Apocryphal New Testament* (1924), Laodiceans](https://en.wikisource.org/wiki/The_Apocryphal_New_Testament_(1924)/Epistles/The_Epistle_to_the_Laodiceans) | Public domain; [status notice](https://en.wikisource.org/wiki/The_Apocryphal_New_Testament_(1924)); Wikisource chapter revision 11900163 | English adaptation base for the manually maintained RV LAO file; not a source of automatic Latin glosses |
 
 Changes to those data consist of lexical matching, book assembly below,
 normalisation for lookup, OET overrides, and conversion into TSV/ESFM. For Swete,
@@ -128,8 +135,9 @@ ESFM header, the report, and this document. Source README and lexical documentat
 are included in the download cache. OET's existing text and script licences remain
 as documented in the repository root.
 
-Git tracks the small Brenton ZIP snapshot because eBible's download URL changes
-over time. The other cache files are ignored and can be recovered from their
+Git tracks the small Brenton ZIP snapshot and both LAO HTML snapshots because
+their download URLs can return changed bytes over time (including page furniture
+around a fixed Wikisource revision). The other cache files are ignored and can be recovered from their
 pinned GitHub commits. A changed or damaged file fails checksum verification;
 the downloader never silently accepts an upstream update. To adopt new sources,
 review the source change, update URLs/sizes/digests in the manifest, replace the
@@ -157,7 +165,7 @@ Rahlfs/CATSS annotation data are used or copied.
 
 ## Books and source references
 
-| OET book | Greek source component |
+| OET book | Source component |
 | --- | --- |
 | TOB, JDT, ESG, WIS, SIR | Corresponding Greek book |
 | BAR | BAR 1–5, followed by LJE 1 as BAR 6 |
@@ -168,7 +176,65 @@ Rahlfs/CATSS annotation data are used or copied.
 | PS2 | PSA 151 as PS2 1, with `\cp 151` |
 | PSS | First1KGreek `tlg0527.tlg035.1st1K-grc1.xml`, Swete's 18 Psalms of Solomon; USFM `PSS` |
 | ODE | First1KGreek `tlg0527.tlg028.1st1K-grc1.xml`, Swete's Odes I–XIV; USFM `ODA` |
+| LAO | Lightfoot (1875), Latin text, pp. 353–355; one chapter and 20 OET verses; USFM/BOS `LAO` |
 | ES2 | No output; requires a different source/glossing route |
+
+### Latin Laodiceans and its RV adaptation
+
+LAO is the apocryphal *Letter to the Laodiceans*, written in Paul's name. Its
+surviving textual witnesses are Latin and medieval translations. Whether it was
+originally composed in Greek is uncertain; Lightfoot's Greek retroversion is
+not an ancient Greek witness. See [Philip L. Tite's NASSCAL entry](https://www.nasscal.com/e-clavis-christian-apocrypha/epistle-to-the-laodiceans/).
+
+The builder extracts only the eight Latin main-text paragraphs beneath
+`AD LAODICENSES.` in `Lightfoot-1875.html`, excluding the apparatus, page numbers
+and Greek retroversion. It preserves spelling, punctuation, and the bracketed
+editorial supplement `[reliquum]` in verse 13. The HTML's visibly broken
+`#<sup>13</sup>al_13#` verse-link markup is repaired during extraction; it is not
+Latin text. Source bytes remain unchanged in the cache.
+
+Lightfoot prints `et erit vobis pax.` at the end of verse 16 without a separate
+17 marker. OET 16 ends at `retinete;`, and OET 17 contains that final clause,
+matching James's 20-verse numbering. `SourceRef` records `LAO_1:16a` and
+`LAO_1:16b` for those two halves of printed 16. The combined text reconstructs
+Lightfoot 16 without adding or dropping words. No extra greeting from another
+manuscript is inserted as verse 17.
+
+[`LAO_latin_glosses.tsv`](LAO_latin_glosses.tsv) contains all 245 occurrence
+glosses, keyed by exact reference and Latin spelling. These are original,
+AI-assisted OET draft glosses, **not downloaded or human-approved annotations**.
+They need human editorial review, especially the difficult syntax in verse 5.
+The builder rejects missing, changed, extra, duplicate, or malformed gloss
+entries, so a source change cannot silently reuse another word's gloss.
+Its Greek lookup/transliterator never processes these Latin tokens.
+Explicit name equivalents follow existing OET NT spellings (Paulos, Yaʸsous,
+Laodikeia and Kolossai); these are editorial choices, not Latin transliterations.
+
+LAO appends DC word numbers **123886–124130**. Each row has status
+`latin-editorial-draft` and an editorial provenance note. `Lemma`, `Morphology`
+and `LexiconGloss` are blank and `Candidates` is empty, because no annotated
+Latin lexicon has been adopted. All these draft glosses appear in the review
+report. Latin semicolons remain semicolons. The same ScriptedBibleEditor stage
+and word-table synchronisation apply to LAO as to the Greek books.
+
+To name the mixed-language data honestly while preserving column positions,
+the output table/review column `GreekWord` is now `SourceWord`, and
+`source_verses.tsv` uses `SourceText` instead of `GreekText`. Existing Greek row
+data and links are unchanged. The report schema is now 2 and each book records
+`source_language` (`grc` or `lat`); the report also hashes the Latin gloss file.
+The Greek-only override and name-alias input tables retain their `GreekWord`
+headers. Consumers should look up columns by header. The RV connector and
+shared names-table loader do not require the renamed column.
+
+The editable [OET-RV LAO file](../../translatedTexts/ReadersVersion/OET-RV_LAO.ESFM)
+adapts James's public-domain English into current English, with OET terminology,
+name explanations, paragraphs, an introduction, and headings. Verse 5 has a
+footnote acknowledging its uncertain meaning. The source snapshot is retained
+as `James-1924-LAO.html`; its underlying translation is public domain (James
+died in 1936), and the adaptation follows the repository's OET text licence.
+The file identifies its AI-assisted draft origin. Edit it directly: the LV
+make chain never regenerates or overwrites RV prose. No automatic RV word
+alignment is asserted or fabricated by this addition.
 
 ### Swete PSS and ODE references and source quality
 
@@ -283,34 +349,34 @@ all such output is listed for review, and corrections belong in the override fil
 
 The source's spelling errors are preserved and exposed, e.g. MAN 1:1
 `παντοκράτωπ`. They should be investigated against an edition, not fixed by
-approximate spelling matches. The retained `GreekWord`, `Before`, and `After`
-columns reconstruct each parsed Greek verse exactly. ESFM punctuation converts
+approximate spelling matches. The retained `SourceWord`, `Before`, and `After`
+columns reconstruct each parsed source verse exactly. For Greek, ESFM punctuation converts
 Greek middle stops to semicolons and question marks to English question marks.
 
 ## Editorial workflow and outputs
 
-- `derivedTexts/auto_edited_DC_ESFM/OET-LV_*.ESFM`: 16 lexical drafts.
+- `derivedTexts/auto_edited_DC_ESFM/OET-LV_*.ESFM`: 17 lexical/editorial drafts.
 - `derivedTexts/auto_edited_DC_ESFM/OET-LV_DC_word_table.tsv`: linked word table;
   the same table is under `intermediateTexts/glossed_DC/`.
 - `derivedTexts/auto_edited_DC_ESFM/build_report.json`: coverage per book,
   status counts, source/editor provenance, spelling changes, and unsupported-book explanation.
-- `intermediateTexts/glossed_DC/source_verses.tsv`: assembled Greek verses with
+- `intermediateTexts/glossed_DC/source_verses.tsv`: assembled Greek and Latin verses with
   original source references and filenames.
 - `intermediateTexts/glossed_DC/unresolved_words.tsv`: every occurrence still
   lacking a usable English gloss or recognised name, including available candidates.
 - `intermediateTexts/glossed_DC/review_by_frequency.tsv`: unresolved forms ordered
   by frequency, with first-occurrence references.
 - `intermediateTexts/glossed_DC/draft_gloss_review.tsv`: filled gloss alternatives,
-  inferred matches, and all name transliterations, grouped by form/gloss/status
+  inferred matches, all name transliterations and Latin draft glosses, grouped by form/gloss/status
   with frequency and first occurrence. Full evidence is in the word table.
 - `intermediateTexts/glossed_DC/rv_verse_label_differences.tsv`: labels requiring
   investigation before RV alignment.
-- `intermediateTexts/glossed_DC/source_text_review.tsv`: source tokens containing
+- `intermediateTexts/glossed_DC/source_text_review.tsv`: Greek source tokens containing
   Latin letters, requiring inspection of the printed edition.
-- `intermediateTexts/glossed_DC/spelling_changes.tsv`: reference, Greek word,
+- `intermediateTexts/glossed_DC/spelling_changes.tsv`: reference, source word,
   and English gloss before/after ScriptedBibleEditor.
 
-Edit [`gloss_overrides.tsv`](gloss_overrides.tsv), not a generated file. It has
+For Greek, edit [`gloss_overrides.tsv`](gloss_overrides.tsv), not a generated file. It has
 four tab-separated columns: `Ref`, `GreekWord`, `Gloss`, and `Note`.
 
 - `Ref` can be a word reference such as `TOB_1:1w1`, with the **exact** source
@@ -347,7 +413,7 @@ downstream words; never retain old links against a rebuilt table.
 The checks verify input hashes, source reconstruction, word-reference uniqueness
 and sequence, original source references, ESFM/table agreement, every word link,
 and report freshness (including name aliases, the installed transliterator,
-the spelling table/control, and ScriptedBibleEditor).
+the Latin occurrence glosses, the spelling table/control, and ScriptedBibleEditor).
 Unit tests cover name/common-word collisions, movable nu, English alternatives,
 NT name spellings, ambiguous homographs, paragraph content,
 lettered verses, the real book assembly, prologue handling, TEI apparatus exclusion,

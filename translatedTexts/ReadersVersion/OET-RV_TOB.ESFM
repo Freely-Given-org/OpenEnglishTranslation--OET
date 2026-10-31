@@ -1,8 +1,8 @@
-\id TOB - Open English Translation—Readers' Version (OET-RV) v0.1.0
+\id TOB - Open English Translation—Readers' Version (OET-RV) v0.4.1
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 TOB
-\rem not WORDTABLE OET-LV_OT_word_table.tsv
+\rem WORDTABLE OET-LV_DC_word_table.tsv
 \rem Adapted from the Public Domain WEBBE courtesy of https://eBible.org
 \h Tovi
 \toc1 Tovi
@@ -10,345 +10,373 @@
 \toc3 Tob
 \mt1 Tovi
 \is1 Introduction
-\ip \bk Tovi\bk* is recognised as Deuterocanonical Scripture by the Romaios Catholic, Greek Orthodox, and Russian Orthodox Churches.
+\ip The account of \bk Tovi\bk* (Tobit) follows two Jewish families living far from their ancestral land. Tovi has been taken from Yisrael/Israel to Nineveh, where he continues to obey God, share his food with the poor, and bury people who've been killed. But after losing his sight, he becomes so discouraged that he asks God to let him die. Meanwhile, Sarah, a young woman living in Maday (Media), is also desperate: a demon has killed all seven of the men she'd married.
+\ip God hears their prayers, and their stories come together when Tovi sends his son Toviyah (Tobias) to collect some money that he'd left with a relative. Toviyah's travelling companion, Refael (Raphael), turns out to be a messenger sent by God. The journey leads to marriage, healing, and a new future for both families.
+\ip This account encourages its readers to remain faithful to God in difficult circumstances. It gives particular attention to prayer, generosity, care for parents, and faithfulness within a family. God's help isn't always recognised immediately, but the characters eventually look back and see how he has been guiding them.
+\ip \bk Tovi\bk* is recognised as Deuterocanonical Scripture by the Roman Catholic, Greek Orthodox, and Russian Orthodox Churches.
+\iot Main components of this account
+\io1 Tovi's troubles and Sarah's prayer \ior 1:1–3:17\ior*
+\io1 Tovi's advice and Toviyah's journey \ior 4:1–6:17\ior*
+\io1 Toviyah marries Sarah \ior 7:1–10:12\ior*
+\io1 The return home, Tovi's healing, and Refael's identity \ior 11:1–12:22\ior*
+\io1 Tovi's praise, final advice, and the family's later life \ior 13:1–14:15\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
+\s1 Tovi remains faithful to God in exile
 \p
-\v 1 The book of the words of Tovi \add !(Tobit)\add*, the son of Toviel, the son of Hananiel, the son of Adiel, the son of Gabael, of the seed of Asiyel, of the tribe of Naftali \add !(Naphtali)\add*;
-\v 2 who in the days of the Assyrian King Shalmaneser\f + \fr 1:2 \ft That is, \fqa Shalmaneser. \ft Compare 2 Kings 17:3,23.\f* was carried away captive out of Thisbe, which is on the right hand of Kedesh Naftali in Galil above Asher.
+\v 1 The book¦1 of the words¦2 of¦4 Tovi \add !(Tobit)\add*, the¦4 son of¦6 Toviel, the¦6 son of¦8 Hananiel, the¦8 son of¦10 Adiel, the¦10 son of Gabael, of the¦13 seed¦14 of Asiyel, of the¦17 tribe¦18 of Naftali \add !(Naphtali)\add*;
+\v 2 who in¦22 the days¦23 of¦25 the¦25 Assyrian King¦26 Shalmaneser\f + \fr 1:2 \ft That is, \fqa Shalmaneser. \ft Compare 2 Kings 17:3,23.\f* was carried away captive out¦28 of Thisbe, which¦30 is¦31 on the right¦33 hand of Kedesh Naftali in¦37 Galil above¦40 Asher.
 \p
-\v 3 I, Tovi walked in the ways of truth and righteousness all the days of my life, and I gave alms many times to my kindred and my nation, who went with me into the land of the Assyrians, to Nineveh.
-\v 4 When I was in my own country, in the land of Yisrael \add !(Israel)\add*, while I was yet young, all the tribe of Naftali my father fell away from the house of Yerushalem \add !(Jerusalem)\add*, which was chosen out of all the tribes of Yisrael, that all the tribes should sacrifice there, and the temple of the habitation of the Most High was hallowed and built therein for all ages.
-\v 5 All the tribes which fell away together sacrificed to the heifer Ba’al, and so did the house of Naftali my father.
-\v 6 I alone went often to Yerushalem at the feasts, as it has been ordained to all Yisrael by an everlasting decree, having the first fruits and the tenths of my increase, and that which was first shorn; and I gave them at the altar to the priests the sons of Aharon \add !(Aaron)\add*.
-\v 7 I gave a tenth part of all my increase to the sons of Levi, who ministered at Yerushalem. A second tenth part I sold away, and went, and spent it each year at Yerushalem.
-\v 8 A third tenth I gave to them to whom it was appropriate, as Deborah my father's mother had commanded me, because I was left an orphan by my father.
-\v 9 When I became a man, I took as wife Hanah of the seed of our own family. With her, I became the father of Toviyah \add !(Tobias)\add*.
-\v 10 When I was carried away captive to Nineveh, all my kindred and my relatives ate of the bread of the Gentiles;
-\v 11 but I kept myself from eating,
-\v 12 because I remembered God with all my soul.
-\v 13 So the Most High gave me grace and favour\f + \fr 1:13 \ft Gr. \fqa beauty.\f* in the sight of Shalmaneser, and I was his purchasing agent.
-\v 14 And I went into Maday \add !(Media)\add*, and left ten talents of silver in trust with Gabael, the brother of Gabrias, at Rages of Maday.
+\v 3 I¦42, Tovi walked in the ways of truth¦45 and¦47 righteousness¦48 all¦49 the¦50 days¦51 of my life¦53, and I gave to the poor many times to¦58 my kindred and¦62 my nation¦64, who¦65 went with¦67 me into the land of the Assyrians, to Nineveh.
+\v 4 When¦74 I was¦76 in¦77 my own country¦79, in¦81 the¦82 land¦83 of Yisrael \add !(Israel)\add*, while I¦86 was¦87 yet young, all¦88 the tribe of Naftali my father¦93 fell away¦96 from¦96 the¦97 house¦98 of Yerushalem \add !(Jerusalem)\add*, which was chosen out of all¦103 the¦104 tribes¦105 of Yisrael, that¦75 all¦110 the¦111 tribes¦112 should sacrifice there, and¦113 the¦115 temple¦116 of the¦117 habitation of¦119 the¦119 Most High was hallowed and¦121 built¦122 there for all¦124 ages¦128.
+\v 5 All¦130 the¦131 tribes¦132 which¦133 fell away together sacrificed¦135 to¦135 the heifer Ba'al, and¦140 so did the¦141 house¦142 of¦144 Naftali my father¦145.
+\v 6 I¦147 alone¦148 went often to¦149 Yerushalem at the¦154 feasts, as¦156 it's¦177 been ordained to¦157 all¦158 Yisrael by an eternal decree, having the first fruits and¦166 the¦167 tenths¦168 of my increase, and¦171 that¦172 which was first shorn; and¦175 I gave¦176 them at the altar¦185 to¦183 the¦184 priests¦179 the¦187 sons¦181 of Aharon \add !(Aaron)\add*.
+\v 7 I gave¦191 a tenth¦190 part of all my increase to¦191 the¦192 sons¦193 of Levi, who ministered at Yerushalem. A second¦201 tenth¦202 part I sold away, and¦204 went, and¦206 spent it¦208 each¦212 year¦213 at Yerushalem.
+\v 8 A third¦216 tenth I gave¦217 to¦217 them to¦221 whom¦223 it was appropriate, as Deborah my father's mother¦224 had commanded me, because¦228 I was left an orphan¦229 by¦231 my father¦233.
+\v 9 When¦236 I became a man¦238, I took¦239 as wife¦241 Hanah of¦243 the¦243 seed¦244 of our own family¦246. With her, I¦247 became the father of Toviyah \add !(Tobias)\add*.
+\v 10 When¦254 I was carried away captive to Nineveh, all¦258 my kindred and¦262 my relatives¦260 ate¦268 of¦265 the¦270 bread¦271 of the¦272 Gentiles;
+\v 11 but¦275 I¦279 kept myself from eating¦281,
+\v 12 because I remembered God¦285 with all¦287 my soul¦289.
+\v 13 So¦291 the¦293 Most High gave¦292 me grace¦295 and¦296 favour\f + \fr 1:13 \ft Grk. \fqa beauty.\f* in the sight of Shalmaneser, and¦300 I was¦301 his purchasing agent.
+\v 14 And¦304 I went into¦305 Maday \add !(Media)\add*, and¦309 left ten¦321 talents¦320 of silver in trust with Gabael, the¦312 brother¦313 of Gabrias, at Rages of Maday.
+\s1 Tovi risks his life to bury the dead
 \p
-\v 15 And when Shalmaneser was dead, his son Sanheriv \add !(Sennacherib)\add* reigned in his place. In his time, the highways were troubled,\f + \fr 1:15 \ft Gr. \fqa his highways were troubled.\f* and I could no longer go into Maday.
-\v 16 In the days of Shalmaneser, I gave alms many times to my kindred: I gave my bread to the hungry,
-\v 17 and my garments to the naked. If I saw any of my race dead, and thrown out on\f + \fr 1:17 \ft Some ancient authorities read \fqa behind.\f* the wall of Nineveh, I buried him.
-\v 18 If Sanheriv the king killed any, when he came fleeing from Yehudah \add !(Judea)\add*, I buried them privately; for in his wrath he killed many; and the bodies were sought for by the king, and were not found.
-\v 19 But one of the Nineuitais went and showed to the king concerning me, how I buried them, and hid myself; and when I knew that I was sought for to be put to death, I withdrew myself for fear.
-\v 20 And all my goods were forcibly taken away, and there was nothing left to me, save my wife Hanah and my son Toviyah.
-\v 21 No more than fifty five days passed before two of his sons killed him, and they fled into the Ararat mountains. And Esar-Hadon\f + \fr 1:21 \ft That is, \fqa Esar-haddon, \ft and so in verse 22.\f* his son reigned in his place; and he appointed Ahikar my brother Hanael's son over all the accounts of his kingdom, and over all his affairs.
-\v 22 Ahikar requested me, and I came to Nineveh. Now Ahikar was cupbearer, keeper of the signet, steward, and overseer of the accounts. Esar-Hadon appointed him next to himself, but he was my brother's son.
+\v 15 And¦322 when¦323 Shalmaneser was dead, his son¦329 Sanheriv \add !(Sennacherib)\add* reigned¦326 in his place. In his time, the¦334 highways were troubled,\f + \fr 1:15 \ft Grk. \fqa his highways were troubled.\f* and¦338 I could no¦339 longer go into¦342 Maday.
+\v 16 In¦347 the¦348 days¦349 of Shalmaneser, I gave to¦353 the¦354 poor many times to my kindred: I¦356 gave my bread to the hungry,
+\v 17 and¦363 my clothes¦364 to the¦365 naked. If¦368 I¦373 saw¦374 any of my race dead¦375, and¦376 thrown out¦370 on\f + \fr 1:17 \ft Some ancient authorities read \fqa behind.\f* Nineveh's wall¦380, I buried him.
+\v 18 If¦385 Sanheriv the¦389 king¦390 killed any, when¦391 he came¦392 fleeing from¦394 Yehudah \add !(Judea)\add*, I buried them privately; for¦401 in¦403 his anger he¦406 killed many; and¦407 the¦412 bodies¦413 were sought for by¦409 the¦410 king¦411, and¦414 weren't found¦416.
+\v 19 But¦418 one¦419 of the¦420 Nineuitais went¦433 and showed¦423 to¦423 the¦424 king¦425 about¦426 me, how I¦427 buried¦429 them, and¦431 hid myself; and¦434 when I knew¦433 that¦435 I was sought for to¦437 be put to death¦437, I withdrew myself for fear¦438.
+\v 20 And¦440 all¦442 my goods were¦444 forcibly taken away, and¦446 there was nothing left¦448 to¦448 me, save my wife¦454 Hanah and¦456 my son¦459 Toviyah.
+\v 21 No¦462 more than fifty¦465 five days¦464 passed¦463 before two¦471 of his sons¦472 killed¦468 him, and¦474 they fled¦475 into the¦477 Ararat mountains¦478. And¦480 Esar-Hadon\f + \fr 1:21 \ft That is, \fqa Esar-haddon, \ft and so in verse 22.\f* his son¦483 reigned¦481 in his place; and he¦484 appointed Ahikar my¦486 brother¦494 Hanael's son over all¦497 the¦498 accounts of his kingdom¦501, and¦503 over all¦505 his affairs.
+\v 22 Ahikar requested me, and¦508 I¦512 came¦514 to¦519 Nineveh. Now Ahikar was¦519 cupbearer, keeper of the¦520 signet, steward, and¦522 overseer of¦524 the¦524 accounts. Esar-Hadon appointed¦531 him next to himself, but he¦532 was¦537 my brother's son.
 \c 2
+\s1 Tovi loses his sight
 \p
-\v 1 Now when I had come home again, and my wife Hanah was restored to me, and my son Toviyah \add !(Tobias)\add*, in the feast of Pentecost, which is the holy feast of the seven weeks, there was a good dinner prepared for me, and I sat down to eat.
-\v 2 I saw abundance of meat, and I said to my son, “Go and bring whatever poor man you find of our kindred, who is mindful of the master. Listen, I wait for you.”
+\v 1 Now when¦541 I'd¦547 come home¦546 again, and¦548 my wife¦553 Hanah was restored to me, and¦555 my son¦558 Toviyah \add !(Tobias)\add*, in¦560 the¦561 feast of Pentecost¦562, which¦564 is¦565 the holy¦566 feast of the seven¦567 weeks, there was¦569 a good¦571 dinner prepared for me, and I sat down to¦576 eat¦576.
+\v 2 I saw abundance of meat, and I said¦582 to¦582 my son¦584, “Go and¦587 bring whatever poor man you find of our kindred, who's¦592 mindful of¦598 the¦598 master. Listen, I wait for you¦603.”
 \p
-\v 3 Then he came, and said, “Father, one of our \add ≈fellow-citizens\add* has been strangled, and \add his body\add* has been thrown \add onto the street\add* in the marketplace.”
-\v 4 Before I had tasted anything, I sprang up, and took him up into a chamber until the sun had set.
-\v 5 Then I returned, washed myself, ate my bread in heaviness,
-\v 6 and remembered the prophecy of Amos, as he said,
+\v 3 Then¦604 he came¦605, and said¦606, “Father¦607, one¦608 of¦610 our \add ≈fellow-citizens\add* has been strangled, and \add his body\add* has been thrown¦614 \add onto the street\add* in¦615 the¦616 marketplace¦617.”
+\v 4 Before I'd¦618 tasted¦620 anything, I¦621 sprang up, and took him up into a chamber until¦628 the¦631 sun¦632 had set¦630.
+\v 5 Then I returned, washed myself, ate¦637 my bread¦639 in¦641 heaviness,
+\v 6 and¦643 remembered¦644 the¦645 prophecy¦646 of Amos¦647, as¦648 he said¦649,
 \q1 “Your feasts will be turned into mourning,
-\q2 and all your mirth into lamentation.\x + \xo 2:6 \xt Amos 8:10\x*
+\q2 and¦656 all¦657 your mirth into lamentation.”\x + \xo 2:6: \xt Amos 8:10.\x*
 \p
-\v 7 So I wept: and when the sun had set, I went and dug a grave, and buried him.
-\v 8 My neighbours mocked me, and said, “He is no longer afraid to be put to death for this matter; and yet he fled away. Listen, he buries the dead again.”
-\v 9 The same night I returned from burying him, and slept by the wall of my courtyard, being polluted; and my face was uncovered.
-\v 10 I didn't know that there were sparrows in the wall. My eyes were open and the sparrows dropped warm dung into my eyes, and white films came over my eyes. I went to the physicians, and they didn't help me; but Ahikar nourished me, until I went\f + \fr 2:10 \ft Some authorities read \fqa until he went.\f* into Elymais.
+\v 7 So¦663 I wept: and¦665 when¦666 the¦668 sun¦669 had set¦667, I went and dug a grave, and buried him.
+\v 8 My neighbours¦677 mocked me, and¦675 said, “He's no¦680 longer afraid to be put to death for this¦687 matter; and yet he fled away. Listen, he buries the¦694 dead¦695 again¦692.”
+\v 9 The¦699 same night¦700 I returned from¦706 burying him, and slept by the wall of my courtyard¦710, being polluted; and¦711 my face¦713 was¦716 uncovered.
+\v 10 I didn't know that¦720 there were sparrows¦721 in¦722 the¦723 wall. My eyes were¦725 open and¦726 the sparrows¦733 dropped warm dung into my eyes¦737, and¦739 white films came over my eyes¦744. I¦745 went to¦748 the physicians, and¦750 they didn't help me; but¦755 Ahikar nourished me, until¦758 I went\f + \fr 2:10 \ft Some authorities read \fqa until he went.\f* into Elymais.
 \p
-\v 11 My wife Hanah wove cloth in the women's chambers,
-\v 12 and sent the work back to the owners. They on their part paid her wages, and also gave her a kid.
-\v 13 But when it came to my house, it began to cry, and I said to her, “Where did this kid come from? Is it stolen? Give it back to the owners; for it is not lawful to eat anything that is stolen.”
-\v 14 But she said, “It has been given to me for a gift more than the wages.”
-\p I didn't believe her, and I asked her to return it to the owners; and I was ashamed of her.
-\p But she answered and said to me, “Where are your alms and your righteous actions? Listen, you and all your works are known.”\f + \fr 2:14 \ft Gr. \fqa all things are known with you.\f*
+\v 11 My wife Hanah wove cloth in¦770 the women's¦766 chambers,
+\v 12 and sent the work back to the owners. They on their part paid her wages¦783, and¦785 also¦785 gave her a¦786 kid.
+\v 13 But when¦787 it came to¦790 my house, it began to¦793 cry¦793, and¦794 I said¦795 to¦795 her, “Where did this¦798 kid come¦789 from? Is¦802 it stolen? Give¦803 it¦804 back to the¦805 owners; for¦808 it isn't¦810 lawful to¦811 eat¦811 anything that's stolen.”
+\v 14 But¦814 she said¦815, “It's been given¦817 to¦819 me for a gift¦816 more than the¦820 wages.”
+\p I didn't believe her, and¦822 I asked her to¦824 return it¦825 to the¦830 owners; and¦832 I was ashamed of her.
+\p But she¦835 replied to¦839 me, “What about your gifts to¦842 the¦843 poor and your righteous actions? Listen, you and all¦852 your works are known.”\f + \fr 2:14 \ft Grk. \fqa all things are known with you.\f*
 \c 3
+\s1 Tovi prays for death
 \p
-\v 1 I was grieved and wept, and prayed in sorrow, saying,
+\v 1 I was grieved¦856 and¦855 wept, and¦858 prayed in sorrow, saying,
 \p
-\v 2 “O master, you are righteous, and all your works and all your ways are mercy and truth, and you judge true and righteous judgement forever.
-\v 3 Remember me, and look at me. Don't take vengeance on me for my sins and my ignorances, and the sins of my fathers who sinned before you.
-\v 4 Because they disobeyed your commandments. You gave us as plunder, for captivity, for death, and for a proverb of reproach to all the nations amongst whom we are dispersed.
-\v 5 Now your judgements are many and true, that you should deal with me according to my sins and the sins of my fathers, because we didn't keep your commandments, for we didn't walk in truth before you.
-\v 6 Now deal with me according to that which is pleasing in your sight. Command my spirit to be taken from me, that I may be released, and become earth. Because it is more profitable for me to die rather than to live, because I've heard false reproaches, and there is much sorrow in me. Command that I be released from my distress, now, and go to the everlasting place. Don't turn your face away from me.”
+\v 2 “O master, you're righteous, and¦866 all¦867 your works¦869 and¦871 all¦872 your ways are mercy and¦877 truth¦878, and¦879 you¦884 judge¦885 true and¦882 righteous judgement¦880 forever.
+\v 3 Remember¦889 me, and¦891 look at me. Don't¦895 take vengeance on¦893 me for my sins¦899 and¦901 my ignorances, and¦905 the¦906 sins of my fathers¦907 who sinned¦910 before¦911 you¦912.
+\v 4 Because¦914 they disobeyed your commandments¦916. You¦917 gave¦919 us as plunder, for captivity¦924, for death¦926, and¦927 for a proverb of reproach to all¦930 the¦931 nations¦932 among¦933 whom we're dispersed.
+\v 5 Now¦937 your judgements¦940 are many and¦943 true¦944, that¦956 you should deal with me according to my sins¦950 and¦952 the¦953 sins of my fathers¦954, because we¦955 didn't keep your commandments¦960, for¦963 we didn't walk in¦965 truth¦966 before¦967 you¦968.
+\v 6 Now¦970 deal with me according¦971 to¦971 that¦972 which is pleasing¦973 in your sight. Command my¦978 spirit¦982 to be taken from me, that I may be released, and become earth¦988. Because¦989 it's more profitable for me to¦992 die¦992 rather than¦993 to¦994 live¦994, because¦995 I've heard¦998 false¦997 reproaches, and¦999 there's¦1001 much¦1002 sorrow in¦1003 me. Command that I be released from my distress, now, and go to the¦1012 eternal¦1013 place¦1014. Don't¦1015 turn your face¦1018 away¦1020 from¦1020 me.”
+\s1 Sarah's prayer and God's answer
 \p
-\v 7 The same day it happened to Sarah the daughter of Re’uel in Ahmeta of Maday \add !(Media)\add*, that she also was reproached by her father's maidservants;
-\v 8 because that she had been given to seven husbands, and Ashmedai the evil spirit\f + \fr 3:8 \ft Gr. \fqa demon.\f* killed them, before they had lain with her. And they said to her, “Do you not know that you strangle your husbands? You have had already seven husbands, and you haven't borne the name of any one of them.
-\v 9 Why do you scourge us? If they are dead, go your ways with them. Let us never see either son or daughter from you.”
-\v 10 When she heard these things, she was grieved exceedingly, so that she thought about hanging herself. Then she said, “I am the only daughter of my father. If I do this, it will be a reproach to him, and I'll bring down his old age with sorrow to the grave.”\f + \fr 3:10 \ft Gr. \fqa Hades.\f*
-\v 11 Then she prayed by the window, and said, “Blessed are you, Oh master my god, and blessed is your holy and honourable name forever! Let all your works praise you forever!
-\v 12 And now, master, I've set my eyes and my face towards you.
-\v 13 Command that I be released from the earth, and that I no longer hear reproach.
-\v 14 You know, master, that I am pure from all sin with man,
-\v 15 and that I never polluted my name or the name of my father in the land of my captivity. I am the only daughter of my father, and he has no child that will be his heir, nor brother near him, nor son belonging to him, that I should keep myself for a wife to him. Seven husbands of mine are dead already. Why should I live? If it doesn't please you to kill me, command some regard to be had of me, and pity taken of me, and that I hear no more reproach.”
+\v 7 The¦1023 same day¦1025 it happened¦1026 to¦1026 Sarah the¦1027 daughter¦1028 of Re'uel in¦1031 Ahmeta of Maday \add !(Media)\add*, that¦1033 she¦1036 also¦1035 was reproached by¦1038 her father's¦1040 female servants;
+\v 8 because that¦1042 she'd been given to¦1043 seven¦1046 husbands, and¦1047 Ashmedai the¦1049 evil¦1050 spirit\f + \fr 3:8 \ft Grk. \fqa demon.\f* killed¦1052 them, before they'd lain with¦1057 her. And¦1062 they said¦1063 to¦1066 her, “Don't you¦1068 know that¦1069 you strangle your husbands? You've already¦1071 had seven¦1072 husbands, and¦1074 you haven't borne the name of any one¦1075 of them.
+\v 9 Why do you scourge us? If¦1082 they're dead, go your ways with¦1085 them. Let us never see either son¦1090 or¦1091 daughter¦1092 from you.”
+\v 10 When she¦1096 heard¦1097 these things, she was deeply distressed, so¦1100 that she thought about hanging herself. Then¦1102 she said¦1103, “I'm¦1106 my father's¦1108 only daughter. If¦1110 I do¦1111 this¦1112, it'll¦1114 be a reproach to him, and¦1116 I'll bring down his old¦1118 age¦1118 with¦1121 sorrow to the grave.”\f + \fr 3:10 \ft Grk. \fqa Hades.\f*
+\v 11 Then¦1125 she prayed¦1126 by the¦1128 window, and¦1130 said¦1131, “Blessed are¦1133 you, Oh master my god¦1136, and¦1138 blessed is your holy¦1144 and¦1145 honourable¦1146 name¦1141 forever! Let all¦1152 your works¦1154 praise you¦1155 forever!
+\v 12 And¦1159 now¦1160, master, I've set my eyes¦1163 and¦1165 my face¦1167 towards¦1169 you¦1170.
+\v 13 Command that I¦1174 be released¦1173 from¦1175 the¦1176 earth¦1177, and¦1178 that I no longer hear¦1180 reproach¦1183.
+\v 14 You¦1184 know¦1185, master, that¦1187 I'm¦1189 pure from¦1190 all¦1191 sin¦1192 with man¦1193,
+\v 15 and¦1194 that¦1232 I never¦1256 polluted my name or my father's¦1204 name¦1202 in¦1206 the¦1207 land¦1208 of my captivity. I'm¦1213 the¦1214 only daughter of my father¦1215, and¦1217 he has no child¦1221 that'll¦1222 be his heir, nor brother¦1226 near¦1227 him, nor son¦1231 belonging to him, that I should keep myself for a wife¦1236 to¦1238 him. Seven¦1240 husbands of mine are dead already¦1237. Why¦1241 should I¦1242 live¦1243? If¦1245 it doesn't please you¦1248 to¦1249 kill¦1249 me, command some regard to be had of me, and pity taken of me, and that I hear¦1260 no more reproach¦1262.”
 \p
-\v 16 The prayer of both was heard before the glory of the great God.
-\v 17 Refael \add !(Raphael)\add* also was sent to heal them both, to scale away the white films from Tovi's eyes, and to give Sarah the daughter of Re’uel for a wife to Toviyah \add !(Tobias)\add* the son of Tovi; and to bind the evil spirit\f + \fr 3:17 \ft Gr. \fqa demon.\f* Ashmedai; because it belonged to Toviyah that he should inherit her. At that very time, Tovi returned and entered into his house, and Sarah the daughter of Re’uel came down from her upper chamber.
+\v 16 The prayer¦1265 of both¦1266 was heard before¦1267 the¦1268 glory¦1269 of¦1270 the¦1270 great¦1271 God.
+\v 17 Refael \add !(Raphael)\add* also¦1273 was sent¦1274 to¦1275 heal¦1275 them both¦1277, to scale away the white films from Tovi's eyes, and¦1283 to give¦1288 Sarah the¦1285 daughter of¦1286 Re'uel for a wife¦1293 to¦1288 Toviyah \add !(Tobias)\add* the¦1290 son¦1291 of Tovi; and¦1294 to¦1295 bind¦1295 the¦1297 evil¦1298 spirit\f + \fr 3:17 \ft Grk. \fqa demon.\f* Ashmedai; because¦1300 it belonged to Toviyah that he should inherit¦1303 her. At that very time¦1308, Tovi returned and entered¦1311 into his house¦1314, and¦1316 Sarah the¦1318 daughter of¦1319 Re'uel came¦1321 down¦1321 from¦1322 her upstairs room.
 \c 4
+\s1 Tovi's advice to Toviyah
 \p
-\v 1 In that day Tovi \add !(Tobit)\add* remembered the money which he had left in trust with Gabael in Rages of Maday \add !(Media)\add*,
-\v 2 and he said to himself, I've asked for death; why do I not call my son Toviyah, that I may explain to him about the money before I die?
-\v 3 And he called him, and said,
-\p “My child, if I die, bury me. Don't despise your mother. Honour her all the days of your life, and do that which is pleasing to her, and don't grieve her.
-\v 4 Remember, my child, that she has seen many dangers for you, when you were in her womb. When she is dead, bury her by me in one grave.
-\v 5 My child, be mindful of the master our god all your days, and don't let your will be set to sin and to transgress his commandments: do righteousness all the days of your life, and don't follow the ways of unrighteousness.
-\v 6 Because if you do what is true, your activities will prosperously succeed for you, and for all those who do righteousness.
-\v 7 Give alms from your possessions. When you give alms, don't let your eye be envious. Don't turn away your face from any poor man, and the face of God won't be turned away from you.
-\v 8 As your possessions are, give alms of it according to your abundance. If you have little, don't be afraid to give alms according to that little;
+\v 1 In¦1326 that¦1329 day¦1328 Tovi \add !(Tobit)\add* remembered¦1330 the¦1333 money¦1334 which¦1335 he'd left in trust with Gabael in Rages of Maday \add !(Media)\add*,
+\v 2 and¦1342 he said¦1343 to¦1343 himself¦1345, I've¦1346 asked for death¦1348; why don't I call my son¦1354 Toviyah, that I may explain to him about the money before¦1359 I die¦1360?
+\v 3 And¦1362 he¦1364 called¦1363 him, and said¦1365,
+\p “My child¦1366, if¦1367 I¦1370 die, bury me. Don't¦1372 despise your mother¦1375. Honour¦1377 her all¦1379 the¦1380 days¦1381 of your life¦1383, and¦1385 do¦1386 that¦1387 which is pleasing¦1388 to her, and¦1390 don't¦1391 grieve her.
+\v 4 Remember¦1394, my child¦1395, that¦1396 she's seen¦1399 many dangers for you, when you were in¦1402 her womb¦1404. When¦1405 she's¦1408 dead, bury her by me in¦1411 one¦1412 grave.
+\v 5 My child¦1417, be mindful of¦1419 the¦1419 master our god¦1420 all your days, and¦1423 don't¦1424 let your will be set to¦1426 sin¦1426 and¦1427 to¦1433 transgress his commandments¦1430: do¦1433 righteousness¦1432 all¦1434 the¦1435 days¦1436 of your life¦1438, and¦1440 don't¦1441 follow the ways of unrighteousness¦1446.
+\v 6 Because¦1447 if you do what is¦1453 true, your activities will prosperously succeed for you¦1457, and¦1458 for all¦1459 those who do¦1461 righteousness¦1463.
+\v 7 Give to the poor from your possessions. When you give to the poor, don't let your eye be envious. Don't turn away your face from any poor man, and God's face won't be turned away from you.
+\v 8 Give to the poor in proportion to what you have. If you have little, don't be afraid to give from that little;
 \v 9 for you lay up a good treasure for yourself against the day of necessity;
-\v 10 because alms-giving delivers from death, and doesn't allow you to come into darkness.
-\v 11 Alms is a good gift in the sight of the Most High for all that give it.
-\v 12 Beware, my child, of all fornication, and take first a wife \add ≈from your own extended family\add*. Don't take a strange wife, who is not of your father's tribe; for we are the descendants of the prophets. Remember, my child, that Noah, Avraham, Yitshak \add !(Isaac)\add*, and Ya’akov \add !(Jacob)\add*, our fathers of old time, all took wives of their kindred, and were blessed in their children, and their seed will inherit the land.
+\v 10 because giving to the poor delivers from death, and doesn't allow you to come into darkness.
+\v 11 Giving to the poor is a good gift in the sight of the Most High for all that give it.
+\v 12 Beware, my child, of all fornication, and take first a wife \add ≈from your own extended family\add*. Don't take a strange wife, who isn't of your father's tribe; for we're the descendants of the prophets. Remember, my child, that Noah, Avraham, Yitshak \add !(Isaac)\add*, and Ya'akov \add !(Jacob)\add*, our fathers of old time, all took wives of their kindred, and were blessed in their children, and their seed will inherit the land.
 \v 13 And now, my child, love your kindred, and don't scorn your kindred and the sons and the daughters of your people in your heart, to take a wife of them; for in scornfulness is destruction and much trouble, and in idleness is decay and great lack; for idleness is the mother of famine.
-\v 14 Don't let the wages of any man who works for you wait with you, but give it to him out of hand. If you serve God, you will be rewarded. Take heed to yourself, my child, in all your works, and be discreet in all your behaviour.
+\v 14 Don't let the wages of any man who works for you wait with you, but give it to him out of hand. If you serve God, you'll be rewarded. Take heed to yourself, my child, in all your works, and be discreet in all your behaviour.
 \v 15 And what you yourself hate, do to no man. Don't drink wine to drunkenness, and don't let drunkenness go with you on your way.
-\v 16 Give of your bread to the hungry, and of your garments to those who are naked. Give alms from all your abundance. Don't let your eye be envious when you give alms.
+\v 16 Give of your bread to the hungry, and of your clothes to those who are naked. Give to the poor from all your abundance. Don't let your eye be envious when you give to the poor.
 \v 17 Pour out your bread on the burial\f + \fr 4:17 \ft Or, \fqa tomb.\f* of the just, and give nothing to sinners.
-\v 18 Ask counsel of every man who is wise, and don't despise any counsel that is profitable.
-\v 19 Bless the master your god at all times, and ask of him that your ways may be made straight, and that all your paths and counsels may prosper; for every nation has no counsel; but the master himself gives all good things, and he humbles whom he will, as he will. And now, my child, remember my commandments, and let them not be blotted out of your mind.
-\v 20 And now I explain to you about the ten talents of silver, which I left in trust with Gabael the son of Gabrias at Rages of Maday \add !(Media)\add*.
-\v 21 And fear not, my child, because we are made poor. You have much wealth, if you fear God, and depart from all sin, and do that which is pleasing in his sight.”
+\v 18 Ask counsel of every man who's wise, and don't despise any counsel that's profitable.
+\v 19 Bless the¦1790 master your god¦1791 at all¦1786 times¦1787, and¦1792 ask¦1795 of him that¦1796 your ways may be¦1801 made straight, and¦1802 that all¦1803 your paths and¦1806 counsels may prosper; for¦1810 every¦1811 nation¦1812 has no¦1813 counsel; but¦1816 the¦1818 master himself gives¦1820 all¦1821 good things, and¦1824 he humbles whom he will¦1827, as¦1829 he will. And¦1831 now¦1832, my child¦1833, remember¦1834 my commandments¦1836, and¦1838 let them not¦1839 be blotted out¦1841 of your mind¦1843.
+\v 20 And¦1845 now¦1846 I explain to you¦1848 about the¦1849 ten¦1850 talents¦1851 of¦1852 silver, which¦1854 I left in¦1860 trust with Gabael the¦1862 son of Gabrias at Rages of Maday \add !(Media)\add*.
+\v 21 And¦1864 fear not¦1865, my child¦1867, because we're¦1870 made poor. You¦1871 have much¦1872 wealth, if¦1873 you fear¦1874 God¦1876, and¦1877 depart from¦1879 all¦1880 sin¦1881, and¦1882 do¦1883 that¦1868 which is pleasing¦1885 in his sight.”
 \c 5
+\s1 Refael joins Toviyah on his journey
 \p
-\v 1 Then Toviyah \add !(Tobias)\add* answered and said to him, “Father, I'll do everything that you've commanded me.
-\v 2 But how could I receive the money, since I don't know him?”
+\v 1 Then¦1888 Toviyah \add !(Tobias)\add* replied¦1891 to¦1891 him, “Father¦1893, I'll do¦1894 everything that you've commanded me.
+\v 2 But¦1899 how¦1900 could I receive¦1902 the¦1903 money¦1904, since I don't know¦1907 him?”
 \p
-\v 3 He gave him the handwriting, and said to him, “Seek a man who will go with you, and I'll give him wages, while I still live; and go and receive the money.”
+\v 3 He¦1911 gave him the¦1912 handwriting, and¦1914 said¦1915 to¦1917 him, “Seek¦1917 a¦1919 man¦1919 who'll go with you¦1922, and¦1923 I'll give¦1924 him wages¦1926, while I still live¦1928; and go and receive¦1930 the¦1932 money¦1933.”
 \p
-\v 4 He went to seek a man, and found Refael \add !(Raphael)\add* who was an messenger \add from God\add*
-\v 5 \add ≈but\add* he didn't know it. He said to him, “Can I go with you to Rages in Maday \add !(Media)\add*? Do you know those places well?”
+\v 4 He went to¦1936 seek¦1936 a¦1937 man¦1937, and¦1938 found¦1939 Refael \add !(Raphael)\add* who was¦1942 an messenger \add from God\add*
+\v 5 \add ≈but\add* he didn't know it. He said¦1948 to¦1952 him, “Can I go with¦1953 you¦1954 to Rages in¦1955 Maday \add !(Media)\add*? Do you know those places¦1964 well?”
 \p
-\v 6 The messenger said to him, “I'll go with you. I know the way well. I've lodged with our brother Gabael.”
+\v 6 The¦1968 messenger said¦1966 to¦1970 him, “I'll go with¦1971 you¦1972. I know the¦1974 way well. I've lodged with¦1978 our brother¦1981 Gabael.”
 \p
-\v 7 Toviyah \add !(Tobias)\add* said to him, “Wait for me, and I'll tell my father.”
+\v 7 Toviyah \add !(Tobias)\add* said to¦1985 him, “Wait for me, and¦1990 I'll tell¦1991 my father¦1993.”
 \p
-\v 8 He said to him, “Go, and don't wait. And he went in and said to his father, “Listen, I've found someone who will go with me.”
-\p But he said, “Call him to me, that I may know of what tribe he is, and whether he be a trustworthy man to go with you.”
+\v 8 He¦1996 said to¦1997 him, “Go, and¦1998 don't¦1999 wait. And¦2001 he¦2015 went¦2019 in and said to his father¦2005, “Listen, I've found¦2007 someone who'll¦2011 go with me.”
+\p But¦2012 he said¦2013, “Call¦2014 him to¦2016 me, that I may know¦2019 of what¦2020 tribe¦2021 he¦2022 is¦2022, and¦2023 whether he be a trustworthy¦2025 man to¦2027 go with¦2028 you¦2029.”
 \p
-\v 9 So he called him, and he came in, and they saluted one another.
-\v 10 And Tovi \add !(Tobit)\add* said to him, “Brother, of what tribe and of what family are you? Tell me.”
+\v 9 So¦2030 he¦2032 called¦2031 him, and¦2033 he came in, and¦2035 they saluted one¦2037 another¦2037.
+\v 10 And¦2038 Tovi \add !(Tobit)\add* said¦2039 to¦2039 him, “Brother¦2042, of what¦2044 tribe¦2045 and¦2046 of what¦2048 family¦2049 are¦2050 you¦2051? Tell me.”
 \p
-\v 11 He said to him, “Do you seek a tribe and a family, or a hired man which will go with your son?”
-\p And Tovi said to him, “I want to know, brother, your kindred and your name.”
+\v 11 He said to him, “Do you seek¦2061 a tribe¦2057 and¦2058 a family¦2078, or¦2062 a hired man which¦2064 will go with¦2066 your son¦2068?”
+\p And¦2070 Tovi said¦2071 to¦2074 him, “I want to¦2076 know¦2076, brother¦2075, your kindred and¦2080 your name¦2082.”
 \p
-\v 12 And he said, “I am Azaryah, the son of Hananyah the great, of your kindred.”
+\v 12 And¦2084 he said¦2085, “I'm¦2086 Azaryah, the son of¦2089 Hananyah the¦2089 great¦2090, of your kindred.”
 \p
-\v 13 And he said to him, “Welcome, brother. Don't be angry with me, because I sought to know your tribe and family. You are my brother, of an honest and good lineage; for I knew Hananyah and Jathan, the sons of Shemayah the great, when we went together to Yerushalem \add !(Jerusalem)\add* to worship, and offered the firstborn, and the tenths of our increase; and they didn't go astray in the error of our kindred. My brother, you are of a great stock.
-\v 14 But tell me, what wages shall I give you? A drachma a day, and those things that be necessary for you, as to my son?
-\v 15 And moreover, if you both return safe and sound, I'll add something to your wages.”
+\v 13 And¦2094 he said¦2095 to him, “Welcome, brother¦2099. Don't¦2101 be angry with me, because I¦2102 sought to¦2113 know¦2113 your tribe¦2107 and¦2114 family. You're¦2115 my brother¦2117, of an honest and good lineage; for¦2126 I¦2127 knew Hananyah and¦2129 Jathan, the¦2131 sons¦2132 of¦2134 Shemayah the¦2134 great¦2135, when we went together to¦2137 Yerushalem \add !(Jerusalem)\add* to¦2141 worship¦2141, and offered the¦2143 firstborn¦2144, and¦2145 the¦2146 tenths¦2147 of our increase; and¦2150 they didn't go astray¦2152 in¦2153 the¦2154 error¦2155 of our kindred. My brother¦2157, you're of a great stock.
+\v 14 But¦2164 tell¦2165 me, what wages¦2170 should I¦2166 give¦2171 you? A drachma¦2172 a day¦2174, and¦2175 whatever else you¦2178 need, as to my son¦2182?
+\v 15 And¦2184 moreover, if¦2191 you¦2187 both return safe and sound, I'll add something to¦2188 your wages¦2190.”
 \p
-\v 16 And so they agreed. And he said to Toviyah \add !(Tobias)\add*, “Prepare yourself for the journey. May God prosper you.” So his son prepared what was needful for the journey, and his father said to him, “Go with this man; but God, who dwells in heaven, will prosper your journey. May his messenger go with you.”
-\p Then they both departed, and the young man's dog went with them.
-\v 17 But Hanah his mother wept, and said to Tovi, “Why have you sent away our child? Isn't he the staff of our hand, in going in and out before us?
-\v 18 Don't be greedy to add money to money; but let it be as refuse compared to our child.
-\v 19 Because what the master has given us to live is enough for us.”
+\v 16 And¦2194 so they agreed. And¦2197 he said¦2198 to Toviyah \add !(Tobias)\add*, “Prepare¦2209 yourself for the¦2210 journey. May God prosper you.” So his son¦2211 prepared what was needful for the journey, and¦2217 his father¦2221 said to¦2223 him, “Go with¦2224 this man; but¦2229 God¦2234, who lives¦2233 in heaven¦2232, will prosper your¦2242 journey. May his messenger go with you¦2244.”
+\p Then¦2245 they both¦2247 departed, and¦2249 the¦2250 young man's dog¦2251 went with¦2254 them.
+\v 17 But¦2257 Hanah his mother¦2260 wept¦2256, and¦2262 said¦2263 to¦2264 Tovi, “Why have you sent away our child¦2269? Isn't¦2272 he the¦2273 staff¦2274 of our hand¦2276, in going in and¦2283 out before¦2285 us?
+\v 18 Don't¦2290 be greedy to add money¦2287 to money¦2289; but¦2292 let it be as refuse compared to our child¦2295.
+\v 19 Because what the master has given¦2300 us to¦2302 live¦2302 is¦2309 enough for us.”
 \p
-\v 20 Tovi \add !(Tobit)\add* said to her, “Don't worry, my sister. He'll return safe and sound, and your eyes will see him.
-\v 21 Because a good messenger will go with him. His journey will be prospered, and he will return safe and sound.”
+\v 20 Tovi \add !(Tobit)\add* said¦2311 to¦2316 her, “Don't¦2314 worry, my sister¦2317. He'll return¦2319 safe and sound, and your eyes¦2322 will see¦2324 him.
+\v 21 Because¦2327 a good messenger will go with him. His journey will be prospered, and¦2331 he'll¦2335 return safe and¦2336 sound.”
 \p
-\v 22 So she stopped weeping.
+\v 22 So¦2339 she stopped¦2340 weeping¦2341.
 \c 6
+\s1 Toviyah catches a fish
 \p
-\v 1 Now as they went on their journey, they came at evening to the river Hidekel, and they lodged there.
-\v 2 But the young man went down to wash himself, and a fish leapt out of the river, and would have swallowed up the young man.
-\v 3 But the messenger said to him, “Grab the fish!”
-\p So the young man grabbed the fish, and hauled it up onto the land.
+\v 1 Now as they went on their journey, they came at evening¦2348 to¦2349 the¦2350 river¦2352 Hidekel, and¦2353 they lodged there¦2355.
+\v 2 But the young man went¦2359 down¦2359 to wash himself, and¦2361 a fish¦2363 leapt out of¦2365 the¦2365 river¦2366, and¦2367 would have swallowed¦2369 up the¦2370 young man.
+\v 3 But the messenger said¦2375 to¦2377 him, “Grab the¦2378 fish¦2379!”
+\p So¦2380 the young man grabbed the fish, and¦2386 hauled it¦2388 up onto the¦2390 land¦2391.
 \p
-\v 4 And the messenger said to him, “Cut the fish open, and take the heart, the liver, and the bile, and keep them with you.”
-\v 5 And the young man did as the messenger commanded him; but they roasted the fish, and ate it. And they both went on their way, till they drew near to Ahmeta.
+\v 4 And¦2392 the messenger said¦2393 to him, “Cut the¦2398 fish¦2399 open, and¦2400 take¦2401 the¦2402 heart¦2403, the¦2406 liver¦2406, and¦2407 the¦2408 bile, and keep them with you.”
+\v 5 And¦2412 the young man did¦2413 as the messenger commanded him; but they roasted the fish¦2423, and ate¦2425 it. And¦2426 they both¦2428 went¦2431 on their way¦2416, till¦2429 they drew near¦2431 to Ahmeta.
 \p
-\v 6 The young man said to the messenger, “Brother Azaryah, of what use is the heart, the liver, and the bile of the fish?”
+\v 6 The young man¦2442 said¦2435 to the messenger, “Brother¦2441 Azaryah, of what use is¦2443 the¦2444 heart¦2445, the¦2448 liver¦2448, and¦2449 the¦2450 bile of¦2452 the¦2452 fish¦2453?”
 \p
-\v 7 He said to him, “About the heart and the liver: If a demon or an evil spirit troubles anyone, we must burn those and make smoke of them before the man or the woman, and the affliction will flee.
-\v 8 But as for the bile, it is good to anoint a man that has white films in his eyes, and he will be healed.”
+\v 7 He said¦2455 to him, “About the¦2457 heart¦2458 and¦2459 the¦2461 liver¦2461: If¦2462 a demon¦2465 or¦2466 an evil¦2468 spirit¦2467 troubles anyone, we must burn those and make smoke of them before¦2472 the man¦2473 or¦2474 the woman¦2475, and¦2476 the affliction will flee.
+\v 8 But as for the bile, it's good to¦2482 anoint a¦2483 man¦2483 that¦2484 has white films in¦2487 his eyes¦2489, and¦2490 he'll be healed¦2491.”
+\s1 Refael encourages Toviyah to marry Sarah
 \p
-\v 9 But when they drew near to Rages,
-\v 10 the messenger said to the young man, “Brother, today we will lodge with Re’uel. He is your kinsman. He has an only daughter named Sarah. I'll speak about her, that she should be given to you for a wife.
-\v 11 Because her inheritance belongs to you, and you only are of her kindred.
-\v 12 The maid is fair and wise. And now hear me, and I'll speak to her father. When we return from Rages we will celebrate the marriage; for I know that Re’uel may in no way marry her to another according to the law of Mosheh \add !(Moses)\add*, or else he would be liable to death, because it belongs to you to take the inheritance, rather than any other.”
+\v 9 But¦2493 when they drew near to Rages,
+\v 10 the messenger said¦2497 to the young man¦2574, “Brother¦2502, today¦2503 we'll lodge with¦2505 Re'uel. He's¦2511 your kinsman. He¦2514 has an only daughter¦2515 named¦2516 Sarah. I'll speak¦2518 about¦2519 her, that she¦2520 should be given to¦2522 you¦2523 for a wife¦2526.
+\v 11 Because¦2528 her inheritance belongs to you, and¦2534 you¦2535 only are¦2537 of¦2539 her kindred¦2509.
+\v 12 The maid is fair and wise. And now¦2550 hear me, and¦2553 I'll speak to her father¦2556. When¦2559 we return from¦2561 Rages we'll celebrate the¦2564 marriage; for¦2566 I know¦2567 that¦2569 Re'uel may in no¦2570 way marry her to¦2572 another according¦2576 to¦2576 Mosheh's \add !(Moses)\add* law¦2578, or¦2580 else he'd be liable to death¦2582, because¦2583 it belongs to you¦2586 to¦2588 take¦2588 the inheritance, rather than¦2589 any other¦2575.”
 \p
-\v 13 Then the young man said to the messenger, “Brother Azaryah, I've heard that this maid has been given to seven men, and that they all perished in the bride-chamber.
-\v 14 Now I am the only son of my father, and I am afraid, lest I go in and die, even as those before me. Because a demon loves her, which harms no man, but those which come to her. Now I fear lest I die, and bring my father's and my mother's life to the grave with sorrow because of me. They have no other son to bury them.”
+\v 13 Then¦2592 the young man¦2606 said¦2593 to the messenger, “Brother¦2599 Azaryah, I've¦2601 heard that this¦2602 maid has been given to seven¦2605 men, and¦2607 that they all¦2608 perished in¦2609 the¦2610 bridal room.
+\v 14 Now¦2614 I'm¦2617 my father's¦2619 only son, and¦2620 I'm afraid¦2621 that I might go in and die, just¦2625 like¦2625 those before me. Because¦2629 a demon¦2630 loves¦2631 her, which¦2633 harms no¦2634 man, but¦2637 those which come to her. Now¦2642 I¦2643 fear¦2644 that I might die, and¦2647 bring my father's¦2652 and¦2654 my mother's¦2656 life¦2650 to¦2660 the¦2663 grave¦2664 with sorrow because of me. They have no other¦2668 son to¦2670 bury them.”
 \p
-\v 15 But the messenger said to him, “Don't you remember the words which your father commanded you, that you should take a wife of your own kindred? Now hear me, brother; for she will be your wife. Don't worry about the demon; for this night she will be given you as wife.
-\v 16 And when\f + \fr 6:16 \ft Gr. \fqa if.\f* you come into the bride-chamber, you shall take the ashes of incense, and shall lay upon them some of the heart and liver of the fish, and shall make smoke with them.
-\v 17 The demon will smell it, and flee away, and never come again any more. But when you go near to her, both of you rise up, and cry to God who is merciful. He'll save you, and have mercy on you. Don't be afraid, for she was prepared for you from the beginning; and you will save her, and she will go with you. And I suppose that you will have children with her.”
+\v 15 But¦2676 the messenger said¦2675 to him, “Don't you remember the words¦2683 which¦2684 your father¦2688 commanded you, that¦2715 you should take¦2692 a wife¦2694 of¦2696 your own kindred? Now¦2700 hear me, brother¦2703; for she'll be¦2706 your wife¦2708. Don't worry about¦2710 the¦2710 demon¦2711; for this¦2716 night¦2717 she'll¦2718 be given¦2719 you¦2720 as wife¦2723.
+\v 16 And when\f + \fr 6:16 \ft Grk. \fqa if.\f* you come into the bridal room, take the ashes of incense, and put on them some of the heart and liver of the fish, and make smoke with them.
+\v 17 The demon will smell it, and flee away, and never come again any more. But when you go near to her, both of you rise up, and cry to God who's merciful. He'll save you, and have mercy on you. Don't be afraid, for she was prepared for you from the beginning; and you'll save her, and she'll go with you. And I suppose that you'll have children with her.”
 \p When Toviyah \add !(Tobias)\add* heard these things, he loved her, and his soul was strongly joined to her.
 \c 7
+\s1 Toviyah marries Sarah
 \p
-\v 1 They came to Ahmeta, and arrived at the house of Re’uel. But Sarah met them; and she greeted them, and they her. Then she brought them into the house.
-\v 2 Re’uel said to Edna his wife, “This young man really resembles Tovi \add !(Tobit)\add* my cousin!”
-\v 3 And Re’uel asked them, “Where are you two from, kindred?”
-\p They said to him, “We are of the sons of Naftali \add !(Naphtali)\add*, who are captives in Nineveh.”
+\v 1 They came to Ahmeta, and arrived at Re'uel's house. But Sarah met them; and she greeted them, and they her. Then she brought them into the house.
+\v 2 Re'uel said¦2834 to¦2834 Edna his wife¦2838, “This¦2842 young¦2843 man¦2843 really resembles Tovi \add !(Tobit)\add* my cousin!”
+\v 3 And¦2848 Re'uel asked¦2849 them, “Where are¦2853 you two from, kindred?”
+\p They said¦2856 to him, “We're of the¦2859 sons¦2860 of Naftali \add !(Naphtali)\add*, who¦2862 are captives in¦2864 Nineveh.”
 \p
-\v 4 He said to them, “Do you know Tovi our brother?”
-\p They said, “We know him.”
-\p Then he said to them, “Is he in good health?”
+\v 4 He¦2868 said to¦2869 them, “Do you know¦2869 Tovi our brother¦2872?”
+\p They said, “We¦2873 know him.”
+\p Then¦2875 he said to them, “Is he in good health?”
 \p
-\v 5 They said, “He is both alive, and in good health.” Toviyah \add !(Tobias)\add* said, “He is my father.”
+\v 5 They said, “He's both alive¦2878, and in good health.” Toviyah \add !(Tobias)\add* said¦2882, “He's¦2886 my father¦2884.”
 \p
-\v 6 And Re’uel sprang up, and kissed him, wept,
-\v 7 blessed him, and said to him, “You are the son of an honest and good man.” When he had heard that Tovi had lost his sight, he was grieved, and wept;
-\v 8 and Edna his wife and Sarah his daughter wept. They received them gladly; and they killed a ram of the flock, and served them meat.
-\p But Toviyah said to Refael \add !(Raphael)\add*, “Brother Azaryah, speak of those things of which you talked about in the way, and let the matter be finished.”
+\v 6 And¦2887 Re'uel sprang up, and¦2890 kissed¦2891 him, wept¦2894,
+\v 7 blessed¦2896 him, and¦2898 said¦2899 to¦2899 him, “You're the¦2901 son¦2907 of¦2902 an honest and good¦2903 man¦2906.” When¦2908 he'd heard¦2909 that¦2910 Tovi had lost his sight, he was grieved¦2916, and¦2917 wept¦2918;
+\v 8 and¦2919 Edna his wife¦2922 and¦2924 Sarah his daughter¦2927 wept. They received them gladly; and they killed a ram of the flock¦2937, and¦2938 served them meat.
+\p But Toviyah said¦2942 to Refael \add !(Raphael)\add*, “Brother¦2948 Azaryah, speak of those things of which¦2951 you talked about in¦2953 the¦2954 way¦2955, and¦2956 let the¦2958 matter be finished.”
 \p
-\v 9 So he communicated the thing to Re’uel. Re’uel said to Toviyah, “Eat, drink, and make merry:
-\v 10 for it belongs to you to take my child. However I'll tell you the truth.
-\v 11 I've given my child to seven men of our relatives, and whenever they came in to her, they died in the night. But for the present be merry.”
-\p And Toviyah said, “I \add ≈won't eat anything\add* here, until you all make an agreement and enter into that covenant with me.”
+\v 9 So¦2960 he communicated the thing to¦2967 Re'uel. Re'uel said¦2967 to Toviyah, “Eat¦2971, drink¦2972, and¦2973 make merry:
+\v 10 for¦2977 it belongs to¦2975 you¦2976 to¦2982 take¦2982 my child¦2980. However¦2983 I'll tell you¦2985 the¦2986 truth¦2987.
+\v 11 I've given my child¦2990 to seven¦2992 men¦2993 of our relatives, and¦2994 whenever¦2995 they came in to¦2998 her, they died in the¦3002 night¦3003. But¦3004 for the¦3005 present be merry.”
+\p And¦3010 Toviyah said¦3011, “I \add ≈won't eat anything\add* here¦3016, until¦3017 you all make an agreement and¦3020 enter into¦3021 that covenant with¦3022 me.”
 \p
-\v 12 Re’uel said, “Take her to yourself from now on according to custom. You are her relative, and she is yours. The merciful God will give all good success to you.”
-\v 13 And he called his daughter Sarah, and took her by the hand, and gave her to be wife of Toviyah, and said, “Listen, take her to yourself after the law of Mosheh \add !(Moses)\add*, and lead her away to your father.” And he blessed them.
-\v 14 He called Edna his wife, then took a book, wrote a contract, and sealed it.
-\v 15 Then they began to eat.
+\v 12 Re'uel said, “Take her to¦3025 yourself from¦3029 now¦3031 on according¦3032 to¦3032 custom. You're¦3038 her relative, and¦3040 she's¦3043 yours. The¦3044 merciful¦3046 God¦3047 will give¦2988 all good success to you¦3049.”
+\v 13 And¦3052 he called¦3053 his daughter¦3056 Sarah, and¦3058 took her by the¦3060 hand¦3061, and gave her to¦3063 be wife¦3066 of Toviyah, and¦3067 said¦3068, “Listen, take¦3059 her to¦3070 yourself after Mosheh's \add !(Moses)\add* law¦3072, and¦3076 lead her away to¦3078 your father¦3080.” And¦3082 he¦3084 blessed¦3083 them.
+\v 14 He called¦3086 Edna his wife¦3089, then¦3091 took¦3092 a book¦3093, wrote¦3094 a contract, and¦3096 sealed it.
+\v 15 Then¦3098 they began to¦3100 eat¦3100.
 \p
-\v 16 And Re’uel called his wife Edna, and said to her, “Sister, prepare the other chamber, and bring her in there.”
-\v 17 She did as he asked her, and brought her in there. She wept, and she received the tears of her daughter, and said to her,
-\v 18 “Be comforted, my child. May the master of heaven and earth give you favour\f + \fr 7:18 \ft Many ancient authorities read \fqa joy.\f* for this your sorrow. Be comforted, my daughter.”
+\v 16 And¦3101 Re'uel called¦3102 his wife¦3106 Edna, and¦3108 said¦3109 to¦3109 her, “Sister¦3111, prepare¦3112 the¦3113 other¦3114 chamber¦3115, and¦3116 bring¦3117 her in¦3117 there¦3107.”
+\v 17 She did¦3120 as he asked¦3122 her, and¦3123 brought¦3124 her in¦3124 there¦3126. She wept¦3128, and¦3129 she received¦3130 the tears of her daughter¦3134, and¦3136 said to¦3137 her,
+\v 18 “Be comforted, my child¦3140. May the¦3141 master of¦3143 heaven¦3144 and¦3145 earth¦3147 give¦3148 you¦3149 favour\f + \fr 7:18 \ft Many ancient authorities read \fqa joy.\f* for¦3151 this your sorrow. Be comforted, my daughter¦3157.”
 \c 8
+\s1 Sarah is freed from the demon
 \p
-\v 1 When they had finished their supper, they brought Toviyah in to her.
-\v 2 But as he went, he remembered the words of Refael \add !(Raphael)\add*, and took the ashes of the incense, and put the heart and the liver of the fish on them, and made smoke with them.
-\v 3 When the demon smelled that smell, it fled into the uppermost parts of Mitsrayim \add !(Egypt)\add*, and the messenger bound him.
-\v 4 But after they were both shut in together, Toviyah rose up from the bed, and said, “Sister, arise, and let's pray that the master may have mercy on us.”
-\v 5 And Toviyah began to say, “Blessed are you, Oh God of our fathers, and blessed is your holy and glorious name forever. Let the heavens bless you, and all your creatures.
-\v 6 You made Adam, and gave him Havah \add !(Eve)\add* his wife for a helper and support. From them came the seed of men. You said, it is not good that the man should be alone. Let's make him a helper like him.
-\v 7 And now, Oh master, I take not this my sister for lust, but in truth. Command that I may find mercy and grow old with her.”
+\v 1 When¦3158 they'd finished their supper, they brought¦3162 Toviyah in¦3162 to¦3164 her.
+\v 2 But¦3167 as he went, he remembered¦3169 Refael's \add !(Raphael)\add* words¦3171, and¦3173 took¦3174 the¦3175 ashes of the¦3177 incense¦3178, and¦3179 put¦3180 the¦3181 heart¦3182 and¦3185 the¦3187 liver¦3187 of the¦3183 fish¦3184 on them, and¦3188 made smoke with them.
+\v 3 When¦3190 the¦3193 demon¦3194 smelled that¦3195 smell, it fled¦3197 into the¦3199 uppermost parts of Mitsrayim \add !(Egypt)\add*, and¦3202 the¦3205 messenger bound¦3203 him.
+\v 4 But¦3208 after they were both¦3210 shut in together, Toviyah rose up from¦3213 the¦3214 bed¦3215, and¦3216 said¦3217, “Sister¦3219, arise, and¦3220 let's pray¦3221 that¦3222 the master may have¦3223 mercy¦3223 on us.”
+\v 5 And¦3227 Toviyah began to¦3230 say¦3230, “Blessed are¦3232 you, Oh God¦3234 of our fathers¦3236, and¦3238 blessed is your holy¦3244 and¦3245 glorious name¦3241 forever. Let the¦3248 heavens¦3253 bless you¦3251, and¦3254 all¦3255 your creatures.
+\v 6 You¦3259 made¦3260 Adam¦3261, and¦3262 gave¦3263 him Havah \add !(Eve)\add* his wife¦3269 for a¦3267 helper and support. From¦3271 them came the¦3274 seed¦3276 of men. You¦3277 said¦3278, it isn't good¦3280 that the¦3282 man¦3283 should be alone¦3284. Let's make¦3285 him a helper like¦3288 him.
+\v 7 And¦3290 now¦3291, Oh master, I¦3296 take¦3297 not this¦3298 my sister¦3299 for lust, but¦3302 in truth¦3304. Command that I may find mercy¦3306 and¦3308 grow old with her.”
 \p
 \v 8 She said with him, “Amen.” And they both slept that night.
+\s1 Re'uel celebrates Toviyah's survival
 \p
-\v 9 Re’uel arose, and went and dug a grave,
-\v 10 saying, “Lest he also should die.”
-\v 11 And Re’uel came into his house,
-\v 12 and said to Edna his wife, “Send one of the maidservants, and let them see if he is alive. If not, we will bury him, and no man will know it.”
+\v 9 Re'uel arose, and went and dug a grave,
+\v 10 saying, “In case he¦3331 should also¦3330 die¦3332.”
+\v 11 And¦3333 Re'uel came¦3334 into his house¦3338,
+\v 12 and¦3340 said¦3341 to Edna his wife¦3344, “Send¦3346 one¦3347 of the¦3348 female servants, and¦3350 let them see if¦3352 he's alive¦3353. If¦3354 not¦3356, we'll bury him, and¦3360 no man will know¦3362 it.”
 \p
-\v 13 So the maidservant opened the door, and went in, and found them both sleeping,
-\v 14 and came out, and told them that he was alive.
+\v 13 So¦3363 the¦3365 maidservant¦3366 opened the¦3368 door¦3369, and went in, and found¦3371 them both¦3373 sleeping¦3374,
+\v 14 and¦3375 came out¦3376, and told them that¦3379 he was alive¦3380.
 \p
-\v 15 Then Re’uel blessed God, saying, “Blessed are you, Oh God, with all pure and holy blessing! Let your saints bless you, and all your creatures! Let all your messengers and your elect bless you forever!
-\v 16 Blessed are you, because you have made me glad; and it has not happened to me as I suspected; but you have dealt with us according to your great mercy.
-\v 17 Blessed are you, because you have had mercy on two that were the only begotten children of their parents. Show them mercy, Oh master. Fulfil their life in health with gladness and mercy.
+\v 15 Then¦3381 Re'uel blessed¦3382 God¦3385, saying, “Blessed are¦3388 you¦3389, Oh God¦3391, with all¦3393 pure¦3397 and¦3398 holy¦3402 blessing! Let your saints bless you¦3403, and¦3404 all¦3405 your creatures! Let all¦3410 your messengers and¦3414 your elect bless you forever!
+\v 16 Blessed are¦3424 you, because¦3425 you've¦3439 made¦3440 me glad; and¦3428 it hasn't happened to¦3430 me as¦3432 I suspected; but¦3434 you have dealt with us according¦3435 to¦3435 your great mercy¦3438.
+\v 17 Blessed are¦3444 you, because you've had mercy on two¦3447 that¦3445 were the only begotten children of their parents. Show them mercy, Oh master¦3451. Fulfil their life¦3455 in¦3457 health¦3458 with¦3459 gladness¦3460 and¦3461 mercy¦3462.
 \p
-\v 18 He commanded his servants to fill the grave.
-\v 19 He kept the wedding feast for them fourteen days.
-\v 20 Before the days of the wedding feast were finished, Re’uel sware to him, that he should not depart till the fourteen days of the wedding feast were fulfilled;
-\v 21 and that then he should take half of his goods, and go in safety to his father; and the rest, said he, when my wife and I die.
+\v 18 He commanded his servants to¦3463 fill the¦3468 grave¦3469.
+\v 19 He¦3472 kept the wedding¦3473 feast for them fourteen¦3475 days¦3474.
+\v 20 Before the¦3482 days¦3483 of¦3484 the¦3484 wedding¦3485 feast were finished, Re'uel sware to¦3488 him, that he¦3489 shouldn't¦3491 depart¦3488 till the¦3493 fourteen¦3494 days¦3495 of¦3496 the¦3496 wedding¦3497 feast were fulfilled¦3492;
+\v 21 and¦3498 that then¦3499 he should take¦3500 half¦3502 of his goods, and go in safety to his father¦3511; and¦3512 the¦3513 rest, he said, when¦3515 my wife¦3519 and¦3517 I¦3520 die.
 \c 9
+\s1 Refael collects Tovi's money
 \p
-\v 1 And Toviyah \add !(Tobias)\add* called Refael \add !(Raphael)\add*, and said to him,
-\v 2 “Brother Azaryah, take with you a servant and two camels, and go to Rages of Maday \add !(Media)\add* to Gabael, and receive the money for me, and bring him to the wedding feast,
-\v 3 because Re’uel has sworn that I must not depart.
-\v 4 My father counts the days; and if I wait long, he will be very grieved.
-\v 5 So Refael went on his way, and lodged with Gabael, and gave him the handwriting; so he brought forth the bags with their seals, and gave them to him.
-\v 6 Then they rose up early in the morning together, and came to the wedding feast. Toviyah blessed his wife.
+\v 1 And¦3521 Toviyah \add !(Tobias)\add* called¦3522 Refael \add !(Raphael)\add*, and¦3526 said¦3527 to¦3527 him,
+\v 2 “Brother¦3530 Azaryah, take¦3531 with¦3532 you a servant and¦3535 two¦3536 camels, and¦3538 go to Rages of Maday \add !(Media)\add* to Gabael, and¦3546 receive the¦3549 money¦3550 for me, and¦3551 bring¦3553 him to the¦3556 wedding¦3557 feast,
+\v 3 because¦3558 Re'uel has sworn that I mustn't¦3561 depart¦3562.
+\v 4 My father¦3566 counts the¦3569 days¦3570; and¦3571 if¦3572 I wait long, he'll be very grieved.
+\v 5 So¦3577 Refael went on his way, and¦3580 lodged with¦3582 Gabael, and¦3584 gave¦3585 him the¦3587 handwriting; so¦3590 he brought forth the bags with their seals¦3596, and¦3597 gave them to¦3598 him.
+\v 6 Then¦3600 they rose up early in the morning together, and¦3603 came¦3604 to¦3604 the¦3606 wedding¦3607 feast. Toviyah blessed¦3609 his wife¦3612.
 \c 10
+\s1 Toviyah's parents worry about him
 \p
-\v 1 Tovi \add !(Tobit)\add* his father counted every day. When the days of the journey were expired, and they didn't come,
-\v 2 he said, “Is he perchance detained?\f + \fr 10:2 \ft Many ancient authorities read \fqa “Are they perchance put to shame?”\f* Or is Gabael perchance dead, and there is no one to give him the money?”
+\v 1 Tovi \add !(Tobit)\add* his father¦3617 counted every day¦3621. When¦3622 the¦3625 days¦3626 of the¦3627 journey were expired, and¦3629 they didn't come¦3631,
+\v 2 he said¦3632, “Could he have been delayed?\f + \fr 10:2 \ft Many ancient authorities read \fqa “Are they perchance put to shame?”\f* Or¦3635 could Gabael have died¦3637, and¦3639 there's no one to¦3642 give¦3642 him the¦3643 money¦3644?”
 \v 3 He was very grieved.
 \p
-\v 4 But his wife said to him, “The child has perished, seeing he waits long.” She began to bewail him, and said,
-\v 5 “I care about nothing,\f + \fr 10:5 \ft Some authorities read \fqa “Woe is me.”\f* my child, since I've let you go, the light of my eyes.”
-\v 6 Tovi said to her, “\add ≈Relax and stay calm\add*. Don't worry. He's in good health.”
+\v 4 But¦3649 his wife¦3652 said to¦3653 him, “The¦3654 child¦3655 has perished, seeing he waits long.” She began to bewail him, and said¦3663,
+\v 5 “I¦3666 care about nothing,\f + \fr 10:5 \ft Some authorities read \fqa “Woe is me.”\f* my child¦3667, since¦3668 I've let you¦3670 go, the¦3671 light¦3672 of my eyes¦3674.”
+\v 6 Tovi said to her, “\add ≈Relax and¦3676 stay calm¦3680\add*. Don't¦3681 worry. He's¦3679 in good health.”
 \p
-\v 7 And she said to him, “\add ≈Relax and stay calm\add*! Don't deceive me. My child has perished.” And she went out every day into the way by which they went, and ate no bread in the day-time, and didn't stop bewailing her son Toviyah \add !(Tobias)\add* for whole nights, until the fourteen days of the wedding feast were expired, which Re’uel had sworn that he should spend there.
-\p Then Toviyah said to Re’uel, “Send me away, for my father and my mother look no more to see me.”
-\v 8 But his father-in-law said to him, “Stay with me, and I'll send to your father, and they will declare to him how things go with you.”
-\v 9 Toviyah said, “No. Send me away to my father.”
+\v 7 And¦3685 she said to him, “\add ≈Relax and stay calm¦3688\add*! Don't¦3689 deceive me. My child¦3694 has perished.” And¦3696 she went out¦3703 every day¦3699 into the¦3701 way by which they went¦3705, and¦3707 ate no bread¦3708 in the¦3711 day-time, and¦3712 didn't stop bewailing her son¦3719 Toviyah \add !(Tobias)\add* for whole nights¦3713, until¦3721 the¦3724 fourteen¦3725 days¦3726 of¦3727 the¦3727 wedding¦3728 feast were expired, which¦3729 Re'uel had sworn¦3730 that¦3742 he¦3733 should spend there¦3734.
+\p Then Toviyah said to¦3735 Re'uel, “Send me away¦3705, for my father¦3744 and¦3746 my mother¦3748 look no more¦3750 to see me.”
+\v 8 But¦3755 his father-in-law¦3758 said to¦3759 him, “Stay¦3759 with¦3760 me, and¦3762 I'll¦3762 send¦3763 to¦3764 your father¦3766, and¦3768 they'll declare to¦3772 him how things go with you¦3773.”
+\v 9 Toviyah said, “No. Send me away¦3763 to my father¦3781.”
+\s1 Toviyah and Sarah leave for Nineveh
 \p
-\v 10 Re’uel arose, and gave him Sarah his wife, and half his goods, servants and cattle and money;
-\v 11 and he blessed them, and sent them away, saying, “The god of heaven will prosper you, my children, before I die.”
-\v 12 And he said to his daughter, “Honour your father-in-law and your mother-in-law. They are now your parents. Let me hear a good report of you.” Then he kissed her.
-\p Edna said to Toviyah, “May the master of heaven restore you, dear brother, and grant to me that I may see your children of my daughter Sarah, that I may rejoice before the master. Listen, I commit my daughter to you in special trust. Don't cause her grief.
+\v 10 Re'uel arose¦3783, and¦3784 gave¦3786 him Sarah his wife¦3790, and¦3792 half¦3794 his goods, servants and¦3798 cattle and¦3800 money¦3801;
+\v 11 and¦3802 he¦3804 blessed¦3803 them, and sent¦3805 them away¦3805, saying, “The¦3810 god¦3811 of¦3812 heaven¦3813 will prosper you, my children¦3809, before¦3814 I¦3816 die¦3817.”
+\v 12 And¦3818 he said to¦3819 his daughter¦3821, “Honour¦3823 your father-in-law and your mother-in-law. They're now¦3828 your parents¦3829. Let me hear¦3834 a good¦3835 report of you.” Then¦3836 he¦3838 kissed her.
+\p Edna said¦3841 to¦3842 Toviyah, “May the¦3848 master of¦3850 heaven¦3851 restore you, dear¦3845 brother¦3844, and¦3852 grant¦3853 to¦3853 me that I¦3854 may see¦3869 your children¦3857 of my daughter¦3861 Sarah, that I may rejoice¦3864 before¦3865 the¦3866 master. Listen, I commit my daughter to¦3870 you¦3871 in¦3875 special trust. Don't¦3878 cause her grief.
 \c 11
+\s1 Toviyah returns home
 \p
-\v 1 After these things Toviyah also went his way, blessing God because he had prospered his journey; and he blessed Re’uel and his wife Edna. Then he went on his way until they drew near to Nineveh.
-\v 2 Refael \add !(Raphael)\add* said to Toviyah, “Don't you know, brother, how you left your father?
-\v 3 Let's run forward before your wife, and prepare the house.
-\v 4 But \add ≈bring the fish's gallbladder with you\add*.” So they went their way, and the dog went after them.
+\v 1 After¦3881 these things Toviyah also¦3884 went his way, blessing¦3886 God¦3888 because¦3889 he'd¦3893 prospered his journey; and¦3894 he blessed¦3895 Re'uel and¦3897 his wife¦3900 Edna. Then he¦3901 went on his way until¦3904 they drew near¦3906 to¦3911 Nineveh.
+\v 2 Refael \add !(Raphael)\add* said¦3911 to Toviyah, “Don't you know¦3916, brother¦3917, how¦3918 you left your father¦3921?
+\v 3 Let's run forward before¦3924 your wife¦3926, and¦3928 prepare¦3929 the¦3930 house¦3931.
+\v 4 But¦3933 \add ≈bring¦3932 the fish's¦3939 gallbladder with you\add*.” So¦3940 they went their way, and¦3942 the¦3944 dog¦3945 went after¦3946 them.
 \p
-\v 5 Hanah sat looking around towards the path for her son.
-\v 6 She saw him coming, and said to his father, “Listen, your son is coming with the man that went with him!”
+\v 5 Hanah sat¦3950 looking around towards¦3952 the¦3953 path¦3954 for her son¦3956.
+\v 6 She¦3960 saw him coming¦3961, and¦3962 said¦3963 to¦3963 his father¦3965, “Listen, your¦3966 son¦3969 is coming¦3971 with the¦3973 man¦3974 that¦3975 went with¦3977 him!”
 \p
-\v 7 Refael said, “I know, Toviyah, that your father will open his eyes.
-\v 8 Therefore anoint his eyes with the bile, and being pricked with it, he will rub, and will make the white films fall away. Then he will see you.”
+\v 7 Refael said¦3981, “I know¦3982, Toviyah, that¦3984 your father¦3989 will open¦3985 his eyes¦3987.
+\v 8 Therefore anoint his eyes¦3997 with the bile, and being pricked with it¦3998, he'll rub, and will make the¦4004 white films fall away. Then¦4006 he'll see¦4007 you¦4008.”
 \p
-\v 9 Hanah ran to him, and fell onto the neck of her son, and said to him, “I've seen you, my child! I am ready to die.” They both wept.
+\v 9 Hanah ran to him, and fell¦4012 onto the¦4014 neck¦4015 of¦4016 her son¦4017, and¦4019 said¦4020 to¦4022 him, “I've seen you¦4023, my child¦4024! I'm ready to die.” They both¦4031 wept.
+\s1 Tovi regains his sight
 \p
-\v 10 Tovi \add !(Tobit)\add* went towards the door and stumbled; but his son ran to him,
-\v 11 and took hold of his father. He rubbed the bile on his father's eyes, saying, “Cheer up, my father.”
-\v 12 When his eyes began to hurt, he rubbed them.
-\v 13 Then the white films peeled away from the corners of his eyes; and he saw his son, and fell onto his neck.
+\v 10 Tovi \add !(Tobit)\add* went¦4034 towards the¦4036 door¦4037 and¦4038 stumbled; but¦4041 his son¦4042 ran to him,
+\v 11 and¦4046 took¦4062 hold of¦4048 his father¦4049. He¦4050 rubbed the¦4053 bile on¦4055 his father's¦4059 eyes¦4057, saying, “Cheer up, my¦4060 father¦4063.”
+\v 12 When¦4065 his eyes¦4069 began to hurt, he¦4070 rubbed them.
+\v 13 Then¦4071 the white films peeled away¦4073 from¦4073 the corners of his eyes¦4077; and he saw his son¦4084, and fell¦4086 onto his neck¦4089.
 \p
-\v 14 He wept, and said, “Blessed are you, Oh God, and blessed is your name forever! Blessed are all your holy messengers!
-\v 15 Because you scourged, and had mercy on me. Listen, I see my son Toviyah \add !(Tobias)\add*.” And his son went in rejoicing, and told his father the great things that had happened to him in Maday \add !(Media)\add*.
+\v 14 He wept¦4092, and¦4093 said¦4094, “Blessed are¦4096 you, Oh God¦4098, and¦4099 blessed is your name¦4102 forever! Blessed¦4108 are all¦4109 your holy¦4111 messengers!
+\v 15 Because you scourged, and¦4116 had mercy on me. Listen, I¦4118 see¦4120 my son¦4123 Toviyah \add !(Tobias)\add*.” And¦4125 his son¦4128 went in rejoicing¦4130, and¦4131 told his father¦4134 the¦4136 great things that'd¦4114 happened to¦4139 him in¦4141 Maday \add !(Media)\add*.
 \p
-\v 16 Tovi went out to meet his daughter-in-law at the gate of Nineveh, rejoicing and blessing God. Those who saw him go marvelled, because he had received his sight.
-\v 17 Tovi gave thanks before them, because God had shown mercy on him. When Tovi came near to Sarah his daughter-in-law, he blessed her, saying, “Welcome, daughter! Blessed is God who has brought you to us, and blessed are your father and your mother.” And there was joy amongst all his kindred who were at Nineveh.
-\v 18 Ahikar and Nasbas his brother's son came.
-\v 19 Toviyah’ wedding feast was kept seven days with great gladness.
+\v 16 Tovi went out¦4145 to¦4157 meet his daughter-in-law at Nineveh's gate¦4159, rejoicing¦4152 and¦4153 blessing¦4154 God¦4156. Those who¦4163 saw¦4164 him go¦4145 marvelled¦4162, because he'd¦4165 received his sight.
+\v 17 Tovi gave thanks before¦4172 them, because¦4174 God had¦4175 shown mercy¦4175 on him. When¦4179 Tovi came¦4181 near¦4181 to Sarah his daughter-in-law, he blessed her, saying, “Welcome, daughter¦4192! Blessed is God¦4195 who's brought¦4197 you¦4198 to¦4199 us, and¦4201 blessed are your father¦4203 and¦4205 your mother¦4207.” And¦4209 there was¦4210 joy¦4211 among all¦4212 his kindred who¦4213 were at Nineveh.
+\v 18 Ahikar and Nasbas¦4222 his brother's son came¦4219.
+\v 19 Toviyah’ wedding¦4229 feast was kept seven¦4234 days¦4233 with¦4231 great gladness¦4232.
 \c 12
+\s1 Refael reveals who he is
 \p
-\v 1 And Tovi called his son Toviyah, and said to him, “See, my child, that the man which went with you have his wages, and you must give him more.”
+\v 1 And¦4235 Tovi called¦4236 his son¦4240 Toviyah, and¦4242 said¦4243 to¦4245 him, “See¦4245, my child¦4246, that¦4248 the¦4250 man¦4249 which went with you¦4252 have his wages¦4247, and¦4253 you must give him more.”
 \p
-\v 2 And he said to him, “Father, it is no harm to me to give him the half of those things which I've brought;
-\v 3 for he has led me for you in safety, and he cured my wife, and brought my money, and likewise cured you.”
+\v 2 And¦4257 he said¦4258 to¦4258 him, “Father¦4259, it's no¦4260 harm to me to¦4262 give¦4262 him the¦4264 half¦4265 of those things which¦4266 I've brought;
+\v 3 for he's led¦4282 me for you¦4271 in safety, and¦4273 he cured my wife¦4275, and¦4278 brought my money¦4280, and¦4283 likewise cured you¦4284.”
 \p
-\v 4 The old man said, “It is due to him.”
+\v 4 The¦4289 old¦4290 man¦4290 said¦4288, “It's¦4292 due to him.”
 \p
-\v 5 And he called the messenger, and said to him, “Take half of all that you have brought.”
+\v 5 And¦4293 he called¦4294 the¦4295 messenger, and¦4297 said¦4298 to¦4300 him, “Take¦4300 half¦4302 of all¦4303 that¦4304 you've brought.”
 \p
-\v 6 Then he called them both privately, and said to them, “Bless God, and give him thanks, and magnify him, and give him thanks in the sight of all that live, for the things which he has done with you. It is good to bless God and exalt his name, showing forth with honour the works of God. Don't be slack to give him thanks.
-\v 7 It is good to conceal the secret of a king, but to reveal gloriously the works of God. Do good, and evil won't find you.
-\v 8 Good is prayer with fasting, alms, and righteousness. A little with righteousness is better than much with unrighteousness. It is better to give alms than to lay up gold.
-\v 9 Alms delivers from death, and it purges away all sin. Those who give alms and do righteousness will be filled with life;
-\v 10 but those who sin are enemies to their own life.
-\v 11 Surely I'll conceal nothing from you. I've said, ‘It is good to conceal the secret of a king, but to reveal gloriously the works of God.’
-\v 12 And now, when you prayed, and Sarah your daughter-in-law, I brought the memorial of your prayer before the Holy One. When you buried the dead, I was with you likewise.
-\v 13 And when you didn't delay to rise up, and leave your dinner, that you might go and cover the dead, your good deed was not hidden from me. I was with you.
-\v 14 And now God sent me to heal you and Sarah your daughter-in-law.
-\v 15 I am Refael \add !(Raphael)\add*, one of the seven holy messengers which present the prayers of the saints and go in before the glory of the Holy One.”
+\v 6 Then¦4309 he called¦4310 them both¦4312 privately, and said¦4314 to¦4316 them, “Bless¦4316 God¦4318, and give him thanks, and magnify him, and give him thanks in the sight of all¦4330 that¦4331 live¦4332, for the things which¦4334 he's done¦4335 with¦4336 you¦4337. It's good to¦4340 bless¦4340 God¦4342 and¦4343 exalt his name¦4346, showing forth with honour God's¦4353 works¦4351. Don't¦4357 be slack to give him thanks.
+\v 7 It's good¦4363 to conceal a king's¦4362 secret, but¦4366 to reveal gloriously¦4371 God's¦4369 works¦4367. Do¦4373 good, and¦4374 evil¦4375 won't find¦4377 you¦4378.
+\v 8 Good¦4396 is prayer¦4380 with¦4381 fasting, giving to the poor, and righteousness¦4386. A little¦4389 with¦4390 righteousness¦4391 is better than¦4392 much¦4393 with¦4394 unrighteousness¦4395. It's better to¦4397 give to the poor than¦4399 to lay up gold¦4401.
+\v 9 Giving to the poor delivers from¦4404 death¦4405, and¦4407 it¦4408 purges away all¦4410 sin¦4411. Those who¦4412 give to¦4413 the poor and do¦4413 righteousness will be filled with life¦4418;
+\v 10 but¦4420 those who sin¦4421 are¦4423 enemies to¦4423 their own life¦4426.
+\v 11 Surely I'll conceal nothing from¦4430 you¦4431. I've said¦4434, ‘It's good¦4439 to conceal a king's¦4437 secret, but¦4441 to reveal gloriously¦4446 God's¦4444 works¦4442.’
+\v 12 And¦4447 now¦4448, when¦4449 you¦4451 prayed, and¦4452 Sarah your daughter-in-law, I¦4457 brought the¦4459 memorial¦4460 of your prayer¦4462 before¦4464 the¦4465 Holy¦4466 One. When¦4468 you buried the¦4470 dead¦4471, I was with you likewise¦4472.
+\v 13 And¦4475 when¦4476 you didn't delay to¦4479 rise¦4479 up, and¦4480 leave your dinner, that¦4485 you¦4484 might go¦4486 and cover the¦4488 dead¦4489, your good deed wasn't hidden from me. I¦4492 was with¦4495 you¦4496.
+\v 14 And¦4498 now¦4499 God¦4503 sent¦4500 me to¦4504 heal¦4504 you¦4505 and¦4506 Sarah your daughter-in-law.
+\v 15 I'm¦4512 Refael \add !(Raphael)\add*, one¦4514 of the¦4516 seven¦4517 holy¦4518 messengers which¦4520 present the¦4522 prayers¦4523 of the¦4524 saints and¦4526 go in before¦4528 the¦4529 glory¦4530 of¦4531 the¦4531 Holy¦4532 One.”
 \p
-\v 16 And they were both troubled, and fell onto their faces; for they were afraid.
-\v 17 And he said to them, “Don't be afraid. You will all have peace; but bless God forever.
-\v 18 Because I came not of any favour of my own, but by the will of your god. Therefore bless him forever.
-\v 19 All these days I appeared to you. I didn't eat or drink, but you all saw a vision.
-\v 20 Now give God thanks, because I ascend to him who sent me. Write in a book all the things which have been done.”
-\v 21 Then they rose up, and saw him no more.
-\v 22 They confessed the great and wonderful works of God, and how the master's messenger had appeared to them.
+\v 16 And¦4533 they were both¦4536 troubled¦4534, and¦4537 fell onto their faces¦4540; for they were afraid¦4542.
+\v 17 And¦4543 he¦4545 said¦4544 to them, “Don't¦4546 be afraid¦4547. You'll all have peace¦4548; but¦4552 bless¦4554 God¦4553 forever.
+\v 18 Because¦4558 I¦4568 came¦4569 not of any favour of my own, but¦4563 by your god's¦4567 will. Therefore bless¦4571 him forever.
+\v 19 All¦4576 these days¦4578 I appeared to you¦4580. I didn't¦4584 eat¦4583 or drink¦4585, but¦4586 you¦4588 all saw a vision.
+\v 20 Now¦4591 give God¦4594 thanks, because¦4595 I ascend¦4596 to¦4597 him who¦4598 sent¦4599 me. Write in a book¦4607 all¦4603 the¦4604 things which have been done.”
+\v 21 Then¦4608 they rose up, and¦4610 saw him no¦4611 more.
+\v 22 They confessed the¦4619 great¦4620 and wonderful works¦4618 of God, and¦4621 how¦4624 the master's messenger had appeared to¦4625 them.
 \c 13
+\s1 Tovi praises God
 \p
-\v 1 And Tovi \add !(Tobit)\add* wrote a prayer for rejoicing, and said,
-\q1 “Blessed is God who lives forever!
-\q2 Blessed is his kingdom!
+\v 1 And¦4630 Tovi \add !(Tobit)\add* wrote¦4632 a prayer¦4633 for rejoicing, and¦4636 said¦4637,
+\q1 “Blessed is God¦4640 who¦4641 lives¦4642 forever!
+\q2 Blessed is his kingdom¦4648!
 \q1
-\v 2 Because he scourges, and shows mercy.
-\q2 He leads down to the grave,\f + \fr 13:2 \ft Gr. \fqa Hades.\f* and brings up again.
-\q2 There is no one who will escape his hand.
+\v 2 Because¦4650 he¦4651 scourges, and¦4653 shows mercy¦4654.
+\q2 He leads down to the grave,\f + \fr 13:2 \ft Grk. \fqa Hades.\f* and brings up again.
+\q2 There's no¦4661 one who'll¦4665 escape his hand¦4666.
 \q1
-\v 3 Give thanks to him before the Gentiles, all you children of Yisrael \add !(Israel)\add*!
-\q2 Because he has scattered us amongst them.
+\v 3 Give thanks to¦4668 him before¦4673 the¦4674 Gentiles, all you children¦4671 of Yisrael \add !(Israel)\add*!
+\q2 Because¦4676 he's¦4677 scattered us among¦4680 them.
 \q1
 \v 4 Declare his greatness, there.
-\q2 Extol him before all the living,
-\q1 because he is our master,
-\q2 and God is our Father forever.
+\q2 Extol him before¦4689 all¦4690 the living¦4691,
+\q1 because he's¦4693 our master,
+\q2 and¦4696 God¦4697 is our Father¦4699 forever.
 \q1
-\v 5 He'll scourge us for our iniquities, and will again show mercy,
-\q2 and will gather us out of all the nations amongst whom you are all scattered.
+\v 5 He'll scourge us for our iniquities, and will again¦4713 show mercy,
+\q2 and¦4715 will gather¦4716 us out¦4718 of all¦4719 the¦4720 nations¦4721 among whom you're all scattered¦4724.
 \q1
 \v 6 If you turn to him with your whole heart and with your whole soul,
 \q2 to do truth before him,
-\q1 then he will turn to you,
+\q1 then he'll turn to you,
 \q2 and won't hide his face from you.
-\q1 See what he will do with you.
+\q1 See what he'll do with you.
 \q2 Give him thanks with your whole mouth.
 \q1 Bless the master of righteousness.
-\q2 Exalt the everlasting King.
+\q2 Exalt the eternal King.
 \q1 I give him thanks in the land of my captivity,
 \q2 and show his strength and majesty to a nation of sinners.
 \q1 Turn, you sinners, and do righteousness before him.
-\q2 Who can tell if he will accept you and have mercy on you?
+\q2 Who can tell if he'll accept you and have mercy on you?
 \q1
 \v 7 I exalt my god.
 \q2 My soul exalts the King of heaven,
@@ -356,59 +384,63 @@
 \q1
 \v 8 Let all men speak,
 \q2 and let them give him thanks in Yerushalem \add !(Jerusalem)\add*.
+\s1 Hope for Yerushalem
 \q1
 \v 9 Oh Yerushalem, the holy city,
-\q2 he will scourge you for the works of your sons,
+\q2 he'll scourge you for your sons' works,
 \q2 and will again have mercy on the sons of the righteous.
 \q1
 \v 10 Give thanks to the master with goodness,
-\q2 and bless the everlasting King,
+\q2 and bless the eternal King,
 \q1 that his tabernacle may be built in you again with joy,
 \q2 and that he may make glad in you those who are captives,
 \q2 and love in you forever those who are miserable.
 \q1
-\v 11 Many nations will come from afar to the name of the master God
-\q2 with gifts in their hands, even gifts to the King of heaven.
-\q1 Generations of generations will praise you,
-\q2 and sing songs of rejoicing.
+\v 11 Many nations¦4899 will come¦4902 from¦4901 afar¦4901 to¦4903 the¦4904 name¦4905 of¦4907 the¦4907 master God¦4908
+\q2 with gifts¦4909 in¦4910 their hands¦4911, even gifts to¦4912 the¦4915 King¦4916 of¦4917 heaven¦4918.
+\q1 Generations¦4919 of generations¦4920 will praise you¦4922,
+\q2 and sing songs of rejoicing¦4923.
 \q1
-\v 12 All those who hate you are cursed.
-\q2 All those who love you forever will be blessed.
+\v 12 All¦4925 those who¦4926 hate¦4927 you're¦4928 cursed.
+\q2 All¦4931 those who¦4932 love you¦4934 forever will be blessed¦4929.
 \q1
-\v 13 Rejoice and be exceedingly glad for the sons of the righteous;
-\q2 for they will be gathered together and will bless the master of the righteous.
+\v 13 Rejoice and¦4939 be extremely glad for the¦4942 sons¦4943 of the¦4944 righteous;
+\q2 for they'll be gathered together and¦4948 will bless the¦4950 master of the¦4952 righteous.
 \q1
-\v 14 Oh blessed are those who love you.
-\q2 They will rejoice for your peace.
-\q1 Blessed are all those who mourned for all your scourges;
-\q2 because they will rejoice for you when they have seen all your glory.
-\q1 They will be made glad forever.
+\v 14 Oh¦4954 blessed¦4955 are those who¦4956 love you¦4958.
+\q2 They'll rejoice¦4959 for your peace¦4962.
+\q1 Blessed¦4964 are all¦4968 those who¦4969 mourned for all your¦4974 scourges;
+\q2 because they'll rejoice¦4975 for you when they've seen all¦4977 your glory¦4979.
+\q1 They'll be made glad forever.
 \q2
-\v 15 Let my soul bless God the great King.
+\v 15 Let my soul¦4987 bless God¦4991 the great¦4995 King¦4993.
 \q1
-\v 16 Because Yerushalem \add !(Jerusalem)\add* will be built with sapphires, emeralds, and precious stones;
-\q2 your walls and towers and battlements with pure gold.
+\v 16 Because¦4996 Yerushalem \add !(Jerusalem)\add* will be built¦4997 with sapphires, emeralds, and precious stones¦5003;
+\q2 your walls¦5006 and¦5008 towers and¦5011 battlements with pure gold¦5015.
 \q1
-\v 17 The streets of Yerushalem will be paved with beryl, carbuncle, and stones of Ofir.
+\v 17 Yerushalem's streets will be paved with beryl, carbuncle, and stones¦5026 of Ofir.
 \q2
-\v 18 All her streets will say, “Hallelujah!”
-\q2 and give praise, saying, “Blessed be God, who has exalted you forever!”
+\v 18 All her streets will say¦5031, “Hallelujah¦5036!”
+\q2 and¦5037 give praise¦5040, saying, “Blessed be God¦5042, who's¦5046 exalted you forever!”
 \c 14
+\s1 Tovi's final advice
 \p
 \v 1 Then Tovi \add !(Tobit)\add* finished giving thanks.
-\v 2 He was fifty-eight years old when he lost his sight. After eight years, he received it again. He gave alms and he feared the master God more and more, and gave thanks to him.
+\v 2 He was fifty-eight years old when he lost his sight. After eight years, he received it again. He gave to the poor and he feared the master God more and more, and gave thanks to him.
 \p
-\v 3 Now he grew very old; and he called his son with the six sons of his son, and said to him, “My child, take your sons. Listen, I've grown old, and am ready to depart out of this life.
-\v 4 Go into Maday \add !(Media)\add*, my child, for I surely believe all the things which Yonah \add !(Jonah)\add* the prophet spoke of Nineveh, that it will be overthrown, but in Maday there will rather be peace for a season. Our kindred will be scattered in the earth from the good land. Yerushalem \add !(Jerusalem)\add* will be desolate, and the house of God in it will be burnt up, and will be desolate for a time.
-\v 5 God will again have mercy on them, and bring them back into the land, and they will build the house, but not like to the former house, until the times of that age are fulfilled. Afterward they will return from the places of their captivity, and build up Yerushalem with honour. The house of God will be built in it forever with a glorious building, even as the prophets spoke concerning it.
-\v 6 And all the nations will turn to fear the master God truly, and will bury their idols.
-\v 7 All the nations will bless the master, and his people will give thanks to God, and the master will exalt his people; and all those who love the master God in truth and righteousness will rejoice, showing mercy to our kindred.
-\v 8 And now, my child, depart from Nineveh, because those things which the prophet Yonah spoke will surely come to pass.
-\v 9 But you must keep the law and the ordinances, and show yourself merciful and righteous, that it may be well with you.
-\v 10 Bury me decently, and your mother with me. Don't stay at Nineveh. See, my child, what Aman did to Ahikar who nourished him, how out of light he brought him into darkness, and all the recompense that he made him. Ahikar was saved, but the other had his recompense, and he went down into darkness. Menasheh \add !(Manasseh)\add* gave alms, and escaped the snare of death which he set for him; but Aman fell into the snare, and perished.
-\v 11 And now, my children, consider what alms does, and how righteousness delivers.”
-\p While he was saying these things, he gave up the ghost in the bed; but he was one hundred and fifty eight years old. Toviyah \add !(Tobias)\add* buried him magnificently.
-\v 12 When Hanah died, he buried her with his father. But Toviyah departed with his wife and his sons to Ahmeta to Re’uel his father-in-law,
-\v 13 and he grew old in honour, and he buried his father-in-law and mother-in-law magnificently, and he inherited their possessions, and his father Tovi's \add !(Tobit)\add*.
-\v 14 He died at Ahmeta of Maday \add !(Media)\add*, being one hundred and twenty seven years old.
-\v 15 Before he died, he heard of the destruction of Nineveh, which Nevukadnetsar \add !(Nebuchadnezzar)\add* and Ahashverosh \add !(Ahasuerus)\add* took captive. Before his death, he rejoiced over Nineveh.
+\v 3 Now he grew very old; and he called¦5081 his son¦5083 with the¦5086 six sons of his son¦5087, and¦5089 said¦5090 to¦5090 him, “My child¦5092, take¦5093 your sons¦5095. Listen, I've grown old, and¦5099 am¦5106 ready to¦5100 depart out¦5103 of¦5104 this life¦5105.
+\v 4 Go into Maday \add !(Media)\add*, my child¦5111, for I surely believe all the things which¦5112 Yonah \add !(Jonah)\add* the¦5117 prophet¦5118 spoke¦5115 of Nineveh, that¦5121 it'll be overthrown, but in Maday there'll rather be¦5127 peace¦5128 for a season¦5131. Our kindred will be scattered in¦5137 the¦5138 earth¦5139 from¦5141 the¦5142 good land¦5144. Yerushalem \add !(Jerusalem)\add* will be¦5147 desolate, and¦5149 God's¦5153 house¦5151 in¦5154 it'll¦5155 be burnt¦5156 up, and¦5157 will be¦5159 desolate for a time¦5161.
+\v 5 God¦5167 will again¦5163 have mercy on them, and¦5168 bring them back into the¦5172 land¦5173, and¦5174 they'll build the¦5176 house¦5177, but not like¦5179 to the¦5180 former house, until¦5182 the times¦5184 of¦5185 that age¦5186 are fulfilled¦5183. Afterward¦5188 they'll return¦5169 from¦5191 the¦5192 places of their captivity, and build up Yerushalem with honour. God's¦5202 house¦5200 will be built in¦5203 it¦5204 forever with a glorious building¦5205, even as¦5207 the¦5211 prophets¦5212 spoke¦5208 about¦5209 it¦5210.
+\v 6 And¦5213 all¦5214 the¦5215 nations¦5216 will turn to¦5219 fear¦5219 the¦5221 master God¦5222 truly, and¦5223 will bury their idols¦5226.
+\v 7 All¦5230 the¦5231 nations¦5232 will bless the master, and his people¦5236 will give thanks to¦5238 God¦5240, and¦5241 the¦5244 master will exalt his people¦5245; and¦5247 all¦5249 those who¦5250 love the¦5253 master God¦5254 in¦5255 truth¦5256 and¦5257 righteousness¦5258 will rejoice¦5248, showing mercy¦5260 to our kindred.
+\v 8 And¦5264 now¦5265, my child¦5266, depart from¦5268 Nineveh, because¦5270 those things which¦5273 the¦5275 prophet¦5276 Yonah spoke¦5274 will surely¦5271 happen.
+\v 9 But you must keep¦5280 the¦5281 law¦5282 and¦5283 the¦5284 ordinances, and¦5286 show yourself merciful and¦5289 righteous, that¦5291 it may be well¦5293 with you.
+\v 10 Bury me decently, and your mother¦5301 with¦5303 me. Don't stay at Nineveh. See, my¦5304 child¦5310, what Aman did to Ahikar who¦5316 nourished him, how¦5319 out¦5320 of¦5321 light¦5322 he¦5324 brought¦5323 him into darkness¦5327, and¦5328 all the recompense that¦5336 he¦5331 made him. Ahikar was saved¦5335, but¦5337 the¦5338 other had his recompense, and¦5341 he¦5342 went¦5343 down¦5343 into darkness¦5346. Menasheh \add !(Manasseh)\add* gave to¦5348 the poor, and¦5350 escaped the snare of death¦5354 which¦5355 he set¦5356 for him; but Aman fell into the¦5362 snare, and¦5364 perished.
+\v 11 And¦5366 now¦5367, my children¦5368, consider what giving to the poor does¦5372, and¦5373 how righteousness¦5374 delivers.”
+\p While he¦5377 was saying these things, he¦5378 gave up the¦5381 ghost in the¦5385 bed¦5386; but¦5388 he was one hundred¦5390 and¦5392 fifty eight years¦5389 old. Toviyah \add !(Tobias)\add* buried¦5393 him magnificently.
+\s1 Toviyah leaves Nineveh
+\p
+\v 12 When¦5397 Hanah died¦5398, he¦5401 buried her with¦5402 his father¦5404. But¦5407 Toviyah departed with¦5409 his wife¦5411 and¦5413 his sons¦5415 to Ahmeta to Re'uel his father-in-law,
+\v 13 and¦5424 he grew old in honour, and¦5427 he¦5431 buried his father-in-law and mother-in-law magnificently, and he inherited their possessions, and his father¦5440 Tovi's \add !(Tobit)\add*.
+\v 14 He died¦5443 at Ahmeta of Maday \add !(Media)\add*, being one hundred¦5445 and twenty seven years¦5444 old.
+\v 15 Before he died¦5454, he¦5455 heard¦5452 of the¦5456 destruction¦5457 of Nineveh, which¦5459 Nevukadnetsar \add !(Nebuchadnezzar)\add* and Ahashverosh \add !(Ahasuerus)\add* took captive. Before¦5466 his death¦5468, he rejoiced¦5465 over Nineveh.

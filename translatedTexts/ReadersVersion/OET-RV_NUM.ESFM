@@ -1,4 +1,4 @@
-\id NUM - Open English Translation—Readers' Version (OET-RV) v0.2.2
+\id NUM - Open English Translation—Readers' Version (OET-RV) v0.2.3
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 NUM
@@ -51,7 +51,7 @@
 \v 10 Elishama¦61166 (Amihud's¦61169 son¦61163) from Yosef's¦61164 \add !(Joseph¦61164)\add* son Efrayim¦61165 \add !(Ephraim¦61165)\add*,
 \li1 Gamliel¦61171 (Pedahtsur's¦61174 son) from Yosef's son Menasheh¦61170 \add !(Manasseh¦61170)\add*,
 \li1
-\v 11 Avidan (Gid’oni's son¦61178) from Benyamin¦61176,
+\v 11 Avidan (Gid'oni's son¦61178) from Benyamin¦61176,
 \li1
 \v 12 Ahiezer¦61183 (Amishaday's¦61186 son¦61184) from Dan¦61182,
 \li1
@@ -131,7 +131,7 @@
 \v 19 with 40,500 in his¦61990 division¦61990.
 \v 20 The¦61998 tribe¦61998 of¦61998 Menasheh \add !(Manasseh)\add* will \add ≈set up\add* next to them, led by Pedahtsur's¦62006 son¦62004 Gamliel¦62003
 \v 21 with 32,200 in his¦62008 division¦62008.
-\v 22 Then¦62015 the¦62015 tribe¦62015 of¦62015 Benyamin led by Gid’oni's son¦62021 Avidan
+\v 22 Then¦62015 the¦62015 tribe¦62015 of¦62015 Benyamin led by Gid'oni's son¦62021 Avidan
 \v 23 with 35,400 in his¦62025 division¦62025.
 \v 24 The total¦62033 number in the¦62035 divisions¦62044 in the¦62036 Efrayim¦62037 camp¦62036 is¦62038 108,100, and \add ≈when travelling\add*, \add ≈they'll¦62046 all¦62033 go third¦62045\add*.
 \p
@@ -180,10 +180,10 @@
 \v 20 Merari's¦62457 sons¦62456 were¦62459 Mahli¦62459 and¦62460 Mushi¦62460.
 \m Those¦62461 were¦62463 the¦62463 families¦62463 of¦62463 the¦62464 Levites¦62464 by their¦62466 clans.
 \p
-\v 21 Gereshon's¦62468 descendants were the Livnim and¦62471 the¦62472 Shim’im¦62472, so they¦62474 made up the Gershonim.
+\v 21 Gereshon's¦62468 descendants were the Livnim and¦62471 the¦62472 Shim'im¦62472, so they¦62474 made up the Gershonim.
 \v 22 They had 7,500 males¦62482 that were at least a¦62485 month¦62485 old.
 \v 23 The¦62493 Gershoni clans¦62493 were to camp¦62497 on the western¦62498 side of the \add ≈sacred¦62496 tent¦62496\add*,
-\v 24 and¦62500 \add *their\add* leader¦62500 was¦62505 La’el's¦62508 son¦62506 Elyasaf¦62505.
+\v 24 and¦62500 \add *their\add* leader¦62500 was¦62505 La'el's¦62508 son¦62506 Elyasaf¦62505.
 \v 25 Gereshon's¦62513 descendants¦62511 were¦62516 responsible¦62510 for the¦62516 \add ≈sacred¦62516 tent¦62516\add*, including¦62517 its¦62518 covering¦62518 and¦62519 the¦62520 entrance¦62520 curtain,
 \v 26 the¦62524 courtyard curtains¦62524, and the courtyard entrance¦62529 curtain, that¦62531 surrounded¦62538 \add *it\add*. Also¦62535 the¦62537 ropes¦62540 \add ≈used to¦62541 hold them\add*.
 \p
@@ -283,7 +283,7 @@
 \v 42 They counted¦63642 the Merarim by their¦63646 clans¦63646 and families,
 \v 43 \add counting\add* the men from¦63650 thirty¦63651 to¦63654 fifty¦63657 years¦63658 old who¦63661 go into¦63664 the¦63664 \add ≈sacred tent¦63664\add* to minister,
 \v 44 and¦63667 the total for all the clans¦63669 was 3,200.
-\v 45 That was¦63675 from the Merari clans¦63676 who ministered at the¦63677 \add ≈sacred tent\add* and were listed¦63680 by Mosheh¦63681 and¦63682 Aharon¦63682 just as Yahweh¦63686 had instructed Mosheh¦63689.
+\v 45 That was¦63675 from the¦63675 Merari¦63678 clans¦63676 who ministered at the¦63677 \add ≈sacred tent\add* and were listed¦63680 by Mosheh¦63681 and¦63682 Aharon¦63682 just as Yahweh¦63686 had instructed Mosheh¦63689.
 \v 46 \add ≈So\add* Mosheh¦63696, Aharon¦63697, and¦63698 the¦63698 Israeli¦63699 leaders¦63698 counted¦63695 \add all\add* the¦63702 Levites¦63702 by their¦63703 clans¦63703 and¦63704 families,
 \v 47 \add counting\add* the men from¦63707 thirty¦63708 to¦63711 fifty¦63714 years¦63715 old who¦63718 go into¦63724 the¦63724 \add ≈sacred tent¦63724\add* to¦63719 minister¦63719 and¦63722 also¦63722 help¦63722 with carrying¦63723 it,
 \v 48 and the total came to 8,580.
@@ -402,7 +402,7 @@
 \li1 on the¦65379 sixth¦65379 day, Deuel's¦65386 son¦65428 Elyasaf¦65454 \add on behalf of\add* the¦65455 tribe of¦65455 Gad¦65382,
 \li1 on the¦65461 seventh¦65461 day, Amihud's¦65468 son¦65510 Elishama¦65536 \add on behalf of\add* the¦65537 tribe of¦65537 Efrayim¦65464 \add !(Ephraim¦65464)\add*,
 \li1 on the¦65543 eighth¦65543 day, Pedahtsur's son Gamliel¦65620 \add on behalf of\add* the¦65621 tribe of¦65621 Menasheh¦65546 \add !(Manasseh¦65546)\add*,
-\li1 on the¦65629 ninth¦65629 day, Gid’oni's son Avidan \add on behalf of\add* the tribe of Benyamin¦65632,
+\li1 on the¦65629 ninth¦65629 day, Gid'oni's son Avidan \add on behalf of\add* the tribe of Benyamin¦65632,
 \li1 on the¦65711 tenth¦65711 day, Amishaday's¦65718 son¦65760 Ahiezer¦65786 \add on behalf of\add* the¦65787 tribe of¦65787 Dan¦65714,
 \li1 on¦65792 the¦65793 eleventh day¦65795, Okran's¦65802 son¦65844 Pagiel¦65870 \add on behalf of\add* the¦65871 tribe of¦65871 Asher¦65798,
 \li1 and on¦65876 the¦65877 twelfth day¦65879, Eynan's son Ahira \add on behalf of\add* the tribe of¦65882 Naftali¦65882 \add !(Naphtali¦65882)\add*.
@@ -526,7 +526,7 @@
 \p
 \v 22 Efrayim¦67254 \add !(Ephraim¦67254)\add* tribe with their¦67255 banner \add ≈was¦67256 next to¦67255 leave under the¦67260 leadership of¦67260\add* Amihud's¦67262 son¦67260 Elishama¦67259.
 \v 23 Pedahtsur's son¦67271 Gamliel¦67270 led the company from Menasheh¦67269 \add !(Manasseh¦67269)\add* tribe¦67267.
-\v 24 Gid’oni's son¦67284 Avidan led the company from Benyamin¦67282 tribe¦67280.
+\v 24 Gid'oni's son¦67284 Avidan led the company from Benyamin¦67282 tribe¦67280.
 \p
 \v 25 Dan¦67294 tribe with their banner \add ≈was last to leave as the rear guard¦67295 under the leadership of¦67304\add* Amishaday's¦67306 son¦67304 Ahiezer¦67303.
 \v 26 Okran's¦67318 son¦67316 Pagiel¦67315 led the company from Asher¦67314 tribe¦67312.
@@ -552,7 +552,7 @@
 \p
 \v 1 \add ≈One day,\add* the¦67481 people¦67481 were¦67480 complaining¦67482 \add about their situation\add* and¦67486 \add ≈when Yahweh¦67487 heard¦67486 them, it¦67486 made him angry¦67489\add* \add ≈so¦67488 he sent a fire¦67488 that burnt¦67490 up the edges of their camp¦67497\add*.
 \v 2 The¦67500 people¦67500 cried¦67499 out¦67499 to¦67501 Mosheh¦67503 \add !(Moses¦67503)\add* \add for help\add*, and¦67504 \add *he¦67505\add* prayed¦67504 to¦67506 Yahweh¦67508, and¦67509 the¦67510 fire¦67510 stopped,
-\v 3 and¦67512 they named¦67513 that¦67516 place¦67515 Tav’erah \add (which means ‘burning’)\add* because¦67518 Yahweh's¦67523 fire¦67522 had¦67520 burnt¦67520 among¦67521 them¦67521.
+\v 3 and¦67512 they named¦67513 that¦67516 place¦67515 Tav'erah¦67517 \add (which means ‘burning’)\add* because¦67518 Yahweh's¦67523 fire¦67522 had¦67520 burnt¦67520 among¦67521 them¦67521.
 \s1 The choosing of seventy elders
 \rem /s1 Quail From the Lord; Moses Chooses Seventy Leaders
 \p
@@ -599,8 +599,8 @@
 \v 31 Then¦68044 Yahweh¦68048 sent a wind that blew quails¦68050 from¦68051 the¦68053 ocean¦68053, and¦68054 \add ≈they dropped\add* on the¦68057 ground¦68070 a day's walk in every direction around¦68064 the¦68065 camp¦68065 \add until they were piled\add* a metre high.
 \v 32 \add ≈So¦68072\add* the¦68073 people¦68073 went out and¦68078 collected the¦68080 quail¦68088—\add ≈each¦68081 family getting at least¦68089 the¦68083 equivalent of¦68083 ten¦68091 large barrels full\add*, and¦68093 they¦68093 spread the meat around¦68096 the¦68097 camp¦68097 \add to sun dry\add*.
 \v 33 Then when they started to \add cook and\add* eat \add some of the fresh\add* meat¦68099, Yahweh¦68106 \add ≈got very¦68114 angry¦68105\add* and¦68109 struck¦68109 the people¦68111 with a¦68112 terrible \add ≈deadly disease¦68112\add* before they could even chew¦68104 it¦68107.
-\v 34 \add ≈So¦68116\add* that place¦68121 was named¦68119 Kivrot-Hata’avah¦68124 \add (which means ‘Graves of the cravers’)\add*, because¦68125 that was where they¦68128 buried¦68128 the¦68131 people¦68131 who¦68132 had craved¦68132 \add <meat\add*.
-\v 35 From¦68134 Kivrot-Hata’avah, the¦68137 people¦68137 \add ≈moved on\add* to Hatserot¦68138 and¦68139 \add ≈stayed\add* \add *there¦68140\add*.
+\v 34 \add ≈So¦68116\add* that place¦68121 was named¦68119 Kivrot-Hata'avah¦68124 \add (which means ‘Graves of the cravers’)\add*, because¦68125 that was where they¦68128 buried¦68128 the¦68131 people¦68131 who¦68132 had craved¦68132 \add <meat\add*.
+\v 35 From¦68134 Kivrot-Hata'avah, the¦68137 people¦68137 \add ≈moved on\add* to Hatserot¦68138 and¦68139 \add ≈stayed\add* \add *there¦68140\add*.
 \c 12
 \s1 Miryam's punishment
 \rem /s1 Aaron and Miriam Jealous of Moses; The Complaints of Miriam and Aaron; Miriam Is Punished; Miriam and Aaron Oppose Moses
@@ -612,7 +612,7 @@
 \v 4 Then¦68189 Yahweh¦68190 suddenly¦68191 told¦68189 Mosheh¦68194, Aharon¦68197, and¦68198 Miryam¦68200, “Go out¦68201, the¦68202 three¦68202 of¦68202 you¦68202, to¦68203 the¦68205 \add ≈sacred\add* tent¦68205.” \add ≈So¦68207\add* the¦68208 three¦68208 of¦68208 them¦68208 went¦68207 there.
 \v 5 and¦68210 Yahweh¦68211 descended¦68210 in¦68212 a¦68212 pillar¦68212 of¦68212 cloud¦68213 and¦68214 stood¦68214 at the¦68216 tent¦68216 opening and¦68217 called¦68217 Aharon¦68218 and¦68219 Miryam¦68219, and¦68220 the two of¦68221 them¦68221 \add ≈stepped forward\add*,
 \v 6 and¦68223 he¦68223 said¦68223, “\add ≈Listen¦68224 to me\add*. When there's a prophet¦68231 of¦68231 Yahweh¦68232, I¦68235 make¦68235 myself¦68235 known¦68235 to him in a¦68236 vision¦68233 and speak¦68237 to him in a dream¦68236,
-\v 7 \add but\add* \add ≈I don't¦68241 do that to\add* my¦68244 servant¦68244 Mosheh¦68245. He's¦68250 the \add most\add* faithful¦68249 \add ≈of all¦68246 my¦68248 people\add*\x + \xo 12:7 \xt Heb 3:5.\x*
+\v 7 \add but\add* \add ≈I don't¦68241 do that to\add* my¦68244 servant¦68244 Mosheh¦68245. He's¦68250 the \add most\add* faithful¦68249 \add ≈of all¦68246 my¦68248 people\add*\x + \xo 12:7: \xt Heb 3:5.\x*
 \v 8 \add and\add* I¦68256 speak¦68256 to him¦68258 \add ≈directly\add*—\add ≈face-to-face, and not¦68260 in¦68258 parables, and¦68262 he's¦68264 able to see¦68264 my\add* form¦68262. \add ≈So¦68265\add* why¦68265 weren't you¦68267 afraid¦68267 to¦68268 speak¦68268 against¦68269 my¦68269 servant¦68269 Mosheh¦68270?”
 \p
 \v 9 \add ≈So¦68272\add* Yahweh¦68275 \add ≈was angry¦68274\add* at \add @Miryam¦68276 and¦68276 Aharon¦68276\add*. Then¦68277 he¦68277 departed¦68277
@@ -1048,9 +1048,9 @@
 \s1 Going around Edom via Moav
 \rem /s1 From Mount Hor to the Valley of the Moabites; The Journey to Moab; Israel's Journey to Moab
 \p
-\v 10 Then¦73233 the¦73234 \add ≈Israelis¦73234\add* set¦73233 off and¦73236 camped¦73236 at Ovot.
-\v 11 \add ≈When¦73239\add* they¦73239 left¦73239 Ovot, they¦73241 camped¦73241 at¦73242 Iyey-Ha’avarim in¦73244 the wilderness¦73244 \add ≈near\add* Moav's¦73249 \add !(Moab¦73249)\add* eastern border.
-\v 12 From¦73253 there¦73253 they¦73254 set¦73254 off and¦73255 camped¦73255 by the¦73256 Zered riverbed¦73256,
+\v 10 Then¦73233 the¦73234 \add ≈Israelis¦73234\add* set¦73233 off and¦73236 camped¦73236 at Ovot¦73237.
+\v 11 \add ≈When¦73239\add* they¦73239 left¦73239 Ovot¦73240, they¦73241 camped¦73241 at¦73242 Iyey-Ha'avarim in¦73244 the wilderness¦73244 \add ≈near\add* Moav's¦73249 \add !(Moab¦73249)\add* eastern border.
+\v 12 From¦73253 there¦73253 they¦73254 set¦73254 off and¦73255 camped¦73255 by the¦73256 Zered¦73257 riverbed¦73256,
 \v 13 \add ≈before moving on\add* and¦73261 camping¦73261 at \add the north side of\add* the¦73262 Arnon¦73263 \add river\add*, in¦73265 the wilderness¦73265 that¦73266 extends from¦73267 the¦73267 Amori border¦73267. (The¦73269 Arnon¦73271 is¦73272 the¦73272 border¦73272 between¦73274 Moav¦73275 and¦73276 the¦73277 Amorim¦73277.
 \v 14 That's why it¦73282 says¦73282 in¦73283 the¦73283 book¦73283 about Yahweh's¦73285 battles¦73284:
 \q1 “Vahev¦73288 in¦73289 Sufah¦73289, and the riverbeds there, and the Arnon¦73293 River
@@ -1369,11 +1369,11 @@
 \v 13 It's¦75455 an agreement¦75459 that¦75463 gives him¦75456 and¦75457 his \add ≈descendants¦75457\add* \add ≈the rights to be priests¦75460\add* because¦75462 he¦75464 was¦75464 zealous¦75464 \add ≈on his god's¦75465 behalf\add* and¦75466 he¦75466 \add ≈worked towards removing the guilt\add* of the \add ≈people¦75469\add*.”
 \p
 \v 14 The¦75473 \add ≈Israeli¦75474\add* man¦75473 \add ≈who was killed\add* with¦75478 the¦75480 Midyanite¦75480 \add >woman\add* was¦75481 Salu's¦75484 son¦75482 Zimri¦75481, a¦75485 \add ≈clan leader¦75485\add* from the Shim'on \add !(Simeon)\add* tribe.
-\v 15 The¦75492 Midyanite woman¦75492 \add ≈who¦75493 was¦75493 killed¦75493\add* was¦75495 Kozbi, the¦75496 daughter¦75496 of¦75496 Tsur¦75498, a¦75499 Midyanite clan¦75500 leader¦75499.
+\v 15 The¦75492 Midyanite woman¦75492 \add ≈who¦75493 was¦75493 killed¦75493\add* was¦75495 Kozbi¦75495, the¦75496 daughter¦75496 of¦75496 Tsur¦75498, a¦75499 Midyanite clan¦75500 leader¦75499.
 \p
 \v 16 Then¦75508 Yahweh¦75509 told¦75508 Mosheh¦75512,
 \v 17 “\add ≈Attack¦75519\add* the¦75518 Midyanites¦75518 and¦75519 \add ≈destroy\add* them¦75520
-\v 18 because¦75522 they¦75524 were¦75523 \add ≈treacherously deceiving¦75526\add* you¦75530 all over the¦75533 matter¦75533 of¦75533 Pe'or¦75535 and¦75536 Kozbi, the¦75540 daughter¦75540 of¦75540 one of¦75542 \add *their¦75543\add* \add #leaders¦75542\add* who¦75545 was¦75545 killed¦75545 on¦75546 the¦75546 day¦75546 of¦75546 the¦75548 \add ≈deadly disease¦75548\add* at \add Mt.\add* Pe'or¦75553.”
+\v 18 because¦75522 they¦75524 were¦75523 \add ≈treacherously deceiving¦75526\add* you¦75530 all over the¦75533 matter¦75533 of¦75533 Pe'or¦75535 and¦75536 Kozbi¦75539, the¦75540 daughter¦75540 of¦75540 one of¦75542 \add *their¦75543\add* \add #leaders¦75542\add* who¦75545 was¦75545 killed¦75545 on¦75546 the¦75546 day¦75546 of¦75546 the¦75548 \add ≈deadly disease¦75548\add* at \add Mt.\add* Pe'or¦75553.”
 \c 26
 \s1 The second census
 \rem /s1 The Second Census; A Census of the New Generation; Israel's Second Census
@@ -1389,7 +1389,7 @@
 \v 6 Hetsron¦75638, and Karmi¦75641.
 \v 7 Those¦75645 clans¦75646 added up to 43,730 men.
 \v 8 Palu's¦75659 \add #son¦75658\add* was¦75660 Eliav¦75660,
-\v 9 and¦75662 Eliav's¦75663 son¦75662 were¦75664 Nemuel¦75664, Datan¦75665, and¦75666 Aviram¦75666. (That¦75667 was¦75669 the¦75669 Datan¦75669 and¦75670 Aviram¦75670 who¦75674 were the leaders that¦75674 rebelled against Mosheh¦75678 \add !(Moses¦75678)\add* and¦75679 Aharon¦75681 \add !(Aaron¦75681)\add* when¦75685 they¦75685 joined Korah's¦75684 rebellion against Yahweh¦75688.\x + \xo 26:9 \xt 16:1-33.\x*
+\v 9 and¦75662 Eliav's¦75663 son¦75662 were¦75664 Nemuel¦75664, Datan¦75665, and¦75666 Aviram¦75666. (That¦75667 was¦75669 the¦75669 Datan¦75669 and¦75670 Aviram¦75670 who¦75674 were the leaders that¦75674 rebelled against Mosheh¦75678 \add !(Moses¦75678)\add* and¦75679 Aharon¦75681 \add !(Aaron¦75681)\add* when¦75685 they¦75685 joined Korah's¦75684 rebellion against Yahweh¦75688.\x + \xo 26:9: \xt 16:1-33.\x*
 \v 10 Then¦75690 the¦75691 earth¦75691 \add ≈split open¦75690\add* and¦75695 swallowed¦75695 them¦75696 and¦75697 Korah¦75699. Yahweh had also sent a fire¦75703 that consumed¦75702 250 men¦75707, and¦75708 they¦75708 became a¦75709 warning¦75709 sign¦75709.
 \v 11 \add ≈However,\add* Korah's¦75713 descendants¦75711 hadn't died¦75716 \add then\add*.)
 \s1 Shim'on's descendants
@@ -1461,7 +1461,7 @@
 \s1 Naftali's descendants
 \rem /s1 The Tribe of Naphtali
 \p
-\v 48 Naftali's¦76114 \add !(Naphtali¦76114)\add* descendants¦76113 came via his sons Yahtse'el, Guni¦76119,
+\v 48 Naftali's¦76114 \add !(Naphtali¦76114)\add* descendants¦76113 came via his sons Yahtse'el¦76116, Guni¦76119,
 \v 49 Yetser¦76123, and Shilem¦76126.
 \v 50 Those¦76130 clans¦76131 added up to¦76133 45,400 men.
 \s1 The census total and the division of land
@@ -1508,7 +1508,7 @@
 \rem /s1 Joshua to Succeed Moses; Joshua Chosen to Lead Israel; Joshua Is Chosen as Successor to Moses; Joshua Appointed Moses' Successor
 \r (Deu. 31:1-8)
 \p
-\v 12 Then¦76577 Yahweh¦76578 told¦76577 Mosheh¦76581 \add !(Moses¦76581)\add*, “Go¦76582 up¦76582 Mt¦76585. Avarim and¦76588 look¦76588 at the¦76591 land¦76591 that¦76592 I've¦76593 given¦76593 to¦76594 the¦76594 \add ≈Israelis¦76595\add*,\x + \xo 27:12-14: \xt Deu 3:23-27; 32:48-52.\x*
+\v 12 Then¦76577 Yahweh¦76578 told¦76577 Mosheh¦76581 \add !(Moses¦76581)\add*, “Go¦76582 up¦76582 Mt¦76585. Avarim¦76586 and¦76588 look¦76588 at the¦76591 land¦76591 that¦76592 I've¦76593 given¦76593 to¦76594 the¦76594 \add ≈Israelis¦76595\add*,\x + \xo 27:12-14: \xt Deu 3:23-27; 32:48-52.\x*
 \v 13 and¦76597 then you'll¦76597 \add ≈die and¦76599 join your¦76602 ancestors\add* just¦76606 like¦76606 your¦76609 brother¦76609 Aharon¦76608 \add !(Aaron¦76608)\add* \add ≈did\add*.
 \v 14 \add ≈That's because back\add* in¦76614 the¦76614 Tsin¦76616 \add !(Zin¦76616)\add* wilderness when the \add ≈people¦76618 complained about water¦76620\add*, you two rebelled¦76612 against¦76612 my¦76613 \add ≈command and failed to¦76621 respect my holiness¦76619\add* in front of¦76621 them. That was¦76623 \add when you struck the rock\add* at Merivah¦76625 \add near\add* Kadesh¦76626 in the¦76627 Tsin¦76629 wilderness.”
 \p
@@ -1738,7 +1738,7 @@
 \p
 \v 1 The \add people\add* from the Re'uven¦78901 and¦78902 Gad¦78904 \add ≈tribes\add* \add had amassed\add* \add ≈a lot of\add* livestock, and¦78907 they¦78907 \add ≈noticed¦78907\add* that the¦78910 Yazer¦78911 and¦78912 Gilead¦78915 \add ≈regions\add* \add ≈were¦78918 very¦78906 suitable\add* for livestock¦78919.
 \v 2 \add ≈So¦78921\add* \add *their leaders\add* went¦78921 to¦78928 Mosheh¦78930 \add !(Moses¦78930)\add* and¦78931 the¦78934 priest¦78934 Eleazar¦78933 and¦78935 the¦78937 \add ≈community¦78938 leaders¦78937\add* to¦78939 say¦78939,
-\v 3 \add The regions of\add* Atarot¦78941, Divon¦78942, Yazer¦78943, Nimrah¦78944, Heshbon¦78945, El’aleh¦78946, Sevam¦78947, Nevo¦78948, and¦78949 Be’on¦78949
+\v 3 \add The regions of\add* Atarot¦78941, Divon¦78942, Yazer¦78943, Nimrah¦78944, Heshbon¦78945, El'aleh¦78946, Sevam¦78947, Nevo¦78948, and¦78949 Be'on¦78949
 \v 4 are \add in\add* the¦78951 land¦78951 \add here\add* that¦78952 Yahweh¦78954 has \add ≈handed over to¦78955\add* \add ≈us Israelis¦78957\add*. It's¦78960 \add ideal\add* for livestock, and¦78961 \add we,\add* your¦78961 servants¦78961, \add ≈raise\add* livestock¦78962.
 \v 5 If¦78966 we've¦78968 \add ≈earnt\add* your favour¦78969, let¦78971 this¦78975 land¦78974 be¦78971 given¦78971 to¦78976 your¦78976 servants¦78976 for \add ≈us to¦78977 own¦78977\add*, \add rather than forcing us\add* to cross¦78980 over¦78980 the¦78983 Yarden¦78983 \add !(Jordan¦78983)\add* \add river with all the other tribes\add*.”
 \p
@@ -1779,12 +1779,12 @@
 \v 34 The¦79466 Gadim rebuilt¦79465 Divon¦79471, Atarot¦79474, Aroer¦79476,
 \v 35 Atrot¦79480-Shofan¦79481, Yazer¦79484, Yagebehah¦79485,
 \v 36 Beyt¦79489-Nimrah¦79490, and¦79491 Beyt¦79493-Haran¦79494—\add all\add* \add ≈fortified¦79496\add* cities¦79495 with pens¦79497 for \add &their\add* flocks¦79498.
-\v 37 The¦79500 Re’uvenim rebuilt¦79502 Heshbon¦79505, El’aleh¦79508, Kiryatayim¦79510,
+\v 37 The¦79500 Re'uvenim rebuilt¦79502 Heshbon¦79505, El'aleh¦79508, Kiryatayim¦79510,
 \v 38 Nevo¦79514, Ba'al¦79517-Me'on¦79518, and¦79521 Sivmah¦79523, \add ≈but¦79524\add* they¦79524 \add ≈renamed\add* \add some\add* of¦79528 the¦79529 cities¦79529.
 \p
 \v 39 The¦79534 descendants¦79534 of¦79534 Menasheh's¦79538 son¦79536 Makir¦79535 went¦79533 to¦79539 Gilead¦79539 and¦79540 captured¦79540 it¦79540—driving¦79541 out the¦79544 Amorim¦79544 who¦79545 \add ≈lived there\add*.
 \v 40 \add ≈So¦79549\add* Mosheh¦79550 gave¦79549 Gilead¦79553 to¦79554 Menasheh's¦79557 son¦79555 Makir¦79554, and¦79558 \add his clan\add* lived¦79558 there.
-\v 41 Menasheh's¦79564 \add other\add* son¦79562 Yair went¦79565 and¦79566 captured¦79566 \add @the Amori\add* villages¦79569 and¦79570 named¦79570 them¦79571 ‘Yair's¦79573 Towns’ \add (or ‘Havot-Ya’ir’)\add*.
+\v 41 Menasheh's¦79564 \add other\add* son¦79562 Yair went¦79565 and¦79566 captured¦79566 \add @the Amori\add* villages¦79569 and¦79570 named¦79570 them¦79571 ‘Yair's¦79573 Towns’ \add (or ‘Havot-Ya'ir’)\add*.
 \v 42 \add A man named\add* Novah¦79575 went¦79576 and¦79577 captured¦79577 Kenat¦79580 and¦79581 its¦79583 villages, and¦79584 renamed it¦79584 to¦79585 ‘Novah¦79586’ after himself.
 \c 33
 \s1 The journey legs from Mitsrayim to Sinay
@@ -1793,12 +1793,12 @@
 \v 1 \add @The following\add* are¦79591 \add the details\add* of¦79591 the¦79592 \add ≈stages of¦79592 Yisrael's¦79594\add* \add !(Israel¦79594)\add* \add ≈journeys¦79591\add* \add starting from\add* when they¦79596 exited Mitsrayim¦79598 \add !(Egypt¦79598)\add* \add ≈tribe-by-tribe\add* under Mosheh¦79602 \add !(Moses¦79602)\add* and¦79603 Aharon's¦79603 \add !(Aaron¦79603)\add* leadership.
 \v 2 Mosheh¦79606, \add ≈acting on¦79611 Yahweh's¦79614 instructions\add*, had written¦79605 down¦79605 their \add ≈departure points¦79609\add*, so¦79615 these¦79615 were¦79616 \add the legs of\add* their journeys:
 \p
-\v 3 The day after \add they celebrated\add* the ‘pass-over¦79629’ \add ≈(around the¦79631 end of¦79631 March)\add*, they¦79630 left¦79630 Ra’meses¦79620 \add city\add*, raising¦79635 \add ≈one fist\add* in full view of¦79636 all¦79637 Mitsrayim¦79639.
+\v 3 The day after \add they celebrated\add* the ‘pass-over¦79629’ \add ≈(around the¦79631 end of¦79631 March)\add*, they¦79630 left¦79630 Ra'meses¦79620 \add city\add*, raising¦79635 \add ≈one fist\add* in full view of¦79636 all¦79637 Mitsrayim¦79639.
 \v 4 \add ≈Meanwhile\add*, the Mitsrim \add !(Egyptians)\add* were¦79642 burying¦79642 all their oldest sons who'd been struck¦79645 down¦79645 by Yahweh¦79646 \add ≈who had\add* \add also\add* \add ≈totally humiliated\add* their¦79651 gods¦79651.
 \p
-\v 5 After leaving Ra’meses¦79660, the¦79657 \add ≈Israelis¦79659\add* \add went\add* to Sukot¦79662 and¦79661 camped¦79661 \add there\add*.
+\v 5 After leaving Ra'meses¦79660, the¦79657 \add ≈Israelis¦79659\add* \add went\add* to Sukot¦79662 and¦79661 camped¦79661 \add there\add*.
 \v 6 Then¦79664 they¦79664 left¦79664 Sukot¦79665 and¦79666 camped¦79666 at¦79667 Eytam¦79667 at the¦79669 edge¦79669 of¦79669 the¦79670 wilderness¦79670.
-\v 7 \add ≈After\add* Eytam¦79673, they turned¦79674 back¦79674 to¦79675 Pi¦79677-Hahirot¦79678 (opposite Ba'al¦79683-Tsefon) and¦79685 camped¦79685 \add ≈facing¦79686\add* Migdal.
+\v 7 \add ≈After\add* Eytam¦79673, they turned¦79674 back¦79674 to¦79675 Pi¦79677-Hahirot¦79678 (opposite Ba'al¦79683-Tsefon¦79684) and¦79685 camped¦79685 \add ≈facing¦79686\add* Migdal.
 \v 8 Then¦79689 they¦79689 left¦79689 Pi-Hahirot¦79691 and¦79692 walked¦79692 through the¦79693 middle¦79693 of¦79693 the¦79695 sea¦79695 into the Eytam¦79702 wilderness and¦79703 camped¦79703 at¦79704 Marah¦79704.
 \v 9 From¦79707 Marah¦79707, they¦79708 went¦79708 to¦79709 Eylim¦79709 \add *which¦79710\add* had twelve springs¦79713 with seventy¦79715 palm¦79716 trees¦79716 \add around them\add*, and¦79717 they¦79717 camped¦79717 there¦79719.
 \v 10 \add ≈After\add* Eylam, they camped¦79723 beside the¦79726 Red Sea¦79726
@@ -1809,8 +1809,8 @@
 \v 15 \add ≈When¦79763\add* they¦79763 left¦79763 Refidim¦79764, they¦79765 camped¦79765 in¦79766 the¦79766 Sinay¦79767 wilderness¦79766.
 \s1 The journey legs in the wilderness
 \p
-\v 16 From¦79770 the¦79770 Sinay¦79771 wilderness¦79770, they went to Kivrot-Hata’avah and camped¦79772 \add there\add*.
-\v 17 \add ≈When¦79776\add* they¦79776 left¦79776 Kivrot-Hata’avah, they¦79779 camped¦79779 at¦79780 Hatserot¦79780,
+\v 16 From¦79770 the¦79770 Sinay¦79771 wilderness¦79770, they went to Kivrot-Hata'avah and camped¦79772 \add there\add*.
+\v 17 \add ≈When¦79776\add* they¦79776 left¦79776 Kivrot-Hata'avah, they¦79779 camped¦79779 at¦79780 Hatserot¦79780,
 \v 18 and¦79782 then from¦79783 \add *there¦79783\add*, at¦79785 Ritmah¦79785.
 \v 19 From¦79788 Ritmah¦79788, they¦79789 \add went to\add* Rimon¦79790-Perets to camp¦79789,
 \v 20 and after that, on to Livnah¦79797.
@@ -1824,10 +1824,10 @@
 \v 28 and¦79838 then from¦79839 Terah, they¦79840 went to Mitkah¦79841 to camp¦79840.
 \v 29 \add ≈After\add* Mitkah¦79844, they¦79845 camped¦79845 at¦79846 Hashmonah,
 \v 30 and \add ≈next after that\add*, they camped¦79850 at¦79851 Moserot¦79851.
-\v 31 Then¦79853 they¦79853 left¦79853 Moserot¦79854 and¦79855 camped¦79855 at¦79856 Beney¦79856-Ya’akan.
-\v 32 From¦79860 Beney-Ya’akan, they¦79862 \add went to\add* Hor¦79863-Hagidgad¦79864 and camped¦79862 \add there\add*,
-\v 33 then¦79866 they¦79866 left¦79866 and¦79869 camped¦79869 at¦79870 Yotvatah.
-\v 34 Then¦79872 they¦79872 left¦79872 Yotvatah and¦79874 camped¦79874 at¦79875 Avronah¦79875.
+\v 31 Then¦79853 they¦79853 left¦79853 Moserot¦79854 and¦79855 camped¦79855 at¦79856 Beney¦79856-Ya'akan.
+\v 32 From¦79860 Beney-Ya'akan, they¦79862 \add went to\add* Hor¦79863-Hagidgad¦79864 and camped¦79862 \add there\add*,
+\v 33 then¦79866 they¦79866 left¦79866 and¦79869 camped¦79869 at¦79870 Yotvatah¦79870.
+\v 34 Then¦79872 they¦79872 left¦79872 Yotvatah¦79873 and¦79874 camped¦79874 at¦79875 Avronah¦79875.
 \v 35 From¦79878 Avronah¦79878, they \add went to\add* Etsyon-Gever and camped¦79879 \add there\add*,
 \v 36 then¦79883 they¦79883 left¦79883 and¦79886 camped¦79886 in¦79887 the¦79887 Tsin¦79889 \add !(Zin¦79889)\add* wilderness¦79887, i.e., at Kadesh¦79891.
 \v 37 Then¦79893 they¦79893 left¦79893 Kadesh¦79894 and¦79895 camped¦79895 at Mt¦79897. Hor¦79896 by the¦79898 border¦79898 with Edom¦79900.
@@ -1840,12 +1840,12 @@
 \v 41 \add @The¦79954 Israelis¦79954\add* left¦79954 Mt¦79956. Hor¦79955 and¦79957 camped¦79957 at¦79958 Tsalmonah¦79958.
 \rem /s1 Instructions before Crossing the Jordan
 \v 42 \add ≈When¦79960\add* they¦79960 left¦79960 Tsalmonah¦79961, they¦79962 camped¦79962 at¦79963 Punon,
-\v 43 and \add ≈after that\add*, on to Ovot.
-\v 44 \add ≈From¦79971\add* Ovot, they¦79972 \add went on\add* to Iyey-Ha’avarim at¦79973 the¦79975 Moav¦79976 \add !(Moab¦79976)\add* border¦79975.
+\v 43 and \add ≈after that\add*, on to Ovot¦79968.
+\v 44 \add ≈From¦79971\add* Ovot¦79971, they¦79972 \add went on\add* to Iyey-Ha'avarim at¦79973 the¦79975 Moav¦79976 \add !(Moab¦79976)\add* border¦79975.
 \v 45 Then¦79978 they¦79978 left¦79978 \add *there¦79979\add* and¦79980 camped¦79980 at¦79981 Divon¦79981-Gad¦79982,
 \v 46 \add ≈before going on to\add* camp¦79987 at¦79988 Almon¦79988-Divlatayim.
-\v 47 \add ≈From¦79992 there,\add* they¦79994 \add went into\add* the¦79995 Avarim mountains¦79995 and camped¦79994 \add ≈facing¦79997\add* Nevo¦79998.
-\v 48 \add ≈After leaving\add* the¦80001 Avarim mountains¦80001, they¦80003 \add ≈reached\add* the¦80004 Moav¦80005 plains¦80004 by the¦80007 Yarden¦80007 \add !(Jordan¦80007)\add* \add river\add* \add ≈opposite\add* Yeriho¦80008 \add !(Jericho¦80008)\add*.
+\v 47 \add ≈From¦79992 there,\add* they¦79994 \add went into\add* the¦79995 Avarim¦79996 mountains¦79995 and camped¦79994 \add ≈facing¦79997\add* Nevo¦79998.
+\v 48 \add ≈After leaving\add* the¦80001 Avarim¦80002 mountains¦80001, they¦80003 \add ≈reached\add* the¦80004 Moav¦80005 plains¦80004 by the¦80007 Yarden¦80007 \add !(Jordan¦80007)\add* \add river\add* \add ≈opposite\add* Yeriho¦80008 \add !(Jericho¦80008)\add*.
 \v 49 They¦80010 camped¦80010 \add ≈beside\add* the¦80013 \add *river¦80013\add* from¦80014 Beyt¦80014-Hayeshimot¦80015 to¦80016 Avel¦80017-Hashitim¦80018 \add there\add* on the¦80019 Moav¦80020 plains¦80019.
 \rem /s1 Directions for the Conquest of Canaan
 \p
@@ -1932,7 +1932,7 @@
 \v 11 you¦80708 all must¦80708 choose some cities to become ‘refuge¦80712 cities’\x + \xo 35:11: \xt Deu 19:2-4; Josh 20:1-9.\x* \add so that\add* if someone \add ≈accidentally¦80721\add* kills another person¦80720, they¦80713 can flee¦80715 there.
 \v 12 The¦80725 cities¦80725 will¦80723 be¦80723 places to¦80724 stay safe from¦80727 \add ≈being avenged¦80727\add* \add by the relatives\add* until¦80731 the¦80730 killer¦80730 can \add ≈be formally tried\add*.
 \v 13 You¦80740 all must¦80740 \add ≈allocate\add* six¦80741 refuge¦80744 cities—
-\v 14 three¦80750 on the eastern side¦80753 of¦80754 the Yarden¦80754, and¦80755 there on the western side in¦80759 Kena’an.
+\v 14 three¦80750 on the eastern side¦80753 of¦80754 the Yarden¦80754, and¦80755 there on the western side in¦80759 Kena'an¦80760.
 \v 15 Both \add ≈Israelis¦80766\add* and¦80767 \add ≈foreigners¦80767 living in¦80775 the country\add* can flee¦80776 to¦80777 \add any of\add* those¦80774 six¦80771 cities¦80773—anyone¦80780 who¦80780 kills¦80780 \add another\add* person¦80782 by¦80783 accident¦80783.
 \rem /s1 Concerning Murder and Blood Revenge
 \p

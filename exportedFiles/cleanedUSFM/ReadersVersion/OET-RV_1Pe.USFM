@@ -1,18 +1,18 @@
-\id 1PE - Open English Translation—Readers’ Version (OET-RV) v0.1.14
+\id 1PE - Open English Translation—Readers’ Version (OET-RV) v0.2.1
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PE1
 \rem WORDTABLE OET-LV_NT_word_table.tsv
-\h 1 Peter
-\toc1 1 Peter
-\toc2 1 Peter
+\h 1 Kefa
+\toc1 1 Kefa
+\toc2 1 Kefa
 \toc3 1 Ptr
 \mt2 The first letter from
-\mt1 Simon ‘the Rock’ (Peter)
+\mt1 Shim’on ‘the Rock’ (Peter)
 \is1 Introduction
-\ip \bk The first letter from Simon ‘Peter’\bk* was written to believers scattered throughout Asia Minor (also called Anatolia, now part of modern Turkey). Peter wrote to encourage the believers that it’s necessary for them to be strong even in the middle of much persecution that comes because of their faith in the messiah. He reminds them about their salvation, the death of Yeshua the messiah, and of his coming back to life. Because Peter told them that there must always remember their hope in heaven, then they can persevere even through all the difficulties here on earth. He also reminds them that if their faith holds strong through their suffering of difficulties and persecutions, they will receive a gift at “The time when Yeshua the messiah is revealed.” (1:7,13)
+\ip \bk The first letter from Shim’on ‘Kefa’\bk* was written to believers scattered throughout Asia Minor (also called Anatolia, now part of modern Turkey). Kefa wrote to encourage the believers that it’s necessary for them to be strong even in the middle of much persecution that comes because of their faith in the messiah. He reminds them about their salvation, the death of Yeshua the messiah, and of his coming back to life. Because Kefa told them that there must always remember their hope in heaven, then they can persevere even through all the difficulties here on earth. He also reminds them that if their faith holds strong through their suffering of difficulties and persecutions, they will receive a gift at “The time when Yeshua the messiah is revealed.” (1:7,13)
 \ip He also warns them that it’s necessary to watch their behaviour as followers of the messiah and it’s necessary that they follow the guidance of their elders.
-\iot Main components of Peter’s letter
+\iot Main components of Kefa’s letter
 \io1 Introduction \ior 1:1-2\ior*
 \io1 The reminder about the future benefits of salvation \ior 1:3-12\ior*
 \io1 Encouragement about godly living \ior 1:13–2:10\ior*
@@ -24,13 +24,13 @@
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \p
-\v 1 \add This letter is from\add* Peter, an ambassador for \nd Yeshua the messiah\nd*.
-\p \add It’s written\add* to those people who’ve been chosen \add by God\add* and \add dispersed\add* \add by persecution\add* throughout \add the provinces of\add* Pontus, Galatia, Cappadocia, Asia \add Minor\add*, and Bithynia.
+\v 1 \add This letter is from\add* Kefa \add (Peter; Grk. Petros)\add*, an ambassador for \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd*.
+\p \add It’s written\add* to those people who’ve been chosen \add by God\add* and \add dispersed\add* \add by persecution\add* throughout \add the provinces of\add* Pontos, Galatia, Kappadokia, Asia \add Minor\add*, and Bithunia.
 \v 2 \add They were chosen\add* in advance by \nd God\nd* the father by \add his\add* \add pure\add* \nd spirit\nd*, thanks to the obedience \nd of Yeshua the messiah\nd* and the sprinkling of his blood.
 \p May \add God give\add* you grace and \add abundant\add* peace.
 \s1 The future hope of life without ending
 \p
-\v 3 May \nd God\nd*, the father of our \nd master Yeshua the messiah\nd* be blessed. He’s the \nd one\nd* who, because of his incredible mercy, births us into living hope through the death and \add coming back to life\add* \nd of Yeshua the messiah\nd*.
+\v 3 May \nd God\nd*, the father of our \nd master Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd* be blessed. He’s the \nd one\nd* who, because of his incredible mercy, births us into living hope through the death and \add coming back to life\add* \nd of Yeshua the messiah\nd*.
 \v 4 \add Now we have\add* an inheritance that can’t be destroyed or ruined and never diminishes. It’s kept in the heavens for you \add chosen people\add*,
 \v 5 who are guarded through faith by \nd God’s\nd* power, because the rescue is ready to be revealed in the final age.
 \p
@@ -44,7 +44,7 @@
 \v 12 It was shown to them that they weren’t just serving themselves, but \add were serving\add* you as they declared all the same \add things\add* that have been preached to you \nd by the\nd* holy \nd spirit\nd* who was sent from heaven. Even \add God’s\add* messengers in heaven wanted to know more about those things.
 \s1 The holy behaviour of believers
 \p
-\v 13 So take this seriously and get your \add minds\add* prepared, putting your full hope in the grace that’ll be brought to you by \nd Yeshua the messiah\nd* \add being revealed\add*.
+\v 13 So take this seriously and get your \add minds\add* prepared, putting your full hope in the grace that’ll be brought to you by \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd* \add being revealed\add*.
 \v 14 As people who want to obey, don’t conform to your earlier desires that came from your ignorance,
 \v 15 but just as \add God\add* who called you is holy, your yourselves need to be holy in all your conduct,
 \v 16 because it’s been written that ‘you’ll be holy \add people\add* because I am holy.’\x + \xo 1:16: \xt Lev 11:44-45; 19:2.\x*
@@ -72,9 +72,9 @@
 \s1 The vital building-stone and the believers
 \p
 \v 4 As you \add chosen people\add* approach the living building-stone (which was rejected by humans yet chosen and honoured by \nd God\nd*),
-\v 5 you’re being built into a temple and \add joining\add* a holy group of priests to offer up \em spiritual\em* sacrifices that are acceptable \nd to God\nd* through \nd Yeshua the messiah\nd*,
+\v 5 you’re being built into a temple and \add joining\add* a holy group of priests to offer up \em spiritual\em* sacrifices that are acceptable \nd to God\nd* through \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd*,
 \v 6 because it’s written in the \add scriptures\add*:
-\q1 ‘Look, I’m placing a building-stone in Tsiyon/Zion,
+\q1 ‘Look, I’m placing a building-stone in Tsiyon \add (Zion)\add*,
 \q2 the \add vital\add* cornerstone that’s chosen and honoured,
 \q2 and anyone who believes in him certainly won’t be disgraced.’\x + \xo 2:6: \xt Isa 28:16 (LXX).\x*
 \m
@@ -117,7 +117,7 @@
 \v 3 \add These women shouldn’t focus\add* on outward \add appearances\add* like \add elaborate hairstyles\add*, or gold \add jewellery\add* or \add expensive\add* clothes,\x + \xo 3:3: \xt 1Tim 2:9.\x*
 \v 4 but on the inner person with a gentle and quiet spirit that’s indestructible and which \nd God\nd* \add considers\add* precious.
 \v 5 That was how holy women \add in the past\add* adorned themselves—those whose hope was in \nd God\nd*,
-\v 6 like Sarah, who submitted to Abraham who you’ve become descendants of. She called him ‘master’,\x + \xo 3:6: \xt Gen 18:12.\x* doing good and without any worries.
+\v 6 like Sarah, who submitted to Avraham who you’ve become descendants of. She called him ‘master’,\x + \xo 3:6: \xt Gen 18:12.\x* doing good and without any worries.
 \p
 \v 7 Similarly, men should live with \add their wives\add* with understanding, like how you’d handle something more fragile. They should display honour to their fellow recipients of life-\add giving\add* grace\x + \xo 3:7: \xt Eph 5:25; Col 3:19.\x* so that their prayers won’t be hindered.
 \s1 Suffering for doing good
@@ -144,7 +144,7 @@
 \v 18 because \nd the messiah\nd* also died once for \add sin\add*, that is, the sinless one died for sinful people, so that he can bring you \add chosen people past death\add* onward \nd to God\nd*. \add Although\add* he experienced physical death, he’d been given life \nd in the spirit\nd*,
 \v 19 and with that life he also went to the spirits in prison and preached to them—
 \v 20 those who’d refused to believe. \nd God\nd* had waited \add patiently\add* in Noah’s time when the barge was being built, \add yet\add* only a few were saved. Eight of them were brought safely through the \add waters\add*,\x + \xo 3:20: \xt Gen 6:1–7:24.\x*
-\v 21 which also represents how \add being immersed\add* saved you \add chosen people\add*. It doesn’t remove the filth from your bodies, but cleans the conscience as you make a pledge to \nd God\nd* based on the \add coming back to life\add* \nd of Yeshua the messiah\nd*,
+\v 21 which also represents how \add being immersed\add* saved you \add chosen people\add*. It doesn’t remove the filth from your bodies, but cleans the conscience as you make a pledge to \nd God\nd* based on the \add coming back to life\add* \nd of Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd*,
 \v 22 who went to heaven and \add sat\add* at \nd God’s\nd* right, with \add God’s\add* messengers and authorities and powers all \add under his authority\add*.
 \c 4
 \s1 Leaving worldly desires behind
@@ -160,7 +160,7 @@
 \v 8 and more than anything, display genuine love to each other, because love triumphs over many sins.\x + \xo 4:8: \xt Prv 10:12.\x*
 \v 9 Show hospitality to each other without grumbling.
 \v 10 Whatever gift each person has received, they should use it to serve the others as good managers of the various \add forms of\add* grace \nd God’s\nd* \add given us\add*.
-\v 11 \nd Anyone\nd* who shares wisdom that came from \nd God\nd* or uses the strength that \nd God’s\nd* given them to serve \add others\add* needs to be honouring \nd God\nd* through \nd Yeshua the messiah\nd*. He’s the \nd one\nd* who \add deserves\add* the honour and power throughout all time.
+\v 11 \nd Anyone\nd* who shares wisdom that came from \nd God\nd* or uses the strength that \nd God’s\nd* given them to serve \add others\add* needs to be honouring \nd God\nd* through \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd*. He’s the \nd one\nd* who \add deserves\add* the honour and power throughout all time.
 \s1 The suffering of believers
 \p
 \v 12 Dear friends, don’t be surprised about the fiery trials that you’ll have to face as a test, as though it’s something unusual that’s happening to you,
@@ -193,8 +193,8 @@
 \v 11 May his authority be powerful throughout all time. \add May it be so\add*.
 \s1 Farewell
 \p
-\v 12 I’ve written this brief \add letter\add* with the \add help\add* of the faithful brother, Silvanus,\x + \xo 5:12: \xt Acts 15:22,40.\x* to encourage you \add chosen people\add* and to testify that \nd God’s\nd* grace that you accepted is true.
+\v 12 I’ve written this brief \add letter\add* with the \add help\add* of the faithful brother, Siluanos,\x + \xo 5:12: \xt Acts 15:22,40.\x* to encourage you \add chosen people\add* and to testify that \nd God’s\nd* grace that you accepted is true.
 \p
-\v 13 The chosen \add group\add* in Babylon and my ‘son’ Mark\x + \xo 5:13: \xt Acts 12:12,25; 13:13; 15:37-39; Col 4:10; Phm 24.\x* send their greetings to you \add chosen people\add*.
+\v 13 The chosen \add group\add* in Bavel \add (Babylon)\add* and my ‘son’ Markos\x + \xo 5:13: \xt Acts 12:12,25; 13:13; 15:37-39; Col 4:10; Phm 24.\x* send their greetings to you \add chosen people\add*.
 \v 14 Greet one another with a kiss of love.
 \p May all of you who are \add united with\add* \nd the messiah\nd* experience \add God’s\add* peace.

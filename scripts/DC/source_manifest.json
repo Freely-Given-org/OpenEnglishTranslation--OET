@@ -83,7 +83,24 @@
       "bytes": 91500,
       "license": "CC-BY-SA-4.0",
       "attribution": "Open Greek and Latin / First1KGreek; Harvard College Library; Digital Divide Data transcription of H. B. Swete, The Old Testament in Greek, volume III (1905)"
+    },
+    {
+      "filename": "Lightfoot-1875.html",
+      "url": "https://www.gutenberg.org/files/50857/50857-h/50857-h.htm",
+      "sha256": "792d85add364d0328666376d4a2e9daed7556643d3b8483c63ac4b0a8c447129",
+      "bytes": 1908026,
+      "license": "Public Domain",
+      "attribution": "J. B. Lightfoot, St. Paul’s Epistles to the Colossians and Philemon (1875), pp. 353–355, Latin text; digitised by Project Gutenberg, KD Weeks, Colin Bell and the Online Distributed Proofreading Team. https://www.gutenberg.org/ebooks/50857"
+    },
+    {
+      "filename": "James-1924-LAO.html",
+      "url": "https://en.wikisource.org/w/index.php?title=The_Apocryphal_New_Testament_(1924)/Epistles/The_Epistle_to_the_Laodiceans&oldid=11900163",
+      "sha256": "72486aaa42e683a37b5362bdcf3075ab854af74c98a4e373cf61e68310c8a73d",
+      "bytes": 68611,
+      "license": "Public Domain",
+      "attribution": "M. R. James, The Apocryphal New Testament (1924), pp. 478–479, English translation of Laodiceans; Wikisource revision 11900163. Public-domain notice: https://en.wikisource.org/wiki/The_Apocryphal_New_Testament_(1924)"
     }
   ],
-  "first1kgreek_commit": "ed91552c52530c8f5a3ddf2dd767e899372a804c"
+  "first1kgreek_commit": "ed91552c52530c8f5a3ddf2dd767e899372a804c",
+  "lao_snapshot_date": "2026-10-30"
 }

@@ -1,4 +1,4 @@
-\id NUM - Open English Translation—Readers’ Version (OET-RV) v0.2.0
+\id NUM - Open English Translation—Readers’ Version (OET-RV) v0.2.3
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 NUM
@@ -39,9 +39,9 @@
 \v 5 These are the names of the men who will \add assist\add* you:
 \li1 Elitsur (Shedeyur’s son) from Re’uven,
 \li1
-\v 6 Shelumiel (Tsurishaddai’s son) from Shim’on \add (Simeon)\add*,
+\v 6 Shelumiel (Tsurishadai’s son) from Shim’on \add (Simeon)\add*,
 \li1
-\v 7 Nahshon (Amminadav’s son) from Yehudah \add (Judah)\add*,
+\v 7 Nahshon (Aminadav’s son) from Yehudah \add (Judah)\add*,
 \li1
 \v 8 Netanel (Tsuar’s son) from Yisakar \add (Issachar)\add*,
 \li1
@@ -50,9 +50,9 @@
 \v 10 Elishama (Amihud’s son) from Yosef’s \add (Joseph)\add* son Efrayim \add (Ephraim)\add*,
 \li1 Gamliel (Pedahtsur’s son) from Yosef’s son Menasheh \add (Manasseh)\add*,
 \li1
-\v 11 Avidan (Gideoni’s son) from Benyamin \add (Benjamin)\add*,
+\v 11 Avidan (Gid’oni’s son) from Benyamin,
 \li1
-\v 12 Ahiezer (Ammishaddai’s son) from Dan,
+\v 12 Ahiezer (Amishaday’s son) from Dan,
 \li1
 \v 13 Pagiel (Okran’s son) from Asher,
 \li1
@@ -81,7 +81,7 @@
 \li1
 \v 34-35 32,200 men from the tribe of Menasheh \add (Manasseh)\add*,
 \li1
-\v 36-37 35,400 men from the tribe of Benyamin \add (Benjamin)\add*,
+\v 36-37 35,400 men from the tribe of Benyamin,
 \li1
 \v 38-39 62,700 men from the tribe of Dan,
 \li1
@@ -107,7 +107,7 @@
 \p
 \v 2 “The \add Israelis\add* must camp \add with each family joining their tribe\add*, \add which will be displaying its\add* banner. They must camp around the \add sacred tent but\add* at a distance.
 \p
-\v 3 On the eastern side facing the sunrise will be Yehudah’s \add (Judah)\add* banner and their army divisions, led by Amminadav’s son Nahshon
+\v 3 On the eastern side facing the sunrise will be Yehudah’s \add (Judah)\add* banner and their army divisions, led by Aminadav’s son Nahshon
 \v 4 with 74,600 in his division.
 \v 5 The tribe of Yisakar \add (Issachar)\add* will \add set up\add* next to them, led by Tsuar’s son Netanel,
 \v 6 with 54,400 in his division.
@@ -117,7 +117,7 @@
 \p
 \v 10 On the southern side \add of the sacred tent\add* will be Re’uven’s banner, led by Shedeyur’s son Elitsur
 \v 11 with 46,500 in his division.
-\v 12 The tribe of Shim’on \add (Simeon)\add* will \add set up\add* next to them, led by Tsurishaddai’s son Shelumiel
+\v 12 The tribe of Shim’on \add (Simeon)\add* will \add set up\add* next to them, led by Tsurishadai’s son Shelumiel
 \v 13 with 59,300 in his division.
 \v 14 Then the tribe of Gad, led by Re’uel’s son Elyasaf.
 \v 15 with 45,650 in his division.
@@ -129,11 +129,11 @@
 \v 19 with 40,500 in his division.
 \v 20 The tribe of Menasheh \add (Manasseh)\add* will \add set up\add* next to them, led by Pedahtsur’s son Gamliel
 \v 21 with 32,200 in his division.
-\v 22 Then the tribe of Benyamin \add (Benjamin)\add* led by Gideoni’s son Avidan
+\v 22 Then the tribe of Benyamin led by Gid’oni’s son Avidan
 \v 23 with 35,400 in his division.
 \v 24 The total number in the divisions in the Efrayim camp is 108,100, and \add when travelling\add*, \add they’ll all go third\add*.
 \p
-\v 25 On the northern side \add of the sacred tent\add* will be Dan’s banner, led by Ammishaddai’s son Ahiezer
+\v 25 On the northern side \add of the sacred tent\add* will be Dan’s banner, led by Amishaday’s son Ahiezer
 \v 26 with 62,700 in his division.
 \v 27 The tribe of Asher will \add set up\add* next to them, led by Okran’s son Pagiel
 \v 28 with 41,500 in his division.
@@ -175,14 +175,14 @@
 \v 20 Merari’s sons were Mahli and Mushi.
 \m Those were the families of the Levites by their clans.
 \p
-\v 21 Gereshon’s descendants were the Livnites and the Shimites, so they made up the Gershonites.
+\v 21 Gereshon’s descendants were the Livnim and the Shim’im, so they made up the Gershonim.
 \v 22 They had 7,500 males that were at least a month old.
-\v 23 The Gershonite clans were to camp on the western side of the \add sacred tent\add*,
-\v 24 and \add their\add* leader was Lael’s son Elyasaf.
+\v 23 The Gershoni clans were to camp on the western side of the \add sacred tent\add*,
+\v 24 and \add their\add* leader was La’el’s son Elyasaf.
 \v 25 Gereshon’s descendants were responsible for the \add sacred tent\add*, including its covering and the entrance curtain,
 \v 26 the courtyard curtains, and the courtyard entrance curtain, that surrounded \add it\add*. Also the ropes \add used to hold them\add*.
 \p
-\v 27 Kohat’s descendants were the Amramites, the Yitshari, the Hevronites, and the Uzziyelites, so they made up the Kohatites.
+\v 27 Kohat’s descendants were the Amramim, the Yitshari, the Hevronim, and the Uzielim, so they made up the Kohatites.
 \v 28 They had 8,600 males that were at least a month old. They were \add in charge of\add* the running of the \add sacred tent\add*.
 \v 29 The Kohatite clans were to camp of the southern side of the \add sacred tent\add*,
 \v 30 and \add their\add* leader was Uziel’s son Elitsafan.
@@ -190,7 +190,7 @@
 \p
 \v 32 The man who organised the Levites was Aharon’s \add (Aaron)\add* son, Eleazar the priest. He had oversight over all those who were responsible for the \add sacred tent\add*.
 \p
-\v 33 Merari’s descendants were the Mahlites and the Mushites, so they made up the Merarites.
+\v 33 Merari’s descendants were the Mahlim and the Mushim, so they made up the Merarim.
 \v 34 They had 6,200 males that were at least a month old,
 \v 35 and their leader was Avihayil’s son Tsuriel. They were to camp on the northern side of the \add sacred tent\add*.
 \v 36 \add They\add* were \add in charge of\add* all the frames for the \add sacred tent\add*, its crossbars, posts, bases, all its containers and equipment,
@@ -234,9 +234,9 @@
 \v 12 Then they must get all the \add other\add* utensils that they use in the \add sacred tent\add*, and cover that again with \add fine\add* leather, and place it \add all\add* on \add its\add* carrying frame.
 \v 13 They need to remove the ashes from the \add bronze\add* altar and spread a purple cloth over it,
 \v 14 and put all the utensils they use on top of it: the trays, meat forks, \add shovel\add* and basins for the altar. Then they must cover it with \add fine\add* leather, and then put its poles \add through the rings\add*.
-\v 15 Aharon \add (Aaron)\add* and his sons must finish covering the \add sacred tent\add* and all its utensils and equipment when \add they’re about to move camp\add*. Then the Kohatites can come to carry it all without touching the \add inner room\add* so they won’t die. That’s the responsibility of Kohat’s descendants—\add carrying\add* the \add sacred tent\add*.
+\v 15 Aharon and his sons must finish covering the \add sacred tent\add* and all its utensils and equipment when \add they’re about to move camp\add*. Then the Kohatites can come to carry it all without touching the \add inner room\add* so they won’t die. That’s the responsibility of Kohat’s descendants—\add carrying\add* the \add sacred tent\add*.
 \p
-\v 16 Eleazar (son of Aharon the priest) is \add in charge of\add* the lamp oil and the fragrant incense, the \add regular\add* grain offering, the anointing oil, and the oversight of the \add sacred tent\add* and the inner room, including everything that’s used inside them.
+\v 16 Eleazar (son of Aharon \add (Aaron)\add* the priest) is \add in charge of\add* the lamp oil and the fragrant incense, the \add regular\add* grain offering, the anointing oil, and the oversight of the \add sacred tent\add* and the inner room, including everything that’s used inside them.
 \p
 \v 17 Then Yahweh told Mosheh \add (Moses)\add* and Aharon,
 \v 18 “Don’t allow the Kohatite Levites to \add get wiped out\add* \add by mishandling the most sacred items\add*,
@@ -248,10 +248,10 @@
 \v 22 “\add Take a detailed census\add* of Gereshon’s male descendants by their clans and families
 \v 23 \add who are from thirty up to fifty years old\add* and who goes into the \add sacred tent\add* to minister.
 \p
-\v 24 This is what the Gershonites are responsible for working with and carrying:
+\v 24 This is what the Gershonim are responsible for working with and carrying:
 \v 25 They must carry the \add inner\add* curtains from the \add sacred tent\add*, the covering, the \add fine\add* leather covering, the entrance curtain,
 \v 26 the courtyard curtains, and the courtyard gate curtain, along with the ropes and other equipment for using them. That will be their ministry.
-\v 27 Aharon \add (Aaron)\add* and his sons \add will direct\add* the Gershonites in \add their\add* \add duties\add* and assign all \add the items\add* to them.
+\v 27 Aharon \add (Aaron)\add* and his sons \add will direct\add* the Gershonim in \add their\add* \add duties\add* and assign all \add the items\add* to them.
 \v 28 That will be the ministry of Gereshon’s descendants with the \add sacred tent\add*, and it will all be under the supervision of Aharon’s son Itamar the priest.
 \s1 Merari’s descendants’ duties
 \p
@@ -266,14 +266,14 @@
 \v 35 \add counting\add* the men from thirty to fifty years old who go into the \add sacred tent\add* to minister,
 \v 36 and the total for all the clans was 2,750.
 \v 37 That was from the Kohatite clans who ministered at the \add sacred tent\add* and were listed by Mosheh and Aharon just as Yahweh had instructed Mosheh.
-\v 38 They counted the Gershonites by their clans and families,
+\v 38 They counted the Gershonim by their clans and families,
 \v 39 \add counting\add* the men from thirty to fifty years old who go into the \add sacred tent\add* to minister,
 \v 40 and the total for all the clans was 2,630.
-\v 41 That was from the Gershonite clans who ministered at the \add sacred tent\add* and were listed by Mosheh and Aharon just as Yahweh had instructed Mosheh.
-\v 42 They counted the Merarites by their clans and families,
+\v 41 That was from the Gershoni clans who ministered at the \add sacred tent\add* and were listed by Mosheh and Aharon just as Yahweh had instructed Mosheh.
+\v 42 They counted the Merarim by their clans and families,
 \v 43 \add counting\add* the men from thirty to fifty years old who go into the \add sacred tent\add* to minister,
 \v 44 and the total for all the clans was 3,200.
-\v 45 That was from the Merarite clans who ministered at the \add sacred tent\add* and were listed by Mosheh and Aharon just as Yahweh had instructed Mosheh.
+\v 45 That was from the Merari clans who ministered at the \add sacred tent\add* and were listed by Mosheh and Aharon just as Yahweh had instructed Mosheh.
 \v 46 \add So\add* Mosheh, Aharon, and the Israeli leaders counted \add all\add* the Levites by their clans and families,
 \v 47 \add counting\add* the men from thirty to fifty years old who go into the \add sacred tent\add* to minister and also help with carrying it,
 \v 48 and the total came to 8,580.
@@ -370,26 +370,26 @@
 \v 4 Then Yahweh told Mosheh:
 \v 5 “\add Accept their gifts because they’ll be useful for the running of the sacred tent\add*. \add Distribute them appropriately to the Levites, depending on each man’s duties\add*.”
 \v 6 \add So\add* Mosheh took the carts and the cattle and distributed them to the Levites,
-\v 7 giving two carts and four bulls to the Gershonites to help them with their assigned duties.
-\v 8 Then he gave four carts and eight bulls to the Merarites to help them with their assigned duties under the supervision of the priest (Aharon’s \add (Aaron)\add* son) Itamar.
-\v 9 \add However,\add* the Kohaties weren’t given any because they were responsible for carrying the \add very\add* holy objects, and those had to be carried on \add their\add* \add shoulders\add*.
+\v 7 giving two carts and four bulls to the Gershonim to help them with their assigned duties.
+\v 8 Then he gave four carts and eight bulls to the Merarim to help them with their assigned duties under the supervision of the priest (Aharon’s \add (Aaron)\add* son) Itamar.
+\v 9 \add However,\add* the Kohatites weren’t given any because they were responsible for carrying the \add very\add* holy objects, and those had to be carried on \add their\add* \add shoulders\add*.
 \p
 \v 10 The day that the altar \add was dedicated\add* and anointed, the leaders brought their gifts and presented them at the altar,
 \v 11 and Yahweh told Mosheh, “\add Each day\add* \add for the next twelve days\add*, one leader must present his offering for the altar dedication.”
 \p
 \v 12-83 \add These were the leaders who presented their offerings:\add*
-\li1 On the first day, Amminadav’s son Nahshon \add on behalf of\add* the tribe of Yehudah \add (Judah)\add*,
+\li1 On the first day, Aminadav’s son Nahshon \add on behalf of\add* the tribe of Yehudah \add (Judah)\add*,
 \li1 on the second day, Tsuar’s son Netanel \add on behalf of\add* the tribe of Yisakar \add (Issachar)\add*,
 \li1 on the third day, Helon’s son Eliav \add on behalf of\add* the tribe of Zevulun,
 \li1 on the fourth day, Shedeyur’s son Elitsur \add on behalf of\add* the tribe of Re’uven,
-\li1 on the fifth day, Tsurishaddai’s son Shelumiel \add on behalf of\add* the tribe of Shim’on \add (Simeon)\add*,
+\li1 on the fifth day, Tsurishadai’s son Shelumiel \add on behalf of\add* the tribe of Shim’on \add (Simeon)\add*,
 \li1 on the sixth day, Deuel’s son Elyasaf \add on behalf of\add* the tribe of Gad,
 \li1 on the seventh day, Amihud’s son Elishama \add on behalf of\add* the tribe of Efrayim \add (Ephraim)\add*,
 \li1 on the eighth day, Pedahtsur’s son Gamliel \add on behalf of\add* the tribe of Menasheh \add (Manasseh)\add*,
-\li1 on the ninth day, Gideoni’s son Avidan \add on behalf of\add* the tribe of Benyamin \add (Benjamin)\add*,
-\li1 on the tenth day, Ammishaddai’s son Ahiezer \add on behalf of\add* the tribe of Dan,
+\li1 on the ninth day, Gid’oni’s son Avidan \add on behalf of\add* the tribe of Benyamin,
+\li1 on the tenth day, Amishaday’s son Ahiezer \add on behalf of\add* the tribe of Dan,
 \li1 on the eleventh day, Okran’s son Pagiel \add on behalf of\add* the tribe of Asher,
-\li1 and on the twelfth day, Enam’s son Ahira \add on behalf of\add* the tribe of Naftali \add (Naphtali)\add*.
+\li1 and on the twelfth day, Eynan’s son Ahira \add on behalf of\add* the tribe of Naftali \add (Naphtali)\add*.
 \p \add Each of the leaders presented the following offerings:\add*
 \li1 a silver dish (1.5 kg—\add all weights\add* by the standard temple measurement) and a silver bowl (800g)—both of them full of fine flour mixed with oil as a grain offering,
 \li1 a small gold dish (110g) filled with incense,
@@ -489,23 +489,23 @@
 \v 12 and the \add Israelis\add* \add started moving out from the Sinay wilderness as per the pre-arranged order\add*. The cloud moved to the Paran wilderness.
 \v 13 That was the first time that they had moved \add as a result of Yahweh signalling Mosheh\add* \add (Moses)\add* \add by means of the cloud\add*.
 \p
-\v 14 Yehudah \add (Judah)\add* tribe with their banner \add was the first to leave under the leadership of\add* Amminadav’s son Nahshon.
+\v 14 Yehudah \add (Judah)\add* tribe with their banner \add was the first to leave under the leadership of\add* Aminadav’s son Nahshon.
 \v 15 Tsuar’s son Netanel led the company from Yisakar \add (Issachar)\add* tribe,
 \v 16 and Helon’s son Eliav led the company from Zevulun tribe.
 \p
 \v 17 Then the \add sacred tent\add* was disassembled, and the men of Gereshon and Merari set off, carrying the tent.
 \p
 \v 18 Re’uven tribe with their banner \add was next to leave under the leadership of\add* Shedeyur’s son Elitsur.
-\v 19 Tsurishaddai’s son Shelumiel led the company from Shim’on \add (Simeon)\add* tribe.
+\v 19 Tsurishadai’s son Shelumiel led the company from Shim’on \add (Simeon)\add* tribe.
 \v 20 Deuel’s son Elyasaf led the company from Gad tribe.
 \p
 \v 21 Then the \add sacred utensils\add* were carried out by the Kohatite \add men\add*, who \add then helped set up the sacred tent when they arrived\add*.
 \p
 \v 22 Efrayim \add (Ephraim)\add* tribe with their banner \add was next to leave under the leadership of\add* Amihud’s son Elishama.
 \v 23 Pedahtsur’s son Gamliel led the company from Menasheh \add (Manasseh)\add* tribe.
-\v 24 Gideoni’s son Avidan led the company from Benyamin \add (Benjamin)\add* tribe.
+\v 24 Gid’oni’s son Avidan led the company from Benyamin tribe.
 \p
-\v 25 Dan tribe with their banner \add was last to leave as the rear guard under the leadership of\add* Ammishaddai’s son Ahiezer.
+\v 25 Dan tribe with their banner \add was last to leave as the rear guard under the leadership of\add* Amishaday’s son Ahiezer.
 \v 26 Okran’s son Pagiel led the company from Asher tribe.
 \v 27 Eynan’s son Ahira led the company from Naftali \add (Naphtali)\add* tribe.
 \v 28 That was \add the order of the departures of the companies of the Israeli tribes when they\add* set off.
@@ -527,7 +527,7 @@
 \p
 \v 1 \add One day,\add* the people were complaining \add about their situation\add* and \add when Yahweh heard them, it made him angry\add* \add so he sent a fire that burnt up the edges of their camp\add*.
 \v 2 The people cried out to Mosheh \add (Moses)\add* \add for help\add*, and \add he\add* prayed to Yahweh, and the fire stopped,
-\v 3 and they named that place Taverah \add (which means ‘burning’)\add* because Yahweh’s fire had burnt among them.
+\v 3 and they named that place Tav’erah \add (which means ‘burning’)\add* because Yahweh’s fire had burnt among them.
 \s1 The choosing of seventy elders
 \p
 \v 4 \add However\add*, there was a \add group of stirrers among the people\add* that \add badly wanted to have meat and other foods to eat\add*. \add That spread to all the Israelis who wept and asked\add*, “Who’ll give us meat to eat?
@@ -559,8 +559,8 @@
 \v 24 \add So\add* Mosheh went out and \add passed on\add* Yahweh’s \add message\add* to the people. Then he gathered seventy men from the \add Israeli\add* elders and stood them around the tent.
 \v 25 Then Yahweh came down in the cloud and spoke to \add Mosheh\add*, and he took \add some of\add* the spirit away from him and put it on those seventy elders. As the spirit rested on them, they prophesied \add (but they never did that again)\add*.
 \p
-\v 26 Two of the men who were listed (named Eldad and Meydad), had remained in the \add main\add* camp (not going to the \add sacred\add* tent), and the spirit had \add also\add* rested on them and they prophesied in the camp.
-\v 27 A young man ran to Mosheh and told him that Eldad and Meydad were prophesying \add there\add* in the camp.
+\v 26 Two of the men who were listed (named Eldad and Medad), had remained in the \add main\add* camp (not going to the \add sacred\add* tent), and the spirit had \add also\add* rested on them and they prophesied in the camp.
+\v 27 A young man ran to Mosheh and told him that Eldad and Medad were prophesying \add there\add* in the camp.
 \p
 \v 28 Then Nun’s son Yehoshua \add (Joshua)\add* (who had helped Mosheh since his youth) \add responded\add*, “My master Mosheh, stop them \add from that\add*.”
 \p
@@ -571,19 +571,19 @@
 \v 31 Then Yahweh sent a wind that blew quails from the ocean, and \add they dropped\add* on the ground a day’s walk in every direction around the camp \add until they were piled\add* a metre high.
 \v 32 \add So\add* the people went out and collected the quail—\add each family getting at least the equivalent of ten large barrels full\add*, and they spread the meat around the camp \add to sun dry\add*.
 \v 33 Then when they started to \add cook and\add* eat \add some of the fresh\add* meat, Yahweh \add got very angry\add* and struck the people with a terrible \add deadly disease\add* before they could even chew it.
-\v 34 \add So\add* that place was named Kivrot-Hattaavah \add (which means ‘Graves of the cravers’)\add*, because that was where they buried the people who had craved \add meat\add*.
-\v 35 From Kivrot-Hattaavah, the people \add moved on\add* to Hatserot and \add stayed\add* \add there\add*.
+\v 34 \add So\add* that place was named Kivrot-Hata’avah \add (which means ‘Graves of the cravers’)\add*, because that was where they buried the people who had craved \add meat\add*.
+\v 35 From Kivrot-Hata’avah, the people \add moved on\add* to Hatserot and \add stayed\add* \add there\add*.
 \c 12
 \s1 Miryam’s punishment
 \p
-\v 1 \add One day,\add* Miryam \add (Miriam)\add* and Aharon \add (Aaron)\add* spoke out against Mosheh \add (Moses)\add* because he’d taken an \add Kushi\add* \add (Ethiopian)\add* woman (Kushitess) as a wife,
+\v 1 \add One day,\add* Miryam \add (Miriam)\add* and Aharon \add (Aaron)\add* spoke out against Mosheh \add (Moses)\add* because he’d taken an \add Kushi\add* \add (Ethiopian)\add* woman (Kushit) as a wife,
 \v 2 and they \add challenged\add*, “Did Yahweh really only speak through Mosheh? Doesn’t he also speak through us?” Yahweh heard \add what they said\add*.
 \v 3 (Now Mosheh was \add actually\add* a very humble man—more \add humble\add* than anyone else \add alive\add*.)
 \p
 \v 4 Then Yahweh suddenly told Mosheh, Aharon, and Miryam, “Go out, the three of you, to the \add sacred\add* tent.” \add So\add* the three of them went there.
 \v 5 and Yahweh descended in a pillar of cloud and stood at the tent opening and called Aharon and Miryam, and the two of them \add stepped forward\add*,
 \v 6 and he said, “\add Listen to me\add*. When there’s a prophet of Yahweh, I make myself known to him in a vision and speak to him in a dream,
-\v 7 \add but\add* \add I don’t do that to\add* my servant Mosheh. He’s the \add most\add* faithful \add of all my people\add*\x + \xo 12:7 \xt Heb 3:5.\x*
+\v 7 \add but\add* \add I don’t do that to\add* my servant Mosheh. He’s the \add most\add* faithful \add of all my people\add*\x + \xo 12:7: \xt Heb 3:5.\x*
 \v 8 \add and\add* I speak to him \add directly\add*—\add face-to-face, and not in parables, and he’s able to see my\add* form. \add So\add* why weren’t you afraid to speak against my servant Mosheh?”
 \p
 \v 9 \add So\add* Yahweh \add was angry\add* at \add Miryam and Aharon\add*. Then he departed
@@ -604,23 +604,23 @@
 \v 2 “Send some men in to explore Kena’an \add (Canaan)\add*—the land that I’m giving to the \add Israelis\add*. Send one man from each \add ancestral\add* tribe—a leader within that tribe.”
 \v 3 Then \add at Yahweh’s command\add*, Mosheh sent them off from the Paran wilderness. They were all \add Israeli\add* leaders
 \v 4 and their names were:
-\li1 Shammua (Zakkur’s son) from Re’uven tribe,
+\li1 Shamua (Zakur’s son) from Re’uven tribe,
 \li1
 \v 5 Shafat (Hori’s son) from Shim’on \add (Simeon)\add* tribe,
 \li1
-\v 6 Kalev \add (Caleb)\add* \add (Kalev—\add*Yefunneh’s son) from Yehudah \add (Judah)\add* tribe,
+\v 6 Kalev \add (Caleb)\add* \add (Kalev—\add*Yefuneh’s son) from Yehudah \add (Judah)\add* tribe,
 \li1
 \v 7 Yigal (Yosef’s \add (Joseph)\add* son) from Yisakar \add (Issachar)\add* tribe,
 \li1
 \v 8 Hoshea (Nun’s son) from Efrayim \add (Ephraim)\add* tribe,
 \li1
-\v 9 Palti (Rafu’s son) from Benyamin \add (Benjamin)\add* tribe,
+\v 9 Palti (Rafu’s son) from Benyamin tribe,
 \li1
-\v 10 Gaddiyel (Sodi’s son) from Zevulun tribe,
+\v 10 Gadiel (Sodi’s son) from Zevulun tribe,
 \li1
-\v 11 Gaddi (Susi’s son) from Yosef tribe,
+\v 11 Gadi (Susi’s son) from Yosef tribe,
 \li1
-\v 12 Ammiyel (Gemalli’s son) from Dan tribe,
+\v 12 Amiyel (Gemali’s son) from Dan tribe,
 \li1
 \v 13 Setur (Mika’el’s \add (Michael)\add* son) from Asher tribe,
 \li1
@@ -636,7 +636,7 @@
 \v 20 \add Find out\add* whether the soil is fertile or not, whether or not there’s trees there. \add Be courageous\add* and bring back some of the produce from that land.” (He said that because it was the time \add of the year\add* when \add grapes were starting to ripen\add*.)
 \p
 \v 21 \add So\add* \add the twelve men\add* went and explored the region from the Tsin \add (Zin)\add* wilderness \add in the south, all the way\add* up to Rehov at Levo-Hamat \add in the north\add*.
-\v 22 \add They started\add* in the Negev, and went as far as Hevron where some of Anak’s descendents lived: Ahiman, Sheshay, Talimay. Hevron had been built seven years \add before\add* Tsoan in Mitsrayim \add (Egypt)\add*.
+\v 22 \add They started\add* in the Negev, and went as far as Hevron where some of Anak’s descendents lived: Ahiman, Sheshay, Talmay. Hevron had been built seven years \add before\add* Tsoan in Mitsrayim \add (Egypt)\add*.
 \v 23 When they got to the Eshkol riverbed, they cut off a branch \add with\add* a cluster of grapes, and carried it on a pole between two of them, \add along with some\add* pomegranates and figs.
 \v 24 (That place was then called Eshkol, \add meaning ‘cluster’\add*, because of the cluster \add of grapes\add* they’d taken from there.)
 \s2 The reports from the scouts
@@ -645,7 +645,7 @@
 \v 26 and went to Kadesh in the Paran wilderness. There they reported back to Mosheh \add (Moses)\add* and Aharon \add (Aaron)\add* and all the assembled people, and showed them the fruit from the land,
 \v 27 and told \add them\add*, “We went to the land where you sent us, and it is indeed flowing with milk and honey, and this is its fruit.
 \v 28 However, the people living in that land are powerful, and the cities are very well fortified. Also, some of the Anak people group live there.
-\v 29 The Amalekite people live in the Negev, and the Hittim, Yevusim, and Amorim live in the hill country, and the Kena’anim \add (Canaanites)\add* live along the coast and \add along\add* the Yarden \add (Jordan)\add* \add river\add*.”
+\v 29 The Amaleki people live in the Negev, and the Hitim, Yevusim, and Amorim live in the hill country, and the Kena’anim \add (Canaanites)\add* live along the coast and \add along\add* the Yarden \add (Jordan)\add* \add river\add*.”
 \p
 \v 30 Then Kalev \add (Caleb)\add* \add raised an arm\add* to quieten the people in front of Mosheh \add and stated\add*, “We’ll certainly go in there and take it over, because we’re capable of \add going\add* against \add them\add*.”
 \p
@@ -661,7 +661,7 @@
 \v 4 \add So they said to each other\add*, “Let’s \add choose a new leader\add* to take us back to Mitsrayim.”
 \p
 \v 5 Then Mosheh and Aharon fell \add to their knees with their faces bowed in front of all the assembled Israelis\add*.
-\v 6 Then Nun’s son Yehoshua \add (Joshua)\add* and Yefunneh’s son Kalev \add (Caleb)\add*, two of those who’d explored that land, tore their clothes \add in grief\add*
+\v 6 Then Nun’s son Yehoshua \add (Joshua)\add* and Yefuneh’s son Kalev \add (Caleb)\add*, two of those who’d explored that land, tore their clothes \add in grief\add*
 \v 7 and spoke to all \add those Israelis gathered there\add*, “The land that we passed throughout and explored is a very, very good \add place\add*.
 \v 8 If Yahweh \add is pleased with\add* us, then he’ll take us into \add it\add* and give it to us—that land flowing with milk and honey.
 \v 9 However, you all mustn’t rebel against Yahweh, and you mustn’t be scared of the people in that \add area\add* because they’ll \add be like\add* bread for us. \add There’s nothing left to protect them as\add* Yahweh is with us, \add so\add* don’t be afraid.”
@@ -684,14 +684,14 @@
 \v 22 \add and despite\add* \add them\add* all seeing my \add power\add* and the \add miracles\add* that I did \add both\add* in Mitsrayim and in the wilderness, they’ve \add now\add* tested me \add many\add* times and \add haven’t done what I told them\add*,
 \v 23 \add so there’s no way\add* that they’ll \add enter\add* the land that I promised to their ancestors. All those who despised me won’t \add get to\add* \add enter\add* it.
 \v 24 \add However,\add* my servant Kalev \add (Caleb)\add* has a different spirit with him, and he wholeheartedly followed me, \add so\add* I’ll take him into the land \add that he explored\add*, and his descendants \add will inherit\add* it.\x + \xo 14:24: \xt Josh 14:9-12.\x*
-\v 25 The Amalekites and Kena’anim \add (Canaanites)\add* live in the valleys. Tomorrow, you all must turn and set off towards the wilderness via the \add route to\add* the Red Sea.
+\v 25 The Amalekim and Kena’anim \add (Canaanites)\add* live in the valleys. Tomorrow, you all must turn and set off towards the wilderness via the \add route to\add* the Red Sea.
 \s1 Punishment for the protestors
 \p
 \v 26 Then Yahweh said to Mosheh \add (Moses)\add* and Aharon \add (Aaron)\add*,
 \v 27 “\add How much longer\add* \add do I have to put up with\add* this evil gathering that grumble against me? I’ve heard the \add complaints that the Israelis are making\add* against me.
 \v 28 Tell them \add this\add*, ‘Yahweh \add declares\add* that as I \add live\add*, \add your own words that I heard are exactly what\add* I’ll do to you all.
 \v 29 \add Indeed\add* you’ll \add die there\add* in the wilderness—all those \add men who were\add* listed as being twenty years old and older that complained against me.
-\v 30 You all won’t enter that land that I \add would have\add* \add used my power\add* to settle you into. \add The only exceptions are\add* Yefunneh’s son Kalev \add (Caleb)\add* and Nun’s son Yehoshua \add (Joshua)\add*.
+\v 30 You all won’t enter that land that I \add would have\add* \add used my power\add* to settle you into. \add The only exceptions are\add* Yefuneh’s son Kalev \add (Caleb)\add* and Nun’s son Yehoshua \add (Joshua)\add*.
 \v 31 The children of you all that you said would \add be taken\add* as plunder, I take \em them\em* in and they’ll \add experience\add* the land that you all have rejected,
 \v 32 \add but your bodies will remain\add* in this wilderness.
 \v 33 Your sons will become shepherds in the wilderness for forty years, and they will suffer for your unfaithfulness until you \add yourselves\add* all \add become\add* corpses in the wilderness.
@@ -700,7 +700,7 @@
 \p
 \v 36 \add Now\add* those \add ten\add* men who Mosheh \add (Moses)\add* had sent in to explore the land, and who’d returned and the made the whole assembly grumble against him because of their evil report about the land,
 \v 37 they died from a \add deadly disease\add* \add in front\add* of Yahweh after producing that evil report.
-\v 38 \add However,\add* Yehoshua (\add Yehoshua\add*—Nun’s son) and Kalev (\add Kalev\add*—Yefunneh’s son) who had also explored that land, continue to live on.
+\v 38 \add However,\add* Yehoshua (\add Yehoshua\add*—Nun’s son) and Kalev (\add Kalev\add*—Yefuneh’s son) who had also explored that land, continue to live on.
 \s1 The wrong-minded attempt to invade
 \r (Deu. 1:41-46)
 \p
@@ -709,10 +709,10 @@
 \p
 \v 41 “What’s that?” Mosheh \add responded\add*. “\add Don’t go against Yahweh’s instructions because\add* \add your plan\add* won’t succeed.
 \v 42 Don’t \add continue onwards\add* because Yahweh \add isn’t with you\add* and \add for sure\add* you’ll all be defeated by your enemies
-\v 43 because \add you’ll all be facing\add* the Amalekites and the Kena’anim \add (Canaanites)\add* and you’ll \add die\add* by the sword. Yes, you’ve turned away from following Yahweh so \add he\add* won’t be with you all.”
+\v 43 because \add you’ll all be facing\add* the Amalekim and the Kena’anim \add (Canaanites)\add* and you’ll \add die\add* by the sword. Yes, you’ve turned away from following Yahweh so \add he\add* won’t be with you all.”
 \p
 \v 44 \add Nevertheless,\add* they dared to \add continue\add* up to the \add tops\add* of the hills, \add but\add* \add neither\add* Mosheh nor the box \add containing\add* the agreement with Yahweh, left the camp.
-\v 45 Then the Amalekites and Kena’anim that lived in that \add part of the\add* hill country attacked them and \add killed\add* them as far down as Hormah.
+\v 45 Then the Amalekim and Kena’anim that lived in that \add part of the\add* hill country attacked them and \add killed\add* them as far down as Hormah.
 \c 15
 \s1 Instructions about sacrifices and offerings
 \p
@@ -992,8 +992,8 @@
 \s1 Going around Edom via Moav
 \p
 \v 10 Then the \add Israelis\add* set off and camped at Ovot.
-\v 11 \add When\add* they left Ovot, they camped at Iyey-Haavarim in the wilderness \add near\add* Moav’s \add (Moab)\add* eastern border.
-\v 12 From there they set off and camped by the Zared riverbed,
+\v 11 \add When\add* they left Ovot, they camped at Iyey-Ha’avarim in the wilderness \add near\add* Moav’s \add (Moab)\add* eastern border.
+\v 12 From there they set off and camped by the Zered riverbed,
 \v 13 \add before moving on\add* and camping at \add the north side of\add* the Arnon \add river\add*, in the wilderness that extends from the Amori border. (The Arnon is the border between Moav and the Amorim.
 \v 14 That’s why it says in the book about Yahweh’s battles:
 \q1 “Vahev in Sufah, and the riverbeds there, and the Arnon River
@@ -1009,7 +1009,7 @@
 \v 18 the well dug by the leaders,
 \q1 the \add top citizens\add* dug it out.
 \q1 with their sceptres and their staffs.”
-\p From that wilderness, \add the people went on\add* to Mattanah,
+\p From that wilderness, \add the people went on\add* to Matanah,
 \v 19 then through Nahaliel and on to Bamot
 \v 20 and from \add there\add* to the valley in the Moav \add (Moab)\add* countryside \add where Mt. Pisgah rises above\add* the desert.
 \s1 Kings Sihon and Og defeated
@@ -1018,7 +1018,7 @@
 \v 21 Then Yisrael \add (Israel)\add* sent messengers to the Amori King Sihon,
 \v 22 “Let us pass through your \add country\add*. We won’t turn off into any field or vineyard. We won’t \add take\add* water from any well. We’ll \add stay on\add* the king’s \add highway\add* until we’ve \add exited at\add* your \add northern\add* border.”
 \v 23 \add However\add* \add King\add* Sihon \add refused them permission\add*, then \add he\add* \add took his whole army\add* into the wilderness to meet Yisrael, and they attacked \add them\add* at Yahats \add village\add*.
-\v 24 \add Nevertheless,\add* Yisrael defeated them \add in battle\add* and took possession of his land from the Arnon \add river\add* up as far as Yabok \add where the Ammonim’ border was well fortified\add*.
+\v 24 \add Nevertheless,\add* Yisrael defeated them \add in battle\add* and took possession of his land from the Arnon \add river\add* up as far as Yabok \add where the Amonim’ border was well fortified\add*.
 \v 25 \add So\add* Yisrael took those Amori cities \add including\add* Heshbon and \add the surrounding villages\add*, and \add started\add* living in them.
 \v 26 (Heshbon was where the Amori King Sihon lived, as he’d \add previously\add* fought against the former king of Moav \add (Moab)\add* and \add captured\add* all his land down as far as the Arnon \add river\add*.
 \v 27 That was why the \add poets\add* say,
@@ -1050,8 +1050,8 @@
 \s1 King Balak sends for Bil’am
 \p
 \v 1 Then the \add Israelis\add* set off for the Moav \add (Moab)\add* plains, and they camped there across the river from Yeriho \add (Jericho)\add*.
-\v 2 The \add Moabite King\add* Balak (Tsipor’s son), saw everything that Yisrael \add (Israel)\add* had done to the \add Amorim\add*,
-\v 3 and when he \add realised\add* that the \add Israelis\add* were very numerous, the Moabite \add people\add* became sick with fear.
+\v 2 The \add Moavi King\add* Balak (Tsipor’s son), saw everything that Yisrael \add (Israel)\add* had done to the \add Amorim\add*,
+\v 3 and when he \add realised\add* that the \add Israelis\add* were very numerous, the Moavi \add people\add* became sick with fear.
 \v 4 and \add they\add* told the elders at Midyan, “Now \add all that lot\add* will \add devour\add* everything that’s around us, \add just\add* like a cow \add completely cleans out\add* a green field.”
 \p \add Now\add* Tsipor’s son Balak was Moav’s king at that time,
 \v 5 and he sent messengers to Be’or’s son Bil’am \add (Balaam)\add*\x + \xo 22:5: \xt Num 31:8; 2Pe 2:15-16; Jude 11.\x* at Petor (which was their tribal land near the \add Perat\add* \add (Euphrates)\add* river). He \add requested help\add*, saying, “Listen, \add there’s a population here\add* that came out from Mitsrayim \add (Egypt)\add*. Wow, they’ve covered the \add entire surface in this region\add* and they’re living \add opposite\add* me.
@@ -1271,7 +1271,7 @@
 \v 23 Then \add finally,\add* \add Bil’am\add* \add (Balaam)\add* \add made this pronouncement\add*,
 \q1 “Oh dear, who can \add survive\add* when God does \add all\add* that?
 \q1
-\v 24 Ships will come from the Kittim coast,
+\v 24 Ships will come from the Kitim coast,
 \q1 and they’ll \add damage\add* Ashur and Ever,
 \q1 \add but they themselves\add* \add will be destroyed\add* as well.”
 \p
@@ -1279,7 +1279,7 @@
 \c 25
 \s1 Yisrael worships Ba’al at Pe’or
 \p
-\v 1 \add Meanwhile,\add* \add the Israelis settled down\add* at Shittim, and \add their men started sleeping with women from Moav\add* \add (Moab)\add*
+\v 1 \add Meanwhile,\add* \add the Israelis settled down\add* at Shitim, and \add their men started sleeping with women from Moav\add* \add (Moab)\add*
 \v 2 \add who then\add* invited them to sacrifices to their \add idols\add*. \add So\add* \add the Israelis\add* bowed down \add to the idols\add* and ate \add at the feasts\add*,
 \v 3 and \add when\add* Yisrael \add (Israel)\add* consecrated themselves to Ba’al-Pe’or, Yahweh’s anger burnt towards \add them\add*.
 \v 4 Then Yahweh told Mosheh \add (Moses)\add*, “\add Execute\add* all the people’s leaders and \add display their bodies in broad daylight\add*, and then Yahweh’s \add anger\add* might turn back away from Yisrael.”
@@ -1296,7 +1296,7 @@
 \v 12 \add So\add* tell him that I’m \add making\add* a peace agreement with him.
 \v 13 It’s an agreement that gives him and his \add descendants\add* \add the rights to be priests\add* because he was zealous \add on his god’s behalf\add* and he \add worked towards removing the guilt\add* of the \add people\add*.”
 \p
-\v 14 The \add Israeli\add* man \add who was killed\add* with the Midyanite \add woman\add* was Sallu’s son Zimri, a \add clan leader\add* from the Shim’on \add (Simeon)\add* tribe.
+\v 14 The \add Israeli\add* man \add who was killed\add* with the Midyanite \add woman\add* was Salu’s son Zimri, a \add clan leader\add* from the Shim’on \add (Simeon)\add* tribe.
 \v 15 The Midyanite woman \add who was killed\add* was Kozbi, the daughter of Tsur, a Midyanite clan leader.
 \p
 \v 16 Then Yahweh told Mosheh,
@@ -1311,11 +1311,11 @@
 \v 4 “Yahweh has ordered \add us\add* \add to list\add* the names of the \add men\add* who came out from Mitsrayim \add (Egypt)\add* who are twenty years old or older.
 \s1 Re’uven’s descendants
 \p
-\v 5 Re’uven was Yisrael’s \add (Israel)\add* eldest son, and \add his\add* descendants came via his sons Hanok, Pallu,
+\v 5 Re’uven was Yisrael’s \add (Israel)\add* eldest son, and \add his\add* descendants came via his sons Hanok, Palu,
 \v 6 Hetsron, and Karmi.
 \v 7 Those clans added up to 43,730 men.
-\v 8 Pallu’s \add son\add* was Eliav,
-\v 9 and Eliav’s son were Nemuel, Datan, and Aviram. (That was the Datan and Aviram who were the leaders that rebelled against Mosheh \add (Moses)\add* and Aharon \add (Aaron)\add* when they joined Korah’s rebellion against Yahweh.\x + \xo 26:9 \xt 16:1-33.\x*
+\v 8 Palu’s \add son\add* was Eliav,
+\v 9 and Eliav’s son were Nemuel, Datan, and Aviram. (That was the Datan and Aviram who were the leaders that rebelled against Mosheh \add (Moses)\add* and Aharon \add (Aaron)\add* when they joined Korah’s rebellion against Yahweh.\x + \xo 26:9: \xt 16:1-33.\x*
 \v 10 Then the earth \add split open\add* and swallowed them and Korah. Yahweh had also sent a fire that consumed 250 men, and they became a warning sign.
 \v 11 \add However,\add* Korah’s descendants hadn’t died \add then\add*.)
 \s1 Shim’on’s descendants
@@ -1325,7 +1325,7 @@
 \v 14 Those clans added up to 22,200 men.
 \s1 Gad’s descendants
 \p
-\v 15 Gad’s descendants came via his sons Tsefon, Haggit, Shuni,
+\v 15 Gad’s descendants came via his sons Tsefon, Hagit, Shuni,
 \v 16 Ozni, Eir,
 \v 17 Arod, and Areli.
 \v 18 Those clans added up to 40,500 men.
@@ -1348,7 +1348,7 @@
 \p
 \v 28 Yosef’s \add (Joseph)\add* descendants came via his sons Menasheh \add (Manasseh)\add* and Efrayim \add (Ephraim)\add*.
 \v 29 Menasheh’s descendants came from his son Makir and then \add his\add* son Gilead.
-\v 30 Gilead’s descendants came via his sons Iezer, Helek,
+\v 30 Gilead’s descendants came via his sons I’ezer, Helek,
 \v 31 Asriel, Shekem,
 \v 32 Shemida, and Hefer.
 \v 33 Hefer’s son Tselofehad had no sons—only daughters named Mahlah, Noa, Hoglah, Milkah, and Tirtsah.
@@ -1360,7 +1360,7 @@
 \v 37 Those clans added up to 32,500 men. These last two totals were \add all\add* Yosef’s \add (Joseph)\add* descendants.
 \s1 Benyamin’s descendants
 \p
-\v 38 Benyamin’s \add (Benjamin)\add* descendants came via his sons Bela, Ashbel, Ahiram,
+\v 38 Benyamin’s descendants came via his sons Bela, Ashbel, Ahiram,
 \v 39 Shefufam, and Hufam.
 \v 40 Bela’s descendants came via his sons Ard and Na’aman.
 \v 41 Those clans added up to 45,600 men.
@@ -1377,7 +1377,7 @@
 \s1 Naftali’s descendants
 \p
 \v 48 Naftali’s \add (Naphtali)\add* descendants came via his sons Yahtse’el, Guni,
-\v 49 Yetser, and Shillem.
+\v 49 Yetser, and Shilem.
 \v 50 Those clans added up to 45,400 men.
 \s1 The census total and the division of land
 \p
@@ -1391,7 +1391,7 @@
 \s1 Levi’s descendants
 \p
 \v 57 The listed Levites included the clans \add from Levi’s sons\add* Gereshon, Kohat, and Merari,
-\v 58 which were the Livnites, the Hevronites, the Mahlites, the Mushites, and the Korhim. \add Also,\add* Korah fathered Amram
+\v 58 which were the Livnim, the Hevronim, the Mahlim, the Mushim, and the Korhim. \add Also,\add* Korah fathered Amram
 \v 59 \add whose\add* wife was Levi’s daughter Yokeved who’d been born in Mitsrayim \add (Egypt)\add*. \add They\add* had two sons Aharon \add (Aaron)\add* and Mosheh \add (Moses)\add*, and their \add older\add* sister Miryam \add (Miriam)\add*.
 \v 60 Aharon’s \add sons were\add* Nadav, Avihu, Eleazar, and Itamar,\x + \xo 26:60: \xt Num 3:2.\x*
 \v 61 \add but\add* Nadav and Avihu had died when they’d offered Yahweh \add fire in a disobedient manner\add*.\x + \xo 26:61: \xt Lev 10:1-2; Num 3:4.\x*
@@ -1400,7 +1400,7 @@
 \p
 \v 63 Those were the \add census results from when\add* Mosheh \add (Moses)\add* and the priest Eleazar counted the \add Israelis\add* on the Moav \add (Moab)\add* plains \add on the east side of\add* the Yarden \add (Jordan)\add* \add river\add* opposite Yeriho \add (Jericho)\add*.
 \v 64 \add None of the men on those lists were on the previous lists done\add* by Mosheh and the priest Aharon \add (Aaron)\add* when they’d counted the \add Israelis\add* in the Sinay wilderness,
-\v 65 because Yahweh had told them that they’d certainly die \add there\add* in the wilderness until none of \add those alive\add* were left other than Yefunneh’s son Kalev \add (Caleb)\add* and Nun’s son Yehoshua \add (Joshua)\add*.
+\v 65 because Yahweh had told them that they’d certainly die \add there\add* in the wilderness until none of \add those alive\add* were left other than Yefuneh’s son Kalev \add (Caleb)\add* and Nun’s son Yehoshua \add (Joshua)\add*.
 \c 27
 \s1 Inheritances without sons
 \p
@@ -1614,9 +1614,9 @@
 \v 38 The cattle were 36,000 \add less\add* 72 for Yahweh.
 \v 39 There were 30,500 donkeys \add less\add* Yahweh’s tribute of sixty-one.
 \v 40 The \add girls and young women\add* were 16,000 \add less\add* 32 for Yahweh.
-\v 41 \add So\add* Mosheh \add (Moses)\add* gave Yahweh’s contribution to the priest Eleazar as Yahweh had \add instructed\add* Mosheh.
+\v 41 \add So\add* Mosheh gave Yahweh’s contribution to the priest Eleazar as Yahweh had \add instructed\add* Mosheh.
 \p
-\v 42 The half for the \add community\add* that Mosheh had divided off from the \add warriors\add*
+\v 42 The half for the \add community\add* that Mosheh \add (Moses)\add* had divided off from the \add warriors\add*
 \v 43 was: 337,500 sheep,
 \v 44 36,000 cattle,
 \v 45 30,500 donkeys,
@@ -1636,7 +1636,7 @@
 \p
 \v 1 The \add people\add* from the Re’uven and Gad \add tribes\add* \add had amassed\add* \add a lot of\add* livestock, and they \add noticed\add* that the Yazer and Gilead \add regions\add* \add were very suitable\add* for livestock.
 \v 2 \add So\add* \add their leaders\add* went to Mosheh \add (Moses)\add* and the priest Eleazar and the \add community leaders\add* to say,
-\v 3 \add The regions of\add* Atarot, Divon, Yazer, Nimrah, Heshbon, Elealeh, Sevam, Nevo, and Beon
+\v 3 \add The regions of\add* Atarot, Divon, Yazer, Nimrah, Heshbon, El’aleh, Sevam, Nevo, and Be’on
 \v 4 are \add in\add* the land \add here\add* that Yahweh has \add handed over to\add* \add us Israelis\add*. It’s \add ideal\add* for livestock, and \add we,\add* your servants, \add raise\add* livestock.
 \v 5 If we’ve \add earnt\add* your favour, let this land be given to your servants for \add us to own\add*, \add rather than forcing us\add* to cross over the Yarden \add (Jordan)\add* \add river with all the other tribes\add*.”
 \p
@@ -1645,8 +1645,8 @@
 \v 8 Your parents did that at Kadesh-Barnea when I sent them \add in\add* to \add survey\add* the land.\x + \xo 32:8-9: \xt Num 13:17-33.\x*
 \v 9 They went as far as the Eshkol \add valley\add* and they saw the land, \add yet\add* they discouraged the \add people from\add* entering the land that Yahweh had given them.
 \v 10 Yahweh \add got very angry\add* that day, and \add promised\add*,
-\v 11 ‘From the men who came out of Mitsrayim \add (Egypt)\add*, no man who’s twenty or older will see the land which I promised to Avraham \add (Abraham)\add*, Yitshak \add (Isaac)\add*, and Ya’akov \add (Jacob)\add*, because they’re not \add fully with\add* me.
-\v 12 \add Only\add* Yefunneh’s son Kalev \add (Caleb)\add* and Nun’s son Yehoshua \add (Joshua)\add* \add will enter\add* because they \add have believed\add* \add me\add*.’
+\v 11 ‘From the men who came out of Mitsrayim \add (Egypt)\add*, no man who’s twenty or older will see the land which I promised to Avraham, Yitshak \add (Isaac)\add*, and Ya’akov \add (Jacob)\add*, because they’re not \add fully with\add* me.
+\v 12 \add Only\add* Yefuneh’s son Kalev \add (Caleb)\add* and Nun’s son Yehoshua \add (Joshua)\add* \add will enter\add* because they \add have believed\add* \add me\add*.’
 \v 13 \add So\add* Yahweh \add got angry with\add* Yisrael \add (Israel)\add*, and made \add us\add* wander in the wilderness for forty years until that generation was \add eliminated\add* who had \add been evil as per Yahweh’s judgement\add*.
 \v 14 \add Now look here!\add* You’re \add standing in front of me\add* \add just\add* like your parents—a brood of \add disobedient\add* people who’ll make Yahweh \add more angry\add* with you than he was with your parents!
 \v 15 If you all turn away from following him, he’ll \add abandon\add* you all in the wilderness again, and you will have destroyed this \add nation\add*.”
@@ -1677,12 +1677,12 @@
 \v 34 The Gadim rebuilt Divon, Atarot, Aroer,
 \v 35 Atrot-Shofan, Yazer, Yagebehah,
 \v 36 Beyt-Nimrah, and Beyt-Haran—\add all\add* \add fortified\add* cities with pens for \add their\add* flocks.
-\v 37 The Reuvenites rebuilt Heshbon, Elealeh, Kiryatayim,
-\v 38 Nevo, Ba’al-Me’on, and Sibmah, \add but\add* they \add renamed\add* \add some\add* of the cities.
+\v 37 The Re’uvenim rebuilt Heshbon, El’aleh, Kiryatayim,
+\v 38 Nevo, Ba’al-Me’on, and Sivmah, \add but\add* they \add renamed\add* \add some\add* of the cities.
 \p
 \v 39 The descendants of Menasheh’s son Makir went to Gilead and captured it—driving out the Amorim who \add lived there\add*.
 \v 40 \add So\add* Mosheh gave Gilead to Menasheh’s son Makir, and \add his clan\add* lived there.
-\v 41 Menasheh’s \add other\add* son Yair went and captured \add the Amori\add* villages and named them ‘Yair’s Towns’ \add (or ‘Havvot-Yair’)\add*.
+\v 41 Menasheh’s \add other\add* son Yair went and captured \add the Amori\add* villages and named them ‘Yair’s Towns’ \add (or ‘Havot-Ya’ir’)\add*.
 \v 42 \add A man named\add* Novah went and captured Kenat and its villages, and renamed it to ‘Novah’ after himself.
 \c 33
 \s1 The journey legs from Mitsrayim to Sinay
@@ -1690,11 +1690,11 @@
 \v 1 \add The following\add* are \add the details\add* of the \add stages of Yisrael’s\add* \add (Israel)\add* \add journeys\add* \add starting from\add* when they exited Mitsrayim \add (Egypt)\add* \add tribe-by-tribe\add* under Mosheh \add (Moses)\add* and Aharon’s \add (Aaron)\add* leadership.
 \v 2 Mosheh, \add acting on Yahweh’s instructions\add*, had written down their \add departure points\add*, so these were \add the legs of\add* their journeys:
 \p
-\v 3 The day after \add they celebrated\add* the ‘pass-over’ \add (around the end of March)\add*, they left Rameses \add city\add*, raising \add one fist\add* in full view of all Mitsrayim.
+\v 3 The day after \add they celebrated\add* the ‘pass-over’ \add (around the end of March)\add*, they left Ra’meses \add city\add*, raising \add one fist\add* in full view of all Mitsrayim.
 \v 4 \add Meanwhile\add*, the Mitsrim \add (Egyptians)\add* were burying all their oldest sons who’d been struck down by Yahweh \add who had\add* \add also\add* \add totally humiliated\add* their gods.
 \p
-\v 5 After leaving Rameses, the \add Israelis\add* \add went\add* to Sukkot and camped \add there\add*.
-\v 6 Then they left Sukkot and camped at Eytam at the edge of the wilderness.
+\v 5 After leaving Ra’meses, the \add Israelis\add* \add went\add* to Sukot and camped \add there\add*.
+\v 6 Then they left Sukot and camped at Eytam at the edge of the wilderness.
 \v 7 \add After\add* Eytam, they turned back to Pi-Hahirot (opposite Ba’al-Tsefon) and camped \add facing\add* Migdal.
 \v 8 Then they left Pi-Hahirot and walked through the middle of the sea into the Eytam wilderness and camped at Marah.
 \v 9 From Marah, they went to Eylim \add which\add* had twelve springs with seventy palm trees \add around them\add*, and they camped there.
@@ -1706,12 +1706,12 @@
 \v 15 \add When\add* they left Refidim, they camped in the Sinay wilderness.
 \s1 The journey legs in the wilderness
 \p
-\v 16 From the Sinay wilderness, they went to Kivot-Hattaavah and camped \add there\add*.
-\v 17 \add When\add* they left Kivot-Hattaavah, they camped at Hatserot,
+\v 16 From the Sinay wilderness, they went to Kivrot-Hata’avah and camped \add there\add*.
+\v 17 \add When\add* they left Kivrot-Hata’avah, they camped at Hatserot,
 \v 18 and then from \add there\add*, at Ritmah.
-\v 19 From Ritmah, they \add went to\add* Rimmon-Perets to camp,
+\v 19 From Ritmah, they \add went to\add* Rimon-Perets to camp,
 \v 20 and after that, on to Livnah.
-\v 21 Then they left Livnah and camped at Rissah,
+\v 21 Then they left Livnah and camped at Risah,
 \v 22 \add before moving on from there to\add* camp at Kehelatah.
 \v 23 From Kehelatah, they camped at Mt. Shefer,
 \v 24 then they left \add the mountain\add* and camped at Haradah.
@@ -1721,10 +1721,10 @@
 \v 28 and then from Terah, they went to Mitkah to camp.
 \v 29 \add After\add* Mitkah, they camped at Hashmonah,
 \v 30 and \add next after that\add*, they camped at Moserot.
-\v 31 Then they left Moserot and camped at Bene-Yaakan.
-\v 32 From Bene-Yaakan, they \add went to\add* Hor-Haggidgad and camped \add there\add*,
-\v 33 then they left and camped at Yotbatah.
-\v 34 Then they left Yotbatah and camped at Avronah.
+\v 31 Then they left Moserot and camped at Beney-Ya’akan.
+\v 32 From Beney-Ya’akan, they \add went to\add* Hor-Hagidgad and camped \add there\add*,
+\v 33 then they left and camped at Yotvatah.
+\v 34 Then they left Yotvatah and camped at Avronah.
 \v 35 From Avronah, they \add went to\add* Etsyon-Gever and camped \add there\add*,
 \v 36 then they left and camped in the Tsin \add (Zin)\add* wilderness, i.e., at Kadesh.
 \v 37 Then they left Kadesh and camped at Mt. Hor by the border with Edom.
@@ -1737,12 +1737,12 @@
 \v 41 \add The Israelis\add* left Mt. Hor and camped at Tsalmonah.
 \v 42 \add When\add* they left Tsalmonah, they camped at Punon,
 \v 43 and \add after that\add*, on to Ovot.
-\v 44 \add From\add* Ovot, they \add went on\add* to Iyey-Haavarim at the Moav \add (Moab)\add* border.
+\v 44 \add From\add* Ovot, they \add went on\add* to Iyey-Ha’avarim at the Moav \add (Moab)\add* border.
 \v 45 Then they left \add there\add* and camped at Divon-Gad,
 \v 46 \add before going on to\add* camp at Almon-Divlatayim.
 \v 47 \add From there,\add* they \add went into\add* the Avarim mountains and camped \add facing\add* Nevo.
 \v 48 \add After leaving\add* the Avarim mountains, they \add reached\add* the Moav plains by the Yarden \add (Jordan)\add* \add river\add* \add opposite\add* Yeriho \add (Jericho)\add*.
-\v 49 They camped \add beside\add* the \add river\add* from Beyt-Hayshimot to Avel-Shittim \add there\add* on the Moav plains.
+\v 49 They camped \add beside\add* the \add river\add* from Beyt-Hayeshimot to Avel-Hashitim \add there\add* on the Moav plains.
 \p
 \v 50 Then Yahweh spoke to Mosheh \add (Moses)\add* \add there\add* on the Moav plains beside the Yarden \add opposite\add* Yeriho,
 \v 51 “Tell the \add Israelis\add* that you’re all about to cross the Yahweh to enter Kena’an \add (Canaan)\add*.
@@ -1759,7 +1759,7 @@
 \v 2 “Tell the \add people\add* that you’re all about to enter Kena’an \add (Canaan)\add*—the land that will become your inheritance. \add The boundaries will be\add*:
 \p
 \v 3 “The \bd southern\bd* border will extend from the Tsin \add (Zin)\add* wilderness along the Edom border across to the Salt \add (Dead)\add* Sea on the east,
-\v 4 cross south of the Scorpion Pass, continue to Tsin, and go south of Kadesh-Barnea. Then it will go on to Hatsar-Addar and proceed to Atsmon,
+\v 4 cross south of the Scorpion Pass, continue to Tsin, and go south of Kadesh-Barnea. Then it will go on to Hatsar-Adar and proceed to Atsmon,
 \v 5 From Atsmon \add it will extend west\add* to the riverbed at the border with Mitsrayim \add (Egypt)\add*, and then across to the \add Mediterranean\add* Sea.
 \p
 \v 6 “The \bd western\bd* border will be the \add Mediterranean\add* sea.
@@ -1769,7 +1769,7 @@
 \v 9 \add From there\add* the border will extend to Zifron, and it will end at Hatsar-Eynan, \add completing\add* the northern border.
 \p
 \v 10 “The \bd eastern\bd* border will begin at Hatsar-Eynan and extend \add south\add* to Shefam,
-\v 11 then go downhill to Rivlah east of Ayin, then along the \add hills\add* to the east of Lake Kinneret.
+\v 11 then go downhill to Rivlah east of Ayin, then along the \add hills\add* to the east of Lake Kineret.
 \v 12 Then the border will extend \add south\add* along the Yarden \add (Jordan)\add* \add River\add* and \add end at\add* the Salt \add (Dead)\add* Sea.
 \p “Those will be your \add country’s\add* borders.”
 \p
@@ -1782,21 +1782,21 @@
 \v 17 “These are the men who will \add distribute\add* the land: the priest Eleazar and Nun’s son Yehoshua \add (Joshua)\add*,
 \v 18 as well as one leader from each tribe to allocate the land that will be their inheritance.
 \v 19 Those \add tribe\add* leaders are:
-\li1 From Yehudah \add (Judah)\add*, Yefunneh’s son Kalev \add (Caleb)\add*,
+\li1 From Yehudah \add (Judah)\add*, Yefuneh’s son Kalev \add (Caleb)\add*,
 \li1
 \v 20 From Shim’on \add (Simeon)\add*, Amihud’s son Shmuel \add (Samuel)\add*,
 \li1
-\v 21 From Benyamin \add (Benjamin)\add*, Kislon’s son Elidad,
+\v 21 From Benyamin, Kislon’s son Elidad,
 \li1
 \v 22 From Dan, Yogli’s son Buki,
 \li1
-\v 23 From Menasheh \add (Manasseh)\add*, Efod’s son Hanniyel,
+\v 23 From Menasheh \add (Manasseh)\add*, Efod’s son Haniyel,
 \li1
 \v 24 From Efrayim \add (Ephraim)\add*, Shiftan’s son Kemuel,
 \li1
-\v 25 From Zevulun, Parnach’s son Elitsafan,
+\v 25 From Zevulun, Parnak’s son Elitsafan,
 \li1
-\v 26 From Yisakar \add (Issachar)\add*, Azzan’s son Paltiel,
+\v 26 From Yisakar \add (Issachar)\add*, Azan’s son Paltiel,
 \li1
 \v 27 From Asher, Shelomi’s son Ahihud,
 \li1
@@ -1822,7 +1822,7 @@
 \v 11 you all must choose some cities to become ‘refuge cities’\x + \xo 35:11: \xt Deu 19:2-4; Josh 20:1-9.\x* \add so that\add* if someone \add accidentally\add* kills another person, they can flee there.
 \v 12 The cities will be places to stay safe from \add being avenged\add* \add by the relatives\add* until the killer can \add be formally tried\add*.
 \v 13 You all must \add allocate\add* six refuge cities—
-\v 14 three on the eastern side of the Yarden, and there on the western side in Kanann.
+\v 14 three on the eastern side of the Yarden, and there on the western side in Kena’an.
 \v 15 Both \add Israelis\add* and \add foreigners living in the country\add* can flee to \add any of\add* those six cities—anyone who kills \add another\add* person by accident.
 \p
 \v 16 “However, if someone strikes \add another person\add* with \add a metal object\add* and they die, then that person is a murderer, and murderers must be \add executed\add*.
@@ -1855,7 +1855,7 @@
 \v 3 \add However, if\add* they \add ended up\add* \add being married by men from other\add* tribes, then their inheritance would \add pass from our tribe to their husbands’ tribes, so we’d end up with less land as our tribal\add* inheritance.
 \v 4 Then when Yisrael \add (Israel)\add* celebrates the Jubilee \add Year\add*, then that inheritance will be added to the inheritance of \add their husbands’\add* tribes, and be deducted from the inheritance of our \add ancestral\add* tribe.”
 \p
-\v 5 Then Mosheh \add gave a ruling\add* to the \add Israelis\add* \add in accordance with what Yahweh had told him\add*, “These \add Yosefite men\add* are correct.
+\v 5 Then Mosheh \add gave a ruling\add* to the \add Israelis\add* \add in accordance with what Yahweh had told him\add*, “These \add Yosefi men\add* are correct.
 \v 6 Yahweh’s \add command\add* to Tselofehad’s daughters is that \add each of you may marry whoever you want as long as it’s someone from your own\add* tribe.
 \v 7 That way, land \add in Yisrael\add* won’t \add move\add* from tribe to tribe, because \add it will always stay as part of\add* the inheritance \add given to that\add* tribe.
 \v 8 \add Any woman who inherits land can only marry someone from her own\add* tribe, so that the people will \add always\add* \add retain ownership of their tribal\add* inheritance.

@@ -1,9 +1,10 @@
 {
-  "schema_version": 1,
-  "status": "lexical draft; not a completed translation",
-  "source_manifest_sha256": "351607c0d21d9949828611629c2ff97136749b0a0ef43f9773aa476560d7fe72",
+  "schema_version": 2,
+  "status": "lexical/editorial draft; not a completed translation",
+  "source_manifest_sha256": "3f1fb7507b3304b471f7bab0a360b8382b27bd2d51e65c71e40731aef0b18e2a",
   "overrides_sha256": "25748b5eebb66fe44bbfe9eae07bcc9382519a037393617e8ac6f75a765de5b3",
   "name_aliases_sha256": "af493d003f73c2674661192a48fc9fc0293d1676c577ecab38ae676ec4d4cb71",
+  "latin_glosses_sha256": "76da96c3082c2e337398ea3411a27b9efbf22459310ae41d258406f230f5942e",
   "transliteration": {
     "package": "bible-transliterations",
     "version": "0.8.0",
@@ -24,6 +25,7 @@
       "words": 5470,
       "glossed": 4911,
       "unresolved": 559,
+      "source_language": "grc",
       "draft_coverage_percent": 89.78,
       "statuses": {
         "unaccented-candidate": 59,
@@ -46,6 +48,7 @@
       "words": 9158,
       "glossed": 8129,
       "unresolved": 1029,
+      "source_language": "grc",
       "draft_coverage_percent": 88.76,
       "statuses": {
         "missing": 1029,
@@ -68,6 +71,7 @@
       "words": 5804,
       "glossed": 5047,
       "unresolved": 757,
+      "source_language": "grc",
       "draft_coverage_percent": 86.96,
       "statuses": {
         "missing": 757,
@@ -89,6 +93,7 @@
       "words": 6926,
       "glossed": 5391,
       "unresolved": 1535,
+      "source_language": "grc",
       "draft_coverage_percent": 77.84,
       "statuses": {
         "unaccented-candidate": 118,
@@ -108,6 +113,7 @@
       "words": 18604,
       "glossed": 15361,
       "unresolved": 3243,
+      "source_language": "grc",
       "draft_coverage_percent": 82.57,
       "statuses": {
         "unaccented-candidate": 307,
@@ -130,6 +136,7 @@
       "words": 3895,
       "glossed": 3372,
       "unresolved": 523,
+      "source_language": "grc",
       "draft_coverage_percent": 86.57,
       "statuses": {
         "form-lexical": 3014,
@@ -150,6 +157,7 @@
       "words": 12333,
       "glossed": 10951,
       "unresolved": 1382,
+      "source_language": "grc",
       "draft_coverage_percent": 88.79,
       "statuses": {
         "form-lexical": 9433,
@@ -172,6 +180,7 @@
       "words": 18378,
       "glossed": 16148,
       "unresolved": 2230,
+      "source_language": "grc",
       "draft_coverage_percent": 87.87,
       "statuses": {
         "form-lexical": 13742,
@@ -194,6 +203,7 @@
       "words": 11979,
       "glossed": 9249,
       "unresolved": 2730,
+      "source_language": "grc",
       "draft_coverage_percent": 77.21,
       "statuses": {
         "unaccented-candidate": 105,
@@ -216,6 +226,7 @@
       "words": 5115,
       "glossed": 3785,
       "unresolved": 1330,
+      "source_language": "grc",
       "draft_coverage_percent": 74.0,
       "statuses": {
         "form-lexical": 3427,
@@ -238,6 +249,7 @@
       "words": 7871,
       "glossed": 5981,
       "unresolved": 1890,
+      "source_language": "grc",
       "draft_coverage_percent": 75.99,
       "statuses": {
         "missing": 1890,
@@ -260,6 +272,7 @@
       "words": 8928,
       "glossed": 7794,
       "unresolved": 1134,
+      "source_language": "grc",
       "draft_coverage_percent": 87.3,
       "statuses": {
         "form-lexical": 6337,
@@ -281,6 +294,7 @@
       "words": 318,
       "glossed": 271,
       "unresolved": 47,
+      "source_language": "grc",
       "draft_coverage_percent": 85.22,
       "statuses": {
         "unaccented-candidate": 8,
@@ -299,6 +313,7 @@
       "words": 117,
       "glossed": 107,
       "unresolved": 10,
+      "source_language": "grc",
       "draft_coverage_percent": 91.45,
       "statuses": {
         "form-lexical": 85,
@@ -318,6 +333,7 @@
       "words": 4830,
       "glossed": 4129,
       "unresolved": 701,
+      "source_language": "grc",
       "draft_coverage_percent": 85.49,
       "statuses": {
         "missing": 701,
@@ -337,6 +353,7 @@
       "words": 4159,
       "glossed": 3589,
       "unresolved": 570,
+      "source_language": "grc",
       "draft_coverage_percent": 86.29,
       "statuses": {
         "missing": 570,
@@ -352,10 +369,23 @@
       "chapters": 14,
       "verse_segments": 275,
       "prologue_segments": 0
+    },
+    "LAO": {
+      "words": 245,
+      "glossed": 245,
+      "unresolved": 0,
+      "source_language": "lat",
+      "draft_coverage_percent": 100.0,
+      "statuses": {
+        "latin-editorial-draft": 245
+      },
+      "chapters": 1,
+      "verse_segments": 20,
+      "prologue_segments": 0
     }
   },
-  "words": 123885,
-  "glossed": 104215,
+  "words": 124130,
+  "glossed": 104460,
   "statuses": {
     "unaccented-candidate": 1615,
     "form-lexical": 90544,
@@ -367,7 +397,8 @@
     "headword-lexical": 1691,
     "movable-nu-candidate": 1001,
     "headword-fallback-candidate": 49,
-    "common-word-candidate": 27
+    "common-word-candidate": 27,
+    "latin-editorial-draft": 245
   },
   "unsupported_books": {
     "ES2": "No complete Greek source in Brenton. English 2 Esdras (Latin 4 Esdras) needs a separately selected witness and glossing pipeline; LXX Esdras B is Ezra-Nehemiah, not this book."
@@ -383,6 +414,8 @@
     "Brenton source spelling and verse labels are not silently corrected.",
     "PSS/ODE use an unreviewed Swete/First1KGreek transcription, with visible OCR errors retained.",
     "ODE keeps Swete order: IV(a)/IV(b) use chapter 4 with a/b suffixes; XIV uses 47 XML lines as local verse segments, not Rahlfs references or printed line numbers.",
+    "LAO uses Lightfoot Latin and original OET occurrence glosses requiring human review, not Greek lexical data. Lemma, Morphology and LexiconGloss are deliberately empty for Latin.",
+    "LAO 16/17 split Lightfoot 16 into source references 16a/16b without changing words; verse 13 retains his editorial [reliquum]. Verse 5 has difficult Latin syntax.",
     "Equal RV/source verse labels do not prove content alignment.",
     "Word numbers are 1-based data rows, excluding the header, and rebuild with the complete fixed book order."
   ],
@@ -466,6 +499,22 @@
       "bytes": 91500,
       "license": "CC-BY-SA-4.0",
       "attribution": "Open Greek and Latin / First1KGreek; Harvard College Library; Digital Divide Data transcription of H. B. Swete, The Old Testament in Greek, volume III (1905)"
+    },
+    {
+      "filename": "Lightfoot-1875.html",
+      "url": "https://www.gutenberg.org/files/50857/50857-h/50857-h.htm",
+      "sha256": "792d85add364d0328666376d4a2e9daed7556643d3b8483c63ac4b0a8c447129",
+      "bytes": 1908026,
+      "license": "Public Domain",
+      "attribution": "J. B. Lightfoot, St. Paul’s Epistles to the Colossians and Philemon (1875), pp. 353–355, Latin text; digitised by Project Gutenberg, KD Weeks, Colin Bell and the Online Distributed Proofreading Team. https://www.gutenberg.org/ebooks/50857"
+    },
+    {
+      "filename": "James-1924-LAO.html",
+      "url": "https://en.wikisource.org/w/index.php?title=The_Apocryphal_New_Testament_(1924)/Epistles/The_Epistle_to_the_Laodiceans&oldid=11900163",
+      "sha256": "72486aaa42e683a37b5362bdcf3075ab854af74c98a4e373cf61e68310c8a73d",
+      "bytes": 68611,
+      "license": "Public Domain",
+      "attribution": "M. R. James, The Apocryphal New Testament (1924), pp. 478–479, English translation of Laodiceans; Wikisource revision 11900163. Public-domain notice: https://en.wikisource.org/wiki/The_Apocryphal_New_Testament_(1924)"
     }
   ]
 }

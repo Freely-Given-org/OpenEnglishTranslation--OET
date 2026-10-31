@@ -1,8 +1,8 @@
-\id PS2 - Open English Translation—Readers’ Version (OET-RV) v0.0.01
+\id PS2 - Open English Translation—Readers’ Version (OET-RV) v0.4.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PS2
-\rem not WORDTABLE OET-LV_OT_word_table.tsv
+\rem WORDTABLE OET-LV_DC_word_table.tsv
 \rem Adapted from the Public Domain WEBBE courtesy of https://eBible.org
 \h Psalm 151
 \toc1 Psalm 151
@@ -10,31 +10,38 @@
 \toc3 Ps2
 \mt1 Psalm 151
 \is1 Introduction
+\ip \bk Psalm 151\bk* is a short additional song presented in David’s voice. He remembers being the youngest of his brothers, caring for his father’s sheep, and making music. Although his brothers were impressive in appearance, God chose him. The song ends by recalling his victory over Galyat (Goliath), the Pelishti (Philistine) who had challenged him.
+\ip The song brings together events also found in 1 Samuel 16–17. Its emphasis is on God’s choice of an overlooked shepherd and the rescue accomplished through him. The title identifies it as a song beyond the usual collection of one hundred and fifty.
 \ip \bk Psalm 151\bk* is recognised as Deuterocanonical Scripture by the Greek Orthodox and Russian Orthodox Churches.
+\iot Main components of this song
+\io1 David’s humble work and music \ior 1:1-3\ior*
+\io1 God chooses David \ior 1:4-5\ior*
+\io1 David defeats the Pelishti \ior 1:6-7\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \cp 151
-\d This Psalm is a genuine one of David, though extra,\f + \fr 1:0 \ft or, supernumerary\f* composed when he fought in single combat with Goliath.
+\s1 God chooses David and gives him victory
+\d This Psalm is a genuine one of David, though extra,\f + \fr 1:0 \ft or, supernumerary\f* composed when he fought in single combat with Galyat.
 \q1
-\v 1 I was small amongst my brothers,
-\q2 and youngest in my father’s house.
+\v 1 I was small among my brothers,
+\q2 and the youngest in my father’s family.
 \q2 I tended my father’s sheep.
 \q1
-\v 2 My hands formed a musical instrument,
+\v 2 My hands made a musical instrument,
 \q2 and my fingers tuned a lyre.
 \q1
-\v 3 Who shall tell my master?
-\q2 The master himself, he himself hears.
+\v 3 Who’ll tell my master?
+\q2 The master himself hears.
 \q1
-\v 4 He sent forth his angel and took me from my father’s sheep,
+\v 4 He sent his messenger and took me from my father’s sheep,
 \q2 and he anointed me with his anointing oil.
 \q1
 \v 5 My brothers were handsome and tall;
 \q2 but the master didn’t take pleasure in them.
 \q1
-\v 6 I went out to meet the Philistine,
+\v 6 I went out to meet the Pelishti,
 \q2 and he cursed me by his idols.
 \q1
 \v 7 But I drew his own sword and beheaded him,
-\q2 and removed reproach from the children of Israel.
+\q2 and removed the disgrace from the children of Yisrael \add (Israel)\add*.
