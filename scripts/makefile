@@ -1,8 +1,12 @@
 # OET makefile
 #
-# Last updated: 2026-10-30
+# Last updated: 2026-11-01
 #
 # CHANGELOG:
+#   2026-11-01 Default to ALL and remove LV_LAO, clean_RV, and check shortcuts.
+#   2026-11-01 Rebuild MCP independently from its ESFM, word-table and code inputs.
+#   2026-11-01 Remove the BOTH alias; ALL depends directly on LV and RV.
+#   2026-10-31 Preserve unchanged ESFM files and track extraction completion separately.
 #   2026-10-29 Add reproducible draft DC lexical-gloss ESFM build and checks.
 #   2026-10-23 Correct HTML book dependencies and track converter completion.
 #   2026-10-22 Rebuild mapped exports/HTML when helpers or BOS profiles change.
@@ -14,6 +18,8 @@
 #   2026-10-11 connect_OET-RV_words_via_OET-LV.py moved into its own folder
 #   2026-10-30 Refresh the shared LV names table after DC generation, including parallel builds.
 #
+
+.DEFAULT_GOAL := ALL
 
 BOS_mapping_data := $(wildcard ../../BibleOrgSys/BibleOrgSys/DataFiles/VersificationMappings/*.json)
 
@@ -39,6 +45,13 @@ USFM_RV_BOOKS := Act Amo Bar 1Ch 2Ch 1Co 2Co Col Dag Dan Deu Ecc Eph Es1 Es2 Esg
 
 derived_audio_sections := ../exportedFiles/OET-RV_sectionReadings/MRK/MRK_S2.ogg
 derived_VREFs := ../exportedFiles/OET-RV.vref.txt ../exportedFiles/OET-LV.vref.txt
+MCP_DIR ?= ../../open-english-translation-mcp-server
+MCP_database := $(MCP_DIR)/src/oet_mcp_server/data/oet_corpus.db
+MCP_builder := $(MCP_DIR)/scripts/build_db.py
+MCP_code := $(MCP_builder) $(MCP_DIR)/src/oet_mcp_server/lexical.py
+MCP_word_tables := ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv \
+                   ../translatedTexts/ReadersVersion/OET-LV_NT_word_table.tsv \
+                   ../translatedTexts/ReadersVersion/OET-LV_OT_lemma_table.tsv
 derived_USFM := $(patsubst %,../exportedFiles/cleanedUSFM/ReadersVersion/OET-RV_%.USFM,$(USFM_RV_BOOKS)) \
                 $(patsubst %,../exportedFiles/cleanedUSFM/LiteralVersion/OET-LV_%.USFM,$(USFM_LV_BOOKS))
 
@@ -129,8 +142,8 @@ RV_word_tables_sentinel := ../translatedTexts/ReadersVersion/.word_tables_sentin
 
 #=== Top-level/Main stuff =======================
 
-ALL: BOTH $(sideBySide_HTML) $(derived_USFM) $(derived_VREFs)
-BOTH: LV RV
+.PHONY: ALL LV LV_OT LV_NT RV MCP
+ALL: LV RV $(sideBySide_HTML) $(derived_USFM) $(derived_VREFs) MCP
 LV: LV_OT LV_NT LV_DC $(LV_names_TSV_table)
 
 LV_OT: $(LV_OT_HTML)
@@ -143,15 +156,12 @@ RV: $(RV_HTML)
 # not add unreviewed lexical glosses to the existing HTML/USFM/VREF exports.
 # A cached, checksum-pinned build is offline; only missing source files download.
 DC_PYTHON ?= $(if $(wildcard .venv/bin/python),.venv/bin/python,$(UVrun) python)
-.PHONY: LV_DC LV_LAO DC_sources check_DC
+.PHONY: LV_DC DC_sources check_DC
 DC_sources: build_OET-LV_DC.py DC/source_manifest.json
 	@$(DC_PYTHON) build_OET-LV_DC.py fetch
 
 LV_DC: DC_sources DC/LAO_latin_glosses.tsv $(SBE) $(scripted_DC_updates)
 	@$(DC_PYTHON) build_OET-LV_DC.py build --editor "$(SBE)"
-
-# Build the full table so LAO's links retain their offset after existing DC books.
-LV_LAO: LV_DC
 
 check_DC: LV_DC
 	@$(DC_PYTHON) -m unittest discover -s tests -p 'test_dc_pipeline.py'
@@ -185,7 +195,10 @@ $(LV_OT_ESFM_sentinel): $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates)
 	@$(SBE) ScriptedOTUpdates -qe
 	@touch $@
 
-$(final_LV_OT_ESFM): $(LV_OT_ESFM_sentinel)
+# Recheck book timestamps after the stage, including outputs created by its stamp.
+# A missing book reruns the editor once, including under parallel make.
+$(final_LV_OT_ESFM) &: $(LV_OT_ESFM_sentinel)
+	@if test ! -f "$@"; then $(SBE) ScriptedOTUpdates -qe && touch $(LV_OT_ESFM_sentinel); fi
 
 LV_OT_word_tables_sentinel := ../derivedTexts/auto_edited_OT_ESFM/.word_tables_sentinel
 $(LV_OT_word_tables_sentinel): $(expanded_OT_TSV_tables)
@@ -203,7 +216,8 @@ $(LV_NT_ESFM_sentinel): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates)
 	@$(SBE) ScriptedVLTUpdates -qe
 	@touch $@
 
-$(final_LV_NT_ESFM): $(LV_NT_ESFM_sentinel)
+$(final_LV_NT_ESFM) &: $(LV_NT_ESFM_sentinel)
+	@if test ! -f "$@"; then $(SBE) ScriptedVLTUpdates -qe && touch $(LV_NT_ESFM_sentinel); fi
 
 ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv: $(initial_OT_TSV_tables) $(Clear_Bible_MaculaHebrew_OT_TSV) $(scripted_OT_updates) add_tags_to_OT_word_table.py theographic.py $(BOS_mapping_data) hebrew_word_alignment.py word_sequence_alignment.py ot_gloss_fallbacks.py $(BTranslit) $(HebrewTranslit)
 	@echo "\n\nAdd people/places/referent tags to OET OT word table…\n"
@@ -212,9 +226,15 @@ $(final_LV_NT_ESFM): $(LV_NT_ESFM_sentinel)
 	@cp -a ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv
 	@cp -a ../intermediateTexts/glossed_OSHB/all_glosses.lemmas.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv
 
-$(intermediate_LV_OT_ESFM): $(expanded_OT_TSV_tables) extract_glossed_OSHB_OT_to_ESFM.py
+LV_OT_gloss_sentinel := ../intermediateTexts/.cache/OT-gloss-ESFM.stamp
+$(LV_OT_gloss_sentinel): $(expanded_OT_TSV_tables) extract_glossed_OSHB_OT_to_ESFM.py oet_esfm_output.py
 	@echo "\n\nExtract OT from TSV table to ESFM files…\n"
 	@$(UVrun) extract_glossed_OSHB_OT_to_ESFM.py -e
+	@mkdir -p $(dir $@)
+	@touch $@
+
+$(intermediate_LV_OT_ESFM) &: $(LV_OT_gloss_sentinel)
+	@if test ! -f "$@"; then $(UVrun) extract_glossed_OSHB_OT_to_ESFM.py -e && touch $(LV_OT_gloss_sentinel); fi
 
 $(initial_OT_TSV_tables): $(WLC_OT_TSV_table) $(Clear_Bible_MaculaHebrew_OT_TSV) apply_Clear_Macula_OT_glosses.py hebrew_gloss_order.py hebrew_word_alignment.py word_sequence_alignment.py ot_gloss_fallbacks.py
 	@echo "\n\nApply glosses from Macula Hebrew to OT (and reorder)…\n"
@@ -243,9 +263,15 @@ $(BibleTags_TSV): $(BibleTags_OT_USFM) $(BibleTags_NT_USFM) convert_BibTags_USFM
 	@echo "\n\nConvert BibleTags USFM files to TSV…\n"
 	@$(UVrun) convert_BibTags_USFM_to_TSV.py
 
-$(intermediate_LV_NT_ESFM) $(original_NT_wordtable): $(CNTR_book_table) $(CNTR_collation_table) $(CNTR_word_table) $(CNTR_lemma_table) extract_VLT_NT_to_ESFM.py
+LV_NT_gloss_sentinel := ../intermediateTexts/.cache/NT-gloss-ESFM.stamp
+$(LV_NT_gloss_sentinel): $(CNTR_book_table) $(CNTR_collation_table) $(CNTR_word_table) $(CNTR_lemma_table) extract_VLT_NT_to_ESFM.py oet_esfm_output.py
 	@echo "\n\nExtract NT from TSV table to the various {BBB}_gloss.ESFM files…\n"
 	@$(UVrun) extract_VLT_NT_to_ESFM.py -e
+	@mkdir -p $(dir $@)
+	@touch $@
+
+$(intermediate_LV_NT_ESFM) $(original_NT_wordtable) &: $(LV_NT_gloss_sentinel)
+	@if test ! -f "$@"; then $(UVrun) extract_VLT_NT_to_ESFM.py -e && touch $(LV_NT_gloss_sentinel); fi
 
 $(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) $(scripted_NT_updates) add_tags_to_NT_word_table.py theographic.py $(BOS_mapping_data) greek_word_alignment.py word_sequence_alignment.py $(BTranslit) $(HebrewTranslit) $(GreekTranslit)
 	@echo "\n\nAdd people/places/referent tags to OET NT word table…\n"
@@ -257,7 +283,7 @@ $(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) 
 
 #=== RV stuff =======================
 
-$(RV_word_tables_sentinel): $(final_LV_OT_word_tables)
+$(RV_word_tables_sentinel): $(LV_OT_word_tables_sentinel) $(final_LV_OT_word_tables)
 	@echo "\n\nCopying OT morpheme and lemma tables from auto_edited_OT_ESFM/ to ReadersVersion/…\n"
 	@cp -a ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv
 	@cp -a ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_lemma_table.tsv
@@ -311,11 +337,17 @@ $(VREF_sentinel): $(USFM_sentinel) $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_
 	@$(UVrun) convert_OET-LV-RV_USFM_to_VREF.py
 	@echo "\n\nCreate VPL files from USFM…\n"
 	@$(UVrun) convert_OET-LV-RV_USFM_to_VPL.py
-	@echo "\n\nRebuild OET MCP database…\n"
-	@$(UVrun) /srv/FreelyGiven/open-english-translation-mcp-server/scripts/build_db.py
 	@touch $@
 
 $(derived_VREFs): $(VREF_sentinel)
+
+# The database reads ESFM and these three TSVs directly, not VREF/VPL exports.
+# Producer completion stamps also prevent a parallel build from reading tables
+# or RV books while another recipe is replacing them as side effects.
+MCP: $(MCP_database)
+$(MCP_database): $(RV_sentinel) $(RV_word_tables_sentinel) $(expanded_OT_TSV_tables) $(expanded_NT_wordtable) $(LV_ESFM) $(RV_ESFM) $(MCP_word_tables) $(MCP_code)
+	@echo "\n\nRebuild OET MCP database…\n"
+	@$(UVrun) $(MCP_builder) --output "$@"
 
 $(derived_audio_sections): $(RV_ESFM) export_OET-RV_to_sectionReadings.py
 	@echo "\n\nCreate section readings from OET-RV…\n"
@@ -323,12 +355,6 @@ $(derived_audio_sections): $(RV_ESFM) export_OET-RV_to_sectionReadings.py
 
 
 #=== Partial stuff =======================
-
-.PHONY: check
-check: $(LV_ESFM) $(RV_ESFM) $(CONNECTOR_PY) $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
-	@echo "\n\nConnect OET-RV words to OET-LV word numbers (Mark only)…\n"
-	@$(UVrun) connect_OET-RV_words_via_OET-LV/connect_OET-RV_words_via_OET-LV.py --books MRK
-
 
 .PHONY: audio
 audio: $(derived_audio_sections)
@@ -339,7 +365,7 @@ audio: $(derived_audio_sections)
 #=== Clean up stuff =======================
 
 .PHONY: clean
-clean: clean_LV clean_RV
+clean: clean_LV
 .PHONY: clean_LV
 clean_LT: clean_LV_OT clean_LV_NT
 
@@ -358,7 +384,3 @@ clean_LV_NT:
 	@echo "Clean OET LV NT intermediate and derived texts"
 	rm -f ../derivedTexts/auto_edited_VLT_ESFM/*.ESFM
 	rm -f ../intermediateTexts/modified_source_VLT_ESFM/*.ESFM
-
-.PHONY: clean_RV
-clean_RV:
-	@echo "Nothing to clean for OET RV"

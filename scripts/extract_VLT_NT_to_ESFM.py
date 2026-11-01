@@ -26,6 +26,7 @@ Puts markers around one gloss word inserted near another:
 Changes periods in morphology to middle dots
 
 CHANGELOG:
+    2026-10-31 Preserve unchanged ESFM contents and timestamps, including build remarks.
     2023-03-22 Added word numbers to refs in
     2023-07-24 Reduce columns in SR GNT source table
     2023-08-15 Update for new collation table columns plus use of word table for lexemes
@@ -47,13 +48,14 @@ from pathlib import Path
 from csv import DictReader
 from collections import defaultdict
 from datetime import datetime
+from oet_esfm_output import write_esfm_if_changed
 import logging
 
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-31' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
 PROGRAM_VERSION = '1.0.1'
@@ -412,9 +414,11 @@ def write_gloss_esfm_book(book_number:int, book_esfm: str) -> bool:
     assert '  ' not in book_esfm
     # assert "'" not in book_usfm, f'''Why do we have single quote in {usfm_filepath}: {book_usfm[book_usfm.index("'")-20:book_usfm.index("'")+22]}'''
     assert '"' not in book_esfm, f'''Why do we have double quote in {usfm_filepath}: {book_esfm[book_esfm.index('"')-20:book_esfm.index('"')+22]}'''
-    with open(usfm_filepath, 'wt', encoding='utf-8') as output_file:
-        output_file.write(f"{book_esfm}\n")
-    return True
+    written = write_esfm_if_changed(usfm_filepath, f"{book_esfm}\n")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint('Normal', DEBUGGING_THIS_MODULE,
+               f"  Wrote {usfm_filepath.name}" if written else f"  {usfm_filepath.name} is unchanged; file not rewritten.")
+    return written
 # end of extract_VLT_NT_to_ESFM.write_gloss_esfm_book
 
 

@@ -33,9 +33,9 @@ make -C scripts check_DC
 ```
 
 From the `scripts/` directory, use `make LV_DC` and `make check_DC`.
-`make LV_LAO` is an alias for the complete DC build, because LAO's word links
-depend on the shared table's preceding rows. It also runs the DC spelling step.
-`LV` (and therefore `BOTH`/`ALL`) now includes this stage. It is deliberately
+`make LV_DC` includes Laodiceans, whose word links depend on the shared table's
+preceding rows. It also runs the DC spelling step.
+`LV` (and therefore `ALL`) now includes this stage. It is deliberately
 separate from the current 66-book HTML, clean USFM, and VREF pipelines.
 Those exporters do not yet support these draft DC word tables and source
 versifications. Building DC does not edit the RV or rebuild OT/NT files.

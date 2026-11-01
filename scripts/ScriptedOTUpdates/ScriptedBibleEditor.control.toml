@@ -1,7 +1,7 @@
 # This is the TOML control file for the ScriptedBibleEditor
 #   for applying edits to OET-LV OT ESFM files
 #
-# Last updated: 2026-05-16 by RJH
+# Last updated: 2026-10-31
 #
 
 title = "ScriptedBibleEditor OET-LV-OT Control File"
@@ -12,7 +12,8 @@ inputFilenameTemplate = "BBB_gloss.ESFM"
 
 outputFolder = "../../derivedTexts/auto_edited_OT_ESFM/"
 outputFilenameTemplate = "OET-LV_BBB.ESFM"
-clearOutputFolder = true # Removes the folder and recreates it if createOutputFolder is true (else deletes all files in the folder)
+clearOutputFolder = false # Existing books are needed for the content comparison.
+writeOnlyIfContentChanged = true # Rust SBE: preserve metadata-only changes and timestamps.
 createOutputFolder = true
 
 insertSBEditorRemLine = true

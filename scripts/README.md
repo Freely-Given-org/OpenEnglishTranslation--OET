@@ -1024,3 +1024,65 @@ misassigned numbers were removed from Mark. The translation wording was retained
 | 8:22 | `@the¦28762 people¦28762` | 28762 is the object “him”, not the people bringing (28757). |
 | 8:22 | `@Yeshua¦28762` after “to” | This earlier object is “bring to him” (28758), not the later “implore him” (28762). |
 | 14:12 | `@Yeshua's¦34549` | 34549 is “they were sacrificing”; the apprentices' possessive is 34554. |
+
+## Unchanged ESFM output
+
+The OT and NT extractors preserve an existing book when the only differences
+are the generated creation date/program version or ScriptedBibleEditor remark.
+Real changes to text, word links, headings, source/licence remarks, format
+versions or line endings still write the complete new file and its current
+build remarks. Logs distinguish written and unchanged books.
+
+The OT/NT controls enable `writeOnlyIfContentChanged` in Rust ScriptedBibleEditor
+0.8.3 and retain the output folders for comparison. Missing books are restored,
+and removing an editing rule replaces stale output even if no remaining rule
+matches. Other files already in the output directory are retained.
+
+The makefile requires GNU Make 4.3 or later for grouped output targets. Ignored
+completion stamps in `intermediateTexts/.cache/` record finished extraction
+runs independently of ESFM timestamps. Grouped recovery rules restore deleted
+books without running the same whole-testament stage once per missing file,
+including with parallel make. The existing editor stamps likewise advance
+without changing unchanged books. This does not revert metadata-only changes
+already present in the working tree before the build.
+
+## Make targets and MCP dependencies
+
+From `scripts/`, run `make` or `make ALL` for the complete build. The old `BOTH` alias was
+removed on 2026-11-01; `ALL` depends directly on `LV` and `RV`.
+
+MCP database generation is now independent of VREF/VPL conversion. Both `ALL`
+and `make MCP` check the actual database against its RV/LV ESFM inputs, the RV
+copies of the OT and NT word tables, the OT lemma table, `build_db.py`, and
+`lexical.py`. Producer dependencies ensure the database builder waits for word
+tables and word connections, including under parallel make. A word-table-only
+change rebuilds MCP without requiring another VREF/VPL export. A missing
+database is rebuilt; a failed build remains out of date and is retried.
+`MCP_DIR` defaults to the sibling `open-english-translation-mcp-server` checkout
+and can be overridden on the make command line.
+
+The make regressions exercise table-only and code changes, missing outputs,
+failure/retry, unchanged inputs, and parallel connection/build ordering using
+temporary fixtures. No live database or Bible sources are altered by them.
+
+| Target | Current behaviour |
+| --- | --- |
+| `ALL` (default) | LV/RV builds, side-by-side HTML, clean USFM, VREF/VPL, and MCP. |
+| `LV` | OT, NT, DC, and the shared LV names table. |
+| `RV` | Connect RV words and build RV HTML. |
+| `LV_OT` | OT LV generation and HTML. |
+| `LV_NT` | NT LV generation, HTML, and Macula Greek conversion. |
+| `LV_DC` | Build the complete DC word table and draft books. |
+| `DC_sources` | Fetch and verify missing DC source inputs; used by `LV_DC`. |
+| `MCP` | Bring the MCP database up to date, including its source prerequisites. |
+| `check_DC` | Build DC, run its tests, and validate its outputs. |
+| `audio` | Run the section/audio exporter; currently its book-selection dictionary is empty. |
+| `clean` | Currently does no cleanup because `clean_LV` is empty. |
+| `clean_LV`, `clean_LV_OT` | Empty declared targets; the recipes were spelled `clean_LT`/`clean_LT_OT`. |
+| `clean_LT` | The misspelled wrapper currently runs only the working NT cleanup. |
+| `clean_LT_OT` | Deletes OT intermediate files. |
+| `clean_LV_NT` | Deletes NT intermediate and derived ESFM files. |
+
+The `LV_LAO`, `clean_RV`, and Mark-only `check` shortcuts were removed on
+2026-11-01. Use `LV_DC` to build all DC books, including Laodiceans.
+The remaining cleanup targets still need consolidation or removal.

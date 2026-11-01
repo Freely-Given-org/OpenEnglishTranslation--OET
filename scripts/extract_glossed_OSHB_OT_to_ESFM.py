@@ -42,6 +42,7 @@ preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: #, l
 
 
 CHANGELOG:
+    2026-10-31 Preserve unchanged ESFM contents and timestamps, including build remarks.
     2026-10-22 Buffer complete subject phrases after verb prefixes and capitalise after gloss repairs.
     2025-01-19 Check the glosses a bit more (especially having no superfluous periods which cause a line break in the OET-LV)
                     plus remove double 'of', e.g., house_of of_Dan -> house_of Dan
@@ -68,6 +69,7 @@ from pathlib import Path
 from csv import DictReader
 from collections import defaultdict
 from datetime import datetime
+from oet_esfm_output import write_esfm_if_changed
 import re
 import logging
 
@@ -77,7 +79,7 @@ import bos_books_codes_py
 from ot_gloss_fallbacks import fix_known_gloss_duplication, recover_missing_word_glosses, select_gloss
 
 
-LAST_MODIFIED_DATE = '2026-10-22' # by RJH
+LAST_MODIFIED_DATE = '2026-10-31' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
 PROGRAM_VERSION = '1.0.8'
@@ -290,7 +292,7 @@ def export_literal_English_gloss_esfm() -> bool:
 
     last_BBB = last_verse_id = None
     last_chapter_number = last_verse_number = last_word_number = 0
-    num_exported_files = 0
+    num_exported_files = num_written_files = 0
     esfm_text = ""
     for n, row in enumerate(source_word_tsv_rows):
         source_id = row['Ref']
@@ -322,10 +324,11 @@ def export_literal_English_gloss_esfm() -> bool:
                 assert ' ¦' not in esfm_text, f"Can't have word number after space in {esfm_filepath}: {esfm_text[esfm_text.index(' ¦')-20:esfm_text.index(' ¦')+22]}"
                 assert '_¦' not in esfm_text, f"Can't have _¦ in {esfm_filepath}: {esfm_text[esfm_text.index('_¦')-20:esfm_text.index('_¦')+22]}"
                 assert '~¦' not in esfm_text, f"Can't have ~¦ in {esfm_filepath}: {esfm_text[esfm_text.index('~¦')-20:esfm_text.index('~¦')+22]}"
-                with open(esfm_filepath, 'wt', encoding='utf-8') as output_file:
-                    output_file.write(f"{esfm_text}\n")
+                written = write_esfm_if_changed(esfm_filepath, f"{esfm_text}\n")
+                num_written_files += written
                 if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(esfm_text)+1:,} bytes to {last_BBB}_gloss.ESFM" )
+                    vPrint( 'Normal', DEBUGGING_THIS_MODULE,
+                            f"  Wrote {esfm_filepath.name}" if written else f"  {esfm_filepath.name} is unchanged; file not rewritten." )
                 num_exported_files += 1
             USFM_book_code = bos_books_codes_py.bos_book_code_to_usfm_abbrev( BBB )
             English_book_name = bos_books_codes_py.get_english_name_nr( BBB )
@@ -433,14 +436,15 @@ def export_literal_English_gloss_esfm() -> bool:
         assert esfm_text.count('‘') == esfm_text.count('’'), f"{esfm_text.count('‘')} != {esfm_text.count('’')}"
         assert esfm_text.count('“') == esfm_text.count('”'), f"{esfm_text.count('“')} != {esfm_text.count('”')}"
         esfm_filepath = OT_ESFM_OUTPUT_FOLDERPATH.joinpath( f'{last_BBB}_gloss.ESFM' )
-        with open(esfm_filepath, 'wt', encoding='utf-8') as output_file:
-            output_file.write(f"{esfm_text}\n")
+        written = write_esfm_if_changed(esfm_filepath, f"{esfm_text}\n")
+        num_written_files += written
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(esfm_text)+1:,} bytes to {last_BBB}_gloss.ESFM" )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE,
+                    f"  Wrote {esfm_filepath.name}" if written else f"  {esfm_filepath.name} is unchanged; file not rewritten." )
         num_exported_files += 1
 
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {num_exported_files} ESFM files exported" )
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {num_exported_files} ESFM books prepared: {num_written_files} written, {num_exported_files-num_written_files} unchanged." )
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    {wwwwCount:,} word glosses unknown (wwww)" )
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
