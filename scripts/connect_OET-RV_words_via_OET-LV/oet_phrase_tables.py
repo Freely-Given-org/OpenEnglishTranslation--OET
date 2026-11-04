@@ -259,6 +259,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('reprimanded', 'gave rebuke'), # RV MRK 8:33
     ('rest', 'lie down'), # EZE 34:15
     ('rest', 'lying down'), # PSA 139:3
+    ('rest', 'peace and security'),
     ('Return', 'go back'), # GEN 44:25
     ('return', 'turn back'), # DEU 30:2
     ('return', 'turned back'), # ISA 9:13
@@ -470,6 +471,7 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
     ('members', 'body parts'),
     ('menstruation', 'menstrual period'), # RV EZE 22:10
     ('neighbouring', 'neighbouring villages'),
+    ('nobles','leading citizens'),('noble','leading citizen'),
     ('observes', 'take notice'), # RV JOB 35:13
     ('one', 'one man'),
     ('outcry', 'crying out'), # RV GEN 18:20

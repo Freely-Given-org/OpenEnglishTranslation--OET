@@ -31,7 +31,7 @@ See our [formats page](https://OET.Bible/Resources/Formats) for more information
 ## Schedule
 
 As of August 2026, the entire Bible has been drafted has been drafted after some estimated 10,000 hours of work done over a period of four full-time years. ([This page](https://OET.Bible/About/Status/) will now be kept updated with progress.)
-We’ve now moved into Phase 3 which is focused on consistency and accuracy checks.
+We’ ve now moved into Phase 3 which is focused on consistency and accuracy checks.
 
 ## Disclaimer
 
@@ -76,7 +76,7 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 ## Terms to make consistent
 
 - Check consistency of keyterms, e.g., how is ‘son of God’, ‘holy spirit’, ‘kingdom of the heavens’ translated everywhere?
-- consistency of ‘staff’vs ‘rod’
+- consistency of ‘staff’ vs ‘rod’
 - David’s town / city of David
 - ‘c/k’names like ‘Yacob’
 - ‘b/v’names like ‘Yakov’
@@ -90,20 +90,19 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - Change Ephraim/Efrayim to Israel where it’s referring to the northern kingdom
 - Aram vs Syria
 - remove "years old" if it’s not essential/natural
-- make numbers consistent like ‘120’vs ‘one hundred and twenty’
+- make numbers consistent like ‘120’ vs ‘one hundred and twenty’
 - capitalisation of city or river after name, e.g., Ashdod City, Jordan river, Corner Gate
 - "His mother’s name was..." for new kings in 2 Chron
 - a record of everthing done ... was written in the scroll/book of ... after the death of a king
 - "what was right in Yahweh’s eyes" "what was right in the eyes of Yahweh"
 - all our measurements, e.g., ten kilograms, ... should have \add ≈ around them
 - all our months, e.g., March, April, ... should have \add ≈ around them
-- ‘house of Yahweh’vs ‘Yahweh’s temple’vs just ‘temple’
+- ‘house of Yahweh’ vs ‘Yahweh’s temple’ vs just ‘temple’
 - treasuries vs storerooms and storehouses
 - gatekeepers -> ‘the men guarding the gates’
 - all the feast/celebration names, e.g., ‘Festival of Shelters’
-- ‘flowing with milk and honey’vs ‘very fertile’
+- ‘flowing with milk and honey’ vs ‘very fertile’
 - last/latter days or something completely different?
-- reap -> harvest
 - border vs boundary
 - pledge (for loans) -> guarantee
 - work out what we’re going to do with "people/peoples" meaning "people groups"
@@ -112,30 +111,24 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - altar ‘horns’-> \add four\add* \add ≈projecting corners\add*
 - innards, entrails, intestines, guts
 - skin vs hide (of animal)
-- army commander Yahweh -> Commander-in-chief Yahweh
 - proclaim -> announce ???
 - exalt -> speak highly of
 - try to remove righteousness (doing what’s right) and perhaps justice (doing what’s fair) from RV
 - redeemed (replace ‘bought you back’) -> ‘paid the price to free you’
 - green tree / luxuriant tree / leafy tree
-- nobles -> leading citizens
 - sword -> war
-- clefts -> crevices
-- land you do not know -> land you’ve never been to
+- land you do not know -> land you’ ve never been to
 - deeds -> actions
-- strongholds -> fortifications and/or fortresses
-- Titos -> Latin/Roman Titus???
 - prophesying falsehood -> prophesying untruths (not lies)
 - remove ‘everlasting’, ‘amongst’, ‘midst’, ‘upon’, ‘shall’, most of ‘may’
 - sackcloth -> coarse, abrasive cloth
-- bend bows -> ‘use bows and arrows’
-- plaza vs square
 - refer to cities/countries, etc. as ‘it’, not ‘he’ or ‘she’.
 - ‘rest’-> check if ‘peace and stability’or something is more natural in modern English
 - vow -> promise
 - scripture(s) vs Scripture(s)
 - offspring to descendants (except for animals)
 - do we want words like 'dwelt' in the OET-LV???
+- plundered -> looted
 
 Continue checking spelling from Mat 7:18 onwards --
     done Mrk
