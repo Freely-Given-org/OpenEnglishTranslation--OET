@@ -1,4 +1,4 @@
-\id JDG - Open English Translation—Readers’ Version (OET-RV) v0.2.1
+\id JDG - Open English Translation—Readers’ Version (OET-RV) v0.2.4
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JDG
@@ -11,9 +11,9 @@
 \mt1 Various Heroes and Guides
 \mt3 commonly called ‘Judges’
 \is1 Introduction
-\ip This document commonly called ‘\bk Judges\bk*’, contains a collection of accounts of ‘\bk Various Heroes and Guides/Leaders\bk*’ who helped to rescue the Israeli people from their oppressors. It covers the times from their invasion of Kena’an through to just before their first king. Most of these heroes or guides were actually warriors. Shimshon (commonly called ‘Samson’) is the best-known of all of them, and his story can be read in chapters 13–16.
+\ip This document commonly called ‘\bk Judges\bk*’, contains a collection of accounts of ‘\bk Various Heroes and Guides/Leaders\bk*’ who helped to rescue the Israeli people from their oppressors. It covers the times from their invasion of Kena’an through to just before their first king. Most of these heroes or guides were actually warriors. Shimshon (commonly called ‘Samson’ in English) is the best-known of all of them, and his story can be read in chapters 13–16.
 \ip From this document we can learn that Yisrael (‘Israel’ in older English translations) prospered when they obeyed Yahweh’s instructions, but when they disobeyed, then God allowed other peoples and nations to oppress them. However, God is always ready and prepared to save his people whenever they turn away from their disobedience and return again to obeying the instructions that he’d given them.
-\ip The previous book was named after the main character Yehoshua (Joshua) and the following books (Ruth and 1 Shmuel/Samuel) are named after their main characters, but this document with somewhere around a dozen important characters, has no single prominent character that it could be named after. Instead it’s traditionally named ‘Judges’ in English because of around twenty uses of the Hebrew root ‘שָׁפַט’ (shafat) often in roots normally translated as ‘judged’. Despite that, there’s not a single account in this document of these leaders judging the cases and conflicts of the common people. This dilemma offers two possible interpretations: 1/ that these leaders (often military leaders) did judge cases for the common people, but those details aren’t recorded, or 2/ (which we’ve leaned more towards) that this Hebrew word has a wider range of meaning, and so we’ve leaned towards the English word ‘guided’ or ‘led’ in these contexts.
+\ip The previous book was named after the main character Yehoshua (Joshua) and the following books (Ruth and 1 Shmuel/Samuel) are named after their main characters, but this document with somewhere around a dozen important characters, has no single prominent character that it could be named after. Instead it’s traditionally named ‘Judges’ in English because of around twenty uses of the Hebrew root ‘שָׁפַט’ (shafat) often in roots normally translated as ‘judged’. Despite that, there’s very little mention in this document of these leaders judging the cases and conflicts of the common people. This dilemma offers two possible interpretations: 1/ that these leaders (often military leaders) did regularly judge cases for the common people, but apart from Deborah (4:5), those details aren’t recorded, or 2/ (which we’ve leaned more towards) that this Hebrew word has a wider range of meaning here, and so we’ve leaned towards the English word ‘guided’ or ‘led’ in these contexts.
 \iot Main components of this account
 \io1 The events up until Yehoshua’s death \ior 1:1–2:10\ior*
 \io1 The various heroes/guides of Yisrael \ior 2:11–16:31\ior*
@@ -23,7 +23,7 @@
 \c 1
 \s1 Yehudah and Shim’on capture Adoni-Vezek
 \p
-\v 1 After Yehoshua’s \add (Joshua)\add* death, the Israelis asked Yahweh, “\add Which tribe should go first to attack the Kena’anim\add* \add (Canaanites)\add*?”
+\v 1 After Yehoshua’s \add (Joshua’s)\add* death, the Israelis asked Yahweh, “\add Which tribe should go first to attack the Kena’anim\add* \add (Canaanites)\add*?”
 \v 2 “Yehudah \add (Judah)\add* will go first,” Yahweh \add answered\add*. “Listen, I’ve \add already determined that they’ll conquer\add* the land.”
 \p
 \v 3 Then the Yehudah \add leaders\add* said to \add the tribe of\add* Shim’on \add (Simeon)\add*, “\add Come\add* with \add us\add* into the region that we’ve been allocated and we can fight together against the Kena’anim. Then we’ll do the same in your area.” So \add the warriors from the two tribes worked together\add*.
@@ -46,7 +46,7 @@
 \v 15 “Give me a blessing,” she \add requested\add*. “Although you’ve given me land in the southern wilderness, give me some springs of water as well.” So Kalev gave her the upper springs and the lower springs.
 \s1 The victory of descendants of Yehudah and Benyamin
 \p
-\v 16 The Keynim (descendants of Mosheh’s \add (Moses)\add* father-in-law), left the city of palm trees \add (Yeriho\add* \add (Jericho)\add* \add )\add* and went with Yehudah’s \add (Judah)\add* descendants to the southern wilderness near Arad and lived with the people \add there\add*.
+\v 16 The Keynim (descendants of Mosheh’s \add (Moses’)\add* father-in-law), left the city of palm trees \add (Yeriho\add* \add (Jericho)\add* \add )\add* and went with Yehudah’s \add (Judah’s)\add* descendants to the southern wilderness near Arad and lived with the people \add there\add*.
 \v 17 Then the warriors of Yehudah and Shim’on \add (Simeon)\add* conquered the Kena’anim \add (Canaanites)\add* living at Tsefat and destroyed \add the city\add*. \add Now\add* it’s called Hormah \add (which means ‘complete destruction’)\add*.
 \v 18 \add They\add* also captured Azah \add (Gaza)\add*, Ashkelon, and Ekron and \add all\add* their surrounding territories.
 \v 19 Yahweh helped Yehudah and \add they\add* took possession of the hill country, although they weren’t able to conquer the people living down in the plains because they had iron on their chariots.
@@ -54,26 +54,26 @@
 \v 21 \add However\add* Benyamin’s descendants didn’t drive the Yevusim living in Yerushalem \add (Jerusalem)\add* out, so \add they\add* have lived among the Benyamites in Yerushalem to this day.\x + \xo 1:21: \xt Josh 15:63; 2Sam 5:6; 1Ch 11:4.\x*
 \s1 Efrayim and Menasheh conquer Beyt-El
 \p
-\v 22 Also Yosef’s \add (Joseph)\add* descendants attacked Beyt-El \add (Bethel)\add*, and Yahweh \add helped\add* them.
+\v 22 Also Yosef’s \add (Joseph’s)\add* descendants attacked Beyt-El \add (Bethel)\add*, and Yahweh \add helped\add* them.
 \v 23 \add They\add* sent spies out to Beyt-El (previously called Luz)
 \v 24 and \add they\add* saw a man coming out of the city and told him, “Please show us an entrance into the city, and we’ll be kind to you.”
 \v 25 \add So\add* he showed them an entrance, and \add their warriors\add* \add attacked and\add* \add killed the inhabitants\add*, but they let the man and his family go free.
 \v 26 The man went to the land of the Hitim and \add founded\add* a city and called it Luz (which it’s still called to this day).
 \s1 The locals not driven out by the Israelis
 \p
-\v 27 \add However\add* Menasheh’s \add (Manasseh)\add* \add descendants\add* didn’t drive out those living in Beyt-Shean, Ta’anak, Dor, Yivleam, or Megidon, because the Kena’anim \add (Canaanites)\add* were determined \add to keep living there\add*.\x + \xo 1:27-28: \xt Josh 17:11-13.\x*
+\v 27 \add However\add* Menasheh’s \add (Manasseh’s)\add* \add descendants\add* didn’t drive out those living in Beyt-Shean, Ta’anak, Dor, Yivleam, or Megidon, because the Kena’anim \add (Canaanites)\add* were determined \add to keep living there\add*.\x + \xo 1:27-28: \xt Josh 17:11-13.\x*
 \v 28 (\add Later,\add* the Israelis became stronger and \add they forced the Kena’anim to work for them as their slaves\add*, but they didn’t drive them out.)
-\v 29 Nor did Efrayim’s \add (Ephraim)\add* \add descendants\add* drive the Kena’anim out of Gezer, so \add they\add* continued to live among them.\x + \xo 1:29: \xt Josh 16:10.\x*
+\v 29 Nor did Efrayim’s \add (Ephraim’s)\add* \add descendants\add* drive the Kena’anim out of Gezer, so \add they\add* continued to live among them.\x + \xo 1:29: \xt Josh 16:10.\x*
 \p
 \v 30 Zevulun’s \add descendants\add* didn’t drive the Kena’anim out of Kitron or Nahalal, so they continued to live among them and were \add forced to work as slaves\add*.
 \p
 \v 31 Asher’s \add descendants\add* didn’t drive out those who were living in Ako, Tsidon \add (Sidon)\add*, Ahlav, Akziv, Helbah, Afek, or Rehov,
 \v 32 \add So\add* Asher’s descendants lived with the Kena’anim who \add still\add* lived in the region because they didn’t drive them out.
 \p
-\v 33 Naftali’s \add (Naphtali)\add* \add descendants\add* didn’t drive out those who were living in Beyt-Shemesh \add (Heliopolis)\add* or Beyt-Anat, so they continued to live among them and were \add forced to work as slaves\add*.
+\v 33 Naftali’s \add (Naphtali’s)\add* \add descendants\add* didn’t drive out those who were living in Beyt-Shemesh \add (Heliopolis)\add* or Beyt-Anat, so they continued to live among them and were \add forced to work as slaves\add*.
 \p
 \v 34 The Amorim forced Dan’s descendants to live in the hill country, because they didn’t allow them to come down to the plains.
-\v 35 The Amorim were determined to live at Mt. Heres, in Ayalon and Sha’alvim (but when Yosef’s \add (Joseph)\add* descendants became stronger, they forced the \add Amorim\add* \add to work as slaves\add*).
+\v 35 The Amorim were determined to live at Mt. Heres, in Ayalon and Sha’alvim (but when Yosef’s \add (Joseph’s)\add* descendants became stronger, they forced the \add Amorim\add* \add to work as slaves\add*).
 \v 36 The Amorim border went from the Scorpion Pass through Sela and upward from there.
 \c 2
 \s1 God’s messenger comes to Bokim
@@ -88,7 +88,7 @@
 \v 6 Then Yehoshua \add (Joshua)\add* dismissed the people and the \add tribes went to their various regions\add* to take possession of the land.
 \v 7 The people \add obeyed\add* Yahweh \add as long as Yehoshua and the elders who had seen the great things that Yahweh had done for Yisrael\add* \add (Israel)\add* \add , were alive\add*.
 \v 8 Then Yahweh’s servant Yehoshua (son of Nun) died at the age of 110
-\v 9 and they buried him in his allocated land at Timnat-Heres, inside Efrayim’s \add (Ephraim)\add* hill country territory north of Mt. Ga’ash.\x + \xo 2:9: \xt Josh 19:49-50.\x*
+\v 9 and they buried him in his allocated land at Timnat-Heres, inside Efrayim’s \add (Ephraim’s)\add* hill country territory north of Mt. Ga’ash.\x + \xo 2:9: \xt Josh 19:49-50.\x*
 \s1 Yisrael (Israel) turns from Yahweh
 \p
 \v 10 When all of that generation \add had passed away\add*, the next generation didn’t know Yahweh or \add even\add* know about what he’d done for \add the Israelis\add*.
@@ -98,7 +98,7 @@
 \v 14 \add So\add* Yahweh \add got angry with\add* Yisrael \add (Israel)\add* so \add he caused raiders to come and take their property\add* and \add he allowed their enemies to become more powerful\add* so they could no longer stand against them.
 \v 15 \add Whenever the Israelis went into battle\add*, Yahweh \add worked against them\add* just like \add he’d\add* said he would and they became very distressed.
 \p
-\v 16 Then Yahweh \add gave them\add* leaders\f + \fr 2:16 \ft Traditionally called ‘judges’ in most English translations, but that modern term doesn’t fit their various functions in this account at all well. (‘Leaders’ isn’t perfect either but it’s generic enough to cover most of their roles.)\f* to save them from the raiders.
+\v 16 Then Yahweh \add gave them\add* leaders\f + \fr 2:16 \ft Traditionally called ‘judges’ in most English translations, but that modern term doesn’t fit their various functions in this account at all well. (‘Leaders’ isn’t perfect either but it’s generic enough to cover most of their roles as guides, heroes, and sometime judges.)\f* to save them from the raiders.
 \v 17 \add However\add* they wouldn’t listen to \add those\add* leaders \add either\add*—continuing to prostitute themselves to other gods and bowing down to idols. They rapidly turned away from their ancestors’ \add ways\add* and \add showed no interest\add* in obeying Yahweh’s instructions.
 \v 18 Whenever Yahweh \add gave them\add* a leader, \add he\add* would \add support\add* that leader and would save them from their enemies during that leader’s life, because \add he\add* \add pitied\add* \add the people\add* when they groaned \add from being tormented and oppressed\add*.
 \v 19 \add But then at the death of that leader\add*, they would turn back and behave more corruptly than their ancestors—following other gods and bowing down to \add idols\add*. They didn’t stop any of their evil activities or their shameless behaviour
@@ -119,7 +119,7 @@
 \p
 \v 7 \add So\add* the \add Israelis did things considered evil by\add* Yahweh and they forgot about their god Yahweh, \add instead\add* serving the Ba’al and Asherot \add idols\add*.
 \v 8 \add Because of that,\add* Yahweh \add was very angry\add* with Yisrael \add (Israel)\add*, so he \add handed them over to\add* King Kushan-Rish’atayim of Aram-Naharayim. The Israelis served \add him\add* for eight years
-\v 9 \add but when\add* they cried out to Yahweh, \add he\add* \add sent them\add* a \add leader to rescue\add* them: Otniel, son of Kalev’s \add (Caleb)\add* younger brother Kenaz.
+\v 9 \add but when\add* they cried out to Yahweh, \add he\add* \add sent them\add* a \add leader to rescue\add* them: Otniel, son of Kalev’s \add (Caleb’s)\add* younger brother Kenaz.
 \v 10 Yahweh’s spirit \add empowered\add* him and he led Yisrael. He \add led them into battle\add* against King Kushan-Rish’atayim of Aram \add (Syria)\add*, and Yahweh \add helped them\add* defeat \add him\add*.
 \v 11 \add So\add* the region had peace for forty years, and then Otniel (Kenaz’s son) died.
 \s1 Ehud
@@ -166,7 +166,7 @@
 \v 9 “I’ll certainly go with you,” she said, “but it won’t be you that’s honoured \add afterwards\add*, but \add rather\add* Yahweh \add will use a woman to defeat\add* Sisera.” So Deborah \add accompanied\add* Barak to Kedesh.
 \v 10 \add There\add* \add he\add* summoned \add warriors from\add* Zevulun and Naftali and ten thousand men came, and \add they all went together\add* with Deborah \add to Mt. Tavor\add*.
 \p
-\v 11 \add Now\add* Hever had moved \add with his wife Ya’el and their family\add* \add away from the other\add* Keynim (and from Mosheh’s \add (Moses)\add* father-in-law Hovav’s descendants) and set up his tent by the oak tree at Tsa’ananim near Kedesh.
+\v 11 \add Now\add* Hever had moved \add with his wife Ya’el and their family\add* \add away from the other\add* Keynim (and from Mosheh’s \add (Moses’)\add* father-in-law Hovav’s descendants) and set up his tent by the oak tree at Tsa’ananim near Kedesh.
 \p
 \v 12 \add When\add* Sisera was told that Barak (Avinoam’s son) had gone to Mt. Tavor,
 \v 13 \add he\add* assembled his warriors and their nine hundred chariots (with iron on them) \add and went from\add* Haroshet-Hagoyim to the Kishon riverbed.
@@ -217,7 +217,7 @@
 \q1
 \v 7 Israeli villages were abandoned.
 \q1 No one lived there until I, Deborah, became their leader.
-\q1 I became one of Yisrael’s \add (Israel)\add* \add mothers\add*.
+\q1 I became one of Yisrael’s \add (Israel’s)\add* \add mothers\add*.
 \q1
 \v 8 When \add Yisrael\add* chose new gods,
 \q2 then enemies attacked the \add city\add* gates.
@@ -246,12 +246,12 @@
 \q1 Barak, \add get moving\add* and capture your prisoners,
 \q2 you son of Avinoam.
 \q1
-\v 13 Then the survivor went down to the nobles.
+\v 13 Then the survivor went down to the \add leading citizens\add*.
 \q1 Yahweh’s people went down to the mighty. ???
 \q1
 \v 14 From Efrayim \add (Ephraim)\add* their root was with Amalek.
 \q1 After you, Benyamin, among your people.
-\q1 From Makir \add (in Menasheh’s\add* \add (Manasseh)\add* \add tribe)\add*, the commanders came down.
+\q1 From Makir \add (in Menasheh’s\add* \add (Manasseh’s)\add* \add tribe)\add*, the commanders came down.
 \q1 And from Zevulun, those who march carrying an officer’s staff.
 \q1
 \v 15 My princes in Yisakar \add (Issachar)\add* were with Deborah.
@@ -299,7 +299,7 @@
 \q1 She deserves the most praise out of \add all\add* women \add who live in tents\add*.
 \q1
 \v 25 He asked for water—she gave him milk,
-\q2 Yogurt in a bowl suitable for nobles.
+\q2 Yogurt in a bowl suitable for \add the leading citizens\add*.
 \q1
 \v 26 Her hands reached out for the tent peg,
 \q2 and her right hand for the workman’s hammer.
@@ -367,7 +367,7 @@
 \v 24 \add So\add* Gid’on built an altar there to \add sacrifice\add* to Yahweh and named it ‘Yahweh is peace’. (It still stands there at Ofrah of the Aviezri to this day.)
 \p
 \v 25 \add That same\add* night, Yahweh told him, “Take the young bull that belongs to your father, and the second bull seven years old. Break the altar of Ba’al into pieces that belongs to your father, and cut down the Asherah pole that’s beside it.
-\v 26 Build a \add regular\add* altar to your god Yahweh on top of this stronghold, then take the second bull and offer a whole burnt offering using the Asherah pole that you cut down \add for firewood\add*.”
+\v 26 Build a \add regular\add* altar to your god Yahweh on top of this fortress, then take the second bull and offer a whole burnt offering using the Asherah pole that you cut down \add for firewood\add*.”
 \v 27 \add So\add* Gid’on took ten of his servants and did what Yahweh had instructed him to, \add but\add* he did it at night because he was afraid to do it in the daytime—\add fearing the anger of\add* his father’s household and the men of the city.
 \p
 \v 28 When the men of the city got up early the next morning, wow, the Ba’al’s altar had been torn down, the Asherah pole that was beside it had been cut down, and the second bull had been offered on a \add new\add* altar that had been built.
@@ -420,14 +420,14 @@
 \v 22 When the three hundred ram’s horns \add sounded\add*, Yahweh \add caused the Midyanite army to start fighting each other with their swords\add*, and the army fled as far as Beyt-Hashitah (towards Tsererah) and towards the border of Avel-Meholah (towards Tabat).
 \p
 \v 23 Then the \add warriors\add* from Naftali \add (Naphtali)\add*, Asher, and from all of Menasheh \add (Manasseh)\add* were summoned \add to help with pursuing the Midyanites\add*.
-\v 24 Gid’on \add also\add* sent messengers through Efrayim’s \add (Ephraim)\add* hill country \add to tell them\add*, “Go down \add to the Yarden\add* \add (Jordan)\add* \add river\add* opposite Midyan and \add take control of the crossings to capture them between\add* as far as Beyt-Barah.” So all the \add men\add* of Efrayim were summoned and they commandeered the Yarden \add crossings\add* as far as Beyt-Barah.
+\v 24 Gid’on \add also\add* sent messengers through Efrayim’s \add (Ephraim’s)\add* hill country \add to tell them\add*, “Go down \add to the Yarden\add* \add (Jordan)\add* \add river\add* opposite Midyan and \add take control of the crossings to capture them between\add* as far as Beyt-Barah.” So all the \add men\add* of Efrayim were summoned and they commandeered the Yarden \add crossings\add* as far as Beyt-Barah.
 \v 25 They chased after the Midyanites and captured \add their\add* two princes, Orev and Ze’ev. They killed Orev at the rock \add now called\add* ‘Orev’s rock’, and they killed Ze’ev in a wine-pressing \add pit\add* \add now called\add* ‘Ze’ev’s wine-press’, and they brought \add their\add* \add heads\add* back across the Yarden to Gid’on.
 \c 8
 \s1 The final defeat of the Midyanites
 \p
 \v 1 \add But\add* then the Efrati \add men\add* \add challenged\add* \add Gid’on\add*, “Why have you \add side-tracked\add* us? Why didn’t you call us when you went to battle against the Midyanites?” And they severely rebuked him.
 \p
-\v 2 “What \add have I achieved compared to you guys\add*?” \add answered\add* \add Gid’on\add*. “Aren’t the \add seconds\add* of Efrayim’s \add (Ephraim)\add* grapes better than the \add whole\add* grape harvest of Aviezer?
+\v 2 “What \add have I achieved compared to you guys\add*?” \add answered\add* \add Gid’on\add*. “Aren’t the \add seconds\add* of Efrayim’s \add (Ephraim’s)\add* grapes better than the \add whole\add* grape harvest of Aviezer?
 \v 3 God \add helped you all defeat\add* Orev and Ze’ev, the princes of Midyan.\x + \xo 8:3-5: \xt Psa 83:11.\x* What did I do compared to that?” After he said that, they \add all\add* \add calmed down again\add*.
 \p
 \v 4 Then Gid’on and his three hundred warriors crossed the Yarden \add (Jordan)\add* \add going east\add*. They were \add all exhausted, but continued the pursuit\add*.
@@ -577,7 +577,7 @@
 \v 14 Go and cry out to the gods that you’ve all chosen for yourselves. They should deliver you all at the time of your distress.”
 \p
 \v 15 Then the \add Israelis\add* said to Yahweh, “We’ve sinned. You do to us according to all that is good in your eyes. Only please rescue us today.”
-\v 16 They removed the \add foreign\add* gods from among them, and they worshipped Yahweh and \add so he became concerned\add* with Yisrael’s \add (Israel)\add* suffering.
+\v 16 They removed the \add foreign\add* gods from among them, and they worshipped Yahweh and \add so he became concerned\add* with Yisrael’s \add (Israel’s)\add* suffering.
 \p
 \v 17 Now the \add Amonim had assembled\add* and were camped in Gilead. So the \add Israelis\add* gathered together and they camped at Mitspah.
 \v 18 Then the princes of Gilead said to \add each other\add*, “Who \add will lead us\add* to fight against the \add Amonim\add*? He can become the leader over all of us who live in Gilead.”
@@ -892,7 +892,7 @@
 \p \add So\add* the Danim continued onward,
 \v 27 taking with them the things that Mikah had made, as well as his priest. They came to Layish where the unsuspecting people were living peaceably, and they slaughtered them with \add their\add* \add swords\add* and burnt down the city.
 \v 28 \add No one came to rescue them\add* because it was \add a long way\add* from Tsidon \add (Sidon)\add* and \add they did have much involvement with them anyway\add*. (\add Layish\add* was in the valley near Beyt-Rehov.) They rebuilt the city and then \add moved into\add* it.
-\v 29 They named the \add rebuilt\add* city Dan (instead of Layish) in honour of their ancestor Dan who was one of Yisrael’s \add (Israel)\add* sons.
+\v 29 They named the \add rebuilt\add* city Dan (instead of Layish) in honour of their ancestor Dan who was one of Yisrael’s \add (Israel’s)\add* sons.
 \v 30 The Danim \add mounted\add* the carved image for themselves \add to worship\add*. Yonatan \add (Jonathan)\add* (Gereshom’s son from Menasheh \add (Manasseh)\add*) became the priest for the Danim (and then his descendants until when the people were \add eventually\add* exiled from the region).
 \v 31 \add So\add* they set up the carved image that Mikah had made \add and worshipped it\add* \add the whole time that God’s tent\add* was at Shiloh.
 \c 19
@@ -935,7 +935,7 @@
 \v 26 The woman \add managed to get herself back to\add* the house where her master was, and \add collapsed\add* at the entrance until \add it got light\add*.
 \v 27 \add When\add* her master got up and he opened the \add door\add* to go \add and continue on his trip\add*, look, his slave-wife had fallen at the entrance and her hands were on the threshold.
 \v 28 “Get up,” he told her. “Let’s go.” But she didn’t answer, so he put her on his donkey and \add headed\add* home.
-\v 29 When he \add arrived\add*, he got a knife and hacked his wife’s \add body\add* into twelve pieces (\add including the\add* bones), and he sent \add them\add* \add to various places spread across\add* all of Yisrael’s \add (Israel)\add* territory.
+\v 29 When he \add arrived\add*, he got a knife and hacked his wife’s \add body\add* into twelve pieces (\add including the\add* bones), and he sent \add them\add* \add to various places spread across\add* all of Yisrael’s \add (Israel’s)\add* territory.
 \v 30 Then everyone who saw \add a piece\add* said, “Nothing has \add ever\add* happened like this before—we’ve never seen anything like this from the time that the \add Israelis\add* left Mitsrayim \add (Egypt)\add* until \add now\add*. \add What do we need to do about it?\add* Speak up and make a plan.”
 \c 20
 \s1 The preparation of Israelis of war
@@ -978,7 +978,7 @@
 \v 25 \add Again\add* the Benyamites came out from Giveah, and \add this time\add* they killed eighteen thousand \add Israeli swordsmen\add*.
 \v 26 Then the \add Israeli warriors\add* and all the people went \add back\add* to Beyt-El \add (Bethel)\add*. They wept, and they sat there before Yahweh. They fasted that day until the evening, then they offered burnt offerings and peace offerings to Yahweh.
 \v 27 \add They\add* asked Yahweh (because the box containing the agreement with the true God was there in those days
-\v 28 and Pinhas (son of Aharon’s \add (Aaron)\add* son Eleazar) was serving before it in those days), “Should \add we\add* continue to go to the battle once more against the our \add cousins the Benyamites\add*, or should \add we\add* stop?”
+\v 28 and Pinhas (son of Aharon’s \add (Aaron’s)\add* son Eleazar) was serving before it in those days), “Should \add we\add* continue to go to the battle once more against the our \add cousins the Benyamites\add*, or should \add we\add* stop?”
 \p “Go \add back\add* \add again\add*, because tomorrow I’ll give \add you victory over them\add*,” Yahweh \add responded\add*.
 \p
 \v 29 \add So the Israelis\add* placed \add groups of warriors in ambush\add* \add all\add* around Giveah.
@@ -1026,7 +1026,7 @@
 \v 13 Then the entire assembly sent a message to the \add Benyamites\add* at Rimon rock, \add saying that they were now ready for peace\add*.
 \v 14 \add So\add* the \add Benyamites\add* returned and were given the young women from Yavesh-Gilead, \add but\add* there wasn’t enough of them.
 \p
-\v 15 The people \add still\add* felt \add sorry\add* for the \add Benyamites\add*, because Yahweh had \add caused\add* a gap among Yisrael’s \add (Israel)\add* tribes,
+\v 15 The people \add still\add* felt \add sorry\add* for the \add Benyamites\add*, because Yahweh had \add caused\add* a gap among Yisrael’s \add (Israel’s)\add* tribes,
 \v 16 \add so the leaders asked\add*, “How can we provide wives for the remaining \add Benyamite men\add* since \add the other\add* Benyamite \add women\add* \add were wiped out\add*?”
 \v 17 \add Because\add* they said, “\add They must be able to procreate so that\add* an entire Israeli tribe isn’t blotted out.
 \v 18 \add But we can’t be the ones to give our daughters to them to marry because we made an oath that anyone who did that would\add* be cursed.”

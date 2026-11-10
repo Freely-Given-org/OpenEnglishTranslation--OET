@@ -78,8 +78,6 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - Check consistency of keyterms, e.g., how is ‘son of God’, ‘holy spirit’, ‘kingdom of the heavens’ translated everywhere?
 - consistency of ‘staff’ vs ‘rod’
 - David’s town / city of David
-- ‘c/k’names like ‘Yacob’
-- ‘b/v’names like ‘Yakov’
 - ‘ai/ay’names like ‘Yeshai’
 - Philistines vs Filistines
 - raised offering vs wave offering, peace offering vs fellowship offering
@@ -87,7 +85,6 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - firstfruits -> harvest festival
 - make sure we haven’t used ‘tithe’
 - passover/Passover/pass-over, ....
-- Change Ephraim/Efrayim to Israel where it’s referring to the northern kingdom
 - Aram vs Syria
 - remove "years old" if it’s not essential/natural
 - make numbers consistent like ‘120’ vs ‘one hundred and twenty’
@@ -97,11 +94,10 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - "what was right in Yahweh’s eyes" "what was right in the eyes of Yahweh"
 - all our measurements, e.g., ten kilograms, ... should have \add ≈ around them
 - all our months, e.g., March, April, ... should have \add ≈ around them
-- ‘house of Yahweh’ vs ‘Yahweh’s temple’ vs just ‘temple’
+- ‘house of Yahweh’ vs ‘Yahweh's temple’ vs just ‘temple’
 - treasuries vs storerooms and storehouses
 - gatekeepers -> ‘the men guarding the gates’
 - all the feast/celebration names, e.g., ‘Festival of Shelters’
-- ‘flowing with milk and honey’ vs ‘very fertile’
 - last/latter days or something completely different?
 - border vs boundary
 - pledge (for loans) -> guarantee
@@ -125,10 +121,9 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - refer to cities/countries, etc. as ‘it’, not ‘he’ or ‘she’.
 - ‘rest’-> check if ‘peace and stability’or something is more natural in modern English
 - vow -> promise
-- scripture(s) vs Scripture(s)
-- offspring to descendants (except for animals)
-- do we want words like 'dwelt' in the OET-LV???
 - plundered -> looted
+
+- do we want words like 'dwelt' in the OET-LV???
 
 Continue checking spelling from Mat 7:18 onwards --
     done Mrk

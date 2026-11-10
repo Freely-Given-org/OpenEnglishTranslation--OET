@@ -1,8 +1,10 @@
 # OET makefile
 #
-# Last updated: 2026-11-01
+# Last updated: 2026-11-06
 #
 # CHANGELOG:
+#   2026-11-06 Build incremental SILE print/screen PDF downloads after RV/LV producers.
+#   2026-11-05 Write manual release versions and stable content fingerprints per LV resource.
 #   2026-11-01 Default to ALL and remove LV_LAO, clean_RV, and check shortcuts.
 #   2026-11-01 Rebuild MCP independently from its ESFM, word-table and code inputs.
 #   2026-11-01 Remove the BOTH alias; ALL depends directly on LV and RV.
@@ -18,6 +20,13 @@
 #   2026-10-11 connect_OET-RV_words_via_OET-LV.py moved into its own folder
 #   2026-10-30 Refresh the shared LV names table after DC generation, including parallel builds.
 #
+
+# Release versions are bumped deliberately here, independently for each group.
+# A content/tool/source change updates version.json but never increments these.
+LV_OT_VERSION := v0.2.0
+LV_NT_VERSION := v0.2.0
+LV_DC_VERSION := v0.2.0
+LV_NAMES_VERSION := v0.2.0
 
 .DEFAULT_GOAL := ALL
 
@@ -63,10 +72,17 @@ RV_HTML := $(patsubst %,../exportedFiles/simpleHTML/ReadersVersion/%.html,$(HTML
 RV_ESFM := $(RV_ESFM_SOURCE)
 final_LV_OT_ESFM := $(patsubst %,../derivedTexts/auto_edited_OT_ESFM/OET-LV_%.ESFM,$(ESFM_OT_BOOKS))
 final_LV_NT_ESFM := $(patsubst %,../derivedTexts/auto_edited_VLT_ESFM/OET-LV_%.ESFM,$(ESFM_NT_BOOKS))
+final_LV_NT_word_table := ../derivedTexts/auto_edited_VLT_ESFM/OET-LV_NT_word_table.tsv
 # Existing DC drafts participate in RV linking; older checkouts can omit them.
 connector_DC_inputs := $(wildcard ../derivedTexts/auto_edited_DC_ESFM/OET-LV_*.ESFM ../derivedTexts/auto_edited_DC_ESFM/OET-LV_DC_word_table.tsv)
 
+LV_OT_version_file := ../derivedTexts/auto_edited_OT_ESFM/version.json
+LV_NT_version_file := ../derivedTexts/auto_edited_VLT_ESFM/version.json
+LV_DC_version_file := ../derivedTexts/auto_edited_DC_ESFM/version.json
+LV_names_version_file := ../derivedTexts/version.json
+
 LV_names_TSV_table := ../derivedTexts/OET-LV_names_table.tsv
+
 LV_ESFM := $(final_LV_OT_ESFM) $(final_LV_NT_ESFM)
 intermediate_LV_OT_ESFM := $(patsubst %,../intermediateTexts/modified_source_glossed_OSHB_ESFM/%_gloss.ESFM,$(ESFM_OT_BOOKS))
 intermediate_LV_NT_ESFM := $(patsubst %,../intermediateTexts/modified_source_VLT_ESFM/%_gloss.ESFM,$(ESFM_NT_BOOKS))
@@ -142,12 +158,12 @@ RV_word_tables_sentinel := ../translatedTexts/ReadersVersion/.word_tables_sentin
 
 #=== Top-level/Main stuff =======================
 
-.PHONY: ALL LV LV_OT LV_NT RV MCP
-ALL: LV RV $(sideBySide_HTML) $(derived_USFM) $(derived_VREFs) MCP
-LV: LV_OT LV_NT LV_DC $(LV_names_TSV_table)
+.PHONY: ALL LV LV_OT LV_NT RV MCP PDF
+ALL: LV RV $(sideBySide_HTML) $(derived_USFM) $(derived_VREFs) MCP PDF
+LV: LV_OT LV_NT LV_DC $(LV_names_version_file)
 
-LV_OT: $(LV_OT_HTML)
-LV_NT: $(LV_NT_HTML) $(Clear_Bible_NT_lowfat_TSV)
+LV_OT: $(LV_OT_HTML) $(LV_OT_version_file)
+LV_NT: $(LV_NT_HTML) $(Clear_Bible_NT_lowfat_TSV) $(LV_NT_version_file)
 RV: $(RV_HTML)
 
 #=== Draft LV deuterocanonical books =======================
@@ -156,16 +172,38 @@ RV: $(RV_HTML)
 # not add unreviewed lexical glosses to the existing HTML/USFM/VREF exports.
 # A cached, checksum-pinned build is offline; only missing source files download.
 DC_PYTHON ?= $(if $(wildcard .venv/bin/python),.venv/bin/python,$(UVrun) python)
-.PHONY: LV_DC DC_sources check_DC
+.PHONY: LV_DC LV_DC_files DC_sources check_DC
 DC_sources: build_OET-LV_DC.py DC/source_manifest.json
 	@$(DC_PYTHON) build_OET-LV_DC.py fetch
 
-LV_DC: DC_sources DC/LAO_latin_glosses.tsv $(SBE) $(scripted_DC_updates)
+LV_DC: $(LV_DC_version_file)
+
+LV_DC_files: DC_sources DC/LAO_latin_glosses.tsv $(SBE) $(scripted_DC_updates)
 	@$(DC_PYTHON) build_OET-LV_DC.py build --editor "$(SBE)"
 
 check_DC: LV_DC
 	@$(DC_PYTHON) -m unittest discover -s tests -p 'test_dc_pipeline.py'
 	@$(DC_PYTHON) build_OET-LV_DC.py check --editor "$(SBE)"
+
+#=== Resource release/version files =======================
+# Recheck metadata after its producers finish (also with make -j). The writer
+# leaves identical JSON bytes and mtime untouched, and records no build dates.
+VERSION_PYTHON ?= $(DC_PYTHON)
+.PHONY: LV_versions force_LV_version
+LV_versions: $(LV_OT_version_file) $(LV_NT_version_file) $(LV_DC_version_file) $(LV_names_version_file)
+force_LV_version:
+
+$(LV_OT_version_file): force_LV_version write_OET-LV_version.py oet_esfm_output.py $(final_LV_OT_ESFM) $(final_LV_OT_word_tables)
+	@$(VERSION_PYTHON) write_OET-LV_version.py OT --resource-version "$(LV_OT_VERSION)" --editor "$(SBE)"
+
+$(LV_NT_version_file): force_LV_version write_OET-LV_version.py oet_esfm_output.py $(final_LV_NT_ESFM) $(final_LV_NT_word_table)
+	@$(VERSION_PYTHON) write_OET-LV_version.py NT --resource-version "$(LV_NT_VERSION)" --editor "$(SBE)"
+
+$(LV_DC_version_file): force_LV_version write_OET-LV_version.py oet_esfm_output.py LV_DC_files
+	@$(VERSION_PYTHON) write_OET-LV_version.py DC --resource-version "$(LV_DC_VERSION)" --editor "$(SBE)"
+
+$(LV_names_version_file): force_LV_version write_OET-LV_version.py oet_esfm_output.py $(LV_names_TSV_table)
+	@$(VERSION_PYTHON) write_OET-LV_version.py names --resource-version "$(LV_NAMES_VERSION)"
 
 #=== LV stuff =======================
 
@@ -216,7 +254,7 @@ $(LV_NT_ESFM_sentinel): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates)
 	@$(SBE) ScriptedVLTUpdates -qe
 	@touch $@
 
-$(final_LV_NT_ESFM) &: $(LV_NT_ESFM_sentinel)
+$(final_LV_NT_ESFM) $(final_LV_NT_word_table) &: $(LV_NT_ESFM_sentinel)
 	@if test ! -f "$@"; then $(SBE) ScriptedVLTUpdates -qe && touch $(LV_NT_ESFM_sentinel); fi
 
 ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv: $(initial_OT_TSV_tables) $(Clear_Bible_MaculaHebrew_OT_TSV) $(scripted_OT_updates) add_tags_to_OT_word_table.py theographic.py $(BOS_mapping_data) hebrew_word_alignment.py word_sequence_alignment.py ot_gloss_fallbacks.py $(BTranslit) $(HebrewTranslit)
@@ -309,6 +347,21 @@ $(RV_HTML_sentinel): $(RV_sentinel) convert_OET-RV_to_simple_HTML.py oet_html_li
 
 $(RV_HTML): $(RV_HTML_sentinel)
 
+#=== SILE PDF downloads =======================
+# TOML selects parallel OET and RV-only, B5/A4/Letter print and B5 screen.
+# The phony entry checks content fingerprints, not just mtimes. Unchanged PDFs
+# are left alone; deleted PDFs, changed artwork/config/code, and new books are
+# detected too. Wait for the connector AND all LV releases, including with -j.
+# TOML puts PDFs in OpenBibleData/htmlPages/OET/Downloads/ and a small link catalogue
+# in the OET website's src/data/. No large PDFs are copied into OET.Bible.
+TYPESETTER_DIR ?= ../../BibleTypesetter
+PDF_PYTHON ?= python3
+PDF_CONFIG ?= $(TYPESETTER_DIR)/SILE/settings.toml
+PDF_ARGS ?=
+PDF: $(RV_sentinel) $(LV_OT_version_file) $(LV_NT_version_file) $(LV_DC_version_file)
+	@echo "\n\nMake any necessary OET typeset PDFs…\n"
+	@$(PDF_PYTHON) "$(TYPESETTER_DIR)/SILE/build_pdfs.py" --config "$(PDF_CONFIG)" $(PDF_ARGS)
+
 #=== Side-by-side stuff =======================
 
 # Track converter completion as well as edits to individual generated HTML files.
@@ -382,5 +435,5 @@ clean_LT_OT:
 .PHONY: clean_LV_NT
 clean_LV_NT:
 	@echo "Clean OET LV NT intermediate and derived texts"
-	rm -f ../derivedTexts/auto_edited_VLT_ESFM/*.ESFM
+	rm -f ../derivedTexts/auto_edited_VLT_ESFM/*.ESFM $(LV_NT_version_file)
 	rm -f ../intermediateTexts/modified_source_VLT_ESFM/*.ESFM

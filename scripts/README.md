@@ -75,6 +75,28 @@ We use the _intermediateTexts/_ folder for many of the intermediate data files.
 Much of the flow creating the draft Literal Version texts can be found
 in the __makefile__.
 
+`make` (the `ALL` target) also builds the SILE PDF downloads. `make PDF` runs
+just that stage and its source prerequisites, waiting for RV word linking and
+the OT/NT/DC release writers before reading any books. It calls the sibling
+`BibleTypesetter/SILE/build_pdfs.py` using the publication profile in that repo.
+The batch produces parallel OET and Readers’ Version PDFs of OT, NT, DC &
+other, ALL, and every available individual book (84 parallel, 82 RV). Each
+has B5, A4 and Letter print options and a B5 screen version: 696 PDFs total. Unchanged PDFs are skipped using content hashes.
+
+The profile writes the PDFs, manifest and download index directly into
+`OpenBibleData/htmlPages/OET/Downloads/`, and writes the small link catalogue
+to `OpenEnglishTranslation-website/src/data/oet-pdfs.json`. The OET.Bible
+Downloads page links to the OBD files. No PDFs are copied into its deployment.
+The normal OBD publishing process must publish that folder; the batch does
+not upload files. OBD's page rebuild preserves the Downloads folder.
+
+Use `make PDF PDF_ARGS='--jobs 2'` to limit simultaneous renders or
+`make PDF PDF_ARGS='--only RUT'` for just Ruth's eight PDFs. A selection build
+leaves catalogues unchanged; follow it with `make PDF` to refresh the listings.
+`PDF_CONFIG`, `TYPESETTER_DIR`, and `PDF_PYTHON` override their defaults.
+SILE, Poppler, the documented fonts, and sibling BibleOrgSys mappings are
+required; see the BibleTypesetter README for setup and other batch options.
+
 ## Old Testament
 
 We use the Open Scriptures Hebrew Bible (OSHB) version of the
@@ -1046,6 +1068,45 @@ including with parallel make. The existing editor stamps likewise advance
 without changing unchanged books. This does not revert metadata-only changes
 already present in the working tree before the build.
 
+## OET-LV resource versions
+
+Each derived resource has **one `version.json`**, separate from its ESFM books:
+
+| Resource | File (relative to `derivedTexts/`) | Release setting in `scripts/makefile` |
+| --- | --- | --- |
+| Hebrew OT | `auto_edited_OT_ESFM/version.json` | `LV_OT_VERSION` |
+| Greek NT | `auto_edited_VLT_ESFM/version.json` | `LV_NT_VERSION` |
+| Additional books, including PSS, ODE and Latin LAO | `auto_edited_DC_ESFM/version.json` | `LV_DC_VERSION` |
+| Shared names table | `version.json` | `LV_NAMES_VERSION` |
+
+All four start at **`v0.2.0`**. To release a group, change its setting in the
+makefile (e.g., `LV_NT_VERSION := v0.2.1`) and run `make LV_versions` from
+`scripts/`. The regular `LV_OT`, `LV_NT`, `LV_DC`, `LV` and `ALL` targets also
+maintain their corresponding manifests. `LV_versions` builds the required
+resource files and refreshes all four manifests without requesting the HTML
+exports. A command-line variable override applies to that invocation only;
+edit the makefile to retain a release bump.
+
+`version` is a **manual release label**. `content.sha256` independently
+identifies the resource contents: a wording, word-link, table, or filename
+change alters it without bumping the release. For each named ESFM book, hash
+its UTF-8 bytes after omitting only the recognised generated header remarks
+(the same comparison as the extractor); for TSVs, hash the exact bytes. Hash
+the UTF-8 compact, key-sorted JSON filename-to-hash map to obtain the group
+fingerprint. Build reports, caches, completion stamps and the manifest itself
+are outside this fingerprint.
+
+`build_inputs` records the local scripts (declared version where available and
+SHA-256), relevant tools, source checkout revisions, and editing inputs.
+For OT and NT sources it also fingerprints the selected input files, including
+local edits, and identifies versioned source files selected by symlink.
+The DC record also includes the pinned source manifest and the editor and
+transliterator recorded by its builder. These details describe the current
+build inputs; the group fingerprint identifies the generated files. A tool
+update can therefore change provenance while leaving both the release label
+and content fingerprint unchanged. Parallel builds wait for each producer;
+identical JSON is not rewritten, and no per-run date is recorded.
+
 ## Make targets and MCP dependencies
 
 From `scripts/`, run `make` or `make ALL` for the complete build. The old `BOTH` alias was
@@ -1073,6 +1134,7 @@ temporary fixtures. No live database or Bible sources are altered by them.
 | `LV_OT` | OT LV generation and HTML. |
 | `LV_NT` | NT LV generation, HTML, and Macula Greek conversion. |
 | `LV_DC` | Build the complete DC word table and draft books. |
+| `LV_versions` | Bring OT, NT, DC and the shared names resources and their version manifests up to date. |
 | `DC_sources` | Fetch and verify missing DC source inputs; used by `LV_DC`. |
 | `MCP` | Bring the MCP database up to date, including its source prerequisites. |
 | `check_DC` | Build DC, run its tests, and validate its outputs. |
@@ -1081,7 +1143,7 @@ temporary fixtures. No live database or Bible sources are altered by them.
 | `clean_LV`, `clean_LV_OT` | Empty declared targets; the recipes were spelled `clean_LT`/`clean_LT_OT`. |
 | `clean_LT` | The misspelled wrapper currently runs only the working NT cleanup. |
 | `clean_LT_OT` | Deletes OT intermediate files. |
-| `clean_LV_NT` | Deletes NT intermediate and derived ESFM files. |
+| `clean_LV_NT` | Deletes NT intermediate and derived ESFM files and the derived NT version manifest. |
 
 The `LV_LAO`, `clean_RV`, and Mark-only `check` shortcuts were removed on
 2026-11-01. Use `LV_DC` to build all DC books, including Laodiceans.

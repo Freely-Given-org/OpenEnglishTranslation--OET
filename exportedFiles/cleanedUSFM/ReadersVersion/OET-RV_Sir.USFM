@@ -1,4 +1,4 @@
-\id SIR - Open English Translation—Readers’ Version (OET-RV) v0.4.1
+\id SIR - Open English Translation—Readers’ Version (OET-RV) v0.4.7
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 SIR
@@ -15,7 +15,7 @@
 \ip The \bk Wisdom of Yeshua the son of Sira\bk*, also known as \bk Sirach\bk* or \bk Ecclesiasticus\bk*, is a collection of teaching about how to live wisely. The writer identifies himself as a teacher from Yerushalem (Jerusalem). In the prologue preserved below, his grandson explains that he translated his grandfather’s work from Hebrew into Greek so that more people could benefit from its instruction.
 \ip Like \bk Proverbs\bk*, this book connects wisdom with respecting God and obeying his instructions. Its advice reaches into everyday life: choosing friends, caring for parents, using money, controlling what we say, bringing up children, eating and drinking, dealing with illness, and grieving for the dead. Its topics often return in different settings, so the opening forty-two chapters are best read as a collection of related teachings rather than as one continuous argument.
 \ip The later chapters praise God’s wisdom in creation and remember earlier generations of Yisrael’s (Israel’s) leaders, priests, and prophets. This leads to a description of the high priest Shim’on (Simon) and the worship at the temple. The book ends with a prayer of thanks and a personal account of seeking wisdom, inviting readers to become learners themselves.
-\ip \bk The Wisdom of Yeshua the Son of Sira\bk*, also called \bk Ecclesiasticus\bk*, is recognised as Deuterocanonical Scripture by the Romaios Catholic, Greek Orthodox, and Russian Orthodox Churches.
+\ip \bk The Wisdom of Yeshua the Son of Sira\bk*, also called \bk Ecclesiasticus\bk*, is recognised as deuterocanonical scripture by the Roman Catholic, Greek Orthodox, and Russian Orthodox Churches.
 \iot Main components of this collection
 \io1 Wisdom, devotion to God, and everyday conduct \ior 1:1–23:28\ior*
 \io1 Wisdom speaks about her home among God’s people \ior 24:1-34\ior*
@@ -76,7 +76,7 @@
 \q2 It was created together with the faithful in the womb.
 \q1
 \v 15 She\f + \fr 1:15 \ft Grk. \fqa nested.\f* laid an eternal foundation with men.
-\q2 She’ll be trusted among their offspring.
+\q2 She’ll be trusted among their descendants.
 \q1
 \v 16 To fear the master is the fullness of wisdom.
 \q2 She inebriates men with her fruits.
@@ -588,7 +588,7 @@
 \q2 and it’ll turn away from you.
 \q1
 \v 3 My son, don’t sow on the furrows of unrighteousness,
-\q2 and you won’t reap them sevenfold.
+\q2 and you won’t harvest them sevenfold.
 \b
 \q1
 \v 4 Don’t seek preeminence from the master,
@@ -1951,7 +1951,7 @@
 \v 16 The chatter of a fool is like a burden in the way,
 \q2 but grace will be found on the lips of the wise.
 \q1
-\v 17 The utterance of the prudent man will be sought for in the congregation.
+\v 17 The utterance of the prudent man will be desired by the congregation.
 \q2 They’ll ponder his words in their heart.
 \b
 \q1
@@ -2221,12 +2221,12 @@
 \v 6 In the waves of the sea, and in all the earth,
 \q2 and in every people and nation, I obtained a possession.
 \q1
-\v 7 With all these I sought rest.
+\v 7 With all these I tried to find rest.
 \q2 In whose inheritance will I stay?
 \q1
 \v 8 Then the Creator of all things gave me a command.
 \q2 He who created me made my tent to rest,
-\q2 and said, ‘Let your dwelling be in Ya’akov \add (Jacob)\add*,
+\q2 and said, ‘Let your residence be in Ya’akov \add (Jacob)\add*,
 \q2 and your inheritance in Yisrael \add (Israel)\add*.’
 \q1
 \v 9 He created me from the beginning, before the ages.
@@ -3665,7 +3665,7 @@
 \v 32 Without these no city would be inhabited.
 \q2 Men wouldn’t reside as foreigners or walk up and down there.
 \q1
-\v 33 They won’t be sought for in the council of the people.
+\v 33 They won’t be searched for among the council of the people.
 \q2 They won’t mount on high in the assembly.
 \q2 They won’t sit on the seat of the judge.
 \q2 They won’t understand the covenant of judgement.
@@ -3745,7 +3745,7 @@
 \q2 and every command will be done in its time.
 \q1
 \v 17 No one can say, “What’s this?” “Why is that?”
-\q2 for at the proper time they’ll all be sought out.
+\q2 because they’ll all be \add discovered\add* at the proper time.
 \q1 At his word, the waters stood as a heap,
 \q2 as did the reservoirs of water at the word of his mouth.
 \q1
@@ -3777,7 +3777,7 @@
 \v 26 The main things necessary for the life of man
 \q2 are water, fire, iron, salt,
 \q2 wheat flour, and honey, milk,
-\q2 the blood of the grape, oil, and clothing.
+\q2 the grape \add juice\add*, oil, and clothing.
 \q1
 \v 27 All these things are for good to the godly,
 \q2 but for sinners, they’ll be turned into evils.
@@ -3942,7 +3942,7 @@
 \b
 \q1
 \v 5 The children of sinners are abominable children
-\q2 and they frequent the dwellings of the ungodly.
+\q2 and they frequent the homes of the ungodly.
 \q1
 \v 6 The inheritance of sinners’ children will perish
 \q2 and with their posterity will be a perpetual disgrace.
@@ -4265,7 +4265,7 @@
 \v 10 But these were men of mercy,
 \q2 whose righteous actions haven’t been forgotten.
 \q1
-\v 11 A good inheritance remains with their offspring.
+\v 11 A good inheritance remains with their descendants.
 \q2 Their children are within the covenant.
 \q1
 \v 12 Their offspring stand fast,
@@ -4304,7 +4304,7 @@
 \q2 When he was tested, he was found faithful.
 \q1
 \v 21 Therefore he assured him by an oath
-\q2 that the nations would be blessed through his offspring,
+\q2 that the nations would be blessed through his descendants,
 \q2 that he’d multiply him like the dust of the earth,
 \q2 exalt his offspring like the stars,
 \q2 and cause them to inherit from sea to sea,
@@ -4314,7 +4314,7 @@
 \v 22 In Yitshak \add (Isaac)\add* also, he established the same assurance for Avraham his father’s sake,
 \q2 the blessing of all men, and the covenant.
 \q1
-\v 23 He made it rest on Ya’akov’s \add (Jacob)\add* head.
+\v 23 He made it rest on Ya’akov’s \add (Jacob’s)\add* head.
 \q2 He acknowledged him in his blessings,
 \q2 gave to him by inheritance,
 \q2 and divided his portions.
@@ -4377,7 +4377,7 @@
 \q2 the desires of the eyes, goodly and beautiful.
 \q1
 \v 13 Before him there never have been anything like it.
-\q2 No stranger put them on, but only his sons and his offspring perpetually.
+\q2 No stranger put them on, but only his sons and his descendants perpetually.
 \q1
 \v 14 His sacrifices will be wholly burnt,
 \q2 twice every day continually.
@@ -4385,7 +4385,7 @@
 \v 15 Mosheh \add (Moses)\add* consecrated him,
 \q2 and anointed him with holy oil.
 \q1 It was an eternal covenant with him
-\q2 and to his offspring, all the days of heaven,
+\q2 and to his descendants, all the days of heaven,
 \q2 to minister to the master, to serve as a priest,
 \q2 and to bless his people in his name.
 \q1
@@ -4415,7 +4415,7 @@
 \q2 and prepared bread of first fruits in abundance.
 \q1
 \v 21 Because they eat the sacrifices of the master,
-\q2 which he gave to him and to his offspring.
+\q2 which he gave to him and to his descendants.
 \q1
 \v 22 However, in the land of the people, he has no inheritance,
 \q2 and he has no portion among the people,
@@ -4430,7 +4430,7 @@
 \q1
 \v 24 Therefore, a covenant of peace was established for him,
 \q2 that he should be leader of the sanctuary and of his people,
-\q2 that he and his offspring should have the dignity of the priesthood forever.
+\q2 that he and his descendants should have the dignity of the priesthood forever.
 \q1
 \v 25 Also he made a covenant with David the son of Yishay \add (Jesse)\add*, of the tribe of Yehudah \add (Judah)\add*.
 \q2 The inheritance of the king is his alone from son to son.
@@ -4480,14 +4480,14 @@
 \q1
 \v 8 And of six hundred thousand people on foot, they two alone were preserved
 \q2 to bring them into their inheritance,
-\q2 into a land flowing with milk and honey.
+\q2 into a land \add that’s very fertile\add*.
 \q1
 \v 9 The master gave strength to Kalev,
 \q2 and it remained with him to his old age,
 \q2 so that he entered the hill country,
-\q2 and his offspring obtained it for an inheritance,
+\q2 and his descendants obtained it for an inheritance,
 \q2
-\v 10 that all the children of Yisrael \add (Israel)\add* might see that it’s good to follow the master.
+\v 10 that all the \add Israeli people\add* \add (Israel)\add* might see that it’s good to follow the master.
 \s1 The judges and Shmuel
 \b
 \q1
@@ -4536,7 +4536,7 @@
 \q2 to prophesy in the days of David.
 \q1
 \v 2 As is the fat when it’s separated from the peace offering,
-\q2 so was David separated from the children of Yisrael \add (Israel)\add*.
+\q2 so was David separated from the \add Israeli people\add* \add (Israel)\add*.
 \q1
 \v 3 He played with lions as with kids,
 \q2 and with bears as with lambs of the flock.
@@ -4607,12 +4607,12 @@
 \q2 and in your body you were brought into subjection.
 \q1
 \v 20 You blemished your honour,
-\q2 and defiled your offspring,
+\q2 and defiled your descendants,
 \q2 to bring anger on your children.
 \q2 I was grieved for your folly,
 \q2
 \v 21 because the sovereignty was divided,
-\q2 and a disobedient kingdom ruled out of Efrayim \add (Ephraim)\add*.
+\q2 and a disobedient kingdom ruled out of \add Yisrael\add* \add (Israel; Heb. Efrayim)\add*.
 \q1
 \v 22 But the master will never forsake his mercy.
 \q2 He won’t destroy any of his works,
@@ -4623,17 +4623,17 @@
 \b
 \q1
 \v 23 So Shelomoh \add (Solomon)\add* rested with his fathers.
-\q2 Of his offspring, he left behind him Rehav’am \add (Rehoboam)\add*,
+\q2 Of his descendants, he left behind him Rehav’am \add (Rehoboam)\add*,
 \q2 the foolishness of the people, and one who lacked understanding,
 \q2 who made the people revolt by his counsel.
 \q1 Also Yarov’am \add (Jeroboam)\add* the son of Nevat,
 \q2 who made Yisrael \add (Israel)\add* to sin,
-\q2 and gave a way of sin to Efrayim \add (Ephraim)\add*.
+\q2 and gave a way of sin to \add Yisrael\add*.
 \q1
 \v 24 Their sins were multiplied greatly,
 \q2 until they were removed from their land.
 \q1
-\v 25 Because they sought out all manner of wickedness,
+\v 25 Because they \add strived for\add* all manner of wickedness,
 \q2 until vengeance came on them.
 \b
 \c 48
@@ -4716,7 +4716,7 @@
 \v 20 But they called on the master who’s merciful,
 \q2 spreading out their hands to him.
 \q1 The Holy One quickly heard them out of Heaven,
-\q2 and delivered them by Yeshayah’s \add (Isaiah)\add* hand.
+\q2 and delivered them by Yeshayah’s \add (Isaiah’s)\add* hand.
 \q1
 \v 21 He struck the camp of the Assyrians,
 \q2 and his angel utterly destroyed them.
@@ -4754,13 +4754,13 @@
 \v 4 Except David, Hizkiyah \add (Hezekiah)\add*, and Yoshiyah \add (Josiah)\add*,
 \q2 all were wicked,
 \q2 because they abandoned the Most High’s law.
-\q2 Yehudah’s \add (Judah)\add* kings came to an end.
+\q2 Yehudah’s \add (Judah’s)\add* kings came to an end.
 \q1
 \v 5 They gave their power to others,
 \q2 and their glory to a foreign nation.
 \q1
 \v 6 They set the chosen city of the sanctuary on fire
-\q2 and made her streets desolate, as it was written by Yirmiyah’s \add (Jeremiah)\add* hand.
+\q2 and made her streets desolate, as it was written by Yirmiyah’s \add (Jeremiah’s)\add* hand.
 \q1
 \v 7 Because they mistreated him;
 \q2 yet he was sanctified in the womb to be a prophet,
@@ -4776,7 +4776,7 @@
 \q1
 \v 10 Also of the twelve prophets,\f + \fr 49:10 \ft The remainder of this line is omitted by the best authorities.\f*
 \q2 may their bones flourish again out of their place.
-\q1 He comforted Ya’akov’s \add (Jacob)\add* people,
+\q1 He comforted Ya’akov’s \add (Jacob’s)\add* people,
 \q2 and delivered them by confident hope.
 \b
 \q1
@@ -4881,7 +4881,7 @@
 \q2 and so they accomplished his service.
 \q1
 \v 20 Then he went down, and lifted up his hands
-\q2 over the whole congregation of the children of Yisrael \add (Israel)\add*,
+\q2 over the whole congregation of the \add Israeli people\add* \add (Israel)\add*,
 \q2 to give blessing to the master with his lips,
 \q2 and to glory in his name.
 \q1
@@ -4977,7 +4977,7 @@
 \q1
 \v 13 When I was yet young,
 \q2 before I went abroad,
-\q2 I sought wisdom openly in my prayer.
+\q2 I \add tried to gain\add* wisdom openly in my prayer.
 \q1
 \v 14 Before the temple I asked for her.
 \q2 I’ll seek her out even to the end.

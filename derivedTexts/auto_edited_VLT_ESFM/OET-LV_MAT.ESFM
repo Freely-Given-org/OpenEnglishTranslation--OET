@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_NT_word_table.tsv
 \rem The VLT source table used to create this file is Copyright © 2022 by https://GreekCNTR.org
 \rem ESFM file originally created 2026-10-11 13:25 by Extract_VLT_NT_to_ESFM v1.0.1
-\rem ESFM file edited by ScriptedBibleEditor v0.8.2 using ScriptedVLTUpdates
+\rem ESFM file edited by ScriptedBibleEditor v0.8.3 using ScriptedVLTUpdates
 \h Matthaios
 \toc1 Matthaios
 \toc2 Matthaios
@@ -370,7 +370,7 @@
 \v 20 Then¦6750 he¦6751_began¦6751 to¦6754_be¦6754_deriding¦6754 the¦6755 cities¦6756 in¦6757 which¦6758 the¦6762 most¦6763 miracles¦6764 of¦6765_him¦6765 became¦6759, because¦6766 they¦6768_ not¦6767 _repented¦6768.
 \v 21 Woe¦6769 to¦6770_you¦6770, Ⱪorazin¦6771. Woe¦6772 to¦6773_you¦6773, Baʸthsaida¦6775. Because¦6776 if¦6777 the¦6785 miracles¦6786 \untr which¦6787\untr* having¦6788_become¦6788 in¦6789 you¦6790_all¦6790 became¦6783 in¦6779 Turos/(Tsor)¦6780 and¦6781 Sidōn/(Tsīdōn)¦6782, long¦6791_ago¦6791 they¦6798_ would¦6792 _repented¦6798 in¦6793 sackcloth¦6794 and¦6795 ashes¦6796.
 \v 22 However¦6799 I¦6800_am¦6800_saying¦6800 to¦6801_you¦6801_all¦6801, it¦6806_will¦6806_be¦6806 more¦6805_tolerable¦6805 for¦6802_Turos¦6802 and¦6803 Sidōn¦6804 in¦6807 day¦6808 of¦6809_judgement¦6809 than¦6811 for¦6812_you¦6812_all¦6812.
-\v 23 Also¦6813 you¦6814, Kafarnaʼoum¦6815, ˓will¦6822˒_ not¦6816 _be¦6822_being¦6822_exalted¦6822 to¦6818 heaven¦6820? You¦6826_will¦6826_be¦6826_coming¦6826_down¦6826 to¦6824 Haidaʸs¦6825. Because¦6828 if¦6829 the¦6834 miracles¦6835 which¦6836 having¦6837_become¦6837 in¦6838 you¦6839 were¦6833_become¦6833 in¦6830 Sodoma/(Şədom)¦6831, would¦6843 remained¦6841 until¦6844 the¦6845 \add day¦6845\add* today¦6847.
+\v 23 Also¦6813 you¦6814, Kafarnaʼoum¦6815, ˓will¦6822˒_ not¦6816 _be¦6822_being¦6822_elevated¦6822 to¦6818 heaven¦6820? You¦6826_will¦6826_be¦6826_coming¦6826_down¦6826 to¦6824 Haidaʸs¦6825. Because¦6828 if¦6829 the¦6834 miracles¦6835 which¦6836 having¦6837_become¦6837 in¦6838 you¦6839 were¦6833_become¦6833 in¦6830 Sodoma/(Şədom)¦6831, would¦6843 remained¦6841 until¦6844 the¦6845 \add day¦6845\add* today¦6847.
 \v 24 However¦6848 I¦6849_am¦6849_saying¦6849 to¦6850_you¦6850_all¦6850 that¦6851 it¦6856_will¦6856_be¦6856 more¦6855_tolerable¦6855 for¦6852_\add +the¦6852\add*_land¦6852 of¦6854_Sodoma¦6854 in¦6859 day¦6860 of¦6861_judgement¦6861 than¦6863 for¦6864_you¦6864.
 \v 25 At¦6866 that¦6867 \untr the¦6868\untr* time¦6869 \untr the¦6872\untr* \nd Yaʸsous/(Yəhōshūˊa)¦6873\nd* answering¦6870 said¦6874: I¦6875_am¦6875_confessing¦6875 to¦6876_you¦6876, father¦6877, \nd master¦6878\nd* of¦6879_the¦6879 heaven¦6880 and¦6881 the¦6882 earth¦6883, that¦6884 you¦6885_hid¦6885 these¦6887 \add >things¦6887\add* from¦6888 wise¦6889 and¦6890 intelligent¦6891, and¦6892 you¦6893_revealed¦6893 them¦6894 to¦6895_infants¦6895.
 \v 26 Yes¦6896, \untr the¦6897\untr* father¦6898, because¦6899 thus¦6900 it¦6903_became¦6903 good¦6902_pleasure¦6902 before¦6904 you¦6905.
@@ -842,7 +842,7 @@
 \v 9 And¦16007 you¦16010_all¦16010_may¦16010_ not¦16009 _call¦16010 of¦16011_you¦16011 on¦16013 the¦16014 earth¦16015 father¦16008, because/for¦16017 one¦16016 is¦16018 the¦16020 \untr the¦16023\untr* heavenly¦16027 father¦16021 of¦16019_you¦16019_all¦16019.
 \v 10 Nor¦16029 may¦16030_you¦16030_all¦16030_be¦16030_called¦16030 instructors¦16031, because¦16032 one¦16040 is¦16038 \add +the¦16033\add*_instructor¦16033 of¦16036_you¦16036_all¦16036, the¦16043 \nd chosen¦16044_one¦16044/messiah¦16044\nd*.
 \v 11 And¦16046 the¦16045 greater¦16047 of¦16049_you¦16049_all¦16049 will¦16050_be¦16050 servant¦16052 of¦16051_you¦16051_all¦16051.
-\v 12 And¦16054 whoever¦16053 will¦16055_be¦16055_exalting¦16055 himself¦16056, will¦16057_be¦16057_being¦16057_humbled¦16057, and¦16058 whoever¦16059 will¦16060_be¦16060_humbling¦16060 himself¦16061, will¦16062_be¦16062_being¦16062_exalted¦16062.
+\v 12 And¦16054 whoever¦16053 will¦16055_be¦16055_elevating¦16055 himself¦16056, will¦16057_be¦16057_being¦16057_humbled¦16057, and¦16058 whoever¦16059 will¦16060_be¦16060_humbling¦16060 himself¦16061, will¦16062_be¦16062_being¦16062_elevated¦16062.
 \v 13 But¦16064 woe¦16063 to¦16065_you¦16065_all¦16065, scribes¦16066 and¦16067 Farisaios¦16068_\add party¦16068\add*, hypocrites¦16069. Because¦16070 you¦16071_all¦16071_are¦16071_shutting¦16071 the¦16072 kingdom¦16073 of¦16074_the¦16074 heavens¦16075 before¦16076 the¦16077 people¦16078, because/for¦16080 you¦16079_all¦16079 are¦16082_ neither¦16081 _coming¦16082_in¦16082, nor¦16083 are¦16086_you¦16086_all¦16086_allowing¦16086 the¦16084 \add >ones¦16084\add* coming¦16085_in¦16085 to¦16087_come¦16087_in¦16087.
 \v 14
 \v 15 Woe¦16112 to¦16113_you¦16113_all¦16113, scribes¦16114 and¦16115 Farisaios¦16116_\add party¦16116\add*, hypocrites¦16117. Because¦16118 you¦16119_all¦16119_are¦16119_going¦16119_around¦16119 the¦16120 sea¦16121 and¦16122 the¦16123 dry¦16124 \add land¦16124\add* to¦16126_make¦16126 one¦16128 convert¦16129, and¦16130 whenever¦16131 he¦16132_may¦16132_become¦16132, you¦16133_all¦16133_are¦16133_making¦16133 him¦16134 \add +a¦16135\add*_son¦16135 of¦16136_geenna¦16136 twice¦16137_more¦16137 \add =than¦16137\add* you¦16138_all¦16138.

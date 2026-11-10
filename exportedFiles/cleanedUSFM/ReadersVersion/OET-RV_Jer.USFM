@@ -1,4 +1,4 @@
-\id JER - Open English Translation—Readers’ Version (OET-RV) v0.2.2
+\id JER - Open English Translation—Readers’ Version (OET-RV) v0.2.8
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JER
@@ -27,7 +27,7 @@
 \s4 Southern kingdom
 \p
 \v 1 \add These are\add* the messages from Hilkiyah’s son, Yirmiyah \add (Jeremiah)\add*—one of the priests who were in Anatot in Benyamin’s territory.
-\v 2 Yahweh’s \add messages\add* \add started\add* coming to him when Yehudah’s \add (Judah)\add* King Yoshiyah \add (Josiah)\add* (Amon’s son) was in the thirteenth year of his reign.\x + \xo 1:2: \xt 2Ki 22:3–23:27; 2Ch 34:8–35:19.\x*
+\v 2 Yahweh’s \add messages\add* \add started\add* coming to him when Yehudah’s \add (Judah’s)\add* King Yoshiyah \add (Josiah)\add* (Amon’s son) was in the thirteenth year of his reign.\x + \xo 1:2: \xt 2Ki 22:3–23:27; 2Ch 34:8–35:19.\x*
 \v 3 \add It continued\add* through the \add reign\add* of Yoshiyah’s son, King Yehoyakim\x + \xo 1:3: \xt 2Ki 23:36–24:7; 2Ch 36:5-8.\x* until the end of the eleventh year of \add the reign\add* of Yoshiyah’s son, King Hizkiyah \add (Hezekiah)\add*—Yerushalem \add (Jerusalem)\add* was exiled in the fifth month \add of that year\add*.\x + \xo 1:3: \xt 2Ki 24:18–25:21; 2Ch 36:11-21.\x*
 \s1 Yirmiyah’s calling
 \q1
@@ -56,7 +56,7 @@
 \v 13 Then Yahweh asked me a second time what \add I\add* was seeing, and I replied, “I see a pot full of boiling water and it’s tipping towards the north.”
 \p
 \v 14 “\add Yes,\add* disaster will come from the north \add and\add* be released onto all the inhabitants of this region,” Yahweh \add continued\add*.
-\v 15 “Listen, I’m about to summon all the clans of the northern kingdoms, and they’ll come and \add attack\add* the walls around \add Yerushalem\add* \add (Jerusalem)\add* and all of Yehudah’s \add (Judah)\add* \add other\add* cities, then each \add king\add* will place his throne at the entrance to Yerushalem’s gates.” That is Yahweh’s declaration.
+\v 15 “Listen, I’m about to summon all the clans of the northern kingdoms, and they’ll come and \add attack\add* the walls around \add Yerushalem\add* \add (Jerusalem)\add* and all of Yehudah’s \add (Judah’s)\add* \add other\add* cities, then each \add king\add* will place his throne at the entrance to Yerushalem’s gates.” That is Yahweh’s declaration.
 \v 16 “\add That’s how\add* I’ll \add judge\add* \add my people\add* for their wickedness as they’ve abandoned me and \add sacrificed\add* to other gods and bowed down to \add idols\add* that they made with their own hands.
 \v 17 \add So\add* \add Yirmiyah\add* \add (Jeremiah)\add*, \add get yourself ready and go\add* and tell them everything that I’ll tell you. Don’t be scared \add in front of them\add* or else I’ll scare you \add right there\add* \add in front of them\add*!
 \v 18 And listen, today I’ve you \add as strong as\add* a \add fortified\add* city and an iron pillar and bronze walls, as far as the kings of Yehudah \add are concerned\add*, along with their officials and priests, and the \add general population\add*.
@@ -66,7 +66,7 @@
 \s4 Both kingdoms
 \p
 \v 1 Then Yahweh \add gave\add* me a message
-\v 2 to proclaim to Yerushalem’s \add (Jerusalem)\add* ears:
+\v 2 to proclaim to Yerushalem’s \add (Jerusalem’s)\add* ears:
 \q1 “Yahweh says: I remember your loyal commitment \add when you were all young\add*
 \q1 and your love \add when you were committed to me\add*.
 \q1 You all followed after me in the wilderness \add where no crops were planted\add*.
@@ -308,7 +308,7 @@
 \q1 \add Say,\add* look, we’re coming back to you because you’re our god, Yahweh.
 \q1
 \v 23 Deception definitely comes from the hills—a commotion of mountains.
-\q1 Our god Yahweh is certainly Yisrael’s \add (Israel)\add* salvation.
+\q1 Our god Yahweh is certainly Yisrael’s \add (Israel’s)\add* salvation.
 \q1
 \v 24 From our youth, \add that\add* shameful \add idol worship\add* has consumed our ancestors’ \add hard\add* work—
 \q1 their sheep and cattle, and their sons and daughters.
@@ -377,12 +377,12 @@
 \q1 \add How much longer will you hold onto\add* your \add wicked\add* thoughts for,
 \q1
 \v 15 because a voice from Dan declares \add trouble\add*
-\q1 and disaster is proclaimed from Efrayim’s \add (Ephraim)\add* hill?
+\q1 and disaster is proclaimed from Efrayim’s \add (Ephraim’s)\add* hill?
 \q1
 \v 16 \add Remind\add* the nations—
 \q1 listen, announce to Yerushalem:
 \q1 They’re coming from a \add distant\add* land \add to lay siege\add* \add against you\add*,
-\q1 and they \add raise\add* their voice \add against\add* Yehudah’s \add (Judah)\add* cities.
+\q1 and they \add raise\add* their voice \add against\add* Yehudah’s \add (Judah’s)\add* cities.
 \q1
 \v 17 They’ll \add surround\add* \add Yerushalem\add* like the watchmen around a field because it rebelled against me.
 \m That’s Yahweh’s declaration.
@@ -445,14 +445,14 @@
 \q1
 \v 31 \add Yes,\add* I hear a sound like a woman in labour—
 \q1 distress like a woman giving birth to her first child—
-\q1 the sound of Tsiyon’s \add (Zion)\add* daughter \add as\add* she gasps for breath.
+\q1 the sound of Tsiyon’s \add (Zion’s)\add* daughter \add as\add* she gasps for breath.
 \q1 She spreads out her hands \add saying\add*,
 \q1 ‘I fear for my life because \add of those\add* murderers.’
 \c 5
 \s1 Yerushalem’s corruption
 \s4 Southern kingdom
 \q1
-\v 1 Roam around Yerushalem’s \add (Jerusalem)\add* streets and look and observe,
+\v 1 Roam around Yerushalem’s \add (Jerusalem’s)\add* streets and look and observe,
 \q1 and search around its plazas.
 \q1 If you can find \add one\add* person there who \add values\add* justice and \add strives to be faithful\add*,
 \q1 then I’ll forgive \add the city\add*.
@@ -497,7 +497,7 @@
 \q1 \add but\add* don’t \add completely destroy them\add*—
 \q1 break off their shoots because they don’t belong to Yahweh.
 \q1
-\v 11 \add No,\add* Yisrael’s \add (Israel)\add* and Yehudah’s \add (Judah)\add* \add people\add* had indeed dealt treacherously with me.
+\v 11 \add No,\add* Yisrael’s \add (Israel’s)\add* and Yehudah’s \add (Judah’s)\add* \add people\add* had indeed dealt treacherously with me.
 \m That is Yahweh’s declaration.
 \s1 Yahweh rejects Yisrael
 \s4 Southern kingdom
@@ -536,7 +536,7 @@
 \s1 Yahweh warns his people
 \s4 Southern kingdom
 \p
-\v 20 Declare this to Ya’akov’s \add (Jacob)\add* descendants,
+\v 20 Declare this to Ya’akov’s \add (Jacob’s)\add* descendants,
 \q1 and proclaim it in Yehudah \add (Judah)\add*:
 \q1
 \v 21 Please listen to this, \add you\add* foolish, heartless people.
@@ -594,7 +594,7 @@
 \q1 because disaster and terrible destruction looms from the north.
 \q1
 \v 2 Although it’s beautiful and delicate,
-\q1 I \add will destroy\add* Tsiyon’s \add (Zion)\add* daughter.
+\q1 I \add will destroy\add* Tsiyon’s \add (Zion’s)\add* daughter.
 \q1
 \v 3 Shepherds and their flocks will go and pitch \add their\add* tents all around it.\f + \fr 6:3 \ft Many English translations interpret these ‘shepherds’ with their ‘flocks’ to be leaders of foreign nations with their armies implementing the destruction mentioned in the previous verse, i.e., the ones battling in the next verse. However, we’ve chosen to interpret the flocks grazing the city surrounds as the follow-on \+em after\+em* the destruction, before the next verse goes \+em back in time\+em* to give more details of how the destruction will occur.\f*
 \q1 Each one will graze \add their own area\add*.
@@ -704,7 +704,7 @@
 \q1 It’s cruel and they have no mercy.
 \q1 \add They make a noise like the sea roaring\add*
 \q1 and they ride \add in battle formation\add* on horses
-\q1 against you, Tsiyon’s \add (Zion)\add* daughter.
+\q1 against you, Tsiyon’s \add (Zion’s)\add* daughter.
 \p
 \v 24 \add We felt weak when\add* we heard the \add reports\add* about them.
 \q1 Distress took hold of us and we’re in agony like \add a woman\add* about to give birth.
@@ -742,7 +742,7 @@
 \q1 Listen to Yahweh’s message,
 \q1 all you \add people of\add* Yehudah \add (Judah)\add* who enter these gates to worship Yahweh.
 \q1
-\v 3 Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says that
+\v 3 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says that
 \q1 you all must improve your ways,
 \q1 and make them right
 \q1 so that I’ll \add allow\add* you all to live in this \add land\add*.
@@ -767,17 +767,17 @@
 \v 12 \add But\add* please go to my place in Shiloh where I had previously \add had my tent and\add* my name resided, and see what I did to \add destroy\add* \add that place\add* \add due to\add* the wickedness of my people, Yisrael \add (Israel)\add*.\x + \xo 7:12-14: \xt Josh 18:1; Psa 78:60; Jer 26:6.\x*
 \v 13 \add So\add* now Yahweh \add declares\add* that because you’ve all been doing those things, and I’ve spoken to you all \add over and over again\add* \add but\add* you wouldn’t listen, and I called you all \add but\add* you wouldn’t answer,
 \v 14 then I’ll do what I did to Shiloh, to this house that’s called by my name—the \add temple\add* that you’ve all trusted in, and the place that I gave to you and your ancestors.
-\v 15 I’ll throw you all \add away where I can’t see you\add* just as I threw out all your relatives, all of Efrayim’s \add (Ephraim)\add* descendants, \add from the northern kingdom\add*.
+\v 15 I’ll throw you all \add away where I can’t see you\add* just as I threw out all your relatives, all of \add Yisrael’s\add* \add (Israel’s; Heb. Efrayim)\add* descendants, \add from the northern kingdom\add*.
 \s1 Yehudah’s consistent disobedience
 \s4 Southern kingdom
 \p
 \v 16 And you, \add Yirmiyah\add* \add (Jeremiah)\add*, don’t pray \add on behalf of\add* this \add group of\add* people, and don’t cry out for help, or pray for them, or petition me about them, because I won’t listen to you.
-\v 17 Don’t you see what they do in Yehudah’s \add (Judah)\add* cities and in Yerushalem’s \add (Jerusalem)\add* streets?
+\v 17 Don’t you see what they do in Yehudah’s \add (Judah’s)\add* cities and in Yerushalem’s \add (Jerusalem’s)\add* streets?
 \v 18 The sons are gathering firewood, and the fathers are kindling the fire, and the women are kneading dough to make cakes for ‘the queen of the heavens’\x + \xo 7:18: \xt Jer 44:17-19.\x* and pouring out drink offerings for other gods so as to provoke me to anger.
 \v 19 Yahweh \add declares\add* that it’s not me they’re provoking, \add but rather it’s themselves\add* \add that they’re hurting\add* \add to their own\add* shame.
 \v 20 So my master Yahweh, says this: “Listen, my \add anger and rage\add* will gush out onto this place—onto people and animals, and trees in the countryside and \add crops in\add* the ground. It will burn and not be extinguished.”
 \p
-\v 21 Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says: “Instead of \add wasting time\add* burning up your sacrifices, \add just\add* eat the meat \add yourselves\add*,
+\v 21 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says: “Instead of \add wasting time\add* burning up your sacrifices, \add just\add* eat the meat \add yourselves\add*,
 \v 22 because on the day when I brought your ancestors out from Mitsrayim \add (Egypt)\add*, I didn’t \add immediately\add* \add give them orders\add* about burnt \add offerings\add* and \add sacrifices\add*.
 \v 23 \add What I told them was\add*, ‘Listen to my voice, and I’ll be your god, and you all will be my people. \add Follow all the instructions that I’ll give\add* you so that \add everything\add* will go well for you all.’
 \v 24 \add But\add* they didn’t turn their \add heads\add* towards him and listen, and they \add enacted\add* schemes from the stubbornness of their own evil \add hearts\add*—going backwards instead of forwards
@@ -794,7 +794,7 @@
 \q1 Sing a mourning song on the barren heights
 \q1 because Yahweh has rejected and abandoned the generation \add who made him angry\add*.
 \p
-\v 30 \add Yes,\add* Yahweh \add says\add* that Yehudah’s \add (Judah)\add* people have done \add what I consider evil\add*—putting disgusting things in the \add temple that’s associated with\add* my name, \add and so have defiled it\add*.
+\v 30 \add Yes,\add* Yahweh \add says\add* that Yehudah’s \add (Judah’s)\add* people have done \add what I consider evil\add*—putting disgusting things in the \add temple that’s associated with\add* my name, \add and so have defiled it\add*.
 \v 31 They’ve built \add hilltop shrines\add* to Tofet in Hinom Valley \add outside Yerushalem\add* \add (Jerusalem)\add*\x + \xo 7:31: \xt 2Ki 23:10; Jer 32:35.\x* to burn their sons and daughters in fire—something I’ve \add never\add* commanded \add or even considered\add*.\x + \xo 7:31: \xt Lev 18:21.\x*
 \v 32 So listen, Yahweh \add says\add*, that days are coming because of that that, when it’ll no longer be called ‘Tofet’ or ‘Hinom Valley’, but rather, ‘The Slaughter Valley’, because \add so many people will be buried in Tofet that they’ll run out of space\add*.
 \v 33 Then the people’s corpses will become food for the \add vultures\add* and the \add wild animals\add*, and there’ll be no one \add left\add* to frighten them \add away\add*.
@@ -939,7 +939,7 @@
 \q1
 \v 11 Then I’ll make Yerushalem \add (Jerusalem)\add* into piles of ruins—
 \q1 a place for jackals to live in—
-\q1 and I’ll make Yehudah’s \add (Judah)\add* cities into uninhabited wastelands.
+\q1 and I’ll make Yehudah’s \add (Judah’s)\add* cities into uninhabited wastelands.
 \p
 \v 12 Who is the \add person\add* that’s wise and understands this?
 \q1 Who has Yahweh’s mouth spoken to so that they can declare it—
@@ -1075,7 +1075,7 @@
 \v 15 They’re worthless—a work of mockery.
 \q1 They’ll perish at the time for their punishment.
 \q1
-\v 16 Ya’akov’s \add (Jacob)\add* inheritance isn’t like that
+\v 16 Ya’akov’s \add (Jacob’s)\add* inheritance isn’t like that
 \q1 because he’s the one who made everything,
 \q1 and the \add Israelis\add* are his inheritance.
 \q1 His name is Commander-in-chief Yahweh.
@@ -1103,7 +1103,7 @@
 \q1
 \v 22 Listen, \add it sounds like news has arrived\add*
 \q1 plus there’s a loud rumble from a land in the north
-\q1 coming to make Yehudah’s \add (Judah)\add* cities into deserted places for jackals to live in.
+\q1 coming to make Yehudah’s \add (Judah’s)\add* cities into deserted places for jackals to live in.
 \b
 \q1
 \v 23 Yahweh, I know that a person’s \add life\add* pathway isn’t their own—
@@ -1122,9 +1122,9 @@
 \p
 \v 1 Yahweh’s message came to Yirmiyah \add (Jeremiah)\add* to say:
 \v 2 Listen to the words of this agreement and tell them to everyone in Yehudah \add (Judah)\add*, \add including those who live in\add* Yerushalem \add (Jerusalem)\add*
-\v 3 and tell them, “Yisrael’s \add (Israel)\add* god Yahweh says that anyone who won’t listen to the words of this agreement will be cursed.
+\v 3 and tell them, “Yisrael’s \add (Israel’s)\add* god Yahweh says that anyone who won’t listen to the words of this agreement will be cursed.
 \v 4 \add It’s the same agreement\add* that I commanded for your ancestors \add at the time\add* when I brought them out of the iron furnace \add that was\add* Mitsrayim \add (Egypt)\add*, telling them: ‘Listen to my voice and \add follow the instructions that I’ve given\add* you all, and then you’ll be \add my\add* people, and I’ll become your god
-\v 5 in order to \add fulfill\add* the promise that I made to your ancestors to give them a land that’s flowing with milk and honey, as it is \add right now\add*.’ ”
+\v 5 in order to \add fulfill\add* the promise that I made to your ancestors to give them a \add very fertile\add* land as it is \add right now\add*.’ ”
 \p “So be it, Yahweh,” I answered.
 \p
 \v 6 Then Yahweh told me, “Proclaim all these things in Yehudah’s cities, including in Yerushalem’s streets. Tell them to listen to the words of this agreement and carry them out
@@ -1133,7 +1133,7 @@
 \p
 \v 9 Then Yahweh told me, “A conspiracy has been found \add across\add* Yehudah, and including Yerushalem’s inhabitants.
 \v 10 They’ve returned to the \add evil ways\add* of their ancestors \add from the past\add* who refused to listen to my messages, and then they \add followed\add* after other gods to serve them. The people of \add both\add* Yisrael \add (Israel)\add* and Yehudah broke the agreement that I made with the ancestors.
-\v 11 \add So now,\add*, listen: Yahweh says that I’m about to bring calamity to them which they won’t be able to \add avoid\add*, and they’ll cry out to me \add for help\add* \add but\add* I won’t listen to them.
+\v 11 \add So now\add*, listen: Yahweh says that I’m about to bring calamity to them which they won’t be able to \add avoid\add*, and they’ll cry out to me \add for help\add* \add but\add* I won’t listen to them.
 \v 12 Then Yehudah’s cities, including those living in Yerushalem, will go and cry out to the gods for help that they’ve been \add burning incense to\add*, but \add those gods\add* won’t be able to rescue them \add from\add* their calamity
 \v 13 because \add there are now as many gods in Yehudah as you all have cities, and as many incense altars for Ba’al in Yerushalem as you all have\add* streets.
 \v 14 \add Yirmiyah\add* \add (Jeremiah)\add*, don’t pray for those people, and don’t \add plead with me to rescue them\add*, because I won’t be listening \add when\add* they call out to me \add for help\add* during their \add difficulties\add*.
@@ -1221,7 +1221,7 @@
 \s1 The what was said of God concerning the nations surrounding Yisrael
 \s4 Southern kingdom
 \p
-\v 14 Yahweh says this: All my evil neighbours who touch the inheritance that I gave to my \add Israeli\add* people, listen, I’ll uproot them from the land, and I’ll uproot Yehudah’s \add (Judah)\add* descendants from among them.
+\v 14 Yahweh says this: All my evil neighbours who touch the inheritance that I gave to my \add Israeli\add* people, listen, I’ll uproot them from the land, and I’ll uproot Yehudah’s \add (Judah’s)\add* descendants from among them.
 \v 15 Then after I’ve uprooted them, I’ll have compassion on them \add again\add*, and I’ll bring them back—each \add one\add* back to their own inheritance and their own land.
 \v 16 If they’ll properly learn the ways of my people, to \add make promises using\add* my name saying, ‘As Yahweh lives,’ instead of how my people were taught to \add make promises\add* by Ba’al, then they’ll \add prosper and be my people\add* \add again\add*.
 \v 17 \add However\add* if they won’t listen \add when\add* I uproot the nation, then I’ll uproot it \add to\add* destroy it. That is Yahweh’s declaration.
@@ -1245,8 +1245,8 @@
 \s1 Filled with wine
 \s4 Southern kingdom
 \p
-\v 12 \add So\add* you must \add pass this message along\add* to them: Yisrael’s \add (Israel)\add* god Yahweh says that every jar will be filled with wine, and they’ll tell you, ‘Of course we know that every jar will be filled with wine.’
-\v 13 \add So\add* tell them that Yahweh says this: Listen, I’m about to fill all the inhabitants of this land with drunkenness—the kings that sit of David’s throne, the priests and prophets, and all of Yerushalem’s \add (Jerusalem)\add* inhabitants.
+\v 12 \add So\add* you must \add pass this message along\add* to them: Yisrael’s \add (Israel’s)\add* god Yahweh says that every jar will be filled with wine, and they’ll tell you, ‘Of course we know that every jar will be filled with wine.’
+\v 13 \add So\add* tell them that Yahweh says this: Listen, I’m about to fill all the inhabitants of this land with drunkenness—the kings that sit of David’s throne, the priests and prophets, and all of Yerushalem’s \add (Jerusalem’s)\add* inhabitants.
 \v 14 Then Yahweh \add declares\add*: I’ll \add cause a drunken brawl among\add* \add brothers\add*, parents, and children. I won’t pity you or have compassion, and I won’t spare them from \add destruction\add*.
 \s1 Yirmiyah warns against pride
 \s4 Southern kingdom
@@ -1325,7 +1325,7 @@
 \q1 \add do something\add*, Yahweh, for the sake of your \add reputation\add*
 \q1 because we sinned against you with our \add frequent rebellion\add*.
 \q1
-\v 8 \add You\add* are Yisrael’s \add (Israel)\add* hope—the one who \add rescues\add* it at a time of distress.
+\v 8 \add You\add* are Yisrael’s \add (Israel’s)\add* hope—the one who \add rescues\add* it at a time of distress.
 \q1 Why would you \add act\add* like a stranger in the land—
 \q1 like a traveller who’s \add stopped in to stay\add* the night.
 \q1
@@ -1347,7 +1347,7 @@
 \p
 \v 14 “The prophets \add use my name but speak deceitfully\add*,” Yahweh \add answered\add*. “I didn’t appoint them and I didn’t send them, and I didn’t \add give\add* them a false vision. The \add worthless prophecies that they’re proclaiming\add* to you all \add come\add* from their own \add minds\add*.”
 \v 15 Therefore Yahweh says, “\add Now\add* those prophets who I never sent \add but\add* who are \add using\add* my name and say that no \add war or\add* famine will happen in this \add region\add*, \add well\add* those prophets will meet their \add own\add* ends through \add war\add* and famine.
-\v 16 Then the people that they prophesied to will be thrown out into Yerushalem’s \add (Jerusalem)\add* streets because of famine and \add war\add*. No one will be there to bury them or their wives, sons, or daughters, \add as\add* I’ll pour their wickedness out onto them.
+\v 16 Then the people that they prophesied to will be thrown out into Yerushalem’s \add (Jerusalem’s)\add* streets because of famine and \add war\add*. No one will be there to bury them or their wives, sons, or daughters, \add as\add* I’ll pour their wickedness out onto them.
 \p
 \v 17 Then you’ll \add pass\add* this message onto them:
 \q1 Day and night the tears run down my eyes.
@@ -1396,7 +1396,7 @@
 \li1 3. \add assigned\add* to the birds \add of prey\add*, and
 \li1 4. \add assigned\add* to be devoured and destroyed by \add wild\add* animals.
 \m
-\v 4 Because of what Yehudah’s \add (Judah)\add* King Menasheh \add (Manasseh)\add* did in Yerushalem \add (Jerusalem)\add*,\x + \xo 15:4: \xt 2Ki 21:1-16; 2Ch 33:1-9.\x* I’ll make people in all the world’s nations be horrified by them.
+\v 4 Because of what Yehudah’s \add (Judah’s)\add* King Menasheh \add (Manasseh)\add* did in Yerushalem \add (Jerusalem)\add*,\x + \xo 15:4: \xt 2Ki 21:1-16; 2Ch 33:1-9.\x* I’ll make people in all the world’s nations be horrified by them.
 \p
 \v 5 \add Yes,\add* who will \add feel sorry\add* for you, Yerushalem,
 \q1 and who will show sympathy for you?
@@ -1499,7 +1499,7 @@
 \q1
 \v 8 Don’t go to a \add dining establishment\add* to sit with them to eat and drink
 \q1
-\v 9 because Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says this:
+\v 9 because Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says this:
 \q1 Listen, \add right\add* in front of your eyes, in your lifetime and in this place,
 \q1 I’m about to make the sounds of happiness and gladness cease—
 \q1 \add including\add* the sounds of \add brides and grooms\add*.\x + \xo 16:9: \xt Jer 7:34; 25:10; Rev 18:23.\x*
@@ -1546,7 +1546,7 @@
 \s1 Yirmiyah thanks for safety
 \s4 Southern kingdom
 \p
-\v 19 Yahweh, you’re my stronghold and my refuge—
+\v 19 Yahweh, you’re my fortress and my refuge—
 \q1 my place of safety in \add any distressing time\add*.
 \q1 The nations will go to you from the ends of the earth and say,
 \q1 “Surely our ancestors inherited lies—
@@ -1562,7 +1562,7 @@
 \s1 Yehudah’s sin and punishment
 \s4 Southern kingdom
 \p
-\v 1 Yehudah’s \add (Judah)\add* sin is written with an iron stylus that has a diamond point.
+\v 1 Yehudah’s \add (Judah’s)\add* sin is written with an iron stylus that has a diamond point.
 \q1 It’s engraved on the tablet which is their \add hearts\add*, and on the projecting corners of your altars.
 \q1
 \v 2 Even their children remember their altars and their Asherah poles
@@ -1632,14 +1632,14 @@
 \q1 You’re my \add place of safety when disaster comes\add*.
 \q1
 \v 18 Let my pursuers be ashamed, but don’t let me be ashamed.
-\q1 Ley them be dismayed, but don’t let me be dismayed.
+\q1 Let them be dismayed, but don’t let me be dismayed.
 \q1 Send the day of disaster against them
 \q1 and \add shatter them with a double share of destruction\add*.
 \s1 Observing the rest day
 \s4 Southern kingdom
 \p
 \v 19 Yahweh told me this:
-\q1 Go and stand in at gate of the people where Yehudah’s \add (Judah)\add* kings come and go,
+\q1 Go and stand in at gate of the people where Yehudah’s \add (Judah’s)\add* kings come and go,
 \q1 then in all the \add other\add* gates of Yerushalem \add (Jerusalem)\add*.
 \q1
 \v 20 Tell \add the people\add*:
@@ -1663,7 +1663,7 @@
 \q1
 \v 25 then kings, princes, and those who sit on David’s throne
 \q1 will come to this city’s gates in chariots and on horses.
-\q1 They’ll \add come\add* \add along with\add* their leaders from Yehudah \add (Judah)\add* \add including\add* Yerushalem’s \add (Jerusalem)\add* residents,
+\q1 They’ll \add come\add* \add along with\add* their leaders from Yehudah \add (Judah)\add* \add including\add* Yerushalem’s \add (Jerusalem’s)\add* residents,
 \q1 and this city will \add be inhabited\add* forever.
 \q1
 \v 26 They’ll come from Yehudah’s cities \add including\add* from all around Yerushalem,
@@ -1693,7 +1693,7 @@
 \v 8 and \add later on,\add* that nation that I spoke to might turn away from its evil, and then I’ll \add cancel\add* the destruction that I’d planned for them.
 \v 9 \add Another time,\add* I might declare that a nation or kingdom will be \add established\add*, or strengthened,
 \v 10 \add however\add* if \add I see it\add* doing evil and not listening to my voice, then I’ll \add cancel\add* the good that I’d said I’d do to it.
-\v 11 \add So\add* now, speak to the people of Yehudah \add (Judah)\add* \add including\add* Yerushalem’s \add (Jerusalem)\add* residents and tell them that Yahweh says, “Listen, I’m about to devise a plan against you all and \add prepare\add* calamity for you. Each of you needs to turn back from their evil \add activities\add* and \add improve\add* your \add behaviour\add* and your \add activities\add*.”
+\v 11 \add So\add* now, speak to the people of Yehudah \add (Judah)\add* \add including\add* Yerushalem’s \add (Jerusalem’s)\add* residents and tell them that Yahweh says, “Listen, I’m about to devise a plan against you all and \add prepare\add* calamity for you. Each of you needs to turn back from their evil \add activities\add* and \add improve\add* your \add behaviour\add* and your \add activities\add*.”
 \v 12 \add However,\add* they’ll say, “\add Don’t waste your time\add* because we’ll \add continue with\add* our plans, and each of us will do \add whatever\add* wicked \add things\add* that we want!”
 \s1 Yisrael deserts Yahweh
 \s4 Southern kingdom
@@ -1765,7 +1765,7 @@
 \v 3 Tell \add them\add*:
 \q1 You kings of Yehudah \add (Judah)\add* and \add you\add* residents of Yerushalem \add (Jerusalem)\add*,
 \q1 listen to Yahweh’s message.
-\q1 Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says,
+\q1 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says,
 \q1 Listen, I’m about to \add send\add* calamity to this place,
 \q1 \add and\add* the ears of everyone who hears about it will tingle.
 \q1
@@ -1778,7 +1778,7 @@
 \q1 something I never instructed or talked about, nor did it \add even\add* \add enter my mind\add*.\x + \xo 19:5: \xt Lev 18:21.\x*
 \p
 \v 6 So Yahweh \add declares\add* that the time is coming when this place will no longer be called Tofet or the Valley of Ben-Hinom, but \add rather\add*, the ‘Slaughter Valley’.
-\v 7 Then I’ll confound Yehudah and Yerushalem’s \add (Jerusalem)\add* \add plans\add* in this place, and I’ll \add have them struck down by their enemies’ swords\add* and by those who \add want to kill them\add*, and I’ll give their dead bodies to the birds and the wild animals for food.
+\v 7 Then I’ll confound Yehudah and Yerushalem’s \add (Jerusalem’s)\add* \add plans\add* in this place, and I’ll \add have them struck down by their enemies’ swords\add* and by those who \add want to kill them\add*, and I’ll give their dead bodies to the birds and the wild animals for food.
 \v 8 Then I’ll make that city into a wasteland \add that’s something to scoff at\add*—everyone who passes by will be appalled and will \add mock it because of all its disasters\add*.
 \v 9 I’ll cause them to eat the flesh of their children and of their \add neighbours\add* \add during the distress caused by the siege imposed by the enemies who want to kill them\add*.
 \p
@@ -1789,7 +1789,7 @@
 \v 13 and Yerushalem’s houses \add including\add* the houses of Yehudah’s kings will be defiled like that place, Tofet—all the houses on whose rooftops they burnt incense to all the \add constellations\add* and poured out drink offerings to other ‘gods’.
 \p
 \v 14 Then Yirmiyah \add (Jeremiah)\add* returned from Tofet where Yahweh had sent him to prophesy, and he stood in the \add temple\add* courtyard and proclaimed to all the people,
-\v 15 “This is what Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh, says: ‘Listen, every disaster that I’ve pronounced against \add these people\add*, I’m about to \add send\add* to this city and to all the villages around it, because they’ve \add been stubborn and failed to take notice\add* of my messages.’ ”
+\v 15 “This is what Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh, says: ‘Listen, every disaster that I’ve pronounced against \add these people\add*, I’m about to \add send\add* to this city and to all the villages around it, because they’ve \add been stubborn and failed to take notice\add* of my messages.’ ”
 \c 20
 \s1 Yirmiyah’s conflict with Pashhur
 \s4 Southern kingdom
@@ -1864,11 +1864,11 @@
 \v 2 “Please \add request\add* Yahweh’s advice on our behalf, because the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* is \add attacking\add* us.\x + \xo 21:2: \xt 2Ki 25:1-11; 2Ch 36:17-21.\x* Perhaps Yahweh will do miracles for us like \add he has in the past\add*, and will make him \add stop attacking us and leave\add*.”
 \p
 \v 3 \add So\add* Yirmiyah told them to tell \add King\add* Tsidkiyah that
-\v 4 Yisrael’s \add (Israel)\add* god Yahweh says this:
+\v 4 Yisrael’s \add (Israel’s)\add* god Yahweh says this:
 \m Listen, I’m about to \add make your own weapons ineffective\add* that you’re all using to fight the Babylonian king and the Kasdim \add (Chaldeans)\add* who are laying siege to you from outside the wall, and I’ll gather them\f + \fr 21:4 \ft This last part of the sentence is left quite literal, as it’s ambiguous in the Hebrew, what or who the ‘them’ is referring to here.\f* in the middle of this city.
 \v 5 Then I myself will fight you all \add with all my strength and power\add* in my anger and rage and terrible fury,
 \v 6 and I’ll \add kill\add* this city’s inhabitants—people and animals will all die from \add terrible, deadly diseases\add*.
-\v 7 Then Yahweh \add declares\add* that after that I’ll hand over Yehudah’s \add (Judah)\add* King Tsidkiyah \add along with\add* his officers, and the people in this city who survive the \add deadly diseases\add* and sword and famine, to the Babylonian King Nevukadnetsar, and to their enemies who \add want to kill them\add*. He’ll \add kill them with\add* the sword—he won’t spare them or show pity or compassion.
+\v 7 Then Yahweh \add declares\add* that after that I’ll hand over Yehudah’s \add (Judah’s)\add* King Tsidkiyah \add along with\add* his officers, and the people in this city who survive the \add deadly diseases\add* and sword and famine, to the Babylonian King Nevukadnetsar, and to their enemies who \add want to kill them\add*. He’ll \add kill them with\add* the sword—he won’t spare them or show pity or compassion.
 \p
 \v 8 Then you must tell this to the people:
 \m Yahweh says that I’m \add about to give you the choice between\add* the path to life and the path to death.
@@ -1877,7 +1877,7 @@
 \s1 Yahweh’s punishment for Yehudah’s kings
 \s4 Southern kingdom
 \p
-\v 11 As for Yehudah’s \add (Judah)\add* king, listen to this message from Yahweh
+\v 11 As for Yehudah’s \add (Judah’s)\add* king, listen to this message from Yahweh
 \v 12 for David’s descendants:
 \q1 Administer justice \add every\add* morning
 \q1 and rescue anyone who’s been robbed, from \add their\add* oppressor,
@@ -1898,7 +1898,7 @@
 \s1 The message for Yehudah’s king
 \s4 Southern kingdom
 \p
-\v 1 Yahweh told \add me\add* to go down to Yehudah’s \add (Judah)\add* \add palace\add* and proclaim this message:
+\v 1 Yahweh told \add me\add* to go down to Yehudah’s \add (Judah’s)\add* \add palace\add* and proclaim this message:
 \v 2 Listen to Yahweh’s message for Yehudah’s king who sits on David’s throne, \add along with\add* your officials and your people who enter these \add doorways\add*.
 \v 3 Yahweh says \add that you must\add* administer justice and \add do what’s right\add*. Rescue anyone who’s been robbed, from \add their\add* oppressor. Don’t mistreat any foreigner or orphan or widow. Don’t be violent, and don’t shed innocent blood in this place,
 \v 4 because if you carefully do those \add things\add*, then the kings who sit on David’s throne will enter through the gates of this palace riding in chariots or on horses, \add along with\add* their officials and their people.
@@ -1951,12 +1951,12 @@
 \q1 on shedding innocent blood,
 \q1 and on oppression and \add practicing\add* extortion.
 \p
-\v 18 Therefore this is what Yahweh says about Yehoyakim, son of Yehudah’s \add (Judah)\add* King Yoshiyah \add (Josiah)\add*:\x + \xo 22:18: \xt 2Ki 23:36–24:6; 2Ch 36:5-7.\x*
+\v 18 Therefore this is what Yahweh says about Yehoyakim, son of Yehudah’s \add (Judah’s)\add* King Yoshiyah \add (Josiah)\add*:\x + \xo 22:18: \xt 2Ki 23:36–24:6; 2Ch 36:5-7.\x*
 \q1 They won’t mourn for him \add saying,\add* ‘Oh no, my brother! Oh no, \add my\add* sister!’
 \q1 They won’t mourn for him \add saying,\add* ‘Oh no, my master! Oh no, his splendour!’
 \q1
 \v 19 He’ll be buried \add just like a donkey would be\add*—
-\q1 dragged away and thrown \add somewhere\add* outside Yerushalem’s \add (Jerusalem)\add* gates.
+\q1 dragged away and thrown \add somewhere\add* outside Yerushalem’s \add (Jerusalem’s)\add* gates.
 \s1 Yirmiyah’s message about Yerushalem’s fate
 \s4 Southern kingdom
 \q1
@@ -1982,7 +1982,7 @@
 \s4 Southern kingdom
 \p
 \v 24 Yahweh \add declares\add* by his life:
-\m Even if \add you\add*, Yehoyakin,\f + \fr 22:24 \ft Called ‘Shallum’ here in the Hebrew and in verse 28.\f*\x + \xo 22:24: \xt 2Ki 24:8-15; 2Ch 36:9-10.\x* son of Yehudah’s \add (Judah)\add* King Yehoyakim, were the signet ring on my right hand, I would tear you off
+\m Even if \add you\add*, Yehoyakin,\f + \fr 22:24 \ft Called ‘Shallum’ here in the Hebrew and in verse 28.\f*\x + \xo 22:24: \xt 2Ki 24:8-15; 2Ch 36:9-10.\x* son of Yehudah’s \add (Judah’s)\add* King Yehoyakim, were the signet ring on my right hand, I would tear you off
 \v 25 because I’m \add handing you over\add* to the \add ones\add* who are \add wanting to kill you\add* and to those that you’re afraid of—to Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* and \add his\add* Kasdim \add (Chaldeans)\add*.
 \v 26 I’ll hurl you and your mother who bore you, into another land—a country where \add you’re both foreigners\add* and you’ll both die there.
 \v 27 \add Although\add* they’ll long to return to \add this\add* land, they’ll \add never\add* return here.
@@ -2005,7 +2005,7 @@
 \s4 Southern kingdom
 \p
 \v 1 Yahweh \add declares\add* that the shepherds who destroy and scatter the flock from my pasture \add won’t end well\add*.
-\v 2 Therefore, this is what Yisrael’s \add (Israel)\add* god Yahweh says about the shepherds who tend My people: Yahweh \add declares\add* that you’ve all scattered my flock and driven them away, and haven’t \add looked after\add* them. Listen, I’m about to \add punish\add* you all for your \add wicked\add* actions.
+\v 2 Therefore, this is what Yisrael’s \add (Israel’s)\add* god Yahweh says about the shepherds who tend My people: Yahweh \add declares\add* that you’ve all scattered my flock and driven them away, and haven’t \add looked after\add* them. Listen, I’m about to \add punish\add* you all for your \add wicked\add* actions.
 \v 3 Then I myself will gather the remnant of my flock from all the \add countries\add* that I’ve banished them to and I’ll return them to their pasture, where they’ll be fruitful and multiply.
 \v 4 Yahweh \add declares\add* that I’ll \add appoint\add* shepherds over them who’ll \add look after\add* them, and then they’ll no longer be afraid or dismayed, nor will any go missing.
 \v 5 Listen, Yahweh \add declares\add* that the \add time is\add* coming
@@ -2113,13 +2113,13 @@
 \s1 Two baskets of figs
 \s4 Southern kingdom
 \p
-\v 1 After the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* had carried away Yehoyakin, son of Yehudah’s \add (Judah)\add* King Yehoyakim, as well as Yehudah’s officials and Yerushalem’s \add (Jerusalem)\add* \add craftsmen\add* and metalsmiths, and had taken them to Bavel \add (Babylon)\add*,\x + \xo 24:1: \xt 2Ki 24:12-16; 2Ch 36:10.\x* Yahweh showed me two baskets of figs placed in front of \add his\add* temple.
+\v 1 After the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* had carried away Yehoyakin, son of Yehudah’s \add (Judah’s)\add* King Yehoyakim, as well as Yehudah’s officials and Yerushalem’s \add (Jerusalem’s)\add* \add craftsmen\add* and metalsmiths, and had taken them to Bavel \add (Babylon)\add*,\x + \xo 24:1: \xt 2Ki 24:12-16; 2Ch 36:10.\x* Yahweh showed me two baskets of figs placed in front of \add his\add* temple.
 \v 2 One basket of figs was very good like early, ripe figs, but the figs in the other basket were so bad that they \add weren’t edible\add*.
 \v 3 Then Yahweh asked me, “Yirmiyah \add (Jeremiah)\add*, what do you see?”
 \p “Figs,” I \add replied\add*. “\add Some\add* figs that \add look\add* very good, and \add others\add* that are so bad \add they’re inedible\add*.”
 \p
 \v 4 Then Yahweh \add gave\add* me this message:
-\v 5 Yisrael’s \add (Israel)\add* god, Yahweh, says this: I’ll look favourably at the exiles from Yehudah just like those good figs, the exiles that I’ve sent out from this place to Bavel.
+\v 5 Yisrael’s \add (Israel’s)\add* god, Yahweh, says this: I’ll look favourably at the exiles from Yehudah just like those good figs, the exiles that I’ve sent out from this place to Bavel.
 \v 6 I’ll \add give them my favour\add* and restore them to this land. I’ll build them up, and not tear them down. I’ll plant them, and not uproot them.
 \v 7 Then I will give them a \add desire\add* to know me, because I’m Yahweh. They’ll be my people and I will be their god, so they will turn to me \add wholeheartedly\add*.
 \p
@@ -2131,7 +2131,7 @@
 \s4 Southern kingdom
 \p
 \v 1 This is the message that came to Yirmiyah \add (Jeremiah)\add* concerning all the people of Yehudah \add (Judah)\add* in the fourth year of \add the reign of\add* Yehoyakim (son of Yehudah’s King Yoshiyah \add (Josiah)\add*), which was the first year of \add the reign of\add* the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add*.
-\v 2 The prophet Yirmiyah proclaimed this to all the people \add across\add* Yehudah \add including\add* all of Yerushalem’s \add (Jerusalem)\add* inhabitants, saying:
+\v 2 The prophet Yirmiyah proclaimed this to all the people \add across\add* Yehudah \add including\add* all of Yerushalem’s \add (Jerusalem’s)\add* inhabitants, saying:
 \v 3 Yahweh’s \add messages\add* have been coming to me for twenty-three years since the thirteenth year of the reign of Yehudah’s king Yoshiyah (\add Yoshiyah,\add* Amon’s son), and I’ve \add passed them on\add* to you all \add over and over again\add*, \add but\add* you haven’t \add taken any notice\add* \add of them\add*.
 \v 4 Yahweh sent all his servants the prophets to you again and again, but you all haven’t listened \add or paid any attention\add*.
 \v 5 \add Those prophets\add* said, ‘Let everyone turn from their wicked \add ways\add* and their evil activities, and return to the land that Yahweh gave in ancient times to your ancestors and to all of you as a permanent \add inheritance\add*.
@@ -2148,13 +2148,13 @@
 \v 14 \add Yes\add* many other nations and great kings will also make slaves out of those nations. I’ll repay them for \add everything they’ve done\add*.
 \s1 The punishment of God of nations
 \p
-\v 15 \add Yes\add* Yisrael’s \add (Israel)\add* god Yahweh told me, “Take this cup of the wine of fury from my hand, and all the nations that I’m sending you to, make them drink it.
+\v 15 \add Yes\add* Yisrael’s \add (Israel’s)\add* god Yahweh told me, “Take this cup of the wine of fury from my hand, and all the nations that I’m sending you to, make them drink it.
 \v 16 They’ll drink and then stagger around and act like mad \add people\add* \add when they see the deadly army\add* that I’m sending out to them.
 \p
 \v 17 \add So\add* I took the cup from Yahweh’s hand and made all the nations that \add he’d\add* sent me to, drink from it,
-\v 18 \add as well as\add* Yehudah’s \add (Judah)\add* cities \add including\add* Yerushalem \add (Jerusalem)\add* and its \add king\add* and officials—to turn them into \add ruins\add* and something terrifying, and into \add something to hiss and curse at\add*, as they are until this present day.
+\v 18 \add as well as\add* Yehudah’s \add (Judah’s)\add* cities \add including\add* Yerushalem \add (Jerusalem)\add* and its \add king\add* and officials—to turn them into \add ruins\add* and something terrifying, and into \add something to hiss and curse at\add*, as they are until this present day.
 \v 19 \add Those nations included:\add*
-\li1 Mitsrayim’s \add (Egypt)\add* King Par’oh \add (Pharaoh)\add*, his officials, his leaders, and all his people,
+\li1 Mitsrayim’s \add (Egypt’s)\add* King Par’oh \add (Pharaoh)\add*, his officials, his leaders, and all his people,
 \li1
 \v 20 all people of mixed heritage and all the kings of the land of Uts \add (Uz)\add*,
 \li1 all the kings of the land of Peleshet: Ashkelon, Azah \add (Gaza)\add*, Ekron, and the remnant from Ashdod,
@@ -2176,7 +2176,7 @@
 \li1 all the kingdoms \add around the world\add*.
 \p And after all of them, the Babylonian\f + \fr 25:26 \ft ‘Babylon’ here in the Hebrew is ‘Sheshak’, which is Hebrew for ‘Babylon’ with the letters substituted in a simple code.\f* king will drink \add it too\add*.
 \p
-\v 27 Then Yahweh told me to tell them, ‘Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh, says this: Drink and become drunk, then vomit, fall down, and don’t get up \add again\add* \add until the deadly army arrives\add* that I’m sending among you.’
+\v 27 Then Yahweh told me to tell them, ‘Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh, says this: Drink and become drunk, then vomit, fall down, and don’t get up \add again\add* \add until the deadly army arrives\add* that I’m sending among you.’
 \v 28 Then if any \add of the above\add* refuse to take the cup from your hand to drink, tell me, ‘Commander-in-chief Yahweh says that you certainly must drink it,
 \v 29 because listen, I’m about to bring disaster to the city that is called by my name, and should you yourselves be free from punishment? You won’t be free, because I’m calling a \add deadly army\add* against all the inhabitants of the land.’
 \m That is Commander-in-chief Yahweh’s declaration.
@@ -2222,8 +2222,8 @@
 \s1 Wanting a death sentence for Yirmiyah
 \s4 Southern kingdom
 \p
-\v 1 \add Near\add* the beginning of the reign of Yehoyakim (Yoshiyah’s \add (Josiah)\add* son), this message came from Yahweh:
-\v 2 Yahweh says this: Stand in the courtyard of \add my\add* \add temple\add* and speak about all of Yehudah’s \add (Judah)\add* cities who come to worship at \add my\add* \add residence\add*. Proclaim all the messages that I’ve commanded you to say to them—don’t hold \add anything\add* back.
+\v 1 \add Near\add* the beginning of the reign of Yehoyakim (Yoshiyah’s \add (Josiah’s)\add* son), this message came from Yahweh:
+\v 2 Yahweh says this: Stand in the courtyard of \add my\add* \add temple\add* and speak about all of Yehudah’s \add (Judah’s)\add* cities who come to worship at \add my\add* \add residence\add*. Proclaim all the messages that I’ve commanded you to say to them—don’t hold \add anything\add* back.
 \v 3 Maybe they’ll listen and everyone will turn from their wicked \add ways\add*, and then I would turn back the disaster that I’m planning to \add send\add* to them because of their \add wicked\add* \add behaviour\add*,
 \v 4 \add so\add* you \add need to\add* tell them that Yahweh says this:
 \m If you don’t listen to me so as to \add follow my instructions that I’ve given to\add* you all,
@@ -2234,7 +2234,7 @@
 \v 8 Then as soon as Yirmiyah had finished saying everything that Yahweh had commanded him to tell all the people, the priests and the prophets and all the people seized him \add and threatened to kill him, saying\add*:
 \v 9 Why have you prophesied in Yahweh’s name and said that this \add temple\add* will be \add destroyed\add* like Shiloh, and that this city will become desolate, with no \add inhabitants\add*?” Then all the people \add gathered together\add* against Yirmiyah at Yahweh’s \add residence\add*.
 \p
-\v 10 Then Yehudah’s \add (Judah)\add* officials heard \add about what was going on\add*, and they went up from the \add palace\add* to \add the temple where\add* they sat in the gateway at the New Gate at Yahweh’s \add residence\add*.
+\v 10 Then Yehudah’s \add (Judah’s)\add* officials heard \add about what was going on\add*, and they went up from the \add palace\add* to \add the temple where\add* they sat in the gateway at the New Gate at Yahweh’s \add residence\add*.
 \v 11 Then the priests and the prophets spoke to the officials and to all the people, saying, “It’s right for this man to \add die\add*, because he prophesied against this city, as you’ve all heard with your own ears.”
 \p
 \v 12 \add So\add* Yirmiyah spoke to all the officials and all the people and said, “Yahweh has sent me out to prophesy to say all the words that you have heard, against \add both\add* this \add temple\add* and this city.
@@ -2244,7 +2244,7 @@
 \p
 \v 16 Then the officials and all the people said to the priests and to the prophets, “This man \add doesn’t deserve to be sentenced to\add* death, because he’s spoken to us in the name of our god, Yahweh.”
 \p
-\v 17 Then \add some\add* of \add Yehudah’s\add* \add (Judah)\add* elders \add stepped forward\add* and spoke to all the people who were gathered there,
+\v 17 Then \add some\add* of \add Yehudah’s\add* \add (Judah’s)\add* elders \add stepped forward\add* and spoke to all the people who were gathered there,
 \v 18 “Mikah (from Morashet) prophesied \add during the lifetime\add* of Yehudah’s King Hizkiyah \add (Hezekiah)\add*, and he told all the people from Yehudah that Commander-in-chief Yahweh says this:
 \q1 Tsiyon \add (Zion)\add*, a field will be ploughed,
 \q1 and Yerushalem \add (Jerusalem)\add* will become heaps \add of ruins\add*,
@@ -2262,11 +2262,11 @@
 \s1 Yirmiyah wears a yoke
 \s4 Southern kingdom
 \p
-\v 1 At the beginning of the reign of Yehudah’s \add (Judah)\add* King Yehoyakim (son of Yoshiyah \add (Josiah)\add* \add Yoshiyah\add*), this message came to Yirmiyah \add (Jeremiah)\add* from Yahweh,\x + \xo 27:1: \xt 2Ki 24:18-20; 2Ch 36:11-13.\x*
+\v 1 At the beginning of the reign of Yehudah’s \add (Judah’s)\add* King Yehoyakim (son of Yoshiyah \add (Josiah)\add* \add Yoshiyah\add*), this message came to Yirmiyah \add (Jeremiah)\add* from Yahweh,\x + \xo 27:1: \xt 2Ki 24:18-20; 2Ch 36:11-13.\x*
 \v 2 telling \add him\add* this:
 \m Make yourself a \add wooden\add* \add ox\add* yoke with bars, and \add tie\add* it to your neck.
 \v 3 \add Use it to send messages\add* to the kings of Edom, Moav \add (Moab)\add*, Amon, Tsor \add (Tyre)\add*, and Tsidon \add (Sidon)\add*, \add through the ambassadors\add* \add from those countries\add* who’ve come to Yerushalem \add (Jerusalem)\add* to \add meet with\add* King Tsidkiyah \add (Zedekiah)\add*
-\v 4 to tell them that Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says to give their masters this message:
+\v 4 to tell them that Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says to give their masters this message:
 \v 5 I myself made the earth \add and\add* the \add people\add* and \add animals\add* that are on the earth, by my \add direct actions\add* and my great \add strength\add*, and I give it to whoever I \add see fit\add*.
 \v 6 Now I’ve \add personally handed over\add* all these lands to my servant, the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add*, and I’ve also given the animals in the countryside to him to serve him.
 \v 7 All the nations will serve him and his son and then his \add grandson\add*, until the time of his own land comes \add due\add*. \add Yes, it will\add*, and then many nations and great kings will make him serve them.
@@ -2276,7 +2276,7 @@
 \v 10 because they’re prophesying lies to you, so as to remove you all far away from on your land. \add Yes,\add* I will drive you all out and you’ll die \add in a foreign land\add*.
 \v 11 \add However,\add* the nation that brings its neck into the Babylonian king’s yoke and serves him, I’ll let \add that nation\add* remain on its land, and it will cultivate it and live \add there\add*. That’s is Yahweh’s declaration.
 \p
-\v 12 Then to Yehudah’s \add (Judah)\add* King Tsidkiyah \add (Zedekiah)\add*, I \add passed on\add* those \add same\add* words, saying, “Put your necks into the yoke of the Babylonian king, and serve him and his people, and live.
+\v 12 Then to Yehudah’s \add (Judah’s)\add* King Tsidkiyah \add (Zedekiah)\add*, I \add passed on\add* those \add same\add* words, saying, “Put your necks into the yoke of the Babylonian king, and serve him and his people, and live.
 \v 13 Why would you and your people die from \add war\add*, famine, and \add disease\add*, as Yahweh has \add said will come to any\add* nation that doesn’t serve the Babylonian king?
 \v 14 \add So\add* don’t listen to the messages from the prophets who are speaking to you when they tell you all not to serve the king of Bavel \add (Babylon)\add* as they’re prophesying lies to you
 \v 15 because I didn’t send them. Yahweh \add declares\add* that they’re using my name to prophesy lies so that I’ll drive you out, and you’ll all perish—\add both\add* you and the prophets who are prophesying to you.”
@@ -2285,15 +2285,15 @@
 \v 18 If they were prophets \add who really have access to\add* Yahweh’s message, then please let them intercede with Commander-in-chief Yahweh so that the utensils remaining in Yahweh’s \add temple\add* and in Yehudah’s king’s \add palace\add* and in Yerushalem \add (Jerusalem)\add* \add don’t end up being taken\add* to Bavel.
 \p
 \v 19 \add Yes,\add* Commander-in-chief Yahweh has spoken about the \add bronze\add* pillars and the \add large, bronze\add* \add water basin\add*, and concerning the \add bronze\add* stands and the rest of the utensils remaining in this city,
-\v 20 which the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* didn’t take when he exiled Yehudah’s King Yekaneyah (son of Yehoyakim) from Yerushalem to Bavel, along with all the nobles of Yehudah including Yerushalem.
-\v 21 Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says about the utensils remaining in Yahweh’s \add temple\add* and in the \add palace\add* of the king of Yehudah and Yerushalem:
+\v 20 which the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* didn’t take when he exiled Yehudah’s King Yekaneyah (son of Yehoyakim) from Yerushalem to Bavel, along with all the \add leading citizens\add* of Yehudah including Yerushalem.
+\v 21 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says about the utensils remaining in Yahweh’s \add temple\add* and in the \add palace\add* of the king of Yehudah and Yerushalem:
 \v 22 They’ll be taken to Bavel and they’ll remain there until the \add time when I punish\add* \add those Babylonians\add*, and then I’ll bring them \add back\add* and restore them to this place. That is Yahweh’s declaration.
 \c 28
 \s1 Yirmiyah vs Prophet Hananyah
 \s4 Southern kingdom
 \p
-\v 1 In the fifth month of the fourth year of the reign of Yehudah’s \add (Judah)\add* King Tsidkiyah \add (Zedekiah)\add*,\x + \xo 28:1: \xt 2Ki 24:18-20; 2Ch 36:11-13.\x* Azur’s son Hananyah who was a ‘prophet’ from Giveon, said to me in Yahweh’s \add temple\add* as priests and all the people \add watched\add*, saying,
-\v 2 “Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says: I’ve broken the yoke of the Babylonian king.
+\v 1 In the fifth month of the fourth year of the reign of Yehudah’s \add (Judah’s)\add* King Tsidkiyah \add (Zedekiah)\add*,\x + \xo 28:1: \xt 2Ki 24:18-20; 2Ch 36:11-13.\x* Azur’s son Hananyah who was a ‘prophet’ from Giveon, said to me in Yahweh’s \add temple\add* as priests and all the people \add watched\add*, saying,
+\v 2 “Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says: I’ve broken the yoke of the Babylonian king.
 \v 3 Within two years, I, myself, will bring back here all the utensils from Yahweh’s residence that the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* got from this place and took to Bavel \add (Babylon)\add*.
 \v 4 I, myself, will \add also\add* bring Yekaneyah (the son of Yehudah’s King Yehoyakim) back to this place, and all the exiles from Yehudah that were taken to Bavel, because I’ll break the yoke of the Babylonian king. That is Yahweh’s declaration.”
 \p
@@ -2309,7 +2309,7 @@
 \p
 \v 12 After the prophet Hananyah broke the yoke bar that had been on the prophet Yirmiyah’s neck, Yahweh’s message came to Yirmiyah saying,
 \v 13 “Go and tell Hananyah this: ‘Yahweh says that you’ve broken wooden yoke bars, but in their place, you’ll make yoke bars out of iron,’
-\v 14 because Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says, ‘I’ve put an iron yoke bar on the neck of all these nations to serve the Babylonian King Nevukadnetsar, and they will \add indeed\add* serve him. I’ve also given him the animals from the countryside.’ ”
+\v 14 because Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says, ‘I’ve put an iron yoke bar on the neck of all these nations to serve the Babylonian King Nevukadnetsar, and they will \add indeed\add* serve him. I’ve also given him the animals from the countryside.’ ”
 \p
 \v 15 Then the prophet Yirmiyah told the prophet Hananyah, “Listen, please, Hananyah. Yahweh hasn’t sent you, and you yourself have made this people \add group\add* \add put their trust in things that\add* \add aren’t true\add*.
 \v 16 Because of that, Yahweh says this: ‘Listen, I’m \add removing you from this world\add*. \add You’ll die this very\add* year, because you have \add said things that would cause the people to rebel\add* against Yahweh.’ ”
@@ -2323,7 +2323,7 @@
 \v 2 after the \add removal\add* from Yerushalem of King Yekaneyah and the queen mother, the \add court officials\add* and the leaders of Yehudah \add (Judah)\add* and Yerushalem, plus the \add craftsmen\add* and the metalsmiths.
 \v 3 \add He sent it\add* with Shafan’s son Eleasah and Hilkiyah’s son Gemaryah, who Yehudah’s King Tsidkiyah \add (Zedekiah)\add* sent to the Babylonian King Nevukadnetsar in Bavel. \add The letter\add* said,
 \pi1
-\v 4 Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says this to all \add of you\add* that I’ve exiled from Yerushalem to Bavel:
+\v 4 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says this to all \add of you\add* that I’ve exiled from Yerushalem to Bavel:
 \v 5 Build houses and live in them, and plant gardens and eat their fruit.
 \v 6 \add Marry\add* and \add have children\add*. \add Find\add* wives for your sons and give your daughters \add in marriage\add* so that they \add also\add* \add have children\add*. \add Increase in number\add* there—don’t become fewer.
 \v 7 \add In addition, the city that I’ve sent you all into exile to, work to make it more prosperous\add* and pray to Yahweh for it, because \add if it prospers, its prosperity will belong to all of you\add*.
@@ -2344,14 +2344,14 @@
 \p
 \v 20 \add But\add* all you exiles that I sent away from Yerushalem \add (Jerusalem)\add* to Bavel, listen to Yahweh’s message:
 \pi1
-\v 21 Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh, says this about Kolayah’s son Ahav and Ma’aseyah’s son Tsidkiyah \add (Zedekiah)\add*, who are \add both\add* prophesying untruths to you in my name: Listen, I’m \add handing them over\add* to the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add*, and he’ll \add kill them right in front of you\add*.
+\v 21 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh, says this about Kolayah’s son Ahav and Ma’aseyah’s son Tsidkiyah \add (Zedekiah)\add*, who are \add both\add* prophesying untruths to you in my name: Listen, I’m \add handing them over\add* to the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add*, and he’ll \add kill them right in front of you\add*.
 \v 22 Then because of them, a \add new\add* curse \add phrase\add* will be taken on by all the \add Jewish\add* exiles in Bavel, which goes, “May Yahweh make you like Tsidkiyah and Ahav, who were roasted in the fire by the Babylonian king,”
 \v 23 because they did something shameful in Yisrael and they have committed adultery with the wives of their neighbours, and they spoke untrue \add messages\add* in my name that I hadn’t commanded them to. I am the one \add who knows that\add* and I’m a witness. That is Yahweh’s declaration.
 \s1 Message to false prophet Shemayah
 \s4 Southern kingdom
 \p
 \v 24 \add Yahweh told me to\add* tell Shemayah (the Nehelami) this:
-\v 25 Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says this: Because you sent letters in your name to all the people in Yerushalem \add (Jerusalem)\add*, and to the priest Tsefanyah \add (Zephaniah)\add* (Ma’aseyah’s son), and to all the priests, to tell \add Tsefanyah\add*:
+\v 25 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says this: Because you sent letters in your name to all the people in Yerushalem \add (Jerusalem)\add*, and to the priest Tsefanyah \add (Zephaniah)\add* (Ma’aseyah’s son), and to all the priests, to tell \add Tsefanyah\add*:
 \pi1
 \v 26 Yahweh has made you, \add Tsefanyah,\add* priest in place of the priest Yehoyada, to be \add overseer\add* in Yahweh’s \add temple\add* over every man who raves \add out loud\add*, making himself a prophet, and you must put him in the stocks \add with an iron collar around his\add* neck.
 \v 27 \add So why\add* haven’t you rebuked Yirmiyah \add (Jeremiah)\add* the Antoti who’s prophesying to you all,
@@ -2366,7 +2366,7 @@
 \s4 Both kingdoms
 \p
 \v 1 Yahweh \add gave\add* Yirmiyah \add (Jeremiah)\add* a message, saying:
-\v 2 Yisrael’s \add (Israel)\add* god, Yahweh says this: Write down on a scroll all the messages that I’ve \add given\add* you,
+\v 2 Yisrael’s \add (Israel’s)\add* god, Yahweh says this: Write down on a scroll all the messages that I’ve \add given\add* you,
 \v 3 because listen to Yahweh’s declaration: The \add time\add* is coming when I’ll restore my people of Yisrael and Yehudah \add (Judah)\add* from captivity, and I’ll bring them back to the land that I have to their ancestors, and they’ll \add take possession of it\add* \add again\add*.
 \p
 \v 4 \add Now\add* these are the messages that Yahweh spoke concerning Yisrael and Yehudah:
@@ -2390,7 +2390,7 @@
 \q1 Then you, my servant Ya’akov, don’t be afraid,
 \q1 and don’t be dismayed, Yisrael \add (Israel)\add*,
 \q1 because listen, I’m rescuing you from afar,
-\q1 and your offspring from the land \add where they were held captive\add*.
+\q1 and your descendants from the land \add where they were held captive\add*.
 \q1 \add Yisrael\add* will return and be left alone and at ease,
 \q1 and there won’t be anyone making it afraid.\x + \xo 30:10-11: \xt Jer 46:27-28.\x*
 \q1
@@ -2434,7 +2434,7 @@
 \q1 That is Yahweh’s declaration.
 \p
 \v 18 Yahweh says this:
-\q1 Listen, I’m restoring the fortune of Ya’akov’s \add (Jacob)\add* \add descendants\add*,
+\q1 Listen, I’m restoring the fortune of Ya’akov’s \add (Jacob’s)\add* \add descendants\add*,
 \q1 and I will have compassion on \add the places where they live\add*.
 \q1 \add Each\add* city will be rebuilt on its mound,
 \q1 and \add each\add* fortress will sit on its proper place.
@@ -2468,7 +2468,7 @@
 \s1 Yisrael’s return home
 \s4 Both kingdoms
 \p
-\v 1 Yahweh \add declares\add* that at that time, I’ll be \add the\add* god to all of Yisrael’s \add (Israel)\add* \add families\add*, and they’ll be my people.
+\v 1 Yahweh \add declares\add* that at that time, I’ll be \add the\add* god to all of Yisrael’s \add (Israel’s)\add* \add families\add*, and they’ll be my people.
 \v 2 Yahweh says this:
 \q1 A people, the survivors \add after being attacked in war\add*,
 \q1 found favour in the wilderness,
@@ -2504,7 +2504,7 @@
 \q1 I’ll cause them to walk to streams of water on a straight road.
 \q1 They won’t stumble on it.
 \q1 because I’ve become a father for Yisrael \add (Israel)\add*,
-\q1 and Efrayim \add (Ephraim)\add*,\f + \fr 31:9 \ft As a synonym, also referring to Yisrael.\f* he’s my firstborn.
+\q1 and \add Yisrael\add* \add (Israel; Heb. Efrayim)\add*, he’s my firstborn.
 \p
 \v 10 \add Listen to\add* Yahweh’s message, \add you\add* nations,
 \q1 and declare it in the coastlands from far off, and say,
@@ -2514,7 +2514,7 @@
 \v 11 because Yahweh has ransomed \add Yisrael\add* (Ya’akov \add (Jacob)\add*)
 \q1 and \add paid the price to free\add* it from the \add power\add* of a \add nation that’s\add* stronger than it.
 \q1
-\v 12 Then they’ll come and sing on Tsiyon’s \add (Zion)\add* \add heights\add*,
+\v 12 Then they’ll come and sing on Tsiyon’s \add (Zion’s)\add* \add heights\add*,
 \q1 and they’ll be radiant about Yahweh’s goodness:
 \q1 about the grain, about the new wine and the fresh oil,
 \q1 and about the young from the flock and the herd.
@@ -2550,7 +2550,7 @@
 \q1 and \add your\add* children will return to their border.
 \m That is Yahweh’s declaration.
 \p
-\v 18 I’ve heard Efrayim \add (Ephraim)\add* \add (the northern kingdom)\add* \add upset at\add* itself, \add saying\add*,
+\v 18 I’ve heard \add Yisrael\add* \add (Israel; Heb. Efrayim)\add* \add upset at\add* itself, \add saying\add*,
 \q1 You disciplined me,
 \q1 and I was disciplined like an untrained calf.
 \q1 Restore me so I can return
@@ -2562,7 +2562,7 @@
 \q1 because I \add still\add* bore the reproach from my youthful \add rebellion\add*.
 \b
 \q1
-\v 20 \add Isn’t\add* Efrayim \add (Ephraim)\add* \add (the northern kingdom)\add* a precious son to me,
+\v 20 \add Isn’t\add* \add Yisrael\add* a precious son to me,
 \q1 or a child \add that I really liked\add*?
 \q1 \add Yes,\add* as often as I speak against him,
 \q1 I still \add continually\add* remember him.
@@ -2574,7 +2574,7 @@
 \q1 Place markers \add where you can see them\add*.
 \q1 Set the highway \add as your goal\add*—
 \q1 the path that you went on.
-\q1 Yisrael’s \add (Israel)\add* \add young daughter\add*, return—
+\q1 Yisrael’s \add (Israel’s)\add* \add young daughter\add*, return—
 \q1 return to those cities of yours.
 \q1
 \v 22 \add How much longer\add* will you waver, \add you\add* apostate daughter?
@@ -2583,7 +2583,7 @@
 \s1 Yisrael’s future peace/prosperity
 \s4 Both kingdoms
 \p
-\v 23 Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says this:
+\v 23 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says this:
 \q1 When I restore the prosperity of Yehudah \add (Judah)\add* and its cities,
 \q1 again they’ll \add restore\add* \add this saying\add*,
 \q1 ‘May \add Yahweh\add* bless you—
@@ -2642,7 +2642,7 @@
 \s1 Yirmiyah buys a field
 \s4 Southern kingdom
 \p
-\v 1 This was the message that came to Yirmiyah \add (Jeremiah)\add* from Yahweh in the tenth year of \add the reign of\add* Yehudah’s \add (Judah)\add* King Tsidkiyah \add (Zedekiah)\add*, the eighteenth year of Nevukadnetsar’s \add (Nebuchadnezzar)\add* \add reign\add*.\x + \xo 32:1: \xt 2Ki 25:1-7.\x*
+\v 1 This was the message that came to Yirmiyah \add (Jeremiah)\add* from Yahweh in the tenth year of \add the reign of\add* Yehudah’s \add (Judah’s)\add* King Tsidkiyah \add (Zedekiah)\add*, the eighteenth year of Nevukadnetsar’s \add (Nebuchadnezzar’s)\add* \add reign\add*.\x + \xo 32:1: \xt 2Ki 25:1-7.\x*
 \v 2 The army of the Babylonian king had besieged Yerushalem \add (Jerusalem)\add*, and the prophet Yirmiyah was imprisoned in the guards’ courtyard at the \add palace\add* of Yehudah’s king.
 \v 3 Yehudah’s king Tsidkiyah had imprisoned him \add there after asking\add*, “Why do you prophesy and say that Yahweh says: Listen, I’m about to \add hand\add* this city over to the Babylonian king and he’ll capture it.
 \v 4 Yehudah’s King Tsidkiyah definitely won’t escape from the \add power\add* of the Kasdim \add (Chaldeans)\add*, because he’ll be \add handed over\add* to the Babylonian king and \add they’ll speak face-to-face to each other\add*.
@@ -2656,7 +2656,7 @@
 \v 11 Next I took \add that\add* sealed purchase \add deed\add* with the \add price\add* and conditions, \add as well as an unsealed copy\add*.
 \v 12 I gave the \add sealed\add* purchase document to Baruk (son of Neriyah, son of Mahseyah) \add in front of\add* my \add cousin\add* Hanamel and the witnesses who’d \add signed\add* the purchase agreement, as well as all the Yehudim \add (Jews)\add* who were sitting in the guards’ courtyard.
 \v 13 Then \add still\add* \add in front of them\add*, I \add instructed\add* Baruk,
-\v 14 Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says this: Take these documents, both this receipt of purchase that’s sealed and the unsealed copies, and put them into a clay jar so they’ll last for a long time,
+\v 14 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says this: Take these documents, both this receipt of purchase that’s sealed and the unsealed copies, and put them into a clay jar so they’ll last for a long time,
 \v 15 because Yisrael’s god, Commander-in-chief Yahweh says this: Houses, fields, and vineyards will again be bought in this land.
 \s1 Yirmiyah’s prayer
 \s4 Southern kingdom
@@ -2667,7 +2667,7 @@
 \v 19 You are \add very wise\add* and \add do incredible things\add*, because your eyes are open to all the people’s ways—to give each person what their conduct and actions deserve.
 \v 20 You did \add miracles and amazing things\add* in Mitsrayim \add (Egypt)\add*, \add remembered\add* to this day, and you’ve made a name for yourself in Yisrael \add (Israel)\add* and among humankind.
 \v 21 You brought your people Yisrael out from Mitsrayim using \add miracles and amazing things\add* and \add by taking action\add* and using your incredible \add strength\add*, along with great terror.
-\v 22 Then you gave them this land which you had promised their ancestors that you’d give them—a land flowing with milk and honey.
+\v 22 Then you gave them this land which you had promised their ancestors that you’d give them—a land \add that’s very fertile\add*.
 \v 23 \add So\add* they entered and took possession of it, \add but\add* they didn’t listen to your voice or follow your instructions. They didn’t do anything that you’d ordered them to do \add so\add* you’ve brought all this calamity onto them.
 \p
 \v 24 Look, the siege mounds have \add reached up\add* to the city to capture it, and it’s been \add handed over\add* to the Kasdim \add (Chaldeans)\add* who’ve been fighting it. Everything you said would happen has, including \add war\add*, famine, and deadly diseases, and you’re there watching it.
@@ -2679,14 +2679,14 @@
 \v 29 The \add soldiers\add* who are fighting against this city will come and set fire to this city and burn it. Those people who worship Ba’al on their \add flat\add* roofs, and who poured out drink offerings to other gods in order to provoke me, will \add now\add* have \add their\add* houses burnt down
 \v 30 because the people of Yisrael \add (Israel)\add* and Yehudah \add (Judah)\add* have certainly been people who’ve been doing evil \add in front of me\add* since their youth. The people of Yisrael have certainly offended me with the practices \add and activities\add*. That is Yahweh’s declaration.
 \v 31 Yahweh declares that \add the people of\add* this city has \add provoked\add* my anger and fury since the day that they built it, and then right up to the present day, \add so\add* I’ll will remove it \add right\add* \add out of my sight\add*,
-\v 32 \add because of\add* all the wicked things that the people of Yisrael and Yehudah have done to provoke me—their kings, princes, priests, prophets, and every person in Yehudah \add including\add* Yerushalem’s \add (Jerusalem)\add* inhabitants.
+\v 32 \add because of\add* all the wicked things that the people of Yisrael and Yehudah have done to provoke me—their kings, princes, priests, prophets, and every person in Yehudah \add including\add* Yerushalem’s \add (Jerusalem’s)\add* inhabitants.
 \v 33 They turned their backs to me instead of their \add faces\add*, even though I had \add eagerly\add* taught them. I tried to teach them, but they wouldn’t listen \add or\add* receive correction.
 \v 34 They set up their detestable \add idols\add* in the house that is called by my name, \add in order\add* to defile it,
 \v 35 and they built \add hilltop shrines\add* for Ba’al along the Ben-Hinom Valley in order to pass their sons and daughters through the fire for Molek.\x + \xo 32:35: \xt 2Ki 23:10; Jer 7:31.\x* I didn’t command them \add to do that\add*—it never entered my \add mind\add* that they should do that \add detestable\add* thing and so cause Yehudah to sin.’\x + \xo 32:34-35: \xt 2Ki 23:10; Jer 7:30-31; 19:1-6.\x*\x + \xo 32:35: \xt Lev 18:21.\x*
 \s1 Promised restoration
 \s4 Southern kingdom
 \p
-\v 36 So now Yisrael’s \add (Israel)\add* god Yahweh \add has something to say\add* about this city that you’ve all been talking about, saying, ‘It’s \add been handed over\add* to the Babylonian king \add due to\add* \add war\add*, famine, and \add deadly diseases\add*.’
+\v 36 So now Yisrael’s \add (Israel’s)\add* god Yahweh \add has something to say\add* about this city that you’ve all been talking about, saying, ‘It’s \add been handed over\add* to the Babylonian king \add due to\add* \add war\add*, famine, and \add deadly diseases\add*.’
 \v 37 Listen, I’ll gather them \add back\add* from every land where I had banished them to in my rage, fury, and great anger. I’m about to bring them back to this place and enable them to live in security,
 \v 38 and then they’ll be my people and I’ll be their god.
 \v 39 I’ll give them \add a united vision\add* and a single way to honour me every day so that it’ll \add turn out\add* good for them and for their descendants after them.
@@ -2694,7 +2694,7 @@
 \v 41 Then I’ll \add take pleasure\add* in doing good to them. I’ll \add faithfully\add* plant them in this land with all my heart and all my life
 \v 42 because Yahweh says this, ‘Just as I have brought all this great disaster on this people, so too I’ll bring on them all the good things that I’ve said I’d do for them.
 \v 43 Then \add people\add* will buy \add fields\add* in this land, about which you’ve been saying, “This land is ruined, without people or \add even\add* \add animals\add* \add living\add* on it. It’s been \add handed over to\add* the \add Babylonians\add*.”
-\v 44 They’ll use silver to buy fields and will write in sealed scrolls. They’ll assemble witnesses in the Benyamin \add region\add*, all around Yerushalem \add (Jerusalem)\add* and Yehudah’s \add (Judah)\add* \add other\add* cities of Yehudah, in the cities in the hill country and in the lowlands, and in the cities of the Negev, because I’ll \add bring back their fortunes\add*. That is Yahweh’s declaration.
+\v 44 They’ll use silver to buy fields and will write in sealed scrolls. They’ll assemble witnesses in the Benyamin \add region\add*, all around Yerushalem \add (Jerusalem)\add* and Yehudah’s \add (Judah’s)\add* \add other\add* cities of Yehudah, in the cities in the hill country and in the lowlands, and in the cities of the Negev, because I’ll \add bring back their fortunes\add*. That is Yahweh’s declaration.
 \c 33
 \s1 Promised blessings
 \s4 Southern kingdom
@@ -2702,14 +2702,14 @@
 \v 1 Then while Yirmiyah \add (Jeremiah)\add* was still locked in the guards’ courtyard, Yahweh \add gave\add* him a second message, saying,
 \v 2 Yahweh, the maker \add of the earth\add*, who formed \add and established it\add* and \add who’s known by\add* his name Yahweh, says:
 \v 3 Call \add out\add* to me, and I’ll answer you. I’ll tell you \add amazing\add* \add things\add* that you haven’t \add previously\add* known \add or understood\add*.
-\v 4 \add Yes,\add* Yisrael’s \add (Israel)\add* god, Yahweh, says this about the houses in this city and the \add palaces\add* of Yehudah’s \add (Judah)\add* \add king\add* that were torn down \add to be used against\add* the siege ramps and the \add attackers\add*:
+\v 4 \add Yes,\add* Yisrael’s \add (Israel’s)\add* god, Yahweh, says this about the houses in this city and the \add palaces\add* of Yehudah’s \add (Judah’s)\add* \add king\add* that were torn down \add to be used against\add* the siege ramps and the \add attackers\add*:
 \v 5 The \add Babylonians\add* are coming to fight, and to fill the houses with the corpses of the people that I’ll kill in my rage and fury when I \add turn my back on\add* this city because of all their wickedness.
 \v 6 Listen, I’m about to bring a cure and healing, because I’ll heal them and will bring bountiful peace and prosperity to them, and \add justice\add*.
 \v 7 I’ll \add bring back the fortunes\add* of Yehudah and Yisrael—I’ll build them up as \add they were before\add*.
 \v 8 Then I’ll purify them from all the \add evil\add* that they’ve committed against me—I’ll pardon all the \add times that they disobeyed\add* me, and all the ways that they rebelled against me.
 \v 9 Then this city will become \add an object\add* of joy for me—a song of praise and honour for all the nations of the earth who’ll hear about all the good things that I’m going to do for it. Then \add the people in the city\add* will \add be respectful\add* and tremble because of all the good things and the peace and prosperity that I’ll give to it.
 \p
-\v 10 Yahweh says this: In this place that you’re all talking about, saying, “It’s desolate—a place where neither people or animals \add live\add*,” in Yehudah’s cities \add including\add* Yerushalem’s \add (Jerusalem)\add* streets that are \add indeed\add* desolate \add with no people or animals around\add*, there’ll be heard again
+\v 10 Yahweh says this: In this place that you’re all talking about, saying, “It’s desolate—a place where neither people or animals \add live\add*,” in Yehudah’s cities \add including\add* Yerushalem’s \add (Jerusalem’s)\add* streets that are \add indeed\add* desolate \add with no people or animals around\add*, there’ll be heard again
 \v 11 the sounds of happiness and \add celebration\add*. \add You’ll all hear\add* the sounds of the bride and groom, and those who bring thank offerings to Yahweh’s \add temple\add* will be heard saying,
 \q1 “Give thanks to Commander-in-chief Yahweh,
 \q1 because Yahweh is good,
@@ -2733,16 +2733,16 @@
 \v 23 Yahweh \add gave\add* Yirmiyah \add this\add* message:
 \v 24 Haven’t you \add noticed\add* what this people \add group\add* has declared when they said, ‘The two clans that Yahweh chose, now he’s rejected them’? In that way they despise my people, saying that they no longer \add deserve to be\add* a nation \add as far as they’re concerned\add*.
 \v 25 \add But\add* \add I,\add* Yahweh say this: Didn’t I establish the \add permanent\add* contract with day and night, and determine the laws of \add the universe\add* and \add this planet\add*?
-\v 26 \add In the same way,\add* would I \add now\add* reject Ya’akov’s \add (Jacob)\add* descendants and not bring a ruler for the descendants of Avraham, Yitshak \add (Isaac)\add*, and Ya’akov out of them. \add No,\add* because I’ll \add restore their fortunes\add* and \add show mercy towards\add* them.
+\v 26 \add In the same way,\add* would I \add now\add* reject Ya’akov’s \add (Jacob’s)\add* descendants and not bring a ruler for the descendants of Avraham, Yitshak \add (Isaac)\add*, and Ya’akov out of them. \add No,\add* because I’ll \add restore their fortunes\add* and \add show mercy towards\add* them.
 \c 34
 \s1 The warning for Tsidkiyah/Zedekiah
 \s4 Southern kingdom
 \p
-\v 1 Yahweh \add gave\add* this message to Yirmiyah \add (Jeremiah)\add* when the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add*, along with all the \add world’s\add* kingdoms, domains, and people \add groups\add* under his \add control\add*, was \add attacking\add* Yerushalem \add (Jerusalem)\add* and \add Yehudah’s\add* \add (Judah)\add* \add other\add* cities, saying:\x + \xo 34:1: \xt 2Ki 25:1-11; 2Ch 36:17-21.\x*
-\v 2 Yisrael’s \add (Israel)\add* god Yahweh says to go and speak to Yehudah’s King Tsidkiyah \add (Zedekiah)\add* and tell him that Yahweh says this: Listen, I’m about to \add hand this city over\add* to the Babylonian king, and he’ll \add set it on fire\add*.
+\v 1 Yahweh \add gave\add* this message to Yirmiyah \add (Jeremiah)\add* when the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add*, along with all the \add world’s\add* kingdoms, domains, and people \add groups\add* under his \add control\add*, was \add attacking\add* Yerushalem \add (Jerusalem)\add* and \add Yehudah’s\add* \add (Judah’s)\add* \add other\add* cities, saying:\x + \xo 34:1: \xt 2Ki 25:1-11; 2Ch 36:17-21.\x*
+\v 2 Yisrael’s \add (Israel’s)\add* god Yahweh says to go and speak to Yehudah’s King Tsidkiyah \add (Zedekiah)\add* and tell him that Yahweh says this: Listen, I’m about to \add hand this city over\add* to the Babylonian king, and he’ll \add set it on fire\add*.
 \v 3 You won’t escape from his \add power\add*, because you’ll definitely be captured and \add handed over to him\add* and you’ll \add talk face-to-face with\add* the king of Bavel \add (Babylon)\add* as you’re \add taken\add* to Bavel.
 \v 4 However King Tsidkiyah, listen to Yahweh’s message—you won’t be \add killed by being run through with a\add* sword
-\v 5 \add but actually\add* you’ll die in peace. They’ll \add cremate\add* your body as was done for your ancestors, the previous kings, and they’ll mourn for you \add saying,\add*, ‘Oh no, master!’ That’s the promise that Yahweh has declared.
+\v 5 \add but actually\add* you’ll die in peace. They’ll \add cremate\add* your body as was done for your ancestors, the previous kings, and they’ll mourn for you \add saying\add*, ‘Oh no, master!’ That’s the promise that Yahweh has declared.
 \v 6 \add So\add* the prophet Yirmiyah \add passed on\add* all those messages to Yehudah’s King Tsidkiyah in Yerushalem
 \v 7 \add when\add* the Babylonian king’s army had attacked Yerushalem and Yehudah’s remaining \add fortified\add* cities of Lakish and Azekah.
 \s1 The restoration of slaves
@@ -2754,7 +2754,7 @@
 \v 11 \add However,\add* after that they \add changed their minds\add* and \add retrieved\add* the male and female slaves that they’d freed, then forced them to \add work as slaves again\add*.
 \p
 \v 12 Then Yahweh \add gave me\add* \add this\add* message to tell them:
-\v 13 Yisrael’s \add (Israel)\add* god Yahweh says that I personally made an agreement with your ancestors on the day that I brought them out from \add their lives of slavery in\add* Mitsrayim \add (Egypt)\add*. That was when I said that
+\v 13 Yisrael’s \add (Israel’s)\add* god Yahweh says that I personally made an agreement with your ancestors on the day that I brought them out from \add their lives of slavery in\add* Mitsrayim \add (Egypt)\add*. That was when I said that
 \v 14 at the end of every seven years, you all must release any fellow \add Ivrim\add* \add (Hebrews)\add* who had sold \add themselves\add* to you and served you for six years, \add releasing them as free people\add*.\x + \xo 34:14: \xt Exo 21:2; Deu 15:12.\x* \add However,\add* your ancestors did not listen to me or \add show any desire to obey\add* me.
 \v 15 \add Now\add* \add recently,\add* you yourselves repented and began to do what \add I’ve said\add* is right. You all made a solemn agreement at my \add temple that carries\add* my name, that you’d \add monitor each other\add* \add to free your slaves\add*.
 \v 16 \add But\add* then you all turned and profaned my name \add by retrieving\add* your male and female slaves which you’d released as free \add people\add*, and then forced them to \add work as slaves again\add*,
@@ -2782,7 +2782,7 @@
 \v 11 \add but\add* when the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* attacked the land, we \add decided that\add* we must \add move\add* to Yerushalem \add (Jerusalem)\add* to escape from the \add Babylonian\add* and Aramean armies, so now we’re \add all\add* living in Yerushalem.
 \p
 \v 12 Then Yahweh \add gave\add* this message to Yirmiyah \add (Jeremiah)\add*, saying that
-\v 13 Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says to go and \add ask\add* the people in Yehudah \add (Judah)\add*, including those who live in Yerushalem: Won’t you all accept correction and listen to my messages? This is Yahweh’s declaration:
+\v 13 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says to go and \add ask\add* the people in Yehudah \add (Judah)\add*, including those who live in Yerushalem: Won’t you all accept correction and listen to my messages? This is Yahweh’s declaration:
 \v 14 Rekav’s son Yonadav \add told\add* his descendants not to drink any wine \add and they’ve followed that\add* to this \add very\add* day. \add In contrast,\add* I’ve \add personally and consistently\add* spoken to all of you \add but you haven’t taken any notice of what I’ve said\add*.
 \v 15 I \add persistently\add* sent all my servants, the prophets, out to you all to tell each person to turn from their wicked \add behaviour\add* and \add start doing good instead\add*, and to \add stop following\add* after other gods and serving them. Then they’d live on the land that I gave to your ancestors and to all of you, \add however, you all won’t listen to me or pay attention\add* to me.
 \v 16 \add Yes,\add* Yonadav’s descendants have \add followed the instructions\add* that their ancestor gave them, but this people, refuses to \add obey\add* me,
@@ -2794,7 +2794,7 @@
 \s1 Baruk reads out Yahweh’s messages at the temple
 \s4 Southern kingdom
 \p
-\v 1 In the fourth year \add of the reign\add* Yehudah’s \add (Judah)\add* King Yehoyakim (son of Yoshiyah \add (Josiah)\add*), Yahweh \add gave\add* this message to Yirmiyah \add (Jeremiah)\add*:\x + \xo 36:1: \xt 2Ki 24:1; 2Ch 36:5-7; Dan 1:1-2.\x*
+\v 1 In the fourth year \add of the reign\add* Yehudah’s \add (Judah’s)\add* King Yehoyakim (son of Yoshiyah \add (Josiah)\add*), Yahweh \add gave\add* this message to Yirmiyah \add (Jeremiah)\add*:\x + \xo 36:1: \xt 2Ki 24:1; 2Ch 36:5-7; Dan 1:1-2.\x*
 \v 2 Get a scroll for yourself and write all the messages on it that I’ve told you concerning Yisrael \add (Israel)\add* and Yehudah, and all the other nations. Do this for everything I have said, \add back\add* from the \add time\add* of Yoshiyah until \add the present time\add*.
 \v 3 Perhaps Yehudah’s \add people\add* will hear about all the disasters that I intend to bring on them and then turn away from \add their\add* wicked \add ways\add*, so I can forgive them for their wickedness and their disobedience.
 \p
@@ -2834,32 +2834,32 @@
 \s4 Southern kingdom
 \p
 \v 27 After the king had burnt the scroll with the messages on it that Yirmiyah \add (Jeremiah)\add* had dictated to Baruk, Yahweh \add gave this\add* message to Yirmiyah:
-\v 28 Get yourself another scroll and write down all the messages that were on the original scroll that Yehudah’s \add (Judah)\add* King Yehoyakim burnt.
+\v 28 Get yourself another scroll and write down all the messages that were on the original scroll that Yehudah’s \add (Judah’s)\add* King Yehoyakim burnt.
 \v 29 Then you must tell \add the king\add* that Yahweh says: You burnt that scroll, asking why it was written that the Babylonian king would come and destroy this land and leave it without people or \add animals\add*.
 \v 30 \add Now\add* Yahweh says about King Yehoyakim: No descendant of his will ever sit on David’s throne. As for him, his corpse will be thrown out into the heat of the day and the frost at night.
-\v 31 I’ll punish him, his \add descendants\add*, and his servants for their \add wickedness\add*. The disasters that I’ve threatened them with, \add but which\add* they \add ignored\add*, I’ll \add send\add* onto them and all Yerushalem’s \add (Jerusalem)\add* inhabitants, and onto every person in \add the rest of\add* Yehudah.
+\v 31 I’ll punish him, his \add descendants\add*, and his servants for their \add wickedness\add*. The disasters that I’ve threatened them with, \add but which\add* they \add ignored\add*, I’ll \add send\add* onto them and all Yerushalem’s \add (Jerusalem’s)\add* inhabitants, and onto every person in \add the rest of\add* Yehudah.
 \p
 \v 32 \add So\add* Yirmiyah got another scroll and gave it to Baruk, son of Neriyah the scribe. Yirmiyah \add again\add* dictated all the messages that had been on the scroll burnt by Yehudah’s King Yehoyakim, and \add Baruk\add* wrote them onto the scroll, \add along with several\add* other similar messages.
 \c 37
 \s1 Yirmiyah’s response to Tsidkiyah/Zedekiah
 \s4 Southern kingdom
 \p
-\v 1 \add By now\add* Yoshiyah’s \add (Josiah)\add* son Tsidkiyah \add (Zedekiah)\add* reigned as king instead of Yehoyakim’s son Yehoyakin. The Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* had made \add Tsidkiyah\add* king over the Yehudah \add (Judah)\add* \add region\add*.\x + \xo 37:1: \xt 2Ki 24:17; 2Ch 36:10.\x*
+\v 1 \add By now\add* Yoshiyah’s \add (Josiah’s)\add* son Tsidkiyah \add (Zedekiah)\add* reigned as king instead of Yehoyakim’s son Yehoyakin. The Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* had made \add Tsidkiyah\add* king over the Yehudah \add (Judah)\add* \add region\add*.\x + \xo 37:1: \xt 2Ki 24:17; 2Ch 36:10.\x*
 \v 2 \add However,\add* \add Tsidkiyah\add*, his servants, and his people wouldn’t listen to Yahweh’s messages that he’d \add given\add* via the prophet Yirmiyah \add (Jeremiah)\add*.
 \p
 \v 3 \add Eventually,\add* King Tsidkiyah, Shelemyah’s son Yehukal, and Tsefanyah \add (Zephaniah)\add* son of Ma’aseyah the priest, sent a message to the prophet Yirmiyah \add requesting him\add*, “Pray on our behalf to our god, Yahweh.
 \v 4 \add At that time,\add* Yirmiyah was \add still\add* coming and going among the people, because he hadn’t yet been put in prison.
-\v 5 Par’oh’s \add (Pharaoh)\add* army had come out of Mitsrayim \add (Egypt)\add*, and the \add Babylonians\add* who were besieging Yerushalem \add (Jerusalem)\add* heard the \add news\add* about them and \add retreated from\add* Yerushalem.
+\v 5 Par’oh’s \add (Pharaoh’s)\add* army had come out of Mitsrayim \add (Egypt)\add*, and the \add Babylonians\add* who were besieging Yerushalem \add (Jerusalem)\add* heard the \add news\add* about them and \add retreated from\add* Yerushalem.
 \p
 \v 6 Then Yahweh \add gave\add* Yirmiyah this message to proclaim:
-\v 7 Yisrael’s \add (Israel)\add* god, Yahweh told me that you \add people\add* should say this to Yehudah’s king who sent you all to consult me: Listen Par’oh’s army which was coming out to help you all is about to return back to its own \add country\add*, Mitsrayim.
+\v 7 Yisrael’s \add (Israel’s)\add* god, Yahweh told me that you \add people\add* should say this to Yehudah’s king who sent you all to consult me: Listen Par’oh’s army which was coming out to help you all is about to return back to its own \add country\add*, Mitsrayim.
 \v 8 Then the \add Babylonians\add* will return and attack this city, then they’ll capture it and burn it \add down\add*.
 \v 9 Yahweh says not to deceive yourselves that the Babylonians have left, because they won’t leave,
 \v 10 because even if you all defeated the entire Babylonian army that’s attacking you so that only wounded men were left in their \add tents\add*, they would get up and burn \add down\add* this city.
 \s1 Yirmiyah is arrested and imprisoned
 \s4 Southern kingdom
 \p
-\v 11 Then when the Babylonian army had left Yerushalem \add (Jerusalem)\add* \add to avoid\add* Par’oh’s \add (Pharaoh)\add* army,
+\v 11 Then when the Babylonian army had left Yerushalem \add (Jerusalem)\add* \add to avoid\add* Par’oh’s \add (Pharaoh’s)\add* army,
 \v 12 Yirmiyah \add (Jeremiah)\add* left \add the city\add* to go to the Benyamin \add region\add* to \add take possession of a section\add* \add of land\add* there among \add his\add* people.
 \v 13 \add As he went through\add* the Benyamin gate, a chief guard named Yiriyah (son of Shelemyah, son of Hananyah) was there. He seized the prophet Yirmiyah and \add claimed that\add* he was deserting to the \add Babylonians\add*.
 \p
@@ -2903,7 +2903,7 @@
 \p
 \v 16 \add But\add* King Tsidkiyah privately promised Yirmiyah, “As \add our creator\add* Yahweh lives, I won’t execute you or \add hand you over to\add* those men who \add want to see you dead\add*.”
 \p
-\v 17 “\add Okay,\add*” Yirmiyah \add answered\add* \add the king\add*, “Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says this: If you indeed go out to the Babylonian king’s officials, then you’ll live, and this city won’t be burnt \add down\add*. You and your family would live.
+\v 17 “\add Okay,\add*” Yirmiyah \add answered\add* \add the king\add*, “Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says this: If you indeed go out to the Babylonian king’s officials, then you’ll live, and this city won’t be burnt \add down\add*. You and your family would live.
 \v 18 But if you don’t go out to \add his\add* officials, then this city will be \add handed over to the Babylonians\add*. They’ll burn it \add down\add*, and you wouldn’t \add be able to\add* escape from their \add power\add*.”
 \p
 \v 19 “\add But\add* I’m afraid of the \add Yehudim\add* \add (Jews)\add* who’ve \add already\add* deserted to the Babylonians,” \add the king\add* \add confided to\add* Yirmiyah. “\add You see,\add* I might be \add handed over to them\add* and they \add might treat me cruelly\add*.”
@@ -2918,14 +2918,14 @@
 \p
 \v 24 Then Tsidkiyah \add (Zedekiah)\add* told Yirmiyah, “Don’t \add tell anyone else what we spoke about or you might\add* die.
 \v 25 If the officials hear that I’ve have talked with you, and if they come and \add demand\add*, ‘Tell us what you said to the king—don’t hide it from us or we’ll kill you,’
-\v 26 then you must tell them, ‘I \add was just pleading\add* to the king not to return me to \add the dungeon in\add* Yonatan’s \add (Jonathan)\add* house \add or I’d\add* die there.’
+\v 26 then you must tell them, ‘I \add was just pleading\add* to the king not to return me to \add the dungeon in\add* Yonatan’s \add (Jonathan’s)\add* house \add or I’d\add* die there.’
 \v 27 Then \add sure enough\add* the officials came to Yirmiyah and questioned him and he \add answered\add* them as the king had \add instructed\add* him. They couldn’t say anything else because they hadn’t heard the \add conversation\add*,
 \v 28 \add so\add* Yirmiyah remained in the guards’ courtyard until the day that Yerushalem \add (Jerusalem)\add* was captured.\x + \xo 38:28: \xt Eze 33:21.\x*
 \c 39
 \s1 The fall of Yerushalem
 \s4 Southern kingdom
 \p
-\v 1 In the tenth month of the ninth year \add of the reign\add* of Yehudah’s \add (Judah)\add* King Tsidkiyah \add (Zedekiah)\add*, the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* came against Yerushalem \add (Jerusalem)\add* with his \add large\add* army and besieged it.
+\v 1 In the tenth month of the ninth year \add of the reign\add* of Yehudah’s \add (Judah’s)\add* King Tsidkiyah \add (Zedekiah)\add*, the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* came against Yerushalem \add (Jerusalem)\add* with his \add large\add* army and besieged it.
 \v 2 On the ninth day of the fourth month of Tsidkiyah’s eleventh year,\f + \fr 39:2 \ft i.e., about eighteen months later (in 586 B.C.).\f* the city was broken into.
 \v 3 Then all of the Babylonian king’s officials came and sat at the middle gate, \add including\add* the top official Nevu-Sar-Sekim, and Samgar-Nevu and Sarsekim.
 \p
@@ -2947,7 +2947,7 @@
 \s4 Southern kingdom
 \p
 \v 15 \add While\add* Yirmiyah \add (Jeremiah)\add* had still been \add held\add* in the guards’ courtyard, Yahweh had given him this message:
-\v 16 Go and tell Eved-Melek the \add Kushi\add* \add (Ethiopian)\add* that Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says this: Listen, I’m about to \add fulfill\add* my messages against this city for disaster and not for good, and they’ll all \add come true\add* \add right in front of your eyes\add* on that day.
+\v 16 Go and tell Eved-Melek the \add Kushi\add* \add (Ethiopian)\add* that Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says this: Listen, I’m about to \add fulfill\add* my messages against this city for disaster and not for good, and they’ll all \add come true\add* \add right in front of your eyes\add* on that day.
 \v 17 \add But\add* Yahweh \add declares\add* that I’ll rescue you from those people that you’re afraid of
 \v 18 because I’ll definitely save your life. You won’t \add be killed by the soldiers\add*, but Yahweh \add declares\add* that because you \add put your trust in\add* me, your life will be saved.
 \c 40
@@ -2992,7 +2992,7 @@
 \v 7 Then as they \add reached\add* the middle of the town, Yishmael and his men slaughtered them \add and threw their bodies\add* into a cistern.
 \p
 \v 8 \add However,\add* ten of them \add bargained with Yishmael about some\add* wheat, barley, oil, and honey \add that they’d left out\add* in the countryside, \add so\add* he didn’t kill them along with the others.
-\v 9 The \add water storage\add* cistern when Yishmael had thrown all the bodies of those he’d killed \add including\add* Gedalyah, had been dug by King Asa \add in defence against\add* Yisrael’s \add (Israel)\add* King Baesha. \add Now\add* Netanyah’s son Yishmael had filled it \add with dead bodies\add*.
+\v 9 The \add water storage\add* cistern when Yishmael had thrown all the bodies of those he’d killed \add including\add* Gedalyah, had been dug by King Asa \add in defence against\add* Yisrael’s \add (Israel’s)\add* King Baesha. \add Now\add* Netanyah’s son Yishmael had filled it \add with dead bodies\add*.
 \v 10 Next Yishmael captured the remaining people in Mitspah, \add including\add* the king’s daughters and all the others who the chief bodyguard Nevuzar-Adan had assigned to Ahikam’s son Gedalyah. \add So\add* Netanyah’s son Yishmael captured them to hand over to the \add Amonim\add*.
 \p
 \v 11 \add Meanwhile\add* Kareah’s son Yohanan and all the army commanders with him, heard about all the evil \add things\add* that Netanyah’s son Yishmael had done,
@@ -3021,7 +3021,7 @@
 \p
 \v 7 After ten days, Yahweh’s \add response\add* came to Yirmiyah \add (Jeremiah)\add*,
 \v 8 \add so\add* \add he\add* called Kareah’s son Yohanan and all the army commanders, as well as all the people from the less \add prominent\add* to the \add most important officials\add*,
-\v 9 then he told them, “You all sent me to Yisrael’s \add (Israel)\add* god Yahweh \add to pass on your requests\add* \add and here’s his reply\add*:
+\v 9 then he told them, “You all sent me to Yisrael’s \add (Israel’s)\add* god Yahweh \add to pass on your requests\add* \add and here’s his reply\add*:
 \v 10 If you all stay in this \add region\add*, then I’ll build you up and not tear you down. I’ll plant you and not pull you all out, because I’m upset about the harm that I’ve done to you all.
 \v 11 Don’t be afraid of the Babylonian king \add any more\add*. This is Yahweh’s declaration: Don’t be afraid of him because I’m with you all to save you and to rescue you from his \add clutches\add*,
 \v 12 because I’ll give you all mercy. I’ll have compassion on you, and I’ll restore you all back to your \add country\add*.
@@ -3032,7 +3032,7 @@
 \v 16 then the \add war\add* that you all fear will overtake you in Mitsrayim. The famine that you’re anxious about will follow you all to Mitsrayim, and then you’ll die there,
 \v 17 \add i.e.,\add* \add anyone who decides\add* to go to \add live as foreigners\add* in Mitsrayim, will die from \add war\add*, famine, or \add deadly diseases\add*. There won’t be any \add survivors\add* from the \add calamities\add* that I’d \add send\add* onto them.
 \p
-\v 18 \add Yes,\add* Yisrael’s god, Commander-in-chief Yahweh says this: Just as my anger and rage was poured out on Yerushalem’s \add (Jerusalem)\add* inhabitants, in the same way my anger would be poured out on all of you if you go to Mitsrayim. You’d become an object of cursing and a horror, \add something to be used as a curse word\add*, and something dishonourable, and you’d never see this place again.
+\v 18 \add Yes,\add* Yisrael’s god, Commander-in-chief Yahweh says this: Just as my anger and rage was poured out on Yerushalem’s \add (Jerusalem’s)\add* inhabitants, in the same way my anger would be poured out on all of you if you go to Mitsrayim. You’d become an object of cursing and a horror, \add something to be used as a curse word\add*, and something dishonourable, and you’d never see this place again.
 \p
 \v 19 \add Then Yirmiyah\add* \add (Jeremiah)\add* \add continued:\add* Yahweh has spoken to you all, the \add remaining people\add* of Yehudah \add (Judah)\add*. Don’t go \add down\add* to Mitsrayim as you know that I’ve definitely warned you all \add against that\add* today.
 \v 20 \add Yes,\add* you \add made a life and death mistake\add* when you sent me to your god Yahweh, and \add asked me to ask him for instructions for you\add* and when you all said that you’d do everything that \add he\add* says,
@@ -3052,8 +3052,8 @@
 \v 7 Then they went to Mitsrayim because they \add took no notice of Yahweh’s instructions\add* and they arrived at Tahfanhes.
 \p
 \v 8 In Tahfanhes, Yahweh \add gave\add* Yirmiyah a message:
-\v 9 \add Get\add* some large stones and \add while the people from Yehudah are watching\add*, \add push\add* them into the mortar in the pavement at the entrance to Par’oh’s \add (Pharaoh)\add* \add palace\add* at Tahfanhes.
-\v 10 Then tell \add the Yehudim\add* \add (Jews)\add* that Yisrael’s \add (Israel)\add* god, Commander-in-chief says: Listen, I’m about to send messengers to my servant the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add*, to summon him \add here\add*. I’ll place his throne over the top of those hidden stones, and he’ll spread his \add royal\add* tent over them.
+\v 9 \add Get\add* some large stones and \add while the people from Yehudah are watching\add*, \add push\add* them into the mortar in the pavement at the entrance to Par’oh’s \add (Pharaoh’s)\add* \add palace\add* at Tahfanhes.
+\v 10 Then tell \add the Yehudim\add* \add (Jews)\add* that Yisrael’s \add (Israel’s)\add* god, Commander-in-chief says: Listen, I’m about to send messengers to my servant the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add*, to summon him \add here\add*. I’ll place his throne over the top of those hidden stones, and he’ll spread his \add royal\add* tent over them.
 \v 11 He’ll come here to attack Mitsrayim \add and he’ll kill those that I’ve assigned to die, and similarly for those to be taken captive or run through with a\add* sword.
 \v 12 Then \add he’ll\add* light a fire in the temples of Mitsrayim’s gods. \add Nevukadnetsar\add* will \add either\add* burn them or \add carry them away\add*. He’ll clean Mitsrayim out just like shepherds pick lice off their clothes, and then he’ll \add quietly\add* leave
 \v 13 \add after\add* smashing the \add stone\add* pillars at \add Beyt-Shemesh\add* \add (Heliopolis)\add* and burning the temples of Mitsrayim’s gods.
@@ -3061,7 +3061,7 @@
 \s1 Yahweh’s message to the Yehudim in Mitsrayim
 \p
 \v 1 Yahweh spoke to Yirmiyah \add (Jeremiah)\add* about all the Yehudim \add (Jews)\add* who lived in Migdol, Tahfanhes, and Nof \add (Memphis)\add* in \add northern/lower\add* Mitsrayim \add (Egypt)\add*, as well as those in Patros \add in southern/upper Mitsrayim\add*:
-\v 2 Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says that you yourselves have seen all the disasters that I \add sent to\add* Yerushalem \add (Jerusalem)\add* and Yehudah’s \add (Judah)\add* other cities. See, they’re \add just\add* \add ruins\add* \add today without anyone living in\add* them.
+\v 2 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says that you yourselves have seen all the disasters that I \add sent to\add* Yerushalem \add (Jerusalem)\add* and Yehudah’s \add (Judah’s)\add* other cities. See, they’re \add just\add* \add ruins\add* \add today without anyone living in\add* them.
 \v 3 \add That’s because\add* of the \add wicked\add* things they did to provoke me to anger by going to burn incense and to worship other gods that neither they themselves, nor you, nor your ancestors had \add ever heard about before\add*.
 \v 4 I repeatedly sent all my servants, the prophets, to them to tell \add the people\add* to stop doing those \add detestable\add* \add things\add* that I hate,
 \v 5 \add but\add* they didn’t listen. They \add refused to take any notice of it, or to stop their wicked activities like burning incense\add* to other gods.
@@ -3090,7 +3090,7 @@
 \v 23 \add Because\add* you all \add burnt incense\add* \add to other gods\add* and sinned against Yahweh, and because you wouldn’t listen to \add his\add* voice, his instructions, his regulations, or his \add promises\add*, this disaster has \add come against\add* you as \add you all can see\add* \add today\add*.
 \p
 \v 24 Then Yirmiyah told all the people, \add including\add* all \add those\add* women, “Listen to Yahweh’s message, all of \add you from\add* Yehudah who are \add now here\add* in Mitsrayim \add (Egypt)\add*.
-\v 25 Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says that both you and your wives have said \add out loud\add* and \add confirmed with your actions\add* that you’ll all certainly carry out your vows to worship the queen of the skies and to pour out drink offerings to her. \add So then, go ahead and do those things to fulfill your wows\add*.
+\v 25 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says that both you and your wives have said \add out loud\add* and \add confirmed with your actions\add* that you’ll all certainly carry out your vows to worship the queen of the skies and to pour out drink offerings to her. \add So then, go ahead and do those things to fulfill your wows\add*.
 \v 26 So then all of Yehudah who’re staying Mitsrayim, listen to Yahweh’s message: Yahweh says, listen, I’ve promised by my \add powerful\add* name that none of the men from Yehudah who’re living \add here\add* in Mitsrayim will call on my name any more, i.e., \add you’ll\add* all \add no longer\add* say, ‘As \add our\add* master Yahweh lives.’
 \v 27 Listen, I’m watching over them for disaster and not for good. Every Yehudi \add (Jew)\add* person in Mitsrayim will \add meet their end through war or\add* famine until they’re all eliminated.
 \v 28 Then \add a few\add* survivors \add from the battles\add* will return from Mitsrayim to Yehudah \add region\add*—only a small number of them. \add In that way,\add* all the \add remaining Yehudim\add* \add (Jews)\add* who went to live in Mitsrayim will know whose word will stand—\add mine or theirs\add*.
@@ -3099,8 +3099,8 @@
 \c 45
 \s1 Yahweh’s promise to Baruk
 \p
-\v 1 This is the message that the prophet Yirmiyah \add (Jeremiah)\add* dictated to Neriyah’s son Baruk to have it written on a scroll in the fourth year \add of the reign\add* of Yehudah’s \add (Judah)\add* King Yehoyakim (son of Yoshiyah \add (Josiah)\add*):\x + \xo 45:1: \xt 2Ki 24:1; 2Ch 36:5-7; Dan 1:1-2.\x*
-\v 2 Yisrael’s \add (Israel)\add* god Yahweh says this to you Baruk:
+\v 1 This is the message that the prophet Yirmiyah \add (Jeremiah)\add* dictated to Neriyah’s son Baruk to have it written on a scroll in the fourth year \add of the reign\add* of Yehudah’s \add (Judah’s)\add* King Yehoyakim (son of Yoshiyah \add (Josiah)\add*):\x + \xo 45:1: \xt 2Ki 24:1; 2Ch 36:5-7; Dan 1:1-2.\x*
+\v 2 Yisrael’s \add (Israel’s)\add* god Yahweh says this to you Baruk:
 \v 3 You’ve said, ‘\add I’m not doing well\add* because Yahweh has \add piled sorrow on top of\add* my pain. I’m exhausted from groaning and I can’t find \add any\add* \add peace\add*.’
 \p
 \v 4 Yahweh says to tell \add Baruk\add*, Listen, I’m about to tear down what I’ve built throughout the \add world\add*, and to pull out what I’ve planted.
@@ -3109,7 +3109,7 @@
 \s1 Judgement for Mitsrayim
 \p
 \v 1 These are the \add messages\add* that Yahweh \add gave\add* the prophet Yirmiyah \add (Jeremiah)\add* about \add other\add* nations:
-\v 2 This is about the army of the Mitsri \add (Egyptian)\add* king Par’oh \add (Pharaoh)\add* Nekoh who was at Karkemish by the Perat \add (Euphrates)\add* river. That was the army that the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* defeated in the fourth year \add of the reign\add* of Yehudah’s \add (Judah)\add* King Yehoyakim, son of Yoshiyah \add (Josiah)\add*:\x + \xo 46:2-26: \xt Isa 19:1-25; Eze 29:1–32:32.\x*
+\v 2 This is about the army of the Mitsri \add (Egyptian)\add* king Par’oh \add (Pharaoh)\add* Nekoh who was at Karkemish by the Perat \add (Euphrates)\add* river. That was the army that the Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* defeated in the fourth year \add of the reign\add* of Yehudah’s \add (Judah’s)\add* King Yehoyakim, son of Yoshiyah \add (Josiah)\add*:\x + \xo 46:2-26: \xt Isa 19:1-25; Eze 29:1–32:32.\x*
 \q1
 \v 3 \add Get\add* the small shield and the large shields \add ready\add*,
 \q1 and \add go out\add* for battle.
@@ -3214,8 +3214,8 @@
 \v 24 Mitsrayim’s \add inhabitants\add* will be \add humiliated\add*—
 \q1 they’ll be \add handed over\add* to those northern people.
 \p
-\v 25 Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says, “Listen, I’m about to punish Amon \add the god\add* of No \add (Thebes)\add* \add city\add*, Mitsrayim \add (Egypt)\add* and her \add other\add* gods, its kings the Par’ohs \add (Pharaohs)\add*, and \add all\add* those who trust in them.
-\v 26 I’ll \add hand them over\add* to \add those who want them dead\add*, and \add over\add* to Bavel’s \add (Babylon)\add* King Nevukadnetsar \add (Nebuchadnezzar)\add* and his servants. \add But\add* after that, \add Mitsrayim\add* will be inhabited as in \add past times\add*. That is Yahweh’s declaration.
+\v 25 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says, “Listen, I’m about to punish Amon \add the god\add* of No \add (Thebes)\add* \add city\add*, Mitsrayim \add (Egypt)\add* and her \add other\add* gods, its kings the Par’ohs \add (Pharaohs)\add*, and \add all\add* those who trust in them.
+\v 26 I’ll \add hand them over\add* to \add those who want them dead\add*, and \add over\add* to Bavel’s \add (Babylon’s)\add* King Nevukadnetsar \add (Nebuchadnezzar)\add* and his servants. \add But\add* after that, \add Mitsrayim\add* will be inhabited as in \add past times\add*. That is Yahweh’s declaration.
 \s1 Yahweh’s rescue of Ya’akov’s descendants
 \q1
 \v 27 But you, my servant Ya’akov \add (Jacob)\add* \add (meaning Yisrael\add* \add (Israel)\add* \add )\add*, don’t \add be afraid\add*.
@@ -3265,7 +3265,7 @@
 \c 48
 \s1 Moav’s punishment
 \p
-\v 1 Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh says to Moav \add (Moab)\add*:
+\v 1 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says to Moav \add (Moab)\add*:
 \q1 Nevo \add won’t end well\add* because it’ll be devastated.
 \q1 Kiryatayim has been humiliated and captured.
 \q1 \add Its\add* fortress has been disgraced and shattered.\x + \xo 48:1-47: \xt Isa 15:1–16:14; 25:10-12; Eze 25:8-11; Amos 2:1-3; Zeph 2:8-11.\x*
@@ -3315,7 +3315,7 @@
 \q1 and empty out all its pots and smash its jars.
 \q1
 \v 13 Then Moav will be ashamed of \add their god\add* Kemosh
-\q1 just as Yisrael’s \add (Israel)\add* \add people\add* were ashamed of \add the golden calf\add* \add that they put their trust in\add* at Beyt-El \add (Bethel)\add*.
+\q1 just as Yisrael’s \add (Israel’s)\add* \add people\add* were ashamed of \add the golden calf\add* \add that they put their trust in\add* at Beyt-El \add (Bethel)\add*.
 \q1
 \v 14 How can you \add Moav soldiers\add* say, ‘We are warriors,
 \q1 \add powerful fighting\add* men’?
@@ -3345,7 +3345,7 @@
 \q1 Wail and cry out.
 \q1 Tell the people at the Arnon \add river\add* that Moav’s been devastated.
 \p
-\v 21 Now punishment has come to \add Moav’s\add* \add (Moab)\add* \add high plateau\add*:
+\v 21 Now punishment has come to \add Moav’s\add* \add (Moab’s)\add* \add high plateau\add*:
 \q1 to Holon, Yahats, Mofa’at,
 \v 22 Divon, Nevo, Beyt-Divlatayim,
 \v 23 Kiryatayim, Beyt-Gamul, Beyt-Me’on,
@@ -3453,7 +3453,7 @@
 \q1
 \v 8 Turn \add and\add* \add run away\add*.
 \q1 Stay in deep \add caves\add*, \add you\add* inhabitants of Dedan,
-\q1 because I’m bringing Esav’s \add (Esau)\add* disaster onto \add Edom\add* \add when\add* I punish it.
+\q1 because I’m bringing Esav’s \add (Esau’s)\add* disaster onto \add Edom\add* \add when\add* I punish it.
 \q1
 \v 9 If grape harvesters came to you, wouldn’t they \add at least\add* leave a little bit behind?
 \q1 If thieves \add came\add* in the night, wouldn’t they \add steal only as much as they needed\add*?
@@ -3554,7 +3554,7 @@
 \q1 No one will live there—no human would want to stay there.
 \s1 Yahweh’s judgement for Eylam
 \p
-\v 34 At the beginning of the reign of Yehudah’s \add (Judah)\add* King Tsidkiyah \add (Zedekiah)\add*, Yahweh \add gave\add* this message about Eylam to the prophet Yirmiyah \add (Jeremiah)\add*.
+\v 34 At the beginning of the reign of Yehudah’s \add (Judah’s)\add* King Tsidkiyah \add (Zedekiah)\add*, Yahweh \add gave\add* this message about Eylam to the prophet Yirmiyah \add (Jeremiah)\add*.
 \v 35 Commander-in-chief Yahweh says this:
 \q1 Listen, I’m about to break the \add power of\add* Eylam’s \add archers\add*—
 \q1 their \add main initial attack force\add*.
@@ -3628,7 +3628,7 @@
 \v 13 Due to Yahweh’s severe anger, Bavel won’t \add remain\add* inhabited, but will become a complete \add ruin\add*.
 \q1 Everyone who passes by will be appalled, and will hiss because of all its wounds.
 \p
-\v 14 \add You armies,\add*, line yourselves up all around Bavel—
+\v 14 \add You armies\add*, line yourselves up all around Bavel—
 \q1 everyone who uses a bow \add and arrows\add* must shoot at it.
 \q1 Don’t hold back any of \add your\add* \add arrows\add*, because it has \add disobeyed\add* Yahweh.
 \q1
@@ -3694,9 +3694,9 @@
 \q1 \add Surround it completely\add* and don’t let anyone escape.
 \q1 Repay it for \add what it’s done\add*.
 \q1 Do to it \add what it did to others\add*\x + \xo 50:29: \xt Rev 18:6.\x*
-\q1 because it had defied Yahweh, Yisrael’s \add (Israel)\add* holy \add one\add*,
+\q1 because it had defied Yahweh, Yisrael’s \add (Israel’s)\add* holy \add one\add*,
 \q1
-\v 30 so their young men will fall in the \add city\add* squares,
+\v 30 so their young men will fall in the \add town\add* squares,
 \q1 and all their fighting men will \add be killed\add* on that day.
 \m That is Yahweh’s declaration.
 \p
@@ -3710,7 +3710,7 @@
 \q1 I’ll light a fire in its cities and it will devour everything around it.
 \p
 \v 33 Commander-in-chief Yahweh says this:
-\q1 The Yisrael’s \add (Israel)\add* people are oppressed,
+\q1 The Yisrael’s \add (Israel’s)\add* people are oppressed,
 \q1 as are the people from Yehudah \add (Judah)\add*.
 \q1 All those who captured them have kept hold of them—
 \q1 they’ve refused to let them go.
@@ -3719,7 +3719,7 @@
 \q1 His name is Commander-in-chief Yahweh.
 \q1 He’ll \add successfully\add* plead their case,
 \q1 in order to bring \add peace and stability\add* to the land,
-\q1 and to cause turmoil for Bavel’s \add (Babylon)\add* inhabitants.
+\q1 and to cause turmoil for Bavel’s \add (Babylon’s)\add* inhabitants.
 \p
 \v 35 Yahweh \add declares\add* that \add war is coming to the Kasdim\add* \add (Chaldeans)\add*
 \q1 \add including\add* \add its\add* inhabitants, leaders, and wise \add men\add*.
@@ -3843,7 +3843,7 @@
 \v 18 They are the worthless work of mockers
 \q1 \add who’ll\add* perish at the time of their punishment.
 \q1
-\v 19 \add Yisrael’s\add* \add (Israel)\add* \add god\add* is not like those,
+\v 19 \add Yisrael’s\add* \add (Israel’s)\add* \add god\add* is not like those,
 \q1 because he’s the \add one\add* who formed everything.
 \q1 \add Yisrael is\add* the tribe of his inheritance.
 \q1 Commander-in-chief Yahweh is his name.
@@ -3901,9 +3901,9 @@
 \q1
 \v 32 The fords \add over the river\add* have been seized
 \q1 the reed marshes have been burnt \add off\add*,
-\q1 and Bavel’s \add (Babylon)\add* \add soldiers\add* are terrified
+\q1 and Bavel’s \add (Babylon’s)\add* \add soldiers\add* are terrified
 \q1
-\v 33 \add Yes,\add* Yisrael’s \add (Israel)\add* god, Commander-in-chief Yahweh, says this:
+\v 33 \add Yes,\add* Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh, says this:
 \q1 The daughter of Bavel is like a threshing floor—it’s time to trample it down.
 \q1 In a little while, the time will come for it to be harvested.
 \q1
@@ -3920,7 +3920,7 @@
 \p
 \v 36 Therefore Yahweh says this:
 \q1 Listen, I’m about to plead your case and bring about vengeance for you
-\q1 because I’ll dry up \add Bavel’s\add* \add (Babylon)\add* \add river\add* and make its \add springs\add* run dry.
+\q1 because I’ll dry up \add Bavel’s\add* \add (Babylon’s)\add* \add river\add* and make its \add springs\add* run dry.
 \q1
 \v 37 Bavel will become heaps of rubble without any inhabitants—
 \q1 a \add den\add* of jackals, a horror, and \add something to whistle at\add*.
@@ -3966,7 +3966,7 @@
 \v 48 Then the \add heavens\add* and the earth, and \add everyone\add* in them will celebrate over Bavel’s \add fall\add*\x + \xo 51:48: \xt Rev 18:20.\x*
 \q1 because destroyers from the north will come for it
 \m That is Yahweh’s declaration.
-\v 49 As Bavel has made Yisrael’s \add (Israel)\add* slain \add warriors\add* fall,
+\v 49 As Bavel has made Yisrael’s \add (Israel’s)\add* slain \add warriors\add* fall,
 \q1 so too their slain will fall in Bavel.\x + \xo 51:49: \xt Rev 18:24.\x*
 \s1 Yahweh’s message to Israelis in Bavel
 \p
@@ -3979,7 +3979,7 @@
 \q1 because foreigners have entered the sacred places in Yahweh’s house.
 \q1
 \v 52 So Yahweh \add declares\add*:
-\q1 Listen, \add the time\add* is coming when I’ll punish \add Bavel’s\add* \add (Babylon)\add* carved idols,
+\q1 Listen, \add the time\add* is coming when I’ll punish \add Bavel’s\add* \add (Babylon’s)\add* carved idols,
 \q1 and \add their\add* wounded \add people\add* will groan across \add that entire region\add*.
 \q1
 \v 53 \add Yes,\add* even if Bavel \add built tall towers\add* or fortified their highest fortresses,
@@ -4005,14 +4005,14 @@
 \q1 That is the king’s declaration—Commander-in-chief Yahweh is his name.
 \q1
 \v 58 Commander-in-chief Yahweh says this:
-\q1 Bavel’s \add (Babylon)\add* thick walls will be \add completely demolished\add*,
+\q1 Bavel’s \add (Babylon’s)\add* thick walls will be \add completely demolished\add*,
 \q1 and its tall gates will be set on fire.
 \q1 The peoples \add coming to their aid\add* will \add waste their time trying\add*—
 \q1 \add everything that the nations try to do for it will be burnt up\add*.
 \s1 Yirmiyah’s message to be read out in Bavel
 \p
 \v 59 This is the message that the prophet Yirmiyah \add (Jeremiah)\add* commanded Serayah (son of Neriyah, son of Mahseyah)
-\q1 when he went with Yehudah’s \add (Judah)\add* King Tsidkiyah \add (Zedekiah)\add* to Bavel \add (Babylon)\add* in the fourth year of his reign.
+\q1 when he went with Yehudah’s \add (Judah’s)\add* King Tsidkiyah \add (Zedekiah)\add* to Bavel \add (Babylon)\add* in the fourth year of his reign.
 \q1 Now Serayah was a chief officer,
 \q1
 \v 60 and Yirmiyah had written on a scroll about all the disaster that was going to come to Bavel—
@@ -4044,7 +4044,7 @@
 \s4 Southern kingdom
 \r (2 Kgs 25:8-17)
 \p
-\v 12 Then on the 10th of the fifth month in the nineteenth year of the Babylonian King Nevukadnetsar’s \add (Nebuchadnezzar)\add* reign, Nevuzar-Adan came to Yerushalem \add (Jerusalem)\add*. He was the commander of the king’s bodyguards and a servant of the Babylonian king.
+\v 12 Then on the 10th of the fifth month in the nineteenth year of the Babylonian King Nevukadnetsar’s \add (Nebuchadnezzar’s)\add* reign, Nevuzar-Adan came to Yerushalem \add (Jerusalem)\add*. He was the commander of the king’s bodyguards and a servant of the Babylonian king.
 \v 13 He burnt \add down\add* Yahweh’s house,\x + \xo 52:13: \xt 1Ki 9:8.\x* the king’s \add palace\add*, and all the homes in Yerushalem, \add as well as\add* every \add important building\add* \add in the city\add*.
 \v 14 As for the walls all around Yerushalem, they were pulled down by the Babylonian army who were with the commander of the bodyguards.
 \v 15 Some of the poorer people and the rest of the people who remained in the city, as well as those who’d \add defected\add* to the Babylonian king, and the rest of the \add craftsmen\add* were taken into exile by Nevuzar-Adan,
@@ -4065,7 +4065,7 @@
 \v 25 From the city, he took an \add army commander\add* prisoner, as well as seven of the king’s advisers who were \add still\add* in the city. He also took prisoner the king’s army \add recruitment\add* officer, along with sixty important men from the \add country\add* who were in the city.
 \v 26 Then Nevuzar-Adan, the commander of the bodyguards, took them to the Babylonian king at Rivlah,
 \v 27 and the king put them to death \add there\add* at Rivlah in the Hamat \add region\add*.
-\p \add So\add* Yehudah’s \add (Judah)\add* \add people\add* \add were taken\add* out of \add their country\add* \add and\add* into exile.
+\p \add So\add* Yehudah’s \add (Judah’s)\add* \add people\add* \add were taken\add* out of \add their country\add* \add and\add* into exile.
 \v 28 These were the people who Nevukadnetsar \add (Nebuchadnezzar)\add* exiled:
 \li1 In \add Nevukadnetsar’s\add* seventh year, 3,023 Yehudim \add (Jews)\add*.
 \li1
@@ -4074,7 +4074,7 @@
 \v 30 In \add his\add* twenty-third year, Nevuzar-Adan, the commander of the king’s bodyguards, exiled 745 Yehudi \add (Jew)\add* people.
 \m All those exiles totalled 4,600 people.
 \p
-\v 31 \add Some time later\add* on the 25th of the twelfth month of the thirty-seventh year of the exile of Yehudah’s \add (Judah)\add* King Yehoyakin, Bavel’s \add (Babylon)\add* King Evil-Merodak (in the first year of his reign) released King Yehoyakin from prison.
+\v 31 \add Some time later\add* on the 25th of the twelfth month of the thirty-seventh year of the exile of Yehudah’s \add (Judah’s)\add* King Yehoyakin, Bavel’s \add (Babylon’s)\add* King Evil-Merodak (in the first year of his reign) released King Yehoyakin from prison.
 \v 32 He spoke \add kindly\add* to him and gave him a seat \add more honourable\add* than that of the other \add exiled\add* kings who were with him in Bavel.
 \v 33 \add Evil-Merodak\add* \add supplied new\add* clothes for \add Yehoyakin\add* \add to wear\add*, and he \add ate regularly at the king’s table for the rest of\add* his life.
 \v 34 He was \add also\add* given a \add daily\add* allowance by the king \add for the rest of\add* his life.

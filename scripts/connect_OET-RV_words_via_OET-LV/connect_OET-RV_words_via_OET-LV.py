@@ -229,6 +229,7 @@ CHANGELOG:
     2026-10-13 Consolidate remaining direct-write matchers into oet_candidates.py;
         select names and phrases with context, resolve competing claims before
         writing, and remove obsolete table priorities and per-matcher counters.
+    2026-11-10 More checks on wj segments
 
 """
 from gettext import gettext as _
@@ -261,10 +262,10 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-31'
+LAST_MODIFIED_DATE = '2026-11-10'
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '2.0.0'
+PROGRAM_VERSION = '2.1.0'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -850,6 +851,8 @@ def normalizeNameKey( name:str ) -> str:
 
 illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
 illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters immediately AFTER the wordlink number
+wjSegment = re.compile( '\\\\wj (.+?)\\\\wj\\*' )
+sigSegment = re.compile( '\\\\sig (.+?)\\\\sig\\*' )
 doubledND, badAddND, badNDAdd = '\\nd \\nd ', '\\add \\nd ', '\\nd*\\add*'
 def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
     """
@@ -1019,6 +1022,15 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             if '\\x* ' in line: # this can be ok if the xref directly follows other text
                 logger = logging.critical if ' \\x ' in line else logging.warning
                 logger( f"Double-check space after xref in {rvESFMFilename} {lineNumber}: '{line}'" )
+            # Ensure that add and nd fields inside wj and sig segments have a nested (+) marker
+            searchStartIndex = 0
+            while (match := wjSegment.search( line, searchStartIndex ) ):
+                assert '\\a' not in match.group(0) and '\\n' not in match.group(0), f"Bad character encoding inside wj segment {rvESFMFilename} {lineNumber}: '{line}'"
+                searchStartIndex = match.end()
+            searchStartIndex = 0
+            while (match := sigSegment.search( line, searchStartIndex ) ):
+                assert '\\a' not in match.group(0) and '\\n' not in match.group(0), f"Bad character encoding inside sig segment {rvESFMFilename} {lineNumber}: '{line}'"
+                searchStartIndex = match.end()
 
     # Only books that gain links need another pass. Retain their live lines and
     # parsed verse pairs in memory; cleanup and saving each happen just once.
