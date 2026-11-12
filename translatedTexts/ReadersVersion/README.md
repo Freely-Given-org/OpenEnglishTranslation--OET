@@ -87,7 +87,6 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - Aram vs Syria
 - remove "years old" if it’s not essential/natural
 - make numbers consistent like ‘120’ vs ‘one hundred and twenty’
-- capitalisation of city or river after name, e.g., Ashdod City, Jordan river, Corner Gate
 - "His mother's name was..." for new kings in 2 Chron
 - a record of everthing done ... was written in the scroll/book of ... after the death of a king
 - "what was right in Yahweh’s eyes" "what was right in the eyes of Yahweh"
@@ -102,7 +101,6 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - work out what we’re going to do with "people/peoples" meaning "people groups"
 - kill/slaughter/strike for animals (e.g., sacrifices) and for people
 - innards, entrails, intestines, guts
-- exalt -> speak highly of
 - try to remove righteousness (doing what’s right) and perhaps justice (doing what’s fair) from RV
 - redeemed (replace ‘bought you back’) -> ‘paid the price to free you’
 - green tree / luxuriant tree / leafy tree
@@ -111,7 +109,6 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - deeds -> actions
 - prophesying falsehood -> prophesying untruths (not lies)
 - remove ‘everlasting’, ‘amongst’, ‘midst’, ‘upon’, most of ‘may’
-- sackcloth -> coarse, abrasive cloth
 - refer to cities/countries, etc. as ‘it’, not ‘he’ or ‘she’.
 - ‘rest’-> check if ‘peace and stability’or something is more natural in modern English
 - vow -> promise
