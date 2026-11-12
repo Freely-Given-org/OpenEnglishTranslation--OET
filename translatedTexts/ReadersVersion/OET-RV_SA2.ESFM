@@ -1,4 +1,4 @@
-\id 2SA - Open English Translation—Readers' Version (OET-RV) v0.2.8
+\id 2SA - Open English Translation—Readers' Version (OET-RV) v0.2.13
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 SA2
@@ -13,8 +13,8 @@
 \ip This the story of David's reign: firstly he ruled what became known as ‘Yehudah’ (Judah) in the south east (chapters 1–4), and eventually, the entire nation, including the much larger area of Yisrael (called ‘Israel’ in older translations) in the north east (Chapter 5–24). This document explains how David dealt with his enemies within the country, as well as battling with other nations in order to widen and strengthen his kingdom. David's faith and respect of God is demonstrated here, as well as his love for the people. However, despite that, he was also fierce and he was quite capable of disobeying God to get what he wanted. But God sees everything and seen his prophet Natan (Nathan) with a parable to show David his selfishness. David asked for forgiven for his sin and accepted the punishment that God gave him.
 \ip The times of peace and prosperity through the latter parts of David's rule were planted in the minds of the Hebrew people, and in the future when they faced difficulties, they would long for another king like David—a son (better ‘a descendant’) of David who would love God like him.
 \iot Main components of this account
-\io1 The kingdom of David in Yehudah \ior 1:1–4:12\ior*
-\io1 The kingdom of David over all Yisrael \ior 5:1–24:25\ior*
+\io1 David's kingdom in Yehudah \ior 1:1–4:12\ior*
+\io1 David's kingdom over all Yisrael \ior 5:1–24:25\ior*
 \io2 a. The early years \ior 5:1–10:19\ior*
 \io2 b. David takes Uriyah's wife \ior 11:1–12:25\ior*
 \io2 c. The battles and the difficulties \ior 12:26–20:26\ior*
@@ -101,7 +101,7 @@
 \v 27 \add Yes, those\add* \add ≈powerful warriors\add* have¦142205 fallen¦142205,
 \q1 ≈and¦142207 those weapons¦142208 of¦142208 war¦142209 have \add ≈been destroyed\add*.”
 \c 2
-\s1 The kingdom of David
+\s1 David's kingdom
 \rem /s1 David Anointed King of Judah; David Is Made King of Judah; David Anointed King Over Judah
 \s4 Full kingdom
 \p
@@ -124,7 +124,7 @@
 \v 8 \add However,\add* Avner¦142356 (Ner's¦142359 son) who'd been Sha'ul's¦142364 \add !(Saul's¦142364)\add* army¦142362 commander¦142360 had¦142365 taken¦142365 Sha'ul's¦142372 son Ish¦142368-Boshet¦142369\f + \fr 2:8 \ft Also known as Esh-Baal. (See 1 Chronicles 8:33.)\f* across¦142373 to Mahanayim¦142374
 \v 9 and¦142376 \add ≈declared\add* him¦142376 to be king¦142376 over Gilead¦142379, and¦142380 over the¦142382 Ashurim and¦142383 Yizre'el¦142385 \add !(Jezreel¦142385)\add*, and¦142386 over¦142386 Efrayim¦142388 \add !(Ephraim¦142388)\add* and¦142389 Benyamin¦142391, and¦142392 over¦142392 all¦142395 of Yisrael¦142394 \add !(Israel¦142394)\add*.
 \v 10 Ish¦142402-Boshet¦142404 \add ≈was¦142398 forty¦142400 years¦142401 old\add* when¦142408 he¦142408 \add ≈started to rule\add* over¦142409 the \add ≈Israelis¦142411\add*, and¦142412 he \add ≈ruled them\add* for two¦142412 years¦142413.
-\p But the¦142416 tribe of¦142416 Yehudah¦142417 \add !(Judah¦142417)\add* was¦142418 loyal to David¦142420
+\p But the¦142416 Yehudah¦142417 \add !(Judah¦142417)\add* tribe¦142416 was¦142418 loyal to David¦142420
 \v 11 and¦142422 \add *he\add* \add ≈ruled them\add* for seven¦142434 and a half years¦142435.
 \rem /s1 The Battle of Gibeon; War between Israel and Judah
 \p
@@ -385,7 +385,7 @@
 \p
 \v 2 Then¦145454 he¦145454 \add ≈defeated¦145454\add* the \add ≈Moavim\add*. \add @David¦145458\add* forced them¦145458 to lie¦145460 on the ground¦145462 and¦145463 \add ≈used a length of rope to decide their fate—those inside two¦145464 lengths of¦145464 the rope were killed¦145467, and¦145468 those inside the third length were spared\add* and \add so\add* the Moavim became¦145471 David's¦145473 servants¦145474—bringing¦145475 him tribute¦145476.
 \p
-\v 3 Then¦145478 David¦145479 \add ≈defeated¦145478\add* Tsovah's¦145487 King¦145486 Hadadezer¦145482 (son¦145483 of¦145483 Rehov¦145485) \add ≈who had tried to¦145489 reestablish¦145489 his¦145490 authority over the¦145491 Perat\add* \add !(Euphrates)\add* River¦145491.
+\v 3 Then¦145478 David¦145479 \add ≈defeated¦145478\add* Tsovah's¦145487 King¦145486 Hadadezer¦145482 (son¦145483 of¦145483 Rehov¦145485) \add ≈who had tried to¦145489 reestablish¦145489 his¦145490 authority over the¦145491 Perat\add* \add !(Euphrates)\add* river¦145491.
 \v 4 David¦145497 captured¦145496 1,700 horsemen¦145503 and¦145504 twenty¦145504 thousand¦145505 men¦145506 on¦145507 foot¦145507. \add *He¦145509\add* hamstrung¦145508 all¦145512 the¦145514 chariot¦145514 \add horses\add* except for a hundred¦145517 of them.
 \p
 \v 5 Then¦145520 \add ≈the Arameans¦145521\add* came¦145520 from Damesek¦145522 \add !(Damascus¦145522)\add* to¦145523 help¦145523 Tsovah's¦145526 king¦145525 Hadadezer¦145524 \add ≈but¦145527\add* David¦145528 \add ≈killed¦145527\add* twenty-two thousand¦145533 \add ≈of them\add*.
@@ -398,7 +398,7 @@
 \v 11 King¦145638 David¦145639 \add ≈dedicated¦145637\add* them to¦145640 Yahweh¦145640, \add along\add* with¦145641 the¦145643 silver¦145643 and¦145644 gold¦145644 \add that he'd taken\add* from¦145647 all¦145647 the¦145649 nations¦145649 that¦145650 \add ≈they'd conquered¦145651\add*:
 \v 12 from¦145653 Aram¦145653 and¦145654 Moav¦145654 \add !(Moab¦145654)\add*, from¦145655 the¦145655 \add ≈Amonim\add* and¦145657 the¦145657 Pelishtim¦145657, and¦145658 from¦145658 Amalek¦145658 and¦145659 from¦145659 the¦145659 plunder¦145659 of¦145659 Tsovah's¦145665 King¦145664 Hadadezer¦145660 (son¦145661 of¦145661 Rehov¦145663).
 \p
-\v 13 Then¦145667 David¦145668 made¦145667 \add more of\add* a¦145669 name¦145669 \add for himself\add* when¦145670 he returned¦145670 from¦145671 \add ≈defeating¦145671 eighteen thousand¦145680 Arameans¦145674\add* in¦145675 the¦145675 Salt¦145677 Valley¦145675.\x + \xo 8:13: \xt Psa 60 header.\x*
+\v 13 Then¦145667 David¦145668 made¦145667 \add more of\add* a¦145669 name¦145669 \add for himself\add* when¦145670 he returned¦145670 from¦145671 \add ≈defeating¦145671 eighteen thousand¦145680 Arameans¦145674\add* in¦145675 the¦145675 Salt¦145677 valley¦145675.\x + \xo 8:13: \xt Psa 60 header.\x*
 \v 14 He¦145682 \add ≈stationed\add* garrisons¦145684 \add ≈throughout\add* Edom¦145687 and¦145690 \add made the people\add* his servants¦145694, and¦145696 Yahweh¦145697 \add ≈protected\add* David¦145700 wherever¦145702 \add ≈they fought\add*.
 \rem /s1 David's Officials; David's Officers
 \p
@@ -464,7 +464,7 @@
 \v 14 \add ≈When¦146286 the¦146286 Amonim saw¦146288 the Arameans¦146292 running¦146291 away, they¦146293 started retreating from¦146294 Avishay¦146295 and¦146296 went¦146296 back into\add* the¦146297 city¦146297, \add ≈so¦146298\add* Yoav¦146299 \add ≈withdrew from¦146300 attacking the¦146301 Amonim and¦146303 returned¦146303\add* to Yerushalem¦146304 \add !(Jerusalem¦146304)\add*.
 \p
 \v 15 \add ≈When¦146306 the Arameans¦146307 realised¦146306 that¦146308 they'd been¦146309 defeated¦146309 by\add* Yisrael¦146311 \add !(Israel¦146311)\add*, they¦146312 assembled¦146312 \add all their warriors\add* together¦146313 \add again\add*.
-\v 16 \add King\add* Hadadezer¦146316 \add (from Tsovah)\add* \add ≈called for Aramean warriors\add* from¦146322 beyond the \add Perat\add* \add !(Euphrates)\add* River¦146323 and¦146324 they¦146324 came¦146324 to Heylam¦146325. Shovak¦146326 was Hadadezer's¦146330 army¦146329 commander¦146327.
+\v 16 \add King\add* Hadadezer¦146316 \add (from Tsovah)\add* \add ≈called for Aramean warriors\add* from¦146322 beyond the \add Perat\add* \add !(Euphrates)\add* river¦146323 and¦146324 they¦146324 came¦146324 to Heylam¦146325. Shovak¦146326 was Hadadezer's¦146330 army¦146329 commander¦146327.
 \v 17 \add ≈When¦146333\add* David¦146334 \add ≈heard that\add*, he¦146336 assembled¦146336 all¦146339 \add ≈the Israeli¦146341 warriors\add* and¦146342 they crossed¦146342 the¦146345 Yarden¦146345 \add !(Jordan¦146345)\add* \add ≈going towards\add* Heylam¦146347. \add ≈The Arameans¦146349 came¦146346 out\add* to¦146350 meet¦146350 David¦146351 and¦146352 \add ≈the two sides fought¦146352 each other\add*.
 \v 18 \add ≈But¦146355\add* \add again\add* \add ≈the Arameans¦146356\add* fled¦146355 from¦146357 \add ≈the Israelis¦146358\add*, and¦146359 David¦146360 killed¦146359 seven¦146362 hundred¦146363 \add ≈Aramean charioteers¦146364\add* and¦146365 forty¦146365 thousand¦146366 cavalry¦146367, and¦146368 their commander¦146370 Shovak¦146369 was struck¦146373 and¦146374 died¦146374 there¦146375 \add also\add*.
 \v 19 Then¦146377 all¦146378 the¦146380 kings¦146380 \add ≈associated with Hadadezer¦146382 realised¦146377 they¦146384 couldn't defeat¦146384\add* Yisrael¦146386, \add ≈so¦146387\add* they¦146387 made¦146387 peace¦146387 with¦146388 \add ≈the Israelis¦146390\add* and¦146391 served¦146391 them¦146391, and¦146392 \add so\add* the Arameans¦146393 were afraid to¦146394 \add try to\add* rescue¦146394 the \add ≈Amonim\add* again¦146395.
@@ -948,7 +948,7 @@
 \v 14 \add In that way,\add* \add @David¦152116\add* \add ≈united all¦152120 the¦152122 people¦152122\add* of¦152122 Yehudah¦152124 and¦152127 they¦152127 \add ≈notified\add* the¦152130 king¦152130, “\add We all want\add* you¦152132 and¦152133 all¦152133 your¦152135 servants¦152135 to return¦152131 \add here\add*.”
 \rem /s1 David's Return to Jerusalem
 \p
-\v 15 \add ≈So¦152138\add* the¦152139 king¦152139 \add ≈headed back\add* and¦152140 reached the¦152143 Yarden¦152143 \add !(Jordan¦152143)\add* \add River\add*, and¦152144 \add men from\add* Yehudah¦152144 went¦152145 to¦152146 Gilgal¦152146 to meet¦152148 the¦152149 king and \add ≈help\add* \add *him¦152156\add* across.
+\v 15 \add ≈So¦152138\add* the¦152139 king¦152139 \add ≈headed back\add* and¦152140 reached the¦152143 Yarden¦152143 \add !(Jordan¦152143)\add* \add river\add*, and¦152144 \add men from\add* Yehudah¦152144 went¦152145 to¦152146 Gilgal¦152146 to meet¦152148 the¦152149 king and \add ≈help\add* \add *him¦152156\add* across.
 \p
 \v 16 Shimei¦152160 (son¦152161 of¦152161 Gera¦152163 the¦152164 Benyamite from¦152168 Bahurim¦152168)\x + \xo 19:16: \xt 2Sam 16:5-13.\x* hurried¦152159 down with¦152170 the¦152172 Yehudah¦152173 \add #men¦152172\add* to¦152174 meet¦152174 King¦152175 David¦152176.
 \v 17 A thousand¦152179 Benyamite men¦152180 \add ≈came\add* with¦152181 him¦152181, as well as Tsiva¦152183 (formerly Sha'ul's¦152186 \add !(Saul's¦152186)\add* servant¦152184) and¦152187 fifteen of¦152187 his¦152189 sons¦152189 and¦152190 twenty¦152190 of¦152191 his¦152191 servants¦152191, and¦152193 they¦152193 hurried¦152193 to the¦152194 Yarden¦152194 to¦152195 \add ≈meet\add* the¦152196 king¦152196.
@@ -1402,7 +1402,7 @@
 \v 4 \add ≈However,\add* the¦155096 king¦155096 \add ≈insisted, so even though\add* Yoav¦155099 and¦155100 the¦155102 army¦155102 commanders¦155105 \add disagreed\add*, \add ≈at the king's¦155108 command\add* \add *they\add* \add ≈set off to¦155109 count¦155109\add* the¦155112 Israeli¦155115 people¦155112.
 \p
 \v 5 They¦155117 crossed¦155117 the¦155120 Yarden¦155120 \add !(Jordan¦155120)\add* \add river\add* and¦155121 camped¦155121 in Aroer¦155122, south¦155123 of¦155123 the¦155124 city¦155124 in¦155126 the¦155126 middle¦155126 of¦155128 the¦155129 Gad¦155129 valley¦155128, then¦155130 \add proceeded\add* to¦155130 Yazer¦155132.
-\v 6 Then¦155134 they¦155134 went¦155134 \add north\add* to¦155135 Gilead¦155135 and¦155136 the¦155138 land¦155138 of¦155138 Tahtim¦155140-Hodshi, \add before\add* coming¦155141 to¦155142 Dan¦155142-Yaan and¦155144 around¦155144 to¦155145 Tsidon¦155147 \add !(Sidon¦155147)\add*.
+\v 6 Then¦155134 they¦155134 went¦155134 \add north\add* to¦155135 Gilead¦155135 and¦155136 Tahtim¦155140-Hodshi, \add before\add* coming¦155141 to¦155142 Dan¦155142-Yaan and¦155144 around¦155144 to¦155145 Tsidon¦155147 \add !(Sidon¦155147)\add*.
 \v 7 Then¦155149 they¦155149 came¦155149 to the¦155151 Tsor¦155153 \add !(Tyre¦155153)\add* fortress¦155151 and¦155154 all¦155154 the¦155156 cities¦155156 of¦155156 the¦155157 Hivim¦155157 and¦155158 the¦155158 Kena'anim¦155158 \add !(Canaanites¦155158)\add* \add ≈before going¦155159\add* \add east\add* to¦155160 Be'er¦155164-Sheva¦155165 in the¦155162 Negev¦155162 \add wilderness\add* (part of¦155162 Yehudah¦155163).
 \v 8 \add ≈So¦155167 they¦155167 travelled¦155167 throughout the¦155170 land¦155170 for\add* nine¦155173 months¦155174 and¦155175 twenty¦155175 days¦155176 \add ≈before returning\add* to Yerushalem¦155177 \add !(Jerusalem¦155177)\add*.
 \v 9 Then¦155179 Yoav¦155180 \add ≈reported the¦155183 census¦155183 results\add* to¦155187 the¦155189 king¦155189: 800,000 fighting swordsmen¦155199 in Yisrael¦155191 \add !(Israel¦155191)\add*, and¦155200 500,000 in Yehudah¦155201.

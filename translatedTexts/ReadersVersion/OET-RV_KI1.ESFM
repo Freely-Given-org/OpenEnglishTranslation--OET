@@ -1,4 +1,4 @@
-\id 1KI - Open English Translation—Readers' Version (OET-RV) v0.2.13
+\id 1KI - Open English Translation—Readers' Version (OET-RV) v0.2.19
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 KI1
@@ -10,7 +10,7 @@
 \mt2 The first summary of the
 \mt1 Kings of Yisrael and Yehudah
 \is1 Introduction
-\ip \bk The first summary of the kings of Yisrael/Israel and Yehudah/Judah\bk* is a continuation of the account about the kingdom of Israeli started in the account by \bk Shmuel\bk*. It's divided into three main parts: 1. Shelomoh (Solomon) takes over as king of the nation of Yisrael after the death of his father David. 2. Shelomoh's kingdom and his prosperity, especially his construction of the temple in Yerushalem. 3. The kingdom of Yisrael becoming split into two: the northern kingdom (which goes on to continue to be called Israel), and the southern kingdom (named Yehudah after the largest of its two tribes), and the accounts about the kings who led them through until around 950 before Yeshua/Jesus (B.C.)
+\ip \bk The first summary of the kings of Yisrael/Israel and Yehudah/Judah\bk* is a continuation of the account about the Israeli kingdom started in the account by \bk Shmuel\bk*. It's divided into three main parts: 1. Shelomoh (Solomon) takes over as king of the nation of Yisrael after the death of his father David. 2. Shelomoh's kingdom and his prosperity, especially his construction of the temple in Yerushalem. 3. The Yisrael kingdom becoming split into two: the northern kingdom (which goes on to continue to be called Israel), and the southern kingdom (named Yehudah after the largest of its two tribes), and the accounts about the kings who led them through until around 950 before Yeshua/Jesus (B.C.)
 \ip Here in the first of the two \bk Summaries of the kings of Yisrael and Yehudah\bk*, each leader is evaluated according to their obedience of God's instructions, and the prosperity of their entire nations depends of that. Worshipping of false gods and the disobedience of God's instructions would lead to destruction. The northern kings failed this testing and didn't prosper, whereas the southern kingdom did have some good leaders and so had times of prosperity.
 \ip Also revealed in \bk The first summary of the kings of Yisrael and Yehudah\bk*, are God's prophets who brought messages from Yahweh—often warning them against the worshipping of false gods and against disobeying God. The most famous of those in this document is Eliyah (Elijah) and the account about his opposition to Ba'al's prophets (chapter 18).
 \iot Main components of this account
@@ -20,7 +20,7 @@
 \io2 a. The first years \ior 3:1–4:34\ior*
 \io2 b. The temple construction \ior 5:1–8:66\ior*
 \io2 c. The final years \ior 9:1–11:43\ior*
-\io1 The division of the kingdom of Yisrael into two \ior 12:1–22:53\ior*
+\io1 The division of the Yisrael kingdom into two \ior 12:1–22:53\ior*
 \io2 a. The rebellion of the northern tribes \ior 12:1–14:20\ior*
 \io2 b. The kings of Yehudah and Yisrael \ior 14:21–16:34\ior*
 \io2 c. The prophet Eliyah \ior 17:1–19:21\ior*
@@ -81,7 +81,7 @@
 \v 31 Bat-Sheva \add ≈knelt down¦156140 and¦156134 bowed¦156134 her face¦156138 to¦156141 the¦156141 floor\add* and¦156142 said¦156142, “May my¦156144 master¦156144, the¦156145 king¦156145 David¦156146 live¦156143 \add ≈forever\add*.”
 \p
 \v 32 Then¦156150 King¦156152 David¦156153 \add ≈called out\add*, “\add ≈Summon¦156154\add* Tsadok¦156157 the¦156158 priest¦156158 for me, and¦156159 Natan¦156159 \add !(Nathan¦156159)\add* the¦156160 prophet¦156160, and¦156161 Yehoyada's¦156164 son¦156162 Benayah¦156161.” \add ≈So¦156165\add* they¦156165 came¦156165 \add ≈into¦156166 the king's¦156167 room\add*.
-\v 33 “Take¦156172 some of \add *my\add* servants¦156176,” the¦156170 king¦156170 \add ≈instructed\add* them¦156171. “and¦156178 put my¦156182 son¦156182 Shelomoh¦156181 on¦156183 my mule¦156185 and¦156189 lead him¦156190 to¦156191 the Gihon¦156193 \add Spring\add*.
+\v 33 “Take¦156172 some of \add *my\add* servants¦156176,” the¦156170 king¦156170 \add ≈instructed\add* them¦156171. “and¦156178 put my¦156182 son¦156182 Shelomoh¦156181 on¦156183 my mule¦156185 and¦156189 lead him¦156190 to¦156191 the Gihon¦156193 \add spring\add*.
 \v 34 Then¦156195 \add you two,\add* Tsadok¦156198 and¦156200 Natan¦156200, must¦156195 anoint¦156195 him¦156196 there¦156197 as king¦156202 over¦156203 Yisrael¦156205. Then¦156206 blow¦156206 the horn¦156207 and¦156208 \add ≈shout\add*, ‘Let King¦156210 Shelomoh¦156211 live¦156209!’
 \v 35 Then¦156213 \add ≈follow¦156213 him¦156214 back here where he¦156215 must¦156215\add* come¦156215 and¦156216 sit¦156216 on¦156217 my¦156219 throne¦156219. Then¦156220 he'll¦156221 reign¦156221 in¦156222 my¦156222 place¦156222 as ruler¦156226 of Yisrael¦156229 and¦156230 Yehudah¦156232 \add !(Judah¦156232)\add*.”
 \p
@@ -129,7 +129,7 @@
 \rem /s1 The Death of David; Death of David
 \s4 Full kingdom
 \p
-\v 10 Then¦156795 David¦156796 \add ≈breathed his¦156799 last\add* and¦156800 was¦156800 buried¦156800 in¦156801 the¦156801 City¦156801 of¦156801 David¦156802.
+\v 10 Then¦156795 David¦156796 \add ≈breathed his¦156799 last\add* and¦156800 was¦156800 buried¦156800 in¦156801 David's¦156802 city¦156801.
 \v 11 \add *He¦156808\add* had reigned¦156807 over¦156809 Yisrael¦156811 \add !(Israel¦156811)\add* for forty¦156812 years¦156813—seven¦156816 years¦156817 from Hevron¦156814 and¦156818 thirty-three years from Yerushalem¦156818 \add !(Jerusalem¦156818)\add*.\x + \xo 2:11: \xt 2Sam 5:4-5; 1Ch 3:4.\x*
 \v 12 Shelomoh¦156824 \add !(Solomon¦156824)\add* \add ≈replaced\add* his¦156830 father¦156830 David¦156829 on¦156826 the¦156828 throne¦156828, and¦156831 his¦156832 \add ≈authority\add* was¦156831 established¦156831 \add ≈with firmness\add*.\x + \xo 2:12: \xt 1Ch 29:23.\x*
 \s1 Adoniyah's provocation and death
@@ -203,7 +203,7 @@
 \s4 Full kingdom
 \rem /r (2 Chronicles 1.3-12)
 \p
-\v 1 Shelomoh¦157570 \add !(Solomon¦157570)\add* made himself the son-in-law¦157569 of¦157574 Mitsrayim's¦157575 \add !(Egypt's¦157575)\add* king¦157574 Par'oh \add !(Pharaoh)\add* \add ≈by taking¦157576 Par'oh's daughter¦157579 as a wife\add* and¦157582 bringing¦157582 her¦157582 into¦157583 the¦157585 city¦157585 of¦157585 David¦157586 (\add where she stayed\add* until¦157587 \add ≈the completion of the construction of his¦157592 palace and¦157593 of¦157595 Yahweh's¦157596 temple\add*, and¦157597 the¦157599 wall¦157599 around¦157601 Yerushalem¦157600 \add !(Jerusalem¦157600)\add*).
+\v 1 Shelomoh¦157570 \add !(Solomon¦157570)\add* made himself the son-in-law¦157569 of¦157574 Mitsrayim's¦157575 \add !(Egypt's¦157575)\add* king¦157574 Par'oh \add !(Pharaoh)\add* \add ≈by taking¦157576 Par'oh's daughter¦157579 as a wife\add* and¦157582 bringing¦157582 her¦157582 into¦157583 David's¦157586 city¦157585 (\add where she stayed\add* until¦157587 \add ≈the completion of the construction of his¦157592 palace and¦157593 of¦157595 Yahweh's¦157596 temple\add*, and¦157597 the¦157599 wall¦157599 around¦157601 Yerushalem¦157600 \add !(Jerusalem¦157600)\add*).
 \v 2 \add ≈However,\add* the¦157604 people¦157604 were¦157605 sacrificing¦157605 \add ≈on various hills\add* because¦157607 \add ≈at that time¦157615\add*, a¦157611 \add ≈temple¦157611\add* hadn't \add yet\add* been¦157610 built¦157610 for¦157612 Yahweh¦157613.
 \v 3 Shelomoh¦157620 \add demonstrated his\add* \add ≈love¦157619 for\add* Yahweh¦157623 by \add ≈obeying the¦157625 instructions¦157625\add* of¦157625 his¦157627 father¦157627 David¦157626. \add ≈However,\add* he¦157630 would \add offer\add* sacrifices¦157631 and¦157632 burn incense \add ≈on various hills\add*.
 \p
@@ -270,11 +270,11 @@
 \p
 \v 7 Shelomoh¦158218 \add !(Solomon¦158218)\add* \add ≈appointed twelve governors¦158222\add* over¦158223 all¦158225 Yisrael¦158227 \add !(Israel¦158227)\add*, and¦158228 they¦158228 \add sent in\add* food for the¦158231 palace¦158234—each \add ≡governor\add* was¦158237 responsible for one¦158240 month¦158235 of the year¦158236.
 \v 8 Their¦158246 names¦158246 were¦158246:
-\q1 Ben-Hur¦158249 in¦158250 the¦158250 hill¦158250 country¦158250 of¦158250 Efrayim¦158251 \add !(Ephraim¦158251)\add*,
+\q1 Ben-Hur¦158249 in¦158250 the¦158250 Efrayim¦158251 \add !(Ephraim¦158251)\add* hill¦158250 country¦158250,
 \q1
 \v 9 Ben¦158254-Deker¦158256 in¦158257 Makats¦158257, Sha'alvim¦158258, Beyt¦158259-Shemesh¦158260 \add !(Heliopolis¦158259)\add*, and¦158261 Elon¦158261-Beyt-Hanan¦158263,
 \q1
-\v 10 Ben¦158266-Hesed¦158268 in¦158269 Arubot¦158269, Sokoh¦158271, and¦158272 all¦158272 the¦158274 land¦158274 of¦158274 Hefer¦158275,
+\v 10 Ben¦158266-Hesed¦158268 in¦158269 Arubot¦158269, Sokoh¦158271, and¦158272 all of Hefer¦158275,
 \q1
 \v 11 Ben¦158278-Avinadav¦158280 (who was married to Shelomoh's¦158288 daughter¦158286 Tafat¦158285) in Nafat-Dor¦158284,
 \q1
@@ -299,7 +299,7 @@
 \s4 Full kingdom
 \p
 \v 20 \add Now\add* Yehudah¦158406 \add !(Judah¦158406)\add* and¦158407 Yisrael¦158407 \add !(Israel¦158407)\add* had become as numerous¦158408 as¦158409 the sand¦158409 on the¦158414 seashore¦158414. They \add had plenty\add* to¦158415 eat¦158416 and¦158417 drink¦158417 and¦158418 they were¦158418 contented.
-\v 21 Shelomoh¦158421 \add !(Solomon¦158421)\add* \add ≈controlled\add* all¦158424 the¦158426 kingdoms¦158426 from¦158427 the¦158429 \add Perat\add* \add !(Euphrates)\add* River¦158429 to the¦158430 land¦158430 of¦158430 the¦158431 Pelishtim¦158431 and¦158432 as far as the¦158433 Mitsri¦158434 \add !(Egyptian¦158434)\add* border¦158433,\x + \xo 4:21: \xt Gen 15:18; 2Ch 9:26.\x* \add so they\add* brought¦158435 tribute¦158436 to \add *him\add* and \add ≈followed his orders\add* \add ≈during his lifetime¦158444\add*.
+\v 21 Shelomoh¦158421 \add !(Solomon¦158421)\add* \add ≈controlled\add* all¦158424 the¦158426 kingdoms¦158426 from¦158427 the¦158429 \add Perat\add* \add !(Euphrates)\add* river¦158429 to the¦158430 land¦158430 of¦158430 the¦158431 Pelishtim¦158431 and¦158432 as far as the¦158433 Mitsri¦158434 \add !(Egyptian¦158434)\add* border¦158433,\x + \xo 4:21: \xt Gen 15:18; 2Ch 9:26.\x* \add so they\add* brought¦158435 tribute¦158436 to \add *him\add* and \add ≈followed his orders\add* \add ≈during his lifetime¦158444\add*.
 \p
 \v 22 The¦158449 \add ≈daily requirements for¦158452 the palace included\add* five tonnes of¦158455 fine¦158456 flour¦158456 and¦158457 eleven tonnes of¦158458 coarse flour¦158459,
 \v 23 ten¦158462 fattened cattle¦158463, twenty¦158465 pasture¦158467 cattle, one¦158468 hundred¦158468 sheep¦158469, \add wild game including\add* deer¦158471, gazelle¦158472, and¦158473 roebuck, and¦158474 fattened¦158475 fowls.
@@ -640,12 +640,12 @@
 \v 22 \add ≈But¦162508\add* \add *he\add* didn't¦162510 \add ≈consign any¦162508 Israelis¦162509 to slavehood\add*, because¦162515 they¦162517 were¦162518 \add ≈his warriors¦162518\add* and¦162520 servants¦162520, and¦162521 his¦162521 officers¦162522 and captains¦162521, and¦162523 the¦162523 commanders¦162523 of¦162523 his¦162524 chariots¦162524 and¦162525 horsemen¦162525.
 \v 23 \add ≈Some\add* were¦162530 commanders¦162530 of¦162530 the¦162535 five¦162538 hundred¦162539 and fifty¦162537 \add ≈work¦162543 supervisors¦162531\add*.
 \p
-\v 24 Once Par'oh's¦162548 daughter¦162546 moved¦162549 out of¦162546 the¦162550 City¦162550 of¦162550 David¦162551 to¦162552 \add ≈the palace¦162554\add* that¦162555 he'd¦162556 built¦162556 for¦162558 her¦162558, then¦162559 he¦162560 built¦162560 the¦162563 raised terraces.
+\v 24 Once Par'oh's¦162548 daughter¦162546 moved¦162549 out of¦162546 David's¦162551 city¦162550 to¦162552 \add ≈the palace¦162554\add* that¦162555 he'd¦162556 built¦162556 for¦162558 her¦162558, then¦162559 he¦162560 built¦162560 the¦162563 raised terraces.
 \p
 \v 25 Shelomoh¦162566 offered¦162565 burnt¦162570 offerings¦162570 and¦162571 peace¦162571 offerings¦162571 three¦162567 times¦162568 that year¦162569\x + \xo 9:25: \xt Exo 23:17; 34:23; Deu 16:16.\x* on¦162572 the¦162574 altar¦162574 that¦162575 he'd¦162576 built¦162576 for¦162577 Yahweh¦162577, and¦162578 he¦162578 burnt incense¦162578 to¦162582 Yahweh¦162583 with it, and¦162584 he¦162584 completed¦162584 the¦162587 \add ≈temple¦162587\add*.
 \rem /s1 Solomon's Commercial Activity
 \p
-\v 26 King¦162591 Shelomoh¦162592 constructed¦162590 a fleet¦162589 \add of ships\add* in Etsyon¦162593-Gever, which¦162596 is¦162597 near Eylot¦162599 on¦162600 the¦162602 shore¦162602 of¦162602 the¦162603 Red Sea¦162603 in¦162606 the Edom¦162607 \add ≈region¦162606\add*.
+\v 26 King¦162591 Shelomoh¦162592 constructed¦162590 a fleet¦162589 \add of ships\add* in Etsyon¦162593-Gever, which¦162596 is¦162597 near Eylot¦162599 on¦162600 the¦162602 shore¦162602 of¦162602 the¦162603 Red sea¦162603 in¦162606 the Edom¦162607 \add ≈region¦162606\add*.
 \v 27 \add King\add* Hiram¦162610 sent¦162609 \add some of\add* his¦162614 servants \add ≈who¦162617 were experienced¦162617 sailors to serve with¦162619 Shelomoh's¦162621 men¦162615\add*.
 \v 28 They¦162623 \add ≈sailed\add* to¦162624 Ofir¦162624 and¦162625 brought¦162625 back fourteen tonnes of gold¦162627 that they¦162633 took¦162633 to¦162634 Shelomoh¦162637.
 \c 10
@@ -741,7 +741,7 @@
 \s4 Full kingdom
 \p
 \v 26 Nevat's¦163672 son¦163670 Yarov'am¦163669 \add !(Jeroboam¦163669)\add*, an¦163673 Efrati¦163673 from¦163674 Tseredah¦163676 \add also\add* \add ≈rebelled against the king¦163686\add*. (His¦163678 widowed¦163681 mother¦163678 Tseruah¦163679 was one of¦163683 Shelomoh's¦163683 \add !(Solomon's¦163683)\add* \add #servants¦163682\add*.)
-\v 27 \add ≈This¦163688 is¦163689 the¦163689 background about how it started\add*: Shelomoh¦163695 had built¦163696 the¦163699 raised¦163692 terrace and had \add ≈repaired a¦163693 gap¦163703 in the¦163703 wall\add* of¦163703 the¦163704 city¦163704 of¦163704 David¦163705 his¦163706 father¦163706.
+\v 27 \add ≈This¦163688 is¦163689 the¦163689 background about how it started\add*: Shelomoh¦163695 had built¦163696 the¦163699 raised¦163692 terrace and had \add ≈repaired a¦163693 gap¦163703 in the¦163703 wall\add* of¦163703 his¦163706 father¦163706 David's¦163705 city¦163704.
 \v 28 Shelomoh¦163713 \add ≈had noticed¦163712 Yarov'am¦163709 as a¦163710 strong and¦163712 hard-working\add* young¦163716 man¦163716, \add ≈so¦163722\add* he'd¦163722 appointed¦163722 him¦163723 \add ≈as supervisor over all¦163724 the¦163726 forced¦163726 labour¦163726 from Menasheh\add* \add !(Manasseh)\add* \add ≈and Efrayim's\add* \add !(Ephraim's)\add* \add ≈regions\add*.
 \v 29 \add ≈One time¦163732 when¦163734\add* Yarov'am¦163734 \add ≈was away\add* from¦163736 Yerushalem¦163736 \add !(Jerusalem¦163736)\add*, the¦163741 prophet¦163741 Ahiyah¦163739 the¦163740 Shiloni¦163740 met him¦163738 on¦163742 the road¦163742. He¦163743 was¦163744 \add ≈wearing a brand-new\add* a new¦163746 cloak¦163745, and¦163747 \add ≈there was\add* \add just\add* the¦163747 two¦163747 by themselves in¦163749 the countryside¦163749.
 \v 30 Ahiyah¦163752 then pulled the¦163754 new¦163754 cloak¦163753 off \add his shoulders\add* and¦163757 tore¦163757 it¦163757 into twelve pieces¦163760,
@@ -763,7 +763,7 @@
 \p
 \v 41 A record of¦163987 all the¦163988 other things that Shelomoh¦163989 \add !(Solomon¦163989)\add* did, and¦163990 all¦163990 the wise things that¦163992 he¦163993 said, was written¦163998 in the ‘Record of Shelomoh's¦164003 Achievements’.
 \v 42 Shelomoh¦164008 reigned¦164007 over¦164010 all¦164012 Yisrael¦164014 \add !(Israel¦164014)\add* from Yerushalem¦164009 \add !(Jerusalem¦164009)\add* for forty¦164015 years¦164016,
-\v 43 then¦164018 \add *he¦164019\add* \add ≈died\add* and¦164023 was¦164023 buried¦164023 in¦164024 the¦164024 City¦164024 of¦164024 David¦164025, and his¦164030 son¦164029 Rehav'am¦164028 \add !(Rehoboam¦164028)\add* became¦164027 king¦164027.
+\v 43 then¦164018 \add *he¦164019\add* \add ≈died\add* and¦164023 was¦164023 buried¦164023 in¦164024 David's¦164025 city¦164024, and his¦164030 son¦164029 Rehav'am¦164028 \add !(Rehoboam¦164028)\add* became¦164027 king¦164027.
 \c 12
 \s1 The north rejects Rehav'am (Rehoboam)
 \rem /s1 The kingdom divided; Israel Rebels Against Rehoboam; The Northern Tribes Revolt; The Northern Tribes Secede
@@ -818,7 +818,7 @@
 \rem /s1 Jeroboam Turns Away from God; Golden Calves at Beyt-El and Dan; Jeroboam's Golden Calves; Jeroboam Makes Gold Calves
 \s4 Northern kingdom
 \p
-\v 25 Then¦164570 Yarov'am¦164571 \add !(Jeroboam¦164571)\add* built¦164570 Shekem¦164574 in¦164575 the¦164575 hill¦164575 country¦164575 of¦164575 Efrayim¦164576 \add !(Ephraim¦164576)\add* and¦164577 he¦164577 lived¦164577 \add ≈there\add* \add for a while\add*. Then¦164579 he¦164579 \add ≈left¦164579\add* there¦164580 and¦164581 built¦164581 Penuel¦164584.
+\v 25 Then¦164570 Yarov'am¦164571 \add !(Jeroboam¦164571)\add* built¦164570 Shekem¦164574 in¦164575 the¦164575 Efrayim¦164576 \add !(Ephraim¦164576)\add* hill¦164575 country¦164575 and¦164577 he¦164577 lived¦164577 \add ≈there\add* \add for a while\add*. Then¦164579 he¦164579 \add ≈left¦164579\add* there¦164580 and¦164581 built¦164581 Penuel¦164584.
 \v 26 \add ≈After that,\add* \add *he¦164587\add* \add ≈worried that the¦164591 entire country might want to¦164592 go back under David's¦164593 dynasty\add*.
 \v 27 \add ≡He worried that\add* if¦164595 the¦164599 people¦164599 went¦164597 \add ≈down\add* to Yerushalem¦164606 \add !(Jerusalem¦164606)\add* to offer sacrifices¦164602 in¦164603 Yahweh's¦164605 temple¦164603, they \add ≈might shift their¦164613 allegiance\add* to King¦164617 Rehav'am \add !(Rehoboam)\add* in Yehudah¦164618 \add !(Judah¦164618)\add* and¦164619 then¦164620 \add ≈his life might be in danger\add*.
 \p
@@ -938,7 +938,7 @@
 \p
 \v 29 \add ≈Everything else that¦166084 Rehav'am¦166081 did¦166085 is¦166088 written¦166089 in the¦166092 book¦166092 of¦166092 the¦166093 events\add* of¦166093 the¦166095 kings¦166095 of¦166095 Yehudah¦166096.
 \v 30 Rehav'am¦166102 and¦166103 Yarov'am¦166104 \add !(Jeroboam¦166104)\add* \add ≈were in a continual state of¦166105 war¦166098\add* \add during their reigns\add*.
-\v 31 Then¦166109 Rehav'am¦166110 (his¦166113 mother¦166121 was¦166122 Na'amah¦166122 the¦166123 Amoni¦166123) \add ≈died\add* and¦166114 was¦166114 buried¦166114 with¦166115 his ancestors in¦166118 the¦166118 City¦166118 of¦166118 David¦166119, and¦166120 his¦166126 son¦166126 Aviyam¦166125 \add ≈replaced him¦166127 as king¦166124\add*.
+\v 31 Then¦166109 Rehav'am¦166110 (his¦166113 mother¦166121 was¦166122 Na'amah¦166122 the¦166123 Amoni¦166123) \add ≈died\add* and¦166114 was¦166114 buried¦166114 with¦166115 his ancestors in¦166118 David's¦166119 city¦166118, and¦166120 his¦166126 son¦166126 Aviyam¦166125 \add ≈replaced him¦166127 as king¦166124\add*.
 \c 15
 \s1 Aviyam rules over Yehudah
 \rem /s1 Abijam Reigns over Judah: Idolatry and War; King Abijah of Judah; Abijam Rules in Judah; Abijah King of Judah
@@ -953,7 +953,7 @@
 \v 6 \add ≈Rehav'am's¦166223\add* \add !(Rehoboam's¦166223)\add* \add ≈and¦166224 Yarov'am's¦166225 factions were in a continual state of war¦166219\add* \add during Aviyam's reign\add*.\x + \xo 15:6: \xt 2Ch 13:3-21.\x*
 \v 7 \add ≈Everything else that¦166236 Aviyam did¦166237 is written¦166241 in the¦166244 book¦166244 of¦166244 the¦166245 events\add* of¦166245 the¦166247 kings¦166247 of¦166247 Yehudah¦166248, \add ≈as the war¦166249 between¦166251 Aviyam¦166252 and¦166253 Yarov'am¦166254 continued\add*.
 \p
-\v 8 Then Aviyam¦166257 \add ≈died\add* and¦166256 was buried¦166261 with¦166258 his¦166260 ancestors¦166260 in¦166263 the¦166263 City¦166263 of¦166263 David¦166264, and¦166265 his¦166267 son¦166267 Asa¦166266 \add ≈replaced him as king¦166265\add*.
+\v 8 Then Aviyam¦166257 \add ≈died\add* and¦166256 was buried¦166261 with¦166258 his¦166260 ancestors¦166260 in¦166263 David's¦166264 city¦166263, and¦166265 his¦166267 son¦166267 Asa¦166266 \add ≈replaced him as king¦166265\add*.
 \s1 Asa's reign over Yehudah
 \rem /s1 Asa Reigns over Judah; Asa King of Judah; King Asa of Judah; Asa Rules in Judah
 \s4 Southern kingdom
@@ -978,7 +978,7 @@
 \p
 \v 22 Then¦166525 King¦166525 Asa¦166526 \add ≈informed\add* all¦166530 Yehudah¦166532 \add ≈that¦166543 they were¦166533 needed at\add* Ramah¦166539. They¦166535 removed the¦166538 stones¦166538 and¦166540 timber¦166542 from Baesha's¦166545 \add ≈fortifications\add*, and¦166546 king¦166548 Asa¦166549 used \add @the materials\add* to build Geva¦166552 (in Benyamin¦166553) and¦166554 Mitspah¦166556.
 \v 23 \add ≈Everything else that¦166569 Asa¦166563 did\add*, and¦166564 all¦166564 his¦166566 great works and¦166567 all¦166567 the¦166571 cities¦166571 he¦166573 built¦166573, \add ≈are¦166576 described\add* in the¦166580 book¦166580 of¦166580 the¦166581 \add ≈events\add* of¦166581 the¦166583 kings¦166583 of¦166583 Yehudah¦166584. \add ≈However\add* in his¦166587 old¦166587 age¦166587, he¦166588 \add ≈developed problems\add* with his¦166591 feet¦166591.
-\v 24 Then¦166593 \add *he¦166594\add* \add ≈died\add* and¦166598 was¦166598 buried¦166598 with¦166599 his ancestors in¦166602 the¦166602 City¦166602 of¦166602 David¦166603 (also his¦166604 ancestor¦166604) and¦166605 his¦166607 son¦166607 Yehoshafat¦166606 \add !(Jehoshaphat¦166606)\add* \add ≈replaced him¦166608 as king¦166605\add*.
+\v 24 Then¦166593 \add *he¦166594\add* \add ≈died\add* and¦166598 was¦166598 buried¦166598 with¦166599 his ancestors in¦166602 his¦166604 ancestor¦166604 David's¦166603 city¦166602 and¦166605 his¦166607 son¦166607 Yehoshafat¦166606 \add !(Jehoshaphat¦166606)\add* \add ≈replaced him¦166608 as king¦166605\add*.
 \s1 Nadav's reign over Yisrael
 \rem /s1 Nadab King of Israel; King Nadab of Israel; Nadab Rules in Israel; Nadab Reigns over Israel
 \s4 Northern kingdom
@@ -1175,7 +1175,7 @@
 \v 44 \add ≈but¦168757 on\add* the seventh time he¦168757 came¦168767 back¦168778 and¦168759 said¦168759, “\add ≈Wow, there's¦168760\add* a¦168762 small¦168763 cloud¦168762 \add ≈out above the¦168768 ocean¦168768 about the size of¦168764\add* a¦168766 man's palm¦168764.”
 \p Then¦168769 \add @Eliyah¦168769\add* ordered¦168769 him, “\add ≈Rush\add* \add and\add* tell¦168771 Ahav¦168774 \add ≈to get his chariot ready and¦168776 head down¦168776 so¦168777 he won't¦168777 be caught in the¦168779 rain¦168779\add*.”
 \p
-\v 45 \add ≈Very soon the¦168789 sky¦168789 was full of dark¦168790\add* clouds¦168791, then¦168792 wind and¦168793 heavy rain¦168794. Ahav¦168797 \add kept\add* riding¦168796 and¦168798 \add ≈made it¦168798\add* to¦168799 \add the city of\add* Yizre'el¦168799 \add !(Jezreel¦168799)\add*.
+\v 45 \add ≈Very soon the¦168789 sky¦168789 was full of dark¦168790\add* clouds¦168791, then¦168792 wind and¦168793 heavy rain¦168794. Ahav¦168797 \add kept\add* riding¦168796 and¦168798 \add ≈made it¦168798\add* to¦168799 Yizre'el¦168799 \add !(Jezreel¦168799)\add* \add city\add*.
 \v 46 \add ≈Yahweh¦168803 gave Eliyah¦168807 extra strength and¦168808 he¦168808 tucked his robe into his belt, and¦168810 ran¦168810 ahead of¦168811 Ahav¦168812 going¦168815\add* into¦168816 Yizre'el¦168816.
 \c 19
 \s1 Eliyah flees to Mt. Sinay
@@ -1447,7 +1447,7 @@
 \v 48 Yehoshafat¦171669 \add ≈had trading ships made¦171670\add* to¦171674 go¦171674 to¦171675 Ofir¦171675 for¦171676 gold¦171676, but¦171677 \add #they\add* didn't¦171677 go¦171678 because¦171679 the¦171683 ships¦171683 \add ≈got wrecked\add* at¦171684 Etsyon-Gever.
 \v 49 Ahav's¦171693 son¦171691 Ahazyah¦171690 had said¦171689 to¦171694 Yehoshafat¦171696, “Let¦171697 my servants go¦171697 with¦171699 your¦171701 servants¦171701 in¦171702 the¦171702 ships¦171702.” \add ≈But¦171703\add* Yehoshafat¦171705 hadn't \add ≈accepted the offer\add*.
 \p
-\v 50 Then¦171708 Yehoshafat¦171709 \add ≈died\add* and¦171713 was¦171713 buried¦171713 with¦171714 his ancestors in¦171717 the¦171717 City¦171717 of¦171717 his¦171719 ancestor¦171719 David¦171718, and¦171720 his¦171722 son¦171722 Yehoram¦171721 \add !(Jehoram¦171721)\add* \add ≈replaced him¦171723 as king¦171720\add*.
+\v 50 Then¦171708 Yehoshafat¦171709 \add ≈died\add* and¦171713 was¦171713 buried¦171713 with¦171714 his ancestors in¦171717 his¦171719 ancestor¦171719 David's¦171718 city¦171717, and¦171720 his¦171722 son¦171722 Yehoram¦171721 \add !(Jehoram¦171721)\add* \add ≈replaced him¦171723 as king¦171720\add*.
 \s1 Ahazyah's reign over Yisrael
 \rem /s1 Ahaziah Reigns over Israel; Ahaziah King of Israel; Ahaziah Rules in Israel; King Ahaziah of Israel
 \s4 Northern kingdom
