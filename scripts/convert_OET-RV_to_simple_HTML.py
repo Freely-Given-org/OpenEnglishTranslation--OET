@@ -118,6 +118,8 @@ span.cv { vertical-align:super; font-size:0.8em; color:orange; }
 span.RVadded { color:dimGrey; }
 span.wj { color:fireBrick; }
 span.wj span.RVadded { color:lightCoral; }
+span.reworded, span.updatedMeasure { color:dimGrey; }
+span.wj span.reworded, span.wj span.updatedMeasure { color:lightCoral; }
 span.nominaSacra { font-weight:bold; }
 span.sig { font-family:cursive; }
 span.bk { font-style:italic; }
@@ -1266,6 +1268,10 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                          .replace( '\\bd*', '</b>' ).replace( '\\+bd*', '</b>' )
                          .replace( '\\bdit ', '<b><i>' ).replace( '\\+bdit ', '<b><i>' )
                          .replace( '\\bdit*', '</i></b>' ).replace( '\\+bdit*', '</i></b>' )
+                         .replace( '\\add ?≈', '<span class="reworded">' ).replace( '\\+add ?≈', '<span class="reworded">' )
+                         .replace( '\\add ≈', '<span class="reworded">' ).replace( '\\+add ≈', '<span class="reworded">' )
+                         .replace( '\\add ?$', '<span class="updatedMeasure">' ).replace( '\\+add ?$', '<span class="updatedMeasure">' )
+                         .replace( '\\add $', '<span class="updatedMeasure">' ).replace( '\\+add $', '<span class="updatedMeasure">' )
                          .replace( '\\add ', '<span class="RVadded">' ).replace( '\\+add ', '<span class="RVadded">' )
                          .replace( '\\add*', '</span>' ).replace( '\\+add*', '</span>' )
                          .replace( '\\nd ', '<span class="nominaSacra">' ).replace( '\\+nd ', '<span class="nominaSacra">' )

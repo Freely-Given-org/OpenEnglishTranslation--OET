@@ -35,7 +35,7 @@ class Token:
     @property
     def linkable(self):
         return (not self.word_fragment
-                and (self.code is None or self.code in {'@', '*', '%', '&', '≈', '#', '≡', '!'}))
+                and (self.code is None or self.code in {'@', '*', '%', '&', '≈', '$', '#', '≡', '!'}))
 
 
 @dataclass(frozen=True)
@@ -57,7 +57,7 @@ WORD = re.compile(r"[^\W_]+(?:['’\-][^\W_]+)*(?:\((?:s|es)\))?'?", re.UNICODE)
 OPTIONAL_PLURAL = re.compile(r'\((s|es)\)')
 GRAMMATICAL_ENDINGS = frozenset(('s', 'es', "n't", 'd', 'll', 're', 've', 'm', 't'))
 NOTE = re.compile(r'\\(\+?(?:f|fe|x|fig|jmp))\b.*?\\\1\*')
-ADD_CODES = '@#≈≡*<>&%+^!='
+ADD_CODES = '@#≈$≡*<>&%+^!='
 # These additions have no corresponding source word, including uncertain forms.
 UNLINKED_ADD_CODES = frozenset(('', '<', '>'))
 TEXT_MARKER = re.compile(r'\\(?:v|p|m|pi\d*|q\d*|qm\d*|li\d*|lim\d*|nb|b|pc|pr|qr|cls|pmo|pm|pmc|pmr|mi|ph\d*|n)$')
@@ -74,7 +74,7 @@ SINGULAR_REFERENT_HEADS = {singular for plural, singular in SIMPLE_NOUN_PAIRS if
 # Punctuation is a conservative clause boundary, not a syntactic parse. The
 # ordinary gap alignment is unchanged; only phrase movements obey these fences.
 CLAUSE_BOUNDARY = re.compile(r'[.,;:!?—–“”‘’«»"\n]')
-ADD_PREFIX = re.compile(r'\\\+?add \??[@#≈≡*<>&%+^!=]?')
+ADD_PREFIX = re.compile(r'\\\+?add \??[@#≈$≡*<>&%+^!=]?')
 MAX_MOVEMENT_WORDS = 6  # Applies separately to the matched and crossed blocks.
 MIN_MOVEMENT_SCORE = 90  # Exact/curated inflections, excluding synonyms and related forms.
 MOVEMENT_FUNCTION_WORDS = PRONOUNS | OWNERS | {

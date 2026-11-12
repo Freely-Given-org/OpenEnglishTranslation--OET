@@ -113,7 +113,7 @@ THINGS_TO_REMOVE = ( # Don't include \\add here because they get special treatme
     '(Tyre)',
     '(Zion)',
 )
-ADD_THINGS_TO_REMOVE = ( '?≈','≈', '=', '+', '#', '%', '*', '&', '?@','@', '≡', '<', '>', '^', '→', '?', '' )
+ADD_THINGS_TO_REMOVE = ( '?≈','≈', '?$', '$', '=', '+', '#', '%', '*', '&', '?@','@', '≡', '<', '>', '^', '→', '?', '' )
 
 PICKLE_FILENAME_END = '.OBD_Bible.pickle'
 

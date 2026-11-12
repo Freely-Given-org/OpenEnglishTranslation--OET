@@ -57,7 +57,7 @@ assert OET_RV_ESFM_FolderPath.is_dir()
 #   rewording span (not a plain 'added word' span).  These spans must be left unchanged.
 #   The '!' is essential: '\add !(Israel¦83035)\add*' holds a legitimate word number
 #   on a bracketed proper name that was added into the English text.
-SPECIAL_ADD_CHARS = '@#≈≡*<>&%?+^!'
+SPECIAL_ADD_CHARS = '@#≈$≡*<>&%?+^!'
 
 # A straight \add span is one where the first character after the space is NOT
 #   one of the special characters (nor a backslash, which would be another marker).

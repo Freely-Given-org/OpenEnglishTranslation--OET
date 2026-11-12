@@ -83,16 +83,14 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - raised offering vs wave offering, peace offering vs fellowship offering
 - cross/pole/stake -> post
 - firstfruits -> harvest festival
-- make sure we haven’t used ‘tithe’
 - passover/Passover/pass-over, ....
 - Aram vs Syria
 - remove "years old" if it’s not essential/natural
 - make numbers consistent like ‘120’ vs ‘one hundred and twenty’
 - capitalisation of city or river after name, e.g., Ashdod City, Jordan river, Corner Gate
-- "His mother’s name was..." for new kings in 2 Chron
+- "His mother's name was..." for new kings in 2 Chron
 - a record of everthing done ... was written in the scroll/book of ... after the death of a king
 - "what was right in Yahweh’s eyes" "what was right in the eyes of Yahweh"
-- all our measurements, e.g., ten kilograms, ... should have \add ≈ around them
 - all our months, e.g., March, April, ... should have \add ≈ around them
 - ‘house of Yahweh’ vs ‘Yahweh's temple’ vs just ‘temple’
 - treasuries vs storerooms and storehouses
@@ -102,12 +100,8 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - border vs boundary
 - pledge (for loans) -> guarantee
 - work out what we’re going to do with "people/peoples" meaning "people groups"
-- convert litres (volumes) of flour to kilograms (weights)
 - kill/slaughter/strike for animals (e.g., sacrifices) and for people
-- altar ‘horns’-> \add four\add* \add ≈projecting corners\add*
 - innards, entrails, intestines, guts
-- skin vs hide (of animal)
-- proclaim -> announce ???
 - exalt -> speak highly of
 - try to remove righteousness (doing what’s right) and perhaps justice (doing what’s fair) from RV
 - redeemed (replace ‘bought you back’) -> ‘paid the price to free you’
@@ -116,12 +110,13 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - land you do not know -> land you’ ve never been to
 - deeds -> actions
 - prophesying falsehood -> prophesying untruths (not lies)
-- remove ‘everlasting’, ‘amongst’, ‘midst’, ‘upon’, ‘shall’, most of ‘may’
+- remove ‘everlasting’, ‘amongst’, ‘midst’, ‘upon’, most of ‘may’
 - sackcloth -> coarse, abrasive cloth
 - refer to cities/countries, etc. as ‘it’, not ‘he’ or ‘she’.
 - ‘rest’-> check if ‘peace and stability’or something is more natural in modern English
 - vow -> promise
 - plundered -> looted
+- should months also be formatted with '\add $' ???
 
 - do we want words like 'dwelt' in the OET-LV???
 

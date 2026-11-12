@@ -377,7 +377,7 @@ def spellCheckESFMText( text:str, location:str, nameSet:set[str] ) -> bool:
 
     lastLastWord = lastWord = ''
 
-    for addChar in ('≈','+','>','<','@','*','#','%','≡'):
+    for addChar in ('≈','$','+','>','<','@','*','#','%','≡'):
         adjText = adjText.replace( f'\\add ?{addChar}', '' ).replace( f'\\add {addChar}', '' )
     for charMarker in ('add','+add','em','+em','nd','+nd','sc','+sc','wj','+wj','bd','+bd','it','+it','bdit','+bdit','tl',
                         'ior','bk','+bk','sig','sup','qs',
@@ -441,7 +441,7 @@ def spellCheckESFMText( text:str, location:str, nameSet:set[str] ) -> bool:
             # Remove \add markers
             if word[0] == '?': # This one can precede the others
                 word = word[1:]
-            if word[0] in '+<=>#%@*^&≈?≡→':
+            if word[0] in '+<=>#%@*^&≈$?≡→':
                 word = word[1:]
             if not word: break
 

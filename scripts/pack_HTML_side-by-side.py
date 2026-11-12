@@ -121,6 +121,8 @@ span.add { color:grey; }
 span.RVadded { color:dimGrey; }
 span.wj { color:fireBrick; }
 span.wj span.RVadded { color:lightCoral; }
+span.reworded, span.updatedMeasure { color:dimGrey; }
+span.wj span.reworded, span.wj span.updatedMeasure { color:lightCoral; }
 span.nominaSacra { font-weight:bold; }
 span.sig { font-family:cursive; }
 span.ul { color:darkGrey; }

@@ -464,7 +464,7 @@ The specialist classes are handled as follows:
 | `%` | Align changed-person wording with an LV pronoun. |
 | `*` | Align a substituted pronoun/phrase with an identified LV proper noun. OT sources require an `Np` morphology component; an empty capitalisation flag does not make “I” a name. Broader descriptions still need more work. |
 | `&` | Match an LV article or possessive in the bounded gap. |
-| `≈`, `#` | Allow lexical, curated synonym and inflection matches; do not equate arbitrary paraphrases by position alone. |
+| `≈`, `$`, `#` | Allow lexical, curated synonym and inflection matches; `$` marks an updated measure. Do not equate arbitrary paraphrases by position alone. |
 | `≡` | Repeat an already identified earlier phrase in this passage, preserving each word’s own source number; no previous-verse borrowing or assigning the first number to the entire phrase. |
 | `!` | Propose an atomic traditional-name alias bundle including its adjacent original name. |
 | `+`, `=`, `^` | No new automatic positional links. These need more specific grammatical or semantic evidence. |

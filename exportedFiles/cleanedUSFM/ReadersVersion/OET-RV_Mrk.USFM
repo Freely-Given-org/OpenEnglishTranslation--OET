@@ -1,4 +1,4 @@
-\id MRK - Open English Translation—Readers’ Version (OET-RV) v0.5.4
+\id MRK - Open English Translation—Readers’ Version (OET-RV) v0.5.7
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MRK
@@ -12,9 +12,9 @@
 \is1 Introduction
 \is2 Author
 \ip This account about Yeshua’s activities and teachings was written by Markos (typically shortened to ‘Mark’ in English), the son of a Jewish family who lived in Yerushalem/Jerusalem. His mother was named Miryam/Mary (Acts 12:12).
-\ip Many people think he was Yohan/John Markos, a cousin of Barnabas (Col. 4:10) who accompanied Paulos on his first long-distance trip to spread the good message about Yeshua the messiah (Acts 12:25, 13:13). We also know that Markos accompanied Kefa (1 Peter 5:13), and some consider that it might have been Kefa who narrated to Markos what Yeshua had done and taught.
+\ip Many people think he was Yohan/John Markos, a cousin of Barnabas (Col. 4:10) who accompanied Paulos/Paul on his first long-distance trip to spread the good message about Yeshua the messiah (Acts 12:25, 13:13). We also know that Markos accompanied Kefa/Peter (1 Peter 5:13), and some consider that it might have been Kefa who narrated to Markos what Yeshua had done and taught.
 \is2 This account
-\ip This account seems to have been written for non-Jews, especially perhaps those familiar with Romaios customs. So he didn’t use as much ink as Matay or Lukas explaining prophecies from the Jewish scriptures but he does however, take time to explain Jewish customs to help non-Jewish readers.
+\ip This account seems to have been written for non-Jews, especially perhaps those familiar with Roman customs. So he didn’t use as much ink as Matay or Lukas explaining prophecies from the Jewish scriptures but he does however, take time to explain Jewish customs to help non-Jewish readers.
 \ip Markos explains here that Yeshua came to serve both God and the people, and he often refers to him as ‘the son of humanity’ (traditionally translated very literally from the Greek as the ‘Son of Man’). We can see that especially in 10:45: “Even the son of humanity didn’t come to be served, but to serve others and to give his life as a ransom to set many people free.” Markos wants his readers to know that Yeshua did incredible things, but especially focuses on Yeshua’s teaching. Markos confirms Yeshua’s power and authority by telling about the miracles that he did, his healing of the sick, and his exorcism of demons.
 \ip The ending of this account is often disputed, and scholars are still \jmp debating|link-href="https://textandcanon.org/a-case-for-the-longer-ending-of-mark"\jmp* about whether or not the longer ending (16:9-20) is original to Markos. The \em OET\em* includes the disputed longer ending, but displays it in a lighter colour to indicate its debatable status.
 \iot Main components of Markos’ account
@@ -182,7 +182,7 @@
 \r (Mat. 10:1-4; Luke 6:12-16)
 \p
 \v 13 As \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add started\add* going up a hill, he called the followers \add that he had selected\add* and they went off with him.
-\v 14 He appointed twelve \add of them\add* as his representatives so that they could \add stick\add* with him, and be sent off to be proclaiming \add his message\add*
+\v 14 He appointed twelve \add of them\add* as his representatives so that they could \add stick\add* with him, and be sent off to be declaring \add his message\add*
 \v 15 and to also have authority to exorcise demons.
 \p
 \v 16 \add These are\add* the twelve that he appointed: Shim’on \add (Simon)\add* (but he appended the name “Kefa \add (Peter; Grk. Petros)\add*”),
@@ -854,7 +854,7 @@
 \r (Mat. 22:15-22; Luke 20:20-26)
 \p
 \v 13 Then \add the religious leaders\add* sent some \add members\add* of the Farisaios party and \add some\add* of the \add political\add* supporters of \add King\add* Herodes \add (Herod)\add* \add to try to\add* catch \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add out\add*.
-\v 14 \add So\add* they \add flattered\add* him, “Teacher, we know that you are \add honest even if it upsets others\add*, and that you teach the truth \add about\add* \nd God\nd* \add without caring about people’s opinions\add*. Is it \add right\add* \add for us Yehudim\add* \add (Jews)\add* to \add pay\add* the poll tax to \add the Romaios emperor\add* or not? \add How should we handle this\add*?”
+\v 14 \add So\add* they \add flattered\add* him, “Teacher, we know that you are \add honest even if it upsets others\add*, and that you teach the truth \add about\add* \nd God\nd* \add without caring about people’s opinions\add*. Is it \add right\add* \add for us Yehudim\add* \add (Jews)\add* to \add pay\add* the poll tax to \add the Roman emperor\add* or not? \add How should we handle this\add*?”
 \p
 \v 15 \add However,\add* knowing their hypocrisy, \add Yeshua\add* \add responded\add* to them, “\wj Why are all of you \+add trying to\+add* test me? Bring me a \+add coin\+add* so I can see it.\wj*”
 \p
@@ -934,7 +934,7 @@
 \v 8 \wj \+add Countries\+add* will \+add take up arms\+add* against \+add other\+add* \+add countries\+add*, and \+add kingdoms\+add* against \+add other\+add* \+add kingdoms\+add*. There’ll be earthquakes in \+add many\+add* places and there’ll be famines, \+add but\+add* those \+add will be just like\+add* the beginning of birth pains.\wj*
 \p
 \v 9 “\wj \+add So be careful\+add*. You’ll be \+add turned\+add* over to \+add local\+add* councils \+add for questioning\+add*, will be \+add whipped\+add* in the \+add Jewish meeting halls\+add*, and will be stood \+add in front of\+add* governors and kings \+add because of following\+add* me. \+add However, you’ll be able to present your life stories\+add* to them\wj*\x + \xo 13:9-11: \xt Mat 10:17-20; Luk 12:11-12.\x*
-\v 10 \wj and it’s right that the good message first\wj*\f + \fr 13:10 \ft TD: It’s not clear here what was meant by ‘first’—‘first’ before what?\f* \wj be proclaimed to \+add every people group\+add*.\wj*
+\v 10 \wj and it’s right that the good message first\wj*\f + \fr 13:10 \ft TD: It’s not clear here what was meant by ‘first’—‘first’ before what?\f* \wj be declared to \+add every people group\+add*.\wj*
 \v 11 \wj But whenever they take you all \+add along to\+add* hand you over, don’t worry \+add in advance\+add* \+add about\+add* what you’re going to say \+add to defend yourselves\+add*, but \+add wait until the hearing proceeds and speak what you are given then\+add*, because then it won’t be you speaking, but \+add God’s\+add* \+nd spirit\+nd*.\wj*
 \v 12 \wj \+add In those times,\+add* a brother will \+add report on\+add* \+add his\+add* brother to \+add have him executed\+add*, and a father \+add report on\+add* his child, and children \+add will be encouraged to report on\+add* \+add their\+add* \+add own\+add* parents and then they’ll be \+add executed\+add* \+add as a result\+add*.\wj*
 \v 13 \wj Then every one will hate you all because \+add they hate\+add* my name, but anyone who endures to the end will be saved.\wj*\x + \xo 13:13: \xt Mat 10:22.\x*
@@ -991,7 +991,7 @@
 \v 6 But \nd Yeshua\nd* \add spoke up\add*, “\wj \+add What do you think you’re all doing abusing\+add* her—leave her \+add alone\+add*! She’s done \+add something very good for\+add* me.\wj*
 \v 7 \wj You’ll always have poor \+add people\+add* \+add around\+add*,\x + \xo 14:7: \xt Deu 15:11.\x* and you \+add can help\+add* them whenever you want to, but \+add I won’t be around forever\+add*.\wj*
 \v 8 \wj She has \+add performed\+add* the \+add traditional\+add* anointing of my body \+add in advance\+add* of my burial,\wj*
-\v 9 \wj and I \+add can assure\+add* you all, that wherever the good message is proclaimed \+add around\+add* the world, what \+add she\+add* has done \+add today\+add* will \+add be part of the story and she’ll be remembered for it\+add*.\wj*”
+\v 9 \wj and I \+add can assure\+add* you all, that wherever the good message is declared \+add around\+add* the world, what \+add she\+add* has done \+add today\+add* will \+add be part of the story and she’ll be remembered for it\+add*.\wj*”
 \s1 Yehudah offers to hand Yeshua over
 \r (Mat. 26:14-16; Luke 22:3-6)
 \p
@@ -1175,7 +1175,7 @@
 \v 37 But \add just then\add*, \nd Yeshua\nd* \add uttered\add* a loud cry and \add exhaled his last breath\add*.
 \p
 \v 38 (\add Back\add* in the temple, the curtain tore \add down the middle\add* from the top to the bottom.)\x + \xo 15:38: \xt Exo 26:31-33.\x*
-\v 39 \add When\add* \add Yeshua\add* \add died\add*, the \add Romaios\add* \add commander\add* who had been standing \add back watching everything\add* said, “That man was \add definitely\add* \nd God’s\nd* son.”
+\v 39 \add When\add* \add Yeshua\add* \add died\add*, the \add Roman\add* \add commander\add* who had been standing \add back watching everything\add* said, “That man was \add definitely\add* \nd God’s\nd* son.”
 \p
 \v 40 \add Further back\add*, there was also \add a group of\add* women observing \add everything\add*. \add They\add* \add included\add* Miryam \add (Grk. Maria/Mariam)\add* from Magdala, Miryam the mother of \add young\add* Ya’akov \add (James; Grk. Yakobos)\add* and Yoseh, and Salome,\x + \xo 15:40-41: \xt Luk 8:2-3.\x*
 \v 41 and others who had followed \add Yeshua\add* around Galil and \add helped look after\add* him, along with many others who had come \add down\add* to Yerushalem \add (Jerusalem)\add* with him.

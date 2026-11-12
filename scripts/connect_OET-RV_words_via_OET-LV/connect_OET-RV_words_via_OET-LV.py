@@ -45,7 +45,7 @@ Specialised \\add spans:
         '\\+add ' spans must be closed by '\\+add*' markers.
     The \\add spans below can also indicate uncertainty
         by having a ? immediately after the '\\ add ',
-        i.e., before any of the specialist characters (like @*<>≡≈) if present.
+        i.e., before any of the specialist characters (like @*<>≡≈$) if present.
 
     Formats are described at
         ../../../OpenEnglishTranslation-website/src/pages/Resources/Formats.astro
@@ -78,6 +78,8 @@ Specialised \\add spans:
         Repeats outside that mapped passage are not linked automatically.
     Reworded '\\add ≈' or '\\+add ≈' or '\\add ?≈' or '\\+add ?≈' spans:
         Can be matched to OET-LV words, but more difficult expected.
+    Updated-measure '\\add $' or '\\+add $' or their uncertain forms:
+        Can be matched to OET-LV words in the same way as reworded spans.
     Alternate '\\add !' or '\\+add !' or '\\add ?!' or '\\+add ?!' name spans:
         Because an English Bible translation is using a mixture of Hebrew, Greek, and English names,
             we often want to display more than one form of the name to the reader.
@@ -1077,7 +1079,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
         assert badAddND not in newESFMtext, f"\\nd in \\add start check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badAddND)-10:newESFMtext.index(badAddND)+35]}'"
         assert badNDAdd not in newESFMtext, f"\\nd in \\add end check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badNDAdd)-10:newESFMtext.index(badNDAdd)+35]}'"
         # NOTE: '*?' has to have a space before it, because \\add*? might occur at the end of a question
-        for wronglyOrderedCombo in ('+?','=?','<?','>?','≡?','&?','@?',' *?','#?','%?','^?','≈?'):
+        for wronglyOrderedCombo in ('+?','=?','<?','>?','≡?','&?','@?',' *?','#?','%?','^?','≈?','$?'):
             assert wronglyOrderedCombo not in newESFMtext, f"Wrongly ordered combo check failed with '{wronglyOrderedCombo}' before saving {BBB} with '{newESFMtext[newESFMtext.index(wronglyOrderedCombo)-10:newESFMtext.index(wronglyOrderedCombo)+35]}'"
         options = BibleOrgSysGlobals.commandLineArguments
         destination = options.output_dir / rvESFMFilename if options.output_dir else rvESFMFilepath
