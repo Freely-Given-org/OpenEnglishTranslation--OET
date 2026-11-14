@@ -1,4 +1,4 @@
-\id 2SA - Open English Translation—Readers’ Version (OET-RV) v0.2.8
+\id 2SA - Open English Translation—Readers’ Version (OET-RV) v0.2.15
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 SA2
@@ -13,8 +13,8 @@
 \ip This the story of David’s reign: firstly he ruled what became known as ‘Yehudah’ (Judah) in the south east (chapters 1–4), and eventually, the entire nation, including the much larger area of Yisrael (called ‘Israel’ in older translations) in the north east (Chapter 5–24). This document explains how David dealt with his enemies within the country, as well as battling with other nations in order to widen and strengthen his kingdom. David’s faith and respect of God is demonstrated here, as well as his love for the people. However, despite that, he was also fierce and he was quite capable of disobeying God to get what he wanted. But God sees everything and seen his prophet Natan (Nathan) with a parable to show David his selfishness. David asked for forgiven for his sin and accepted the punishment that God gave him.
 \ip The times of peace and prosperity through the latter parts of David’s rule were planted in the minds of the Hebrew people, and in the future when they faced difficulties, they would long for another king like David—a son (better ‘a descendant’) of David who would love God like him.
 \iot Main components of this account
-\io1 The kingdom of David in Yehudah \ior 1:1–4:12\ior*
-\io1 The kingdom of David over all Yisrael \ior 5:1–24:25\ior*
+\io1 David’s kingdom in Yehudah \ior 1:1–4:12\ior*
+\io1 David’s kingdom over all Yisrael \ior 5:1–24:25\ior*
 \io2 a. The early years \ior 5:1–10:19\ior*
 \io2 b. David takes Uriyah’s wife \ior 11:1–12:25\ior*
 \io2 c. The battles and the difficulties \ior 12:26–20:26\ior*
@@ -99,7 +99,7 @@
 \v 27 \add Yes, those\add* \add powerful warriors\add* have fallen,
 \q1 and those weapons of war have \add been destroyed\add*.”
 \c 2
-\s1 The kingdom of David
+\s1 David’s kingdom
 \s4 Full kingdom
 \p
 \v 1 After \add that was over\add*, David inquired from Yahweh, “Should I go into one of Yehudah’s \add (Judah’s)\add* cities?”
@@ -120,7 +120,7 @@
 \v 8 \add However,\add* Avner (Ner’s son) who’d been Sha’ul’s \add (Saul’s)\add* army commander had taken Sha’ul’s son Ish-Boshet\f + \fr 2:8 \ft Also known as Esh-Baal. (See 1 Chronicles 8:33.)\f* across to Mahanayim
 \v 9 and \add declared\add* him to be king over Gilead, and over the Ashurim and Yizre’el \add (Jezreel)\add*, and over Efrayim \add (Ephraim)\add* and Benyamin, and over all of Yisrael \add (Israel)\add*.
 \v 10 Ish-Boshet \add was forty years old\add* when he \add started to rule\add* over the \add Israelis\add*, and he \add ruled them\add* for two years.
-\p But the tribe of Yehudah \add (Judah)\add* was loyal to David
+\p But the Yehudah \add (Judah)\add* tribe was loyal to David
 \v 11 and \add he\add* \add ruled them\add* for seven and a half years.
 \p
 \v 12 \add One day\add* Avner left Mahanayim with \add some of\add* Ish-Boshet’s servants and went to Giveon,
@@ -168,7 +168,7 @@
 \p
 \v 6 \add While the war between Sha’ul’s\add* \add (Saul’s)\add* \add son Ish-Boshet and David’s supporters continued\add*, Avner was strengthening himself with Sha’ul’s \add supporters\add*.
 \v 7 \add Now\add* Sha’ul had had a slave-wife named Ritspah (daughter of Ayah) and Avner slept with her. \add So\add* \add Ish-Boshet\add* \add demanded\add*, “Why have you slept with my father’s slave-wife?”
-\v 8 Avner \add became very angry at this challenge from Ish-Boshet and snapped back\add*, “\add Do you think I’m Yehudah’s\add* \add (Judah’s)\add* \add dog\add* \add hiding out over here\add*? Today I’ve been \add helping\add* Sha’ul’s \add family\add*: your father, his brothers, and his friends, and I won’t let you fall into David’s \add hands\add*. \add Yet\add* today you \add bring some charge against me to do with a\add* woman?
+\v 8 Avner \add became very angry at that challenge from Ish-Boshet and snapped back\add*, “\add Do you think I’m Yehudah’s\add* \add (Judah’s)\add* \add dog\add* \add hiding out over here\add*? Today I’ve been \add helping\add* Sha’ul’s \add family\add*: your father, his brothers, and his friends, and I won’t let you fall into David’s \add hands\add*. \add Yet\add* today you \add bring some charge against me to do with a\add* woman?
 \v 9 May God punish \add me\add* if I don’t do for David exactly what Yahweh promised him
 \v 10 \add and help with\add* the transfer of the kingdom away from \add your\add* \add family\add* and to establish David’s \add kingdom\add* over \add both\add* Yehudah and Yisrael \add (Israel)\add*, from Dan \add down\add* to Be’er-Sheva \add (Beersheba)\add*.”\x + \xo 3:10: \xt 1Sam 15:28.\x*
 \v 11 Ish-Boshet didn’t say a word back to Avner because he was \add very\add* scared of him.
@@ -212,7 +212,7 @@
 \m And \add so\add* the people wept even more for him.
 \p
 \v 35 \add Many people brought food\add* to David during the day, but \add he\add* promised, “\add May God severely punish me if I eat anything\add* before the sun goes down.”
-\v 36 All the people recognised \add David’s dignity in handling this matter and\add* \add were pleased\add* \add with his behaviour, just as they\add* \add were pleased\add* \add with everything that the king did\add*,
+\v 36 All the people recognised \add David’s dignity in handling that matter and\add* \add were pleased\add* \add with his behaviour, just as they\add* \add were pleased\add* \add with everything that the king did\add*,
 \v 37 and \add everyone throughout Yisrael\add* \add (Israel)\add* \add knew that the king hadn’t ordered for Avner (Ner’s son) to be executed\add*.
 \v 38 Then the king told his servants, “Don’t you all \add realise that Yisrael lost a leader and a great man today\add*?
 \v 39 Although I was anointed as king, I \add feel tender\add* today. Those sons of Tseruyah \add are more violent\add* than me. May Yahweh repay \add evil people appropriately for their actions\add*.”
@@ -364,7 +364,7 @@
 \p
 \v 2 Then he \add defeated\add* the \add Moavim\add*. \add David\add* forced them to lie on the ground and \add used a length of rope to decide their fate—those inside two lengths of the rope were killed, and those inside the third length were spared\add* and \add so\add* the Moavim became David’s servants—bringing him tribute.
 \p
-\v 3 Then David \add defeated\add* Tsovah’s King Hadadezer (son of Rehov) \add who had tried to reestablish his authority over the Perat\add* \add (Euphrates)\add* River.
+\v 3 Then David \add defeated\add* Tsovah’s King Hadadezer (son of Rehov) \add who had tried to reestablish his authority over the Perat\add* \add (Euphrates)\add* river.
 \v 4 David captured 1,700 horsemen and twenty thousand men on foot. \add He\add* hamstrung all the chariot \add horses\add* except for a hundred of them.
 \p
 \v 5 Then \add the Arameans\add* came from Damesek \add (Damascus)\add* to help Tsovah’s king Hadadezer \add but\add* David \add killed\add* twenty-two thousand \add of them\add*.
@@ -377,7 +377,7 @@
 \v 11 King David \add dedicated\add* them to Yahweh, \add along\add* with the silver and gold \add that he’d taken\add* from all the nations that \add they’d conquered\add*:
 \v 12 from Aram and Moav \add (Moab)\add*, from the \add Amonim\add* and the Pelishtim, and from Amalek and from the plunder of Tsovah’s King Hadadezer (son of Rehov).
 \p
-\v 13 Then David made \add more of\add* a name \add for himself\add* when he returned from \add defeating eighteen thousand Arameans\add* in the Salt Valley.\x + \xo 8:13: \xt Psa 60 header.\x*
+\v 13 Then David made \add more of\add* a name \add for himself\add* when he returned from \add defeating eighteen thousand Arameans\add* in the Salt valley.\x + \xo 8:13: \xt Psa 60 header.\x*
 \v 14 He \add stationed\add* garrisons \add throughout\add* Edom and \add made the people\add* his servants, and Yahweh \add protected\add* David wherever \add they fought\add*.
 \p
 \v 15 \add So\add* David \add reigned\add* over all Yisrael \add (Israel)\add* and \add led all his people with\add* justice and \add integrity\add*.
@@ -440,7 +440,7 @@
 \v 14 \add When the Amonim saw the Arameans running away, they started retreating from Avishay and went back into\add* the city, \add so\add* Yoav \add withdrew from attacking the Amonim and returned\add* to Yerushalem \add (Jerusalem)\add*.
 \p
 \v 15 \add When the Arameans realised that they’d been defeated by\add* Yisrael \add (Israel)\add*, they assembled \add all their warriors\add* together \add again\add*.
-\v 16 \add King\add* Hadadezer \add (from Tsovah)\add* \add called for Aramean warriors\add* from beyond the \add Perat\add* \add (Euphrates)\add* River and they came to Heylam. Shovak was Hadadezer’s army commander.
+\v 16 \add King\add* Hadadezer \add (from Tsovah)\add* \add called for Aramean warriors\add* from beyond the \add Perat\add* \add (Euphrates)\add* river and they came to Heylam. Shovak was Hadadezer’s army commander.
 \v 17 \add When\add* David \add heard that\add*, he assembled all \add the Israeli warriors\add* and they crossed the Yarden \add (Jordan)\add* \add going towards\add* Heylam. \add The Arameans came out\add* to meet David and \add the two sides fought each other\add*.
 \v 18 \add But\add* \add again\add* \add the Arameans\add* fled from \add the Israelis\add*, and David killed seven hundred \add Aramean charioteers\add* and forty thousand cavalry, and their commander Shovak was struck and died there \add also\add*.
 \v 19 Then all the kings \add associated with Hadadezer realised they couldn’t defeat\add* Yisrael, \add so\add* they made peace with \add the Israelis\add* and served them, and \add so\add* the Arameans were afraid to \add try to\add* rescue the \add Amonim\add* again.
@@ -817,7 +817,7 @@
 \v 3 \add But\add* the people \add complained\add*, “\add No,\add* don’t go out, because if we \add have to\add* flee, they won’t \add be worried about\add* us. \add Even\add* if half of us die, they won’t \add be worried about\add* us, because you \add count more to them than ten thousand of us\add*. \add So\add* it’s better that you \add stay to\add* help us from the city.”
 \p
 \v 4 “I’ll do whatever seems best to you,” the king \add responded\add*. \add So\add* the king stayed beside the \add city\add* gate while the \add men\add* went out by \add their\add* hundreds and thousands.
-\v 5 Then he commanded Yoav and Avishay and Itay, “\add For my sake,\add* \add don’t harm\add* \add my son\add* Avshalom \add (Absalom)\add*.” All the people heard the king \add give this command\add* about Avshalom \add to all the leaders\add*.
+\v 5 Then he commanded Yoav and Avishay and Itay, “\add For my sake,\add* \add don’t harm\add* \add my son\add* Avshalom \add (Absalom)\add*.” All the people heard the king \add give that command\add* about Avshalom \add to all the leaders\add*.
 \p
 \v 6 \add So\add* \add David’s\add* people went out to the countryside to meet \add the rest of\add* Yisrael \add (Israel)\add*. The battle was in the Efrayim \add (Ephraim)\add* forest
 \v 7 and David’s \add men defeated the rest—twenty thousand men died\add* that day,
@@ -898,7 +898,7 @@
 \v 13 And tell Amasa, ‘Aren’t you my \add own\add* flesh and bone? May God \add make me suffer\add* if you don’t become my army commander \add from now on, to replace\add* Yoav \add (Joab)\add*.’ ”
 \v 14 \add In that way,\add* \add David\add* \add united all the people\add* of Yehudah and they \add notified\add* the king, “\add We all want\add* you and all your servants to return \add here\add*.”
 \p
-\v 15 \add So\add* the king \add headed back\add* and reached the Yarden \add (Jordan)\add* \add River\add*, and \add men from\add* Yehudah went to Gilgal to meet the king and \add help\add* \add him\add* across.
+\v 15 \add So\add* the king \add headed back\add* and reached the Yarden \add (Jordan)\add* \add river\add*, and \add men from\add* Yehudah went to Gilgal to meet the king and \add help\add* \add him\add* across.
 \p
 \v 16 Shimei (son of Gera the Benyamite from Bahurim)\x + \xo 19:16: \xt 2Sam 16:5-13.\x* hurried down with the Yehudah \add men\add* to meet King David.
 \v 17 A thousand Benyamite men \add came\add* with him, as well as Tsiva (formerly Sha’ul’s \add (Saul’s)\add* servant) and fifteen of his sons and twenty of his servants, and they hurried to the Yarden to \add meet\add* the king.
@@ -1014,7 +1014,7 @@
 \p
 \v 7 \add However\add*, the king \add spared\add* Yonatan’s \add (Jonathan’s)\add* son (and Sha’ul’s grandson) Mefiboshet because of the promises that \add he\add* and Yonatan \add had made to each other before\add* Yahweh.\x + \xo 21:7: \xt 1Sam 20:15-17; 2Sam 9:1-7.\x*
 \v 8 \add Instead\add* \add he\add* took two of the sons (Armoni and Mefiboshet) of Ritspah (Ayah’s daughter \add and one of Sha’ul’s slave-wives\add*), as well as five sons of Sha’ul’s daughter Mikal, that she’d bore to Adriel (the son of Barzilay, the Meholati).\x + \xo 21:8: \xt 1Sam 18:19.\x*
-\v 9 He \add handed them over to\add* the Givonim, and they hung them on a hill \add before\add* Yahweh, and the seven of them \add died\add* together. \add This happened at\add* the beginning of the barley harvest.
+\v 9 He \add handed them over to\add* the Givonim, and they hung them on a hill \add before\add* Yahweh, and the seven of them \add died\add* together. \add That happened at\add* the beginning of the barley harvest.
 \p
 \v 10 Then Ayah’s daughter Ritspah took \add coarse, abrasive\add* sackcloth and she spread it on the rock \add where the corpses were\add*. She \add kept the birds away during the\add* day and the animals at night—\add staying there\add* from the beginning of the harvest until \add the beginning of the rainy season\add*.
 \p
@@ -1338,7 +1338,7 @@
 \v 4 \add However,\add* the king \add insisted, so even though\add* Yoav and the army commanders \add disagreed\add*, \add at the king’s command\add* \add they\add* \add set off to count\add* the Israeli people.
 \p
 \v 5 They crossed the Yarden \add (Jordan)\add* \add river\add* and camped in Aroer, south of the city in the middle of the Gad valley, then \add proceeded\add* to Yazer.
-\v 6 Then they went \add north\add* to Gilead and the land of Tahtim-Hodshi, \add before\add* coming to Dan-Yaan and around to Tsidon \add (Sidon)\add*.
+\v 6 Then they went \add north\add* to Gilead and Tahtim-Hodshi, \add before\add* coming to Dan-Yaan and around to Tsidon \add (Sidon)\add*.
 \v 7 Then they came to the Tsor \add (Tyre)\add* fortress and all the cities of the Hivim and the Kena’anim \add (Canaanites)\add* \add before going\add* \add east\add* to Be’er-Sheva in the Negev \add wilderness\add* (part of Yehudah).
 \v 8 \add So they travelled throughout the land for\add* nine months and twenty days \add before returning\add* to Yerushalem \add (Jerusalem)\add*.
 \v 9 Then Yoav \add reported the census results\add* to the king: 800,000 fighting swordsmen in Yisrael \add (Israel)\add*, and 500,000 in Yehudah.

@@ -1,4 +1,4 @@
-\id 1CH - Open English Translation—Readers’ Version (OET-RV) v0.2.10
+\id 1CH - Open English Translation—Readers’ Version (OET-RV) v0.2.18
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CH1
@@ -85,7 +85,7 @@
 \s1 Edom’s rulers
 \r (Gen. 36:31-43)
 \p
-\v 43 These are the kings who ruled the region of Edom \add (where Se’ir’s descendants lived)\add* before any kings ruled over Yisrael \add (Israel)\add*: Bela son of Be’or, and his city’s name was Dinhavah.
+\v 43 These are the kings who ruled the Edom region \add (where Se’ir’s descendants lived)\add* before any kings ruled over Yisrael \add (Israel)\add*: Bela son of Be’or, and his city’s name was Dinhavah.
 \v 44 When Bela died, Zerah’s son Yovav from Batserah \add city\add* \add replaced him as king\add*.
 \v 45 When Yovav died, Husham \add replaced him as king\add*. He was from the region where the Teyman people group lived.
 \v 46 When Husham died, Bedad’s son Hadad \add replaced him as king\add*. His city’s name was Avit. \add Hadad\add* defeated the Midyan people group in the Moav \add (Moab)\add* region.
@@ -131,7 +131,7 @@
 \v 19 When Azuvah died, Kalev married Efrat, and they had a son named Hur.
 \v 20 Hur was the father of Uri, and Uri was the father of Betsalel.
 \p
-\v 21 Later, when Hetsron was sixty years old, he \add had sexual intercourse\add* with a daughter of Makir from the region of Gilead and married her. \add Hetsron’s new wife\add* gave birth to \add their son\add* Seguv.
+\v 21 Later, when Hetsron was sixty years old, he \add had sexual intercourse\add* with a daughter of Makir from the Gilead region and married her. \add Hetsron’s new wife\add* gave birth to \add their son\add* Seguv.
 \v 22 Seguv was the father of Yair, and \add Yair\add* controlled twenty-three cities in the Gilead region.
 \v 23 \add But\add* Geshur and Aram captured Havot-Ya’ir and Kenat from them, plus \add their surrounding towns\add*—sixty towns \add in all,\add* \add populated by\add* descendants of Makir (the father of Gilead).
 \v 24 After Hetsron’s death in Kalev-Efratah, \add his\add* wife Aviyah gave birth to his son Ashur \add (Assyria)\add*, the father of Tekoa.
@@ -175,7 +175,7 @@
 \v 52 The descendants of Shoval (\add founder\add* of Kiryat-Yearim) were Haroeh, half of the Manahatim,
 \v 53 and the clans from Kiryat-Yearim: the Yitrim, the Putim, the Shumatim, and the Mishraim. From those came the Tsor’atim and Eshtaolim.
 \v 54 Salma’s descendants were \add the people of\add* Beyt-Lehem, the Netofatim, the clan of Atrot-Beyt-Yo’av, and half of the Manahatim, \add who were also\add* Tsor’im.
-\v 55 The clans of the scribes lived at Yaebets: the Tiratim, the Shimeatim, and the Sukatim. These are the Keynim who descended from Hamat, the ancestor of Rekav’s family.
+\v 55 The clans of the scribes lived at Yaebets: the Tiratim, the Shimeatim, and the Sukatim. Those are the Keynim who descended from Hamat, the ancestor of Rekav’s family.
 \c 3
 \s1 King David’s children
 \p
@@ -228,7 +228,7 @@
 \v 12 Eshton was the father of Beyt-Rafa, Paseah, and Tehinah. Tehinah \add founded\add* Nahash city, but \add lived in\add* Rekah.
 \p
 \v 13 Kenaz’s sons were Otniel and Serayah. And Otniel’s sons were Hatat \add and Me’onotay\add*.\f + \fr 4:13 \ft Not in the Hebrew, but ‘sons’ was plural, so it seems that it may have been accidentally dropped out of the text.\f*
-\v 14 Me’onotay had a son Ofrah, and Serayah fathered Yoav \add (Joab)\add*, the \add founder\add* of Craftsmen’s Valley, because they were craftsmen.
+\v 14 Me’onotay had a son Ofrah, and Serayah fathered Yoav \add (Joab)\add*, the \add founder\add* of Craftsmen’s valley, because they were craftsmen.
 \p
 \v 15 The sons of Kalev \add (Caleb)\add* (Yefuneh’s son) were Iru, Elah, and Na’am, and Elah’s son was Kenaz.
 \p
@@ -243,7 +243,7 @@
 \s1 Shelah’s descendants
 \p
 \v 21 The sons of Shela (one of Yehudah’s \add (Judah’s)\add* sons) were Er (father of Lekah), Laedah (father of Mareshah and the clans \add who worked with\add* linen at Beyt-Eshbea),
-\v 22 Yokim and the men of Kozava, and Yoash and Saraf, who ruled in Moav \add (Moab)\add* and Yashuvi-Lehem. (\add All this is from ancient records\add*.)
+\v 22 Yokim and the men of Kozava, and Yoash and Saraf, who ruled in Moav \add (Moab)\add* and Yashuvi-Lehem. (\add All that is from ancient records\add*.)
 \v 23 They were the potters \add who lived in\add* Netaeim and Gederah—they lived there and \add worked for\add* the king.
 \s1 The descendants of Shim’on (Simeon)
 \p
@@ -281,8 +281,8 @@
 \v 5 \add Shimei’s\add* son was Mikah. \add Mikah’s\add* son was Reayah. \add Reayah’s\add* son was Ba’al.
 \v 6 \add Ba’al’s\add* son was Be’erah, who became a leader of the Re’uvenim, \add but\add* the Assyrian King Tiglat-Pileser \add captured him and took him back to Ashur\add* \add (Assyria)\add*.\x + \xo 5:6: \xt 2Ki 15:29.\x*
 \v 7 His brothers by their clans, \add as listed in their genealogical records\add*: Yeiel the leader, Zekaryah \add (Zechariah)\add*,
-\v 8 Bela son of Azaz, son of Shema, son of Yoel. \add Re’uven’s clan\add* lived near \add the city of\add* Aroer \add as far north as the cities of\add* Nevo and Ba’al-Me’on.
-\v 9 \add Some of them lived further\add* east, as far as the edge of the desert that extends to the Perat \add (Euphrates)\add* River, because their livestock had multiplied \add back\add* in the Gilead region.
+\v 8 Bela son of Azaz, son of Shema, son of Yoel. \add Re’uven’s clan\add* lived near Aroer \add city\add* \add as far north as the cities of\add* Nevo and Ba’al-Me’on.
+\v 9 \add Some of them lived further\add* east, as far as the edge of the desert that extends to the Perat \add (Euphrates)\add* river, because their livestock had multiplied \add back\add* in the Gilead region.
 \v 10 (In the days of \add King\add* Sha’ul \add (Saul)\add*, they’d battled with the Hagrim and \add defeated them, so then\add* they’d lived in their tents all over \add eastern\add* Gilead.)
 \s1 Gad’s descendants
 \p
@@ -291,23 +291,23 @@
 \v 13 \add Their cousins who were leaders of seven clans were\add* Mika’el \add (Michael)\add*, Meshulam, Sheva, Yoray, Ya’akan, Ziea, and Ever.
 \v 14 Those were descendants of Avihayil, the son of Huri, the son of Yaroah, the son of Gilead, the son of Mika’el, the son of Yeshishay, the son of Yahdo, the son of Buz.
 \v 15 Ahi was the son of Avdiel, the son of Guni, head of their clans.
-\v 16 \add Those descendants of Gad\add* lived in \add towns\add* in the Gilead and Bashan \add regions\add*, and on all the pastureland \add throughout the Sharon Plain\add*.
+\v 16 \add Those descendants of Gad\add* lived in \add towns\add* in the Gilead and Bashan \add regions\add*, and on all the pastureland \add throughout the Sharon plain\add*.
 \v 17 All of them were listed in the genealogies in the days of Yehudah’s \add (Judah’s)\add* King Yotam \add (Jotham)\add* and Yisrael’s \add (Israel’s)\add* King Yarov’am \add (Jeroboam)\add*.
 \s1 The eastern warriors
 \p
-\v 18 There were 44,760 warriors descended from \add strong\add* men in the tribes of Re’uven and Gad and the \add eastern\add* half of the tribe of Menasheh \add (Manasseh)\add*. They all carried \add shields\add* and \add swords\add*, and \add bows\add* and arrows, and were all trained to fight in battles.
+\v 18 There were 44,760 warriors descended from \add strong\add* men in the Re’uven and Gad tribes and the \add eastern\add* half of the Menasheh \add (Manasseh)\add* tribe. They all carried \add shields\add* and \add swords\add*, and \add bows\add* and arrows, and were all trained to fight in battles.
 \v 19 They went to war against the Hagrim, Yetur, Nafish, and Nodav,
 \v 20 and were helped because they called out to God in the battle. \add So\add* with God answering their prayers because of their trust in him, they \add were able to defeat\add* the Hagrim and their \add allies\add*.
 \v 21 They captured their livestock, including 50,000 camels, 250,000 sheep, and 2,000 donkeys, as well as 100,000 people,
 \v 22 because many were killed \add as a result of God’s assistance\add*. Then they lived in that \add area\add* until the exile.
 \s1 Menasheh’s descendants
 \p
-\v 23 The descendants of the half tribe of Menasheh \add (Manasseh)\add* lived in the Bashan region as far as Ba’al-Hermon and Senir, and Mt. Hermon, \add and\add* they \add increased in number\add*.
+\v 23 The descendants of the Menasheh \add (Manasseh)\add* half-tribe lived in the Bashan region as far as Ba’al-Hermon and Senir, and Mt. Hermon, \add and\add* they \add increased in number\add*.
 \v 24 Their clan leaders were Efer, Yishei, Eliel, Azriel, Yirmiyah \add (Jeremiah)\add*, Hodavyah, and Yahdiyel. They were all powerful and famous warriors, and leaders of their clans.
 \s1 The exile of the eastern tribes
 \p
 \v 25 \add But\add* they disobeyed their ancestors’ god, and they prostituted themselves to the gods of the peoples that God had destroyed \add ahead of them\add* in that region.
-\v 26 \add So\add* Yisrael’s \add (Israel’s)\add* god stirred up the spirit of the Assyrian King Pul\x + \xo 5:26: \xt 2Ki 15:19.\x* (\add also known as\add* Tiglat-Pileser).\x + \xo 5:26: \xt 2Ki 15:29.\x* He took them into exile—that is, the Re’uvenim, the Gadim, and the half tribe of Menasheh \add (Manasseh)\add*. Then he took them to Halah, Havor, Hara, and the river of Gozan (\add where they still are\add* to this day).\x + \xo 5:26: \xt 2Ki 17:6.\x*
+\v 26 \add So\add* Yisrael’s \add (Israel’s)\add* god stirred up the spirit of the Assyrian King Pul\x + \xo 5:26: \xt 2Ki 15:19.\x* (\add also known as\add* Tiglat-Pileser).\x + \xo 5:26: \xt 2Ki 15:29.\x* He took them into exile—that is, the Re’uvenim, the Gadim, and the Menasheh \add (Manasseh)\add* half-tribe. Then he took them to Halah, Havor, Hara, and the Gozan river (\add where they still are\add* to this day).\x + \xo 5:26: \xt 2Ki 17:6.\x*
 \c 6
 \s1 Levi’s descendants
 \p
@@ -410,7 +410,7 @@
 \s1 The Levites’ settlements
 \p
 \v 54 \add Here’s a list of places where Aharon’s\add* \add (Aaron’s)\add* \add descendants lived. Kohat’s descendants were the first to be allotted property\add*.
-\v 55 They were given \add the city of\add* Hevron in Yehudah \add (Judah)\add* and the surrounding pastureland,
+\v 55 They were given Hevron \add city\add* in Yehudah \add (Judah)\add* and the surrounding pastureland,
 \v 56 \add except that\add* Kalev \add (Caleb)\add* received the \add fields\add* \add farther from\add* the city and the villages \add around\add* the city. (Kalev was Yefuneh’s son.)
 \v 57 Those descendants of Aharon were given Hevron (a refuge city), as well as these towns and their \add nearby\add* pastureland: Livnah, Yatir, Eshtemoa,
 \v 58 Hilen, Devir,
@@ -418,17 +418,17 @@
 \v 60 From the Benyamin tribe, they received the cities of Geva, Alemet, and Anatot and their pasturelands. Altogether \add those Kohatite\add* clans received thirteen cities,
 \v 61 and the remaining Kohatite clans received ten cities from the clans of the Menasheh \add (Manasseh)\add* tribe.
 \p
-\v 62 The clans of Gereshon’s descendants received thirteen cities from the tribes of Yisakar \add (Issachar)\add*, Asher, Naftali \add (Naphtali)\add*, and the part of the Menasheh tribe that lived in the Bashan \add region\add* \add across the Yarden\add* \add (Jordan)\add* \add River\add*.
-\v 63 The clans of Merari’s descendants \add received\add* twelve cities from the tribes of Re’uven, Gad, and Zevulun.
+\v 62 The clans of Gereshon’s descendants received thirteen cities from the Yisakar \add (Issachar)\add*, Asher, and Naftali \add (Naphtali)\add* tribes, and the part of the Menasheh tribe that lived in the Bashan \add region\add* \add across the Yarden\add* \add (Jordan)\add* \add river\add*.
+\v 63 The clans of Merari’s descendants \add received\add* twelve cities from the Re’uven, Gad, and Zevulun tribes.
 \v 64 \add The Israeli leaders allotted those\add* towns and the nearby pasturelands to the Levites.
-\v 65 They also allotted them the cities from the tribes of Yehudah \add (Judah)\add*, Shim’on \add (Simeon)\add*, and Benyamin that were listed above.
+\v 65 They also allotted them the cities from the Yehudah \add (Judah)\add*, Shim’on \add (Simeon)\add*, and Benyamin tribes that were listed above.
 \v 66 Some of Kohat’s descendants received cities from the Efrayim \add (Ephraim)\add* tribe.
 \v 67 They \add also\add* gave them these cities with the surrounding pasturelands: Shekem (a refuge city), Gezer,
 \v 68 Yakemeam, Beyt-Horon,
 \v 69 Ayalon, and Gat-Rimon.
-\v 70 Kohat’s other descendants received \add the cities of\add* Aner and Bil’am \add (Balaam)\add* and the nearby pastureland from the half-tribe of Menasheh \add (that lives west of the Yarden River)\add*.
+\v 70 Kohat’s other descendants received \add the cities of\add* Aner and Bil’am \add (Balaam)\add* and the nearby pastureland from the Menasheh half-tribe \add (that lives west of the Yarden river)\add*.
 \p
-\v 71 Gereshon’s descendants also received, from the part of the Menasheh tribe \add that lived across the Yarden River\add*, \add two cities\add* and pastureland near them: Golan in the Bashan \add region\add*, and Ashtarot.
+\v 71 Gereshon’s descendants also received, from the part of the Menasheh tribe \add that lived across the Yarden river\add*, \add two cities\add* and pastureland near them: Golan in the Bashan \add region\add*, and Ashtarot.
 \p
 \v 72 From the Yisakar \add (Issachar)\add* \add tribe they received these cities and\add* their nearby pastureland: Kedesh, Davrat,
 \v 73 Ramot, and Anem.
@@ -439,7 +439,7 @@
 \p
 \v 77 Merari’s descendants \add received these cities and\add* their nearby pasturelands from the Zevulun tribe: Rimon and Tavor.
 \p
-\v 78 From the Re’uven tribe across the Yarden \add (Jordan)\add* \add River\add* (opposite Yeriho \add (Jericho)\add*), \add they were allotted these cities and towns\add* and their nearby pastureland: Betser in the wilderness, Yahats,
+\v 78 From the Re’uven tribe across the Yarden \add (Jordan)\add* \add river\add* (opposite Yeriho \add (Jericho)\add*), \add they were allotted these cities and towns\add* and their nearby pastureland: Betser in the wilderness, Yahats,
 \v 79 Kedemot, and Mofa’at.
 \p
 \v 80 From the Gad tribe, \add they received these cities and\add* their nearby pastureland: Ramot in the Gilead \add region\add*, Mahanayim,
@@ -575,7 +575,7 @@
 \v 1 \add So the genealogy of all Israelis was listed\add*—yes, written on the scroll of Yisrael’s \add (Israel’s)\add* kings.
 \p Then Yehudah \add (Judah)\add* was taken into exile to Bavel \add (Babylon)\add* because of their unfaithfulness.
 \v 2 The first \add to return and resettle their land and\add* their cities were \add some\add* priests, Levites, temple servants, and \add other\add* Israelis.\x + \xo 9:2-3: \xt Ezr 2:70; Neh 7:73.\x*
-\v 3 \add Some from the tribes of\add* Yehudah, Benyamin, Efrayim \add (Ephraim)\add*, and Menasheh \add (Manasseh)\add* \add also returned and\add* lived in Yerushalem \add (Jerusalem)\add*, \add including the following:\add*
+\v 3 \add Some from the\add* Yehudah, Benyamin, Efrayim \add (Ephraim)\add*, and Menasheh \add (Manasseh)\add* \add tribes also returned and\add* lived in Yerushalem \add (Jerusalem)\add*, \add including the following:\add*
 \p
 \v 4 Utay son of Amihud (Amihud was Omri’s son, Omri was Imri’s son, Imri was Bani’s son, Bani was a \add descendant\add* of Perets, Perets was Yehudah’s son),
 \v 5 Asayah and his sons (descendants of Shilon—Asayah was the oldest),
@@ -598,7 +598,7 @@
 \v 16 Ovadyah \add (Obadiah)\add* (who was Shemayah’s son, Shemayah was Galal’s son, Galal was Yedutun’s son), and Berekyah who lived in one of the villages where the Netofat people lived (Berekyah was Asa’s son, Asa was Elkanah’s son).
 \p
 \v 17 \add From Levi’s descendants who returned to Yehudah and\add* who guarded the \add temple\add* gates there were Shalum, Akuv, Talmon, Ahiman, and some of their relatives. Shalum was \add their\add* leader.
-\v 18 Those descendents of Levi were gatekeepers at the King’s Gate on the east, \add and their descendants still are, even to this day\add*.
+\v 18 Those descendents of Levi were gatekeepers at the King’s gate on the east, \add and their descendants still are, even to this day\add*.
 \p
 \v 19 Shalum was Kore’s son, Kore was Evyasaf’s son, and Evyasaf was Korah’s son. Shalum and his relatives from his clan (Korah’s descendants) had the duty of being gatekeepers, responsible for guarding the \add entrances\add* to Yahweh’s temple, as their ancestors had done.
 \v 20 \add Previously\add* Pinhas (Eleazar’s son) \add had supervised\add* the gatekeepers. Yahweh was with \add Pinhas\add*.
@@ -665,9 +665,9 @@
 \v 3 \add So\add* all the Israeli elders went to the king at Hevron, and David made a solemn agreement with them at Hevron \add in front\add* of Yahweh. Then they anointed David as king over Yisrael in accordance with Yahweh’s message \add that was given through\add* \add the prophet\add* Shmuel \add (Samuel)\add*.
 \p
 \v 4 Then David and all of Yisrael went to Yerushalem \add (Jerusalem)\add* (\add Yerushalem, which was also known as\add* Yevus \add because the Yevusim were living there\add*).\x + \xo 11:4: \xt Josh 15:63; Jdg 1:21.\x*
-\v 5 The inhabitants \add inside\add* Yevus said to David, “You won’t \add be entering this place\add*.” But David captured \add what became known as\add* the Tsiyon \add (Zion)\add* fortress, that is, the city of David.
+\v 5 The inhabitants \add inside\add* Yevus said to David, “You won’t \add be entering this place\add*.” But David captured \add what became known as\add* the Tsiyon \add (Zion)\add* fortress, that is, David’s city.
 \v 6 \add He’d\add* said, “The one who strikes down the Yevusim first will become \add my army commander\add*.” Tseruyah’s son Yoav \add (Joab)\add* went up \add over the wall\add* first, and he became head \add of the army\add*.
-\v 7 David \add started\add* living in that fortress, so then they called it the city of David.
+\v 7 David \add started\add* living in that fortress, so then they called it David’s city.
 \v 8 He built the city up all around, from the terrace \add to the surrounding walls\add*, and Yoav restored the rest of the city.
 \v 9 \add So\add* David \add became more powerful because\add* Commander-in-chief Yahweh \add helped\add* him.
 \s1 David’s powerful warriors
@@ -679,7 +679,7 @@
 \v 13 He was with David at Pas-Damim \add when\add* the Pelishtim had assembled there for battle \add near\add* a part of the countryside \add where barley was growing\add*. \add At first, the Israelis\add* fled from the Pelishtim,
 \v 14 \add but then\add* they took their stand in the middle of the \add barley\add* and \add proceeded to defeat\add* the Pelishtim \add as\add* Yahweh saved them through a stunning victory.
 \p
-\v 15 Then three of that top thirty went down to David, near the rock at Adulam’s cave. \add Meanwhile,\add* Pelishtim had encamped in the Refaim Valley.
+\v 15 Then three of that top thirty went down to David, near the rock at Adulam’s cave. \add Meanwhile,\add* Pelishtim had encamped in the Refaim valley.
 \v 16 David was in that fortress then, and the Pelishti garrison was in Beyt-Lehem \add (Bethlehem)\add*,
 \v 17 and David \add was thirsty and asked\add*, “Who’ll get me water to drink from the well by the Beyt-Lehem gate?”
 \v 18 \add So those\add* three broke through the Pelishti camp, and they drew water from the well at the Beyt-Lehem gate, and they brought it back to David. \add But\add* David wasn’t willing to drink it, and he poured it out \add on the ground as an offering\add* to Yahweh.
@@ -709,7 +709,7 @@
 \v 39 Tselek (the Amoni), Naharay (from Be’erot, armour bearer for Tseruyah’s son Yoav \add (Joab)\add*),
 \v 40 Ira (the Yitri), Garev (the Yitri),
 \v 41 Uriyah (\add Bat-Sheva’s\add* \add (Bathsheba’s)\add* \add husband\add* the Hiti), Zavad (Ahlay’s son),
-\v 42 Adina (Shiza’s son from the tribe of Re’uven, a leader from that tribe who had thirty soldiers with him),
+\v 42 Adina (Shiza’s son from the Re’uven tribe, a leader from that tribe who had thirty soldiers with him),
 \v 43 Hanan (Ma’akah’s son), Yoshafat (from Mithna),
 \v 44 Uziya (from Ashterat), Shama and Yeiel (Hotam’s sons from Aroer),
 \v 45 Yedieael (Shimri’s son) and his brother Yoha (from Tiz),
@@ -735,7 +735,7 @@
 \v 13 \add another\add* Yirmiyah, then the eleventh was Makbanay.
 \p
 \v 14 Those men from the Gad \add tribe\add* were army leaders—\add each leading somewhere between\add* a hundred and a thousand \add men\add*.
-\v 15 They crossed to the west side of the Yarden \add (Jordan)\add* \add River\add* \add during the spring, at the time of the year when the river floods\add*. They \add drove out all the people who lived in the valleys on both sides\add* \add of the river\add*.
+\v 15 They crossed to the west side of the Yarden \add (Jordan)\add* \add river\add* \add during the spring, at the time of the year when the river floods\add*. They \add drove out all the people who lived in the valleys on both sides\add* \add of the river\add*.
 \p
 \v 16 \add Some other men\add* \add from the tribes\add* of Benyamin and Yehudah \add (Judah)\add* also went to David in \add his\add* fortress.
 \v 17 David went out \add of the cave\add* \add to meet them\add*, and he told them: “If you’ve come to me in peace, to help me, \add then I’ll be happy to cooperate with\add* you \add men\add*. \add But\add* if \add you men plan\add* to betray me to my enemies \add even though I’ve done you no harm\add*, may the god of our ancestors see \add your motives\add* and judge.”
@@ -763,7 +763,7 @@
 \li1
 \v 30 From Efrayim \add (Ephraim)\add*: 20,800 \add powerful warriors who were admired within their own clans\add*.
 \li1
-\v 31 From the half-tribe of Menasheh \add (Manasseh)\add*: 18,000 who were \add known by name\add* came to make David king.
+\v 31 From the Menasheh \add (Manasseh)\add* half-tribe: 18,000 who were \add known by name\add* came to make David king.
 \li1
 \v 32 From Yisakar \add (Issachar)\add*: 200 leaders (\add with a good understanding of the times and the right thing to do\add*) along with their relatives that they commanded.
 \li1
@@ -800,7 +800,7 @@
 \v 11 \add That in turn made\add* David \add angry\add* because Yahweh \add had burst out\add* against Uza, and he named that place Perets-Uza \add (which means ‘outburst against Uza’), which it’s still called,\add* to this day.
 \p
 \v 12 David \add was afraid of\add* God that day \add and asked himself\add*, “How can I \add possibly\add* bring God’s box to where I am \add in Yerushalem\add* \add (Jerusalem)\add*?”
-\v 13 \add So\add* David \add gave up on bringing the box to where he was\add* in the city of David, and \add instead\add* he took it into the \add nearby\add* house belonging to Oved-Edom the Giti.
+\v 13 \add So\add* David \add gave up on bringing the box to where he was\add* in David’s city, and \add instead\add* he took it into the \add nearby\add* house belonging to Oved-Edom the Giti.
 \v 14 \add So\add* God’s box stayed at Oved-Edom’s house for three months, and Yahweh blessed Oved-Edom’s home and everything that belonged to him.\x + \xo 13:14: \xt 1Ch 26:4-5.\x*
 \c 14
 \s1 David ‘expansion’ in Yerushalem
@@ -819,7 +819,7 @@
 \s4 Full kingdom
 \r (2 Sam. 5:17-25)
 \p
-\v 8 \add When\add* the Pelishtim heard that David had been anointed as king over all of Yisrael \add (Israel)\add*, the entire Pelishti \add army\add* went up \add into the hill country\add* to \add eliminate\add* \add him\add*. David \add got this news and took his army out to meet them\add*.
+\v 8 \add When\add* the Pelishtim heard that David had been anointed as king over all of Yisrael \add (Israel)\add*, the entire Pelishti \add army\add* went up \add into the hill country\add* to \add eliminate\add* \add him\add*. David \add got that news and took his army out to meet them\add*.
 \v 9 \add Meanwhile,\add* the Pelishtim went and raided the Refaim valley,
 \v 10 and David asked God, “Should I \add take on\add* the Pelishtim, and will you give \add me victory over them\add*?”
 \p “Go \add ahead\add*,” Yahweh \add answered\add*, “and I’ll \add enable you to defeat them\add*.”
@@ -836,7 +836,7 @@
 \s1 Moving the box containing the agreement
 \s4 Full kingdom
 \p
-\v 1 \add David\add* constructed houses for his \add wives\add* in the city of David. He \add also\add* prepared a place for God’s \add sacred\add* box and erected a tent for it.
+\v 1 \add David\add* constructed houses for his \add wives\add* in David’s city. He \add also\add* prepared a place for God’s \add sacred\add* box and erected a tent for it.
 \v 2 Then David \add ordered\add*, “Only the Levites are allowed to carry God’s box, because Yahweh chose them to carry the box and to minister for him forever.”\x + \xo 15:2: \xt Deu 10:8.\x*
 \v 3 David assembled all of Yisrael \add (Israel)\add* in Yerushalem \add (Jerusalem)\add* to bring Yahweh’s box uphill there to the place that he’d prepared for it.
 \v 4 Then \add he\add* summoned Aharon’s \add (Aaron’s)\add* descendants and these Levites:
@@ -876,7 +876,7 @@
 \v 27 David was wearing a fine-linen robe, \add and so were\add* all the Levites carrying the box, and the singers, and \add the choir director\add* Kenanyah. \add In addition,\add* David \add wore\add* a linen chestpiece.
 \v 28 \add So\add* all of Yisrael \add (Israel)\add* brought the box \add containing\add* Yahweh’s agreement up \add the hill\add* with happy shouting, and with a sound of a \add ram’s\add* horn, and with trumpets and cymbals, \add along with the sound of\add* harps and lyres.
 \p
-\v 29 \add As\add* the box \add containing\add* Yahweh’s agreement was being brought inside the city of David, Mikal (Sha’ul’s \add (Saul’s)\add* daughter) looked out the window and saw \add her husband,\add* King David, dancing and celebrating, and she \add secretly\add* despised him.
+\v 29 \add As\add* the box \add containing\add* Yahweh’s agreement was being brought inside David’s city, Mikal (Sha’ul’s \add (Saul’s)\add* daughter) looked out the window and saw \add her husband,\add* King David, dancing and celebrating, and she \add secretly\add* despised him.
 \c 16
 \s1 The sacred box is placed in the tent
 \s4 Full kingdom
@@ -1048,7 +1048,7 @@
 \v 1 \add Sometime afterwards\add*, David \add attacked and defeated\add* the Pelishtim, \add subduing\add* them, and he \add captured the Pelishti city of Gat and its surrounding villages\add*.
 \v 2 Then he \add attacked and defeated\add* Moav \add (Moab)\add*, and the Moavim became servants to David—\add taking him\add* \add regular\add* tribute.
 \p
-\v 3 Next David \add attacked and defeated\add* King Hadadezer of Tsovah-Hamat, when \add that king had tried enforce his control\add* at the Perat \add (Euphrates)\add* \add River\add*.
+\v 3 Next David \add attacked and defeated\add* King Hadadezer of Tsovah-Hamat, when \add that king had tried enforce his control\add* at the Perat \add (Euphrates)\add* \add river\add*.
 \v 4 David captured 1,000 chariots, 7,000 horsemen, and 20,000 foot-soldiers from him. And David hamstrung all but one hundred of the chariot \add horses\add*.
 \p
 \v 5 When the Arameans \add (or, Aramim\add* \add (Syrians)\add* \add )\add* came from Damesek \add (Damascus)\add* to help King Hadadezer, David killed 22,000 of them.
@@ -1060,7 +1060,7 @@
 \v 10 he sent his son Hadoram to King David carrying various items of gold, silver, and bronze. \add Hadoram went\add* to ask \add David\add* for peace and to bless him because he’d fought against Hadadezer and struck him down, because Toeu had \add also\add* \add been at war\add* with Hadadezer.
 \v 11 King David set that apart as holy to Yahweh, along with the gold and silver that he’d brought back from \add other\add* nations: from Edom, from Moav \add (Moab)\add*, from the \add Amonim\add*, from the Pelishtim, and from \add the Amalekim\add*.
 \p
-\v 12 Avishay (whose \add mother\add* was Tseruyah) defeated Edom in the Salt Valley, \add killing\add* eighteen thousand \add of them\add*.\x + \xo 18:12: \xt Psa 60 header.\x*
+\v 12 Avishay (whose \add mother\add* was Tseruyah) defeated Edom in the Salt valley, \add killing\add* eighteen thousand \add of them\add*.\x + \xo 18:12: \xt Psa 60 header.\x*
 \v 13 Then \add David\add* stationed garrisons in Edom, and all of Edom became his servants. And Yahweh saved David wherever he went.
 \p
 \v 14 \add So\add* David ruled over all of Yisrael \add (Israel)\add* and administered justice and \add did what was right\add* for all his people.
@@ -1124,10 +1124,10 @@
 \v 1 Then a trouble-maker worked against Yisrael \add (Israel)\add* \add by\add* encouraging David \add to take a census of\add* Yisrael,
 \v 2 \add so\add* David \add ordered\add* Yoav \add (Joab)\add* and \add the other officials\add*, “Go \add and\add* count Yisrael from Be’er-Sheva \add (Beersheba)\add* \add in the south to all the way\add* as far \add north\add* as Dan, \add then come and tell me, so that I’ll know how many warriors I have\add*.”
 \p
-\v 3 “My master, the king, may Yahweh \add multiply his people one hundred times over\add*. Aren’t they all \add your\add* servants?” Yoav \add diplomatically\add* \add queried\add*, “\add So\add* why does my master \add want to do\add* this? Why should \add he bring judgement on\add* Yisrael?”
+\v 3 “My master, the king, may Yahweh \add multiply his people one hundred times over\add*. Aren’t they all \add your\add* servants?” Yoav \add diplomatically\add* \add queried\add*, “\add So\add* why does my master \add want to do\add* that? Why should \add he bring judgement on\add* Yisrael?”
 \v 4 \add But the king insisted, so Yoav was forced to go and gather statistics on the entire country\add*. Then he returned to Yerushalem \add (Jerusalem)\add*
 \v 5 and \add reported the numbers\add* to David. Yisrael had 1.1 million sword-wielding men, and Yehudah \add (Judah)\add* had 470 thousand.
-\v 6 \add However,\add* \add Yoav\add* had \add intentionally\add* not counted \add the tribes of\add* Levi and Benyamin, because \add he\add* was horrified by the king’s command.
+\v 6 \add However,\add* \add Yoav\add* had \add intentionally\add* not counted the Levi and Benyamin \add tribes\add*, because \add he\add* was horrified by the king’s command.
 \s2 Punishment for the census
 \p
 \v 7 God \add was displeased by what David had ordered, and he punished\add* Yisrael \add (Israel)\add*,
@@ -1250,7 +1250,7 @@
 \v 3 David \add gave Eleazar’s descendant Tsadok, and Itamar’s descendant Ahimelek two different sets of duties to perform\add*.
 \v 4 \add There were more leaders among Eleazar’s descendants than there were among Itamar’s descendants, so they appointed sixteen leaders from Eleazar’s descendants and eight from Itamar’s descendants\add*.
 \v 5 They divided up \add the duties by a process of choosing randomly, so some of the leaders from each of the two groups served the facility and others served God directly\add*. DOUBLE-CHECK, along with verse 3 as well.
-\v 6 Netanel’s son Shemayah was the Levite scribe who recorded all this in front of the king and the leaders, Tsadok the priest and Evyatar’s son Ahimelek, and the clan leaders of the priests and the Levites. (One \add family\add* from Eleazar’s group was randomly assigned a duty, and then one from Itamar’s group, and so on.)
+\v 6 Netanel’s son Shemayah was the Levite scribe who recorded all that in front of the king and the leaders, Tsadok the priest and Evyatar’s son Ahimelek, and the clan leaders of the priests and the Levites. (One \add family\add* from Eleazar’s group was randomly assigned a duty, and then one from Itamar’s group, and so on.)
 \p
 \v 7 The first two \add allocations of duties\add* went to Yehoyariv and then Yedayah.
 \v 8 Next were Harim and Se’orim,
@@ -1296,7 +1296,7 @@
 \li1
 \v 30 Mushi’s sons: Mahli, Eder, and Yerimot.
 \p Those were the Levites listed by their ancestors’ families.
-\v 31 They, too, used \add a process of choosing randomly\add*, just like Aharon’s \add (Aaron’s)\add* descendants (their relatives), \add to determine their specific duties\add* irrespective of where they came in their families. This was done in front of King David, Tsadok and Ahimelek, the clan leaders, and the \add other\add* priests and Levites.
+\v 31 They, too, used \add a process of choosing randomly\add*, just like Aharon’s \add (Aaron’s)\add* descendants (their relatives), \add to determine their specific duties\add* irrespective of where they came in their families. That was done in front of King David, Tsadok and Ahimelek, the clan leaders, and the \add other\add* priests and Levites.
 \c 25
 \s1 The temple singers
 \s4 Full kingdom
@@ -1396,7 +1396,7 @@
 \s4 Full kingdom
 \p
 \v 20 The Levite Ahiyah was \add in charge of\add* the temple treasuries, as well as the storehouses for dedicated gifts.
-\v 21 Laedan’s descendants (\add also\add* descendants of Gereshon) \add were leaders among their family groups. Yehiel was a descendant of this Laedan\add*.
+\v 21 Laedan’s descendants (\add also\add* descendants of Gereshon) \add were leaders among their family groups. Yehiel was a descendant of that Laedan\add*.
 \v 22 Yehiel’s sons were Zetam and Yoel \add (Joel)\add*, \add and they\add* \add were in charge of\add* the storehouses in Yahweh’s temple.
 \p
 \v 23 \add Others who did that work\add* \add were descendants of Amram, Yitshar, Hevron, and Uziel\add*.
@@ -1413,7 +1413,7 @@
 \p
 \v 30 From Hevron’s descendants, Hashavyah and his relatives were responsible for all the work done for Yahweh and for the king in the area west of the Yarden \add (Jordan)\add* \add river\add*. There were 1,700 of them \add who were able to do their work well\add*.
 \v 31 According to the records of Hevron’s descendants, Yeriyah was their leader. (In the fortieth year of David’s reign, they’d searched \add in those records\add* and discovered that there were powerful \add men\add* in Yazer in Gilead.)
-\v 32 \add Yeriyah\add* had 2,700 relatives who were strong \add workers\add* and \add leaders of their families\add*. King David \add put them in charge of governing\add* the tribes of Re’uven, Gad, and the eastern half of the tribe of Menasheh \add (Manasseh)\add*, \add to ensure that all the people did what God commanded and what the king told them to do\add*.
+\v 32 \add Yeriyah\add* had 2,700 relatives who were strong \add workers\add* and \add leaders of their families\add*. King David \add put them in charge of governing\add* the Re’uven and Gad tribes, and the eastern half of the Menasheh \add (Manasseh)\add* tribe, \add to ensure that all the people did what God commanded and what the king told them to do\add*.
 \c 27
 \s1 King David’s officials
 \s4 Full kingdom
@@ -1449,25 +1449,25 @@
 \s4 Full kingdom
 \p
 \v 16 There were certain tribal leaders over each of Yisrael’s \add (Israel’s)\add* tribes:
-\li1 Zikri’s son Eliezer was \add the leader of the tribe of\add* Re’uven.
-\li1 Ma’akah’s son Shefatyah was \add the leader of the tribe of\add* Shim’on \add (Simeon)\add*.
+\li1 Zikri’s son Eliezer was \add the leader of the\add* Re’uven \add tribe\add*.
+\li1 Ma’akah’s son Shefatyah was \add the leader of the\add* Shim’on \add (Simeon)\add* \add tribe\add*.
 \li1
 \v 17 Kemuel’s son Hashavyah was \add the leader\add* of the Levites.
 \li1 Tsadok was \add the leader\add* of Aharon’s \add (Aaron’s)\add* descendants.
 \li1
-\v 18 David’s \add older\add* \add brother\add* Elihu was \add the leader of the tribe of\add* Yehudah \add (Judah)\add*.
-\li1 Mika’el’s \add (Michael’s)\add* son Omri was \add the leader of the tribe of\add* Yisakar \add (Issachar)\add*.
+\v 18 David’s \add older\add* \add brother\add* Elihu was \add the leader of the\add* Yehudah \add (Judah)\add* \add tribe\add*.
+\li1 Mika’el’s \add (Michael’s)\add* son Omri was \add the leader of the\add* Yisakar \add (Issachar)\add* \add tribe\add*.
 \li1
-\v 19 Ovadyah’s \add (Obadiah’s)\add* son Yishmaeyah was \add the leader of the tribe of\add* Zevulun.
-\li1 Azriel’s son Yerimot was \add the leader of the tribe of\add* Naftali \add (Naphtali)\add*.
+\v 19 Ovadyah’s \add (Obadiah’s)\add* son Yishmaeyah was \add the leader of the\add* Zevulun \add tribe\add*.
+\li1 Azriel’s son Yerimot was \add the leader of the\add* Naftali \add (Naphtali)\add* \add tribe\add*.
 \li1
-\v 20 Azazyah’s son Hoshea was \add the leader of the tribe of\add* Efrayim \add (Ephraim)\add*.
-\li1 Pedayah’s son Yoel \add (Joel)\add* was \add the leader of\add* the half-tribe of Menasheh \add (Manasseh)\add*.
+\v 20 Azazyah’s son Hoshea was \add the leader of the\add* Efrayim \add (Ephraim)\add* \add tribe\add*.
+\li1 Pedayah’s son Yoel \add (Joel)\add* was \add the leader of\add* the Menasheh \add (Manasseh)\add* half-tribe.
 \li1
-\v 21 Zekaryah’s \add (Zechariah’s)\add* son Yido was \add the leader of\add* the half-tribe of Menasheh in Gilead.
-\li1 Avner’s son Ya’asiyel was \add the leader of the tribe of\add* Benyamin.
+\v 21 Zekaryah’s \add (Zechariah’s)\add* son Yido was \add the leader of\add* the Menasheh half-tribe in Gilead.
+\li1 Avner’s son Ya’asiyel was \add the leader of the\add* Benyamin \add tribe\add*.
 \li1
-\v 22 Yeroham’s son Azarel was \add the leader of the tribe of\add* Dan.
+\v 22 Yeroham’s son Azarel was \add the leader of the\add* Dan \add tribe\add*.
 \m Those were the commanders of Yisrael’s \add (Israel’s)\add* tribes.
 \p
 \v 23 David hadn’t included men who were less than twenty years old when he’d ordered a census, because Yahweh had promised that he would multiply the Israelis like stars in the sky.\x + \xo 27:23: \xt Gen 15:5; 22:17; 26:4.\x*
@@ -1486,7 +1486,7 @@
 \v 28 Ba’al-Hanan the Gederi supervised the olive groves and the sycamore trees in the lowlands.
 \li1 Yoash supervised the \add olive\add* oil \add storage\add*.
 \li1
-\v 29 Shitray from the Plain of Sharon was \add in charge of\add* the herds \add of cattle\add* that grazed there.
+\v 29 Shitray from the Sharon plain was \add in charge of\add* the herds \add of cattle\add* that grazed there.
 \li1 Adlay’s son Shafat was \add in charge of\add* the \add cattle\add* in the valleys.
 \li1
 \v 30 Ovil the Yishmaeli \add (Ishmaelite)\add* was \add in charge of\add* the camels.
@@ -1514,7 +1514,7 @@
 \v 2 Then King David stood up and spoke, “Listen to me, my brothers and my people, I wanted in my heart to put up a building for the box containing Yahweh’s agreement to rest in. It’s the footstool for our god’s feet, and I’ve made preparations to start building,\x + \xo 28:2-7: \xt 2Sam 7:1-16; 1Ch 17:1-14.\x*
 \v 3 but God told me that \add I\add* wouldn’t be the one to build a house to \add honour him\add*, because \add I’ve\add* \add been involved in a lot of war and killings\add*.
 \p
-\v 4 “Yet Yisrael’s god Yahweh chose me from all of my father’s \add family\add* to be king over Yisrael forever, because he chose a leader from \add the tribe of\add* Yehudah \add (Judah)\add*, my father’s tribe, and among my father’s sons, he was pleased to make me king over all of Yisrael.
+\v 4 “Yet Yisrael’s god Yahweh chose me from all of my father’s \add family\add* to be king over Yisrael forever, because he chose a leader from the Yehudah \add (Judah)\add* \add tribe\add*, my father’s tribe, and among my father’s sons, he was pleased to make me king over all of Yisrael.
 \v 5 Then out of the many sons that \add he’s\add* given me, he chose my son Shelomoh \add (Solomon)\add* to \add be the next king to rule his kingdom of\add* Yisrael.
 \p
 \v 6 “Then he told me, ‘Your son Shelomoh is the one who’ll build my temple and the courtyards \add around it\add*, because I’ve chosen him to be like my son, and I’ll be like a father to him.

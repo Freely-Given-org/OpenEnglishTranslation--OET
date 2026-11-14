@@ -232,6 +232,8 @@ CHANGELOG:
         select names and phrases with context, resolve competing claims before
         writing, and remove obsolete table priorities and per-matcher counters.
     2026-11-10 More checks on wj segments
+    2026-11-13 Assert that '≈' only occurs at the start of a line (synonymous parallelism)
+        or as part of a '\\add ≈' (reworded) marker
 
 """
 from gettext import gettext as _
@@ -264,10 +266,10 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-11-10'
+LAST_MODIFIED_DATE = '2026-11-13'
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '2.1.0'
+PROGRAM_VERSION = '2.1.1'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -856,6 +858,24 @@ illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters imm
 wjSegment = re.compile( '\\\\wj (.+?)\\\\wj\\*' )
 sigSegment = re.compile( '\\\\sig (.+?)\\\\sig\\*' )
 doubledND, badAddND, badNDAdd = '\\nd \\nd ', '\\add \\nd ', '\\nd*\\add*'
+# Legitimate places for '≈' are:
+#   at the start of a (poetry) line for synonymous parallelism, i.e., after any paragraph and/or verse marker
+#       e.g., '≈…', '\\q1 ≈…', '\\v 13 ≈…', '\\q2 \\v 4 ≈…'
+#   at the start of a reworded add span, i.e., '\\add ≈', '\\+add ≈', '\\add ?≈', '\\+add ?≈'
+#   in introduction text explaining the symbol, i.e., '\\bd ≈\\bd*'
+lineStartParallelismRegex = re.compile( r'^(?:\\[a-z]+[0-9]* )?(?:\\v [0-9]+\S* )?≈' )
+rewordedAddRegex = re.compile( r'\\\+?add \??≈' )
+def checkApproxSymbolUsage( line:str ) -> bool:
+    """
+    Returns True if every '≈' in the ESFM line is either at the start of the line text
+        (synonymous parallelism) or part of a '\\add ≈' (reworded) marker.
+    """
+    if '≈' not in line: return True
+    remainingLine = lineStartParallelismRegex.sub( '', line, count=1 )
+    remainingLine = rewordedAddRegex.sub( '', remainingLine ).replace( '\\bd ≈\\bd*', '' )
+    return '≈' not in remainingLine
+# end of checkApproxSymbolUsage
+
 def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
     """
     Firstly, load the OET-LV wordtable.
@@ -980,6 +1000,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             assert  badAddND not in line, f"\\nd inside \\add start {lvESFMFilename} {lineNumber}: '{line}'"
             assert  badNDAdd not in line, f"\\nd inside \\add end {lvESFMFilename} {lineNumber}: '{line}'"
             assert  ' ¦' not in line, f"Word number attached to space {lvESFMFilename} {lineNumber}: '{line}'"
+            assert checkApproxSymbolUsage( line ), f"Unexpected ≈ (not at line start or in '\\add ≈') in {lvESFMFilename} {lineNumber}: '{line}'"
             if '\\x* ' in line: # this can be ok if the xref directly follows other text
                 logger = logging.critical if ' \\x ' in line else logging.warning
                 logger( f"Double-check space after xref in {lvESFMFilename} {lineNumber}: '{line}'" )
@@ -1014,6 +1035,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             if '’ ”' not in line and '’\\wj* ”' not in line:
                 assert ' ”' not in line, f"Unexpected space at end of speech in {rvESFMFilename} {lineNumber}: '{line}'"
             assert '≈ ' not in line, f"Unexpected space after ≈ in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert checkApproxSymbolUsage( line ), f"Unexpected ≈ (not at line start or in '\\add ≈') in {rvESFMFilename} {lineNumber}: '{line}'"
             for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
                 assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {rvESFMFilename} {lineNumber}: '{line}'"
                 assert  f' \\{characterMarker}* 'not in line, f"doubled spaces around close {characterMarker} marker {rvESFMFilename} {lineNumber}: '{line}'"
