@@ -44,6 +44,7 @@ CHANGELOG:
     2026-10-21 Use BOS VLT-to-KJV passage mappings for Theographic metadata, preserving native word IDs.
     2026-10-22 Align Macula referents through BOS; preserve native rows and abstain on ambiguity.
     2026-10-22 Normalize Theographic book codes with BOS (USFM EZK becomes BOS EZE).
+    2026-11-16 Updated for Clear Macula update
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, NamedTuple, Optional
@@ -67,10 +68,10 @@ from greek_word_alignment import mapped_word_matches
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-22' # by RJH
+LAST_MODIFIED_DATE = '2026-11-16' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET NT wordtable"
-PROGRAM_VERSION = '0.38'
+PROGRAM_VERSION = '0.39'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -153,8 +154,11 @@ def main() -> None:
     # assert len(source_tsv_column_headers) == NUM_EXPECTED_OSHB_COLUMNS, f"Found {len(source_tsv_column_headers)} columns! (Expecting {NUM_EXPECTED_OSHB_COLUMNS})"
     # state.macula_dict_reader = DictReader(tsv_lines, delimiter='\t')
     state.macula_tsv_lines = []
-    for macula_line in macula_tsv_lines:
-        state.macula_tsv_lines.append( macula_line.rstrip( '\n' ).split( '\t' ) )
+    for mm, macula_line in enumerate( macula_tsv_lines ):
+        new_line = macula_line.rstrip( '\n' ).split( '\t' )
+        if len(state.macula_tsv_lines) > 1:
+            assert len(new_line) == len(state.macula_tsv_lines[0]), f"{mm}\n({len(new_line)}) {new_line=}\n({len(state.macula_tsv_lines[0])}) {state.macula_tsv_lines[0]=}"
+        state.macula_tsv_lines.append( new_line )
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.macula_tsv_lines):,} Greek Macula table entries ({column_line_string.count(TAB)+1} columns)." )
 
@@ -623,6 +627,8 @@ def tag_referents_from_macula_data() -> bool:
     OET table row numbers. Unused VLT variants cannot acquire active referents.
     """
     macula_header, *macula_lines = state.macula_tsv_lines
+    for rr,row in enumerate( macula_lines ):
+        assert len(macula_header) == len(row), f"{len(macula_header)=} {rr=} {len(row)=} {macula_header=} {row=}"
     macula_rows = [dict(zip(macula_header, row, strict=True)) for row in macula_lines]
     macula_index = {}
     for n, row in enumerate(macula_rows):

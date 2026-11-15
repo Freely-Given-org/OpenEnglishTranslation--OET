@@ -37,13 +37,12 @@ import logging
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 import bos_books_codes_py
-print(dir(bos_books_codes_py))
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-11-16' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OSHB_XML_to_TSV"
 PROGRAM_NAME = "Convert OSHB WLC OT XML into TSV/JSON files"
-PROGRAM_VERSION = '0.62'
+PROGRAM_VERSION = '0.63'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -258,14 +257,15 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                                     noteText = f"{noteText}{noteChild.text}"
                                     assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
                             else: print(noteChild); assert False, "We want to stop here"
+                        # We fixed the OSIS XML loader to handle this
                         # if readable_ref=='JER_48:44':
                         #     noteText = noteText.strip() # Need to strip multiline note
                         #     # NOTE: This doesn't work! We had to edit Jer.xml in Forked/OS-morphhb/wlc/
                         #     while '  ' in noteText: noteText = noteText.replace( '  ', ' ' )
                         #     print( f"{readable_ref} {noteText=}" )
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 4:
-                            vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Now note: {readable_ref} {n=} {noteType=} {noteText=}" )
-                        assert '  ' not in noteText and noteText.strip()==noteText
+                        # if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 4:
+                        #     vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Now note: {readable_ref} {n=} {noteType=} {noteText=}" )
+                        # assert '  ' not in noteText and noteText.strip()==noteText
                         # if readable_ref=='JER_49:25': assert False, "We want to stop here" # Next note afterwards
                     else: # not 'variant'
                         assert noteText

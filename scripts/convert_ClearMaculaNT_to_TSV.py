@@ -24,6 +24,7 @@ CHANGELOG:
     2023-04-27 Combined subject referents into Referents column (so now, one less column)
     2026-05-08 Upgraded to bos_books_codes_py
     2026-10-22 Map passages with BOS and replace fuzzy same-position IDs with certain Greek alignment.
+    2026-11-16 Handle Clear data update (added 'rule') and handled newline in some pRole fields
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -39,10 +40,10 @@ import bos_books_codes_py
 from greek_word_alignment import mapped_word_matches, words_match
 
 
-LAST_MODIFIED_DATE = '2026-10-22' # by RJH
+LAST_MODIFIED_DATE = '2026-11-16' # by RJH
 SHORT_PROGRAM_NAME = "Convert_ClearMaculaNT_to_TSV"
 PROGRAM_NAME = "Convert Macula NT words and attach BibleTags IDs"
-PROGRAM_VERSION = '0.24'
+PROGRAM_VERSION = '0.25'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -65,6 +66,7 @@ EXPECTED_WORD_ATTRIBUTES = ('{http://www.w3.org/XML/1998/namespace}id', 'ref', '
         'case','normalized','head','strong','ln',
         'note', # Added 27Apr2023
         'junction', # Added 19Mar2024
+        'rule', # Added 16Nov2026 -- is this a mistake in their data ???
         'english','mandarin' # For SBLGNT only
         )
 assert len(set(EXPECTED_WORD_ATTRIBUTES)) == len(EXPECTED_WORD_ATTRIBUTES), "No duplicate attribute names"
@@ -206,9 +208,10 @@ def loadClearLowFatGlossesXML() -> bool:
         for elem in bookTree.getroot().iter():
             if elem.tag == 'w': # ignore all the others -- there's enough info in here
                 for attribName in elem.attrib:
-                    assert attribName in EXPECTED_WORD_ATTRIBUTES, f"loadClearLowFatGlossesXML(): unexpected {attribName=}"
+                    assert attribName in EXPECTED_WORD_ATTRIBUTES, f"loadClearLowFatGlossesXML(): unexpected {attribName=} '{elem.get(attribName)}'"
 
                 word = elem.text
+                assert word, f"{elem.attrib=}"
                 theirRef = elem.get('ref')
                 # print( f"{word=} {theirRef=}" )
 
@@ -281,6 +284,10 @@ def loadClearLowFatGlossesXML() -> bool:
                     if parentElem.tag == 'error_unknown_complex_node': break # @ROM 11:22!1 got parentElem.tag='error_unknown_complex_node'
                     assert parentElem.tag == 'wg', f"@{theirRef} got {parentElem.tag=}"
                     pClass, pRole, pRule = parentElem.get('class'), parentElem.get('role'), parentElem.get('rule')
+                    assert not pClass or '\n' not in pClass
+                    if pRole and '\n' in pRole: pRole = pRole.replace( '\n', ' ').replace( '\t', ' ') # This must surely be a data error for word='ἐξέρχεσθε'
+                    assert not pRole or '\n' not in pRole, f"{word=} {pRole}"
+                    assert not pRule or '\n' not in pRule
                     if not role: role = pRole # Take the first one
                     # print( f"@{theirRef} got {pClass=} {role=} {rule=}")
                     if pRole:
@@ -446,7 +453,7 @@ def save_filled_TSV_file() -> bool:
         writer.writeheader()
         for thisTuple in state.lowFatWordsAndMorphemes:
             # print( f"{state.output_fieldnames=} {thisTuple=}" )
-            assert len(thisTuple) == len(state.output_fieldnames)
+            assert len(thisTuple) == len(state.output_fieldnames), f"{len(thisTuple)=} {len(state.output_fieldnames)=}"
             thisRow = {k:thisTuple[k] for k in state.output_fieldnames} # Make sure we have the fields in the correct output order
             # print( f"\n{thisRow=}" )
             writer.writerow( thisRow )
@@ -523,6 +530,9 @@ def save_shortened_TSV_file() -> bool:
             if thisEntryDict['Number']: # Abbreviate
                 thisEntryDict['Number'] = {'singular':'s','plural':'p','dual':'d', 'unknown: x':'?'}[thisEntryDict['Number']]
             assert len(thisEntryDict) == len(state.output_fieldnames) - len(columnsToRemove)
+            for i, (k,v) in enumerate( thisEntryDict.items() ): # Don't let any Macula errors sneak thru this far
+                assert isinstance( k, str ) and ' ' not in k and '\t' not in k and '\n' not in k
+                assert v is None or ( isinstance( v, str ) and '\t' not in v and '\n' not in v ), f"{i} {k=} {v=}"
             writer.writerow( thisEntryDict )
 
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:

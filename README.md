@@ -29,18 +29,20 @@ but it’s easy to see that many phrases and terms have been carried into them a
 Tyndale (1500’s) and even from Wycliffe (1300’s).
 For example, the _Open English Translation_ doesn’t start sentences with the conjunction ‘For’ as we don’t hear that in modern speech.
 (By the way, the ‘For’ in the previous sentence is a preposition, not a conjunction.)
-There’s also much less use of ‘of’ to indicate possession (e.g., ‘house of Peter’) as we tend to use apostrophe (’s) in modern English (e.g., Peter’s house). Plus we try to remove as much ‘Christianese’ as possible.
+There’s also much less use of ‘of’ to indicate possession (e.g., ‘house of Peter’) as we tend to use apostrophe (’s) in modern English (e.g., Peter’s house).
+Plus we try to remove ‘Christianese’ (words that you’re only likely to hear in a church or in an online sermon) as much as possible.
 
 After several years of waiting, the _Open English Translation_ project was restarted in the second half of 2022
 (as soon as the new [Statistical Restoration Greek New Testament](https://GreekCNTR.org/collation/index.htm) dataset was officially released by the [Center for New Testament Restoration](https://GreekCNTR.org)).
-This work started with a review of our [design](https://OET.Bible/Design/ReadersVersion/) and work on new planned file formats,
+This work started with a review of our [design](https://OET.Bible/Design/ReadersVersion/) and work on new planned [file formats](https://github.com/Freely-Given-org/ESFM),
 and then a focus on creating the New Testament portion of the [Literal Version](https://OET.Bible/Design/LiteralVersion/).
+
+The Old Testament portion is based on the work of the [Open Scriptures Hebrew Bible](https://hb.OpenScriptures.org) team
+(although we prefer to call it ‘The Hebrew Scriptures’ rather than ‘The Old Testament’,
+and we call ‘The New Testament’ ‘The Messianic Update’.)
+
 Are you interested in helping or supporting this effort?
 If so, please use our [Contact Page](https://Freely-Given.org/Contact.html) or [here](https://OET.Bible/About/Contact/).
-
-The Old Testament portion is be based on the work of the [Open Scriptures Hebrew Bible](https://hb.OpenScriptures.org) team
-(although we prefer to call it ‘The Hebrew Scriptures’ rather than ‘The Old Testament’
-and we call ‘The New Testament’ ‘The Messianic Update’.)
 
 Some frequently asked questions (FAQs) about the OET can be found [here](https://OET.Bible//Discussion/FAQ/).
 
