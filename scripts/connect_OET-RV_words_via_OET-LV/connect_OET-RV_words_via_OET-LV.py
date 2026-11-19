@@ -234,6 +234,10 @@ CHANGELOG:
     2026-11-10 More checks on wj segments
     2026-11-13 Assert that '≈' only occurs at the start of a line (synonymous parallelism)
         or as part of a '\\add ≈' (reworded) marker
+    2026-11-18 Never put nomina sacra '\\nd' markup on an English article (e.g., the 'the' of 'the holy spirit'),
+        assert that OET-RV articles aren't inside '\\nd' spans, and assert that the OET-LV
+        '\\add +' (added article) and '\\add =' (added copula) spans no longer have word numbers
+        and never link an OET-RV article to a source word whose OET-LV gloss has no article
 
 """
 from gettext import gettext as _
@@ -266,10 +270,10 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-11-13'
+LAST_MODIFIED_DATE = '2026-11-18'
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '2.1.1'
+PROGRAM_VERSION = '2.1.2'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -858,6 +862,16 @@ illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters imm
 wjSegment = re.compile( '\\\\wj (.+?)\\\\wj\\*' )
 sigSegment = re.compile( '\\\\sig (.+?)\\\\sig\\*' )
 doubledND, badAddND, badNDAdd = '\\nd \\nd ', '\\add \\nd ', '\\nd*\\add*'
+# The English articles are never nomina sacra, even when they get the word number of one,
+#   e.g., the OET-RV 'the holy spirit¦1197' at Mat 3:11 must be '\\add the\\add* holy¦1198 \\nd spirit¦1197\\nd*'
+ARTICLES = frozenset( ('the','a','an') )
+# An English article (e.g., 'the¦1197') inside an OET-RV '\\nd ...\\nd*' (or '\\+nd ...\\+nd*') span
+rvArticleInsideNDRegex = re.compile( r'\\\+?nd (?:(?!\\\+?nd\*).)*?\b(?:[Tt]he|[Aa]n?)¦[1-9]' )
+# A word number inside an OET-LV '\\add +...\\add*' (added article) or '\\add =...\\add*' (added copula) span,
+#   e.g., '\\add +the¦1197\\add*' or '\\add =was¦14\\add*'
+#   These are articles and copulas that the English needed, so they don't translate any Hebrew or Greek word
+#   (and if they had a number, this script would wrongly connect OET-RV articles to it).
+lvNumberedArticleAddRegex = re.compile( r'\\\+?add [+=][^\\]*?¦[1-9]' )
 # Legitimate places for '≈' are:
 #   at the start of a (poetry) line for synonymous parallelism, i.e., after any paragraph and/or verse marker
 #       e.g., '≈…', '\\q1 ≈…', '\\v 13 ≈…', '\\q2 \\v 4 ≈…'
@@ -1000,6 +1014,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             assert  badAddND not in line, f"\\nd inside \\add start {lvESFMFilename} {lineNumber}: '{line}'"
             assert  badNDAdd not in line, f"\\nd inside \\add end {lvESFMFilename} {lineNumber}: '{line}'"
             assert  ' ¦' not in line, f"Word number attached to space {lvESFMFilename} {lineNumber}: '{line}'"
+            assert not lvNumberedArticleAddRegex.search( line ), f"Word number inside '\\add +' added article or '\\add =' added copula (regenerate the OET-LV) in {lvESFMFilename} {lineNumber}: '{line}'"
             assert checkApproxSymbolUsage( line ), f"Unexpected ≈ (not at line start or in '\\add ≈') in {lvESFMFilename} {lineNumber}: '{line}'"
             if '\\x* ' in line: # this can be ok if the xref directly follows other text
                 logger = logging.critical if ' \\x ' in line else logging.warning
@@ -1043,6 +1058,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             assert  badAddND not in line, f"\\nd inside \\add start {rvESFMFilename} {lineNumber}: '{line}'"
             assert  badNDAdd not in line, f"\\nd inside \\add end {rvESFMFilename} {lineNumber}: '{line}'"
             assert  ' ¦' not in line, f"Word number attached to space {rvESFMFilename} {lineNumber}: '{line}'"
+            assert not rvArticleInsideNDRegex.search( line ), f"Article inside \\nd (should probably be '\\add the\\add*') in {rvESFMFilename} {lineNumber}: '{rvArticleInsideNDRegex.search( line ).group(0)}' in '{line}'"
             if '\\x* ' in line: # this can be ok if the xref directly follows other text
                 logger = logging.critical if ' \\x ' in line else logging.warning
                 logger( f"Double-check space after xref in {rvESFMFilename} {lineNumber}: '{line}'" )
@@ -1429,6 +1445,13 @@ def matchVerseCandidates( BBB:str, c:int,v:int, lvWordList:List[str], reversedOr
     proposals = select_links(getLiveRVTokens(BBB, c, v), columns,
                              scoreAlignedWords, simplifyRVLVWord, numberVariants,
                              reversedOrder, phraseIndex, DIRECTIONAL_WORD_INDEX)
+    # An OET-RV article can only translate a source word whose OET-LV gloss has an article in it.
+    #   The articles that the English needed ('\add +the\add*') have no word number, so without this,
+    #   positional gap-filling can give an OET-RV 'the' the number of the noun beside it.
+    lvArticleNumbers = {getLVWordNumber(word) for word in lvWordList
+                        if any(part.casefold() in ARTICLES for part in word.split('¦', 1)[0].split('/'))}
+    proposals = [(token, number, reason) for token, number, reason in proposals
+                 if token.text.casefold() not in ARTICLES or number in lvArticleNumbers]
     added = ns = 0
     for token, number, reason in sorted(proposals, key=lambda p: (p[0].line, p[0].start), reverse=True):
         result, resultNS = applyRVTokenLink(BBB, c, v, token, number, reason)
@@ -1758,7 +1781,8 @@ def applyRVTokenLink(BBB, c, v, token, number, reason):
         return 0, 0  # A caller supplied a stale position.
     NT = bos_books_codes_py.is_new_testament_nr(BBB)
     addNS = (NT and 'N' in state.wordTable['NT'][number][state.wordTableHeaderList['NT'].index('GlossCaps')]
-             and token.code is None and not isInsideNominaSacraSpan(line, token.start))
+             and token.code is None and token.text.casefold() not in ARTICLES
+             and not isInsideNominaSacraSpan(line, token.start))
     # Nested character fields (e.g. words of Jesus) need +nd, never a second bare nd.
     nested = False
     if addNS:

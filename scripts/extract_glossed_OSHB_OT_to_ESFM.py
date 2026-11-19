@@ -62,6 +62,9 @@ CHANGELOG:
     2026-05-24 Change 'behold' glosses 'there!','here!' to 'THERE','HERE' (rather than just deleting the exclamation marks)
     2026-10-21 Prefer English alternatives to (cmp), recover missing word glosses from matched Macula readings,
                     and prevent duplicated leannoth in Psalm 88:1
+    2026-11-18 Don't give the articles and copulas that the English needed (in '\\add +...\\add*' spans,
+                    e.g., '\\add +the\\add*') the word number of the Hebrew word
+    2026-11-18 Use the '=' code (not '+', which is for articles) for added copulas, e.g., '\\add =was\\add*_over¦14'
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -79,10 +82,10 @@ import bos_books_codes_py
 from ot_gloss_fallbacks import fix_known_gloss_duplication, recover_missing_word_glosses, select_gloss
 
 
-LAST_MODIFIED_DATE = '2026-10-31' # by RJH
+LAST_MODIFIED_DATE = '2026-11-18' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '1.0.8'
+PROGRAM_VERSION = '1.0.9'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -281,6 +284,9 @@ def loadSourceWordGlossTable() -> bool:
 illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
 illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters immediately AFTER the wordlink number
 doubledND, badAddND, badNDAdd = '\\nd \\nd ', '\\add \\nd ', '\\nd*\\add*'
+# An article or copula that the English needed, e.g., '\\add +the\\add*' or '\\add =will_be\\add*'
+#   Since it doesn't translate the Hebrew word, it mustn't have the Hebrew word number.
+addedArticleOrCopulaRegex = re.compile( r'\\add [+=][^\\]*\\add\*' )
 mmmCount = wwwwCount = 0
 def export_literal_English_gloss_esfm() -> bool:
     """
@@ -685,7 +691,9 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             # gloss such as 'and=when,he_came'. Underscores normally join the
             # English words of a single morpheme, so retain only the old
             # unambiguous one-underscore fallback when no boundary is marked.
-            boundary = max(gloss.rfind(separator) for separator in '=,÷')
+            # (The '=' of an '\add =was\add*' added copula is a code, not a morpheme separator, so hide it here.)
+            maskedGloss = gloss.replace( '\\add =', '\\add \x00' ) # Same length, so the indexes still apply to gloss
+            boundary = max(maskedGloss.rfind(separator) for separator in '=,÷')
             joiner = '='
             if boundary < 0 and gloss.count('_') == 1:
                 boundary, joiner = gloss.index('_'), '_'
@@ -885,7 +893,7 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
         for article in ('the','a','those'):
             gloss = gloss.replace( f'[{article}]', f'\\add +{article}\\add*' )
         for copula in ('is','was','am','are','does','will','will_be','did','were','has_been','have_been','be','are_being'):
-            gloss = gloss.replace( f'[{copula}]', f'\\add +{copula}\\add*' )
+            gloss = gloss.replace( f'[{copula}]', f'\\add ={copula}\\add*' ) # '=' is the added copula code ('+' is for articles)
         for implied in ('one','ones','thing','things','person','people',
                         'animal','woman','men','measures','city','portion','cubits','wings','part','stone','time','craftsmen','nations'):
             gloss = gloss.replace( f'[{implied}]', f'\\add >{implied}\\add*' )
@@ -924,6 +932,8 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
                     .replace( '!', '' ) # Otherwise just get rid of (interpreted) exclamation marks in the LV
 
     # Append the word (row) number(s) and replace comma morpheme separator
+    #   (but don't treat the '=' added copula code, e.g., '\\add =was\\add*', as an '=' morpheme separator)
+    gloss = gloss.replace( '\\add =', 'PROTECTCOPULAADD' )
     gloss = f"{gloss.replace('=', f'{wn}=')
                     .replace('*,','PROTECTASTERISKFROMWORDNUMBER').replace(',', f'{wn}÷').replace('PROTECTASTERISKFROMWORDNUMBER','*÷')
                     .replace('\\add*', f'{wn}\\add*')
@@ -934,6 +944,10 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
                     .replace('PROTECTADD', '\\add*_')}"
     # if gloss.endswith( '!' ): gloss = f'{gloss[:-1]}{wn}!'
     if not gloss.endswith( '*' ): gloss = f'{gloss}{wn}'
+    gloss = gloss.replace( 'PROTECTCOPULAADD', '\\add =' )
+    # Now take the word number(s) back off the articles and copulas that the English needed,
+    #   e.g., '\\add =was¦14\\add*_over¦14' -> '\\add =was\\add*_over¦14'
+    gloss = addedArticleOrCopulaRegex.sub( lambda match: match.group(0).replace( wn, '' ), gloss )
 
     # if '\\add' in gloss:
     #     print( f"    Returning {gloss=} from ( {originalGloss=}, {wn=} )")

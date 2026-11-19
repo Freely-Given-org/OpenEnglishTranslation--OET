@@ -16,8 +16,8 @@
 #   Those 'added words' spans are written both as '\add ...\add*' and as
 #   '\+add ...\+add*', and the two mean exactly the same thing, so we treat them
 #   identically.  (Don't confuse '\+add people\+add*' with '\add +the\add*' —
-#   the OET-LV uses '\add +the¦1234\add*' for an inserted article that DOES have
-#   a word number.)
+#   the OET-LV uses '\add +the\add*' for an inserted article and '\add =is\add*' for an
+#   inserted copula.  Since 2026-11-18 the OET-LV no longer gives those inserted words a word number.)
 #
 # Words inside the OTHER \add spans (e.g., \add ≈..., \add @..., \add #..., etc.)
 #   are rewordings of the original words and may legitimately keep their numbers,

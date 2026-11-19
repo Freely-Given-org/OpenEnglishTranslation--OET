@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-11-16 07:45 by extract_glossed_OSHB_OT_to_ESFM v1.0.8
+\rem ESFM file created 2026-11-18 16:18 by extract_glossed_OSHB_OT_to_ESFM v1.0.9
 \rem ESFM file edited by ScriptedBibleEditor v0.8.3 using ScriptedOTUpdates
 \h 2 Shəmū\sup ʼēl\sup*/(Samuel)
 \toc1 2 Shəmū\sup ʼēl\sup*
@@ -37,7 +37,7 @@
 \v 21 Oh_mountains_of in÷Gilboˊa not dew and÷not rain \add be\add*_on÷you(pl) and÷fields_of contributions if/because there \add the\add*_shield_of \add the\add*_mighty_\add ones\add* it_was_defiled the_shield_of Shāʼūl not \add was\add*_anointed with÷oil.
 \v 22 From_\add the\add*÷blood_of \add those\add*_slain from_\add the\add*÷fat_of \add the\add*_mighty_\add ones\add* the_bow_of Yōnātān/(Yəhōnātān/(Jonathan)) not it_turned_back backwards and÷the_sword_of Shāʼūl not it_returned empty.
 \v 23 Shāʼūl and÷Yōnātān (the)÷lovable and÷(the)÷pleasant in÷lives_of÷their and÷in÷death_of÷their not they_were_separated more÷than_eagles they_were_swift more÷than_lions they_were_strong.
-\v 24 Oh_daughters_of Yisrā\sup ʼēl\sup*/(Israel) because_of Shāʼūl/(Saul) weep \add who\add*÷clothed_of÷you(pl) scarlet with luxuries \add who\add*_brought÷up ornament[s]_of gold on clothing_of÷your(pl).
+\v 24 Oh_daughters_of Yisrā\sup ʼēl\sup*/(Israel) because_of Shāʼūl weep \add who\add*÷clothed_of÷you(pl) scarlet with luxuries \add who\add*_brought÷up ornament[s]_of gold on clothing_of÷your(pl).
 \v 25 How \add the\add*_mighty_\add ones\add* they_have_fallen in_the=middle of÷the_battle Yōnātān on places_of÷your_high \add is\add*_slain.
 \v 26 It_is_distress to=me on÷you my=brother/kindred Yōnātān you_were_pleasant to/for=me very love_of÷your it_was_wonderful to=me more÷than_\add the\add*_love_of women.
 \v 27 How \add the\add*_mighty_\add ones\add* they_have_fallen and= \add the\add*_weapons_of war =they_have_perished.
@@ -581,11 +581,11 @@
 \v 41 \f + \fr 19:41 \ft Note: KJB: 2Sam.19.40\f* And= the=king =he/it_passed_through to÷(the)÷Gilgal and÷Kimhan he_passed_over with=him/it and=all the_people_of Yəhūdāh/(Judah) and\f + \fr 19:41 \ft OSHB variant note: ו/יעברו: (x-qere) 'הֶעֱבִ֣ירוּ': lemma=5674 a morph=HVhp3cp id=10JTf הֶעֱבִ֣ירוּ\f* DOM the=king and=also (the)_half_of the_people_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 42 \f + \fr 19:42 \ft Note: KJB: 2Sam.19.41\f* And=BEHOLD/LO/SEE every_of (the)_man_of Yisrā\sup ʼēl\sup*/(Israel) \add were\add*_coming to the=king and=they_said to the=king why did÷they_steal_you brothers_of÷our the_man_of Yəhūdāh and÷they_brought_over DOM the=king and=DOM household_of÷his DOM the÷Yardēn/(Jordan) and=all the_men_of Dāvid with=him/it.
 \v 43 \f + \fr 19:43 \ft Note: KJB: 2Sam.19.42\f* And= every_of (the)_man_of Yəhūdāh =he_answered to the_man_of Yisrā\sup ʼēl\sup*/(Israel) if/because \add is\add*_close the=king to=me and=for=what this has_it_burnt to/for=yourself(m) on the÷matter the=this ever÷(eat) have_we_eaten from the=king or ever_(be_taken_away) has_it_been_taken_away to/for=us.
-\v 44 \f + \fr 19:44 \ft Note: KJB: 2Sam.19.43\f* And= the_man_of Yisrā\sup ʼēl\sup*/(Israel) =he_answered DOM the_man_of Yəhūdāh and=he/it_said ten hands to=me in÷king and=also in÷Dāvid I more÷than_you and÷why did÷you_treat_me_with_contempt and=not message_of÷my was_it first to=me to÷bring_back DOM king_of÷my and= the_message_of the_man_of Yəhūdāh/(Judah) =it_was_hard more÷than_the_message_of the_man_of Yisrā\sup ʼēl\sup*/(Israel).
+\v 44 \f + \fr 19:44 \ft Note: KJB: 2Sam.19.43\f* And= the_man_of Yisrā\sup ʼēl\sup*/(Israel) =he_answered DOM the_man_of Yəhūdāh and=he/it_said ten hands to=me in÷king and=also in÷Dāvid I more÷than_you and÷why did÷you_treat_me_with_contempt and=not message_of÷my was_it first to=me to÷bring_back DOM king_of÷my and= the_message_of the_man_of Yəhūdāh =it_was_hard more÷than_the_message_of the_man_of Yisrā\sup ʼēl\sup*/(Israel).
 \c 20
 \nb
 \v 1 And=there a_man_of worthlessness he_was_met and=his/its=name \add was\add*_Sheⱱaˊ the_son_of Bicri a_man a_Jaminite and÷he_gave_a_blast on÷trumpet and=he/it_said there_\add is\add*_not to/for=us a_portion in÷Dāvid and=not an_inheritance to/for=us in÷the_son_of Yishay/(Jesse) everyone to÷tents_of÷his Oh_Yisrā\sup ʼēl\sup*/(Israel).
-\v 2 And= every_of (the)_man_of Yisrā\sup ʼēl\sup*/(Israel) =he/it_ascended from÷after Dāvid after Sheⱱaˊ the_son_of Bicri and÷the_man_of Yəhūdāh they_clung to÷king_of÷their from the÷Yardēn/(Jordan) and=unto Yərūshālaim/(Jerusalem).
+\v 2 And= every_of (the)_man_of Yisrā\sup ʼēl\sup*/(Israel) =he/it_ascended from÷after Dāvid after Sheⱱaˊ the_son_of Bicri and÷the_man_of Yəhūdāh/(Judah) they_clung to÷king_of÷their from the÷Yardēn/(Jordan) and=unto Yərūshālaim/(Jerusalem).
 \v 3 And= Dāvid =he_came to house_of÷his Yərūshālaim/(Jerusalem) and= the=king =he/it_took DOM \add the\add*_ten women concubines whom he_had_left to=guard/protect the÷house and÷he÷put_them a_house_of confinement and÷he÷sustained_them and÷into÷them not he_went and÷they_were locked_up until the_day_of died÷they widowhood_of living.
 \v 4 And= the=king =he/it_said to ˊAmāsāʼ summon to=me DOM the_man_of Yəhūdāh three_of days and=you(ms) here stand.
 \v 5 And=he/it_went ˊAmāsāʼ to÷summon DOM Yəhūdāh and\f + \fr 20:5 \ft OSHB variant note: ו/ייחר: (x-qere) 'וַ/יּ֕וֹחֶר': lemma=c/309 n=0.1 morph=HC/Vhw3ms id=10qhb וַ/יּ֕וֹחֶר\f* from the_appointed÷time which he÷had_appointed_for_him.
@@ -594,13 +594,13 @@
 \v 8 They \add were\add*_near the÷stone (the)÷great which \add is\add*_in÷Giⱱˊōn and÷ˊAmāsāʼ he_came before÷them and÷Yōʼāⱱ \add was\add*_girded garment_of÷his clothing_of÷his it\f + \fr 20:8 \ft OSHB variant note: ו/על/ו: (x-qere) 'וְ/עָלָ֞י/ו': lemma=c/5921 a n=0.1.1.0 morph=HC/R/Sp3ms id=10bus וְ/עָלָ֞י/ו\f* a_belt_of a_sword \add was\add*_fastened on loins_of÷his in÷sheath_of÷its and=he he_went_forward and÷it_fell.
 \v 9 And= Yōʼāⱱ =he/it_said to÷ˊAmāsāʼ peace \add are\add*_you my=brother/kindred and= the_hand_of the_right_side_of Yōʼāⱱ =it_took_hold on÷the_beard_of ˊAmāsāʼ to÷kiss to=him/it.
 \v 10 And÷ˊAmāsāʼ not he_took_heed to÷sword which \add was\add*_in÷the_hand_of Yōʼāⱱ and÷he÷struck_him with÷it into the÷belly and= bowels_of÷his =he_poured_out towards=land and=not he_repeated to=him/it and=he/it_died and÷Yōʼāⱱ and÷ʼAⱱīshay his/its=brother he_pursued after Sheⱱaˊ the_son_of Bicri.
-\v 11 And÷a_man he_stood on/upon/above=him/it one÷of_the_young_men_of Yōʼāⱱ and=he/it_said who \add is_the_one\add*_who he_delights in÷Yōʼāⱱ/(Joab) and÷who \add is_the_one\add*_who \add belongs\add*_to÷Dāvid after Yōʼāⱱ.
+\v 11 And÷a_man he_stood on/upon/above=him/it one÷of_the_young_men_of Yōʼāⱱ and=he/it_said who \add is_the_one\add*_who he_delights in÷Yōʼāⱱ and÷who \add is_the_one\add*_who \add belongs\add*_to÷Dāvid after Yōʼāⱱ/(Joab).
 \v 12 And÷ˊAmāsāʼ \add was\add*_rolling in÷blood in_the=middle of÷the_highway\f + \fr 20:12 \ft OSHB note: We read punctuation in L differently from BHS.\f* and= the=man =he/it_saw if/because_that all_of the÷people it_stopped and÷he_brought_round DOM ˊAmāsāʼ from the÷highway the=field and÷he_threw on/upon/above=him/it a_garment just=as every_of (the)_\add one÷who\add*_came on/upon/above=him/it he_saw and÷he_stopped.
 \v 13 Just=as he_had_removed_\add him\add* from the÷highway every_of person he_passed_on after Yōʼāⱱ to÷pursue after Sheⱱaˊ the_son_of Bicri.
 \v 14 And÷he_passed in=all the_tribes_of Yisrā\sup ʼēl\sup*/(Israel) to÷ʼĀⱱēl and÷Bēyt- maˊₐkāh and=all the÷Berites and\f + \fr 20:14 \ft OSHB variant note: ו/יקלהו: (x-qere) 'וַ/יִּקָּ֣הֲל֔וּ': lemma=c/6950 n=0.1 morph=HC/VNw3mp id=10n34 וַ/יִּקָּ֣הֲל֔וּ\f* and=they_came also after÷him.
 \v 15 And=they_came and÷they_laid_siege on/upon/above=him/it in÷of house_of maˊₐkāh and÷they_poured_out a_mound against the=city and÷it_stood by÷rampart and=all the÷people which \add was\add*_with Yōʼāⱱ \add were\add*_about_to_destroy to÷make_fall the÷wall.
-\v 16 And= a_woman wise =she/it_called/named from the=city listen listen say please to Yōʼāⱱ/(Joab) draw_near to here so÷that_I_may_speak to÷you.
-\v 17 And÷he_drew_near to=her/it and= the=woman =she/it_said \add are\add*÷you Yōʼāⱱ and=he/it_said I_\add am\add* and=she/it_said to=him/it listen_to the_words/messages_of your(ms)=female_slave and=he/it_said I \add am\add*_listening.
+\v 16 And= a_woman wise =she/it_called/named from the=city listen listen say please to Yōʼāⱱ draw_near to here so÷that_I_may_speak to÷you.
+\v 17 And÷he_drew_near to=her/it and= the=woman =she/it_said \add are\add*÷you Yōʼāⱱ/(Joab) and=he/it_said I_\add am\add* and=she/it_said to=him/it listen_to the_words/messages_of your(ms)=female_slave and=he/it_said I \add am\add*_listening.
 \v 18 And=she/it_said to=say surely_(speak) they_spoke at÷\add time\add* to=say really_(ask) they_will_ask at÷ʼĀⱱēl and=thus/so/as_follows they_ceased.
 \v 19 I \add am\add*_the_peaceful_\add ones\add*_of the_faithful_\add ones\add*_of Yisrā\sup ʼēl\sup*/(Israel) you \add are\add*_seeking to÷kill a_city and÷a_mother in÷Yisrā\sup ʼēl\sup*/(Israel) to/for=what will_you_swallow_up the_inheritance_of \nd YHWH\nd*.
 \v 20 And= Yōʼāⱱ =he_answered and÷he_said far÷be_it far÷be_it to=me if I_will_swallow_up and=if I_will_destroy.

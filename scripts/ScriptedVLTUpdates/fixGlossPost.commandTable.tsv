@@ -9,10 +9,10 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 									\add things¦\add			\add >things¦\add
 
 # = indicates GlossPost copula
-									\add am¦\add			\add =am¦\add
-									\add are¦\add			\add =are¦\add
-									\add is¦\add			\add =is¦\add
-									\add than¦\add			\add =than¦\add
+									\add am¦\add			\add =am\add
+									\add are¦\add			\add =are\add
+									\add is¦\add			\add =is\add
+									\add than¦\add			\add =than\add
 
 # < indicates GlossPost direct object
 									\add him¦\add			\add <him¦\add

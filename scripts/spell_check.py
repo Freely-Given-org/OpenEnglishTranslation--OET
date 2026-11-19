@@ -38,10 +38,10 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-11-17' # by RJH
 SHORT_PROGRAM_NAME = "spell_check"
 PROGRAM_NAME = "OET Spell Check"
-PROGRAM_VERSION = '0.33'
+PROGRAM_VERSION = '0.34'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -61,10 +61,7 @@ OET_RV_NAMES_TSV_FILEPATH = project_folderpath.joinpath( 'translatedTexts/Reader
 assert OET_RV_NAMES_TSV_FILEPATH.is_file()
 EXPECTED_OET_RV_NAMES_TSV_HEADER = 'TraditionalName\tGrkName\tRVName\tExplained\tComment'
 
-TED_Dict_folderpath1 = Path( '../../../Documents/RobH123/TED_Dict/sourceDicts/')
-TED_Dict_folderpath2 = Path( '../../../RobH123/TED_Dict/sourceDicts/')
-if TED_Dict_folderpath1.is_dir(): TED_Dict_folderpath = TED_Dict_folderpath1
-if TED_Dict_folderpath2.is_dir(): TED_Dict_folderpath = TED_Dict_folderpath2
+TED_Dict_folderpath = Path( '/srv/Programming/RobH123/TED_Dict/sourceDicts/')
 assert TED_Dict_folderpath.is_dir()
 
 

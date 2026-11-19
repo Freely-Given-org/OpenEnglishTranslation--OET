@@ -156,7 +156,7 @@ class ReorderingTests(unittest.TestCase):
         # The renderer repairs this existing source gloss before capitalising.
         rows, _ = fixture([('1a', 'R', '[will', 'P2PP'),
                            ('1b', 'Ncmsa', 'in_the_month', 'N2NP')])
-        self.assertTrue(self.render(rows)[0].startswith('\\add +Will\\add*'))
+        self.assertTrue(self.render(rows)[0].startswith('\\add =Will\\add*')) # 'will' is an added copula
 
     def test_maqaf_and_shifted_word_numbers_use_verified_identities(self):
         rows, macula = jeremiah()

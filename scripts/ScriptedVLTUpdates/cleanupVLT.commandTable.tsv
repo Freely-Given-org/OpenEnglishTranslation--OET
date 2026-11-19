@@ -61,3 +61,13 @@ l									  			 	reduceDoubleSpaces	Reduce double spaces in entire file
 #  (these probably don't work anymore due to word numbers)
 									 the the_			 the 		Trailing space
 									 the these			 these
+
+# Doubled articles from upstream VLT (Greek article plus a gloss that also adds an article, e.g., MAT 28:16 'the ˓the˒ eleven')
+#   Applied after tagUnusedArticles so '\untr the¦…\untr*' is never matched. Should become no-ops once fixed upstream.
+									 the¦ \add +the\add*_			 the¦ 	removeDoubledAddedThe	e.g., MAT 28:16, ACT 3:13
+									_the¦ \add +the\add*_			_the¦ 	removeDoubledAddedThe2	e.g., ACT 15:11 of_the the Lord
+									 the¦ \add +a\add*_			 the¦ 	removeAddedAAfterThe	ACT 16:22
+									 the¦ \add +an\add*_			 the¦ 	removeAddedAnAfterThe	ACT 20:32
+									 the¦ the¦ 			 the¦ \untr the¦\untr* 	untrSecondAttributiveArticle	Article–noun–article–adjective reordered without ¬, e.g., MAT 8:12 the the outer darkness
+									_the¦ the¦ 			_the¦ \untr the¦\untr* 	untrSecondAttributiveArticle2	LUK 8:29 to_the the spirit
+									\add +a\add*_ \add +a\add*_			\add +a\add*_ 	removeDoubledAddedA	Split gloss doubles 'a', e.g., MAT 27:32, LUK 10:38
