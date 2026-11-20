@@ -1,8 +1,9 @@
 # OET makefile
 #
-# Last updated: 2026-11-06
+# Last updated: 2026-11-20
 #
 # CHANGELOG:
+#   2026-11-20 Regenerate the OET-RV book titles table when RV books change.
 #   2026-11-06 Build incremental SILE print/screen PDF downloads after RV/LV producers.
 #   2026-11-05 Write manual release versions and stable content fingerprints per LV resource.
 #   2026-11-01 Default to ALL and remove LV_LAO, clean_RV, and check shortcuts.
@@ -70,6 +71,7 @@ LV_NT_HTML := $(patsubst %,../exportedFiles/simpleHTML/LiteralVersion/%.html,$(E
 RV_HTML := $(patsubst %,../exportedFiles/simpleHTML/ReadersVersion/%.html,$(HTML_BOOKS))
 
 RV_ESFM := $(RV_ESFM_SOURCE)
+RV_titles_table := ../translatedTexts/ReadersVersion/OET-RV_book_titles.md
 final_LV_OT_ESFM := $(patsubst %,../derivedTexts/auto_edited_OT_ESFM/OET-LV_%.ESFM,$(ESFM_OT_BOOKS))
 final_LV_NT_ESFM := $(patsubst %,../derivedTexts/auto_edited_VLT_ESFM/OET-LV_%.ESFM,$(ESFM_NT_BOOKS))
 final_LV_NT_word_table := ../derivedTexts/auto_edited_VLT_ESFM/OET-LV_NT_word_table.tsv
@@ -164,7 +166,7 @@ LV: LV_OT LV_NT LV_DC $(LV_names_version_file)
 
 LV_OT: $(LV_OT_HTML) $(LV_OT_version_file)
 LV_NT: $(LV_NT_HTML) $(Clear_Bible_NT_lowfat_TSV) $(LV_NT_version_file)
-RV: $(RV_HTML)
+RV: $(RV_HTML) $(RV_titles_table)
 
 #=== Draft LV deuterocanonical books =======================
 # Greek drafts reuse the NT transliterator; LAO uses Lightfoot Latin and explicit
@@ -331,6 +333,12 @@ $(RV_word_tables_sentinel): $(LV_OT_word_tables_sentinel) $(final_LV_OT_word_tab
 	@touch $@
 
 $(final_RV_OT_word_tables): $(RV_word_tables_sentinel)
+
+# Review table of all RV \mt, \h and \toc lines (the script keeps identical output untouched).
+$(RV_titles_table): $(RV_ESFM) create_OET-RV_book_titles_table.py
+	@echo "\n\nCreate OET-RV book titles table…\n"
+	@$(UVrun) create_OET-RV_book_titles_table.py
+	@touch $@
 
 RV_sentinel := ../translatedTexts/ReadersVersion/.connected_sentinel
 RV_HTML_sentinel := ../exportedFiles/simpleHTML/ReadersVersion/.html_sentinel
