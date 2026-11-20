@@ -1,4 +1,4 @@
-\id 1CH - Open English Translation—Readers' Version (OET-RV) v0.2.19
+\id 1CH - Open English Translation—Readers' Version (OET-RV) v0.2.20
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CH1
@@ -6,13 +6,14 @@
 \h 1 Chronicles
 \toc1 1 Chronicles
 \toc2 1 Chronicles
-\toc3 1 Chr.
+\toc3 1 Chr
 \mt2 The first
 \mt1 Sequential Account
-\mt2 (1 Chronicles)
+\mt3 commonly called
+\mt2 1 Chronicles
 \is1 Introduction
-\ip The \bk First\bk* and the \bk Second Account of Chronicles\bk* are a retelling of lots of what's included in \bk The accounts about Shmuel (Samuel)\bk* and of \bk The accounts about the kings\bk*, but told in different words. There seem to be two primary purposes for this account:
-\ip 1. So that the reader can learn more about the destruction of Yehudah (Judah) and Yisrael (Israel), as God fulfilled his promise and plans for his people. This writer illustrates the achievements of David, Shelomoh (Solomon), of Yehoshafat (Jehoshaphat), Hizkiyah (Hezekiah), of Yoshiyah (Josiah), along with other people who obeyed Yahweh's instructions.
+\ip The \bk First\bk* and the \bk Second Account of Chronicles\bk* are a retelling of lots of what's included in \bk The accounts about Shmuel/Samuel\bk* and of \bk The accounts about the kings\bk*, but told in different words. There seem to be two primary purposes for this account:
+\ip 1. So that the reader can learn more about the destruction of Yehudah/Judah and Yisrael/Israel, as God fulfilled his promise and plans for his people. This writer illustrates the achievements of David, Shelomoh/Solomon, of Yehoshafat/Jehoshaphat, Hizkiyah/Hezekiah, of Yoshiyah/Josiah, along with other people who obeyed Yahweh's instructions.
 \ip 2. To document the division of the priests and Levites in preparation for their service in the soon-to-be-built temple for Yahweh, and the extensive preparations by King David that were eventually handed over to King Shelomoh. Yahweh had carefully instructed David about how he wanted the temple worship to operate, and then this was all written down and handed over to Shelomoh, who would be the one who would go on to construct the buildings and all the furnishings and equipment and utensils that were required for its functioning.
 \iot Main components of this document
 \io1 Lists of the ancestors \ior 1:1–9:44\ior*
@@ -151,7 +152,7 @@
 \v 15 Otsem¦187762 sixth¦187763, then David¦187764 \add ≈last\add*.
 \v 16 Their¦187767 sisters¦187767 were Tseruyah¦187769 and¦187770 Avigayil¦187770. Tseruyah's¦187772 three¦187778 sons¦187771 were Avishay¦187773, Yoav¦187774 \add !(Joab¦187774)\add*, and¦187775 Asahel.
 \v 17 Avigayil¦187780 had Amasa¦187784. Amasa's¦187786 father¦187785 was Yeter¦187787, a descendant of Yishmael \add !(Ishmael)\add*.
-\s1 The descendants of Kalev (Caleb)
+\s1 The descendants of Kalev/Caleb
 \rem /s1 The Descendants of Hezron; Descendants of Hezron's Son Caleb
 \rem /s2 Caleb Son of Hezron
 \p
@@ -225,7 +226,7 @@
 \v 7 Nogah¦188373, Nefeg¦188374, Yafia¦188375,
 \v 8 Elishama¦188377, Elyada¦188378, and¦188379 Elifelet¦188379. (Nine¦188380 in all.)
 \v 9 David¦188384 also¦188389 had sons from his slave-wives. Their¦188390 sister¦188390 was Tamar¦188389.
-\s1 Descendants of King Shelomoh (Solomon)
+\s1 Descendants of King Shelomoh/Solomon
 \rem /s1 The Descendants of King Solomon; Descendants of Solomon
 \rem /s2 The Kings of Judah
 \p
@@ -249,7 +250,7 @@
 \v 23 Nearyah's¦188510 three¦188514 sons¦188508 were¦188511 Elyehoeynay¦188511, Hizkiyah¦188512, and¦188513 Azrikam¦188513.
 \v 24 Elyehoeynay's¦188517 seven¦188526 sons¦188516 were Hodavyah¦188518, Elyashiv¦188520, Pelayah¦188521, Akuv¦188522, Yohanan¦188523, Delayah¦188524, and¦188525 Anani¦188525.
 \c 4
-\s1 The other descendants of Yehudah (Judah)
+\s1 The other descendants of Yehudah/Judah
 \rem /s1 The Descendants of Judah; Descendants of Judah; Other Descendants of Judah
 \rem /s2 Other Clans of Judah
 \p
@@ -288,7 +289,7 @@
 \v 21 The¦188826 sons¦188826 of¦188826 Shela¦188827 (one of¦188828 Yehudah's¦188830 \add !(Judah's¦188830)\add* sons) were Er¦188831 (father¦188832 of¦188832 Lekah¦188833), Laedah¦188834 (father¦188835 of¦188835 Mareshah¦188836 and¦188837 the¦188837 clans¦188837 \add ≈who worked¦188840 with\add* linen¦188841 at Beyt-Eshbea¦188843),
 \v 22 Yokim¦188845 and¦188846 the¦188846 men¦188846 of¦188846 Kozava¦188847, and¦188848 Yoash¦188848 and¦188849 Saraf¦188849, who¦188850 ruled¦188852 in Moav¦188853 \add !(Moab¦188853)\add* and¦188854 Yashuvi-Lehem. (\add ≈All that is¦188857 from ancient¦188857 records\add*.)
 \v 23 They¦188859 were the¦188860 potters¦188860 \add ≈who lived¦188861 in\add* Netaeim¦188862 and¦188863 Gederah¦188863—they¦188868 lived¦188868 there¦188869 and \add ≈worked for\add* the¦188866 king¦188866.
-\s1 The descendants of Shim'on (Simeon)
+\s1 The descendants of Shim'on/Simeon
 \rem /s1 The Descendants of Simeon; Descendants of Simeon; Simeon
 \p
 \v 24 Shim'on's¦188873 \add !(Simeon's¦188873)\add* sons were Nemuel¦188874, Yamin¦188875, Yariv¦188876, Zerah¦188877, and Shaul¦188878.
@@ -500,7 +501,7 @@
 \v 80 From¦190616 the¦190616 Gad¦190618 tribe¦190616, \add they received these cities and\add* their nearby pastureland: Ramot¦190621 in¦190622 the Gilead¦190622 \add region\add*, Mahanayim¦190628,
 \v 81 Heshbon¦190636, and Yazer¦190642.
 \c 7
-\s1 The descendants of Yisakar (Issachar)
+\s1 The descendants of Yisakar/Issachar
 \rem /s1 The Descendants of Issachar; Issachar; Descendants of Issachar
 \p
 \v 1 Yisakar's¦190649 \add !(Issachar's¦190649)\add* four¦190655 sons¦190648 were Tola¦190650, Puah¦190651, Yashuv¦190652, and¦190654 Shimron¦190654.
@@ -522,7 +523,7 @@
 \v 11 All¦190798 those¦190800 descendants¦190801 of¦190801 Yedieael¦190802 were \add ≈clan leaders\add* and¦190811 \add ≈strong\add* warriors, having 17,200 men ready to go¦190812 to war¦190813.
 \p
 \v 12 The Shupim¦190816 and¦190817 Hupim¦190817 were descendants¦190818 of¦190818 Ir¦190819, \add and\add* the Hushim¦190820 were descendants¦190821 of¦190821 Aher¦190822.
-\s1 The descendants of Naftali (Naphtali)
+\s1 The descendants of Naftali/Naphtali
 \rem /s1 Descendants of Naphtali; The Descendants of Naphtali; Naphtali
 \p
 \v 13 Naftali's¦190825 \add !(Naphtali's¦190825)\add* sons were Yahtsiel¦190826, Guni¦190827, Yetser¦190828, and¦190829 Shalum¦190829. (\add They were\add* descendants¦190830 of¦190830 \add Ya'akov's\add* \add !(Jacob's)\add* \add slave-wife\add* Bilhah¦190831.)
@@ -620,7 +621,7 @@
 \v 30 His¦191390 sons¦191390, \add starting with\add* the¦191391 eldest¦191391, were¦191392 Avdon¦191392, Tsur¦191393, Kish¦191394, Ba'al¦191395, Nadav¦191396,
 \v 31 Gedor¦191398, Ahyo¦191399, and¦191400 Zeker¦191400.
 \v 32 Miklot¦191402 \add (another of Yeiel's sons)\add* was Shimeah's¦191406 father¦191403. All those descendants of Yeiel also¦191407 lived¦191412 in¦191413 Yerushalem¦191413 \add !(Jerusalem¦191413)\add* near their¦191416 relatives¦191411.
-\s1 The descendants of King Sha'ul (Saul)
+\s1 The descendants of King Sha'ul/Saul
 \rem /s1 The Family of King Saul
 \p
 \v 33 Ner¦191419 was the father¦191420 of Kish¦191423. Kish¦191424 was the father¦191425 of \add King\add* Sha'ul¦191428 \add !(Saul¦191428)\add*. Sha'ul¦191429 was the father¦191430 of Yonatan¦191433 \add !(Jonathan¦191433)\add*, Malkishua¦191438, Avinadav¦191441, and¦191442 Eshba'al¦191444.
