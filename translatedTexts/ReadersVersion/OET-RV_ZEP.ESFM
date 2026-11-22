@@ -1,4 +1,4 @@
-\id ZEP - Open English Translation—Readers' Version (OET-RV) v0.2.6
+\id ZEP - Open English Translation—Readers' Version (OET-RV) v0.2.8
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 ZEP
@@ -19,7 +19,7 @@
 \ie
 \c 1
 \p
-\v 1 The¦374619 message¦374619 from Yahweh¦374621 which¦374623 came¦374624 to¦374625 Tsefanyah¦374627 \add !(Zephaniah¦374627)\add* (son¦374628 of¦374628 Kush \add !(Ethiopia)\add*, son¦374631 of¦374631 Gedalyah¦374633, son¦374634 of¦374634 Amaryah¦374636, son¦374637 of¦374637 Hizkiyah¦374639 \add !(Hezekiah¦374639)\add*) in¦374640 the¦374640 \add ≈time¦374640\add* of¦374642 Amon's¦374644 son, King¦374645 Yoshiyah¦374641 \add !(Josiah¦374641)\add* of¦374645 Yehudah¦374646 \add !(Judah¦374646)\add*\x + \xo 1:1: \xt 2Ki 22:1–23:30; 2Ch 34:1–35:27.\x*
+\v 1 The¦374619 message¦374619 from Yahweh¦374621 which¦374623 came¦374624 to¦374625 Tsefanyah¦374627 \add !(Zephaniah¦374627,\add* son¦374628 of¦374628 Kush \add !(Ethiopia)\add*, son¦374631 of¦374631 Gedalyah¦374633, son¦374634 of¦374634 Amaryah¦374636, son¦374637 of¦374637 Hizkiyah¦374639 \add !(Hezekiah¦374639)\add*) in¦374640 the¦374640 \add ≈time¦374640\add* of¦374642 Amon's¦374644 son, King¦374645 Yoshiyah¦374641 \add !(Josiah¦374641)\add* of¦374645 Yehudah¦374646 \add !(Judah¦374646)\add*\x + \xo 1:1: \xt 2Ki 22:1–23:30; 2Ch 34:1–35:27.\x*
 \s1 Coming judgement against Yehudah
 \rem /s1 The Day of the Lord's Judgment; The Coming Judgment on Judah; Coming Judgment against Judah; Doom on Judah and her neighbours; Warning of Coming Destruction
 \s4 Southern kingdom
@@ -161,7 +161,7 @@
 \b
 \rem /s1 Judgment against Ethiopia and Assyria; Against Cush
 \q1
-\v 12 Also¦375151 you¦375153, \add Kushim\add* \add !(Ethiopians)\add* (Kushim), will be¦375155 \add ≈killed¦375155\add* by my¦375156 sword¦375156.\x + \xo 2:12: \xt Isa 18:1-7.\x*
+\v 12 Also¦375151 you¦375153, \add Kushim\add* \add !(Ethiopians,\add* Kushim), will be¦375155 \add ≈killed¦375155\add* by my¦375156 sword¦375156.\x + \xo 2:12: \xt Isa 18:1-7.\x*
 \b
 \rem /s1 Against Assyria
 \q1
@@ -205,7 +205,7 @@
 \q1 ≈He¦375274 doesn't \add ≈do¦375274 anything that's wrong\add*.
 \q1 He \add ≈makes fair and just judgements¦375278 every\add* morning¦375276.
 \q1 At \add every\add* dawn¦375277, he's¦375282 \add ≈present there\add*,
-\q1 and¦375283 \add ≈yet those who are¦375285 disobedient have no\add* shame¦375287.
+\q1 ^and¦375283 \add ≈yet those who are¦375285 disobedient have no\add* shame¦375287.
 \b
 \q1
 \v 6 I've¦375289 \add ≈destroyed\add* nations¦375290—\add ≈broken down their¦375292 walls\add*.
@@ -215,7 +215,7 @@
 \q1
 \v 7 I¦375305 said¦375305, ‘Surely¦375306 you¦375308 will¦375308 \add ≈respect¦375308\add* me¦375309 \add ≈and accept¦375310\add* correction¦375311.
 \q1 ≈Then¦375312 \add ≈she won't¦375312 die as a city because of¦375315 my punishing\add* her.’
-\q1 Nevertheless¦375321, they¦375322 \add ≈got up early¦375322 to do all¦375324 their¦375325 corrupt¦375323 activities\add*.
+\q1 ^Nevertheless¦375321, they¦375322 \add ≈got up early¦375322 to do all¦375324 their¦375325 corrupt¦375323 activities\add*.
 \b
 \p
 \rem /s1 Punishment and Conversion of the Nations
@@ -227,10 +227,10 @@
 \b
 \q1
 \v 9 Then¦375359 I'll¦375360 \add ≈be sure to give¦375360 pure speech\add* to¦375361 the peoples¦375363,
-\q1 so all¦375367 of¦375368 them can \add ≈pray to\add* Yahweh¦375369,
+\q1 →so all¦375367 of¦375368 them can \add ≈pray to\add* Yahweh¦375369,
 \q1 and serve¦375370 him¦375370 \add ≈side-by-side\add*.
 \q1
-\v 10 From¦375374 across the¦375375 rivers¦375375 of¦375375 \add Kush\add* \add !(Ethiopia)\add* (Kush¦375377), my¦375378 worshippers¦375378,
+\v 10 From¦375374 across the¦375375 rivers¦375375 of¦375375 \add Kush\add* \add !(Ethiopia,\add* Kush¦375377), my¦375378 worshippers¦375378,
 \q1 my¦375381 scattered¦375381 \add ≈children\add* \add will return and\add* bring¦375385 my¦375386 offering¦375386.
 \rem /s1 A remnant preserved
 \q1
@@ -243,7 +243,7 @@
 \q1
 \v 13 The¦375422 \add ≈surviving Israelis¦375423\add* won't¦375424 \add ≈do¦375426 what is wrong\add*.
 \q1 ≈They¦375430 won't tell¦375430 \add #lies¦375431\add* \add ≈or deceive¦375437 others\add*.\x + \xo 3:13: \xt Rev 14:5.\x*
-\q1 Instead they'll¦375441 \add ≈eat and¦375442 sleep¦375442 in peace\add*,
+\q1 ^Instead they'll¦375441 \add ≈eat and¦375442 sleep¦375442 in peace\add*,
 \q1 ≈No one¦375444 will be there¦375443 to terrify¦375444 them.
 \q1
 \s1 The song of happiness

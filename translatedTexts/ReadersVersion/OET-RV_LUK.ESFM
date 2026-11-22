@@ -1,4 +1,4 @@
-\id LUK - Open English Translation—Readers' Version (OET-RV) v0.4.14
+\id LUK - Open English Translation—Readers' Version (OET-RV) v0.4.16
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 LUK
@@ -118,7 +118,7 @@
 \q1 and¦38192 praises those who are humble¦38194.\x + \xo 1:52: \xt Yob 5:11; 12:19.\x*
 \q1
 \v 53 \add >Those who are\add* hungry¦38195, he¦38196 fills¦38196 with¦38197 good¦38197 \add >things\add*,
-\q1 but¦38198 \add >those who\add* are¦38199 rich¦38199, he¦38200 sends¦38200 away¦38200 empty¦38201 handed.
+\q1 ^but¦38198 \add >those who\add* are¦38199 rich¦38199, he¦38200 sends¦38200 away¦38200 empty¦38201 handed.
 \q1
 \v 54 He¦38202 took¦38202 good care¦38202 of¦38203 his¦38205 servant¦38204, Yisrael¦38203 \add !(Israel¦38203)\add*,
 \q1 to¦38206 be¦38206 reminded¦38206 of¦38207 mercy¦38207
@@ -166,7 +166,7 @@
 \v 73 that¦38512 he¦38513 had promised¦38513 Avraham¦38515, our¦38518 ancestor, that¦38519 he would give¦38520 us¦38521.
 \q1
 \v 74 He rescued¦38528 us from the \add ≈power\add* of¦38526 our enemies¦38526,
-\q1 so we could serve¦38529 him¦38530 without fear,
+\q1 →so we could serve¦38529 him¦38530 without fear,
 \q1
 \v 75 committed to obeying¦38534 him¦38536
 \q1 for¦38538 the¦38540 rest of¦38545 our lives.
@@ -175,10 +175,10 @@
 \q1 going¦38553 before \nd Yahweh¦38559\nd* to¦38560 prepare¦38560 his¦38562 paths¦38561,\x + \xo 1:76: \xt Mal 3:1.\x*
 \q1
 \v 77 to¦38564 give¦38564 knowledge¦38565 about¦38566 salvation¦38566 to¦38567 his¦38569 people¦38568
-\q1 so their¦38574 sins¦38572 \add ≈can be forgiven¦38571\add*
+\q1 →so their¦38574 sins¦38572 \add ≈can be forgiven¦38571\add*
 \q1
 \v 78 because¦38576 \nd God¦38579\nd* has \add #compassion¦38577\add* on us¦38580 and mercy¦38578.
-\q1 Thus the light from¦38587 heaven will¦38584 visit¦38584 us¦38585
+\q1 →Thus the light from¦38587 heaven will¦38584 visit¦38584 us¦38585
 \q1
 \v 79 to¦38589 shine¦38589 on those in¦38592 darkness¦38593 and¦38594 sitting¦38597 in¦38595 the shadow¦38595 of¦38596 death¦38596;\x + \xo 1:79: \xt Isa 9:2.\x*
 \q1 to¦38599 guide¦38599 us¦38602 onto the road¦38604 of¦38605 peace¦38605.”
@@ -273,7 +273,7 @@
 \r (Yhn 1:19-28; Mark 1:1-8; Mat. 3:1-12)
 \p
 \v 1 It was the fifteenth¦39676 year¦39674 of¦39677 the¦39677 rule of¦39680 Kaisar¦39681 Tiberios¦39680 when Pontios¦39684 Pilatos¦39685 \add !(Pilate¦39685)\add* was¦39683 the governor¦39683 of¦39687 Yehudah¦39687 \add !(Judea¦39687)\add* and¦39688 Herodes¦39693 \add !(Herod¦39693)\add* was¦39689 the ruler¦39689 of¦39692 the¦39691 Galili quarter. His¦39698 brother¦39697 Filippos¦39694 \add !(Philip¦39694)\add* was the¦39696 ruler¦39699 of¦39702 the¦39700 Iturean quarter and¦39707 of the Trakonitis region¦39710, and¦39711 Lusanias¦39712 was the¦39713 ruler¦39715 of¦39714 the Abilainai¦39714 quarter.
-\v 2 Hanan¦39719 \add !(Annas¦39719; Grk¦39719. Hannas¦39719)\add* and Kayafa¦39721 \add !(Caiaphas¦39721; Grk¦39721. Kaiafas¦39721)\add* were the high¦39717 \add #priests¦39717\add* \add in Yerushalem\add* \add !(Jerusalem)\add*, and¦39720 that was the time when Yohan¦39726 \add !(John¦39726; Grk¦39726. Yoannes¦39726)\add* (son¦39730 \nd of¦39729\nd* Zekaryah¦39729 \add !(Grk¦39729. Zakarias¦39729)\add*) began preaching \nd God's¦39724\nd* message¦39723 in¦39731 the¦39732 wilderness¦39733.
+\v 2 Hanan¦39719 \add !(Annas¦39719; Grk¦39719. Hannas¦39719)\add* and Kayafa¦39721 \add !(Caiaphas¦39721; Grk¦39721. Kaiafas¦39721)\add* were the high¦39717 \add #priests¦39717\add* \add in Yerushalem\add* \add !(Jerusalem)\add*, and¦39720 that was the time when Yohan¦39726 \add !(John¦39726; Grk¦39726. Yoannes¦39726,\add* son¦39730 \nd of¦39729\nd* Zekaryah¦39729 \add !(Grk¦39729. Zakarias¦39729)\add*) began preaching \nd God's¦39724\nd* message¦39723 in¦39731 the¦39732 wilderness¦39733.
 \v 3 He¦39735 went¦39735 around all¦39737 the areas¦39739 surrounding¦39739 the¦39740 Yarden¦39741 \add !(Jordan¦39741)\add* \add river\add*, telling¦39742 \add the people\add* that they could get \add ≈immersed¦39743\add* \add in water\add* as a sign they \add ≈were turning¦39744 away from disobeying God\add* and requesting forgiveness¦39746
 \v 4 just like¦39749 the¦39756 prophet¦39757 Yeshayah¦39755 \add !(Isaiah¦39755)\add* had written¦39750:
 \q1 ‘The voice¦39759 shouting¦39760 in¦39761 the¦39762 wilderness¦39763
@@ -307,7 +307,7 @@
 \v 17 He'll¦40087 hold the¦40060 winnowing¦40061 fork¦40061 so he can clear¦40068 out¦40068 the¦40069 threshing¦40070 floor¦40070, gathering¦40074 the¦40075 wheat¦40077 into¦40079 his barn¦40081 and¦40084 burning¦40087 up¦40087 the¦40083 chaff¦40085 with¦40088 a fire¦40088 that never goes out.”
 \p
 \v 18 \add @Yohan¦40097\add* preached¦40097 the good¦40097 message¦40097 to¦40099 the¦40099 people¦40100 and also¦40093 encouraged¦40096 them to change for the better.
-\v 19 \add *He\add* scolded¦40106 \add King\add* Herodes¦40103 \add !(Herod¦40103)\add* (who was the¦40104 ruler¦40105 of¦40114 the¦40114 \add Galili\add* quarter¦40105) about¦40109 \add ≈marrying\add* his¦40116 \add own\add* brother¦40115 Filippos's \add !(Philip's)\add* wife¦40112 Herodias¦40110.\x + \xo 3:19-20: \xt Mrk 6:17-18; Mat 14:3-4.\x* \add @Herodes¦40116\add* \add ≡had also been scolded by him\add* about¦40118 many¦40119 other evil¦40124 things that¦40122 \add *he'd\add* done¦40123,
+\v 19 \add *He\add* scolded¦40106 \add King\add* Herodes¦40103 \add !(Herod¦40103,\add* who was the¦40104 ruler¦40105 of¦40114 the¦40114 \add Galili\add* quarter¦40105) about¦40109 \add ≈marrying\add* his¦40116 \add own\add* brother¦40115 Filippos's \add !(Philip's)\add* wife¦40112 Herodias¦40110.\x + \xo 3:19-20: \xt Mrk 6:17-18; Mat 14:3-4.\x* \add @Herodes¦40116\add* \add ≡had also been scolded by him\add* about¦40118 many¦40119 other evil¦40124 things that¦40122 \add *he'd\add* done¦40123,
 \v 20 \add and then he\add* added¦40127 to¦40130 his evils by having Yohan¦40136 locked¦40133 up¦40133 in¦40137 prison¦40139.
 \s1 Yeshua's double baptism
 \rem /s1 The Baptism of Jesus; The Baptism and Genealogy of Jesus; The ancestry of the Messiah
@@ -444,7 +444,7 @@
 \v 8 When Shim'on¦41579 Kefa¦41580 \add !(Peter¦41580; Grk. Petros)\add* \add had a moment\add* to realise what had¦41575 just happened, he knelt¦41581 \add in the boat\add* in¦41581 front¦41581 \nd of¦41581 Yeshua¦41587\nd* and said¦41588, “You must leave me¦41592, \nd master¦41597\nd*, because¦41593 I'm¦41596 just a sinful¦41595 man¦41594.”
 \p
 \v 9 \add @Kefa¦41601\add* and¦41603 all¦41604 those with¦41606 him¦41607 \add ≈were stunned¦41598\add* at¦41608 the¦41609 size of¦41612 the¦41612 catch¦41611,
-\v 10 including¦41619 Ya'akov¦41623 \add !(James¦41623; Grk¦41623. Yakobos¦41623)\add* and¦41625 Yohan¦41626 \add !(John¦41626; Grk¦41626. Yoannes¦41626)\add* (Zavday's¦41631 \add !(Grk¦41631. Zebedaios'¦41631)\add* sons¦41630) who¦41632 were¦41633 \add *his\add* \add fishing\add* partners¦41634. Then¦41638 \nd Yeshua¦41646\nd* told¦41640 Shim'on¦41643, “Don't¦41649 be¦41650 afraid¦41650—from¦41651 now¦41653 on you'll¦41655 be¦41655 catching¦41656 people¦41654.”
+\v 10 including¦41619 Ya'akov¦41623 \add !(James¦41623; Grk¦41623. Yakobos¦41623)\add* and¦41625 Yohan¦41626 \add !(John¦41626; Grk¦41626. Yoannes¦41626,\add* Zavday's¦41631 \add !(Grk¦41631. Zebedaios'¦41631)\add* sons¦41630) who¦41632 were¦41633 \add *his\add* \add fishing\add* partners¦41634. Then¦41638 \nd Yeshua¦41646\nd* told¦41640 Shim'on¦41643, “Don't¦41649 be¦41650 afraid¦41650—from¦41651 now¦41653 on you'll¦41655 be¦41655 catching¦41656 people¦41654.”
 \p
 \v 11 When¦41667 they got the¦41670 boats¦41671 up onto the¦41676 shore¦41678, they left¦41681 everything there and followed¦41684 after¦41685 \add @Yeshua¦41685\add*.
 \s1 Yeshua heals a man with leprosy
@@ -527,9 +527,9 @@
 \p
 \v 12 One \add #day¦42796\add* \add @Yeshua¦42801\add* \add !(Jesus¦42801; Grk. Yesus)\add* climbed a hill¦42804 to¦42806 pray¦42806, and¦42808 then he¦42809 spent¦42810 the¦42810 night¦42810 there praying¦42814 \nd to¦42816 God¦42816\nd*.
 \v 13 In the morning, he¦42822 called¦42822 together his¦42825 followers¦42824, and¦42826 chose¦42827 twelve¦42830 of them¦42829 that he then called¦42835 ‘missionaries¦42833’:
-\v 14 Shim'on¦42837 \add !(Simon¦42837)\add* (who¦42839 he¦42841 also¦42840 named¦42841 Kefa¦42842 \add !(Peter¦42842; Grk¦42842. Petros¦42842)\add*) and¦42844 his¦42850 brother¦42848 Andreas¦42845, Ya'akov¦42852 \add !(James¦42852; Grk¦42852. Yakobos¦42852)\add* and¦42853 Yohan¦42854 \add !(John¦42854; Grk¦42854. Yoannes¦42854)\add*, Filippos¦42866 \add !(Philip¦42866)\add* and¦42867 Bar¦42868-Talmay¦42868 \add !(Bartholomew¦42868; Grk¦42868. Bartholomaios¦42868)\add*,
+\v 14 Shim'on¦42837 \add !(Simon¦42837,\add* who¦42839 he¦42841 also¦42840 named¦42841 Kefa¦42842 \add !(Peter¦42842; Grk¦42842. Petros¦42842)\add*) and¦42844 his¦42850 brother¦42848 Andreas¦42845, Ya'akov¦42852 \add !(James¦42852; Grk¦42852. Yakobos¦42852)\add* and¦42853 Yohan¦42854 \add !(John¦42854; Grk¦42854. Yoannes¦42854)\add*, Filippos¦42866 \add !(Philip¦42866)\add* and¦42867 Bar¦42868-Talmay¦42868 \add !(Bartholomew¦42868; Grk¦42868. Bartholomaios¦42868)\add*,
 \v 15 Matay¦42870 \add !(Matthew¦42870; Grk¦42870. Matthaios¦42870)\add* and¦42871 Toma¦42872 \add !(Thomas¦42872)\add*, Ya'akov¦42880 (Halfay'¦42880 \add !(Grk¦42880. Halfaios'¦42880)\add* son), Shim'on¦42882 (the¦42883 one known as a Zealot),
-\v 16 Yehudah¦42887 \add !(Judas¦42887; Grk¦42887. Yudas¦42887)\add* (son of¦42888 Ya'akov¦42888), and¦42889 Yehudah¦42890 Iskariot¦42891 (who¦42892 \add eventually\add* betrayed¦42895 him).
+\v 16 Yehudah¦42887 \add !(Judas¦42887; Grk¦42887. Yudas¦42887,\add* son of¦42888 Ya'akov¦42888), and¦42889 Yehudah¦42890 Iskariot¦42891 (who¦42892 \add eventually\add* betrayed¦42895 him).
 \s1 The crowds want to touch Yeshua
 \rem /s1 Jesus Teaches and Heals; Blessings and Woes; Crowds Follow Jesus
 \r (Mat. 4:23-25)

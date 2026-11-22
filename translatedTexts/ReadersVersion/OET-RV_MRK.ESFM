@@ -1,4 +1,4 @@
-\id MRK - Open English Translation—Readers' Version (OET-RV) v0.5.11
+\id MRK - Open English Translation—Readers' Version (OET-RV) v0.5.14
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MRK
@@ -202,7 +202,7 @@
 \v 14 He¦23695 appointed twelve¦23696 \add of them\add* as his representatives so that¦23703 they¦23704 could¦23704 \add ≈stick\add* with¦23706 him¦23707, and¦23712 be¦23714 sent¦23714 off to¦23717 be¦23717 declaring¦23717 \add his message\add*
 \v 15 and¦23720 to¦23721 also have¦23721 authority¦23724 to¦23729 exorcise demons¦23731.
 \p
-\v 16 \add These are\add* the¦23739 twelve¦23740 that he appointed: Shim'on¦23745 \add !(Simon¦23745)\add* (but¦23741 he¦23742 appended the name¦23743 “Kefa¦23747 \add !(Peter¦23747; Grk¦23747. Petros¦23747)\add*”),
+\v 16 \add These are\add* the¦23739 twelve¦23740 that he appointed: Shim'on¦23745 \add !(Simon¦23745,\add* but¦23741 he¦23742 appended the name¦23743 “Kefa¦23747 \add !(Peter¦23747; Grk¦23747. Petros¦23747)\add*”),
 \v 17 Ya'akov¦23750 \add !(James¦23750; Grk¦23750. Yakobos¦23750)\add* and¦23754 \add *his\add* brother¦23758 Yohan¦23756 \add !(John¦23756; Grk¦23756. Yoannes¦23756)\add* who were Zavday's¦23753 \add !(Grk¦23753. Zebedaios'¦23753)\add* sons (and¦23764 he¦23765 nicknamed them¦23766 the “sons¦23774 of¦23775 thunder¦23775”),
 \v 18 Andreas¦23781, Filippos¦23786 \add !(Philip¦23786)\add*, Bar¦23789-Talmay¦23789 \add !(Bartholomew¦23789; Grk¦23789. Bartholomaios¦23789)\add*, Matay¦23791 \add !(Matthew¦23791; Grk¦23791. Matthaios¦23791)\add*, Toma¦23794 \add !(Thomas¦23794)\add*, Ya'akov¦23802 Halfay¦23802 \add !(Grk¦23802. Halfaios¦23802)\add*, Thaddaios¦23804 \add !(Thaddeus¦23804)\add*, Shim'on¦23806 \add ≈from\add* Kena'an \add !(Canaan)\add*,
 \v 19 and¦23814 Yehudah¦23815 \add !(Judas¦23815; Grk¦23815. Yudas¦23815)\add* Iskariot¦23817 who¦23821 \add later\add* betrayed him¦23825.
@@ -491,7 +491,7 @@
 \p
 \v 6 “\wj Yeshayah¦27594 \+add !(Isaiah¦27594)\+add* \+add ≈got it exactly right¦27592\+add*,\wj*” he¦27586 answered¦27588, “\wj \+add ≈when he expressed\+add* \+add God's thoughts\+add* about¦27595 you¦27596 hypocrites¦27599 \+add ≈and wrote¦27602\+add*:\wj*
 \q1 \wj ‘These people¦27607 honour¦27613 me¦27611 with¦27609 \+add &their¦27609\+add* lips¦27610,\wj*
-\q2 \wj but¦27615 their¦27617 \+add ≈real desires\+add* are¦27621 far¦27618 away¦27618 from¦27622 me¦27623.\wj*
+\q2 ^\wj but¦27615 their¦27617 \+add ≈real desires\+add* are¦27621 far¦27618 away¦27618 from¦27622 me¦27623.\wj*
 \q1
 \v 7 \wj \+add ≈Their worship¦27626\+add* of me¦27627 is worthless—\wj*
 \q2 \wj teaching¦27628 \+add ≈man-made rules as¦27629 if they are from God\+add*.’\wj*\x + \xo 7:6-7: \xt Isa 29:13 (LXX).\x*
@@ -812,7 +812,7 @@
 \rem /s1 Blind Bartimaeus Receives His Sight; The Healing of Blind Bartimaeus; Jesus Heals Blind Bartimaeus
 \r (Mat. 20:29-34; Luke 18:35-43)
 \p
-\v 46 They¦31454 arrived¦31454 at Yeriho¦31457 \add !(Jericho¦31457)\add*, and¦31458 then \add when\add* \add @Yeshua¦31460\add* \add !(Jesus¦31460; Grk. Yesus)\add* and¦31464 his¦31468 apprentices¦31467 were leaving¦31459 \add again\add* with a large¦31471 crowd¦31470 following, \add they came across\add* blind¦31477 Bar¦31475-Timaios¦31475 \add !(Grk¦31475. Bartimaios¦31475)\add* (Timaios' son¦31473) sitting¦31480 beside¦31481 the¦31482 path¦31483 \add begging\add*.
+\v 46 They¦31454 arrived¦31454 at Yeriho¦31457 \add !(Jericho¦31457)\add*, and¦31458 then \add when\add* \add @Yeshua¦31460\add* \add !(Jesus¦31460; Grk. Yesus)\add* and¦31464 his¦31468 apprentices¦31467 were leaving¦31459 \add again\add* with a large¦31471 crowd¦31470 following, \add they came across\add* blind¦31477 Bar¦31475-Timaios¦31475 \add !(Grk¦31475. Bartimaios¦31475,\add* Timaios' son¦31473) sitting¦31480 beside¦31481 the¦31482 path¦31483 \add begging\add*.
 \v 47 \add ≈When¦31486\add* he heard¦31487 that¦31488 it¦31494 was¦31494 \nd Yeshua¦31489\nd* from¦31493 Nazaret¦31493 \add going past\add*, he¦31495 \add ≈yelled¦31496\add* out¦31496, “\nd Yeshua\nd*, \add promised\add* descendant¦31500 of¦31501 David¦31501, \add ≈help me¦31504 please\add*.”
 \p
 \v 48 When¦31505 \add ≈several¦31509 people told him¦31507 to stop\add*, he \add ≈just yelled¦31520 out¦31520 even louder\add*, “\add Yeshua, promised\add* descendant¦31521 of¦31522 David¦31522, \add ≈please help me¦31524\add*.”
@@ -1145,7 +1145,7 @@
 \rem /s1 Jesus Arrested; Jesus Is Betrayed and Arrested; The Arrest of Jesus; The Betrayal and Arrest of Jesus
 \r (Yhn 18:3-12; Mat. 26:47-56; Luke 22:47-53)
 \p
-\v 43 \add ≈Even while\add* \add @Yeshua\add* \add !(Jesus; Grk. Yesus)\add* was still¦35219 speaking¦35221, Yehudah¦35224 \add !(Judas¦35224; Grk¦35224. Yudas¦35224)\add* (one¦35227 of¦35229 \add &his¦35229\add* twelve¦35230 \add >apprentices\add*) \add ≈reached him¦35233\add*, \add ≈followed by\add* a crowd¦35234 \add ≈that included some of\add* the¦35242 chief¦35243 priests¦35243, the¦35246 \add ≈religious¦35247 teachers¦35247\add*, and¦35248 the¦35249 \add Jewish\add* elders¦35250—\add many armed\add* with¦35236 swords¦35237 and¦35238 clubs¦35239.
+\v 43 \add ≈Even while\add* \add @Yeshua\add* \add !(Jesus; Grk. Yesus)\add* was still¦35219 speaking¦35221, Yehudah¦35224 \add !(Judas¦35224; Grk¦35224. Yudas¦35224,\add* one¦35227 of¦35229 \add &his¦35229\add* twelve¦35230 \add >apprentices\add*) \add ≈reached him¦35233\add*, \add ≈followed by\add* a crowd¦35234 \add ≈that included some of\add* the¦35242 chief¦35243 priests¦35243, the¦35246 \add ≈religious¦35247 teachers¦35247\add*, and¦35248 the¦35249 \add Jewish\add* elders¦35250—\add many armed\add* with¦35236 swords¦35237 and¦35238 clubs¦35239.
 \v 44 \add @Yehudah¦35256\add* had¦35251 \add ≈prearranged¦35251\add* a signal¦35258 with them¦35259 that the one \add %he¦35264\add* \add greeted with a\add* kiss¦35264, \add %they\add* should grab¦35267 \add @that¦35268 person¦35268\add* and¦35269 lead¦35271 him away¦35271 \add ≈under guard¦35274\add*.
 \p
 \v 45 \add ≈So¦35275 he walked right up\add* to¦35280 \add @Yeshua\add* \add and\add* said¦35281, “My¦35284 honoured¦35284 teacher,” and¦35286 \add greeted\add* him¦35288 with a kiss¦35287.
@@ -1242,7 +1242,7 @@
 \rem /s1 The Crucifixion of Jesus; Jesus Is Crucified
 \r (Yhn 19:17-27; Mat. 27:32-44; Luke 23:26-43)
 \p
-\v 21 \add As they walked out of the city,\add* they \add came across\add* a man¦36241 coming¦36247 in from¦36248 the country¦36250. \add He was\add* Shim'on¦36243 \add !(Simon¦36243)\add* from Kurainai¦36246 \add !(Cyrene¦36246)\add* \add (Kurainai\add*—the¦36251 father¦36252 of¦36253 Alexandros¦36253 \add !(Alexander¦36253)\add* and¦36254 Rufos¦36255),\x + \xo 15:21: \xt Rom 16:13.\x* and \add the soldiers\add* forced¦36239 him to carry¦36257 the¦36258 execution post,
+\v 21 \add As they walked out of the city,\add* they \add came across\add* a man¦36241 coming¦36247 in from¦36248 the country¦36250. \add He was\add* Shim'on¦36243 \add !(Simon¦36243)\add* from Kurainai¦36246 \add !(Cyrene¦36246,\add* \add Kurainai\add*—the¦36251 father¦36252 of¦36253 Alexandros¦36253 \add !(Alexander¦36253)\add* and¦36254 Rufos¦36255),\x + \xo 15:21: \xt Rom 16:13.\x* and \add the soldiers\add* forced¦36239 him to carry¦36257 the¦36258 execution post,
 \v 22 and¦36261 \add so\add* they¦36263 \add all\add* arrived at Golgotha¦36268 (which¦36270 means¦36274 ‘Place¦36276 of¦36275 the skull¦36275’).
 \v 23 \add There\add* \add @the¦36278 soldiers¦36278\add* \add went to\add* give¦36278 \add some\add* \add ≈spiced¦36281\add* wine¦36282 to¦36279 \add @Yeshua¦36279\add* \add !(Jesus¦36279; Grk. Yesus)\add*, but¦36286 he¦36288 \add ≈declined¦36287\add* \add <it\add*.
 \v 24 \add ≈So¦36289\add* they¦36294 \add ≈carried out the¦36296 execution¦36290\add*, taking¦36306 \add @Yeshua's\add* clothes¦36297 and¦36304 \add ≈drawing straws\add* \add ≈to see who¦36304 would get¦36306 what¦36305\add*.\x + \xo 15:24: \xt Psa 22:18.\x*
@@ -1279,7 +1279,7 @@
 \r (Yhn 19:38-42; Mat. 27:57-61; Luke 23:50-56)
 \p
 \v 42 As evening¦36628 came, it¦36632 was¦36632 \add now\add* the Preparation¦36633 Day¦36633, i.e., the \add ≈day¦36636 before¦36636\add* the Rest¦36636 Day¦36636.
-\v 43 Yosef¦36643 \add !(Joseph¦36643)\add* (who'd come¦36641 from¦36645 Arimathaia¦36646 \add city\add* and one who¦36649 was¦36653 waiting¦36654 for¦36654 the \add coming of\add* \nd God's¦36658\nd* kingdom¦36656), a prominent¦36647 council¦36648 member¦36648, steeled¦36659 himself up and went¦36661 in¦36661 to see \add *the governor\add* to get \add ≈permission¦36666\add* \add to transfer\add* \nd Yeshua's¦36671\nd* \add !(Jesus'¦36671; Grk¦36671. Yesus'¦36671)\add* body¦36669.
+\v 43 Yosef¦36643 \add !(Joseph¦36643,\add* who'd come¦36641 from¦36645 Arimathaia¦36646 \add city\add* and one who¦36649 was¦36653 waiting¦36654 for¦36654 the \add coming of\add* \nd God's¦36658\nd* kingdom¦36656), a prominent¦36647 council¦36648 member¦36648, steeled¦36659 himself up and went¦36661 in¦36661 to see \add *the governor\add* to get \add ≈permission¦36666\add* \add to transfer\add* \nd Yeshua's¦36671\nd* \add !(Jesus'¦36671; Grk¦36671. Yesus'¦36671)\add* body¦36669.
 \v 44 \add Governor\add* Pilatos¦36674 \add !(Pilate¦36674)\add* \add ≈didn't think¦36675 he'd¦36680 be dead yet\add*, so¦36682 he called¦36683 an \add ≈army commander¦36685\add* to¦36683 \add ≈find¦36686 out¦36686\add* if¦36677 \add @Yeshua\add* had indeed¦36689 died¦36691.
 \v 45 \add ≈As soon as he found¦36695 out¦36695\add*, he¦36700 gave¦36700 Yosef¦36708 \add ≈permission\add*,
 \v 46 \add ≈so\add* \add @Yosef\add* \add and his companions\add* went and¦36710 bought¦36713 some linen¦36714 \add burial\add* cloth¦36714 and then, removing¦36718 \add @Yeshua's body\add* from the post, wrapped¦36721 it in the¦36723 cloth¦36725 and¦36727 placed¦36729 it in¦36733 a \add ≈burial¦36736 chamber¦36736\add* that¦36737 had¦36739 been¦36739 chiselled¦36739 into a rockface¦36742. Then¦36743 they rolled¦36744 a rock¦36746 \add ≈across\add* the¦36749 opening¦36750.

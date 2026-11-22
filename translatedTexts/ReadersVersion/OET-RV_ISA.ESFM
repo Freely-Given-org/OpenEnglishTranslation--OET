@@ -1,4 +1,4 @@
-\id ISA - Open English Translation—Readers' Version (OET-RV) v0.2.20
+\id ISA - Open English Translation—Readers' Version (OET-RV) v0.2.23
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 ISA
@@ -27,7 +27,7 @@
 \c 1
 \rem /s1 Prophecies against Judah
 \p
-\v 1 \add This is\add* the¦283645 vision¦283645 of¦283645 Yeshayah¦283646 \add !(Isaiah¦283646)\add* (son¦283647 of¦283647 Amots¦283649), which¦283650 he¦283651 saw¦283651 concerning Yehudah¦283654 \add !(Judah¦283654)\add* and¦283655 Yerushalem¦283655 \add !(Jerusalem¦283655)\add* in¦283656 the¦283656 days¦283656 of¦283656 Uziyah¦283657,\x + \xo 1:1: \xt 2Ki 15:1-7; 2Ch 26:1-23.\x* Yotam¦283658 \add !(Jotham¦283658)\add*,\x + \xo 1:1: \xt 2Ki 15:32-38; 2Ch 27:1-9.\x* Ahaz¦283659,\x + \xo 1:1: \xt 2Ki 16:1-20; 2Ch 28:1-27.\x* and Hizkiyah¦283660 \add !(Hezekiah¦283660)\add*,\x + \xo 1:1: \xt 2Ki 18:1–20:21; 2Ch 29:1–32:33.\x* kings¦283661 of¦283661 Yehudah¦283662.
+\v 1 \add This is\add* the¦283645 vision¦283645 of¦283645 Yeshayah¦283646 \add !(Isaiah¦283646,\add* son¦283647 of¦283647 Amots¦283649), which¦283650 he¦283651 saw¦283651 concerning Yehudah¦283654 \add !(Judah¦283654)\add* and¦283655 Yerushalem¦283655 \add !(Jerusalem¦283655)\add* in¦283656 the¦283656 days¦283656 of¦283656 Uziyah¦283657,\x + \xo 1:1: \xt 2Ki 15:1-7; 2Ch 26:1-23.\x* Yotam¦283658 \add !(Jotham¦283658)\add*,\x + \xo 1:1: \xt 2Ki 15:32-38; 2Ch 27:1-9.\x* Ahaz¦283659,\x + \xo 1:1: \xt 2Ki 16:1-20; 2Ch 28:1-27.\x* and Hizkiyah¦283660 \add !(Hezekiah¦283660)\add*,\x + \xo 1:1: \xt 2Ki 18:1–20:21; 2Ch 29:1–32:33.\x* kings¦283661 of¦283661 Yehudah¦283662.
 \s1 Yahweh scolds Yehudah
 \rem /s1 A Message for Rebellious Judah; God Reprimands His People; A Rebellious Nation; The Wickedness of Judah
 \s4 Southern kingdom
@@ -38,7 +38,7 @@
 \q1
 \v 3 The bull¦283679 knows¦283678 his owner¦283680,
 \q1 ≈and¦283681 the donkey¦283681 \add ≡knows¦283678\add* its master's feeding¦283682 trough¦283682,
-\q1 but Yisrael¦283684 \add !(Israel¦283684)\add* doesn't know¦283686—
+\q1 ^but Yisrael¦283684 \add !(Israel¦283684)\add* doesn't know¦283686—
 \q1 my¦283687 people¦283687 don't¦283688 understand.”
 \b
 \q1
@@ -123,7 +123,7 @@
 \v 21 How¦283942 did the faithful¦283946 city¦283945 become¦283943 a¦283944 prostitute¦283944?
 \q1 She who was full¦283947 of¦283947 justice¦283948—
 \q1 with righteousness¦283949 embedded in¦283951 her,
-\q1 but¦283952 now¦283952 \add ended up as\add* murderers¦283953.
+\q1 ^but¦283952 now¦283952 \add ended up as\add* murderers¦283953.
 \q1
 \v 22 Your \add city's\add* silver¦283955 has¦283956 turned¦283956 into¦283957 \add ≈junk metal\add*.
 \q1 You wine is¦283959 \add now\add* mixed¦283959 with¦283960 water¦283960.
@@ -176,7 +176,7 @@
 \v 3 Many¦284103 \add different\add* peoples¦284102 will¦284101 come¦284101 and¦284104 say¦284104,
 \q1 “Come¦284105 on, let's¦284107 go¦284107 up¦284107 to¦284108 Yahweh's¦284112 mountain¦284110—
 \q1 to¦284113 the¦284115 \add ≈temple¦284115\add* of Ya'akov's¦284117 \add !(Jacob's¦284117)\add* God,
-\q1 so¦284118 he¦284118 can teach¦284118 us¦284118 his¦284119 ways¦284119 and¦284120 we¦284120 can walk¦284120 in¦284121 his¦284121 paths¦284121.”
+\q1 →so¦284118 he¦284118 can teach¦284118 us¦284118 his¦284119 ways¦284119 and¦284120 we¦284120 can walk¦284120 in¦284121 his¦284121 paths¦284121.”
 \q1 Because¦284122 \add ≈God's instructions¦284125\add* will \add ≈emanate\add* from¦284123 Tsiyon¦284123 \add !(Zion¦284123)\add*,
 \q1 ≈and¦284126 Yahweh's¦284128 message¦284126 \add ≡will spread out starting\add* from¦284129 Yerushalem¦284129 \add !(Jerusalem¦284129)\add*.
 \q1
@@ -210,7 +210,7 @@
 \q1
 \v 9 Then¦284202 a person will be¦284202 bowed down,
 \q1 ≈and¦284204 a man will be humbled¦284204,
-\q1 but¦284207 not¦284207 forgiven¦284209.
+\q1 ^but¦284207 not¦284207 forgiven¦284209.
 \q1
 \v 10 Go¦284212 into \add a cave\add* in¦284213 the \add #rocks¦284213\add*,
 \q1 ≈or hide¦284214 in \add a hole\add* in the ground
@@ -394,7 +394,7 @@
 \q1 He¦284801 built¦284801 a¦284802 watchtower in¦284803 the¦284803 middle¦284803 of¦284803 it¦284803
 \q1 and¦284804 also¦284804 hewed a¦284806 wine-pressing¦284806 \add pit\add* \add ≈in¦284808 a rocky portion\add*.
 \q1 Then¦284809 he¦284809 waited¦284809 for¦284810 it to produce grapes¦284811,
-\q1 but¦284812 it¦284812 produced \add sour\add*, wild¦284813 grapes¦284813.
+\q1 ^but¦284812 it¦284812 produced \add sour\add*, wild¦284813 grapes¦284813.
 \b
 \p
 \v 3 \add ≈So¦284815\add* now¦284815, you who lives in Yerushalem¦284817 \add !(Jerusalem¦284817)\add*
@@ -404,7 +404,7 @@
 \v 4 What¦284827 more could have been¦284829 done¦284829 for¦284831 my¦284831 vineyard¦284831,
 \q1 that I¦284833 haven't \add already\add* done¦284833 for it¦284834?
 \q1 I¦284836 waited¦284836 for¦284837 it to produce grapes¦284838,
-\q1 but¦284839 why¦284835 did it¦284839 produce wild¦284840 grapes¦284840?
+\q1 ^but¦284839 why¦284835 did it¦284839 produce wild¦284840 grapes¦284840?
 \b
 \q1
 \v 5 \add ≈So¦284842\add* now¦284842, \add listen\add* please¦284845,
@@ -440,7 +440,7 @@
 \q1
 \v 12 \add ≈They celebrate with\add* harp¦284952 and¦284953 lyre¦284953,
 \q2 tambourine¦284954 and¦284955 flute¦284955 and¦284956 wine¦284956,
-\q1 but¦284958 they don't \add ≈care about¦284959 anything that Yahweh¦284960 does\add*,
+\q1 ^but¦284958 they don't \add ≈care about¦284959 anything that Yahweh¦284960 does\add*,
 \q1 ≈\add ≈in fact\add*, they¦284962 don't¦284965 \add even\add* \add ≈know what he's done for them\add*.
 \q1
 \v 13 Therefore, my¦284970 people will¦284969 be exiled¦284969 because of \add their\add* for lack of understanding,
@@ -503,7 +503,7 @@
 \q1
 \v 26 He'll¦285150 signal¦285152 to faraway nations¦285153
 \q1 ≈and¦285155 will¦285155 whistle¦285155 to¦285156 those at the¦285157 \add #ends¦285157\add* of¦285157 the¦285158 earth¦285158.
-\q1 Then¦285159 \add ≈wow¦285159, how quickly¦285160 they'll show up¦285150\add*.
+\q1 →Then¦285159 \add ≈wow¦285159, how quickly¦285160 they'll show up¦285150\add*.
 \q1
 \v 27 \add @Those enemy armies\add* won't¦285164 get tired¦285166 or stumble¦285169.
 \q1 ≈They won't stop for a rest or to sleep¦285174.
@@ -598,7 +598,7 @@
 \v 9 \add ≈Yisrael's¦285613\add* capital is Shomron¦285614 \add !(Samaria¦285614)\add*.
 \q1 and¦285615 Shomron's¦285616 leader is Remalyah's¦285619 son¦285617.
 \q1 If¦285620 you¦285622 don't \add keep\add* believing¦285622,
-\q1 then you'll¦285625 \add end up\add* not¦285624 standing.’ ”
+\q1 →then you'll¦285625 \add end up\add* not¦285624 standing.’ ”
 \s1 Imanu-El will precede the thorns
 \rem /s1 The Sign of Immanuel; Isaiah Gives Ahaz the Sign of Immanuel
 \p
@@ -754,12 +754,12 @@
 \q1 \add ≈as smoke¦286536 swirls¦286534 up¦286535 into the air\add*.
 \q1
 \v 19 Commander-in-chief Yahweh's¦286540 anger¦286539 causes the entire land¦286543 to be¦286542 scorched¦286542,
-\q1 and¦286544 then the¦286545 people¦286545 become the fuel¦286546 for the fire¦286547
+\q1 →and¦286544 then the¦286545 people¦286545 become the fuel¦286546 for the fire¦286547
 \q1 as \add each\add* man doesn't \add even\add* spare¦286553 his¦286551 own brother¦286551.
 \q1
 \v 20 They devoured¦286556 on¦286557 the right¦286559 but¦286560 were¦286560 still hungry¦286560.
 \q1 ≈They ate¦286561 on¦286562 the left¦286564, but¦286565 \add ≈it didn't¦286565 fill them up\add*,
-\q1 \add so\add* everyone¦286567 ate the¦286568 flesh¦286568 on their own¦286570 \add #arms¦286570\add*.
+\q1 →\add so\add* everyone¦286567 ate the¦286568 flesh¦286568 on their own¦286570 \add #arms¦286570\add*.
 \q1
 \v 21 Menasheh¦286574 \add !(Manasseh¦286574)\add* \add fought\add* Efrayim¦286577 \add !(Ephraim¦286577)\add*, then¦286578 Efrayim¦286578 found Menasheh¦286581,
 \q1 then they fought together¦286582 against Yehudah¦286586 \add !(Judah¦286586)\add*.
@@ -1312,7 +1312,7 @@
 \q1 The¦288613 remnant¦288613 from Aram¦288614 \add !(Syria¦288614)\add* \add ?≈will¦288619 be¦288619 a prize\add* for the \add ≈Israelis¦288618\add*.
 \m That's what Commander-in-chief Yahweh¦288621 \add ≈says¦288620\add*.
 \p
-\v 4 \add ≈At that¦288627 time¦288626,\add* Ya'akov¦288630 \add !(Jacob¦288630)\add* \add (meaning Yisrael's\add* \add !(Israel's)\add* \add people)\add* will¦288628 become¦288628 \add ≈insignificant\add*.
+\v 4 \add ≈At that¦288627 time¦288626,\add* Ya'akov¦288630 \add !(Jacob¦288630,\add* \add meaning Yisrael's\add* \add !(Israel's)\add* \add people)\add* will¦288628 become¦288628 \add ≈insignificant\add*.
 \q1 The¦288631 fat¦288631 on his¦288632 body¦288632 will¦288633 \add ≈waste away\add*.
 \q1
 \v 5 \add ≈Initially\add* the harvester cut off all the stalks of grain and gathered them together,
@@ -1335,12 +1335,12 @@
 \q1
 \v 10 because¦288716 you've¦288717 forgotten¦288717 the¦288718 god¦288718 \add ≈who saved you\add*,
 \q1 ≈and¦288720 you didn't¦288722 remember¦288723 the¦288720 rock¦288720 \add ≈that you¦288723 used for protection¦288721\add*.
-\q1 So¦288726 you¦288727 sow¦288732 pleasant¦288729 plantations¦288728
+\q1 →So¦288726 you¦288727 sow¦288732 pleasant¦288729 plantations¦288728
 \q1 and¦288730 plant¦288727 vine¦288730 cuttings from a¦288731 stranger¦288731.
 \q1
 \v 11 You¦288736 nurture what you've planted¦288735,
 \q1 and¦288737 in¦288737 the morning¦288737, your¦288738 seed¦288738 will have sprouted¦288739,
-\q1 but the harvest¦288741 will become a¦288740 heap¦288740 in¦288742 a time¦288742 of sickness¦288743,
+\q1 ^but the harvest¦288741 will become a¦288740 heap¦288740 in¦288742 a time¦288742 of sickness¦288743,
 \q1 and¦288744 the pain¦288744 will be incurable¦288745.
 \s1 The defeat of enemies nations
 \rem /s1 Enemy Nations Are Defeated
@@ -1355,7 +1355,7 @@
 \q1 \add and\add* like¦288777 whirling¦288777 dust¦288777 blown ahead of¦288778 a¦288779 storm¦288779.
 \q1
 \v 14 Then in the evening¦288782, oh my, terror¦288784!
-\q1 but it's¦288787 gone by morning¦288786.
+\q1 ^but it's¦288787 gone by morning¦288786.
 \q1 That's \add ≈what happens\add* to those¦288790 who¦288790 plunder¦288790 us¦288790,
 \q1 and¦288791 the outcome for those¦288792 who¦288792 rob us¦288792.
 \c 18
@@ -1461,7 +1461,7 @@
 \rem /s1 Egypt Will Worship the Lord
 \p
 \v 16 \add ≈When that¦289177 happens\add*, the \add ≈Mitsrim\add* \add !(Egyptians)\add* will¦289178 tremble¦289181 like¦289180 women¦289180, dreading¦289183 Commander-in-chief Yahweh's¦289188 \add ≈raised fist held\add* against them.
-\v 17 Yehudah¦289198 \add !(Judah¦289198)\add* (the¦289197 land¦289197 of¦289197 \add Yehudah)\add* will¦289196 become¦289196 an¦289200 object¦289200 of¦289200 terror¦289200 to Mitsrayim¦289199 \add !(Egypt¦289199)\add*. Whenever they're reminded \add of Yehudah\add* they'll become afraid, because of what Commander-in-chief Yahweh¦289209 is planning¦289214 against them.
+\v 17 Yehudah¦289198 \add !(Judah¦289198,\add* the¦289197 land¦289197 of¦289197 \add Yehudah)\add* will¦289196 become¦289196 an¦289200 object¦289200 of¦289200 terror¦289200 to Mitsrayim¦289199 \add !(Egypt¦289199)\add*. Whenever they're reminded \add of Yehudah\add* they'll become afraid, because of what Commander-in-chief Yahweh¦289209 is planning¦289214 against them.
 \rem /s1 Egypt, Assyria, and Israel Blessed
 \p
 \v 18 \add ≈At that¦289219 time¦289218,\add* there'll be¦289220 five¦289221 cities¦289222 in¦289223 Mitsrayim¦289224 where they'll¦289220 speak¦289225 out in \add ≈Hebrew\add*, and¦289228 make oaths¦289228 by Commander-in-chief Yahweh¦289229. (One¦289234 of those cities will be called ‘the¦289231 city¦289231 of¦289231 destruction¦289232’.)
@@ -1479,7 +1479,7 @@
 \rem /s1 A Message about Egypt and Ethiopia; The Sign of the Naked Prophet; Isaiah Dramatizes the Conquest of Egypt and Ethiopia; A Prophecy Against Egypt and Cush
 \p
 \v 1 In¦289351 the year¦289351 \add before\add* the Assyrian King¦289358 Sargon¦289357 sent¦289355 his top army commander¦289353 to¦289354 Ashdod¦289354, and¦289360 he¦289360 attacked¦289360 and¦289362 captured¦289362 it¦289362,
-\v 2 Yahweh¦289367 told¦289366 Yeshayah¦289369 \add !(Isaiah¦289369)\add* (Amots'¦289372 son¦289370), “Take¦289380 off¦289380 the¦289376 \add coarse, abrasive\add* sackcloth¦289376 and¦289379 the sandals¦289379 \add ≈that¦289365 you've¦289380 been wearing\add*.” \add ≈So¦289383 he¦289383 started\add* walking¦289385 around¦289368 naked¦289386\f + \fr 20:2 \ft This doesn't necessarily mean that he wore absolutely nothing.\f* and¦289387 barefoot¦289387.
+\v 2 Yahweh¦289367 told¦289366 Yeshayah¦289369 \add !(Isaiah¦289369,\add* Amots'¦289372 son¦289370), “Take¦289380 off¦289380 the¦289376 \add coarse, abrasive\add* sackcloth¦289376 and¦289379 the sandals¦289379 \add ≈that¦289365 you've¦289380 been wearing\add*.” \add ≈So¦289383 he¦289383 started\add* walking¦289385 around¦289368 naked¦289386\f + \fr 20:2 \ft This doesn't necessarily mean that he wore absolutely nothing.\f* and¦289387 barefoot¦289387.
 \v 3 \add ≈Later\add* Yahweh¦289391 said¦289390, “Just¦289392 as¦289392 my¦289394 servant¦289394 Yeshayah¦289395 has¦289393 been walking¦289393 around naked¦289396 and¦289397 barefoot¦289397 for three¦289398 years¦289399, it's¦289390 a¦289400 sign¦289400 and¦289401 a¦289401 \add ≈prophecy\add* about¦289394 Mitsrayim¦289404 \add !(Egypt¦289404)\add* and¦289405 Kush¦289407 \add !(Ethiopia¦289407)\add*.
 \v 4 It's a sign that the¦289411 Assyrian king¦289411 will¦289410 lead¦289410 away¦289410 captives¦289416 from Mitsrayim¦289417 and¦289418 Kush¦289421—young¦289422 men¦289422 and¦289423 old¦289423, barefoot¦289425 and¦289426 naked¦289424 with their \add #buttocks¦289427\add* exposed—to Mitsrayim's¦289429 shame.
 \v 5 They'll¦289431 be¦289431 discouraged¦289431 and¦289432 ashamed¦289432 \add ≈because of¦289434\add* their \add unfounded\add* confidence¦289434 in Kush¦289433 and¦289435 their¦289438 boasting¦289438 about¦289438 Mitsrayim¦289437.
@@ -1705,7 +1705,7 @@
 \q1
 \v 6 That's why a¦290424 curse¦290424 has¦290425 consumed¦290425 the \add ≈world¦290426\add*,
 \q1 and¦290427 its inhabitants¦290428 are¦290427 found guilty¦290427.
-\q1 Therefore¦290430 earth's¦290435 inhabitants¦290434 will decrease
+\q1 →Therefore¦290430 earth's¦290435 inhabitants¦290434 will decrease
 \q1 and¦290436 \add only\add* a few will¦290436 be¦290436 left¦290436.
 \q1
 \v 7 The new¦290441 wine¦290441 has¦290440 dried¦290440 up¦290440—the grapevine¦290444 has¦290442 deteriorated.
@@ -1873,7 +1873,7 @@
 \q1 because¦291002 you¦291007 indeed \add ≈have¦291007 taken action on our¦291006 behalf.\add*
 \q1
 \v 13 Yahweh¦291010 our¦291011 god¦291011, we've been ruled¦291012 over¦291012 by other masters¦291013,
-\q1 but you¦291014 only¦291015, are the one that we¦291018 \add ≈honour\add*.
+\q1 ^but you¦291014 only¦291015, are the one that we¦291018 \add ≈honour\add*.
 \q1
 \v 14 \add ?Those\add* dead¦291021 \add >ones\add* won't¦291022 live¦291024—those departed spirits won't¦291026 rise¦291028 \add again\add*,
 \q1 \add ≈indeed\add* you've¦291030 visited¦291030 and¦291031 destroyed¦291031 them¦291031,
@@ -1923,7 +1923,7 @@
 \q1 I¦291204 will¦291204 march¦291204 against¦291205 it¦291205—I'll¦291206 \add ?≈completely burn¦291206 it¦291206 up\add*.
 \q1
 \v 5 If anyone¦291210 takes¦291210 \add ≈advantage\add* of¦291211 my¦291211 protection¦291211,
-\q1 then they'll make¦291212 peace¦291213 to¦291214 me¦291214—
+\q1 →then they'll make¦291212 peace¦291213 to¦291214 me¦291214—
 \q1 let¦291216 them make¦291216 peace with me¦291218.
 \p
 \v 6 The¦291220 (time) is coming¦291220 when Ya'akov¦291222 \add !(Jacob¦291222)\add* will¦291221 take¦291221 root¦291221.
@@ -1948,7 +1948,7 @@
 \q1
 \v 11 when¦291296 its¦291297 branches¦291297 dry¦291296 up¦291296, they'll¦291298 be¦291298 broken¦291298 \add off\add*.
 \q1 Women¦291299 will¦291300 come¦291300 and \add ≈light¦291301 fires with them\add* because¦291303 they're¦291301 not¦291304 a¦291305 people¦291305 with understanding¦291307.
-\q1 Therefore¦291309 the¦291315 \add >one\add* who¦291315 made¦291315 and¦291316 formed¦291316 it¦291316, won't¦291317 show¦291318 \add any\add* favour¦291318 towards it¦291318.
+\q1 →Therefore¦291309 the¦291315 \add >one\add* who¦291315 made¦291315 and¦291316 formed¦291316 it¦291316, won't¦291317 show¦291318 \add any\add* favour¦291318 towards it¦291318.
 \p
 \v 12 Then¦291321 \add ≈at that¦291323 time¦291322\add*, Yahweh¦291325 will¦291324 thresh \add people\add*
 \q1 from¦291326 the Perat \add !(Euphrates)\add* river¦291327 \add in the northeast\add* to¦291328 Mitsrayim's¦291331 \add !(Egypt's¦291331)\add* river \add down in the southwest\add*,
@@ -2010,7 +2010,7 @@
 \q1
 \v 13 \add ≈So¦291539\add* Yahweh's¦291543 message¦291541 to¦291540 them¦291540,
 \q1 ‘command¦291544 to¦291545 command to¦291547 command¦291547, line¦291548 to¦291549 line to¦291551 line¦291551, a¦291552 little¦291552 there¦291553, a¦291554 little¦291554 there¦291555’,
-\q1 so¦291556 they¦291557 can go¦291557, \add ≈but¦291558\add* they'll¦291558 stumble¦291558 backwards¦291559 and¦291560 will¦291560 be¦291560 broken¦291560,
+\q1 →so¦291556 they¦291557 can go¦291557, \add ≈but¦291558\add* they'll¦291558 stumble¦291558 backwards¦291559 and¦291560 will¦291560 be¦291560 broken¦291560,
 \q1 \add ≈plus¦291561\add* they'll¦291561 become trapped¦291561 and¦291562 will¦291562 be¦291562 captured¦291562.
 \s1 A vital foundation for Tsiyon/Zion
 \rem /s1 A Cornerstone for Zion
@@ -2072,7 +2072,7 @@
 \q1
 \v 27 Fennel isn't¦291765 threshed¦291767 with a threshing board,
 \q1 ≈nor is a¦291770 cart¦291770 wheel¦291769 rolled over¦291771 cumin¦291773,
-\q1 but rather, fennel is¦291774 beaten¦291777 with¦291776 a stick¦291776,
+\q1 ^but rather, fennel is¦291774 beaten¦291777 with¦291776 a stick¦291776,
 \q1 ≈and¦291779 cumin¦291779 with¦291780 a rod¦291780.
 \q1
 \v 28 \add Grain for\add* bread¦291782 \add ≈must be¦291783 ground\add* because¦291784 anyone¦291788 threshing¦291788 it doesn't \add ≈keep at it\add* forever¦291786.
@@ -2184,7 +2184,7 @@
 \v 1 Yahweh¦292203 \add ≈declares¦292201\add* that¦292200 \add you\add* rebellious¦292200 children¦292199 \add ≈won't end well\add*.
 \q1 \add You're\add* \add ≈making plans¦292205 that don't¦292206 come\add* from¦292207 me¦292207,
 \q1 and¦292208 pouring¦292208 out¦292208 drink offerings \add ≈but¦292210\add* not¦292210 by my¦292211 spirit¦292211,
-\q1 thus¦292212 adding¦292213 \add ≈disobedience\add* to¦292215 \add ≈disobedience\add*.
+\q1 →thus¦292212 adding¦292213 \add ≈disobedience\add* to¦292215 \add ≈disobedience\add*.
 \q1
 \v 2 Those¦292219 who¦292219 go down¦292220 to Mitsrayim¦292221 \add !(Egypt¦292221)\add* \add ≈didn't¦292223 ask my¦292222 advice\add*,
 \q1 \add before\add* trying to¦292225 reach¦292225 safety¦292225 with Par'oh¦292227 \add !(Pharaoh¦292227)\add*,
@@ -2208,13 +2208,13 @@
 \q1 to¦292296 a¦292298 \add ≈nation¦292276\add* that¦292299 \add ≈can't¦292299 help them\add*.
 \q1
 \v 7 Mitsrayim's¦292302 \add !(Egypt's¦292302)\add* ‘help¦292305’ \add ≈is futile¦292303\add* and¦292304 meaningless,
-\q1 so¦292306 I've¦292307 called¦292307 her ‘Rahav¦292309 who just¦292308 sits¦292311 there’.
+\q1 →so¦292306 I've¦292307 called¦292307 her ‘Rahav¦292309 who just¦292308 sits¦292311 there’.
 \s1 The disobedient people
 \rem /s1 A Rebellious People; A Warning for Rebellious Judah; The Disobedient People
 \p
 \v 8 Now¦292313 go¦292314 \add ≈to\add* them \add and\add* write¦292315 it¦292315 on¦292316 a¦292318 tablet¦292318—
 \q1 ≈inscribe¦292323 it on¦292320 a¦292322 scroll¦292322
-\q1 so¦292324 that¦292324 it'll¦292324 be¦292324 there for¦292325 a¦292325 future¦292326 day¦292325—
+\q1 →so¦292324 that¦292324 it'll¦292324 be¦292324 there for¦292325 a¦292325 future¦292326 day¦292325—
 \q1 ≈\add something that'll endure\add* forever¦292327
 \q1
 \v 9 because¦292332 this is a¦292333 rebellious¦292334 \add ≈nation\add*.
@@ -2247,7 +2247,7 @@
 \v 16 You¦292450 all said¦292450, ‘Nah, we'll¦292457 flee away on¦292454 horses¦292456,’
 \q1 and indeed you¦292461 all will¦292461 flee¦292461,
 \q1 and¦292462 \add ≡you said\add*, ‘We'll¦292465 ride¦292465 on¦292462 swift¦292464 horses¦292464,’
-\q1 but those¦292470 who¦292470 chase¦292470 after you¦292470 all will¦292469 prove¦292469 to be swifter¦292469.
+\q1 ^but those¦292470 who¦292470 chase¦292470 after you¦292470 all will¦292469 prove¦292469 to be swifter¦292469.
 \q1
 \v 17 A¦292472 thousand¦292472 \add ≡will flee\add* from¦292474 the threat¦292475 of¦292475 \add just\add* one¦292476.
 \q1 ≈You'll¦292480 all flee¦292480 from¦292477 the threat¦292478 of¦292478 five¦292479 \add of the enemy\add*
@@ -2542,7 +2542,7 @@
 \q1
 \v 23 Your¦293523 ropes¦293523 are¦293522 coming undone¦293522—they¦293526 can't secure the¦293527 base¦293527 of¦293527 the mast¦293529.
 \q1 They¦293532 can't spread¦293532 the sail¦293533 out¦293532.
-\q1 Then¦293534 the large booty¦293536 onboard will¦293535 be¦293535 divided¦293535 as plunder¦293538—
+\q1 →Then¦293534 the large booty¦293536 onboard will¦293535 be¦293535 divided¦293535 as plunder¦293538—
 \q1 even lame¦293540 \add >people\add* will¦293541 take¦293541 some spoil.
 \q1
 \v 24 None of the residents will¦293546 say¦293546 that¦293550 they're sick¦293548—
@@ -2784,7 +2784,7 @@
 \v 30 \add ≈So¦294985\add* this¦294985 will¦294988 be¦294988 the¦294988 sign¦294988 for you¦294989 \add Hizkiyah\add* \add !(Hezekiah)\add*:
 \q1 This¦294990 year¦294990 you'll eat wild crops,
 \q1 and¦294992 next year¦294992 you'll eat the¦294993 self-seeded¦294994 growth.
-\q1 But¦294995 in¦294995 the¦294996 third¦294996 year you must sow¦294997 and¦294998 harvest¦294998,
+\q1 ^But¦294995 in¦294995 the¦294996 third¦294996 year you must sow¦294997 and¦294998 harvest¦294998,
 \q1 and¦294999 plant¦294999 vineyards¦295000 and¦295001 eat¦295001 their¦295003 fruit¦295003.
 \q1
 \v 31 The \add >people\add* of Yehudah¦295009 \add !(Judah¦295009)\add* \add ≈who've remained¦295010\add* \add here\add*
@@ -2812,7 +2812,7 @@
 \rem /s1 King Hezekiah's Illness and Recovery; Hezekiah's Illness; Hezekiah's Sickness and Recovery
 \r (2 Kgs 20:1-11; 2 Chr. 32:24-26)
 \p
-\v 1 \add ≈Then a time¦295143 came¦295148 when\add* \add King\add* Hizkiyah¦295146 \add !(Hezekiah¦295146)\add* became¦295145 \add ≈critically ill\add*, and the¦295154 prophet¦295154 Yeshayah¦295150 \add !(Isaiah¦295150)\add* (\add Yeshayah\add*, Amots'¦295153 son¦295151) went¦295148 to¦295149 him¦295149 and¦295155 told¦295155 him¦295156, “Yahweh¦295160 says¦295159 \add ≈that you should put all your¦295162 affairs into order, because¦295163 you¦295165 won't¦295166 recover¦295167—your time is up\add*.”
+\v 1 \add ≈Then a time¦295143 came¦295148 when\add* \add King\add* Hizkiyah¦295146 \add !(Hezekiah¦295146)\add* became¦295145 \add ≈critically ill\add*, and the¦295154 prophet¦295154 Yeshayah¦295150 \add !(Isaiah¦295150,\add* \add Yeshayah\add*, Amots'¦295153 son¦295151) went¦295148 to¦295149 him¦295149 and¦295155 told¦295155 him¦295156, “Yahweh¦295160 says¦295159 \add ≈that you should put all your¦295162 affairs into order, because¦295163 you¦295165 won't¦295166 recover¦295167—your time is up\add*.”
 \p
 \v 2 Then¦295169 Hizkiyah¦295170 \add ≈rolled over to face¦295171\add* the¦295174 wall¦295174 and¦295175 prayed¦295175 to¦295176 Yahweh¦295178,
 \v 3 “Oh¦295182 Yahweh¦295182, please remember¦295183 how¦295187 I've¦295188 \add ≈served you faithfully¦295190 and¦295191 with¦295191 integrity\add*, and¦295193 done¦295195 \add ≈what pleases you\add*.” Then¦295196 Hizkiyah¦295197 \add ≈cried¦295196 and cried¦295198\add*.
@@ -2990,7 +2990,7 @@
 \q1
 \v 24 Indeed, they're¦295982 hardly planted¦295982, yes, hardly sown¦295986.
 \q1 Indeed, their stem has¦295990 barely taken¦295990 root¦295990 in the¦295991 earth¦295991,
-\q1 but¦295993 he also¦295993 blows¦295995 on them¦295996 and¦295997 they¦295997 wither,
+\q1 ^but¦295993 he also¦295993 blows¦295995 on them¦295996 and¦295997 they¦295997 wither,
 \q1 and¦295998 the wind carries¦296000 them¦296000 away like¦295999 straw¦295999.
 \b
 \q1
@@ -3098,7 +3098,7 @@
 \q1
 \v 16 You'll¦296310 \add ≈toss¦296310 them¦296310 into the air\add* and¦296311 the wind will¦296312 carry¦296312 them¦296312 away¦296312,
 \q1 and¦296313 a¦296313 whirlwind will¦296314 scatter¦296314 them¦296315.
-\q1 Then¦296316 you'll¦296317 be¦296317 happy¦296317 \add ≈about\add* Yahweh¦296318—
+\q1 →Then¦296316 you'll¦296317 be¦296317 happy¦296317 \add ≈about\add* Yahweh¦296318—
 \q1 you'll¦296321 boast¦296321 about Yisrael's¦296320 holy¦296319 \add >one\add*.
 \b
 \q1
@@ -3213,7 +3213,7 @@
 \v 13 Yahweh¦296666 will¦296668 go¦296668 ahead like¦296669 a¦296669 warrior¦296667—
 \q1 ≈he'll¦296671 stir¦296671 up¦296671 zeal¦296672 like a¦296673 man¦296669 of¦296669 war¦296670.
 \q1 ≈He'll¦296676 raise¦296676 a¦296676 war cry—shouting \add ≈out loudly\add*,
-\q1 \add and then\add* he'll \add ≈defeat\add* his¦296679 enemies¦296679.
+\q1 →\add and then\add* he'll \add ≈defeat\add* his¦296679 enemies¦296679.
 \s1 Yahweh promises help
 \rem /s1 God Promises to Help His People
 \p
@@ -3325,7 +3325,7 @@
 \q1
 \v 10 \add But\add* Yahweh¦296995 \add ≈declares¦296993\add* that you¦296991 all are \em my¦296992\em* witnesses¦296992
 \q1 ≈and¦296996 my¦296996 servant¦296996 who¦296997 I've¦296998 chosen¦296998
-\q1 so¦296999 that¦296999 you¦297000 all can know¦297000 and¦297001 believe¦297001 me¦297002
+\q1 →so¦296999 that¦296999 you¦297000 all can know¦297000 and¦297001 believe¦297001 me¦297002
 \q2 ≈and¦297003 understand that¦297004 I¦297006 am \add *God\add*.
 \q1 There's no other god¦297012 that was¦297011 formed¦297011 before me,
 \q1 ^and¦297013 none will be format after¦297013 me¦297013.
@@ -3393,7 +3393,7 @@
 \q1
 \v 24 You¦297182 didn't \add ≈spend any money¦297184 to buy¦297182\add* fragrant reeds for¦297183 me¦297183,
 \q1 ≈and¦297186 you¦297189 haven't satisfied¦297189 me with the¦297186 fat¦297186 from your¦297187 sacrifices¦297187.
-\q1 Nevertheless¦297190 you've¦297191 burdened¦297191 me¦297191 with¦297192 your¦297192 \add ≈disobedience\add*—
+\q1 ^Nevertheless¦297190 you've¦297191 burdened¦297191 me¦297191 with¦297192 your¦297192 \add ≈disobedience\add*—
 \q1 ≈you've¦297193 tired¦297193 me¦297193 out with¦297194 your¦297194 \add ≈wickedness\add*.
 \q1
 \v 25 I'm \add ≈the only one\add* who¦297200 wipes¦297200 your offenses out¦297200 for¦297202 my¦297202 own¦297202 sake¦297202,
@@ -3458,7 +3458,7 @@
 \v 9 All¦297365 those¦297362 who¦297362 form¦297362 \add #idols¦297364\add* are \add ≈losers\add*
 \q1 ≈and¦297367 their¦297367 expectations won't¦297368 be realised.
 \q1 Their¦297365 witnesses¦297371 can't¦297374 see¦297376 and¦297377 they¦297379 don't know¦297379 \add <anything\add*,
-\q1 so¦297380 they'll¦297381 be¦297381 ashamed¦297381.
+\q1 →so¦297380 they'll¦297381 be¦297381 ashamed¦297381.
 \q1
 \v 10 Who¦297383 would form¦297385 a¦297386 god¦297386
 \q1 ≈or an¦297387 idol¦297387 that never \add ≈helps\add* them?
@@ -3570,7 +3570,7 @@
 \q1
 \v 3 and¦297746 I'll¦297746 give¦297746 you the treasures¦297748 \add ≈that are hidden¦297750 away\add*
 \q1 and the riches \add stored\add* in secret¦297751 places¦297751
-\q1 so¦297752 that¦297752 you'll¦297753 know¦297753 that¦297754 it's me, Yahweh¦297757, Yisrael's¦297761 \add !(Israel's¦297761)\add* god¦297760, who¦297758 calls¦297758 you by¦297759 name¦297759.
+\q1 →so¦297752 that¦297752 you'll¦297753 know¦297753 that¦297754 it's me, Yahweh¦297757, Yisrael's¦297761 \add !(Israel's¦297761)\add* god¦297760, who¦297758 calls¦297758 you by¦297759 name¦297759.
 \q1
 \v 4 For¦297763 the¦297763 sake¦297763 of¦297763 my¦297764 servant¦297764 Ya'akov¦297765 \add !(Jacob¦297765)\add*
 \q1 ≈and¦297766 Yisrael¦297766 my¦297767 chosen¦297767 \add >one\add*,
@@ -3770,7 +3770,7 @@
 \q1 \add even\add* the old¦298425 \add ≈had a heavy¦298426 burden placed on them\add*.
 \q1
 \v 7 You¦298430 said¦298430 that you'd be¦298432 queen¦298433 forever¦298431,
-\q1 but you¦298437 didn't¦298442 \add ≈give it enough thought¦298443\add*—
+\q1 ^but you¦298437 didn't¦298442 \add ≈give it enough thought¦298443\add*—
 \q1 you¦298443 didn't \add ≈consider\add* its¦298444 outcome¦298444.
 \q1
 \v 8 Now¦298447 listen¦298448 to¦298448 this¦298450 \add you\add* over-indulged \add >woman\add* who¦298452 lives¦298452 in security¦298453,
@@ -3890,7 +3890,7 @@
 \q1 who¦298831 leads¦298831 you¦298831 in¦298832 the path¦298832 that¦298833 you¦298833 should \add ≈follow\add*.
 \q1
 \v 18 If¦298835 you¦298836 had¦298836 paid¦298836 attention¦298836 to¦298837 my¦298837 instructions¦298837
-\q1 then¦298838 you would have had peace¦298840 like¦298839 a river¦298839
+\q1 →then¦298838 you would have had peace¦298840 like¦298839 a river¦298839
 \q1 and¦298841 your¦298841 righteousness¦298841 like¦298842 waves¦298842 in the¦298843 ocean¦298843.
 \q1
 \v 19 Your¦298847 \add ≈descendants¦298848\add* would have been¦298845 \add as numerous\add* as¦298846 the sand¦298846,
@@ -3930,7 +3930,7 @@
 \q1
 \v 4 I \add ≈replied¦298940\add*, ‘I've¦298942 worked¦298942 with \add ≈no results\add*
 \q1 ≈and¦298944 used my¦298945 strength¦298945 for nothing \add ≈at all\add*.
-\q1 Nevertheless¦298947, my¦298948 justice¦298948 is with¦298949 Yahweh¦298951,
+\q1 ^Nevertheless¦298947, my¦298948 justice¦298948 is with¦298949 Yahweh¦298951,
 \q1 ≈and¦298952 my¦298952 wages¦298952 are¦298953 with¦298953 my¦298955 god¦298955.’
 \b
 \q1
@@ -4046,7 +4046,7 @@
 \q1
 \v 26 I'll¦299322 cause¦299322 those¦299325 who¦299325 mistreated¦299325 you¦299325 to¦299322 eat¦299322 their¦299328 own¦299328 flesh,
 \q1 ≈and¦299329 they'll¦299331 get¦299331 drunk¦299331 on the¦299329 wine¦299329 of¦299330 their¦299330 own¦299330 blood¦299330.
-\q1 Then¦299332 \add ≈everybody\add* will¦299332 know¦299332 that¦299336 I¦299337 am your rescuer¦299339, Yahweh¦299338,
+\q1 →Then¦299332 \add ≈everybody\add* will¦299332 know¦299332 that¦299336 I¦299337 am your rescuer¦299339, Yahweh¦299338,
 \q1 and¦299340 Ya'akov's¦299342 \add !(Jacob's¦299342)\add* powerful¦299341 \add >one\add* who \add ≈paid the price for your freedom\add*.
 \c 50
 \rem /s1 Israel's Sin and the Servant's Obedience
@@ -4086,8 +4086,8 @@
 \q1 ≈I¦299454 didn't¦299453 hide¦299454 my¦299452 face¦299452 from¦299455 insults¦299455 and¦299456 \add ≈getting spat on\add*\x + \xo 50:6: \xt Mat 26:67; Mrk 14:65.\x*
 \q1
 \v 7 \add ≈but¦299458\add* \add &my¦299458\add* master¦299458 Yahweh¦299459 will help¦299460 me¦299462.
-\q1 Therefore¦299463 I'm not¦299466 humiliated¦299467,
-\q1 so¦299470 I've¦299471 made¦299471 my¦299472 face¦299472 \add look determined\add* like¦299473 flint¦299473
+\q1 →Therefore¦299463 I'm not¦299466 humiliated¦299467,
+\q1 →so¦299470 I've¦299471 made¦299471 my¦299472 face¦299472 \add look determined\add* like¦299473 flint¦299473
 \q1 because¦299475 I know that¦299475 I¦299478 won't be¦299478 ashamed¦299478.
 \q1
 \v 8 The¦299481 \add ≈one¦299481 who'll¦299481 declare me¦299481 innocent\add* is close by.
@@ -4156,7 +4156,7 @@
 \q1
 \v 8 because¦299688 \add #moths¦299691\add* will¦299690 eat¦299690 them¦299690 like a \add ≈piece of clothing¦299689\add*,
 \q1 ≈and \add &their\add* larva will¦299693 devour¦299693 them¦299693 like \add they do with\add* wool¦299692.
-\q1 However, \add ≈I will¦299697 only ever do what is¦299697 right¦299695\add*,
+\q1 ^However, \add ≈I will¦299697 only ever do what is¦299697 right¦299695\add*,
 \q1 and¦299698 \add ≈when I save you, you'll be free throughout the generations¦299700\add*.
 \b
 \q1
@@ -4329,7 +4329,7 @@
 \q1
 \v 9 His¦300324 burial place was among the criminals,
 \q1 ≈and¦300325 a¦300327 rich¦300327 \add >man\add* at his¦300328 death¦300328,
-\q1 although he'd¦300333 committed no \add ≈violent¦300332\add* acts,
+\q1 ^although he'd¦300333 committed no \add ≈violent¦300332\add* acts,
 \q1 ≈and¦300334 \add ≈had never spoken deceitfully¦300335\add*.\x + \xo 53:9: \xt 1Pe 2:22.\x*
 \b
 \q1
@@ -4462,7 +4462,7 @@
 \q1
 \v 7 Let¦300761 the wicked¦300762 \add >person\add* abandon¦300761 their \add ≈behaviour\add*,
 \q1 ≈and¦300764 the evil¦300765 \add >person\add* \add ≡abandon¦300761\add* their \add ≈plans\add*.
-\q1 Then¦300767 let¦300767 them return¦300767 to¦300768 Yahweh¦300770 so¦300771 that¦300771 he¦300771 can have¦300771 compassion¦300771 for him¦300771,
+\q1 →Then¦300767 let¦300767 them return¦300767 to¦300768 Yahweh¦300770 so¦300771 that¦300771 he¦300771 can have¦300771 compassion¦300771 for him¦300771,
 \q1 ≈and¦300772 \add ≡return¦300767\add* to¦300772 our¦300774 god¦300774 because¦300775 he'll¦300777 \add ≈freely\add* forgive¦300778 \add <them\add*.
 \p
 \v 8 \add ≈Yes,\add* my¦300782 thoughts¦300783 aren't \add like\add* your¦300783 thoughts,
@@ -4594,14 +4594,14 @@
 \q1 and¦301242 even descended to¦301243 \add ≈the world of the dead\add*.
 \q1
 \v 10 You¦301249 were tired¦301249 from your¦301248 \add ≈long\add* journey¦301248,
-\q1 but you didn't¦301250 say¦301251 that \add ?≈it's all just hopeless\add*.
+\q1 ^but you didn't¦301250 say¦301251 that \add ?≈it's all just hopeless\add*.
 \q1 You¦301255 found¦301255 \add ?≈new things to do\add* so¦301258 then you¦301260 didn't become¦301260 weak¦301260.
 \b
 \q1
 \v 11 Who¦301264 \add ≈very you¦301265 so¦301266 afraid¦301266 of\add* that¦301267 you¦301268 lie¦301268,
 \q1 and¦301269 don't¦301270 remember¦301271 me¦301269 \add ?≈or think¦301271 about¦301277 me\add*?
 \q1 Haven't I¦301279 been¦301280 silent¦301280 for a long¦301281 \add time now\add*
-\q1 so¦301282 it's not me that you're¦301284 afraid¦301284 of.
+\q1 →so¦301282 it's not me that you're¦301284 afraid¦301284 of.
 \q1
 \v 12 I'll¦301287 talk about¦301288 your¦301288 activities and¦301289 \add ≈how you do what's right¦301288\add*
 \q1 \add ≈but¦301292\add* they¦301293 won't¦301292 benefit¦301293 you¦301293.
@@ -4701,7 +4701,7 @@
 \q1
 \v 10 give yourself to¦301586 the hungry
 \q1 and¦301588 \add ≈give those who are suffering what they need\add*
-\q1 then¦301591 your¦301593 light¦301593 will¦301591 rise¦301591 in¦301592 the darkness¦301592
+\q1 →then¦301591 your¦301593 light¦301593 will¦301591 rise¦301591 in¦301592 the darkness¦301592
 \q1 and¦301594 your¦301594 darkness will be like¦301595 the¦301595 noonday.
 \q1
 \v 11 Then¦301597 Yahweh¦301598 will¦301597 continually¦301599 lead¦301597 you¦301597
@@ -4911,7 +4911,7 @@
 \q1
 \v 17 Instead of¦302251 bronze¦302252 and iron, I'll¦302253 bring¦302253 gold¦302254 and¦302255 silver¦302258,
 \q1 ≈and¦302259 instead of¦302259 timber¦302260 and¦302262 stones¦302263, bronze and iron¦302264.
-\q1 Then¦302265 I'll¦302265 \add ≈appoint\add* peace¦302267 as your overseer¦302266,
+\q1 →Then¦302265 I'll¦302265 \add ≈appoint\add* peace¦302267 as your overseer¦302266,
 \q1 and¦302268 righteousness¦302269 as your supervisors.
 \q1
 \v 18 Violence¦302275 won't¦302271 be¦302273 \add ≈experienced\add* in¦302276 your¦302276 land¦302276—
@@ -4956,7 +4956,7 @@
 \v 3 \add ≡It'll be a time\add* to¦302394 give¦302394 Tsiyon's¦302393 \add !(Zion's¦302393)\add* mourners¦302392 a¦302396 \add nice\add* turban¦302396 instead of¦302397 ashes¦302398 \add on their heads\add*,
 \q1 oil¦302399 \add to show\add* joy¦302400 \add on their faces\add* instead of¦302401 mourning¦302402,
 \q1 a¦302403 cloak of¦302403 praise¦302404 instead of¦302405 a¦302406 \add ≈discouraged\add* spirit¦302406.
-\q1 Then¦302408 they'll be¦302408 called¦302408 ‘oaks¦302410 of¦302410 righteousness¦302411’ that Yahweh¦302413 planted¦302412 to¦302414 \add ≈display his splendour\add*.
+\q1 →Then¦302408 they'll be¦302408 called¦302408 ‘oaks¦302410 of¦302410 righteousness¦302411’ that Yahweh¦302413 planted¦302412 to¦302414 \add ≈display his splendour\add*.
 \q1
 \v 4 They'll¦302416 rebuild¦302416 the ancient¦302418 ruins¦302417—
 \q1 ≈restoring the places¦302419 \add ≈that had become deserted\add*.
@@ -5123,7 +5123,7 @@
 \q1 Like¦302952 a horse¦302952 in¦302953 the wilderness¦302953, they¦302955 didn't¦302954 stumble¦302955.
 \q1
 \v 14 Like¦302957 cattle¦302957 going¦302959 down¦302959 a valley¦302958, Yahweh's¦302961 spirit¦302960 gave¦302962 them \add ≈peace\add*,
-\q1 so¦302963 you¦302964 led¦302964 your¦302965 people¦302965 to¦302967 give yourself¦302967 an \add ≈incredible reputation¦302968\add*.
+\q1 →so¦302963 you¦302964 led¦302964 your¦302965 people¦302965 to¦302967 give yourself¦302967 an \add ≈incredible reputation¦302968\add*.
 \s1 The mercy
 \rem /s1 A Prayer for Mercy and Help; A Prayer of Penitence; Prayer for Mercy and Pardon
 \q1
@@ -5166,7 +5166,7 @@
 \v 5 You¦303091 meet¦303091 the \add >one who\add* is happy¦303094 and¦303095 who¦303095 does¦303095 \add ≈what is right¦303096\add*—
 \q1 who remembers¦303098 your¦303097 \add ≈instructions\add*.
 \q1 Listen, you were¦303102 angry¦303102 \add ?≈because\add* we¦303103 sinned¦303103 over a long¦303105 period
-\q1 \add ?≈but¦303106 now\add* we will¦303106 be¦303106 saved¦303106.
+\q1 ^\add ?≈but¦303106 now\add* we will¦303106 be¦303106 saved¦303106.
 \q1
 \v 6 We've¦303109 all become¦303109 like¦303110 \add someone\add* ‘unclean’
 \q1 ≈and all \add ≈the good things we do\add* are like¦303112 a¦303112 \add used\add* menstrual rag.
@@ -5231,7 +5231,7 @@
 \q1
 \v 8 This is what Yahweh¦303335 says¦303334:
 \q1 When juice is¦303337 found¦303337 in¦303339 \add some\add* grapes¦303339 \add on the vine\add*,
-\q1 then¦303340 \add someone\add* will say¦303340, ‘Don't¦303341 destroy¦303343 it¦303343 because¦303344 there's good in¦303346 it¦303346,’
+\q1 →then¦303340 \add someone\add* will say¦303340, ‘Don't¦303341 destroy¦303343 it¦303343 because¦303344 there's good in¦303346 it¦303346,’
 \q1 so¦303347 too for¦303349 the¦303349 sake¦303349 of¦303349 my¦303350 servants¦303350, I won't¦303351 destroy¦303352 everyone¦303353.
 \q1
 \v 9 I'll¦303355 bring¦303355 \add ≈descendants¦303357\add* out¦303355 of Ya'akov¦303356 \add !(Jacob¦303356)\add*,
@@ -5369,7 +5369,7 @@
 \v 12 because¦303865 Yahweh¦303870 says¦303869 this:
 \q1 Listen, I'm¦303871 about¦303872 to¦303872 extend¦303872 peace¦303876 to¦303874 \add @Yerushalem¦303874\add* like¦303875 a¦303875 river¦303875,
 \q1 and¦303877 the wealth¦303879 of¦303879 the nations¦303880 \add ≡to her\add* like an overflowing¦303878 stream.
-\q1 Then¦303881 you'll¦303881 all suckle¦303881 \add and\add* be¦303885 carried¦303885 on the hip¦303884,
+\q1 →Then¦303881 you'll¦303881 all suckle¦303881 \add and\add* be¦303885 carried¦303885 on the hip¦303884,
 \q1 and¦303886 bounced on¦303886 her knees¦303888.
 \q1
 \v 13 I'll¦303897 comfort¦303897 you all like¦303891 a¦303891 mother¦303893 comforts¦303894 \add ≈her child\add*,

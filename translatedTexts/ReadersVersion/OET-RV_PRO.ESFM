@@ -1,4 +1,4 @@
-\id PRO - Open English Translation—Readers' Version (OET-RV) v0.2.5
+\id PRO - Open English Translation—Readers' Version (OET-RV) v0.2.7
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PRO
@@ -22,7 +22,7 @@
 \s1 The purpose of proverbs
 \rem /s1 Advice to the reader; The Value of Proverbs; The Purpose of Proverbs; Prologue: Purpose and Theme
 \p
-\v 1 \add These are\add* the¦269403 proverbs¦269403 \add collected\add* by King¦269408 Shelomoh¦269404 \add !(Solomon¦269404)\add* of Yisrael¦269409 \add !(Israel¦269409)\add* (\add King\add* David's¦269407 son¦269405):
+\v 1 \add These are\add* the¦269403 proverbs¦269403 \add collected\add* by King¦269408 Shelomoh¦269404 \add !(Solomon¦269404)\add* of Yisrael¦269409 \add !(Israel¦269409,\add* \add King\add* David's¦269407 son¦269405):
 \rem /s1 Prologue
 \q1
 \v 2 \add These will help you\add* to¦269411 know¦269411 wisdom¦269412 and¦269413 instruction¦269413,
@@ -272,7 +272,7 @@
 \q1 Safeguard sound¦270088 wisdom¦270088 and¦270089 discretion¦270089
 \q1
 \v 22 and¦270091 they'll¦270091 \add ≈liven your¦270093 mind\add*,
-\q1 and¦270094 then \add ?≈people will notice it about¦270095 you\add*.
+\q1 →and¦270094 then \add ?≈people will notice it about¦270095 you\add*.
 \q1
 \v 23 Then¦270097 you'll¦270098 walk¦270098 in confidence¦270099
 \q1 without \add tripping or\add* stumbling.
@@ -567,7 +567,7 @@
 \q1 ≈and¦270943 don't¦270943 let¦270945 her¦270945 capture¦270945 you¦270945 with¦270946 her¦270946 eyelashes¦270946,
 \q1
 \v 26 because¦270948 the price¦270949 of a¦270952 prostitute¦270952 \add ?might be as cheap as\add* a¦270955 loaf¦270955 of¦270955 bread¦270956,
-\q1 but¦270957 \add another\add* man's¦270958 wife¦270957 \add ≈might cost you\add* your precious¦270960 life¦270959.
+\q1 ^but¦270957 \add another\add* man's¦270958 wife¦270957 \add ≈might cost you\add* your precious¦270960 life¦270959.
 \q1
 \v 27 Can anyone carry fire¦270966 against their chest,
 \q1 without their clothes¦270968 \add ≈catching fire¦270970\add*.
@@ -1059,7 +1059,7 @@
 \b
 \q1
 \v 31 Listen, \add >anyone who\add* \add ≈does what's right¦272376\add* will be¦272378 rewarded¦272378 \add appropriately\add*,
-\q1 \add so\add* how more so the wicked¦272382 and¦272383 disobedient \add >person\add*!
+\q1 →\add so\add* how more so the wicked¦272382 and¦272383 disobedient \add >person\add*!
 \c 12
 \q1
 \v 1 Anyone¦272385 who¦272385 loves¦272385 discipline¦272386, loves¦272389 knowledge¦272390,
@@ -1087,7 +1087,7 @@
 \q1 ^\add ≈but¦272452\add* \add anyone\add* with a warped \add ≈mind¦272454\add* will¦272455 \add ≈end up\add* despised¦272456.
 \q1
 \v 9 It's¦272461 better¦272458 to be¦272459 \add ≈little known\add* yet have a¦272460 servant¦272460,
-\q1 than¦272462 to be¦272463 self-important \add ≈but have nothing to eat\add*.
+\q1 ^than¦272462 to be¦272463 self-important \add ≈but have nothing to eat\add*.
 \q1
 \v 10 A¦272468 \add ≈godly¦272468\add* \add >person\add* \add ≈cares for\add* the¦272469 life¦272469 of¦272469 their \add #animal¦272470\add*,
 \q1 ^\add ≈but¦272471\add* wicked¦272472 \add >people\add* \add display\add* cruelty¦272473 rather than compassion¦272471.
@@ -1453,7 +1453,7 @@
 \q1 →he¦273580 causes¦273580 even his¦273579 enemies¦273579 to¦273580 be¦273580 at¦273580 peace¦273580 with¦273581 them.
 \q1
 \v 8 It's better¦273583 to have \add just\add* a¦273585 little¦273585 \add ≈from doing what's right¦273586\add*,
-\q1 than¦273587 a \add ≈large income\add* \add ≈acquired dishonestly\add*.
+\q1 ^than¦273587 a \add ≈large income\add* \add ≈acquired dishonestly\add*.
 \q1
 \v 9 \add #People¦273593\add* plan¦273594 \add #their\add* ways in \add #their\add* minds¦273592,
 \q1 →but¦273596 Yahweh¦273596 directs¦273597 \add #their\add* steps¦273598.
@@ -1899,7 +1899,7 @@
 \q1 ^\add ≈but¦275035\add* well-behaved \add >people\add* \add ≈act¦275037 with decency\add*.
 \q1
 \v 9 It's better¦275039 to¦275040 live¦275040 in the corner¦275043 of¦275043 \add ≈the attic\add*\f + \fr 21:9 \ft We made an adjustment here for most of our readers in houses with sloping roofs, as distinct from living in an arid climate and having a flat roof.\f*
-\q1 than¦275046 inside the \add main\add* house¦275048 with the company of¦275048 an argumentative wife¦275046.
+\q1 ^than¦275046 inside the \add main\add* house¦275048 with the company of¦275048 an argumentative wife¦275046.
 \q1
 \v 10 Wicked¦275052 \add >people\add* have a strong, inner craving¦275053 for evil¦275055.
 \q1 →\add Even\add* \add #their\add* \add #neighbours¦275060\add* won't¦275056 be¦275058 shown¦275058 any favour¦275058.
@@ -1929,7 +1929,7 @@
 \q1 ≈and a treacherous¦275137 \add >person\add* \add ?≡to free\add* a \add ≈godly person\add*.
 \q1
 \v 19 It's better¦275139 to¦275140 live¦275140 in¦275141 a wilderness¦275143 \add ≈region¦275141\add*,
-\q1 than¦275144 with a¦275144 wife¦275144 who's \add ≈argumentative and¦275147 negative\add*.
+\q1 ^than¦275144 with a¦275144 wife¦275144 who's \add ≈argumentative and¦275147 negative\add*.
 \q1
 \v 20 Precious \add #treasures¦275149\add* and¦275152 oil¦275152 will be¦275153 in¦275153 the house¦275153 of¦275153 a¦275154 wise¦275154 \add >person\add*,
 \q1 ^\add ≈but¦275155\add* a¦275155 foolish¦275155 person¦275156 consumes it¦275157 \add all\add*.
@@ -2032,7 +2032,7 @@
 \q1 to¦275441 \add ≈advise¦275444 and¦275445 teach\add* \add <you\add*—
 \q1
 \v 21 to¦275447 show you¦275447 true¦275448 and reliable \add ≈principles\add*
-\q1 so that you can give accurate answers to \add those\add* sent¦275455 to you¦275455.
+\q1 →so that you can give accurate answers to \add those\add* sent¦275455 to you¦275455.
 \s2 -1-
 \p
 \v 22 Don't¦275458 rob¦275460 those in poverty just because¦275463 they're poor¦275464
@@ -2327,7 +2327,7 @@
 \q1 ≈and¦276349 don't¦276351 \add ≈claim¦276345 a place¦276349 among the well-known\add* \add >people\add*,\x + \xo 25:6-7: \xt Luk 14:8-10.\x*
 \q1
 \v 7 because¦276355 it's better¦276356 if they tell¦276357 you, “Come¦276360 up¦276360 here¦276361,”
-\q1 than¦276362 to be placed¦276362 lower¦276362 \add right\add* in¦276363 front¦276363 of¦276363 a¦276364 prince \add ≈as you look¦276366 at him\add*.
+\q1 ^than¦276362 to be placed¦276362 lower¦276362 \add right\add* in¦276363 front¦276363 of¦276363 a¦276364 prince \add ≈as you look¦276366 at him\add*.
 \p
 \v 8 Don't¦276369 \add ≈be in a¦276372 rush\add* to take someone to court¦276372.
 \q1 →What¦276375 would¦276377 you¦276377 do¦276377 at¦276378 the end¦276378, if your¦276381 neighbour¦276381 put¦276379 you to¦276379 shame¦276379?
@@ -2441,7 +2441,7 @@
 \q1 they're too lazy to¦276737 bring¦276737 it¦276737 back¦276737 to¦276738 their mouth¦276740.
 \q1
 \v 16 The slacker is wiser¦276742 in¦276744 their own¦276744 eyes¦276744,
-\q1 than¦276745 seven¦276745 \add >people\add* who¦276746 give \add ≈good advice\add*.
+\q1 ^than¦276745 seven¦276745 \add >people\add* who¦276746 give \add ≈good advice\add*.
 \q1
 \v 17 The person who¦276749 gets angry¦276754 about a quarrel that's \add ≈nothing to do with them\add*,
 \q1 is \add like\add* someone grabbing the ears¦276750 of¦276750 a¦276752 dog¦276752 that's¦276753 passing¦276753 by¦276753.
@@ -2463,7 +2463,7 @@
 \q1 are \add like\add* a silver¦276812 overlay¦276814 on¦276815 a clay¦276817 pot.
 \q1
 \v 24 A person who¦276827 hates¦276827 can disguise¦276826 it with their lips¦276824,
-\q1 but¦276828 they're \add ≈accumulating deceit¦276830 inside¦276828\add*.
+\q1 ^but¦276828 they're \add ≈accumulating deceit¦276830 inside¦276828\add*.
 \q1
 \v 25 When they say favourable¦276834 \add >things\add*, don't¦276836 trust¦276838 them,
 \q1 because¦276841 there's seven¦276842 \add ≈detestable¦276843 things in¦276844 within them\add*.
@@ -2509,10 +2509,10 @@
 \q1 A¦276981 friend¦276964 nearby¦276982 is better¦276980 than¦276983 a¦276983 brother¦276983 living a long way away¦276984.
 \q1
 \v 11 My¦276987 child¦276987, \add ≈make¦276988 me happy¦276988 by becoming wise¦276986\add*,
-\q1 and then¦276988 I'll¦276990 be able to answer \add <anyone\add* who¦276991 taunts¦276991 me¦276991.
+\q1 →and then¦276988 I'll¦276990 be able to answer \add <anyone\add* who¦276991 taunts¦276991 me¦276991.
 \q1
 \v 12 A¦276994 sensible¦276994 \add >person\add* sees¦276995 evil¦276996 and \add ≈stays out of sight\add*
-\q1 \add but\add* naive¦276998 \add >people\add* continue on¦276999 then get punished¦277000.
+\q1 ^\add but\add* naive¦276998 \add >people\add* continue on¦276999 then get punished¦277000.
 \q1
 \v 13 If someone guarantees a¦277008 stranger's¦277008 loan, then¦277009 \add definitely\add* take¦277002 their coat¦277004,
 \q1 or if¦277005 they stand¦277007 as guarantee¦277007 for¦277007 a¦277010 foreign¦277010 \add >woman\add*.\x + \xo 27:13: \xt 20:16.\x*
