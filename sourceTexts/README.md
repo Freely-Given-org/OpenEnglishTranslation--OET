@@ -21,3 +21,5 @@ to see that, go [here](https://github.com/Freely-Given-org/OS-morphhb/blob/maste
 Center for New Testament Restoration (CNTR) Statistical Restoration (SR) Greek New Testament (GNT)
 
 Center for New Testament Restoration (CNTR) English Verifiable Literal Translation (VLT)
+
+This data from the _Center for New Testament Restoration_ was used with the express permission and cooperation of Alan Bunning at the _CNTR_.

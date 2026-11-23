@@ -30,18 +30,27 @@ See our [formats page](https://OET.Bible/Resources/Formats) for more information
 
 ## Schedule
 
-As of August 2026, the entire Bible has been drafted has been drafted after some estimated 10,000 hours of work done over a period of four full-time years. ([This page](https://OET.Bible/About/Status/) will now be kept updated with progress.)
-We’ ve now moved into Phase 3 which is focused on consistency and accuracy checks.
+As of August 2026, the entire Bible has been drafted after some estimated 10,000 hours of work done over a period of four full-time years. ([This page](https://OET.Bible/About/Status/) will now be kept updated with progress.)
+We’ve now moved into Phase 3 which is focused on consistency and accuracy checks.
 
 ## Disclaimer
 
-Note: This Biblical content is created by hand without any so-called ‘AI’ help.
+Note: This Biblical content is created by hand without any so-called ‘AI’ help,
+except for the draft of the _Epistle to the Laodiceans_ ([OET-RV_LAO.ESFM](OET-RV_LAO.ESFM)),
+which was adapted from M. R. James’s public-domain English with AI assistance and is marked as such in its file header.
+It still requires human editorial review.
 
 ## Licences
 
 Copyright (c) 2010-2026 Robert Hunt.
 
 Our _OET-RV_ Bible text is licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) (Creative Commons Attribution-ShareAlike 4.0 International).
+The full licence text is in the [LICENSE](LICENSE) file in this folder.
+
+We also request that if you make any changes to the _OET_ text (including using the _OET-RV_ or _OET-LV_ alone
+rather than together as they were designed to be used), you don’t call it the _Open English Translation_,
+but at the very least call it _Adapted from the Open English Translation_
+or perhaps something like _The Literal Version taken from the Open English Translation_.
 
 ## The inevitable event
 

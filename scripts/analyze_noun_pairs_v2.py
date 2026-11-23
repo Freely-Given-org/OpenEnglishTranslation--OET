@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MPL-2.0
+#
+# Copyright (C) 2026 Robert Hunt
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
 """
 Analyze OET-RV and OET-LV word tables to find noun pairs that occur in both
 singular and plural forms in either translation.

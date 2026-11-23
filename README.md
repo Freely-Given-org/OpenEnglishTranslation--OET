@@ -66,8 +66,19 @@ Our goal is to complete v0.5 by the end of 2027, but we need more eyes on the te
 ## Licences
 
 Our _OET_ Bible text is licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) (Creative Commons Attribution-ShareAlike 4.0 International).
+A copy of the licence, with a README describing the text and its sources, is in each of the text folders:
 
-Any included scripts are licensed [GPL 3.0](https://www.GNU.org/licenses/gpl-3.0.en.html) or later.
+- [translatedTexts/ReadersVersion](translatedTexts/ReadersVersion/): the _Readers’ Version_ (OET-RV)
+- [derivedTexts/auto_edited_OT_ESFM](derivedTexts/auto_edited_OT_ESFM/): the _Literal Version_ (OET-LV) Hebrew Scriptures
+- [derivedTexts/auto_edited_VLT_ESFM](derivedTexts/auto_edited_VLT_ESFM/): the _Literal Version_ (OET-LV) Messianic Update
+- [derivedTexts/auto_edited_DC_ESFM](derivedTexts/auto_edited_DC_ESFM/): the _Literal Version_ (OET-LV) deuterocanonical books
+
+We also request that if you make any changes to the _OET_ text (including using the _OET-RV_ or _OET-LV_ alone
+rather than together as they were designed to be used), you don’t call it the _Open English Translation_,
+but at the very least call it _Adapted from the Open English Translation_
+or perhaps something like _The Literal Version taken from the Open English Translation_.
+
+Any included scripts are licensed [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/) (Mozilla Public License 2.0): see the [LICENSE](LICENSE) file in this folder.
 
 In order to assist you, we have put together a simple program to help you adapt the _Open English Translation_ and export it in a couple of different formats—see the [OET_adapter repository](https://GitHub.com/Freely-Given-org/OpenEnglishTranslation_adapter).
 

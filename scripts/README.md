@@ -120,6 +120,7 @@ This is how we currently form the 39 Old Testament files for the OET-LV-OT:
 
 We use the glosses from the Center for New Testament Restoration (CNTR)
 Verifiable Literal Translation (VLT) as our NT source text.
+This data from the _Center for New Testament Restoration_ was used with the express permission and cooperation of Alan Bunning at the _CNTR_.
 
 This is how we currently form the 27 New Testament files for the OET-LV-NT:
 

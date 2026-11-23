@@ -25,8 +25,9 @@
 #
 # Copyright (C) 2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+OET@gmail.com>
-# License: See gpl-3.0.txt
-#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
 # CHANGELOG:
 #     2026-09-28 v1.0.1 Also strip numbers out of plain '\+add ...\+add*' spans, which mean
 #                        the same as plain '\add ...\add*' spans

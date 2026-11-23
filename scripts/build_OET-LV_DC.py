@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MPL-2.0
 """Reproducible, explicitly provisional DC lexical glosses.
 
 fetch downloads checksum-pinned inputs; build is offline; check verifies outputs.
