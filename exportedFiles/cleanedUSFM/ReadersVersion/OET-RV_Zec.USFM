@@ -1,16 +1,16 @@
-\id ZEC - Open English Translation—Readers’ Version (OET-RV) v0.2.8
+\id ZEC - Open English Translation—Readers’ Version (OET-RV) v0.2.12
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 ZEC
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \h Zekaryah
-\toc1 Zekaryah
+\toc1 Zekaryah (Zechariah)
 \toc2 Zekaryah
-\toc3 Zek.
+\toc3 Zek
 \mt1 Zekaryah
 \mt2 (Zechariah)
 \is1 Introduction
-\ip This document lists the prophecies of Zekaryah (Zechariah) concerning Yerushalem (Jerusalem), and tells about the hoped-for Messiah and the final judgement. It consists of two parts: \bd 1\bd*. \it Chapters 1–8\it*, Zekaryah’s prophecy concerning his revelation about saving Yerushalem, the replacement of the temple and its cleaning so that Yahweh’s people become holy, and \bd 2\bd*. \it Chapters 9–14\it*, the prophecies concerning the hoped-for Messiah and the final judgement.
+\ip This document lists the prophecies of Zekaryah/Zechariah concerning Yerushalem/Jerusalem, and tells about the hoped-for Messiah and the final judgement. It consists of two parts: \bd 1\bd*. \it Chapters 1–8\it*, Zekaryah’s prophecy concerning his revelation about saving Yerushalem, the replacement of the temple and its cleaning so that Yahweh’s people become holy, and \bd 2\bd*. \it Chapters 9–14\it*, the prophecies concerning the hoped-for Messiah and the final judgement.
 \ip It’s believed that this document was written between 520 and 518 before Yeshua/Jesus (B.C.)
 \iot Main components of this document
 \io1 Warnings and hope \ior 1:1–8:23\ior*
@@ -21,7 +21,7 @@
 \c 1
 \s1 Yisrael urged to turn to Yahweh
 \p
-\v 1 In the eighth month of the second year of \add the reign of Persian King\add* Dareyavesh \add (Darius)\add*, Yahweh \add spoke through\add* the prophet Zekaryah \add (Zechariah)\add* (\add Zekaryah,\add* son of Ido’s son Berekyah)\x + \xo 1:1: \xt Ezr 4:24–5:1; 6:14.\x* saying,
+\v 1 In the eighth month of the second year of \add the reign of Persian King\add* Dareyavesh \add (Darius)\add*, Yahweh \add spoke through\add* the prophet Zekaryah \add (Zechariah,\add* \add Zekaryah,\add* son of Ido’s son Berekyah)\x + \xo 1:1: \xt Ezr 4:24–5:1; 6:14.\x* saying,
 \v 2 “Yahweh was very angry with your ancestors,
 \v 3 \add so\add* tell \add this to\add* \add the people\add*: Commander-in-chief Yahweh says \add that if you all turn back\add* to me, I’ll return to you.
 \v 4 Don’t be like your ancestors who’d been told by the prophets that Commander-in-chief Yahweh wanted them to abandon \add all\add* their evil practices, \add but\add* they wouldn’t listen or pay attention. That is Yahweh’s declaration.
@@ -30,7 +30,7 @@
 \v 6 But your ancestors \add didn’t obey\add* my words and my decrees that I commanded \add through\add* my servants the prophets, but they \add eventually\add* repented and said, ‘Commander-in-chief Yahweh has done to us just what our ways and actions deserved.’ ”
 \s1 Yahweh’s compassion for Yerushalem
 \p
-\v 7 \add About three months later\add*, Yahweh \add spoke again through\add* the prophet Zekaryah \add (Zechariah)\add* (\add Zekaryah\add* son of Ido’s son Berekyah) saying,
+\v 7 \add About three months later\add*, Yahweh \add spoke again through\add* the prophet Zekaryah \add (Zechariah,\add* \add Zekaryah\add* son of Ido’s son Berekyah) saying,
 \v 8 “I \add had a vision\add* in the night, and \add was surprised to see\add* a man riding on a red horse,\x + \xo 1:8a: \xt Rev 6:4.\x* and then he was standing among the myrtle trees that are in the valley, and behind him there were red, reddish-brown, and white horses.”\x + \xo 1:8b: \xt Rev 6:2.\x*
 \v 9 I \add asked\add*, “What are these things, my master?”
 \p Then \add that\add* \add heavenly\add* messenger who talked with me told me, “I’ll show you what those things are.”
@@ -166,7 +166,7 @@
 \p
 \v 9 Then Yahweh’s message \add came\add* to me, saying,
 \v 10 “Take \add the offering\add* from the exiles that Helday, Toviyah, and Yedayah \add are bringing\add*, and go this same day and take it into Yoshiyah’s \add (Josiah’s)\add* house (Tsefanyah’s \add (Zephaniah’s)\add* son, who has come from Bavel \add (Babylon)\add*).
-\v 11 Then take the gold and silver, and make a crown and place it on the head of the high priest, Yehoshua \add (Joshua)\add* (Yehotsadak’s son)
+\v 11 Then take the gold and silver, and make a crown and place it on the head of the high priest, Yehoshua \add (Joshua,\add* Yehotsadak’s son)
 \v 12 and tell him, ‘Commander-in-chief Yahweh says:
 \m Look, a man whose name is ‘Branch’\x + \xo 6:12: \xt Jer 23:5; 33:15; Zech 3:8.\x* will grow from his place, and he will build Yahweh’s temple.
 \v 13 \add Yes,\add* he will build Yahweh’s temple, and he will \add radiate splendour\add* and will sit and rule on his throne. He’ll be a priest on his throne, and peace \add will emanate from the interaction of both of those roles\add*.
@@ -210,7 +210,7 @@
 \q1 If something seems impossible in the eyes of the remnant of this people in those days,
 \q1 Yahweh’s declaration is: ‘\add It doesn’t mean that it’s\add* impossible \add for me\add*.’
 \v 7 Army command Yahweh says:
-\q1 Listen, I’m about to rescue my people from the \add lands to the east and to the west\add*,\f + \fr 8:7 \ft including Bavel in the east, and Mitsrayim (Mitsrayim) in the west.\f*
+\q1 Listen, I’m about to rescue my people from the \add lands to the east and to the west\add*,\f + \fr 8:7 \ft including Bavel in the east, and Mitsrayim/Egypt in the west.\f*
 \v 8 and I’ll bring them back. Then they’ll live in the middle of Yerushalem, so they will be my people \add again\add* and I’ll be their god in truth and in righteousness.
 \p
 \v 9 Commander-in-chief Yahweh says:
@@ -298,7 +298,7 @@
 \q1
 \v 2 Diviners tell deceitful dreams and give empty comfort
 \q1 because household idols speak falsely and \add so\add* those diviners envision \add something that’s\add* a lie.
-\q1 Therefore \add the people\add* wander like sheep and suffer because there’s no shepherd.\x + \xo 10:2: \xt Mat 9:36; Mrk 6:34.\x*
+\q1 →Therefore \add the people\add* wander like sheep and suffer because there’s no shepherd.\x + \xo 10:2: \xt Mat 9:36; Mrk 6:34.\x*
 \p
 \v 3 “\add I’m angry with\add* the shepherds—it’s the leaders that I’ll punish.
 \q1 Commander-in-chief Yahweh will also attend to his flock—the house of Yehudah \add (Judah)\add*,
@@ -333,8 +333,8 @@
 \q1 and they’ll become as numerous as they were previously.
 \q1
 \v 9 I \add scattered\add* them among the nations,
-\q1 but they’ll remember me in distant countries,
-\q1 so they and their children will live and return,
+\q1 ^but they’ll remember me in distant countries,
+\q1 →so they and their children will live and return,
 \q1
 \v 10 because I’ll bring them back from Mitsrayim \add (Egypt)\add*
 \q1 and gather them from Ashur \add (Assyria)\add*.
@@ -355,7 +355,7 @@
 \s1 The punishment of Levanon and Bashan
 \q1
 \v 1 Open your doors, Levanon,
-\q1 so that fire can devour your cedar trees.
+\q1 →so that fire can devour your cedar trees.
 \q1
 \v 2 Wail, cypress trees, because the cedar trees have fallen.
 \q1 What was majestic has been devastated.
@@ -402,7 +402,7 @@
 \s1 Saving Yerushalem’s inhabitants
 \p
 \v 7 Yahweh will save Yehudah’s \add (Judah’s)\add* tents first, so that the honour of David’s \add descendants\add* and the honour of Yerushalem’s \add (Jerusalem’s)\add* inhabitants won’t be greater than the rest of Yehudah.
-\v 8 \add At that time\add*, Yahweh will be the defender of the inhabitants of Yerushalem. \add Those\add* among them who are weak will \add become\add* \add strong\add* like David, while the David’s \add descendants\add* will be like God, like Yahweh’s messenger \add going ahead\add* of them.
+\v 8 \add At that time\add*, Yahweh will be the defender of the inhabitants of Yerushalem. \add Those\add* among them who are weak will \add become\add* \add strong\add* like David, while David’s \add descendants\add* will be like God, like Yahweh’s messenger \add going ahead\add* of them.
 \v 9 “On that day I will begin to destroy all the nations that \add fight\add* against Yerushalem.”
 \p
 \v 10 But I will pour out a spirit of compassion and pleading on David’s \add descendants\add* and the inhabitants of Yerushalem, so they will look on me—the one they’ve pierced.\x + \xo 12:10: \xt Yhn 19:37; Rev 1:7.\x* They’ll mourn for me, as one mourns for an only son—they will wail \add bitterly\add* for him like those who wail after the death of a firstborn son.

@@ -1,4 +1,4 @@
-\id 1KI - Open English Translation—Readers’ Version (OET-RV) v0.2.20
+\id 1KI - Open English Translation—Readers’ Version (OET-RV) v0.2.23
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 KI1
@@ -10,12 +10,12 @@
 \mt2 The first summary of the
 \mt1 Kings of Yisrael and Yehudah
 \is1 Introduction
-\ip \bk The first summary of the kings of Yisrael/Israel and Yehudah/Judah\bk* is a continuation of the account about the Israeli kingdom started in the account by \bk Shmuel\bk*. It’s divided into three main parts: 1. Shelomoh (Solomon) takes over as king of the nation of Yisrael after the death of his father David. 2. Shelomoh’s kingdom and his prosperity, especially his construction of the temple in Yerushalem. 3. The Yisrael kingdom becoming split into two: the northern kingdom (which goes on to continue to be called Israel), and the southern kingdom (named Yehudah after the largest of its two tribes), and the accounts about the kings who led them through until around 950 before Yeshua/Jesus (B.C.)
+\ip \bk The first summary of the kings of Yisrael/Israel and Yehudah/Judah\bk* is a continuation of the account about the Israeli kingdom started in the account by \bk Shmuel\bk*. It’s divided into three main parts: 1. Shelomoh/Solomon takes over as king of the nation of Yisrael after the death of his father David. 2. Shelomoh’s kingdom and his prosperity, especially his construction of the temple in Yerushalem. 3. The Yisrael kingdom becoming split into two: the northern kingdom (which goes on to continue to be called Israel), and the southern kingdom (named Yehudah after the largest of its two tribes), and the accounts about the kings who led them through until around 950 before Yeshua/Jesus (B.C.)
 \ip Here in the first of the two \bk Summaries of the kings of Yisrael and Yehudah\bk*, each leader is evaluated according to their obedience of God’s instructions, and the prosperity of their entire nations depends of that. Worshipping of false gods and the disobedience of God’s instructions would lead to destruction. The northern kings failed this testing and didn’t prosper, whereas the southern kingdom did have some good leaders and so had times of prosperity.
-\ip Also revealed in \bk The first summary of the kings of Yisrael and Yehudah\bk*, are God’s prophets who brought messages from Yahweh—often warning them against the worshipping of false gods and against disobeying God. The most famous of those in this document is Eliyah (Elijah) and the account about his opposition to Ba’al’s prophets (chapter 18).
+\ip Also revealed in \bk The first summary of the kings of Yisrael and Yehudah\bk*, are God’s prophets who brought messages from Yahweh—often warning them against the worshipping of false gods and against disobeying God. The most famous of those in this document is Eliyah/Elijah and the account about his opposition to Ba’al’s prophets (chapter 18).
 \iot Main components of this account
 \io1 The final weeks of David’s kingdom \ior 1:1–2:12\ior*
-\io1 Shelomoh (Solomon) is made king \ior 2:13-46\ior*
+\io1 Shelomoh/Solomon is made king \ior 2:13-46\ior*
 \io1 Shelomoh’s kingdom \ior 3:1–11:43\ior*
 \io2 a. The first years \ior 3:1–4:34\ior*
 \io2 b. The temple construction \ior 5:1–8:66\ior*
@@ -25,7 +25,7 @@
 \io2 b. The kings of Yehudah and Yisrael \ior 14:21–16:34\ior*
 \io2 c. The prophet Eliyah \ior 17:1–19:21\ior*
 \io2 d. Yisrael’s king Ahav \ior 20:1–22:40\ior*
-\io2 e. Yehudah’s King Yehoshafat (Jehoshaphat) and Yisrael’s King Ahazyah \ior 22:41-53\ior*
+\io2 e. Yehudah’s King Yehoshafat/Jehoshaphat and Yisrael’s King Ahazyah \ior 22:41-53\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
@@ -695,7 +695,7 @@
 \p
 \v 23 God \add also\add* \add caused Elyada’s son Rezon to stand against\add* \add Shelomoh\add* \add (Solomon)\add*. He’d run away from his master, King Hadadezer in Tsovah,
 \v 24 then he’d gathered men for himself and had become a commander of a raiding band. When David \add attacked\add* them, they went to Damesek \add (Damascus)\add*. They lived there and \add gained control of\add* \add the city\add*.
-\v 25 Then during all of Shelomoh’s reign, he’d been \add outspoken\add* against Yisrael \add (Israel)\add*—\add encouraged by\add* the evil that Hadad did. He reigned over \add Aram\add* \add (Syria)\add* (Aram) and he \add loathed\add* Yisrael.
+\v 25 Then during all of Shelomoh’s reign, he’d been \add outspoken\add* against Yisrael \add (Israel)\add*—\add encouraged by\add* the evil that Hadad did. He reigned over \add Aram\add* \add (Syria,\add* Aram) and he \add loathed\add* Yisrael.
 \s1 God’s promise to Yarov’am/Jeroboam
 \s4 Full kingdom
 \p
@@ -723,12 +723,12 @@
 \v 42 Shelomoh reigned over all Yisrael \add (Israel)\add* from Yerushalem \add (Jerusalem)\add* for forty years,
 \v 43 then \add he\add* \add died\add* and was buried in David’s city, and his son Rehav’am \add (Rehoboam)\add* became king.
 \c 12
-\s1 The north rejects Rehav’am (Rehoboam)
+\s1 The north rejects Rehav’am/Rehoboam
 \s4 Both kingdoms
 \r (2 Chr. 10:1-19)
 \p
 \v 1 \add Shelomoh’s\add* \add (Solomon’s)\add* \add son\add* Rehav’am \add (Rehoboam)\add* went to Shekem, because all Yisrael \add (Israel)\add* had \add assembled there to make him king\add*.
-\v 2 \add Meanwhile,\add* Nevat’s son Yarov’am \add (Jeroboam)\add* in Mitsrayim \add (Egypt)\add* (where he’d fled from King Shelomoh) heard the news and returned to Yisrael.
+\v 2 \add Meanwhile,\add* Nevat’s son Yarov’am \add (Jeroboam)\add* in Mitsrayim \add (Egypt,\add* where he’d fled from King Shelomoh) heard the news and returned to Yisrael.
 \v 3 \add The leaders of the northern tribes\add* summoned him, and \add they\add* all went to \add petition\add* \add King\add* Rehav’am,
 \v 4 “Your father \add Shelomoh\add* \add required us to contribute too much labour\add*. If you’ll lighten the burden on us, then we’ll serve you.”
 \p
@@ -769,7 +769,7 @@
 \v 22 \add But\add* God \add told the prophet\add* Shemayah,
 \v 23 “\add Go and\add* tell Shelomoh’s son Rehav’am, the king of Yehudah, and \add tell\add* all the \add descendants of\add* Yehudah and Benyamin, and the remainder of the people, saying,
 \v 24 ‘Yahweh says this: Don’t go and fight against your \add Israeli relatives\add*. \add Everyone should just return home because everything that happened there was initiated\add* by me.’ ” \add When\add* they heard Yahweh’s message, \add they took note of it and everyone went back home\add*.
-\s1 Yarov’am (Jeroboam) makes gold calves
+\s1 Yarov’am/Jeroboam makes gold calves
 \s4 Northern kingdom
 \p
 \v 25 Then Yarov’am \add (Jeroboam)\add* built Shekem in the Efrayim \add (Ephraim)\add* hill country and he lived \add there\add* \add for a while\add*. Then he \add left\add* there and built Penuel.
@@ -777,7 +777,7 @@
 \v 27 \add He worried that\add* if the people went \add down\add* to Yerushalem \add (Jerusalem)\add* to offer sacrifices in Yahweh’s temple, they \add might shift their allegiance\add* to King Rehav’am \add (Rehoboam)\add* in Yehudah \add (Judah)\add* and then \add his life might be in danger\add*.
 \p
 \v 28 \add So after getting advice,\add* the king made two gold calves, and he told \add his people\add*, “Going \add all the way\add* \add down\add* to Yerushalem is too \add far\add* for you. Look, \add these can be\add* your gods, Yisrael \add (Israel)\add*, who brought you out from Mitsrayim \add (Egypt)\add*.”\x + \xo 12:28: \xt Exo 32:4.\x*
-\v 29 He set one up at Beyt-El \add (Bethel)\add* \add (in the south)\add* and the other one at Dan \add (in the north)\add*.
+\v 29 He set one up at Beyt-El \add (Bethel,\add* \add in the south)\add* and the other one at Dan \add (in the north)\add*.
 \v 30 That caused the people to sin, and \add some\add* people went up as far as the one in Dan.
 \v 31 He built \add temples on hills\add* and appointed priests from \add various tribes\add*—not just from the \add tribe\add* of Levi.
 \s1 The warning of worshipping there at Beyt-El
@@ -868,7 +868,7 @@
 \p
 \v 19 \add Everything else that Yarov’am\add* \add (Jeroboam)\add* \add did, including the record of wars that his army fought and how he ruled, is written in the book of the events\add* of the kings of Yisrael \add (Israel)\add*.
 \v 20 Yarov’am reigned for twenty-two years, then he \add died and was buried with his ancestors\add*, and his son Nadav \add replaced him as king\add*.
-\s1 Rehav’am (Rehoboam) rules in Yehudah
+\s1 Rehav’am/Rehoboam rules in Yehudah
 \s4 Southern kingdom
 \r (2 Chr. 11:5–12:15)
 \p
@@ -1250,7 +1250,7 @@
 \v 15 As soon as Izevel heard that Navot had been \add executed\add*, \add she\add* told Ahav, “\add Go on now\add* \add and\add* \add take over\add* Navot’s vineyard that he refused to \add sell\add* you, because \add he’s\add* \add not around any more\add*—he’s dead.”
 \v 16 As soon as Ahav heard that Navot was dead, \add he\add* went to the vineyard to take possession of it.
 \p
-\v 17 Then Yahweh told Eliyah \add (Elijah)\add* (from Tishbeh),
+\v 17 Then Yahweh told Eliyah \add (Elijah,\add* from Tishbeh),
 \v 18 “\add Leave here\add* \add and\add* go to Yisrael’s \add (Israel’s)\add* king Ahav in Shomron \add (Samaria)\add*. Listen, he’s there in Navot’s vineyard, where he’s gone to \add take possession of\add* it.
 \v 19 Tell him that Yahweh’s asking if he’s taking possession \add of the property\add* \add of a murdered man\add*. Then tell him that Yahweh \add wants him to know that\add* the dogs will lick his blood in the same place where Navot died and the dogs came and licked up his blood.”
 \p
@@ -1266,7 +1266,7 @@
 \p
 \v 27 As soon as Ahav heard that \add message\add*, he tore his clothes and dressed in sacking and fasted. He \add even\add* slept in the \add coarse, abrasive\add* sackcloth, and he walked around \add slowly\add* \add with his head down\add*.
 \p
-\v 28 Then Yahweh \add asked\add* Eliyah \add (Elijah)\add* (from Tishbeh),
+\v 28 Then Yahweh \add asked\add* Eliyah \add (Elijah,\add* from Tishbeh),
 \v 29 “Have you \add noticed\add* that Ahav has \add shown repentance towards me\add*? Because he’s humbled himself, I won’t bring \add that disaster on his family while he’s still alive\add*, \add but rather\add* I’ll do \add it\add* \add during his son’s reign\add*.”
 \c 22
 \s1 prophet Mikayah and King Ahav
@@ -1314,7 +1314,7 @@
 \v 22 He \add replied that he’d go and be a false spirit so the kings prophets would tell lies\add*, and \add Yahweh\add* \add said that that would work and told him to go ahead and do it\add*.
 \v 23 \add So\add* now, listen, Yahweh has \add put a lying a spirit into\add* all these prophets of yours, and Yahweh has \add declared disaster on\add* you.”
 \p
-\v 24 Then Tsidkiyah \add (Zedekiah)\add* (Kena’anah’s son) \add went over and slapped Mikayah on the face\add*, and said, “\add Since when did Yahweh’s spirit leave me and start speaking through\add* you?”
+\v 24 Then Tsidkiyah \add (Zedekiah,\add* Kena’anah’s son) \add went over and slapped Mikayah on the face\add*, and said, “\add Since when did Yahweh’s spirit leave me and start speaking through\add* you?”
 \p
 \v 25 “Listen \add here\add*,” Mikayah replied, “you’ll \add find that out soon enough when you sneak into an inner room to try and hide\add*.”
 \p

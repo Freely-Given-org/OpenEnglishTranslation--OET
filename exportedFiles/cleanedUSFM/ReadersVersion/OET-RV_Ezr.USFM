@@ -1,4 +1,4 @@
-\id EZR - Open English Translation—Readers’ Version (OET-RV) v0.2.9
+\id EZR - Open English Translation—Readers’ Version (OET-RV) v0.2.12
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EZR
@@ -9,12 +9,12 @@
 \toc3 Ezra
 \mt1 Ezra
 \is1 Introduction
-\ip \bk The account of Ezra\bk*, is like a continuation of \bk The Chronicles\bk*—it tells us about the returning home of other Yehudim who had been taken to Bavel as captives, and the restoration of daily life in Yerushalem (Jerusalem) and of worshipping at the temple.
-\ip It’s divided into three main sections: 1. The declaration of King Koresh (Cyrus) of Paras/Persia to allow a group of exiled Yehudim to return to Yerushalem from Bavel. 2. The rebuilding of the temple and its dedication, and the return to worshipping Yahweh there in Yerushalem. 3. The return of a different group of Jewish descendants to Yerushalem under the leadership of Ezra—the one knowledgeable about God’s instructions. He assisted the Israelis to return to their beliefs and customs, so that their worshipping of the true God wouldn’t be forgotten.
+\ip \bk The account of Ezra\bk*, is like a continuation of \bk The Chronicles\bk*—it tells us about the returning home of other Yehudim who had been taken to Bavel as captives, and the restoration of daily life in Yerushalem/Jerusalem and of worshipping at the temple.
+\ip It’s divided into three main sections: 1. The declaration of King Koresh/Cyrus of Paras/Persia to allow a group of exiled Yehudim to return to Yerushalem from Bavel. 2. The rebuilding of the temple and its dedication, and the return to worshipping Yahweh there in Yerushalem. 3. The return of a different group of Jewish descendants to Yerushalem under the leadership of Ezra—the one knowledgeable about God’s instructions. He assisted the Israelis to return to their beliefs and customs, so that their worshipping of the true God wouldn’t be forgotten.
 \iot Main components of this account
 \io1 The first group of exiled Yehudim return home \ior 1:1–2:70\ior*
 \io1 The rebuilding of the temple and its dedication \ior 3:1–6:22\ior*
-\io1 Ezra leads other exiles to return to Yehudah (Judah) \ior 7:1–10:44\ior*
+\io1 Ezra leads other exiles to return to Yehudah/Judah \ior 7:1–10:44\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
@@ -255,7 +255,7 @@
 \v 10 We also asked them their names, so that we could write down the names of \add their leaders\add* to inform you.
 \p
 \v 11 “This is the answer they \add gave\add* us, ‘We are servants of the god of the heavens and earth, and we are \add rebuilding the temple\add* that was constructed and finished many years \add ago by a famous Israeli\add* king.
-\v 12 However, because our ancestors made the god of the heavens angry, he let Babylonian King Nevukadnetsar \add (Nebuchadnezzar)\add* (\add Nevukadnetsar,\add* the Chaldean) \add defeat them\add*, and he destroyed \add that temple\add* and caused the people to be exiled to Bavel \add (Babylon)\add*.\x + \xo 5:12: \xt 2Ki 25:8-12; 2Ch 36:17-20; Jer 52:12-15.\x*
+\v 12 However, because our ancestors made the god of the heavens angry, he let Babylonian King Nevukadnetsar \add (Nebuchadnezzar,\add* \add Nevukadnetsar,\add* the Chaldean) \add defeat them\add*, and he destroyed \add that temple\add* and caused the people to be exiled to Bavel \add (Babylon)\add*.\x + \xo 5:12: \xt 2Ki 25:8-12; 2Ch 36:17-20; Jer 52:12-15.\x*
 \v 13 But in the first year \add of the reign of\add* Babylonian King Koresh \add (Cyrus)\add*, \add he\add* made a decree to rebuild this house of God.\x + \xo 5:13: \xt Ezr 1:2-11.\x*
 \v 14 \add What’s more,\add* the gold and silver \add containers\add* that Nevukadnetsar had taken out from that temple that was in Yerushalem and had brought to the temple in Bavel, King Koresh took them out from the temple in Bavel and they were \add handed over\add* to the man named Sheshebatsar who he’d appointed as governor \add over Yehudah\add*.
 \v 15 \add Koresh\add* had told him to take those containers and put them back in the temple in Yerushalem, and \add to ensure that the temple got rebuilt in the same place where it had been before\add*.
@@ -289,7 +289,7 @@
 \v 15 The \add rebuilt\add* \add temple\add* was finished in \add mid-March\add* in the sixth year of King Dareyavesh’s reign.
 \p
 \v 16 Then the \add Israeli people\add*, the priests, and the Levites, and the \add ones that had returned from\add* exile, performed the dedication of this house of God with \add celebrations\add*.
-\v 17 \add During\add* the dedication, they offered a hundred bulls, two-hundred rams, and four-hundred lambs, as well as twelve male goats for a sin offering for all Yisrael \add (Israel)\add* (matching the number of the tribes).
+\v 17 \add During\add* the dedication, they offered a hundred bulls, two-hundred rams, and four-hundred lambs, as well as twelve male goats for a sin offering for all Yisrael \add (Israel,\add* matching the number of the tribes).
 \v 18 Then they \add organised\add* the priests to stand in their divisions and the Levites in their sections \add to serve\add* the god who \add resides\add* in Yerushalem \add (Jerusalem)\add*, according to the \add instructions written by\add* Mosheh \add (Moses)\add*.
 \s1 The Feast of ‘pass-over’ of Messenger
 \p
@@ -315,12 +315,12 @@
 \p
 \v 12 Artahshashta, the king of kings, to the priest Ezra, the scribe of the law of the god of heavens: Peace.
 \p Now,
-\v 13 \add I hereby\add* decree that anyone in my kingdom from Yisrael \add (Israel)\add* (including priests and Levites) who freely offers to go to Yerushalem \add (Jerusalem)\add* with you, may go.
+\v 13 \add I hereby\add* decree that anyone in my kingdom from Yisrael \add (Israel,\add* including priests and Levites) who freely offers to go to Yerushalem \add (Jerusalem)\add* with you, may go.
 \v 14 \add You are sent by\add* the king and his seven counsellors to \add determine whether\add* \add the people of\add* Yehudah \add (Judah)\add* and Yerushalem \add are following\add* the law of your god which \add you have a copy of\add*.
 \v 15 \add You are also\add* to take the gold and silver that the king and his counsellors have freely offered to the god of Yisrael \add who lives\add* in Yerushalem,
 \v 16 along with all the gold and silver that you \add collect\add* all \add across\add* Bavel \add (Babylon)\add*, along with the freewill \add offerings\add* of the people and the priests who freely give towards the house of God in Yerushalem.
 \p
-\v 17 \add So then\add* you should diligently \add use those funds\add* to buy bulls, rams, lambs, and \add supplies for\add* their grain offerings and drink offerings, and you should offer them on the altar at the your god’s house in Yerushalem.
+\v 17 \add So then\add* you should diligently \add use those funds\add* to buy bulls, rams, lambs, and \add supplies for\add* their grain offerings and drink offerings, and you should offer them on the altar at your god’s house in Yerushalem.
 \v 18 With \add the remaining funds\add*, you can \add use them for\add* whatever seems good to you and your brothers, according to the will of your god.
 \v 19 \add Also, make sure that\add* you deliver all those \add gold and silver\add* containers that were \add handed over\add* to you for use in your god’s house in Yerushalem.
 \v 20 \add Anything else that’s\add* needed for the house of your god that \add you need to supply can be provided\add* from the king’s treasuries.
@@ -374,7 +374,7 @@
 \v 16 \add So I summoned\add* the following leaders: Eliezer, Ariel, Shemayah, Elnatan, Yariv, \add a second\add* Elnatan, Natan \add (Nathan)\add*, Zekaryah \add (Zechariah)\add*, and Meshulam, as well as the wise men: Yoyariv and \add a third\add* Elnatan.
 \v 17 I commanded them to go to Ido, the leader at Kasifya, and I \add told them to tell\add* Ido and his relatives (temple servants in Kasifya) to send us \add some Levites\add* who would \add go to Yerushalem\add* \add (Jerusalem)\add* \add to\add* serve in our god’s \add temple\add*.
 \v 18 \add Then since we had God’s favour\add*, they sent us a \add talented\add* man (from the sons of Mahli, son of Levi, son of Yisrael \add (Israel)\add*) and eighteen of his sons and \add other relatives\add*.
-\v 19 \add They also sent\add* Hashavyah and Yeshayah \add (Isaiah)\add* (from Merari’s sons), and their relatives and sons—some twenty men—
+\v 19 \add They also sent\add* Hashavyah and Yeshayah \add (Isaiah,\add* from Merari’s sons), and their relatives and sons—some twenty men—
 \v 20 plus two hundred and twenty \add descendants of\add* Levite temple servants that \add King\add* David and \add his\add* officials had appointed for service—all designated by \add name\add*.
 \s1 Ezra’s fasting and praying
 \p

@@ -1,4 +1,4 @@
-\id EXO - Open English Translation—Readers’ Version (OET-RV) v0.2.15
+\id EXO - Open English Translation—Readers’ Version (OET-RV) v0.2.20
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EXO
@@ -6,20 +6,20 @@
 \h Exodus
 \toc1 Exodus
 \toc2 Exodus
-\toc3 Exo.
+\toc3 Exo
 \mt1 Exodus
 \is1 Introduction
 \ip The word \bk Exodus\bk* comes from the Greek word meaning ‘departure’ or ‘leaving’. Hebrew readers call this document ‘Shemōt’ which is the second word in the Hebrew and means ‘Names’ because it begins with a list of names. Some European and other translations call it ‘The second book of Mosheh/Moses’.
 \ip It should be noted that ‘Mosheh’ is the best English transliteration of the name of the hero of this account. Sadly, he’s commonly known in the English world as ‘Mosheh’, even though we have all the sounds in our language to be able to pronounce his name more accurately. Unfortunately, because the language of ‘the New Testament’ didn’t have the ‘sh’ sound and had no letter for ‘h’, his Hebrew version of his Mitsri name is corrupted as it goes through Greek ‘Mōsaʸs’ and then Latin ‘Moyses’ and then first entered English in the 1300’s as ‘Moises’. Now that we live in a modern era where we try to show more respect to the names of peoples from other cultures, the \em OET\em* encourages the same for Biblical characters (especially the major ones), hence ‘Mosheh’. (Maybe a little bit of relearning could demonstrate a lot of respect to the Jewish people whose ancestors are recorded in these accounts.)
 \ip After God had used a famine to cause his people to go down into Mitsrayim/Egypt, this document records how they eventually become slaves, but then God works many miracles to enable them to leave again, and not only that, to be paid at the end for their work.
-\ip This story can be divided into three main parts: 1. their slavery in Mitsrayim, and how God called Mosheh (Moses), the child who had been adopted by an Mitsri princess, to lead them out of slavery; 2. how God assisted them when they were chased by the Mitsri army, then when they reached Mt. Sinay, how they were miraculously given food and drink there at the mountain; 3. how Yahweh revealed himself to Mosheh there at Mt. Sinay, and gave him instructions to guide their lives and their nation, and God’s agreement with the people; 4. the ending is the construction of the sacred tent, complete with instructions about how they should worship.
+\ip This story can be divided into three main parts: 1. their slavery in Mitsrayim, and how God called Mosheh/Moses, the child who had been adopted by an Mitsri princess, to lead them out of slavery; 2. how God assisted them when they were chased by the Mitsri army, then when they reached Mt. Sinay, how they were miraculously given food and drink there at the mountain; 3. how Yahweh revealed himself to Mosheh there at Mt. Sinay, and gave him instructions to guide their lives and their nation, and God’s agreement with the people; 4. the ending is the construction of the sacred tent, complete with instructions about how they should worship.
 \ip An overview would be how God rescued his people from slavery and established them as a nation that was hopeful of a good future.
 \ip \em Mosheh\em* is the most important person in this account. He was chosen by God to lead his people out of slavery and right out of Mitsrayim. The \em ten commands\em* are another well-known component of this document and can be found in chapter twenty.
 \iot Main components of this account
 \io1 Yisrael’s descendants are driven out of Mitsrayim \ior 1:1–15:21\ior*
 \io2 a. The people are enslaved there in Mitsrayim \ior 1:1-22\ior*
 \io2 b. The birth and early life of Mosheh \ior 2:1–4:31\ior*
-\io2 c. Par’oh (Pharaoh) king of Mitsrayim stands strongly against Mosheh and Aharon taking the people out of Mitsrayim \ior 5:1–11:10\ior*
+\io2 c. Par’oh/Pharaoh king of Mitsrayim stands strongly against Mosheh and Aharon taking the people out of Mitsrayim \ior 5:1–11:10\ior*
 \io2 d. God’s messenger of death that ‘passed-over’, and the exit of Yisrael’s descendants from Mitsrayim \ior 12:1–15:21\ior*
 \io1 Leaving the Red sea and going to Mt. Sinay \ior 15:22–18:27\ior*
 \io1 God’s instructions and the agreement \ior 19:1–24:18\ior*
@@ -56,7 +56,7 @@
 \v 21 and because the midwives had \add demonstrated their desire to obey\add* God, he gave them families \add of their own\add*.
 \v 22 Then Par’oh \add (Pharaoh)\add* commanded all of his people, “You \add all need to\add* toss every newborn boy into the river, but you can let the girls live.”\x + \xo 1:22: \xt Acts 7:19.\x*
 \c 2
-\s1 The birth of Mosheh (Moses)
+\s1 The birth of Mosheh/Moses
 \p
 \v 1 \add During that period,\add* a man from the Levi tribe married a woman who was also a Levite,
 \v 2 and she conceived and gave birth to a son. When she saw that he was a \add healthy\add* boy, she hid him away for three months,\x + \xo 2:2: \xt Acts 7:20; Heb 11:23.\x*
@@ -97,7 +97,7 @@
 \c 3
 \s1 God calls Mosheh from a burning bush
 \p
-\v 1 \add One time\add* Mosheh \add (Moses)\add* was shepherding the flock of his father-in-law Yitro \add (Jethro)\add* (or Yitro, the priest at Midyan), and he led the flock beyond the wilderness and came to a hill. (\add That was later known as\add* the mountain of God at Horev).
+\v 1 \add One time\add* Mosheh \add (Moses)\add* was shepherding the flock of his father-in-law Yitro \add (Jethro,\add* or Yitro, the priest at Midyan), and he led the flock beyond the wilderness and came to a hill. (\add That was later known as\add* the mountain of God at Horev).
 \v 2 \add While he was there.\add* Yahweh’s messenger appeared to him in a flame coming from the middle of a bush, and as \add Mosheh\add* looked, to his surprise \add he saw that\add* the bush was burning in the fire yet not \add actually\add* being burnt up.\x + \xo 3:2-10: \xt Acts 7:30-34.\x*
 \v 3 “I’ve got to go and see this amazing sight,” Mosheh said \add to himself\add*. “How come that bush isn’t burning up?”
 \p
@@ -506,7 +506,7 @@
 \p
 \v 39 They baked the dough that they brought from Mitsrayim \add (Egypt)\add* into flat bread since it \add hadn’t had time to rise\add*,\f + \fr 12:39 \ft Most modern readers probably visualise yeast bought from a supermarket when ‘leaven’ (or even ‘yeast’) is mentioned in a Bible translation. However, it’s much more likely that each day, a portion of the bread dough was set aside for the natural yeasts (think ‘sour dough’ bread) to accumulate, and then mixed into the new batch of dough the next day and left for the natural yeasts to work and rise the dough. The text here implies that it’s possible that the Hebrew word translated ‘unleavened’ really meant ‘unrisen’ on that first ‘pass-over’ night.\f* because they were driven out of Mitsrayim \add in a hurry\add* and hadn’t \add had time to prepare food to take\add*.
 \p
-\v 40 The descendants of Yisrael \add (Israel)\add* \add (also called Ya’akov\add* \add (Jacob)\add* \add )\add* had lived in Mitsrayim for 430 years\x + \xo 12:40: \xt Gen 15:13; Gal 3:17.\x*
+\v 40 The descendants of Yisrael \add (Israel,\add* \add also called Ya’akov\add* \add (Jacob)\add* \add )\add* had lived in Mitsrayim for 430 years\x + \xo 12:40: \xt Gen 15:13; Gal 3:17.\x*
 \v 41 to the day, because that very day was when all the \add various\add* divisions of Yahweh’s \add people\add* left Mitsrayim.
 \v 42 It was a \add time\add* when they stayed awake all night as Yahweh took them out of Mitsrayim—a night to be observed in that same way by every future generation.
 \s1 Instructions for observing the ‘pass-over’
@@ -773,7 +773,7 @@
 \v 8 and Mosheh related to his father-in-law all that Yahweh had done to Par’oh and to Mitsrayim on account of Yisrael \add (Israel)\add*, all the hardship that found them along the way, and about how Yahweh had rescued them.
 \v 9 Yitro \add was very happy to hear about\add* all the good \add things\add* that Yahweh had done for Yisrael when he had rescued them out from Mitsri \add control\add*,
 \v 10 and \add he\add* said, “Bless Yahweh, who rescued you from \add slavery\add* in Mitsrayim, and from Par’oh’s \add power\add*.
-\v 11 Now I \add can see\add* that Yahweh is greater than all the \add other\add* gods because of the \add this result after\add* \add the Mitsrim\add* \add (Egyptians)\add* had acted proudly against \add you all\add*.”
+\v 11 Now I \add can see\add* that Yahweh is greater than all the \add other\add* gods because of \add this result after\add* \add the Mitsrim\add* \add (Egyptians)\add* had acted proudly against \add you all\add*.”
 \v 12 Then Mosheh’s father-in-law Yitro made a burnt offering as well as sacrifices to God, and Aharon \add (Aaron)\add* and all of the Israeli elders came to eat bread with Mosheh’s father-in-law \add in God’s presence\add*.
 \s1 Yitro’s helpful administrative advice
 \r (Deu. 1:9-18)
@@ -939,11 +939,11 @@
 \p \add A thief\add* who’s caught must make restitution, but if they’re unable to pay, then \add the thief\add* must be sold \add to cover it\add*.
 \v 4 If a thief is found in the possession of a stolen animal, be it a cow or a donkey or a sheep, then they must pay back another matching animal as well.\f + \fr 22:4 \ft Or possibly, must pay back \+bd two\+bd* additional animals.\f*
 \p
-\v 5 If a person releases their livestock to graze \add their own\add* field or vineyard, and it \add ends up\add* grazing in the someone else’s field, \add the owner of the animal\add* must compensate from the best of their field and from the best of their vineyard.
+\v 5 If a person releases their livestock to graze \add their own\add* field or vineyard, and it \add ends up\add* grazing in someone else’s field, \add the owner of the animal\add* must compensate from the best of their field and from the best of their vineyard.
 \p
 \v 6 If a fire breaks out and spreads in \add the bush\add*, and grain that’s already stacked or is still in the field gets burnt up, the person who started the fire must certainly pay compensation.
 \p
-\v 7 If anyone gives their neighbour money or goods for safekeeping, and if it is stolen from the neighbour’s house, if the thief is found, they must pay double in compensation.
+\v 7 If anyone gives their neighbour money or goods for safekeeping, and if it’s \add then\add* stolen from the neighbour’s house, if the thief is found, they must pay double in compensation.
 \v 8 If the thief can’t be found, then the owner of the house must be brought to \add the judges for God’s decision\add* as to whether or not they have \add improperly handled\add* their neighbour’s property.
 \p
 \v 9 Concerning every other squabble about any cattle or a donkey or sheep, or about clothing or any lost property that’s under dispute, both parties must go to \add the judges for God’s decision\add*—anyone who God declares to be guilty must pay his neighbour double as compensation.
@@ -951,7 +951,7 @@
 \v 10 If anyone gives their neighbour a donkey or a cow or a sheep or any animal to \add look after\add*, and it dies or is injured or disappears without anyone seeing,
 \v 11 both of them must declare in front of Yahweh as to whether or not they \add improperly handled\add* \add their\add* neighbour’s property. The owner must accept \add the sworn statement\add* and no compensation is required,
 \v 12 \add but\add* if it was truly stolen from \add the neighbour\add*, they must pay compensation to the owner.
-\v 13 If it was truly \add killed by a some other animal\add*, \add the neighbour\add* must bring \add the remains\add* as evidence, and no compensation is required.
+\v 13 If it was truly \add killed by some other animal\add*, \add the neighbour\add* must bring \add the remains\add* as evidence, and no compensation is required.
 \p
 \v 14 If anyone borrows \add an animal\add* from their neighbour and it gets injured or dies without the owner being with it, \add the person who borrowed it\add* must pay compensation,
 \v 15 \add but\add* if its owner was \add there\add* with it, no compensation is required—if it was for hire, then that was included in its hiring fee.
@@ -971,8 +971,8 @@
 \v 23 \add because\add* if you \add do\add* and they ask me to help them, I’ll help them
 \v 24 and \add get angry\add*. I’ll \add cause you all to die\add* in battle, and your wives will become widows and your children will become fatherless.
 \p
-\v 25 If you loan money to any my people \add who are\add* poor, you mustn’t act like an \add impartial\add* creditor to \add them\add*—you mustn’t charge \add them\add* interest.\x + \xo 22:25: \xt Lev 25:35-38; Deu 15:7-11; 23:19-20.\x*
-\v 26 If you actually take the your neighbour’s \add cloak\add* as a security, you must return it to them by sunset,\x + \xo 22:26-27: \xt Deu 24:10-13.\x*
+\v 25 If you loan money to any of my people \add who are\add* poor, you mustn’t act like an \add impartial\add* creditor to \add them\add*—you mustn’t charge \add them\add* interest.\x + \xo 22:25: \xt Lev 25:35-38; Deu 15:7-11; 23:19-20.\x*
+\v 26 If you actually take your neighbour’s \add cloak\add* as a security, you must return it to them by sunset,\x + \xo 22:26-27: \xt Deu 24:10-13.\x*
 \v 27 because it’s their only covering. What else could they cover themselves with when they try to sleep? If they cry out to me, I’ll \add act on it\add*, because I’m compassionate.
 \p
 \v 28 You mustn’t insult God, and don’t curse your \add leaders\add*.\x + \xo 22:28: \xt Acts 23:5.\x*
@@ -1470,7 +1470,7 @@
 \v 8 Whenever Mosheh went out to the tent, all the people would stand up at the entrance of their own tents, and they would watch Mosheh go out until he went into the tent.
 \v 9 Once \add he\add* entered the tent, the pillar of cloud would come down and stand at the entrance of the tent, and \add Yahweh\add* would speak with \add him\add*.
 \v 10 \add When\add* all the people saw the pillar of cloud standing at the entrance of the tent, \add they\add* would get up and bow down at the entrance of \add their\add* \add own\add* \add tents\add*.
-\v 11 Yahweh would speak to Mosheh face to face like someone speaks to their friend. Then \add Mosheh\add* would return to the camp, but his servant Yehoshua \add (Joshua)\add* (a young man who was the son of Nun) would not leave the inside of the tent.
+\v 11 Yahweh would speak to Mosheh face to face like someone speaks to their friend. Then \add Mosheh\add* would return to the camp, but his servant Yehoshua \add (Joshua,\add* a young man who was the son of Nun) would not leave the inside of the tent.
 \s1 Mosheh sees the master’s splendour
 \p
 \v 12 Then Mosheh \add (Moses)\add* said to Yahweh, “Listen, you’ve been saying to me, ‘Take \add these\add* people \add onwards\add*,’ but you haven’t let me know who you’ll send with me, although you have said, ‘I know you by name, and you’ve also found favour in my \add sight\add*.’

@@ -1,14 +1,15 @@
-\id 1CO - Open English Translation—Readers’ Version (OET-RV) v0.2.11
+\id 1CO - Open English Translation—Readers’ Version (OET-RV) v0.2.16
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CO1
 \rem WORDTABLE OET-LV_NT_word_table.tsv
-\h 1 Korinthios
-\toc1 1 Korinthios
-\toc2 1 Korinthios
-\toc3 1 Cor.
+\h 1 Korinthos
+\toc1 1 Korinthos (Corinth)
+\toc2 1 Korinthos
+\toc3 1 Kor
 \mt2 Paulos’s first letter to the believers in
 \mt1 Korinthos
+\mt2 (Corinth)
 \is1 Introduction
 \ip This is Paulos’s/Paul’s first letter to the believers in Korinthos/Corinth that we have in our Bibles, but could easily have been his second letter to them. We deduce this from his reference to other letters, e.g., see https://www.GotQuestions.org/how-many-letters-Corinthians.html, but we don’t have copies of them.
 \ip In this letter from Paulos to the believers in Korinthos, he wrote about his time preaching in Efesos/Ephesus. He wrote this in order to help with problems experienced by various groups of believers that he founded there in Korinthos. Korinthos was the mother city of Akaia province and Akaia was a province of Romai/Rome. At that time, Korinthos was a large city that Greeks/Hellains, Romans, and Yehudim/Jews all lived in, and because it was at the edge of the ocean, many buyers and sellers travelled there to board ships. So the city became famous because of its wealth, and many religions thrived there. There was also a lot of sexual immorality there as well as other ancient traditions. Paulos lived there for almost two years in order to preach, and many people believed (Acts 18).
@@ -51,7 +52,7 @@
 \v 10 Now \add brothers and sisters\add*, I appeal to you in the name of our \nd master Yeshua \+add (Jesus; Grk. Yesus)\+add* Messiah\nd*, that you all agree together \add so\add* that there’ll be no divisions among you, but rather that you’ll be united in your thinking and in your purpose,
 \v 11 because, my \add brothers and sisters\add*, it’s been made clear to me by some from Kloe’s household, that you are quarrelling among yourselves.
 \v 12 What I am talking about is how many of you are claiming that you belong to Paulos’s group, \add for example,\add* or that you belong to Apollos’ group,\x + \xo 1:12: \xt Acts 18:24.\x* or that you belong to Kefa’ \add (Cephas’; Grk. Kefas’)\add* group, or that you belong to \nd Messiah’s\nd* group.
-\v 13 Has \add the\add* \nd messiah\nd* been divided? Was it Paulos who was executed for you? Or were you immersed \add in water\add* in the Paulos’s name?
+\v 13 Has \add the\add* \nd messiah\nd* been divided? Was it Paulos who was executed for you? Or were you immersed \add in water\add* in Paulos’s name?
 \p
 \v 14 I thank God that I didn’t immerse any of you other than Krispos\x + \xo 1:14: \xt Acts 18:8.\x* and Gaios,\x + \xo 1:14: \xt Acts 19:29; Rom 16:23.\x*
 \v 15 so that no one can say that I had immersed you into my \add own\add* name.
@@ -495,21 +496,22 @@
 \v 11 so if I don’t know the meaning of someone’s language, I’m a foreigner to that person, and that person \add will be\add* a foreigner to me
 \v 12 and it’s the same with all of you. Because you all want spiritual \add things\add* in order to help grow the assembly, then strive to have many \add of them\add*.
 \p
-\v 13 So then, let anyone who’s speaking in another language, pray that they will be able to translate \add it\add*.
+\v 13 So then, let anyone who’s speaking in another language, pray that they’ll be able to translate \add it\add*.
 \v 14 When I pray in another language, my spirit prays but my mind is unproductive,
 \v 15 so what should I do? \add Well,\add* I’ll pray with my \nd spirit\nd*, but I’ll also pray with my mind. I’ll sing with my \nd spirit\nd*, but I’ll also sing with my mind.
 \v 16 Otherwise, if you \add speak out\add* a blessing in the spirit, how can the ordinary \add listeners\add* say ‘May it be so’ after you give thanks, since they wouldn’t know what you’ve been saying.
 \v 17 \add Yes,\add* you’d certainly give thanks well, but the other \add people\add* wouldn’t be encouraged.
 \p
-\v 18 I thank \nd God\nd* that I speak in other language more than all of you,
+\v 18 I thank \nd God\nd* that I speak in other languages more than all of you,
 \v 19 but with the assembly, I’d prefer to speak five words with my mind so that I can instruct others, rather than thousands of words in another language.
 \p
-\v 20 \add Brothers and sisters\add*, don’t be childish in your thinking. You all can be like infants with respect to \em evil\em*, but \add in everything else\add*, be mature in your thinking.
+\v 20 \add Brothers and sisters\add*, don’t be childish in your thinking. You all can be \add naive\add* like infants with respect to \em evil\em*, but \add in everything else\add*, be mature in your thinking.
 \v 21 \add The prophet Yeshayah\add* \add (Isaiah)\add* wrote:
 \q1 ‘I’ll speak to this nation
 \q2 through foreign languages and strangers’ lips,
-\q1 but even then they won’t listen to me,’
-\m says \nd Yahweh\nd*.\x + \xo 14:21: \xt Isa 28:11-12.\x*
+\q1 ^but even then they won’t listen to me,’
+\q1 says \nd Yahweh\nd*.\x + \xo 14:21: \xt Isa 28:11-12.\x*
+\m
 \v 22 So then, \add speaking\add* in other languages is a sign, not for believers, but for unbelievers. However \add in contrast,\add* prophecy is not for unbelievers, but for believers.
 \p
 \v 23 So if the whole assembly gathered together at the same place and they all spoke in other languages, and then some inquirers or unbelievers came in, wouldn’t they say that you’re all crazy?
@@ -523,10 +525,10 @@
 \v 29 But let two or three \add people\add* prophesy, and then the others should evaluate what was said.
 \v 30 However if something is revealed to someone \add still\add* seated, then the first person should \add stop speaking\add*,
 \v 31 because you can all prophesy in turn so that everyone can be instructed and encouraged.
-\v 32 The prophet’s spirits \add are under the control of\add* the prophets,
+\v 32 The prophets’ spirits \add are under the control of\add* the prophets,
 \v 33 because \nd God\nd* isn’t \add a god\add* of disorder, but of peace.
 \p As in all the assemblies of believers,
-\v 34 the women should stay silent in the assemblies, because they’re not permitted to speak, but must be in submission as \add Mosheh’s\add* \add (Moses’)\add* law says.
+\v 34 the women should stay silent in the assemblies, because they’re not permitted to speak, but must be in submission as \add our culture insists\add*.\f + \fr 14:34 \ft Although the Greek can be translated \fqa as the law says, \ft nothing in the Hebrew scriptures seems to say this.\f*
 \v 35 But if they want to know more about anything, they should ask their own husbands at home, because it’s shameful for a woman to speak in the assembly.
 \p
 \v 36 Did \nd God’s\nd* message \em originate\em* from you all, or did it only \em come\em* to you?
@@ -625,7 +627,7 @@
 \p
 \v 5 After I’ve been to Makedonia I’ll come there. \add Yes,\add* I’m going through Makedonia,\x + \xo 16:5: \xt Acts 19:21.\x*
 \v 6 but perhaps I’ll spend some time with you—maybe even the whole winter. That way, you all could help me on my way wherever I decide to go next,
-\v 7 because I don’t want to see you all now \add just\add* in passing, but I’d like to stay with you all for a some time if the \nd master\nd* permits.
+\v 7 because I don’t want to see you all now \add just\add* in passing, but I’d like to stay with you all for some time if the \nd master\nd* permits.
 \p
 \v 8 But I’ll stay \add here\add* at Efesos until the Pentecost celebrations\x + \xo 16:8: \xt Lev 23:15-21; Deu 16:9-11.\x*
 \v 9 because a wide door has opened for me to be effective \add here\add*, even though many are opposing \add me\add*.

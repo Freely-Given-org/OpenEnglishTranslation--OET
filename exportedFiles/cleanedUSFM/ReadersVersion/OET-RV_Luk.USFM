@@ -1,14 +1,15 @@
-\id LUK - Open English Translation—Readers’ Version (OET-RV) v0.4.13
+\id LUK - Open English Translation—Readers’ Version (OET-RV) v0.4.16
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 LUK
 \rem WORDTABLE OET-LV_NT_word_table.tsv
 \h Lukas
-\toc1 Lukas
+\toc1 Lukas (Luke)
 \toc2 Lukas
 \toc3 Luke
 \mt2 The first account by
 \mt1 Lukas
+\mt2 (Luke)
 \mt2 being the account of Yeshua’s ministry
 \is1 Introduction
 \is2 Author
@@ -112,7 +113,7 @@
 \q1 and praises those who are humble.\x + \xo 1:52: \xt Yob 5:11; 12:19.\x*
 \q1
 \v 53 \add Those who are\add* hungry, he fills with good \add things\add*,
-\q1 but \add those who\add* are rich, he sends away empty handed.
+\q1 ^but \add those who\add* are rich, he sends away empty handed.
 \q1
 \v 54 He took good care of his servant, Yisrael \add (Israel)\add*,
 \q1 to be reminded of mercy
@@ -158,7 +159,7 @@
 \v 73 that he had promised Avraham, our ancestor, that he would give us.
 \q1
 \v 74 He rescued us from the \add power\add* of our enemies,
-\q1 so we could serve him without fear,
+\q1 →so we could serve him without fear,
 \q1
 \v 75 committed to obeying him
 \q1 for the rest of our lives.
@@ -167,10 +168,10 @@
 \q1 going before \nd Yahweh\nd* to prepare his paths,\x + \xo 1:76: \xt Mal 3:1.\x*
 \q1
 \v 77 to give knowledge about salvation to his people
-\q1 so their sins \add can be forgiven\add*
+\q1 →so their sins \add can be forgiven\add*
 \q1
 \v 78 because \nd God\nd* has \add compassion\add* on us and mercy.
-\q1 Thus the light from heaven will visit us
+\q1 →Thus the light from heaven will visit us
 \q1
 \v 79 to shine on those in darkness and sitting in the shadow of death;\x + \xo 1:79: \xt Isa 9:2.\x*
 \q1 to guide us onto the road of peace.”
@@ -256,7 +257,7 @@
 \r (Yhn 1:19-28; Mark 1:1-8; Mat. 3:1-12)
 \p
 \v 1 It was the fifteenth year of the rule of Kaisar Tiberios when Pontios Pilatos \add (Pilate)\add* was the governor of Yehudah \add (Judea)\add* and Herodes \add (Herod)\add* was the ruler of the Galili quarter. His brother Filippos \add (Philip)\add* was the ruler of the Iturean quarter and of the Trakonitis region, and Lusanias was the ruler of the Abilainai quarter.
-\v 2 Hanan \add (Annas; Grk. Hannas)\add* and Kayafa \add (Caiaphas; Grk. Kaiafas)\add* were the high \add priests\add* \add in Yerushalem\add* \add (Jerusalem)\add*, and that was the time when Yohan \add (John; Grk. Yoannes)\add* (son \nd of\nd* Zekaryah \add (Grk. Zakarias)\add*) began preaching \nd God’s\nd* message in the wilderness.
+\v 2 Hanan \add (Annas; Grk. Hannas)\add* and Kayafa \add (Caiaphas; Grk. Kaiafas)\add* were the high \add priests\add* \add in Yerushalem\add* \add (Jerusalem)\add*, and that was the time when Yohan \add (John; Grk. Yoannes,\add* son \nd of\nd* Zekaryah \add (Grk. Zakarias)\add*) began preaching \nd God’s\nd* message in the wilderness.
 \v 3 He went around all the areas surrounding the Yarden \add (Jordan)\add* \add river\add*, telling \add the people\add* that they could get \add immersed\add* \add in water\add* as a sign they \add were turning away from disobeying God\add* and requesting forgiveness
 \v 4 just like the prophet Yeshayah \add (Isaiah)\add* had written:
 \q1 ‘The voice shouting in the wilderness
@@ -290,7 +291,7 @@
 \v 17 He’ll hold the winnowing fork so he can clear out the threshing floor, gathering the wheat into his barn and burning up the chaff with a fire that never goes out.”
 \p
 \v 18 \add Yohan\add* preached the good message to the people and also encouraged them to change for the better.
-\v 19 \add He\add* scolded \add King\add* Herodes \add (Herod)\add* (who was the ruler of the \add Galili\add* quarter) about \add marrying\add* his \add own\add* brother Filippos’s \add (Philip’s)\add* wife Herodias.\x + \xo 3:19-20: \xt Mrk 6:17-18; Mat 14:3-4.\x* \add Herodes\add* \add had also been scolded by him\add* about many other evil things that \add he’d\add* done,
+\v 19 \add He\add* scolded \add King\add* Herodes \add (Herod,\add* who was the ruler of the \add Galili\add* quarter) about \add marrying\add* his \add own\add* brother Filippos’s \add (Philip’s)\add* wife Herodias.\x + \xo 3:19-20: \xt Mrk 6:17-18; Mat 14:3-4.\x* \add Herodes\add* \add had also been scolded by him\add* about many other evil things that \add he’d\add* done,
 \v 20 \add and then he\add* added to his evils by having Yohan locked up in prison.
 \s1 Yeshua’s double baptism
 \r (Mark 1:9-11; Mat. 3:13-17)
@@ -417,7 +418,7 @@
 \v 8 When Shim’on Kefa \add (Peter; Grk. Petros)\add* \add had a moment\add* to realise what had just happened, he knelt \add in the boat\add* in front \nd of Yeshua\nd* and said, “You must leave me, \nd master\nd*, because I’m just a sinful man.”
 \p
 \v 9 \add Kefa\add* and all those with him \add were stunned\add* at the size of the catch,
-\v 10 including Ya’akov \add (James; Grk. Yakobos)\add* and Yohan \add (John; Grk. Yoannes)\add* (Zavday’s \add (Grk. Zebedaios’)\add* sons) who were \add his\add* \add fishing\add* partners. Then \nd Yeshua\nd* told Shim’on, “Don’t be afraid—from now on you’ll be catching people.”
+\v 10 including Ya’akov \add (James; Grk. Yakobos)\add* and Yohan \add (John; Grk. Yoannes,\add* Zavday’s \add (Grk. Zebedaios’)\add* sons) who were \add his\add* \add fishing\add* partners. Then \nd Yeshua\nd* told Shim’on, “Don’t be afraid—from now on you’ll be catching people.”
 \p
 \v 11 When they got the boats up onto the shore, they left everything there and followed after \add Yeshua\add*.
 \s1 Yeshua heals a man with leprosy
@@ -433,12 +434,12 @@
 \s1 A paralysed man is lowered through the roof
 \r (Mark 2:1-12; Mat. 9:1-8)
 \p
-\v 17 \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* was teaching one day, and some from the Farisaios party and some religious teachers were sitting there \add listening\add*. They had come from \add villages\add* all around Galil and Yehudah \add (Judea)\add*, and also from Yerushalem \add (Jerusalem)\add*, and the power \nd of Yahweh\nd* was there enabling \add Yeshua\add* to heal people.
+\v 17 \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* was teaching one day, and some from the \add Pharisee party\add* and some religious teachers were sitting there \add listening\add*. They had come from \add villages\add* all around Galil and Yehudah \add (Judea)\add*, and also from Yerushalem \add (Jerusalem)\add*, and the power \nd of Yahweh\nd* was there enabling \add Yeshua\add* to heal people.
 \v 18 Then, look, some men turned up carrying a paralysed man on a stretcher, and they tried to bring him inside and place him \add in front of\add* \add Yeshua\add*
 \v 19 but because of the crowd they couldn’t find a way in. So instead, they went \add up the stairs\add* to the \add flat\add* roof and removed some tiles in order to let the stretcher down right \add in front of\add* \nd Yeshua\nd*.
 \v 20 When he saw their faith, he said, “Man, your sins have been forgiven.”
 \p
-\v 21 “Who’s this guy who’s insulting God?” the teachers and Farisaios started to say among themselves. “Only \em God\em* is able to forgive sins.”
+\v 21 “Who’s this guy who’s insulting God?” the teachers and \add Pharisee party members\add* started to say among themselves. “Only \em God\em* is able to forgive sins.”
 \p
 \v 22 But \nd Yeshua\nd* knew what they were thinking and saying, and answered them, “\wj Why are you reasoning about this in your \+add minds\+add*?\wj*
 \v 23 \wj Which is easier to say: ‘Your sins have been forgiven,’ or ‘Stand up and walk’?\wj*
@@ -453,14 +454,14 @@
 \v 28 \add So\add* \add Levi\add* left everything and went and followed \add Yeshua\add*.
 \p
 \v 29 Then Levi prepared a large meal in his home for \add Yeshua\add*, plus there were also a lot of tax-collectors and others who were sitting with them.
-\v 30 Some from the Farisaios party and \add religious teachers\add* grumbled at \add Yeshua’s\add* followers, complaining, “Why are you all eating and drinking with tax collectors and other low-life?”\x + \xo 5:30: \xt Luk 15:1-2.\x*
+\v 30 Some from the \add Pharisee party\add* and \add religious teachers\add* grumbled at \add Yeshua’s\add* followers, complaining, “Why are you all eating and drinking with tax collectors and other low-life?”\x + \xo 5:30: \xt Luk 15:1-2.\x*
 \p
 \v 31 But it was \nd Yeshua\nd* who answered, “\wj Healthy \+add people\+add* don’t need a doctor—only those \+add who\+add* are sick.\wj*
 \v 32 \wj I didn’t come to call those \+add who are\+add* ‘righteous’, but \+add to call\+add* sinners to come and \+add turn away from disobeying God\+add*.\wj*”
 \s1 The question about fasting
 \r (Mark 2:18-22; Mat. 9:14-17)
 \p
-\v 33 Then the religious leaders complained, “Yohan’s \add (John’s; Grk. Yoannes’)\add* followers often fast and bring their needs to God, as do the Farisaios, but your \add followers\add* are eating and drinking.”
+\v 33 Then the religious leaders complained, “Yohan’s \add (John’s; Grk. Yoannes’)\add* followers often fast and bring their needs to God, as do the \add Pharisee party\add*, but your \add followers\add* are eating and drinking.”
 \p
 \v 34 “\wj You can’t make the groomsmen fast at a wedding,\wj*” \nd Yeshua\nd* \add (Jesus; Grk. Yesus)\add* responded, “\wj not while the groom is with them.\wj*
 \v 35 \wj But yes, there will be a future time when the groom will be taken away from them, and then they’ll fast.\wj*”
@@ -474,7 +475,7 @@
 \r (Mark 2:23-28; Mat. 12:1-8)
 \p
 \v 1 One Rest Day, \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* was walking through some fields of grain and his followers were plucking the heads of grain and rubbing them \add apart\add* in their hands, then chewing the grains.\x + \xo 6:1: \xt Deu 23:25.\x*
-\v 2 But some from the Farisaios party asked, “Why are you doing that? It’s prohibited \add to harvest\add* on a Rest \add Day\add*.”
+\v 2 But some from the \add Pharisee party\add* asked, “Why are you doing that? It’s prohibited \add to harvest\add* on a Rest \add Day\add*.”
 \p
 \v 3 “\wj Haven’t you read about David,\wj*” \nd Yeshua\nd* answered, “\wj when him and his men were hungry and what they did?\wj*
 \v 4 “\wj He went into \+nd God’s\+nd* temple and took the ‘bread of the presence’ and ate some and gave some to his men, even though it’s only priests that are allowed to eat that.\wj*”\x + \xo 6:4: \xt Lev 24:9.\x*
@@ -483,7 +484,7 @@
 \r (Mark 3:1-6; Mat. 12:9-14)
 \p
 \v 6 On a different Rest Day, \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* went into a \add Jewish meeting hall\add* and was teaching \add the congregation\add*. There was a man there with a deformed right hand
-\v 7 and the \add religious teachers\add* and Farisaios were watching \add Yeshua\add* closely to see if he might heal the man on the Rest Day so they’d have something to accuse him of.
+\v 7 and the \add religious teachers\add* and \add Pharisee party members\add* were watching \add Yeshua\add* closely to see if he might heal the man on the Rest Day so they’d have something to accuse him of.
 \v 8 But he knew their plans and spoke to the man with the deformed hand, “\wj Stand up and come into the middle.\wj*” So the man \add got up\add* and stood in front of them.
 \v 9 “\wj I want to ask all of you,\wj*” said \nd Yeshua\nd*, “\wj whether or not it’s allowable to do good on the Rest Day, or only evil—to save life or to destroy it?\wj*”
 \v 10 Turning \add slowly\add* and looking at them all, he then said to the man, “\wj Hold out your hand.\wj*” The man did it and his hand was healed,
@@ -493,9 +494,9 @@
 \p
 \v 12 One \add day\add* \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* climbed a hill to pray, and then he spent the night there praying \nd to God\nd*.
 \v 13 In the morning, he called together his followers, and chose twelve of them that he then called ‘missionaries’:
-\v 14 Shim’on \add (Simon)\add* (who he also named Kefa \add (Peter; Grk. Petros)\add*) and his brother Andreas, Ya’akov \add (James; Grk. Yakobos)\add* and Yohan \add (John; Grk. Yoannes)\add*, Filippos \add (Philip)\add* and Bar-Talmay \add (Bartholomew; Grk. Bartholomaios)\add*,
+\v 14 Shim’on \add (Simon,\add* who he also named Kefa \add (Peter; Grk. Petros)\add*) and his brother Andreas, Ya’akov \add (James; Grk. Yakobos)\add* and Yohan \add (John; Grk. Yoannes)\add*, Filippos \add (Philip)\add* and Bar-Talmay \add (Bartholomew; Grk. Bartholomaios)\add*,
 \v 15 Matay \add (Matthew; Grk. Matthaios)\add* and Toma \add (Thomas)\add*, Ya’akov (Halfay’ \add (Grk. Halfaios’)\add* son), Shim’on (the one known as a Zealot),
-\v 16 Yehudah \add (Judas; Grk. Yudas)\add* (son of Ya’akov), and Yehudah Iskariot (who \add eventually\add* betrayed him).
+\v 16 Yehudah \add (Judas; Grk. Yudas,\add* son of Ya’akov), and Yehudah Iskariot (who \add eventually\add* betrayed him).
 \s1 The crowds want to touch Yeshua
 \r (Mat. 4:23-25)
 \p
@@ -604,7 +605,7 @@
 \v 28 \wj I’m telling all of you, no one who’s been born from a \+add woman\+add* is greater than Yohan, yet the lowest person in \+nd God’s\+nd* kingdom is greater than him.\wj*”
 \p
 \v 29 (When all the people and the tax-collectors that had been immersed by Yohan heard that, they concurred that \nd God’s\nd* way is fair,\x + \xo 7:29-30: \xt Mat 21:32; Luk 3:12.\x*
-\v 30 however the Farisaios and the lawyers who had not been immersed by him, they rejected \nd God’s\nd* plan for them.)
+\v 30 however the \add Pharisee party\add* and the lawyers who had not been immersed by him, they rejected \nd God’s\nd* plan for them.)
 \p
 \v 31 “\wj So what can I compare this generation with?\wj*” asked Yeshua. “\wj Who are they similar to?\wj*
 \v 32 \wj They’re like little children sitting in the marketplace and calling out to each other, ‘We played the flute for you all but you didn’t dance, then we played a sad song but you all didn’t weep.’\wj*
@@ -613,10 +614,10 @@
 \v 35 \wj But wisdom is justified by all her children.\wj*”
 \s1 The woman who anoints Yeshua’s feet
 \p
-\v 36 Another time, someone from the Farisaios party invited \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* to go to his place for a meal, and so he went \add there\add* and reclined \add on a flat couch\add*.
+\v 36 Another time, someone from the \add Pharisee party\add* invited \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* to go to his place for a meal, and so he went \add there\add* and reclined \add on a flat couch\add*.
 \v 37 Then wow, a sinful woman from the city who knew that he was reclining in \add there\add*, \add came into the room\add* carrying a \add beautiful carved\add* stone flask of scented skin-cream.\x + \xo 7:37-38: \xt Yhn 12:3; Mrk 14:3; Mat 26:7.\x*
 \v 38 She stood weeping behind \add Yeshua’s\add* feet, wetting his feet with her tears. Then she used her \add hair\add* to wipe off the tears and kissed his feet and \add rubbed\add* the lotion into them.
-\v 39 When the Farisaios who had invited \add Yeshua\add* saw that, he said to himself, “If that man was a prophet, he’d know who she is and what kind of woman it is that’s touching him, because she breaks God’s laws.”
+\v 39 When the \add Pharisee party member\add* who had invited \add Yeshua\add* saw that, he said to himself, “If that man was a prophet, he’d know who she is and what kind of woman it is that’s touching him, because she breaks God’s laws.”
 \p
 \v 40 “Shim’on \add (Simon)\add*,” \nd Yeshua\nd* asked him, “I need to tell you something.”
 \p “Tell me, teacher,” he replied.
@@ -1000,15 +1001,15 @@
 \s1 Yeshua’s warning about the religious teachers
 \r (Mark 12:38-40; Mat. 23:1-36)
 \p
-\v 37 When \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add had a break from\add* speaking, a member of the Farisaios party invited him over for breakfast, so he went into the house and sat down,
+\v 37 When \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add had a break from\add* speaking, a \add Pharisee party member\add* invited him over for breakfast, so he went into the house and sat down,
 \v 38 and the man was very surprised that he didn’t observe the handwashing ceremony before he ate.
-\v 39 But the \nd master\nd* said to his host, “\wj Yes, all of you in the Farisaios party clean the outside of the cup and the plate, but your insides are full of theft and wickedness.\wj*
+\v 39 But the \nd master\nd* said to his host, “\wj Yes, all of you in the \+add Pharisee party\+add* clean the outside of the cup and the plate, but your insides are full of theft and wickedness.\wj*
 \v 40 \wj How stupid! Didn’t \+add God\+add* who made the outside part, also make what’s inside?\wj*
 \v 41 \wj However, if you sacrificially give what’s inside, then everything would then become clean for you.\wj*
 \p
-\v 42 “\wj But you Farisaios won’t end well, because you give a tenth of your herbs and vegetables,\x + \xo 11:42: \xt Lev 27:30.\x* yet you all ignore giving justice and loving \+nd God\+nd*, both of which need to be done and cannot be ignored.\wj*
+\v 42 “\wj But you \+add Pharisee party members\+add* won’t end well, because you give a tenth of your herbs and vegetables,\x + \xo 11:42: \xt Lev 27:30.\x* yet you all ignore giving justice and loving \+nd God\+nd*, both of which need to be done and cannot be ignored.\wj*
 \p
-\v 43 “\wj You Farisaios won’t end well, because you all love the best \+add seats\+add* in the \+add Jewish meeting halls\+add* and the \+add honoured\+add* greetings in the marketplaces.\wj*
+\v 43 “\wj You \+add Pharisee party members\+add* won’t end well, because you all love the best \+add seats\+add* in the \+add Jewish meeting halls\+add* and the \+add honoured\+add* greetings in the marketplaces.\wj*
 \v 44 \wj You all won’t end well, because you’re like unmarked graves that people walk all over without even realising\+add —the people simply don’t know that you’re dead inside\+add*.\wj*”
 \p
 \v 45 One of the experts in religious rules \add there\add* answered him \add back\add*, “Teacher, you’re insulting us as well when you say that.”
@@ -1022,13 +1023,13 @@
 \p
 \v 52 “\wj You religious law experts won’t end well, because you took away the key to knowledge—not only did you not enter \+add yourselves\+add*, but you also forbade others from entering.\wj*”
 \p
-\v 53 Once \add Yeshua\add* left that \add house\add*, the \add religious teachers\add* and the Farisaios party started strongly resenting him, and started \add a plan of\add* asking him more questions
+\v 53 Once \add Yeshua\add* left that \add house\add*, the \add religious teachers\add* and the \add Pharisee party\add* started strongly resenting him, and started \add a plan of\add* asking him more questions
 \v 54 in the hope of catching an answer \add that could be used to condemn him\add*.
 \c 12
 \s1 Everything hidden will be revealed
 \r (Mat. 10:26-27)
 \p
-\v 1 By then the crowd had grown to many thousands, so much so that they were trampling on each other. Meanwhile \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* told his followers, “\wj \+add Make sure that you’re not influenced by the hypocrisy of the Farisaios party—it spreads around like yeast in bread dough\+add*.\wj*\x + \xo 12:1: \xt Mrk 8:15; Mat 16:6.\x*
+\v 1 By then the crowd had grown to many thousands, so much so that they were trampling on each other. Meanwhile \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* told his followers, “\wj \+add Make sure that you’re not influenced by the hypocrisy of the Pharisee party—it spreads around like yeast in bread dough\+add*.\wj*\x + \xo 12:1: \xt Mrk 8:15; Mat 16:6.\x*
 \v 2 \wj But everything that’s covered up \+add now\+add*, will be uncovered \+add in the future\+add*, and everything that’s \+add now\+add* hidden will revealed.\wj*\x + \xo 12:2: \xt Mrk 4:22; Luk 8:17.\x*
 \v 3 \wj Anything that you \+add whispered\+add* in the dark will be heard in the light, and anything that was only for certain \+add ears\+add* in a private \+add room\+add* will be announced from the rooftops.\wj*
 \s1 Who to be afraid of
@@ -1176,7 +1177,7 @@
 \s1 Yeshua’s concern for Yerushalem
 \r (Mat. 23:37-39)
 \p
-\v 31 At that time, some members of the Farisaios party approached \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* and told him, “You need to leave here because Herodes \add (Herod)\add* wants to kill you.”
+\v 31 At that time, some \add Pharisee party members\add* approached \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* and told him, “You need to leave here because Herodes \add (Herod)\add* wants to kill you.”
 \p
 \v 32 \add Yeshua\add* responded, “\wj Go and tell that fox: ‘I’m driving out demons and healing \+add people\+add* today and tomorrow, but I’ll be finished the following day.’\wj*
 \v 33 \wj Yes, I need to keep moving today and tomorrow, because it wouldn’t do for a prophet to come to his end away from Yerushalem \+add (Jerusalem)\+add*.\wj*
@@ -1186,9 +1187,9 @@
 \c 14
 \s1 Yeshua heals a man on a Rest Day
 \p
-\v 1 One day, \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* went to the house of one of the Farisaios party leaders for a meal on a Rest Day, and they were watching him closely.
+\v 1 One day, \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* went to the house of one of the \add Pharisee party\add* leaders for a meal on a Rest Day, and they were watching him closely.
 \v 2 Then, look, there was a man there with badly swollen limbs.
-\v 3 \nd Yeshua\nd* responded \add to the thoughts of\add* the lawyers and Farisaios by asking, “\wj Is it allowable to heal on the Rest Day or not?\wj*”
+\v 3 \nd Yeshua\nd* responded \add to the thoughts of\add* the lawyers and \add Pharisee party members\add* by asking, “\wj Is it allowable to heal on the Rest Day or not?\wj*”
 \p
 \v 4 However, they \add just\add* stayed silent, so he took hold of the man and healed him and sent him away.
 \v 5 Then he asked them, “\wj Which of you if \+add your\+add* child or your animal fell into a pit wouldn’t immediately pull them out, even if it was a Rest Day?\wj*”\x + \xo 14:5: \xt Mat 12:11.\x*
@@ -1241,7 +1242,7 @@
 \r (Mat. 18:12-14)
 \p
 \v 1 Many tax-collectors and \add others regarded as\add* sinners had come closer so they could hear what \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* \add was teaching\add*,\x + \xo 15:1-2: \xt Luk 5:29-30.\x*
-\v 2 but those from the Farisaios party and the \add religious teachers\add* were grumbling, “This man accepts sinners and \add even\add* eats with them!”
+\v 2 but those from the \add Pharisee party\add* and the \add religious teachers\add* were grumbling, “This man accepts sinners and \add even\add* eats with them!”
 \v 3 \add So\add* \add Yeshua\add* told them this parable:
 \p
 \v 4 “\wj If \+add you\+add* had a hundred sheep and one of them went missing, which of you wouldn’t leave the ninety-nine there in the wilderness and go and search for the missing sheep until \+add you\+add* found it?\wj*
@@ -1300,7 +1301,7 @@
 \s1 More of Yeshua’s teaching
 \r (Mark 10:11-12; Mat. 11:12-13)
 \p
-\v 14 All those from the Farisaios party were listening \add carefully\add* because they love money, and they were sneering at \add Yeshua\add* \add (Jesus; Grk. Yesus)\add*,
+\v 14 All those from the \add Pharisee party\add* were listening \add carefully\add* because they love money, and they were sneering at \add Yeshua\add* \add (Jesus; Grk. Yesus)\add*,
 \v 15 \add so\add* he said to them, “\wj You all justify yourselves to the people but \+nd God\+nd* knows your hearts, because what people value most is abhorrent to \+nd God\+nd*.\wj*
 \p
 \v 16 “\wj The Hebrew scriptures \+add applied\+add* until Yohan-the-immerser started preaching the good message \+nd about God’s\+nd* kingdom, now everyone is striving to get into it,\wj*\f + \fr 16:16 \ft See https://rediscoveryingjesus.substack.com/p/jesuss-confusing-sayings-luke-1616.\f*\x + \xo 16:16: \xt Mat 11:12-13.\x*
@@ -1356,7 +1357,7 @@
 \s1 God’s kingdom
 \r (Mat. 24:23-28,37-41)
 \p
-\v 20 One time \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* was \add approached\add* by some from the Farisaios party and asked when God’s kingdom is coming, and he answered, “\wj The arrival \+nd of\+nd* \+nd God’s\+nd* kingdom is not some visible thing,\wj*
+\v 20 One time \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* was \add approached\add* by some from the \add Pharisee party\add* and asked when God’s kingdom is coming, and he answered, “\wj The arrival \+nd of\+nd* \+nd God’s\+nd* kingdom is not some visible thing,\wj*
 \v 21 \wj and they won’t be shouting, ‘Look, here it is!’ or ‘There it is!’, because you see, \+nd God’s\+nd* kingdom is inside you all.\wj*”
 \p
 \v 22 Then he told \add his\add* followers, “\wj The time will come when you’ll be wanting to see the son of humanity \+add again\+add* even for a day, but you won’t see him.\wj*
@@ -1393,8 +1394,8 @@
 \s1 Humility in prayer
 \p
 \v 9 Then \add Yeshua\add* \add (Jesus; Grk. Yesus)\add* also told this parable to some who \add felt that they were guiltless before God\add* because of their own \add goodness\add*, and so they scorned others:
-\v 10 “\wj \+add Once\+add* two men went into the temple to pray—one was a Farisaios \+add party member\+add* and the other was a tax-collector.\wj*
-\v 11 \wj The Farisaios stood there praying \+add quietly\+add*, ‘I thank you, \+nd God\+nd*, that I’m not like the rest of the people: swindlers, sinners, adulterers, and even \+add that\+add* tax-collector.\wj*
+\v 10 “\wj \+add Once\+add* two men went into the temple to pray—one was a \+add Pharisee party member\+add* and the other was a tax-collector.\wj*
+\v 11 \wj The \+add Pharisee party member\+add* stood there praying \+add quietly\+add*, ‘I thank you, \+nd God\+nd*, that I’m not like the rest of the people: swindlers, sinners, adulterers, and even \+add that\+add* tax-collector.\wj*
 \v 12 \wj I fast twice a week and I \+add give a tenth\+add* of everything I get.’\wj*
 \v 13 \wj But the tax-collector stood at a distance, not even willing to \+add raise his head\+add*, instead beating his chest and saying, ‘\+nd God\+nd*, I’m a sinner, \+add take away my guilt\+add*.’\wj*
 \v 14 \wj I’m telling you all that this man went home after \+add being declared guiltless\+add*, not the other one, because all \+add those\+add* who praise \+add themselves\+add* will be humbled, and \+add those\+add* who humble \+add themselves\+add* will be praised.\wj*”\x + \xo 18:14: \xt Mat 23:12; Luk 14:11.\x*
@@ -1508,7 +1509,7 @@
 \v 37 As he was about to descend down the slope of the Mt. of Olives, the whole crowd of followers started celebrating and loudly praising \nd God\nd* for all the miracles they’d seen,
 \v 38 saying, “The coming king has been blessed in the name \nd of Yahweh\nd*.\x + \xo 19:38: \xt Psa 118:26.\x* \add May there be\add* peace in heaven and brilliant splendour up high there.”
 \p
-\v 39 There were some members of the Farisaios party in the crowd and they suggested to him, “Teacher, tell your followers to stop!”
+\v 39 There were some \add Pharisee party members\add* in the crowd and they suggested to him, “Teacher, tell your followers to stop!”
 \p
 \v 40 “\wj I’m telling you,\wj*” \add Yeshua\add* answered, “\wj that if all of these people stayed silent then the stones would start shouting.\wj*”
 \s1 Yeshua cries over Yerushalem
@@ -1576,7 +1577,7 @@
 \s1 The question about the resurrection
 \r (Mark 12:18-27; Mat. 22:23-33)
 \p
-\v 27 Then some from the Saddoukaios \add (Sadducee)\add* sect came. They claim there’s no resurrection,\x + \xo 20:27: \xt Acts 23:8.\x* and they asked \add Yeshua\add* \add (Jesus; Grk. Yesus)\add*,
+\v 27 Then some from the \add Sadducee group\add* came. They claim there’s no resurrection,\x + \xo 20:27: \xt Acts 23:8.\x* and they asked \add Yeshua\add* \add (Jesus; Grk. Yesus)\add*,
 \v 28 “Teacher, Mosheh \add (Moses)\add* wrote for us that if anyone’s married brother should die childless, then the \add surviving\add* brother should take \add in\add* the widow so they can produce children in the \add deceased\add* brother’s \add name\add*.\x + \xo 20:28: \xt Deu 25:5.\x*
 \v 29 Once there were seven brothers, and the first one had a wife, but died without having children.
 \v 30 Then the second \add brother\add*

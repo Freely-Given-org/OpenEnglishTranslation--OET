@@ -1,10 +1,143 @@
 Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
 
 # NOTE 1: This table only distinguishes names, not making any attempt to separate different people or places
-# NOTE 2: Although this table applies to the OET-LV, the versification used is the ENGLISH system
+# NOTE 2: IRefs and ERefs use the OET-LV (Hebrew/original) versification of the files being edited, e.g., Gen 32:1 not English 31:55 (the reference lists in the Comment column may still use English numbering)
 # NOTE 3: Hebrew names that are also short English words (like Ham) may need the 'w' whole word flag so that the matching isn't overdone
 # NOTE 4: Names with a forward slash in the REPLACE column, are names where the first letter from the Hebrew would be different from the first letter in the traditional English name
 #          (and so they'd be harder to find or recognise in a dictionary, etc.)
+
+# Clan names glossed with a trailing [s], e.g., Kohathite[s] (added 2026-11-21).
+#   These come before the person-name rows, or else those rows match inside them (e.g., Kohath in Kohathite[s] giving Qəhātite[s]).
+#   Longest first, so no shorter gloss can match inside a longer one. Hebrew comes from the curated clan row below where its consonants match, otherwise from the lemma.
+H	SA1								Jerahmeelite[s]			יְרַחְמְאֵלִי		H3397 (2) 1Sam 27:10, 30:29* [Added 2026-11-21: clan-name gloss with [s; no /(Jerahmeelites) explanation as a later row searches for Jerah], placed before the person-name rows; Hebrew from the lemma; no /(Jerahmeelites) explanation as a later row searches for Jerah]
+H	CH1				CH1_2:54,CH1_9:16				Netophathite[s]			נְטֹופָתִי		H5200 (2) 1Chr 2:54, 9:16* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma; limited to the verses with this spelling]
+H	NEH				NEH_12:28				Netophathite[s]			נְטֹפָתִי		H5200 (1) Neh 12:28* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Netophathites; limited to the verses with this spelling]
+H	NUM								Shuthelahite[s]			שֻׁתַלְחִי		H8364 (1) Num 26:35* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	JOS								Ashkelonite[s]			אֶשְׁקְלוֹנִי		H832 (1) Josh 13:3* [Added 2026-11-21: clan-name gloss with [s; no /(Ashkelonites) explanation as a later row searches for Ashkelon], placed before the person-name rows; Hebrew from the lemma; no /(Ashkelonites) explanation as a later row searches for Ashkelon]
+H	NUM								Malchielite[s]			מַלְכִּיאֵלִי		H4440 (1) Num 26:45* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	CH1								Manahathite[s]			מָנַחְתִּי		H2680 (1) 1Chr 2:54* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	CH1								Eshtaolite[s]			אֶשְׁתָּאֻלִי		H848 (1) 1Chr 2:53* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM,JOS,CH1,CH2								Gershonite[s]			גֵּרְשֻׁנִּי		H1649 (10) Num 3:21, 3:23, 3:24, 4:24, 4:27, 4:28, ... [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	DEU,JOS,NEH								Girgashite[s]			גִּרְגָּשִׁי		H1622 (3) Deu 7:1, Josh 24:11, Neh 9:8* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Girgashite]
+H	NUM								Jahleelite[s]			יַחְלְאֵלִי		H3178 (1) Num 26:26* [Added 2026-11-21: clan-name gloss with [s; no /(Jahleelites) explanation as a later row searches for Jahleel], placed before the person-name rows; Hebrew from the lemma; no /(Jahleelites) explanation as a later row searches for Jahleel]
+H	NUM								Jahzeelite[s]			יַחְצְאֵלִי		H3184 (1) Num 26:48* [Added 2026-11-21: clan-name gloss with [s; no /(Jahzeelites) explanation as a later row searches for Jahzeel], placed before the person-name rows; Hebrew from the lemma; no /(Jahzeelites) explanation as a later row searches for Jahzeel]
+H	JOS								Japhletite[s]			יַפְלֵטִי		H3311 (1) Josh 16:3* [Added 2026-11-21: clan-name gloss with [s; no /(Japhletites) explanation as a later row searches for Japhlet], placed before the person-name rows; Hebrew from the lemma; no /(Japhletites) explanation as a later row searches for Japhlet]
+H	DEU,JOS								Maacathite[s]			מַעֲכָתִי		H4602 (4) Deu 3:14, Josh 12:5, 13:11, 13:13* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Maacathites]
+H	NUM								Shechemite[s]			שִׁכְמִי		H7930 (1) Num 26:31* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Shemidaite[s]			שְׁמִידָעִי		H8062 (1) Num 26:32* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Shillemite[s]			שִׁלֵּמִי		H8016 (1) Num 26:49* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Shimronite[s]			שִׁמְרֹנִי		H8117 (1) Num 26:24* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	CH1								Shumathite[s]			שֻׁמָתִי		H8126 (1) 1Chr 2:53* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Shuphamite[s]			שׁוּפָמִי		H7781 (1) Num 26:39* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Zebulunite[s]			זְבוּלֹנִי		H2075 (1) Num 26:27* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Ahiramite[s]			אֲחִירָמִי		H298 (1) Num 26:38* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	GEN,NUM,JDG,SA1								Amalekite[s]			עֲמָלֵקִי		H6003 (9) Gen 14:7, Num 14:25, 14:43, 14:45, Jdg 12:15, 1Sam 15:6, ... [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Ashbelite[s]			אַשְׁבֵּלִי		H789 (1) Num 26:38* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	JOS								Ashdodite[s]			אַשְׁדּוֹדִי		H796 (1) Josh 13:3* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Asrielite[s]			אַשְׂרִאֵלִי		H845 (1) Num 26:31* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Beriahite[s]			בְּרִיעִי		H1284 (1) Num 26:44* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	GEN,EXO,NUM,DEU,JOS,JDG,SA2,KI1,EZR,EZE								Canaanite[s]			כְּנַעֲנִי		H3669 (52) Gen 13:7, 24:3, 24:37, 34:30, 50:11, Exo 3:8, ... [Added 2026-11-21: clan-name gloss with [s; no /(Canaanites) explanation as a later row searches for Canaan], placed before the person-name rows; Hebrew from the curated row Canaanites; no /(Canaanites) explanation as a later row searches for Canaan]
+H	DEU,JOS,SA1								Geshurite[s]			גְּשׁוּרִי		H1651 (6) Deu 3:14, Josh 12:5, 13:2, 13:11, 13:13, 1Sam 27:8* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Geshurites]
+H	NUM								Gileadite[s]			גִּלְעָדִי		H1569 (1) Num 26:29* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Hanochite[s]			חֲנֹכִי		H2599 (1) Num 26:5* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	CH1				CH1_26:23,CH1_26:30,CH1_26:31				Hebronite[s]			חֶבְרוֹנִי		H2276 (4) 1Chr 26:23, 26:30, 26:31* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma; limited to the verses with this spelling]
+H	NUM				NUM_3:27,NUM_26:58				Hebronite[s]			חֶבְרֹנִי		H2276 (2) Num 3:27, 26:58* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma; limited to the verses with this spelling]
+H	NUM								Hepherite[s]			חֶפְרִי		H2662 (1) Num 26:32* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM				NUM_26:6				Hezronite[s]			חֶצְרוֹנִי		H2697 (1) Num 26:6* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma; limited to the verses with this spelling]
+H	NUM				NUM_26:21				Hezronite[s]			חֶצְרֹנִי		H2697 (1) Num 26:21* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma; limited to the verses with this spelling]
+H	NUM								Huphamite[s]			חוּפָמִי		H2350 (1) Num 26:39* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	LEV								Israelite[s]			יִשְׂרְאֵלִי		H3481 (1) Lev 24:10* [Added 2026-11-21: clan-name gloss with [s; no /(Israelites) explanation as a later row searches for Israel], placed before the person-name rows; Hebrew from the lemma; no /(Israelites) explanation as a later row searches for Israel]
+H	NUM								Jashubite[s]			יָּשׁוּבִי		H3432 (1) Num 26:24* [Added 2026-11-21: clan-name gloss with [s; no /(Jashubites) explanation as a later row searches for Jashub], placed before the person-name rows; Hebrew from the lemma; no /(Jashubites) explanation as a later row searches for Jashub]
+dH	GEN								Kadmonite[s]			קַדְמֹנִי/(Kadmonites)		H6935 (1) Gen 15:19* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+dH	GEN								Kenizzite[s]			קְנִזִּי/(Kenizzites)		H7074 (1) Gen 15:19* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	SA1,SA2,KI1,CH1								Kerethite[s]			כְּרֵתִי		H3774 (7) 1Sam 30:14, 2Sam 8:18, 15:18, 20:7, 1Ki 1:38, 1:44, ... [Added 2026-11-21: clan-name gloss with [s; no /(Cherethites) explanation as a later row searches for Cherethites], placed before the person-name rows; Hebrew from the curated row Cherethites; no /(Cherethites) explanation as a later row searches for Cherethites]
+H	NUM,JOS,CH1,CH2								Kohathite[s]			קֱהָתִי		H6956 (12) Num 3:27, 3:30, 4:18, 4:34, 4:37, 26:57, ... [Added 2026-11-21: clan-name gloss with [s; no /(Kohathites) explanation as a later row searches for Kohath], placed before the person-name rows; Hebrew from the curated row Kohathites; no /(Kohathites) explanation as a later row searches for Kohath]
+H	DEU,KI2,CH1								Manassite[s]			מְנַשִּׁי		H4520 (4) Deu 4:43, 29:7, 2Ki 10:33, 1Chr 26:32* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	CH1								Menuchite[s]			מְּנֻחוֹת		H2679 (1) 1Chr 2:52* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	GEN								Midianite[s]			מִדְיָנִים		H4084 (1) Gen 37:28* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	CH1								Mishraite[s]			מִשְׁרָעִי		H4954 (1) 1Chr 2:53* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Naamanite[s]			נַעֲמִי		H5280 (1) Num 26:40* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Nemuelite[s]			נְמוּאֵלִי		H5242 (1) Num 26:12* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	SA2,KI1,CH1								Pelethite[s]			פְּלֵתִי		H6432 (7) 2Sam 8:18, 15:18, 20:7, 20:23, 1Ki 1:38, 1:44, ... [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Pelethites]
+H	GEN,EXO,DEU,JOS,JDG,KI1,CH2,EZR,NEH								Perizzite[s]			פְּרִזִּי		H6522 (23) Gen 13:7, 15:20, 34:30, Exo 3:8, 3:17, 23:23, ... [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Perizzites]
+H	NUM,DEU,JOS,KI2,CH1								Reubenite[s]			רְאוּבֵנִי		H7206 (17) Num 26:7, 34:14, Deu 3:12, 3:16, 4:43, 29:7, ... [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Shelahite[s]			שֵׁלָנִי		H8024 (1) Num 26:20* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	CH1								Shilonite[s]			שִׁילוֹנִי		H7888 (1) 1Chr 9:5* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Shilonite]
+H	NUM								Shuhamite[s]			שׁוּחָמִי		H7749 (2) Num 26:42, 26:43* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	CH1				CH1_27:16				Simeonite[s]			שִּׁמְעוֹנִי		H8099 (1) 1Chr 27:16* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma; limited to the verses with this spelling]
+H	NUM,JOS				NUM_25:14,NUM_26:14,JOS_21:4				Simeonite[s]			שִׁמְעֹנִי		H8099 (3) Num 25:14, 26:14, Josh 21:4* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma; limited to the verses with this spelling]
+H	NUM,CH1								Uzzielite[s]			עׇזִּיאֵלִי		H5817 (2) Num 3:27, 1Chr 26:23* [Added 2026-11-21: clan-name gloss with [s; no /(Uzzielites) explanation as a later row searches for Uz], placed before the person-name rows; Hebrew from the lemma; no /(Uzzielites) explanation as a later row searches for Uz]
+H	NUM								Zephonite[s]			צְפוֹנִי		H6831 (1) Num 26:15* [Added 2026-11-21: clan-name gloss with [s; no /(Zephonites) explanation as a later row searches for Zepho], placed before the person-name rows; Hebrew from the lemma; no /(Zephonites) explanation as a later row searches for Zepho]
+H	CH1								Zorathite[s]			צׇרְעָתִי		H6882 (2) 1Chr 2:53, 4:2* [Added 2026-11-21: clan-name gloss with [s; no /(Zorathites) explanation as a later row searches for Zorathites], placed before the person-name rows; Hebrew from the lemma; no /(Zorathites) explanation as a later row searches for Zorathites]
+H	EZR								Ammonite[s]			עַמֹּנִי		H5984 (1) Ezr 9:1* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM,CH1								Amramite[s]			עַמְרָמִי		H6020 (2) Num 3:27, 1Chr 26:23* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	JDG								Asherite[s]			אָשֵׁרִי		H843 (1) Jdg 1:32* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	SA2								Ashurite[s]			אֲשׁוּרִי		H805 (1) 2Sam 2:9* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	EZR								Egyptian[s]			מִצְרִי		H4713 (1) Ezr 9:1* [Added 2026-11-21: clan-name gloss with [s; no /(Egyptians) explanation as a later row searches for Egypt], placed before the person-name rows; Hebrew from the lemma; no /(Egyptians) explanation as a later row searches for Egypt]
+H	JOS								Ekronite[s]			עֶקְרוֹנִי		H6139 (1) Josh 13:3* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	JOS								Gebalite[s]			גִּבְלִי		H1382 (1) Josh 13:5* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Hamulite[s]			חָמוּלִי		H2539 (1) Num 26:21* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Heberite[s]			חֶבְרִי		H2277 (1) Num 26:45* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Helekite[s]			חֶלְקִי		H2516 (1) Num 26:30* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Iezerite[s]			אִיעֶזְרִי		H373 (1) Num 26:30* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Imnahite[s]			יִמְנָה		H3232 (1) Num 26:44* [Added 2026-11-21: clan-name gloss with [s; no /(Jimnites) explanation as a later row searches for Jimnites], placed before the person-name rows; Hebrew from the curated row Jimnites; no /(Jimnites) explanation as a later row searches for Jimnites]
+H	NUM,CH1								Izharite[s]			יִצְהָרִי		H3325 (4) Num 3:27, 1Chr 24:22, 26:23, 26:29* [Added 2026-11-21: clan-name gloss with [s; no /(Izharites) explanation as a later row searches for Izhar], placed before the person-name rows; Hebrew from the curated row Izharites; no /(Izharites) explanation as a later row searches for Izhar]
+H	NUM								Jakinite[s]			יָכִינִי		H3200 (1) Num 26:12* [Added 2026-11-21: clan-name gloss with [s; no /(Jakinites) explanation as a later row searches for Jakin], placed before the person-name rows; Hebrew from the lemma; no /(Jakinites) explanation as a later row searches for Jakin]
+H	NUM,SA1								Jaminite[s]			יָמִינִי		H3227/3228 (2) Num 26:12, 1Sam 9:4* [Added 2026-11-21: clan-name gloss with [s; no /(Jaminites) explanation as a later row searches for Jamin], placed before the person-name rows; Hebrew from the lemma; no /(Jaminites) explanation as a later row searches for Jamin]
+H	EXO,NUM,DEU,JOS,JDG,KI1,CH2,NEH				EXO_3:8,EXO_3:17,EXO_13:5,EXO_23:23,EXO_33:2,EXO_34:11,NUM_13:29,DEU_7:1,DEU_20:17,JOS_3:10,JOS_9:1,JOS_11:3,JOS_12:8,JOS_24:11,JDG_3:5,KI1_9:20,CH2_8:7,NEH_9:8				Jebusite[s]			יְבוּסִי		H2983 (18) Exo 3:8, 3:17, 13:5, 23:23, 33:2, 34:11, ... [Added 2026-11-21: clan-name gloss with [s; no /(Jebusites) explanation as a later row searches for Jebus], placed before the person-name rows; Hebrew from the curated row Jebusites; limited to the verses with this spelling; no /(Jebusites) explanation as a later row searches for Jebus]
+H	SA2				SA2_5:6				Jebusite[s]			יְבֻסִי		H2983 (1) 2Sam 5:6* [Added 2026-11-21: clan-name gloss with [s; no /(Jebusites) explanation as a later row searches for Jebus], placed before the person-name rows; Hebrew from the lemma; limited to the verses with this spelling; no /(Jebusites) explanation as a later row searches for Jebus]
+H	NUM								Jezerite[s]			יִצְרִי		H3340 (1) Num 26:49* [Added 2026-11-21: clan-name gloss with [s; no /(Jezerites) explanation as a later row searches for Jezer], placed before the person-name rows; Hebrew from the lemma; no /(Jezerites) explanation as a later row searches for Jezer]
+H	EXO,NUM,CH1								Korahite[s]			קָרְחִי		H7145 (3) Exo 6:24, Num 26:58, 1Chr 26:19* [Added 2026-11-21: clan-name gloss with [s; no /(Korahites) explanation as a later row searches for Korah], placed before the person-name rows; Hebrew from the curated row Korahite; no /(Korahites) explanation as a later row searches for Korah]
+H	NUM								Makirite[s]			מָכִירִי		H4354 (1) Num 26:29* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Merarite[s]			מְרָרִי		H4847/4848 (3) Num 3:33, 3:35, 26:57* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Perezite[s]			פַּרְצִי		H6558 (1) Num 26:20* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Shaulite[s]			שָׁאוּלִי		H7587 (1) Num 26:13* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM,ZEC								Shimeite[s]			שִׁמְעִי		H8097 (2) Num 3:21, Zech 12:13* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	EZE				EZE_32:30				Sidonian[s]			צִדֹנִי		H6722 (1) Eze 32:30* [Added 2026-11-21: clan-name gloss with [s; no /(Sidonians) explanation as a later row searches for Sidon], placed before the person-name rows; Hebrew from the lemma; limited to the verses with this spelling; no /(Sidonians) explanation as a later row searches for Sidon]
+H	JDG				JDG_3:3				Sidonian[s]			צִידֹנִי		H6722 (1) Jdg 3:3* [Added 2026-11-21: clan-name gloss with [s; no /(Sidonians) explanation as a later row searches for Sidon], placed before the person-name rows; Hebrew from the curated row Sidonians; limited to the verses with this spelling; no /(Sidonians) explanation as a later row searches for Sidon]
+H	NUM								Tahanite[s]			תַּחֲנִי		H8470 (1) Num 26:35* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	GEN,CH1								Temanite[s]			תֵּימָנִי		H8489 (2) Gen 36:34, 1Chr 1:45* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Temanites]
+H	NUM,JOS,CH1								Zerahite[s]			זַרְחִי		H2227 (6) Num 26:13, 26:20, Josh 7:17, 1Chr 27:11, 27:13* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Zerahites]
+H	EXO,NUM,DEU,JOS,JDG,CH2,EZR								Amorite[s]			אֲמֹרִי		H567 (15) Exo 3:8, 3:17, 13:5, Num 13:29, 21:29, 22:2, ... [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Amorite]
+H	NUM								Arelite[s]			אַרְאֵלִי		H692 (1) Num 26:17* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Arodite[s]			אֲרוֹדִי		H722 (1) Num 26:17* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Bakrite[s]			בַּכְרִי		H1076 (1) Num 26:35* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Belaite[s]			בַּלְעִי		H1108 (1) Num 26:38* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Carmite[s]			כַּרְמִי		H3757 (1) Num 26:6* [Added 2026-11-21: clan-name gloss with [s; no /(Carmites) explanation as a later row searches for Carmi], placed before the person-name rows; Hebrew from the lemma; no /(Carmites) explanation as a later row searches for Carmi]
+H	NUM								Elonite[s]			אֵלֹנִי		H440 (1) Num 26:26* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Eranite[s]			עֵרָנִי		H6198 (1) Num 26:36* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	JOS								Gittite[s]			גִּתִּי		H1663 (1) Josh 13:3* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Gittite]
+H	NUM								Haggite[s]			חַגִּי		H2291 (1) Num 26:15* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	GEN,EXO,NUM,DEU,JOS,JDG,KI1,CH2,EZR,NEH								Hittite[s]			חִתִּי		H2850 (21) Gen 15:20, Exo 3:8, 3:17, 13:5, 23:23, 23:28, ... [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Hittites]
+H	NUM								Ishvite[s]			יִשְׁוִי		H3441 (1) Num 26:44* [Added 2026-11-21: clan-name gloss with [s; no /(Ishvites) explanation as a later row searches for Ishvi], placed before the person-name rows; Hebrew from the lemma; no /(Ishvites) explanation as a later row searches for Ishvi]
+H	CH1								Ithrite[s]			יִתְרִי		H3505 (1) 1Chr 2:53* [Added 2026-11-21: clan-name gloss with [s; no /(Ithrite) explanation as a later row searches for Ithrite], placed before the person-name rows; Hebrew from the curated row Ithrite; no /(Ithrite) explanation as a later row searches for Ithrite]
+H	NUM								Libnite[s]			לִבְנִי		H3846 (2) Num 3:21, 26:58* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM,CH1								Mahlite[s]			מַחְלִי		H4249/4250 (3) Num 3:33, 26:58, 1Chr 24:28* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	EZR								Moabite[s]			מֹּאָבִי		H4125 (1) Ezr 9:1* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Mushite[s]			מוּשִׁי		H4188 (2) Num 3:33, 26:58* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	CH1								Puthite[s]			פּוּתִי		H6336 (1) 1Chr 2:53* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Sardite[s]			סַרְדִּי		H5625 (1) Num 26:26* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Shunite[s]			שׁוּנִי		H7765 (1) Num 26:15* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Tolaite[s]			תּוֹלָעִי		H8440 (1) Num 26:23* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Ardite[s]			אַרְדִּי		H716 (1) Num 26:40* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	JOS								Arkite[s]			אַרְכִּי		H757 (1) Josh 16:2* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Archite]
+H	JOS								Avvite[s]			עַוִּים		H5757 (1) Josh 13:3* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	KI2								Carian[s]			כָּרִי		H3746 (2) 2Ki 11:4, 11:19* [Added 2026-11-21: clan-name gloss with [s; no /(Carites) explanation as a later row searches for Carites], placed before the person-name rows; Hebrew from the curated row Carites; no /(Carites) explanation as a later row searches for Carites]
+H	JDG,CH1								Danite[s]			דָּנִי		H1839 (5) Jdg 13:2, 18:1, 18:11, 18:30, 1Chr 12:36* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Danites]
+H	NUM,DEU,JOS,KI2,CH1								Gadite[s]			גָּדִי		H1425 (15) Num 34:14, Deu 3:12, 3:16, 4:43, 29:7, Josh 1:12, ... [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Gadites]
+H	JOS								Gazite[s]			עַזָּתִי		H5841 (1) Josh 13:3* [Added 2026-11-21: clan-name gloss with [s; no /(Gazites) explanation as a later row searches for Gazites], placed before the person-name rows; Hebrew from the lemma; no /(Gazites) explanation as a later row searches for Gazites]
+H	NUM								Gunite[s]			גּוּנִי		H1477 (1) Num 26:48* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	EXO,DEU,JOS,JDG,CH2								Hivite[s]			חִוִּי		H2340 (9) Exo 3:8, 3:17, 13:5, 34:11, Deu 7:1, Josh 11:3, ... [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Hivites]
+H	GEN,DEU								Horite[s]			חֹרִי		H2752/2753 (5) Gen 14:6, 36:21, 36:29, 36:30, Deu 2:22* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the curated row Horites]
+H	GEN,NUM,SA1				GEN_15:19,NUM_24:21,SA1_15:6,SA1_27:10,SA1_30:29				Kenite[s]			קֵינִי		H7017 (6) Gen 15:19, Num 24:21, 1Sam 15:6, 27:10, 30:29* [Added 2026-11-21: clan-name gloss with [s; no /(Kenites) explanation as a later row searches for Kenite], placed before the person-name rows; Hebrew from the curated row Kenite; limited to the verses with this spelling; no /(Kenites) explanation as a later row searches for Kenite]
+H	NUM,JDG				NUM_24:22,JDG_4:11				Kenite[s]			קַיִן		H7014/7017 (2) Num 24:22, Jdg 4:11* [Added 2026-11-21: clan-name gloss with [s; no /(Kenites) explanation as a later row searches for Kenite], placed before the person-name rows; Hebrew from the lemma; limited to the verses with this spelling; no /(Kenites) explanation as a later row searches for Kenite]
+H	EXO,NUM,DEU,JOS,CH1								Levite[s]			לֵוִי		H3878/3881 (11) Exo 6:19, Num 3:32, 18:23, 26:57, Deu 10:8, Josh 13:14, ... [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Oznite[s]			אׇזְנִי		H244 (1) Num 26:16* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	NUM								Punite[s]			פּוּנִי		H6324 (1) Num 26:23* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	JOB								Sabean[s]			שְׁבָא		H7614 (1) Job 1:15* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+H	CH1								Zorite[s]			צָרְעִי		H6882 (1) 1Chr 2:54* [Added 2026-11-21: clan-name gloss with [s; no /(Zorathites) explanation as a later row searches for Zorathites], placed before the person-name rows; Hebrew from the curated row Zorathites; no /(Zorathites) explanation as a later row searches for Zorathites]
+H	NUM								Erite[s]			עֵרִי		H6180 (1) Num 26:16* [Added 2026-11-21: clan-name gloss with [s], placed before the person-name rows; Hebrew from the lemma]
+# end of clan names
 
 # Individuals (or gods, or named creatures)
 H									Aaron			אַהֲרֹן		H175 (347) Exo 4:14,27-30, ..., Acts 7:40
@@ -62,9 +195,9 @@ wH	EZR,NEH								Adin			עָדִין		H5720 (4) Ezr 2:15, 8:6, Neh 7:20, 10:16*
 H					CH1_11:42				Adina			עֲדִינָא		H5721 (1) 1Chr 11:42*
 H					CH1_27:29				Adlai			עַדְלַי		H5724 (1) 1Chr 27:29*
 H					CH1_12:31,CH2_17:14				Adnah			עַדְנָה		H5734 (2) 1Chr 12:31, 2Chr 17:14*
-H	SA2,KI1,CH1,CH2								Adonijah			אֲדֹנִיָּה		H138 (26) 2Sam 3:4, 1Ki 1:15, ...
+H	SA2,KI1,CH1,CH2,NEH								Adonijah			אֲדֹנִיָּה		H138 (26) 2Sam 3:4, 1Ki 1:15, ... [2026-11-21: books NEH added]
 H	EZR,NEH								Adonikam			אֲדֹנִיקָם		H140 (3) Ezr 2:13, 8:13, Neh 7:18*
-H					KI1_4:6,KI1_5:14				Adoniram			אֲדֹנִירָם		{ H141 (2) 1Ki 4:6, 5:14*
+H					KI1_4:6,KI1_5:28				Adoniram			אֲדֹנִירָם		{ H141 (2) 1Ki 4:6, 5:14*
 H					SA2_20:24,KI1_12:18				Adoram			אֲדֹרָם		{ shortened form H151 (2) 2Sam 20:24, 1Ki 12:18*
 H	KI2,ISA								Adrammelech			אַדְרַמֶּלֶךְ		H152 (3) 2Ki 17:31, 19:37, Isa 37:38*
 H					SA1_18:19,SA2_21:8				Adriel			עַדְרִיאֵל		H5741 (2) 1Sam 18:19, 2Sam 21:8*
@@ -76,7 +209,7 @@ H									Ahab			אַחְאָב		H256 (93) 1Ki 16:28-30,33, 17:1, 18:1-3,5-6, ..
 H					CH1_8:1				Aharah			אַחְרַח		H315 (1) 1Chr 8:1*
 H					CH1_4:8				Aharhel			אֲחַרְחֵל		H316 (1) 1Chr 4:8*
 H					SA2_23:34				Ahasbai			אֲחַסְבַּי		H308 (1) 2Sam 23:34*
-H	EZR,EST								Ahasuerus			אֲחַשְׁוֵרוֹשׁ		H325 (31) Ezr 4:6, Est 1:1-2,9-10,15-17,19, ...
+H	EZR,EST,DAN								Ahasuerus			אֲחַשְׁוֵרוֹשׁ		H325 (31) Ezr 4:6, Est 1:1-2,9-10,15-17,19, ... [2026-11-21: books DAN added]
 wH									Ahaz			אָחָז		H271 (41) 2Ki 15:38, 16:1-2,5,7-8,10-11,15-17, ...
 H									Ahaziah			אֲחַזְיָה		H274 (37) 1Ki 22:40, 22:49,51, 2Ki 1:2,18, 8:24-26, ...
 H					CH1_2:29				Ahban			אַחְבָּן		H257 (1) 1Chr 2:29*
@@ -127,7 +260,7 @@ H	SA2,KI1,CH1,CH2								Amasa			עֲמָשָׂא		H6021 (16) 2Sam 17:25, 19:13,
 H					NEH_11:13				Amashai			עֲמַשְׁסַי		{ H6023 (1) Neh 11:13*
 H					NEH_11:13				Amashsai			עֲמַשְׁסַי		{ H6023 (1) Neh 11:13*
 H					CH2_17:16				Amasiah			עֲמַסְיָה		H6007 (1) 2Chr 17:16*
-H	KI2,CH1,CH2								Amaziah			אֲמַצְיָה		H558 (40) 2Ki 12:21, 13:12, 14:1,8-9,11, ...
+H	KI2,CH1,CH2,AMO								Amaziah			אֲמַצְיָה		H558 (40) 2Ki 12:21, 13:12, 14:1,8-9,11, ... [2026-11-21: books AMO added]
 wH					EZR_2:57				Ami			אָמִי		H532 (1) Ezr 2:57*
 H					KI2_14:25,JNA_1:1				Amittai			אֲמִתַּי		H573 (2) 2Ki 14:25, Jna 1:1*
 H	NUM,SA2,CH1								Ammiel			עַמִּיאֵל		H5988 (6) Num 13:12, 2Sam 9:4-5, 17:27, 1Chr 3:5, 26:5*
@@ -135,7 +268,7 @@ H	NUM,CH1								Ammihud			עַמִּיהוּד		H5989 (9) Num 1:10, 2:18, 7:48,
 H	EXO,NUM,RUT,CH1								Amminadab			עַמִּינָדָב		H5992 (13) Exo 6:23, Num 1:7, 2:3, ..., Ruth 4:19-20, 1Chr 2:10, ...
 H					CH1_27:6				Ammizabad			עַמִּיזָבָד		H5990 (1) 1Chr 27:6*
 wH					NEH_12:7,NEH_12:20				Amok			עָמוֹק		H5987 (2) Neh 12:7,20*
-wH	KI1,KI2,CH1,CH2,NEH,JER,ZEP								Amon			אָמוֹן		H526 (17) 1Ki 22:26, 2Ki 21:18-19, ..., Zeph 1:1
+wH	KI1,KI2,CH1,CH2,NEH,JER,NAH,ZEP								Amon			אָמוֹן		H526 (17) 1Ki 22:26, 2Ki 21:18-19, ..., Zeph 1:1 [2026-11-21: books NAH added]
 H	AMO								Amos			אָמוֹץ		H5986 (7) Amo 1:1, 7:8,10-12,14, 8:2*
 H					SA2_13:37				Ammihud			עַמִּיחוּר		H5991 (1) 2Sam 13:37*
 H	NUM								Ammishaddai			עַמִּישַׁדַּי		H5996 (5) Num 1:12, 2:25, 7:66,71, 10:25*
@@ -143,12 +276,12 @@ wH									Ammon			עַמּוֹן		H5983 (106) Gen 19:38, Num 21:24, Deu 2:19,37
 H	SA2								Amnon			אַמְנוֹן		H550 son of David (28) 2Sam 3:2, 13:1, ...
 H	KI2,CH2,ISA								Amoz			אָמוֹץ		H531 (13) 2Ki 19:2,20, 20:1, 2Chr 26:22, 32:20,32, Isa 1:1, 2:1, ...
 H	EXO,NUM,CH1,EZR								Amram			עַמְרָם		H6019 (14) Exo 6:18,20, Num 3:19,26:58-59, 1 Chr 6:2-3,18, 23:12-13, 24:20, Ezr 10:34*
-H					CH1_6:46,NEH_11:12				Amzi			אַמְצִי		H557 (2) 1Chr 6:46, Neh 11:12*
+H					CH1_6:31,NEH_11:12				Amzi			אַמְצִי		H557 (2) 1Chr 6:46, Neh 11:12*
 wH	GEN,CH1								Anah			עֲנָה		H6034 (12) Gen 36:2.14,18,20,24-25,29, 1Chr 1:38,40-41*
-H					NEH_8:4,NEH_10:22				Anaiah			עֲנָיָה		H6043 (2) Neh 8:4, 10:22*
+H					NEH_8:4,NEH_10:23				Anaiah			עֲנָיָה		H6043 (2) Neh 8:4, 10:22*
 wH	NUM,DEU,JOS,JDG								Anak			עָנָק		H6061 (9) Num 13:22,28,33, Deu 9:2, Josh 15:13-14, ...
 H					KI2_17:31				Anammelech			עֲנַמֶּלֶךְ		H6048 (1) 2Ki 17:31*
-wH					NEH_10:26				Anan			עָנָן		H6052 (1) Neh 10:26*
+wH					NEH_10:27				Anan			עָנָן		H6052 (1) Neh 10:26*
 wH					CH1_3:24				Anani			עֲנָנִי		H6054 (1) 1Chr 3:24*
 H					NEH_3:23,NEH_11:32				Ananiah			עֲנַנְיָה		H6055 (2) Neh 3:23, 11:32*
 wH					JDG_3:31,JDG_5:6				Anath			עֲנָת		H6067 (2) Jdg 3:31, 5:6*
@@ -213,7 +346,7 @@ H									Athaliah			עֲתַלְיָה		H6271 woman (17) 2Ki 8:26, 11:1-3,13-14
 H					EZR_10:28				Athlai			עַתְלַי		H6270 (1) Ezr 10:28*
 H	CH1,CH2								Attai			עַתַּי		H6262 (4) 1Chr 2:35-36, 12:12, 2Chr 11:20*
 H					KI2_22:3,CH2_34:8				Azaliah			אֲצַלְיָהוּ		H683 (2) 2Ki 22:3, 2Chr 34:8*
-H					NEH_10:9				Azaniah			אֲזַנְיָה		H245 (1) Neh 10:9*
+H					NEH_10:10				Azaniah			אֲזַנְיָה		H245 (1) Neh 10:9*
 H									Azariah			עֲזַרְיָה		{ (or עֲזַרְיָהוּ) H5838 (48) 1Ki 4:2,5, 2Ki 14:21, 15:1,6-8, ...
 H									Azaryah			עֲזַרְיָה		{ (or עֲזַרְיָהוּ) H5838 (48) 1Ki 4:2,5, 2Ki 14:21, 15:1,6-8, ...
 H	CH1,EZR,NEH								Azareel			עֲזַרְאֵל		{ H5832 (6) 1Chr 12:7, 25:18, 27:22, Ezr 10:41, Neh 11:13, 12:36*
@@ -287,7 +420,7 @@ H	KI1,KI2,CH2,JER,AMO								Hadad			הֲדַד		{ H1130 (25) 1Ki 15:18,20, 20:1
 H					CH2_17:7				Benhail			בֶּן-חַיִל		{{ H1134 (changed to hyphen) (1) 2Chr 17:7*
 H					CH2_17:7				Ben-hail			בֶּן-חַיִל		{{ H1134 (changed to hyphen) (1) 2Chr 17:7*
 H					CH2_17:7				hail			חַיִל		{{ H1134 (1) 2Chr 17:7*
-H					NEH_10:13				Beninu			בְּנִינוּ		H1148 (1) Neh 10:13*
+H					NEH_10:14				Beninu			בְּנִינוּ		H1148 (1) Neh 10:13*
 H									Benjamin			בִּנְיָמִין		H1144 (167) Gen 35:18,24, ..., Exo 1:3, Num 1:11, ..., Ezra 1:5, Acts 13:21
 H					CH1_24:26				Beno			בְּנוֹ		H1121 (lit 'son of' -- probably a copying error) (1) 1Chr 24:26*
 H					CH1_24:26				beno			בְּנוֹ		H1121 (lit 'son of' -- probably a copying error) (1) 1Chr 24:26* Why's the OET-LV gloss not capitalised???
@@ -309,8 +442,8 @@ H					KI2_9:25				Bidkar			בִּדְקַר		H920 (1) 2Ki 9:25*
 H	EZR,NEH								Bigvai			בִּגְוַי		{ H902 (6) Ezr 2:2,14, 8:14, Neh 7:7,19, 10:16*
 ###H	EZR,NEH								Bigvay			בִּגְוַי		{ H902 (6) Ezr 2:2,14, 8:14, Neh 7:7,19, 10:16* [Disabled: Output-only alias of Bigvai; absent from upstream glosses and input; re-matches the generated Bigvay.]
 H	JOB								Bildad			בִּלְדַּד		H1085 (5) Job 2:11, 8:1, 18:1, 25:1, 42:9*
-H	CH1,NEH								Bilgah			בִּלְגַה		H1083 (3) 1Chr 24:14, Neh 12:5,18*
-H					NEH_10:8				Bilgai			בִּלְגַּי		H1084 (1) Neh 10:8*
+H	CH1,NEH								Bilgah			בִּלְגַה		H1083 (3) 1Chr 24:14, Neh 12:5,18* [2026-11-21: books CH1,NEH added]
+H					NEH_10:9				Bilgai			בִּלְגַּי		H1084 (1) Neh 10:8*
 H	GEN,CH1								Bilhah			בִּלְהָה		H1090 concubine of Jacob (11) Gen 29:29, 30:3-5,7, 35:22,25, 37:2, 46:25, 1Chr 4:29, 7:13*
 H	GEN,CH1								Bilhan			בִּלְהָן		H1092 (4) Gen 36:27, 1Chr 1:42, 7:10*
 H					EZR_2:2,NEH_7:7				Bilshan			בִּלְשָׁן		H1114 (2) Ezr 2:2, Neh 7:7*
@@ -373,7 +506,7 @@ dH					CH2_31:12,CH2_31:13,CH2_35:9				Conaniah			כּוֹנַנְיָהוּ/(Co
 H					CH2_31:12,CH2_31:13,CH2_35:9				Konaniah			כּוֹנַנְיָהוּ		{{ H3562 (3) 2Chr 31:12-13, 35:9*
 dH					JER_22:24,JER_22:28,JER_37:1				Coniah			כָּנְיָהוּ/(Coniah)		H3659 (3) Jer 22:24,28, 37:1*
 dH					NUM_25:15,NUM_25:18				Cozbi			כָּזְבִּי/(Cozbi)		H3579 Midyanite woman (2) Num 25:15,18*
-wdH	GEN,KI2,CH1,EST,JOB,PSA,ISA,JER,EZE								Cush			כּוּשׁ/(Cush)		{ H3568 (30) Gen 2:13, 10:6-8, 2Ki 19:9, 1Chr 1:8-10, Est 1:1, ...
+wdH	GEN,KI2,CH1,EST,JOB,PSA,ISA,JER,EZE,NAH,ZEP								Cush			כּוּשׁ/(Cush)		{ H3568 (30) Gen 2:13, 10:6-8, 2Ki 19:9, 1Chr 1:8-10, Est 1:1, ... [2026-11-21: books NAH,ZEP added]
 wH	GEN,KI2,CH1,EST,JOB,PSA,ISA,JER,EZE								Kush			כּוּשׁ		{ H3568 (30) Gen 2:13, 10:6-8, 2Ki 19:9, 1Chr 1:8-10, Est 1:1, ...
 dH	CH2,EZR,ISA,DAN								Cyrus			כּוֹרֶשׁ/(Cyrus/Coresh)		{ H3566 (15) 2Chr 36:22-23, Ezra 1:1-2,7-8, ..., Isa 44:28, 45:1, Dan 1:21, 10:1.
 dH	CH2,EZR,ISA,DAN								Coresh			כּוֹרֶשׁ/(Coresh/Cyrus)		{ H3566 (15) 2Chr 36:22-23, Ezra 1:1-2,7-8, ..., Isa 44:28, 45:1, Dan 1:21, 10:1.
@@ -381,7 +514,7 @@ H	JDG,SA1,CH1								Dagon			דָּגוֹן		H1712 (13) Jdg 16:23, 1Sam 5:2-3, .
 wH				id					Dan			דָּן		H1835 (71) Gen 14:14, 30:6, 35:25, 46:23, 49:16-17, Exo 1:4, 31:6, ...
 H									Daniel			דָּנִיֵּאל		H1841 (52) Dan 2:13-20,24-27, ..., Matt 24:15
 H					CH1_2:6				Dara			דָּרַע		H1873 (1) 1Chr 2:6*
-H					KI1_4:31				Darda			דַּרְדַּע		H1862 (1) 1Ki 4:31*
+H					KI1_5:11				Darda			דַּרְדַּע		H1862 (1) 1Ki 4:31*
 H	EZR,NEH,DAN,HAG,ZEC								Darius			דָּרְיָוֶשׁ		H1867 Persian king (10) Ezr 4:5, Neh 12:22, Dan 9:1 11:1, Hag 1:1, ...
 H					EZR_2:26,NEH_7:58				Darkon			דַּרְקוֹן		H1874 (2) Ezr 2:56, Neh 7:58*
 H	NUM,DEU,PSA								Dathan			דָּתָן		H1885 (10) Num 16:1,12,24-25,27, 26:9, Deu 11:6, Psa 106:17*
@@ -496,7 +629,7 @@ wH	GEN,NUM,CH1								Er			עֵר		H6147 (10) Gen 38:3,6-7, 46:12, Num 26:19, 1C
 H	KI2,EZR,ISA								Esarhaddon			אֵסַר-חַדּוֹן		{ H634 (3) 2Ki 19:37, Ezr 4:2, Isa 37:38*
 H	KI2,EZR,ISA								Esar			אֵסַר		{ H634 (3) 2Ki 19:37, Ezr 4:2, Isa 37:38*
 H	KI2,EZR,ISA								haddon			חַדּוֹן		{ H634 (3) 2Ki 19:37, Ezr 4:2, Isa 37:38*
-H	GEN,DEU,JOS,CH1,JER,MAL								Esau			עֵשָׂו		H6215 (97) Gen 25:25-30,32,34, 26:34, 27:1, ..., Obad 1:6, Heb 11:20
+H	GEN,DEU,JOS,CH1,JER,OBA,MAL								Esau			עֵשָׂו		H6215 (97) Gen 25:25-30,32,34, 26:34, 27:1, ..., Obad 1:6, Heb 11:20 [2026-11-21: books OBA added]
 H					CH1_8:33,CH1_9:39				Eshbaal			אַשְׁבַּעַל		H792 (2) 1Chr 8:33, 9:39*
 H					GEN_36:26,CH1_1:41				Eshban			אֶשְׁבָּן		H790 (2) Gen 36:26, 1Chr 1:41*
 H	GEN,NUM,DEU								Eshcol			אֶשְׁכֹּל		H812 (6) Gen 14:13,24, Num 13:23-24, 32:9, Deu 1:24*
@@ -572,7 +705,7 @@ H					EZR_2:61,NEH_7:63				Habaiah			חֲבַיָּה		{ H2552 (2) Ezr 2:61, Neh
 H					EZR_2:61,NEH_7:63				Hobaiah			חֲבַיָּה		{ H2552 (2) Neh 7:63*
 H					JER_35:3				Habazziniah			חֲבַצַּנְיָה		H2262 (1) Jer 35:3*
 H					JER_35:3				Habaziniah			חֲבַצַּנְיָה		H2262 (1) Jer 35:3*
-H					NEH_1:1,NEH_10:1				Hacaliah			חֲכַלְיָה		H2446 (2) Neh 1:1, 10:1*
+H					NEH_1:1,NEH_10:2				Hacaliah			חֲכַלְיָה		H2446 (2) Neh 1:1, 10:1*
 H	SA1								Hachilah			חֲכִילָה		H2444 (3) 1Sam 23:19, 26:1,3*
 wH					CH1_11:11,CH1_27:32				Hachmoni			חַכְמוֹנִי		{ H2453 (2) 1Chr 11:11, 27:32*
 H					CH1_11:11,CH1_27:32				Hachmonite			חַכְמוֹנִי		{ H2453 (2) 1Chr 11:11, 27:32*
@@ -588,12 +721,12 @@ H					EZR_2:46				Hagab			חָגָב		H2285 (1) Ezr 2:46*
 H					EZR_2:45,NEH_7:48				Hagabah			חֲגָבָא		H2286 (2) Ezr 2:45, Neh 7:48*
 H	GEN								Hagar			הָגָר		H1904 (12) Gen 16:1,3-4,8,15-16, ..., Gal 4:24
 H	EZR,HAG								Haggai			חַגַּי		H2292 (11) Ezr 5:1, 6:14, Hag 1:1,3,12-13, ...
-H					CH1_6:30				Haggiah			חַגִּיָּה		H2293 (1) 1Chr 6:30*
+H					CH1_6:15				Haggiah			חַגִּיָּה		H2293 (1) 1Chr 6:30*
 H	SA2,KI1,CH1								Haggith			חַגִּית		H2294 wife of David (5) 2Sam 3:4, 1Ki 1:5,11, ...
 H					NUM_26:15				Haggites			חַגִּית		{ H2291 (3) Gen 46:16, Num 26:15*
 H					GEN_46:16,NUM_26:15				Haggi			חַגִּית		{ H2291 (3) Gen 46:16, Num 26:15*
 H					EZR_2:51,NEH_7:53				Hakupha			חֲקוּפָא		H2709 (2) Ezr 2:51, Neh 7:53*
-H					NEH_3:12,NEH_10:24				Hallohesh			הַלּוֹחֵשׁ		H3873 (2) Neh 3:12, 10:24*
+H					NEH_3:12,NEH_10:25				Hallohesh			הַלּוֹחֵשׁ		H3873 (2) Neh 3:12, 10:24*
 wH	GEN,CH1,PSA								Ham			חָם		H2526 (16) Gen 5:32, 6:10, 7:13, 9:18,22, 10:1,6,20, 1Chr 1:4,8, 4:40, Psa 78:51, 105:23, 106:22*
 H	GEN,JOS,JDG								Hamor			חֲמוֹר		H2544 (13) Gen 33:19, 34:2,4,6,8,13,18,20, ...
 H					CH1_7:18				Hammolecheth			הַמֹּלֶכֶת		{ H4447 woman (1) 1Chr 7:18*
@@ -622,7 +755,7 @@ H	CH1,EZR,NEH								Harim			חָרִם		H2766 (11) 1Chr 24:8, Ezr 2:32,39 10:21
 H					NEH_3:8				Harhaiah			חַרְהֲיָה		H2736 (1) Neh 3:8*
 H					KI2_22:14				Harhas			חַרְחַס		H2745 (1) 2Ki 22:14*
 H					EZR_2:51,NEH_7:53				Harhur			חַרְחוּר		H2744 (2) Ezr 2:51, Neh 7:53*
-H					NEH_7:24,NEH_10:19				Hariph			חָרִיף		H2756 (2) Neh 7:24, 10:19*
+H					NEH_7:24,NEH_10:20				Hariph			חָרִיף		H2756 (2) Neh 7:24, 10:19*
 H					CH1_7:36				Harnepher			חַרְנֶפֶר		H2774 (1) 1Chr 7:36*
 H					CH1_2:52				Haroeh			הָרֹאֵה		H7204 (1) 1Chr 2:52*
 H					EZR_2:52,NEH_7:54				Harsha			חַרְשָׁא		H2797 (2) Ezr 2:52, Neh 7:54*
@@ -631,7 +764,7 @@ H					NEH_3:10				Harumaph			חֲרוּמַף		H2739 (1) Neh 3:10*
 H					KI2_21:19				Haruz			חָרוּץ		H2743 (1) 2Ki 21:19*
 H					CH1_3:20				Hasadiah			חֲסַדְיָה		H2619 (1) 1Chr 3:20*
 H									Hashabiah			חֲשַׁבְיָה		H2811 (15) 1Chr 6:45, 9:14, 25:3,19,30, 27:17, 2Chr 35:9, Ezr 8:19,24, Neh 3:17, ...
-H					NEH_10:25				Hashabnah			חֲשַׁבְנָה		H2812 (1) Neh 10:25*
+H					NEH_10:26				Hashabnah			חֲשַׁבְנָה		H2812 (1) Neh 10:25*
 H					NEH_3:10,NEH_9:5				Hashabneiah			חֲשַׁבְנְיָה		H2813 (2) Neh 3:10, 9:5*
 H					NEH_8:4				Hashbaddanah			חַשְׁבַּדָּנָה		H2806 (1) Neh 8:4*
 H					CH1_11:34				Hashem			הָשֵׁם		H2044 (1) 1Chr 11:34*
@@ -666,7 +799,7 @@ H									Heth			חֵת		H2845 (14) Gen 10:15, 23:3,5,7,10,16,18,20, 25:10, 27:4
 H									Hezekiah			חִזְקִיָּה		{ H2396 (130) 2Ki 16:20, 18:1,9-10,13-17, ..., Mic 1:1, ...
 H									Hizkiah			חִזְקִיָּה		{ H2396 (130) 2Ki 16:20, 18:1,9-10,13-17, ..., Mic 1:1, ...
 H					KI1_15:18				Hezion			חֶזְיוֹן		H2383 (1) 1Ki 15:18*
-H					CH1_24:15,NEH_10:20				Hezir			חֵזִיר		H2387 (2) 1Chr 24:15, Neh 10:20*
+H					CH1_24:15,NEH_10:21				Hezir			חֵזִיר		H2387 (2) 1Chr 24:15, Neh 10:20*
 wH					SA2_23:35,CH1_11:37				Hezro			חֶצְרוֹ		H2695 (2) 2Sam 23:35, 1Chr 11:37*
 H									Hezron			חֶצְרוֹן		H2696 (18), Gen 46:9,12, Exo 6:14, Num 26:6,21, ..., Ruth 4:18-19, ...
 H					SA2_23:30				Hiddai			הִדַּי		H1914 (1) 2Sam 23:30*
@@ -752,14 +885,14 @@ H					CH1_7:18				Ishhod			אִישְׁהוֹד		H379 (1) 1Chr 7:18*
 dH	CH1								Ishi			יִשְׁעִי/(Ishi)		H3469 (5) 1Chr 2:31, 4:20,42, 5:24*
 wdH					CH1_4:3				Ishma			יִשְׁמָא/(Ishma)		H3457 (1) 1Chr 4:3*
 dH					CH2_31:13				Ismachiah			יִסְמַכְיָהוּ/(Ismachiah)		H3253 (1) 2Chr 31:13*
-wdH	GEN,KI2,CH1,CH2,JER								Ishmael			יִשְׁמָעֵאל/(Ishmael)		H3458 (48) Gen 16:11,15-16, 17:18,20,23,25-26, 25:9,12,13,16-17, ..., 36:3, ...
+wdH	GEN,KI2,CH1,CH2,EZR,JER								Ishmael			יִשְׁמָעֵאל/(Ishmael)		H3458 (48) Gen 16:11,15-16, 17:18,20,23,25-26, 25:9,12,13,16-17, ..., 36:3, ... [2026-11-21: books EZR added]
 wdH					CH1_12:4,CH1_27:19				Ishmaiah			יִשְׁמַעְיָה/(Ishmaiah)		H3460 (2) 1Chr 12:4, 27:19*
 dH					CH1_8:18				Ishmerai			יִשְׁמְרַי/(Ishmerai)		H3461 (1) 1Chr 8:18*
 dH					CH1_8:16				Ishpah			יִשְׁפָּה/(Ishpah)		H3472 (1) 1Chr 8:16*
 dH					CH1_8:22				Ishpan			יִשְׁפָּן/(Ishpan)		H3473 (1) 1Chr 8:22*
 dH	GEN,NUM,SA1,CH1								Ishvi			יִשְׁוִי/(Ishvi)		H3440 (4) Gen 46:17, Num 26:44, 1Sam 14:49, 1Chr 7:30*
 wdH									Israel			יִשְׂרָאֵל/(Israel)		H3478 (2506) Gen 32:28,32, 33:20, 34:7, 35:10,21-22, 36:31, ...
-dH	GEN,EXO,NUM,DEU,JOS								Issachar			יִשָּׂשׂכָר/(Issachar)		H3485 (43) Gen 30:18, 35:23, 46:13, 49:14, Exo 1:3, Num 1:8, ..., Rev 7:7
+dH	GEN,EXO,NUM,DEU,JOS,JDG,KI1,CH1,CH2,EZE								Issachar			יִשָּׂשׂכָר/(Issachar)		H3485 (43) Gen 30:18, 35:23, 46:13, 49:14, Exo 1:3, Num 1:8, ..., Rev 7:7 [2026-11-21: books JDG,KI1,CH1,CH2,EZE added]
 dH	CH1,EZR								Isshiah			יִשִּׁיָּה/(Isshiah)		H3449 (7) 1Chr 7:3, 12:7, 23:20, 24:21, 24:25, Ezr 10:31*
 H	EXO,LEV,NUM,CH1,EZR								Ithamar			אִיתָמָר		H385 (21) Exo 6:23, 28:1, 38:21, Lev 10:6,12,16, Num 3:2,4, 4:28, ...
 H					NEH_11:7,PRO_30:1				Ithiel			אִיתִיאֵל		H384 (3) Neh 11:7, Pr 30:1*
@@ -842,7 +975,7 @@ dH	GEN,CH1,ISA,EZE								Javan			יָוָן/(Javan)		{ H3120 (11) Gen 10:2,4, 1
 dH	GEN,CH1,ISA,EZE								Yavan			יָוָן/(Javan)		{ H3120 (11) Gen 10:2,4, 1Chr 1:5,7, Isa 66:19, Eze 27:13,19*
 dH	DAN,ZEC								Greece			יָוָן/(Greece)		{ H3120 (11) Dan 8:21, 10:20, 11:2, Zec 9:13*
 dH					CH1_27:31				Jaziz			יָזִיז/(Jaziz)		H3151 (1) 1Chr 27:31*
-dH					CH1_6:21				Jeatherai			יְאֱתְרַי/(Jeatherai)		H2979 (1) 1Chr 6:21*
+dH					CH1_6:6				Jeatherai			יְאֱתְרַי/(Jeatherai)		H2979 (1) 1Chr 6:21*
 dH					ISA_8:2				Jeberechiah			יְבֶרֶכְיָהוּ/(Jeberechiah)		{ H3000 (1) Isa 8:2*
 dH					ISA_8:2				Jeberekiah			יְבֶרֶכְיָהוּ/(Jeberekiah)		{ H3000 (1) Isa 8:2*
 dH	CH1,EST,JER								Jechoniah			יְכָנְיָה/(Jechoniah)		{{ H3204 (7) 1Chr 3:16-17, Est 2:6, Jer 24:1, 27:20, 28:4, 29:2*
@@ -921,7 +1054,7 @@ dH					CH1_4:36				Jeshohaiah			יְשׁוֹחָיָה/(Jeshohaiah)		H3439 (1) 1
 dH	CH1,CH2,EZR,NEH								Jeshua			יֵשׁוּעַ/(Jeshua)		H3442 (29) 1Chr 24:11, 2Chr 31:15, Ezra 2:2,6,36,40, ...
 dH	DEU,ISA								Jeshurun			יְשֻׁרוּן/(Jeshurun)		H3484 (4) Deu 32:15. 33:5,26, Isa 44:2*
 dH					CH1_4:36				Jesimiel			יְשִׁימָאֵל/(Jesimiel)		H3450 (1) 1Chr 4:36*
-dH	RUT,SA1,SA2,KI1,CH1,PSA,ISA								Jesse			יִשַׁי/(Jesse)		{ H3448 (42) Ruth 4:17,22, 1Sam 16:1,3,5,8-11, ...
+dH	RUT,SA1,SA2,KI1,CH1,CH2,PSA,ISA								Jesse			יִשַׁי/(Jesse)		{ H3448 (42) Ruth 4:17,22, 1Sam 16:1,3,5,8-11, ... [2026-11-21: books CH2 added]
 ###dH	RUT,SA1,SA2,KI1,CH1,PSA,ISA								Yishay			יִשַׁי/(Yishay)		{ H3448 (42) Ruth 4:17,22, 1Sam 16:1,3,5,8-11, ... [Disabled: Output-only alias of Jesse; absent from upstream glosses and input; would re-match the generated Yishay.]
 dH					GEN_36:40,CH1_1:51				Jetheth			יְתֵת/(Jetheth)		H3509 (2) Gen 36:40, 1Chr 1:51*
 dH	EXO								Jethro			יִתְרוֹ/(Jethro)		H3503 (10) Exo 3:1, 4:18, 18:1-2,5-6,9-10,12*
@@ -956,7 +1089,7 @@ dH									Johanan			יוֹחָנָן/(Johanan)		H3110 G2491 (22) 2Ki 25:23, 1Ch
 dH	NEH								Joiakim			יוֹיָקִים/(Joiakim)		H3113 (4) Neh 12:10,12,26*
 dH	EZR,NEH								Joiarib			יוֹיָרִיב/(Joiarib)		H3114 (5) Ezr 8:16, Neh 11:5,10, 12:6,19*
 dH					CH1_4:22				Jokim			יוֹקִים/(Jokim)		H3137 (1) 1Chr 4:22*
-dH					KI1_4:12,CH1_6:68				Jokmeam			יָקְמְעָם/(Jokmeam)		H3361 (2) 1Ki 4:12, 1Chr 6:68*
+dH					KI1_4:12,CH1_6:53				Jokmeam			יָקְמְעָם/(Jokmeam)		H3361 (2) 1Ki 4:12, 1Chr 6:68*
 dH	GEN,CH1								Jokshan			יָקְשָׁן/(Jokshan)		H3370 (4) Gen 25:2-3, 1Chr 1:32*
 dH	GEN,CH1								Joktan			יָקְטָן/(Joktan)		H3355 (6) Gen 10:25-26,29, 1Chr 1:19-20,23*
 dH	SA2,JER								Jonadab			יוֹנָדָב/(Jonadab)		H3122 (7) 2Sam 13:3,32,35, Jer 35:6,10,19*
@@ -1031,7 +1164,7 @@ H					EZR_2:45,NEH_7:48				Lebanah			לְבָנָא		H3838 (2) Ezr 2:45, Neh 7:4
 H	GEN,EXO,RUT,CH1								Leah			לֵאָה		H3812 woman (34) Gen 29:16-17,23-25,30-32, 30:9-14, ..., Ruth 4:11
 wH					PRO_31:1,PRO_31:4				Lemuel			לְמוּאֵל		H3927 (2) Prov 31:1,4*
 H	JOB,PSA,ISA								Leviathan			לִוְיָתָן		H3882 creature (6) Job 3:8, 41:1, Psa 74:14, 104:26, 2x Isa 27:1*
-wH	GEN,EXO,NUM,DEU,JOS,CH1,CH2,EZR,NEH,JER,EZE,MAL								Levi			לֵוִי		H3878 (58) Gen 29:34, 34:25, ..., Exo 1:2, 2:1, ...
+wH	GEN,EXO,NUM,DEU,JOS,KI1,CH1,CH2,EZR,NEH,JER,EZE,ZEC,MAL								Levi			לֵוִי		H3878 (58) Gen 29:34, 34:25, ..., Exo 1:2, 2:1, ... [2026-11-21: books KI1,ZEC added]
 H	EXO,NUM,CH1								Libni			לִבְנִי		H3845 (5) Exo 6:17, Num 3:18, 1Chr 6:17,20,29*
 H					CH1_7:19				Likhi			לִקְחִי		H3949 (1) 1Chr 7:19*
 H					HOS_1:6,HOS_1:8				Lo-ruhamah			לֹא-רֻחָמָה		{ H3819 (space changed to hyphen) (2) Hos 1:6,8*
@@ -1040,7 +1173,7 @@ H					HOS_1:6,HOS_1:8				Ruhamah			רֻחָמָה		{ H3819 (2) Hos 1:6,8*
 wH	GEN,DEU,PSA,JER,EZE								Lot			לוֹט		H3876 (33) Gen 11:27,31, ..., Luke 17:28
 H	GEN,CH1								Lotan			לוֹטָן		H3877 (7) Gen 36:20,22,29, 1Chr 1:38-39*
 wH	GEN,CH1,ISA,EZE								Lud			לוּד		H3865 (5) Gen 10:22, 1Chr 1:17, Isa 66:19, Eze 27:10, 30:5*
-H	GEN,JOS,SA2,KI1,CH1,CH2								Maacah			מַעֲכָה		{ H4601 (23) Gen 22:24, 2Sam 3:3, 10:6,8, ...
+H	GEN,JOS,SA2,KI1,KI2,CH1,CH2								Maacah			מַעֲכָה		{ H4601 (23) Gen 22:24, 2Sam 3:3, 10:6,8, ... [2026-11-21: books KI2 added]
 H	GEN,JOS,SA2,KI1,CH1,CH2								Maacath			מַעֲכָה		{ H4601 (23) Josh 13:13
 H					EZR_10:34				Maadai			מַעֲדַי		H4572 (1) Ezr 10:34*
 H					NEH_12:5				Maadiah			מַעֲדְיָה		H4573 (1) Neh 12:5*
@@ -1049,7 +1182,7 @@ H					CH1_9:12				Maasiai			מַעֲשַׂי		{ H4640 (1) 1Chr 9:12*
 H					CH1_9:12				Maasai			מַעֲשַׂי		{ H4640 (1) 1Chr 9:12*
 H	CH1,CH2,EZR,NEH,JER								Maaseiah			מַעֲשֵׂיָה		H4641 (23) 1Chr 15:18,20, 2Chr 23:1, 26:11, 28:7, 34:8, Ezr 10:18, ...
 wH					CH1_2:27				Maaz			מַעַץ		H4619 (1) 1Chr 2:27*
-H					CH1_24:18,NEH_10:8				Maaziah			מַעַזְיָה		H4590 (2) 1Chr 24:18, Neh 10:8*
+H					CH1_24:18,NEH_10:9				Maaziah			מַעַזְיָה		H4590 (2) 1Chr 24:18, Neh 10:8*
 H					CH1_12:14				Machbanai			מַכְבַּנַּי		H4344 (1) 1Chr 12:14*
 H					CH1_2:49				Machbena			מַכְבֵּנָא		H4343 (1) 1Chr 2:49*
 H	GEN,NUM,DEU,JOS,JDG,SA2,CH1								Machir			מָכִיר		{ H4353 (22) Gen 50:23, Num 26:29, 27:1, 32:39-49, ...
@@ -1064,7 +1197,7 @@ H					GEN_36:43,CH1_1:54				Magdiel			מַגְדִּיאֵל		H4025 (2) Gen 36:4
 H	GEN,CH1,EZE								Magog			מָגוֹג		H4031 (4) Gen 10:2, 1Chr 1:5, Eze 38:2, 39:6*
 H					JER_20:3				Magor-missabib			מָגוֹר-מִסָּבִיב		{ H4036 (space changed to hyphen) (1) Jer 20:3*
 H					JER_20:3				Magormissabib			מָגוֹר-מִסָּבִיב		{ H4036 (space changed to hyphen) (1) Jer 20:3*
-H					NEH_10:20				Magpiash			מַגְפִּיעָשׁ		H4047 (1) Neh 10:20*
+H					NEH_10:21				Magpiash			מַגְפִּיעָשׁ		H4047 (1) Neh 10:20*
 H	GEN,CH1,NEH								Mahalalel			מַהֲלַלְאֵל		H4111 (7) Gen 5:12-13,15-17, 1Chr 1:2, Neh 11:4*
 H					GEN_28:9,CH2_11:18				Mahalath			מַחֲלַת		H4258 woman (2) Gen 28:9, 2Chr 11:18*
 H	SA2,CH1								Maharai			מַהֲרַי		H4121 (3) 2Sam 23:28, 1Chr 11:30, 27:13*
@@ -1189,7 +1322,7 @@ H	KI1,KI2,CH1,ZEP								Malcam			מַלְכָּם		{ H4445 (5) 1Ki 11:5,33, 2Ki
 H	GEN,NUM,JOS								Milcah			מִלְכָּה		H4435 woman (11) Gen 11:29, 22:20,23, 24:15,24,47, Num 26:33, 27:1, 36:11, Jos 17:3*
 H	JDG,SA2,KI1,KI2,CH1,CH2								Millo			מִלּוֹא		H4407 (10) Jdg 9:6,20, 2Sam 5:9, 1Ki 9:15,24, 11:27, 2Ki 12:20, 1Chr 11:8, 2Chr 32:5*
 H					CH2_31:15,NEH_12:17,NEH_12:41				Miniamin			מִנְיָמִין		H4509 (3) 2Chr 31:15, Neh 12:17,41*
-H	EXO,NUM,CH1								Miriam			מִרְיָם		H4813 (15) Exo 15:20-21, Num 12:1,4-5,10 also 1Chr 4:17 (a man)
+H	EXO,NUM,DEU,CH1,MIC								Miriam			מִרְיָם		H4813 (15) Exo 15:20-21, Num 12:1,4-5,10 also 1Chr 4:17 (a man) [2026-11-21: books DEU,MIC added]
 wH					CH1_8:10				Mirma			מִרְמָה		{ H4821 (1) 1Chr 8:10*
 H					CH1_8:10				Mirmah			מִרְמָה		{ H4821 (1) 1Chr 8:10*
 H	EXO,LEV,NEH,DAN								Mishael			מִישָׁאֵל		H4332 (7) Exo 6:22, Lev 10:4, Neh 8:4, Dan 1:6-7,11,19*
@@ -1233,7 +1366,7 @@ H									Naphtali			נַפְתָּלִי		H5321 (51) Gen 30:8, 35:25, 46:24, 49
 H					GEN_25:15,CH1_1:31,CH1_5:19				Naphish			נָפִישׁ		H5305 (3) Gen 25:15, 1Chr 1:31, 5:19*
 wH	SA2,KI1,CH1,EZR,PSA,ZEC								Nathan			נָתָן		H5416 (42) 2Sam 5:14, 7:2-4,17, 12:1,5,7,13,15, ...
 H	CH1								Neariah			נְעַרְיָה		H5294 (3) 1Chr 3:22-23, 4:42*
-wH					NEH_10:19				Nebai			נוֹבַי		H5109 (1) Neh 10:19*
+wH					NEH_10:20				Nebai			נוֹבַי		H5109 (1) Neh 10:19*
 H	GEN,CH1,ISA								Nebaioth			נְבָיוֹת		H5032 woman (5) Gen 25:13, 28:9, 36:3, 1Chr 1:29, Isa 60:7*
 H	KI1,KI2,CH2								Nebat			נֶבַט		H5028 (25) 1Ki 11:26, 12:2,15, 15:1, 16:3,26,31, ...
 H	NUM,DEU,CH1,EZR,NEH,ISA,JER								Nebo			נְבוֹ		H5015 man, deity, location (13) Num 32:3,38, 33:47, Deu 32:49, 34:1, 1Chr 6:8, Ezr 2:29, ...
@@ -1315,7 +1448,8 @@ H	EZR,NEH								Pahath-moab			פַּחַת-מוֹאָב		{ H6355 (6) Ezr 2:6, 8
 H	EZR,NEH								Pahathmoab			פַּחַת-מוֹאָב		{ H6355 (6) Ezr 2:6, 8:4, 10:30, Neh 3:11, 7:11, 10:14*
 H	EZR,NEH								Pahath			פַּחַת		{ H6355 (6) Ezr 2:6, 8:4, 10:30, Neh 3:11, 7:11, 10:14*
 H					NEH_3:25				Palal			פָּלָל		H6420 (1) Neh 3:25*
-H	GEN,EXO,NUM,CH1								Pallu			פַּלּוּא		{ H6396 (5) Gen 46:9, Exo 6:14, Num 26:5,8, 1Chr 5:3*
+wH	GEN,EXO,NUM,CH1								Pallu			פַּלּוּא		{ H6396 (5) Gen 46:9, Exo 6:14, Num 26:5,8, 1Chr 5:3*
+H					NUM_26:5				Palluite[s]			פַּלֻּאִי		{ H6384 (1) Num 26:5*
 H	GEN,EXO,NUM,CH1								Phallu			פַּלּוּא		{ H6396 (5) Gen 46:9, Exo 6:14, Num 26:5,8, 1Chr 5:3*
 wdH					NUM_13:9,SA1_25:44				Palti			פַּלְטִי/(Palti)		H6406 (2) Num 13:9, 1Sam 25:44*
 dH					NUM_34:26,SA2_3:15				Paltiel			פַּלְטִיאֵל/(Paltiel)		H6409 (2) Num 34:26, 2Sam 3:15*
@@ -1342,7 +1476,7 @@ wH					CH1_2:47,CH1_12:3				Pelet			פֶּלֶט		H6404 (2) 1Chr 2:47, 12:3*
 H					NUM_16:1,CH1_2:33				Peleth			פֶּלֶת		H6431 (2) Num 16:1, 1Chr 2:33*
 H					SA1_1:2,SA1_1:4				Peninnah			פְּנִנָּה		H6444 (3) 1 Sam 1:2,4*
 H					CH1_7:16				Peresh			פֶּרֶשׁ		H6570 (1) 1Chr 7:16
-H	GEN,NUM,RUT,CH1,NEH								Perez			פֶּרֶץ		H6557 (15) Gen 38:29, 46:12, Num 26:20-21, Ruth 4:12,18, ...
+H	GEN,NUM,RUT,SA2,CH1,NEH								Perez			פֶּרֶץ		H6557 (15) Gen 38:29, 46:12, Num 26:20-21, Ruth 4:12,18, ... [2026-11-21: books SA2 added]
 H					NEH_7:57				Perida			פְּרִידָא		{ H6514 (2) Neh 7:57*
 H					EZR_2:55				Peruda			פְּרוּדָא		{ H6514 (2) Ezr 2:55*
 H	CH1,EZR,NEH								Pethahiah			פְּתַחְיָה		H6611 (4) 1Chr 24:16, Ezr 10:23, Neh 9:5, 11:24*
@@ -1352,7 +1486,7 @@ H					CH1_26:5				Peullethai			פְּעֻלְּתַי		{ H6469 (1) 1Chr 26:5*
 H									Pharaoh			פַּרְעֹה		H6547 P and F but P seems more common (268) Gen 12:15,17,18,20, 37:36, 39:1, ..., Acts 7:13
 H					GEN_21:22,GEN_21:32,GEN_26:26				Phicol			פִּיכֹל		H6369 (3) Gen 21:22,32, 26:26*
 H									Phinehas			פִּינְחָס		H6372 (25) Exo 6:25, Num 25:7,11, 31:6 Jos 22:13,30-32, ...
-H					NEH_10:24				Pilha			פִּלְחָא		H6401 (1) Neh 10:24*
+H					NEH_10:25				Pilha			פִּלְחָא		H6401 (1) Neh 10:24*
 H					NEH_12:17				Piltai			פִּלְטָי		H6408 (1) Neh 12:17*
 H					GEN_36:41,CH1_1:52				Pinon			פִּינֹן		H6373 (2) Gen 36:41, 1Chr 1:52*
 H					CH1_7:38				Pispa			פִּסְפָּה		H6462 (1) 1Chr 7:38*
@@ -1501,7 +1635,7 @@ H					CH1_11:27				Shammoth			שַׁמּוֹת		H8054 (1) 1Chr 11:27*
 H	NUM,SA2,CH1,NEH								Shammua			שַׁמּוּעַ		H8051 (5) Num 13:4, 2Sam 5:14, 1Chr 14:4, Neh 11:17, 12:18*
 H					CH1_8:26				Shamsherai			שַׁמְשְׁרַי		H8125 (1) 1Chr 8:26*
 H					CH1_5:12				Shapham			שָׁפָם		H8223 (1) 1Chr 5:12*
-H	KI2,CH2,PSA,PRO,JER								Shaphan			שָׁפָן		H8227 (32?) 2Ki 22:3,8-10,12,14,22, 2Chr 34:8,15-16,18,20, Jer 26:24, ...
+H	KI2,CH2,PSA,PRO,JER,EZE								Shaphan			שָׁפָן		H8227 (32?) 2Ki 22:3,8-10,12,14,22, 2Chr 34:8,15-16,18,20, Jer 26:24, ... [2026-11-21: books EZE added]
 H	NUM,KI1,KI2,CH1								Shaphat			שָׁפָט		H8202 (8) Num 13:5, 1Ki 19:16,19, 2Ki 3:11, 6:31, 1Chr 3:22, 5:12, 27:29*
 H					EZR_10:40				Sharai			שָׁרַי		H8298 (1) Ezr 10:40*
 H					SA2_23:33,JER_15:11				Sharar			שָׁרַר		H8325 (2) 2Sam 23:33, Jer 15:11*
@@ -1541,7 +1675,7 @@ H	LEV,CH1,CH2,EZR								Shelomith			שְׁלֹמִית		H8019 (6) Lev 24:11, 1C
 H	CH1								Shelomoth			שְׁלֹמוֹת		H8013 (5) 1Chr 23:9, 24:22, 26:25-26*
 H	NUM								Shelumiel			שְׁלֻמִיאֵל		H8017 (5) Num 1:6, 2:12, 7:36,41, 10:10*
 wH	GEN,CH1								Shem			שֵׁם		H8035 (17) Gen 5:32, 6:10, 7:13, 9:18,23,26-27, ...
-wH	CH1,NEH								Shema			שֶׁמַע		H8087 (5) 1Chr 2:43-44, 5:8, 8:13, Neh 8:4*
+wH	JOS,CH1,NEH								Shema			שֶׁמַע		H8087 (5) 1Chr 2:43-44, 5:8, 8:13, Neh 8:4* [2026-11-21: books JOS added]
 H					CH1_12:3				Shemaah			שְׁמָעָה		H8094 (1) 1Chr 12:3*
 H	KI1,CH1,CH2,EZR,NEH,JER								Shemaiah			שְׁמַעְיָה		H8098 (41) 1Ki 12:22, 1Chr 3:22, 4:37, 5:4, ...
 H	CH1,CH2,EZR								Shemariah			שְׁמַרְיָה		H8114 (4) 1Chr 12:6, 2Chr 11:9, Ezr 10:32,41*
@@ -1562,7 +1696,7 @@ H	CH1								Sheshan			שֵׁשָׁן		H8348 (5) 1Chr 2:31,34-35*
 H					EZR_1:8,EZR_1:11				Sheshbazzar			שֵׁשְׁבַּצַּר		H8339 (2) Ezra 1:8,11*
 H	EZR								Shetharboznai			שְׁתַר-בּוֹזְנַי		{ H8370 (space changed to hyphen) (4) Ezra 5:3,6, 6:6,13*
 H	EZR								Shethar-bozenai			שְׁתַר-בּוֹזְנַי		{ H8370 (space changed to hyphen) (4) Ezra 5:3,6, 6:6,13*
-wH	EZR								Shethar			שְׁתַר		{ H8370 (space changed to hyphen) (4) Ezra 5:3,6, 6:6,13*
+wH	EZR,EST								Shethar			שְׁתַר		{ H8370 (space changed to hyphen) (4) Ezra 5:3,6, 6:6,13* [2026-11-21: books EST added]
 H	EZR								bozenai			בּוֹזְנַי		{ H8370 (space changed to hyphen) (4) Ezra 5:3,6, 6:6,13*
 H	EZR								boznai			בּוֹזְנַי		{ H8370 (space changed to hyphen) (4) Ezra 5:3,6, 6:6,13*
 H					SA2_20:25,CH1_2:49				Sheva			שְׁוָא		H7724 (2) 2Sam 20:25, 1Chr 2:49*
@@ -1570,7 +1704,7 @@ H					KI1_22:42,CH2_20:31				Shilhi			שִׁלְחִי		H7977 (2) 1Ki 22:42, 2Ch
 wH					GEN_46:24,NUM_26:49				Shillem			שִׁלֵּם		H8006 (2) Gen 46:24, Num 26:49*
 H					CH1_7:37				Shilshah			שִׁלְשָׁה		H8030 (1) 1Chr 7:37*
 H					SA2_13:3,SA2_13:32				Shimeah			שִׁמְעָה		H8093 David's brother (2) 2Sam 13:3,32*
-H					KI2_12:21,CH2_24:26				Shimeath			שִׁמְעַת		H8100 woman (2) 2Ki 12:21, 2Chr 24:26*
+H					KI2_12:22,CH2_24:26				Shimeath			שִׁמְעַת		H8100 woman (2) 2Ki 12:21, 2Chr 24:26*
 H	CH1								Shimea			שִׁמְעָא		H8092 (5) 1Chr 2:13, 3:5, 6:30,39, 20:7*
 H									Shimei			שִׁמְעִי		H8096 (44) Exo 6:17, Num 3:18, 2Sam 16:5,7,13, 19:16, ...
 H					CH1_4:20				Shimon			שִׁימוֹן		H7889 (1) 1Chr 4:20*
@@ -1589,10 +1723,10 @@ H	SA2,CH1								Shobab			שׁוֹבָב		H7727 (4) 2Sam 5:14, 1Chr 2:18, 3:5, 1
 H					SA2_10:16,SA2_10:18				Shobach			שׁוֹבָךְ		H7731 (2) 2Sam 10:16,18*
 H					EZR_2:42,NEH_7:45				Shobai			שֹׁבָי		H7630 (2) Ezr 2:42, Neh 7:45*
 H	GEN,CH1								Shobal			שׁוֹבָל		H7732 (9) Gen 36:20,23,29, 1Chr 1:38,40, 2:50,52, 4:1-2*
-H					NEH_10:24				Shobek			שׁוֹבֵק		H7733 (1) Neh 10:24*
+H					NEH_10:25				Shobek			שׁוֹבֵק		H7733 (1) Neh 10:24*
 H					SA2_17:27				Shobi			שֹׁבִי		H7629 (1) 2Sam 17:27*
 H					CH1_24:27				Shoham			שֹׁהַם		H7719 (1) 1Chr 24:27*
-H					KI2_12:21,CH1_7:32				Shomer			שׁוֹמֵר		H7763 (2) 2Ki 12:21, 1Chr 7:32*
+H					KI2_12:22,CH1_7:32				Shomer			שׁוֹמֵר		H7763 (2) 2Ki 12:21, 1Chr 7:32*
 H					CH1_19:16,CH1_19:18				Shophach			שׁוֹפָךְ		H7780 (2) 1Chr 19:16,18*
 wH					CH1_2:3,CH1_7:32				Shua			שׁוּעָא		H7774 Yehudah's wife (2) 1Chr 2:3, 7:32*
 H					GEN_38:2,GEN_38:12				Shuah			שׁוּעַ		{ H7770 (2) Gen 38:2,12*
@@ -1607,7 +1741,7 @@ H	NUM,CH1								Shuthelah			שׁוּתֶלַח		H7803 (4) Num 26:35-36, 1Chr 7:
 H	SA2,CH1								Sibbecai			סִבְּכַי		H5444 (4) 2Sam 21:18, 1Chr 11:29, 20:4, 27:11*
 H					EZR_2:44,NEH_7:47				Siaha			סִיעָא		{ H5517 (2) Ezr 2:44, Neh 7:47*
 wH					EZR_2:44,NEH_7:47				Sia			סִיעָא		{ H5517 (2) Ezr 2:44, Neh 7:47*
-H	NUM,DEU,JOS,JDG,KI1,NEH,JER								Sihon			סִיחוֹן		H5511 (37) Num 21:21,23,26-29,34, 32:33, Deu 1:4, 2:24, ...
+H	NUM,DEU,JOS,JDG,KI1,NEH,PSA,JER								Sihon			סִיחוֹן		H5511 (37) Num 21:21,23,26-29,34, 32:33, Deu 1:4, 2:24, ... [2026-11-21: books PSA added]
 H					AMO_5:26				Sikkuth			סִכּוּת		H5522 feminine (1) Amos 5:26*
 H									Simeon			שִׁמְעוֹן		H8095 (44) Gen 29:33, 34:25,30, 35:23, 42:24,36, ...
 H					CH1_20:4				Sippai			סִפַּי		H5598 (1) 1Chr 20:4*
@@ -1663,13 +1797,13 @@ H	KI2,CH1,CH2								Tiglath			תִּגְלַת		H8407a (6) 2Ki 15:29, 16:7,10, 
 H	KI2,CH1,CH2								Tilgath			תִּגְלַת		H8407a typo (6) 2Ki 15:29, 16:7,10, 1Chr 5:6,27, 2Chr 28:20*
 H	KI2,CH1,CH2								pileser			פִּלְאֶסֶר		H8407b (6) 2Ki 15:29, 16:7,10, 1Chr 5:6,27, 2Chr 28:20*
 H					CH1_4:20				Tilon			תּוּלוֹן		H8436 (1) 1Chr 4:20*
-H	GEN,JOS,JDG,CH1								Timnah			תִּמְנָה		H8553 (12) Gen 38:12-14, Josh 15:10,57, 19:43, Jdg 14:1-2,5, 2Chr 28:18*
+H	GEN,JOS,JDG,CH1,CH2								Timnah			תִּמְנָה		H8553 (12) Gen 38:12-14, Josh 15:10,57, 19:43, Jdg 14:1-2,5, 2Chr 28:18* [2026-11-21: books CH2 added]
 H	GEN,CH1								Timna			תִּמְנָע		H8555 (6) Gen 36:12,22,40, 1Chr 1:36,39,51*
 H					GEN_10:2,CH1_1:5				Tiras			תִּירָס		H8494 (2) Gen 10:2, 1Chr 1:5*
 H					KI2_19:9,ISA_37:9				Tirhakah			תִּרְהָקָה		H8640 Ethiopian king (2) 2Ki 19:9, Isa 37:9*
 H					CH1_2:48				Tirhanah			תִּרְחֲנָה		H8647 (1) 1Chr 2:48*
 H					CH1_4:16				Tiria			תִּירְיָא		H8493 (1) 1Chr 4:16*
-H					CH1_6:34				Toah			תּוֹחַ		H8430 (1) 1Chr 6:34*
+H					CH1_6:19				Toah			תּוֹחַ		H8430 (1) 1Chr 6:34*
 H					CH2_17:8				Tobadonijah			טוֹב-אֲדֹנִיָּהוּ		{{ H8430 (space changed to hyphen) (1) 2Chr 17:8*
 H					CH2_17:8				adonijah			אֲדֹנִיָּהוּ		{{ H8430 (1) 2Chr 17:8*
 H	CH2,EZR,NEH,ZEC								Tobiah			טוֹבִיָּה		{ H2900 (18) 2Chr 17:8, Ezr 2:60, Neh 2:10,19, 4:3,7, 6:1,12,14,17,19, ...
@@ -1687,7 +1821,7 @@ H	CH1								Ulam			אוּלָם		H198 (4) 1Chr 7:16-17, 8:39-40*
 H					CH1_7:39				Ulla			עֻלָּא		H5925 (1) 1Chr 7:39*
 H	CH1,NEH								Unni			עֻנִּי		H6042 (3) 1Chr 15:18, 1Chr 15:20, Neh 12:9*
 wH	EXO,CH1,CH2,EZR								Uri			אוּרִי		H221 (8) Exo 31:2, 35:30, 38:22, 1 Ki 4:19, 1Chr 2:20, 2Chr 1:15, Ezra 10:24*
-H	SA2,KI1,EZR,NEH,ISA,JER								Uriah			אוּרִיָּה		H223 (39) 2Sam 11:3,6-12, ..., Matt 1:6, ...
+H	SA2,KI1,KI2,CH1,EZR,NEH,ISA,JER								Uriah			אוּרִיָּה		H223 (39) 2Sam 11:3,6-12, ..., Matt 1:6, ... [2026-11-21: books KI2,CH1 added]
 H	CH1,CH2								Uriel			אוּרִיאֵל		H222 (4) 1Chr 6:24, 15:5,11, 2Chr 13:2*
 H					CH1_9:4,EZR_8:14				Uthai			עוּתַי		H5793 (2) 1Chr 9:4, Ezr 8:14*
 wH	GEN,CH1,JOB,JER,LAM								Uz			עוּץ		H5780 (8) Gen 10:23, 22:21, 36:28, 1Chr 1:17,42, Job 1:1, Jer 25:20, Lam 4:21*
@@ -1696,10 +1830,10 @@ H					GEN_10:27,CH1_1:21				Uzal			אוּזָל		H187 (2) Gen 10:27, 1Chr 1:21*
 H	SA2,KI2,CH1,EZR,NEH								Uzzah			עֻזָּא		H5798 (14) 2Sam 6:3,6-8, 2Ki 21:18,26, ...
 wH	CH1,EZR,NEH								Uzzi			עֻזִּי		H5813 (11) 1Chr 6:5-6,51, 7:2-3,7, 9:8, Ezr 7:4, Neh 11:22, 12:19,42*
 wH					CH1_11:44				Uzzia			עֻזִּיָּא		H5814 (1) 1Chr 11:44*
-H	KI2,CH1,CH2,EZR,NEH,ISA,HOS								Uzziah			עֻזִּיָּה		H5818 (27) 2Ki 15:13,30,32,34, 1Chr 6:24, ..., Hos 1:1
+H	KI2,CH1,CH2,EZR,NEH,ISA,HOS,AMO,ZEC								Uzziah			עֻזִּיָּה		H5818 (27) 2Ki 15:13,30,32,34, 1Chr 6:24, ..., Hos 1:1 [2026-11-21: books AMO,ZEC added]
 H	EXO,LEV,NUM,CH1,CH2,NEH								Uzziel			עֻזִּיאֵל		H5816 (16) Exo 6:18,22 Lev 10:4, Num 3:19,30, 1Chr 4:42, 6:2,18, 7:7, ...
 H					EZR_10:36				Vaniah			וַנְיָה		H2057 (1) Ezr 10:36*
-H					CH1_6:28				Vashni			וַשִׁנִי		H2059 (1) 1Chr 6:28*
+H					CH1_6:13				Vashni			וַשִׁנִי		H2059 (1) 1Chr 6:28*
 H					NUM_13:14				Vophsi			וָפְסִי		{{ H2058 (1) Num 13:14*
 H					NUM_13:14				Vopshi			וָפְסִי		{{ H2058 (1) Num 13:14* The OET-LV has a mispelling here!!!
 H					GEN_36:27,CH1_1:42				Zaavan			זַעֲוָן		{ H2190 (2) Gen 36:27, 1Chr 1:42*
@@ -1716,7 +1850,7 @@ H	NUM,CH1,NEH								Zaccur			זַכּוּר		H2139 (9) Num 13:4, 1Chr 4:26-27, 
 dH									Zadok			צָדוֹק/(Zadok)		H6659 (53) 2Sam 8:17, 15:24-25,29,29,35-36, ...
 H					CH2_11:19				Zaham			זָהַם		H2093 (1) 2Chr 11:19*
 dH					NEH_3:30				Zalaph			צָלָף/(Zalaph)		H6764 (1) Neh 3:30*
-dH					JDG_9:48,SA2_23:28,PSA_68:14				Zalmon			צַלְמוֹן/(Zalmon)		H6756 (3) Jdg 9:48, 2Sam 23:28, Psa 68:14*
+dH					JDG_9:48,SA2_23:28,PSA_68:15				Zalmon			צַלְמוֹן/(Zalmon)		H6756 (3) Jdg 9:48, 2Sam 23:28, Psa 68:14*
 dH	JDG,PSA								Zalmunna			צַלְמֻנָּע/(Zalmunna)		H6759 (12) Jdg 8:5-7,10,12,15,18,21, Psa 83:11*
 H					DEU_2:20				Zamzummin			זַמְזֹם		{ H2157 (1) Deu 2:20*
 H					DEU_2:20				Zamzummites			זַמְזֹם		{ H2157 (1) Deu 2:20*
@@ -1755,7 +1889,7 @@ wH					CH1_5:13				Zia			זִיעַ		H2127 (1) 1Chr 5:13*
 dH	SA2								Ziba			צִיבָא/(Ziba)		H6717 (16) 2Sam 9:2-4,9-12, 16:1-4, ...
 dH	GEN,CH1								Zibeon			צִבְעוֹן/(Zibeon)		H6649 (8) Gen 36:2,14,20,24,29, 1Chr 1:38,40*
 wdH					CH1_8:9				Zibia			צִבְיָא/(Zibia)		H6644 (1) 1Chr 8:9*
-dH					KI2_12:1,CH2_24:1				Zibiah			צִבְיָּה/(Zibiah)		H6645 woman (2) 2Ki 12:1, 2Chr 24:1*
+dH					KI2_12:2,CH2_24:1				Zibiah			צִבְיָּה/(Zibiah)		H6645 woman (2) 2Ki 12:1, 2Chr 24:1*
 H	EXO,CH1,CH2,NEH								Zichri			זִכְרִי		{ H2147 (12) Exo 6:21, 1Chr 8:19,23,27, 9:15, 26:25, 27:16, 2Chr 17:16, ...
 H	EXO,CH1,CH2,NEH								Zikri			זִכְרִי		{ H2147 (12) Exo 6:21, 1Chr 8:19,23,27, 9:15, 26:25, 27:16, 2Chr 17:16, ...
 dH	EZR,NEH								Ziha			צִיחָא/(Ziha)		H6727 (3) Ezr 2:43, Neh 7:46, 11:21*
@@ -1775,8 +1909,8 @@ dH					CH1_4:8				Zobebah			צֹבֵבָה/(Zobebah)		H6637 (1) 1Chr 4:8*
 H					CH1_4:20				Zoheth			זוֹחֵת		H2105 (1) 1Chr 4:20*
 H					CH1_4:20				zoheth			זוֹחֵת		H1132 Ben-zoheth (1) 1Chr 4:20*
 dH					CH1_7:35,CH1_7:36				Zophah			צוֹפַח/(Zophah)		H6690 (2) 1Chr 7:35-36*
-dH					CH1_6:26				Zophai			צוּף/(Zophai/Zuph)		{ H6689 (4) 1Chr 6:26*
-dH	SA1,CH1								Zuph			צוּף/(Zuph)		{ H6689 (4) 1 Sam 1:1, 9:5, 1Chr 6:26,35*
+dH					CH1_6:11				Zophai			צוּף/(Zophai/Zuph)		{ H6689 (4) 1Chr 6:26*
+dH	SA1,CH1					CH1_6:11			Zuph			צוּף/(Zuph)		{ H6689 (4) 1 Sam 1:1, 9:5, 1Chr 6:26,35*
 dH	NUM								Zuar			צוּעָר/(Zuar)		H6686 (5) Num 1:8, 2:5, 7:18,23, 10:15*
 wdH	NUM,JOS,CH1								Zur			צוּר/(Zur)		H6698 (5) Num 25:15, Num 31:8, Josh 13:21, 1Chr 8:30, 8:36*
 dH					NUM_3:35				Zuriel			צוּרִיאֵל/(Zuriel)		H6700 (1) Num 3:35*
@@ -1874,8 +2008,8 @@ H	DEU,JOS,SA2,KI2,CH1								Gadite			גָּדִי		{ H1425 (15) Deu 3:12,16, De
 H					EZE_27:11				Gammadim			גַּמָּד		{{{ H1575 (1) Eze 27:11*
 H					EZE_27:11				Gammadites			גַּמָּד		{{{ H1575 (1) Eze 27:11*
 H					CH1_4:19				Garmite			גַּרְמִי		H1636 (1) 1Chr 4:19*
-wH					JOS_13:5,KI1_5:18				Gebalite			גִּבְלִי		{{ H1382 (2) Josh 13:5, 1Ki 5:18*
-H					JOS_13:5,KI1_5:18				Gebalites			גִּבְלִי		{{ H1382 (2) Josh 13:5, 1Ki 5:18*
+wH					JOS_13:5,KI1_5:32				Gebalite			גִּבְלִי		{{ H1382 (2) Josh 13:5, 1Ki 5:18*
+H					JOS_13:5,KI1_5:32				Gebalites			גִּבְלִי		{{ H1382 (2) Josh 13:5, 1Ki 5:18*
 H					CH1_12:5				Gederathite			גְּדֵרָתִי		H1452 (1) 1Chr 12:5*
 H					CH1_27:28				Gederite			גְּדֵרִי		H1451 (1) 1Chr 27:28*
 wH	DEU,JOS,SA1								Geshuri			גְּשׁוּרִי		{ H1651 (6) Deu 3:14, Josh 12:5, 13:2,11,13, 1Sam 27:8*
@@ -1958,7 +2092,7 @@ H	DEU,JOS,SA2,KI2,CH1,JER								Maacathite			מַעֲכָתִי		{ H4602 (8) De
 H					SA1_10:21				Matrite			מַטְרִי		(1) 1 Sam 10:21*
 H					CH1_11:36				Mecherathite			מְכֵרָתִי		(1) 1 Chr 11:36*
 wH					DAN_1:11				Mede			מָדַי		H4075 (1) Dan 1:11*
-H					EZR_6:2,DAN_5:28,DAN_6:8,DAN_6:12,DAN_6:15				Medes			מָדַי		{ H4076 (5) Ezr 6:2, Dan 5:28, 6:8,12,15*
+H					EZR_6:2,DAN_5:28,DAN_6:9,DAN_6:13,DAN_6:16				Medes			מָדַי		{ H4076 (5) Ezr 6:2, Dan 5:28, 6:8,12,15*
 H					EZR_6:2,DAN_5:28,DAN_6:8,DAN_6:12,DAN_6:15				Media			מָדַי		{ H4076 (5) Ezr 6:2, Dan 5:28, 6:8,12,15*
 H	GEN,KI2,CH1,EST,ISA,JER,DAN								Madai			מָדַי		{{ H4074 (2) Gen 10:2, 1Chr 1:5*
 H	GEN,KI2,CH1,EST,ISA,JER,DAN								Medes			מָדַי		{{ H4074 (8?) 2Ki 17:6, 18:11, Isa 13:17, ...
@@ -2014,7 +2148,7 @@ H					CH1_4:37				Shiphi			שִׁפְעִי		{{ H8230 (1) 1Chr 4:37*
 H					CH1_4:37				Shipi			שִׁפְעִי		{{ H8230 (1) 1Chr 4:37*
 H					CH1_27:27				Shiphmite			שִׁפְמִי		H8225 (1) 1Chr 27:27*
 H					NUM_26:42,NUM_26:43				Shuhamites			שׁוּחָמִי		H7749 (2) Num 26:42-43*
-H					SNG_6:13				Shulammite			שׁוּלַמִּית		{ H7759 (2) Sng 6:13*
+H					SNG_7:1				Shulammite			שׁוּלַמִּית		{ H7759 (2) Sng 6:13*
 H					SNG_6:13				Shulamite			שׁוּלַמִּית		{ H7759 (2) Sng 6:13*
 H					CH1_2:53				Shumathites			שֻׁמָתִי		H8126 (1) 1Chr 2:53*
 H	KI1,KI2								Shunammite			שׁוּנַמִּית		H7767 (8) 1Ki 1:3,15, 2:17,21-22, 2Ki 4:12,25,36*
@@ -2076,7 +2210,7 @@ H	JOS,JDG,MIC								Akzib			אַכְזִיב		{ H392 (4) Josh 15:44, 19:29, Jdg
 H	GEN,DEU,HOS								Admah			אַדְמָה		H126 (5) Gen 10:19, 14:2,8, Deu 29:23, Hos 11:8*
 wH					NEH_7:61				Adon			אַדּוֹן		H114 (1) Neh 7:61*
 H					CH2_11:9				Adoraim			אֲדוֹרַיִם		H115 (1) 2Chr 11:9*
-H	JOS,SA1,CH1,CH2,NEH,MIC								Adullam			עֲדֻלָּם		H5725 (8) Josh 12:15, 15:35, 1Sam 22:1, 23:13, 1Chr 11:15, 2Chr 11:7, Neh 11:30, Mic 1:15*
+H	JOS,SA1,SA2,CH1,CH2,NEH,MIC								Adullam			עֲדֻלָּם		H5725 (8) Josh 12:15, 15:35, 1Sam 22:1, 23:13, 1Chr 11:15, 2Chr 11:7, Neh 11:30, Mic 1:15* [2026-11-21: books SA2 added]
 H					EZR_8:15,EZR_8:21,EZR_8:31				Ahava			אַהֲוָא		H163 (3) Ezr 8:15,21,31*
 H					JDG_1:31				Ahlab			אַחְלָב		H303 (1) Jdg 1:31*
 wH									Ai			עַי		H5857 (39) Gen 12:8, 13:3, Josh 7:2-5, 8:1-3,9-12, ...
@@ -2091,7 +2225,7 @@ H					NUM_33:13,NUM_33:14				Alush			אָלוּשׁ		H442 (2) Num 33:13-14*
 H					SNG_4:8				Amanah			אֲמָנָה		H549 (1) Sng 4:8*
 H					SA2_2:24				Ammah			אַמָּה		H522 (1) 2Sam 2:24*
 H	JOS,KI1,CH1,EZR,NEH,ISA,JER								Anathoth			עֲנָתוֹת		H6068 (15) Josh 21:18, 1Ki 2:26, 1Chr 6:60, 7:8, ...
-H					CH1_6:73				Anem			עָנֵם		H6046 (1) 1Chr 6:73*
+H					CH1_6:58				Anem			עָנֵם		H6046 (1) 1Chr 6:73*
 H	JOS,JDG,SA1,KI1,KI2								Aphek			אֲפֵק		H663 (9) Josh 12:18, 13:4, 19:30, Jdg 1:31, 1Sam 4:1, 29:1, 1Ki 20:26,30, 2Ki 13:17*
 wH	NUM,DEU,ISA								Ar			עָר		H6144 (6) Num 21:15,28, Deu 2:9,18,29, Isa 15:1*
 H									arabah			עֲרָבָה		{ H6160 (60) Num 22:1, 26:3, ..., Deu 1:1,7, ..., Josh 3:16, 4:13, ...
@@ -2152,7 +2286,7 @@ H									Barnea			בַּרְנֵעַ		(10+?) Num 32:8, 34:4, Deu 1:2,19, 2:14, 
 H									Bashan			בָּשָׁן		H1316 (60) Num 21:33, 32:33, Deu 1:4, 3:1,3,4,10-11,13-14, ...
 H					SNG_7:4				Bathrabbim			בַּת-רַבִּים		{ H1337 (space changed to hyphen) (1) Sng 7:4*
 H					SNG_7:4				Bath-rabbim			בַּת-רַבִּים		{ H1337 (space changed to hyphen) (1) Sng 7:4*
-wH					SNG_7:4				Bath			בַּת		{ H1337 (space changed to hyphen) (1) Sng 7:4*
+wH					SNG_7:5				Bath			בַּת		{ H1337 (space changed to hyphen) (1) Sng 7:4*
 wH					SNG_7:4				rabbim			רַבִּים		{ H1337 (space changed to hyphen) (1) Sng 7:4*
 H					JOS_15:24,KI1_4:16				Bealoth			בְּעָלוֹת		H1175 (2) Josh 15:24, 1Ki 4:16*
 wH					NUM_21:16,JDG_9:21				Beer			בְּאֵר		H876 well (2) Num 21:16, Jdg 9:21*
@@ -2222,7 +2356,7 @@ wH	JOS,JDG,SA1,SA2,KI1,CH1								Shean			שְׁאָן		{ H1052 (9) Josh 17:11,1
 H	JOS,JDG,SA1,KI1,KI2,CH1,CH2,JER								Bethshemesh			בֵּית-שֶׁמֶשׁ		{{ H1053 (space changed to hyphen) (21) Josh 15:10, 19:22,38, 21:16, Jdg 1:33, 1Sam 6:9, ...
 H	JOS,JDG,SA1,KI1,KI2,CH1,CH2,JER								Beth-shemesh			בֵּית-שֶׁמֶשׁ		{{ H1053 (space changed to hyphen) (21) Josh 15:10, 19:22,38, 21:16, Jdg 1:33, 1Sam 6:9, ...
 H	JOS,JDG,SA1,KI1,KI2,CH1,CH2,JER								shemesh			שֶׁמֶשׁ		{{ H1053 (21) Josh 15:10, 19:22,38, 21:16, Jdg 1:33, 1Sam 6:9, ...
-H	JOS,JDG,SA1,KI1,KI2,CH1,CH2,JER								Shemesh			שֶׁמֶשׁ		{{ H1053 (21) Josh 15:10, 19:22,38, 21:16, Jdg 1:33, 1Sam 6:9, ...
+H	JOS,JDG,SA1,KI1,KI2,CH1,CH2,JER								Shemesh			שֶׁמֶשׁ		{{ H1053 (21) Josh 15:10, 19:22,38, 21:16, Jdg 1:33, 1Sam 6:9, ... [2026-11-21: books SA1 added]
 H	JOS,JDG,SA1,KI1,KI2,CH1,CH2,JER								Heliopolis			בֵּית-שֶׁמֶשׁ		{{ H1053 (space changed to hyphen) (21) Josh 15:10, 19:22,38, 21:16, Jdg 1:33, 1Sam 6:9, ...
 H					JOS_19:4				Bethul			בְּתוּל		H1329 (1) Josh 19:4*
 H	GEN,JOS,JDG,RUT,SA1,SA2,CH2,EZR,NEH,MIC,JER								Bethlehem			בֵּית-לֶחֶם		{ H1035 (41) Gen 35:19, 48:7, Josh 19:15, Jdg 12:8,10, ..., Ruth 1:1, ...
@@ -2245,7 +2379,7 @@ dH					EZR_8:17				Casiphia			כָּסִפְיָא/(Casiphia)		H3703 (2) Ezr 8:1
 dH	EZE								Chebar			כְּבָר/(Chebar)		{{ H3529 river (8) Eze 1:1,3, 3:15,23, 10:15,20,22, 43:3*
 H	EZE								Kebar			כְּבָר		{{ H3529 river (8) Eze 1:1,3, 3:15,23, 10:15,20,22, 43:3*
 dH	JOS,EZE,NEH								Chephirah			כְּפִירָה/(Chephirah)		{ H3716 (4) Josh 9:17, 18:26, Ezra 2:25, Neh 7:29*
-H	JOS,EZE,NEH								Kephirah			כְּפִירָה		{ H3716 (4) Josh 9:17, 18:26, Ezra 2:25, Neh 7:29*
+H	JOS,EZR,NEH,EZE								Kephirah			כְּפִירָה		{ H3716 (4) Josh 9:17, 18:26, Ezra 2:25, Neh 7:29* [2026-11-21: books EZR added]
 dH					KI1_17:3,KI1_17:5				Cherith			כְּרִית/(Cherith)		H3747 (2) 1Ki 17:3,5*
 dH					EZE_30:5				Chub			כּוּב/(Chub)		H3552 (1) Eze 30:5*
 dH					EZE_30:5				Libya			כּוּב/(Chub)		H3552 (1) Eze 30:5*
@@ -2257,7 +2391,7 @@ dH					KI2_17:24				Cuthah			כּוּת/(Cuthah)		{ H3575 (1) 2Ki 17:24*
 wdH					KI2_17:24				Cuth			כּוּת/(Cuth)		{ H3575 (1) 2Ki 17:30*
 H					JOS_19:11				Dabbesheth			דַּבֶּשֶׁת		H1708 (1) Josh 19:11*
 H	JOS,CH1								Daberath			דֲּבְרַת		H1705 (3) Josh 19:12, 21:28, 1Chr 6:72*
-H	GEN,SA2,KI1,KI2,CH1,CH2,ISA,JER,AMO,EZE,ZEC								Damascus			דַּמֶּשֶׂק		H1834 (45) Gen 14:15, 15:2, 2Sam 8:5-6, 1Ki 11:24, 15:18, ...
+H	GEN,SA2,KI1,KI2,CH1,CH2,SNG,ISA,JER,EZE,AMO,ZEC								Damascus			דַּמֶּשֶׂק		H1834 (45) Gen 14:15, 15:2, 2Sam 8:5-6, 1Ki 11:24, 15:18, ... [2026-11-21: books SNG added]
 H	JOS,JDG,CH1								Debir			דְּבִיר		H1688 (14) Josh 10:3,38-39, 11:21, 12:13, 13:26, 15:7,15,49, ...
 H					EZE_6:14				Diblah			דְּבְלָה		H1689 (1) Eze 6:14*
 H	NUM,JOS,NEH,ISA,JER								Dibon			דִּיבוֺן		H1769 (11) Num 21:30, 32:3,34, 33:45-46, Josh 13:9,17, Neh 11:25, ...
@@ -2273,7 +2407,7 @@ wH	GEN,DEU,JOS,CH1								Ebal			עֵיבָל		H5858 (8) Gen 36:23, Deu 11:29, 2
 H	SA1								Ebenezer			אֶבֶן-הָעֵזֶר		H72 (space changed to hyphen) (3) 1 Sam 4:1, 5:1, 7:12*
 H					EZR_6:2				Ecbatana			אַחְמְתָא		{ H307 (1) Ezr 6:2*
 H					EZR_6:2				Achmetha			אַחְמְתָא		{ H307 (1) Ezr 6:2*
-wH	GEN,CH2,ISA,EZE,JOL								Eden			עֵדֶן		H5731 (16) Gen 2:8,10,15 3:23-24, Gen 4:16, 2Chr 29:12, 31:15, ...
+wH	GEN,KI2,CH2,ISA,EZE,JOL								Eden			עֵדֶן		H5731 (16) Gen 2:8,10,15 3:23-24, Gen 4:16, 2Chr 29:12, 31:15, ... [2026-11-21: books KI2 added]
 wH									Edom			אֱדֹם		H123 (100) Gen 25:30, 32:3, ..., Obad 1:1
 H	NUM,DEU,JOS								Edrai			אֶדְרֶעִי		{ H154 (8) Num 21:33, Deu 1:4, 3:1,10, Josh 12:4, 13:12,31, 19:37*
 H	NUM,DEU,JOS								Edrei			אֶדְרֶעִי		{ H154 (8) Num 21:33, Deu 1:4, 3:1,10, Josh 12:4, 13:12,31, 19:37*
@@ -2288,7 +2422,7 @@ H	DEU,KI1,KI2,CH2								Eloth			אֵילוֹת		{ H359 (8) Deu 2:8, 1Ki 9:26, 2
 wH	EXO,NUM								Elim			אֵילִם		H362 (6) Exo 15:27, 16:1, Num 33:9-10*
 H					JOS_15:59				Eltekon			אֶלְתְּקוֹן		H515 (1) Josh 15:59*
 H					JOS_15:30,JOS_19:4				Eltolad			אֶלְתּוֹלַד		H513 (2) Josh 15:30, 19:4*
-wH	JOS,SA1,CH2,NEH,SNG,EZE								En			 עֵין		{{ H5872,5882,5884 (space changed to hyphen) spring/fountain
+wH	GEN,JOS,JDG,SA1,KI1,CH2,NEH,SNG,EZE								En			 עֵין		{{ H5872,5882,5884 (space changed to hyphen) spring/fountain [2026-11-21: books GEN,JDG,KI1 added]
 H					EZE_47:10				Eneglaim			 עֵין-עֶגְלַיִם		{ H5882 (space changed to hyphen) (1) Eze 47:10*
 H					EZE_47:10				En-eglaim			 עֵין-עֶגְלַיִם		{ H5882 (space changed to hyphen) (1) Eze 47:10*
 H					EZE_47:10				eglaim			 עֶגְלַיִם		{ H5882 (space changed to hyphen) (1) Eze 47:10*
@@ -2330,7 +2464,7 @@ H					SA1_25:44,ISA_10:30				Gallim			גַּלִּים		H1554 (2) 1Sam 25:44, Is
 wH	JOS,SA1,SA2,KI1,KI2,CH1								Gath			גַּת		H1661 (33) Josh 11:22, 1Sam 5:8, 6:17, 7:14, 17:4,23,52, ...
 H	GEN,DEU,JOS,JDG,SA1,KI1,KI2,CH1,JER,AMO,ZEP,ZEC								Gaza			עַזָּה		H5804 (21) Gen 10:19, Deu 2:23, Josh 10:41, 11:22, ..., Acts 8:26
 wH	JOS,JDG,SA1,SA2,KI1,KI2,CH1,CH2,EZR,NEH,ISA,ZEC								Geba			גֶּבַע		H1387 (18) Josh 18:24, 21:17, Jdg 20:10, 1Sam 13:3,16, ...
-H					PSA_83:7				Gebal			גְּבָל		H1381 (1) Psa 83:7*
+H					PSA_83:8				Gebal			גְּבָל		H1381 (1) Psa 83:7*
 H					ISA_10:31				Gebim			גֵּבִים		H1374 (1) Isa 10:31*
 H					JOS_15:41,CH2_28:18				Gederoth			גְּדֵרוֹת		H1450 (1) Josh 15:41, 2Chr 28:18*
 H					JOS_12:13				Geder			גֶּדֶר		H1445 city in Canaan (1) Josh 12:13*
@@ -2349,7 +2483,7 @@ H	GEN,KI1,CH2								Gihon			גִּיחוֹן		H1521 stream & river & pool(6) Ge
 H	SA1,SA2,CH1								Gilboa			גִּלְבֹּעַ		H1533 mountain (8) 1Sam 28:4, 31:1,8, 2Sam 1:6,21, 21:12, 1Chr 10:1,8*
 H									Gilead			גִּלְעָד		{ H1568 (134) Gen 31:21,23,25, 37:25, Num 26:29, ...
 H									gilead			גִּלְעָד		{ H1568 (134) Gen 31:21,23,25, 37:25, Num 26:29, ...
-H	DEU,JOS,JDG,SA1								Gilgal			גִּלְגָּל		H1537 (41) Deu 11:30, Josh 4:19-20, 5:9-10, 9:6, 10:6-7,9,15,43, ...
+H	DEU,JOS,JDG,SA1,SA2,KI2,HOS,AMO,MIC								Gilgal			גִּלְגָּל		H1537 (41) Deu 11:30, Josh 4:19-20, 5:9-10, 9:6, 10:6-7,9,15,43, ... [2026-11-21: books SA2,KI2,HOS,AMO,MIC added]
 H					JOS_15:51,SA2_15:12				Giloh			גִּלֹה		H1542 (2) Josh 15:51, 2Sam 15:12*
 H					CH2_28:18				Gimzo			גִּמְזוֹ		H1579 (1) 2Chr 28:18*
 H					SA2_4:3,NEH_11:33				Gittaim			גִּתַּיִם		H1664 (2) 2Sam 4:3, Neh 11:33*
@@ -2372,8 +2506,8 @@ H					KI2_17:6,KI2_18:11,CH1_5:26				Halah			חֲלַח		H2477 (3) 2Ki 17:6, 18:
 H					JOS_11:17,JOS_12:7				Halak			חָלָק		H2510 (2) Josh 11:17, 12:7*
 H					JOS_15:58				Halhul			חַלְחוּל		H2478 (1) Josh 15:58*
 H					JOS_19:25				Hali			חֲלִי		H2482 (1) Josh 19:25*
-H	NUM,JOS,JDG,SA2,KI1,KI2,CH1,CH2,ISA,JER								Hamath			חֲמָת		H2574 (36) Num 13:21, 34:8, Josh 13:5, Jdg 3:3, 2Sam 8:9, ...
-H					JOS_19:28,CH1_6:76				Hammon			חַמּוֹן		H2540 (2) Josh 19:28, 1Chr 6:76*
+H	NUM,JOS,JDG,SA2,KI1,KI2,CH1,CH2,ISA,JER,EZE,AMO,ZEC								Hamath			חֲמָת		H2574 (36) Num 13:21, 34:8, Josh 13:5, Jdg 3:3, 2Sam 8:9, ... [2026-11-21: books EZE,AMO,ZEC added]
+H					JOS_19:28,CH1_6:61				Hammon			חַמּוֹן		H2540 (2) Josh 19:28, 1Chr 6:76*
 H					JOS_19:35,CH1_2:55				Hammath			חַמַּת		H2575 (2) Josh 19:35, 1Chr 2:55*
 H					EZE_39:11,EZE_39:15				Hamon-Gog			הֲמוֹן-גּוֹג		{H1996 (2) Eze 39:11,15*
 H					EZE_39:11,EZE_39:15				Hamon-gog			הֲמוֹן-גּוֹג		{H1996 (2) Eze 39:11,15*
@@ -2438,7 +2572,7 @@ H					NUM_33:32,NUM_33:33				haggidgad			הַגִּדְגָּד		{ H2735 (2) Num
 H	NUM,DEU,JOS,JDG,SA1,CH1								Hormah			חָרְמָה		H2767 (9) Num 14:45, 21:3, Deu 1:44, Josh 12:14, 15:30, 19:4, Jdg 1:17, ...
 H	JOS,SA1,KI1,CH1,CH2								Horon			חוֹרוֹן		H1032 (14) Josh 10:10-11, 16:3,5, 18:13-14, 21:22, 1Sa 13:18, ...
 H	ISA,JER								Horonaim			חֹרֹנַיִם		H2773 (4) Isa 15:5, Jer 48:3,5,34*
-H					JOS_19:34,CH1_6:75				Hukok			חֻקֹּק		{ H2712 (2) Josh 19:34, 1Chr 6:75*
+H					JOS_19:34,CH1_6:60				Hukok			חֻקֹּק		{ H2712 (2) Josh 19:34, 1Chr 6:75*
 H					JOS_19:34,CH1_6:75				Hukkok			חֻקֹּק		{ H2712 (2) Josh 19:34, 1Chr 6:75*
 H					NUM_22:39				Huzoth			חֻקֹּק		{{ H7155 Kirath-Huzoth (1) Num 22:39*
 H					NUM_22:39				huzoth			חֻקֹּק		{{ H7155 Kirath-Huzoth (1) Num 22:39*
@@ -2550,7 +2684,7 @@ H	JDG								Lehi			לֶחִי		H3896 (3) Jdg 15:9,14,19*
 H									Libnah			לִבְנָה		H3841 (18) Num 33:20-21, Josh 10:29,31-32,39, 12:15, 15:42, ...
 wH	CH1,EZR,NEH								Lod			לֹד		H3850 (4) 1Chr 8:12, Ezr 2:33, Neh 7:37, 11:35* (Acts 9:32 Lydda)
 H					ISA_15:5,JER_48:5				Luhith			לוּחִית		H3872 (2) Isa 15:5, Jer 48:5*
-wH	GEN,JDG								Luz			לוּז		H3870 (8) Gen 28:19, 35:6, 48:3, 16:2, 18:13, Jdg 1:23,26*
+wH	GEN,JOS,JDG								Luz			לוּז		H3870 (8) Gen 28:19, 35:6, 48:3, 16:2, 18:13, Jdg 1:23,26* [2026-11-21: books JOS added]
 #H					JOS_15:59				Maarath			מַעֲרָת		H4638 (1) Josh 15:59*
 #H									Machir			מָכִיר		H4353 (22) Gen 50:23, Num 26:29, 27:1, 32:39-40, 36:1, Deu 3:15, ...
 H					NUM_10:31				Madmenah			מַדְמֵנָה		H4088 (1) Num 10:31*
@@ -2565,8 +2699,8 @@ H					JOS_19:11				Maralah			מַרְאֲלָה		H4831 (1) Josh 19:11*
 H	JOS,CH1,CH2,MIC								Mareshah			מַרְאֵשָׁה		H4762 (8) Josh 15:44, 1Chr 2:42, 4:21, 2Chr 11:8, 14:9-10, 20:37, Mic 1:15*
 H					MIC_1:12				Maroth			מָרוֹת		H4796 (1) Mic 1:12*
 H					GEN_36:36,CH1_1:47				Masrekah			מַשְׂרֵקָה		H4957 (2) Gen 36:36, 1Chr 1:47*
-H					CH1_6:74				Mashal			מָשָׁל		H4913 (1) 1Chr 6:74*
-H	EXO,DEU								Massah			מַסָּה		H4532 (4) Exo 17:7, Deu 6:16, 9:22, 33:8*
+H					CH1_6:59				Mashal			מָשָׁל		H4913 (1) 1Chr 6:74*
+H	EXO,DEU,PSA								Massah			מַסָּה		H4532 (4) Exo 17:7, Deu 6:16, 9:22, 33:8* [2026-11-21: books PSA added]
 H					NUM_21:18,NUM_21:19				Mattanah			מַתָּנָה		H4980 (2) Num 21:18-19*
 H					NEH_11:28				Meconah			מְכֹנָה		{ H4368 (1) Neh 11:28*
 ###H					NEH_11:28				Mekonah			מְכֹנָה		{ H4368 (1) Neh 11:28* [Disabled: Legacy output-form alias of Meconah; no Mekonah in upstream glosses or input.]
@@ -2596,7 +2730,7 @@ H					JER_51:27				Minni			מִנִּי		H4508 (1) Jer 51:27*
 H					CH1_11:43				Mithnite			מִתְנִי		H4981 (1) 1Chr 11:43*
 H					NUM_33:28,NUM_33:29				Mithkah			מִתְקָה		{ H4989 (2) Num 33:28-29*
 H					NUM_33:28,NUM_33:29				Mithcah			מִתְקָה		{ H4989 (2) Num 33:28-29*
-H					PSA_42:6				Mizar			מִצְעָר		H4706 (1) Psa 42:6*
+H					PSA_42:7				Mizar			מִצְעָר		H4706 (1) Psa 42:6*
 H	GEN,JOS,JDG,SA1,KI1,KI2,CH2,NEH,JER,HOS								Mizpah			מִּצְפָּה		H4709 (36) Gen 31:49, Josh 11:3, Jdg 10:17, 11:11,34, ...
 H	JOS,CH1,NEH								Moladah			מוֹלָדָה		H4137 (4) Josh 15:26, 19:2, 1Chr 4:28, Neh 11:26*
 H					GEN_12:6,DEU_11:30,JDG_7:1				Moreh			מוֹרֶה		H4176 (3) Gen 12:6, Deu 11:30, Jdg 7:1*
@@ -2621,8 +2755,8 @@ wH					GEN_4:16				Nod			נוֹד		H5113 (1) Gen 4:16*
 H					NUM_21:30				Nophah			נֹפַח		H5302 (1) Num 21:30*
 H	NUM								Oboth			אֹבֹת		H88 (4) Num 21:10-11, 33:43-44*
 H	CH2,NEH								Ophel			עֹפֶל		H6077 (5) 2Chr 27:3, 33:14, Neh 3:26-27, 11:21*
-wH	CH1,EZE,NEH								Ono			אוֹנוֹ		H207 (5) 1Chr 8:12, Ezr 2:33, Neh 6:2, 7:37, 11:35*
-H	GEN								Paddan			פַּדַּ֣ן		H6307 (as Paddan Aram) (11) Gen 25:20, 28:2,5-7, 31:18, 33:18, 35:9, 35:26, 46:15, 48:7*
+wH	CH1,EZR,NEH,EZE								Ono			אוֹנוֹ		H207 (5) 1Chr 8:12, Ezr 2:33, Neh 6:2, 7:37, 11:35* [2026-11-21: books EZR added]
+H	GEN								Paddan			פַּדַּ֣ן		H6307 (as Paddan Aram) (11) Gen 25:20, 28:2,5-7, 31:18, 33:18, 35:9, 35:26, 46:15, 48:7* [2026-11-21: books GEN added]
 H	GEN,NUM,DEU,SA1,KI1,HAB								Paran			פָּארָן		H6290 (11) Gen 21:21, Num 10:12, 12:16, 13:3,26, Deu 1:1, ...
 H					CH2_3:6				Parvaim			פַּרְוַיִם		H6516 (1) 2Chr 3:6*
 H					CH1_11:13				Pasdammim			פַּס-דַּמִּים		{ H6450 (space changed to hyphen) (1) 1Chr 11:13*
@@ -2637,7 +2771,7 @@ H	GEN,JDG,KI1,CH1								Penuel			פְּנוּאֵ֑ל		{ H6439 (9) Gen 32:30-31
 H	NUM,JOS								Peor			פְּעוֹר		H6465 mountain (5) Num 23:28, 25:18, 31:16, Josh 22:17*
 H					ISA_28:21				Perazim			פְּרָצִים		H6559 mountain (1) Isa 28:21*
 H	CH2,EZR,EST,EZE,DAN								Persia			פָּרַס		H6539 (28) 2Chr 36:20,22-23, Ezra 1:1-2,8, 3:7, 4:3,5,7, ..., Est 1:3, ...
-H					NUM_22:5,DEU_23:4				Pethor			פְּתוֹר		H6604 (2) Num 22:5. Deu 23:4*
+H					NUM_22:5,DEU_23:5				Pethor			פְּתוֹר		H6604 (2) Num 22:5. Deu 23:4*
 H					KI2_5:12				Pharpar			פַּרְפַּר		H6554 river (1) 2Ki 5:12*
 H	EXO,PSA,ISA,JOL								Philistia			פְּלֶשֶׁת		{ H6429 (8) Exo 15:14, Psa 60:8, 83:7, 87:4, 108:9, Isa 14:29,31, Joel 3:4*
 H	EXO,PSA,ISA,JOL								Palestina			פְּלֶשֶׁת		{ H6429 (8) Exo 15:14, Psa 60:8, 83:7, 87:4, 108:9, Isa 14:29,31, Joel 3:4*
@@ -2655,7 +2789,7 @@ wH	GEN,CH1,JER,EZE,NAH								Put			פּוּט		H6316 Libya (7) Gen 10:6, 1Chr 1
 H	DEU,JOS,SA2,CH1,JER,EZE,AMO								Rabbah			רַבָּה		H7237 (15) Deu 3:11, Josh 13:25, 15:60, 2Sam 11:1, ...
 H					SA1_30:29				Racal			רָכָל		{ H7403 (1) 1Sam 30:29*
 H					SA1_30:29				Rachal			רָכָל		{ H7403 (1) 1Sam 30:29*
-H					PSA_87:4,PSA_89:10,ISA_51:9				Rahab			רַהַב		H7294 (3) Psa 87:4,10, Isa 51:9
+H					PSA_87:4,PSA_89:11,ISA_51:9				Rahab			רַהַב		H7294 (3) Psa 87:4,10, Isa 51:9
 H	JOS,JDG,SA1,KI1,KI2,CH2,EZR,NEH,ISA,JER,HOS								Ramah			רָמָה		H7414 (36) Josh 18:25, 19:8,29,36, Jdg 4:5, ..., 1 Chr., ... and Matt 2:18
 H					SA1_1:1				Ramathaim			רָמָתַיִם		H7436 (1) 1Sam 1:1*
 H	DEU,JOS,CH1								Ramoth			רָאמוֹת		H7216 (4) Deu 4:43, Josh 20:8, 1Chr 6:73,80*
@@ -2673,10 +2807,10 @@ H					NUM_33:19,NUM_33:20				Rimmon			רִמֹּן		{ H7428 (2) Num 33:19-20*
 H					NUM_33:19,NUM_33:20				perez			פֶּרֶץ		{ H7428 (2) Num 33:19-20*
 H					NUM_33:21,NUM_33:22				Rissah			רִסָּה		H7446 (2) Num 33:21-22*
 H					NUM_33:18,NUM_33:19				Rithmah			רִתְמָה		H7575 (2) Num 33:18-19*
-H					SA2_17:27,SA2_19:31				Rogelim			רֹגְלִים		H7274 in Gilead (2) 2Sam 17:27, 19:31*
+H					SA2_17:27,SA2_19:32				Rogelim			רֹגְלִים		H7274 in Gilead (2) 2Sam 17:27, 19:31*
 H					KI2_23:36				Rumah			רוּמָה		H7316 (1) 2Ki 23:36*
 H	DEU,JOS,CH1								Salecah			סַלְכָה		H5548 (4) Deu 3:10, Josh 12:5, 13:11, 1Chr 5:11, 1Chr 5:11*
-H					GEN_14:18,PSA_76:2				Salem			שָׁלֵם		H8004 (2) Gen 14:18, Psa 76:2
+H					GEN_14:18,PSA_76:3				Salem			שָׁלֵם		H8004 (2) Gen 14:18, Psa 76:2
 H									Samaria			שֹׁמְרוֹן		H8111 (109) 1Ki 13:32, 16:24,28-29,32, 18:2, ...
 H					JOS_19:10,JOS_19:12				Sarid			שָׂרִיד		H8301 (2) Josh 19:10,12*
 H	NUM,JOS,ISA,JER								Sebam			שְׂבָם		{ H7643 (6) Num 32:3,38, Josh 13:19, Isa 16:8-9, Jer 48:32*
@@ -2684,7 +2818,7 @@ H	NUM,JOS,ISA,JER								Shebam			שְׂבָם		{ H7643 (6) Num 32:3,38, Josh 13
 H	NUM,JOS,ISA,JER								Sibmah			שְׂבָם		{ H7643 (6) Num 32:3,38, Josh 13:19, Isa 16:8-9, Jer 48:32*
 H	NUM,JOS,ISA,JER								Shibmah			שְׂבָם		{ H7643 (6) Num 32:3,38, Josh 13:19, Isa 16:8-9, Jer 48:32*
 H					SA1_19:22				Secu			שֵׂכוּ		H7906 (1) 1Sam 19:22*
-wH	KI2,ISA								Sela			סֶלַע		H5554 (3) 2Ki 14:7, Isa 16:1, 42:11*
+wH	JDG,SA1,KI2,ISA								Sela			סֶלַע		H5554 (3) 2Ki 14:7, Isa 16:1, 42:11* [2026-11-21: books JDG,SA1 added]
 H					SA1_14:4				Seneh			סֶנֶּה		H5573 rock/cliff (1) 1Sam 14:4*
 H	DEU,CH1,SNG,EZE								Senir			שְׂנִיר		H8149 (4) Deu 3:9, 1Chr 5:23, Sng 4:8, Eze 27:5*
 H					OBA_1:20				Sepharad			סְפָרָד		H5614 (1) Oba 1:20*
@@ -2717,7 +2851,7 @@ H					NEH_3:15,ISA_8:6				Siloah			שִׁלֻּחָה		{ H7975 pool (2) Neh 3:15
 H	JOS,JDG,SA1,KI1,PSA,JER								Shiloh			שִׁילֹה		H7887 (32) Josh 18:1,8-10, 19:51, 21:2, 22:9,12, Jdg 18:31, ...
 H	GEN,NUM,JOS,CH1								Shimron			שִׁמְרוֹן		H8110 (5) Gen 46:13, Num 26:24, Josh 11:1, 19:15, 1Chr 7:1*
 H	GEN,JOS,ISA,DAN,ZEC								Shinar			שִׁנְעָר		H8152 (8) Gen 10:10, 11:2, 14:1,9, Josh 7:21, Isa 11:11, Dan 1:2, Zec 5:11*
-H	NUM,JOS,MIC								Shittim			שִׁטִּים		H7851 (5) Num 25:1, Josh 2:1, 3:1,18, Micah 6:5*
+H	NUM,JOS,JOL,MIC								Shittim			שִׁטִּים		H7851 (5) Num 25:1, Josh 2:1, 3:1,18, Micah 6:5* [2026-11-21: books JOL added]
 H					EZE_23:23				Shoa			שׁוֹעַ		H7772 (1) Eze 23:23*
 H	JOS,SA1,KI2								Shunem			שׁוּנֵם		H7766 (3) Josh 19:18, 1Sam 28:4, 2Ki 4:8*
 H	GEN,EXO,SA1								Shur			שׁוּר		H7793 (6) Gen 16:7, 20:1, 25:18, Exo 15:22, 1Sam 15:7, 27:8*
@@ -2725,7 +2859,7 @@ H	NEH,EST,DAN								Shushan			שׁוּשַׁן		{ H7800 (21) Neh 1:1, Est 1:2,5
 wH	NEH,EST,DAN								Susa			שׁוּשַׁן		{ H7800 (21) Neh 1:1, Est 1:2,5, 2:3, ...
 H					EZE_47:16				Sibraim			סִבְרַיִם		H5453 (1) Eze 47:16*
 wdH	GEN,JOS,JDG,SA2,KI1,CH1,ISA,JER,EZE,JOL,ZEC								Sidon			צִידוֹן/(Sidon)		H6721 (22) Gen 10:15,19, 49:13, Josh 11:8, 19:28, ..., Acts 12:20
-H					KI2_12:20				Silla			סִלָּא		H5538 (1) 2Ki 12:20*
+H					KI2_12:21				Silla			סִלָּא		H5538 (1) 2Ki 12:20*
 wH	EXO,NUM,EZE								Sin			סִין		H5512 (6) Exo 16:1, 17:1, Num 33:11-12, Eze 30:15-16*
 H	EXO,LEV,NUM,DEU,JDG,PSA,NEH,HAB								Sinai			סִינַי		H5514 (35) Exo 16:1, 19:1-2,11,18,20,23, ..., Acts 7:30
 H					ISA_49:12				Sinim			סִינִים		H5515 unknown place (1) Isa 49:12*
@@ -2733,9 +2867,9 @@ H					DEU_4:48				Sion			שִׂיאֹן		{ H7865 Mt. Hermon (1) Deu 4:48*
 H					DEU_4:48				Siyon			שִׂיאֹן		{ H7865 Mt. Hermon (1) Deu 4:48*
 H					SA1_30:28				Siphmoth			שִׂפְמוֹת		H8224 (1) 1Sam 30:28*
 H	JOS,SA1,KI1,CH1,CH2								Socoh			שׂוֹכֹה		H7755 (8) Josh 15:35,48, 1Sam 17:1, 1Ki 4:10, 1Chr 4:18, ...
-H	GEN,DEU,ISA,JER,EZE,AMO,ZEP								Sodom			סְדֹם		H5467 city (39) Gen 10:19, 13:10,12-13, 14:2,8,10-11, ...Mat 10:15, Luke 17:29, 2Pet 2:6, Jude 7
+H	GEN,DEU,ISA,JER,LAM,EZE,AMO,ZEP								Sodom			סְדֹם		H5467 city (39) Gen 10:19, 13:10,12-13, 14:2,8,10-11, ...Mat 10:15, Luke 17:29, 2Pet 2:6, Jude 7 [2026-11-21: books LAM added]
 H					JDG_16:4				Sorek			שׂוֹרֵק		H7796 valley (1) Jdg 16:4*
-H	GEN,EXO,NUM,JOS,JDG,KI1,CH2,PSA								Succoth			סֻכּֽוֹת		H5523 (18) Gen 33:17, Exo 12:37, 13:20, Num 33:5-6, Josh 13:27, Jdg 8:5, ...
+H	GEN,EXO,NUM,JOS,JDG,KI1,KI2,CH2,PSA								Succoth			סֻכּֽוֹת		H5523 (18) Gen 33:17, Exo 12:37, 13:20, Num 33:5-6, Josh 13:27, Jdg 8:5, ... [2026-11-21: books KI2 added]
 wH					DEU_1:1				Suph			סוּף		H5489 (1) Deu 1:1*
 H					EZE_29:10,EZE_30:6				Syene			סְוֵנֵה		H5482 (2) Eze 29:10, 30:6*
 H	JOS,JDG,KI1,CH1								Taanach			תַּעֲנָךְ		H8590 (7) Josh 12:21, 17:11, 21:25, Jdg 1:27, 5:19, 1Ki 4:12, 1Chr 7:29*
@@ -2758,7 +2892,7 @@ dH	JER,EZE,NAH								Thebes			נֹא/(Thebes)		{ H4996 (5) Jer 46:25, Eze 30:14
 wdH	JER,EZE,NAH								No			נֹא/(Thebes)		{ H4996 (5) Jer 46:25, Eze 30:14,-16, Nah 3:8*
 H					JDG_9:50,SA2_11:21				Thebez			תֵּבֵץ		H8405 (3) Jdg 9:50, 2Sam 11:21*
 H					CH1_18:8				Tibhath			טִבְחַת		H2880 (1) 1Chr 18:8*
-H					KI1_4:24,KI1_15:16				Tiphsah			תִּפְסַח		H8607 (2) 1Ki 4:24, 2Ki 15:16*
+H					KI1_5:4,KI1_15:16				Tiphsah			תִּפְסַח		H8607 (2) 1Ki 4:24, 2Ki 15:16*
 H									Tirzah			תִּרְצָה		H8656 (18) Num 26:33, 27:1, 36:11, Josh 12:24, 17:3, 1Ki 14:17, ...
 wH	JDG,SA2								Tob			טוֹב		H2897 (4) Jdg 11:3,5, 2 Sam 10:6,8*
 H					CH1_4:32				Tochen			תֹּכֶן		{ H8507 (1) 1Chr 4:32*
@@ -2791,7 +2925,7 @@ dH					NUM_34:8,EZE_47:15				Zedad			צְדָד/(Zedad)		H6657 (2) Num 34:8, Eze
 dH					SA1_10:2				Zelzah			צֶלְצַח/(Zelzah)		H6766 (1) 1Sam 10:2*
 dH					JOS_18:22,CH2_13:4				Zemaraim			צְמָרַיִם/(Zemaraim)		H6787 (2) Josh 18:22, 2Chr 13:4*
 wdH					JDG_1:17				Zephath			צְפַת/(Zephath)		H6857 (1) Jdg 1:17*
-dH					CH2_14:10				Zephathah			צְפָתָה/(Zephathah)		H6859 (1) 2Chr 14:10*
+dH					CH2_14:9				Zephathah			צְפָתָה/(Zephathah)		H6859 (1) 2Chr 14:10*
 dH					KI1_11:26,CH2_4:17				Zeredah			צְרֵדָה/(Zeredah)		H6868 (2) 1Ki 11:26, 2Chr 4:17*
 H					NUM_21:12,DEU_2:13,DEU_2:14				Zered			זֶרֶד		H2218 (4) Num 21:12, Deu 2:13-14*
 dH					JDG_7:22				Zererah			צְרֵרָה/(Zererah)		H6888 (1) Jdg 7:22*
@@ -2812,7 +2946,7 @@ dH	JOS,JDG,CH2,NEH								Zorah			צָרְעָה/(Zorah)		H6881 (10) Josh 15:33,
 
 
 # Months
-wH	EXO,LEV,DEU								Abib			אָבִיב		H24 means "fresh heads of grain" (8) Exo 9:31, 13:4, 23:15, 34:18, Lev 2:14, Deu 16:1*
+wH	EXO,LEV,DEU,EZE								Abib			אָבִיב		H24 means "fresh heads of grain" (8) Exo 9:31, 13:4, 23:15, 34:18, Lev 2:14, Deu 16:1* [2026-11-21: books EZE added]
 wH					KI1_6:38				Bul			בּוּל		H945 8th month Oct-Nov (1) 1Ki 6:38*
 dH					NEH_1:1,ZEC_7:1				Chislev			כִּסְלֵו/(Chislev)		{ H3691 9th month Nov-Dec (2) Neh 1:1, Zec 7:1*
 H					NEH_1:1,ZEC_7:1				Kislev			כִּסְלֵו		{ H3691 9th month Nov-Dec (2) Neh 1:1, Zec 7:1*
@@ -2834,6 +2968,443 @@ H	CH1,PSA								Sheminith			שְׁמִינִית		{{ H8067 (3) 1Chr 15:21, Psa 
 H	CH1,PSA								sheminith			שְׁמִינִית		{{ H8067 (3) 1Chr 15:21, Psa 6:1, 12:1*
 H	PSA,HAB								Shigionoth			שִׁגָּיוֹן		{ H7692 (2) Psa 7:1, Hab 3:1*
 H	PSA,HAB								Shiggaion			שִׁגָּיוֹן		{ H7692 (2) Psa 7:1, Hab 3:1*
+
+
+# Names that the rows above didn't match (added 2026-11-21 from the OET-LV OT word and lemma tables).
+# Each row is limited to the books where the name was still an English gloss, and uses the lemma (dictionary) form
+#   when it has the same consonants as the text (otherwise the pointed form in the text).
+#   Where the gloss is also an English word, or covers differently spelt Hebrew names, rows are limited to their verses (IRefs);
+#   rows with a PostText of =¦wordNumber only match that one word (where the verse has another use of the same gloss).
+H	EST								Abagtha			אֲבַגְתָא		H5 (1) Est 1:10* [Added 2026-11-21: not matched by the rows above]
+wH	JDG,KI1,KI2				JDG_11:33,KI1_4:12,KI1_15:20,KI2_15:29				Abel			אָבֵל		H62+/64+/65+ (4) Jdg 11:33, 1Ki 4:12, 15:20, 2Ki 15:29* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	CH2								Abi			אָבִיו		H1 (1) 2Chr 4:16* [Added 2026-11-21: not matched by the rows above]
+H	EXO								Abiasaph			אֲבִיאָסָף		H23 (1) Exo 6:24* [Added 2026-11-21: not matched by the rows above]
+H	NUM								Abidan			אֲבִידָן		H27 (5) Num 1:11, 2:22, 7:60, 7:65, 10:24* [Added 2026-11-21: not matched by the rows above]
+H	KI1								Abishalom			אֲבִישָׁלוֹם		H53 (2) 1Ki 15:2, 15:10* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Adadah			עֲדְעָדָה		H5735 (1) Josh 15:22* [Added 2026-11-21: not matched by the rows above]
+H	EST								Adalia			אֲדַלְיָא		H118 (1) Est 9:8* [Added 2026-11-21: not matched by the rows above]
+H	EZR,EST								Adar			אֲדָר		H143/144 (9) Ezr 6:15, Est 3:7, 3:13, 8:12, 9:1, 9:15, ... [Added 2026-11-21: not matched by the rows above]
+H	JOS								Addar			אַדָּר		H5853 (2) Josh 16:5, 18:13* [Added 2026-11-21: not matched by the rows above]
+wH	EZR				EZR_2:59				Addon			אַדָּן		H135 (1) Ezr 2:59* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	NEH				NEH_7:61				Addon			אַדּוֹן		H114 (1) Neh 7:61* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	SA2								Adino			עֲדִינ		H5722 (1) 2Sam 23:8* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Adithaim			עֲדִיתַיִם		H5723 (1) Josh 15:36* [Added 2026-11-21: not matched by the rows above]
+H	EST								Admatha			אַדְמָתָא		H133 (1) Est 1:14* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Adnach			עַדְנַח		H5734 (1) 1Chr 12:21* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Adummim			אֲדֻמִּים		H131 (2) Josh 15:7, 18:17* [Added 2026-11-21: not matched by the rows above]
+H	NEH								Ahiah			אֲחִיָּה		H281 (1) Neh 10:27* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Ahimoth			אֲחִימוֹת		H287 (1) 1Chr 6:10* [Added 2026-11-21: not matched by the rows above]
+H	EXO								Ahisamach			אֲחִיסָמָךְ		H294 (3) Exo 31:6, 35:34, 38:23* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Ahrah			אַחְרַח		H315 (1) 1Chr 8:1* [Added 2026-11-21: not matched by the rows above]
+H	NEH								Aija			עַיָּה		H5857 (1) Neh 11:31* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Akan			עֲקָן		H6130 (1) Gen 36:27* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Akkad			אַכַּד		H390 (1) Gen 10:10* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Alammelech			אַלַּמֶּלֶךְ		H487 (1) Josh 19:26* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Amad			עַמְעָד		H6008 (1) Josh 19:26* [Added 2026-11-21: not matched by the rows above]
+wH	SA2,CH1,PSA								Amalek			עֲמָלֵק		H6002 (6) 2Sam 1:1, 8:12, 1Chr 1:36, 4:43, 18:11, Psa 83:8* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Amam			אֲמָם		H538 (1) Josh 15:26* [Added 2026-11-21: not matched by the rows above]
+wH	SNG				SNG_4:8				Amana			אֲמָנָה		H549 (1) Song 4:8* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	CH1				CH1_3:1				Amnon			אַמְנֹן		H550 (1) 1Chr 3:1* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	CH1				CH1_4:20				Amnon			אַמְנוֹן		H550 (1) 1Chr 4:20* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	GEN,DEU,JER								Amorah			עֲמֹרָה		H6017 (7) Gen 10:19, 14:10, 14:11, 18:20, 19:28, Deu 29:22, ... [Added 2026-11-21: not matched by the rows above]
+H	GEN								Amraphel			אַמְרָפֶל		H569 (2) Gen 14:1, 14:9* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Anab			עֲנָב		H6024 (2) Josh 11:21, 15:50* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Anaharath			אֲנָחֲרָת		H588 (1) Josh 19:19* [Added 2026-11-21: not matched by the rows above]
+H	JDG								Anath			עֲנָת		H1043 (1) Jdg 1:33* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Anim			עָנִים		H6044 (1) Josh 15:50* [Added 2026-11-21: not matched by the rows above]
+wH	JOS								Arab			אֲרָב		H694 (1) Josh 15:52* [Added 2026-11-21: not matched by the rows above]
+H	HOS								Arbel			אַֽרְבֵאל		H1009 (1) Hos 10:14* [Added 2026-11-21: not matched by the rows above]
+H	EST								Aridai			אֲרִדַי		H742 (1) Est 9:9* [Added 2026-11-21: not matched by the rows above]
+H	EST								Aridatha			אֲרִידָתָא		H743 (1) Est 9:8* [Added 2026-11-21: not matched by the rows above]
+H	EST								Arisai			אֲרִיסַי		H747 (1) Est 9:9* [Added 2026-11-21: not matched by the rows above]
+wH	GEN,CH1								Arpakshad			אַרְפַּכְשַׁד		H775 (5) Gen 10:22, 10:24, 11:12, 1Chr 1:17, 1:18* [Added 2026-11-21: not matched by the rows above]
+H	JDG								Arumah			אֲרוּמָה		H725 (1) Jdg 9:41* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Ashhur			אַשְׁחוּר		H806 (2) 1Chr 2:24, 4:5* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Ashnah			אַשְׁנָה		H823 (2) Josh 15:33, 15:43* [Added 2026-11-21: not matched by the rows above]
+H	EST								Aspatha			אַסְפָּתָא		H630 (1) Est 9:7* [Added 2026-11-21: not matched by the rows above]
+H	KI1,KI2								Astarte			עַשְׁתֹּרֶת		H6253 (3) 1Ki 11:5, 11:33, 2Ki 23:13* [Added 2026-11-21: not matched by the rows above]
+dH	GEN								Atad			הָאָטָד/(Atad)		H329 (1) Gen 50:11* [Added 2026-11-21: not matched by the rows above]
+H	JOS,SA1,HOS,AMO								Aven			אָוֶן		H1007/206 (8) Josh 7:2, 18:12, 1Sam 13:5, 14:23, Hos 4:15, 5:8, ... [Added 2026-11-21: not matched by the rows above]
+H	GEN								Avram			אַבְרָם		H87 (3) Gen 12:4, 13:2, 16:16* [Added 2026-11-21: not matched by the rows above]
+H	KI2								Avva			עַוָּא		H5755 (1) 2Ki 17:24* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Ayyah			עַיָּה		H5804 (1) 1Chr 7:28* [Added 2026-11-21: not matched by the rows above]
+wH	DAN								Azarya			עֲזַרְיָה		H5838 (1) Dan 1:7* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Aznoth			אַזְנוֹת		H243+ (1) Josh 19:34* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Baara			בַּעֲרָא		H1199 (1) 1Chr 8:8* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Baaseiah			בַּעֲשֵׂיָה		H1202 (1) 1Chr 6:25* [Added 2026-11-21: not matched by the rows above]
+H	JDG								Barah			בָּרָה		H1012 (2) Jdg 7:24* [Added 2026-11-21: not matched by the rows above]
+H	JOB								Barakel			בָּרַכְאֵל		H1292 (2) Job 32:2, 32:6* [Added 2026-11-21: not matched by the rows above]
+dH	NEH								Bazluth			בַצְלִית/(Bazluth)		H1213 (1) Neh 7:54* [Added 2026-11-21: not matched by the rows above]
+H	EZR								Beeroth			בְּאֵרוֹת		H881 (1) Ezr 2:25* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Beeshtarah			בְּעֶשְׁתְּרָה		H1203 (1) Josh 21:27* [Added 2026-11-21: not matched by the rows above]
+H	ISA,JER								Bel			בֵּל		H1078 (3) Isa 46:1, Jer 50:2, 51:44* [Added 2026-11-21: not matched by the rows above]
+H	KI2								Benoth			בְּנוֹת		H5524 (1) 2Ki 17:30* [Added 2026-11-21: not matched by the rows above]
+H	EXO								Benyamin			בִּנְיָמִן		H1144 (1) Exo 1:3* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Bera			בֶּרַע		H1298 (1) Gen 14:2* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Beten			בֶּטֶן		H991 (1) Josh 19:25* [Added 2026-11-21: not matched by the rows above]
+H	SA2								Bicri			בִּכְרִי		H1075 (8) 2Sam 20:1, 20:2, 20:6, 20:7, 20:10, 20:13, ... [Added 2026-11-21: not matched by the rows above]
+wH	EST								Bigtha			בִּגְתָא		H903 (1) Est 1:10* [Added 2026-11-21: not matched by the rows above]
+wH	EST								Bigthan			בִּגְתָן		H904 (1) Est 2:21* [Added 2026-11-21: not matched by the rows above]
+H	EST								Bigthana			בִּגְתָנָא		H904 (1) Est 6:2* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Bileam			בִּלְעָם		H1109 b (1) 1Chr 6:55* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Birsha			בִּרְשַׁע		H1306 (1) Gen 14:2* [Added 2026-11-21: not matched by the rows above]
+H	SA2								Bitron			בִּתְרוֹן		H1338 (1) 2Sam 2:29* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Biziothiah			בִּזְיוֹתְיָה		H964 (1) Josh 15:28* [Added 2026-11-21: not matched by the rows above]
+H	JDG								Bokim			בֹּכִים		H1066 (2) Jdg 2:1, 2:5* [Added 2026-11-21: not matched by the rows above]
+H	NEH								Bunniy			בּוּנִּי		H1138 (1) Neh 11:15* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Cabbon			כַּבּוֹן/(Cabbon)		H3522 (1) Josh 15:40* [Added 2026-11-21: not matched by the rows above]
+dH	GEN								Calah			כֶּלַח/(Calah)		H3625 (2) Gen 10:11, 10:12* [Added 2026-11-21: not matched by the rows above]
+dH	EZE								Canneh			כַּנֶּה/(Canneh)		H3656 (1) Eze 27:23* [Added 2026-11-21: not matched by the rows above]
+dH	EST								Carcas			כַּרְכַּס/(Carcas)		H3752 (1) Est 1:10* [Added 2026-11-21: not matched by the rows above]
+dH	EST								Carshena			כַּרְשְׁנָא/(Carshena)		H3771 (1) Est 1:14* [Added 2026-11-21: not matched by the rows above]
+wdH	JER,EZE								Chaldea			כַּשְׂדִּים/(Chaldea)		H3778 (7) Jer 50:10, 51:24, 51:35, Eze 11:24, 16:29, 23:15, ... [Added 2026-11-21: not matched by the rows above]
+dH	KI2								Cuthah	=¦181879		כּוּת/(Cuthah)		H3575 (1) 2Ki 17:30* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also added as an explanation by an earlier row, and the verse has another use of it]
+wH	JOS				JOS_15:41				Dagon			דָּגוֹן		H1016 (1) Josh 15:41* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	JOS				JOS_19:27				Dagon			דָּגֹן		H1016 (1) Josh 19:27* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	EST								Dalphon			דַּלְפוֹן		H1813 (1) Est 9:7* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Dammeseq	=¦195861		דַּרְמֶשֶׂק		H1834 (5) 1Chr 18:5, 18:6, 2Chr 24:23, 28:5, 28:23* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	CH1								Dammeseq	=¦195878		דַּרְמֶשֶׂק		H1834 (5) 1Chr 18:5, 18:6, 2Chr 24:23, 28:5, 28:23* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	CH2								Dammeseq	=¦210777		דַּרְמֶשֶׂק		H1834 (5) 1Chr 18:5, 18:6, 2Chr 24:23, 28:5, 28:23* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	CH2								Dammeseq	=¦212155		דַּרְמֶשֶׂק		H1834 (5) 1Chr 18:5, 18:6, 2Chr 24:23, 28:5, 28:23* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	CH2								Dammeseq	=¦212535		דַּרְמֶשֶׂק		H1834 (5) 1Chr 18:5, 18:6, 2Chr 24:23, 28:5, 28:23* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	KI2								Dammeseq	=¦181007		דּוּמֶּשֶׂק		H1834 (1) 2Ki 16:10* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	JOS								Dannah			דַּנָּה		H1837 (1) Josh 15:49* [Added 2026-11-21: not matched by the rows above]
+H	EZR								Darkon			דַּרְקוֹן		H1874 (1) Ezr 2:56* [Added 2026-11-21: not matched by the rows above]
+wdH	JOS				JOS_13:26				Debar			לִדְבִר/(Debar)		H1688 b (1) Josh 13:26* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also an English word]
+H	JOS								Dilean			דִּלְעָן		H1810 (1) Josh 15:38* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Dimnah			דִּמְנָה		H1829 (1) Josh 21:35* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Dimonah			דִּימוֹנָה		H1776 (1) Josh 15:22* [Added 2026-11-21: not matched by the rows above]
+H	DAN								Dura			דּוּרָא		H1757 (1) Dan 3:1* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Ebez			אֶבֶץ		H77 (1) Josh 19:20* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Ebron			עֶבְרֹן		H5683 (1) Josh 19:28* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Eder			עֵדֶר		H4029 (1) Gen 35:21* [Added 2026-11-21: not matched by the rows above]
+H	ISA								Eglaim			אֶגְלַיִם		H97 (1) Isa 15:8* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Ehi			אֵחִי		H278 (1) Gen 46:21* [Added 2026-11-21: not matched by the rows above]
+wH	KI2				KI2_10:14				Eked			עֵקֶד		H1044 (2) 2Ki 10:12, 10:14* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also an English word]
+H	KI2								Eked	=¦177526		עֵקֶד		H1044 (2) 2Ki 10:12, 10:14* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also an English word, and the verse has another use of it]
+H	EZE,DAN								Elam			עֵילָם		H5867 a (2) Eze 32:24, Dan 8:2* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Ellasar			אֶלָּסָר		H495 (2) Gen 14:1, 14:9* [Added 2026-11-21: not matched by the rows above]
+wH	JOS				JOS_19:44				Eltekeh			אֶלְתְּקֵה		H514 (1) Josh 19:44* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	JOS				JOS_21:23				Eltekeh			אֶלְתְּקֵא		H514 (1) Josh 21:23* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+dH	JOS								Emek			הָעֵמֶק/(Emek)		H1025 (1) Josh 19:27* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Enaim			עֵינַיִם		H5879 (2) Gen 38:14, 38:21* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Enam			עֵינָם		H5879 (1) Josh 15:34* [Added 2026-11-21: not matched by the rows above]
+wdH	JOS				JOS_17:11				Endor			דֹּר/(Endor)		H5874 (1) Josh 17:11* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	SA1								Endor	=¦140230		עֵין		H5874+ (1) 1Sam 28:7* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+dH	SA1								Endor	=¦140231		דּוֹר/(Endor)		H5874 (1) 1Sam 28:7* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	GEN								Erech			אֶרֶךְ		H751 (1) Gen 10:10* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Esek			עֵשֶׂק		H6230 (1) Gen 26:20* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Eshan			אֶשְׁעָן		H824 (1) Josh 15:52* [Added 2026-11-21: not matched by the rows above]
+wH	JOS								Eth			עֵת		H6278+ (1) Josh 19:13* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Ethni			אֶתְנִי		H867 (1) 1Chr 6:26* [Added 2026-11-21: not matched by the rows above]
+H	NUM								Evi			אֱוִי		H189 (1) Num 31:8* [Added 2026-11-21: not matched by the rows above]
+wH	SA1				SA1_20:19				Ezel			אֶזֶל		H237 (1) 1Sam 20:19* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wdH	MIC				MIC_1:11				Ezel			הָאֵצֶל/(Ezel)		H1018 (1) Mic 1:11* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	CH1								Ezrah			עֶזְרָה		H5834 (1) 1Chr 4:17* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Gaham			גַּחַם		H1514 (1) Gen 22:24* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Galeed			גַּלְעֵד		H1567 (2) Gen 31:47, 31:48* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Gannim			גַּנִּים		H5873 (1) Josh 21:29* [Added 2026-11-21: not matched by the rows above]
+H	NEH								Gashmu			גַּשְׁמוּ		H1654 (1) Neh 6:6* [Added 2026-11-21: not matched by the rows above]
+wH	CH2,PSA,AMO,MIC								Gath			גַּת		H1661 (5) 2Chr 11:8, 26:6, Psa 56:1, Amos 6:2, Mic 1:10* [Added 2026-11-21: not matched by the rows above]
+dH	JDG								Gazites			עַזָּתִים/(Gazites)		H5841 (1) Jdg 16:2* [Added 2026-11-21: not matched by the rows above]
+H	EZE								Gebal			גְּבַל		H1380 (1) Eze 27:9* [Added 2026-11-21: not matched by the rows above]
+H	KI1								Geber			גֶּבֶר		H1127 (1) 1Ki 4:13* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Gederothaim			גְּדֵרֹתָיִם		H1453 (1) Josh 15:36* [Added 2026-11-21: not matched by the rows above]
+wH	SA2,CH1				SA2_21:6,SA2_23:29,CH1_11:31				Gibeah			גִּבְעַת		H1390 (3) 2Sam 21:6, 23:29, 1Chr 11:31* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	CH2				CH2_13:2				Gibeah			גִּבְעָה		H1390 (1) 2Chr 13:2* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	KI1								Ginnat			גִּינַת		H1527 (2) 1Ki 16:21, 16:22* [Added 2026-11-21: not matched by the rows above]
+H	NEH								Gittayim			גִּתָּיִם		H1664 (1) Neh 11:33* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Hadar			הֲדַר		H1924 (1) Gen 36:39* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Hadashah			חֲדָשָׁה		H2322 (1) Josh 15:37* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Haeleph			הָאֶלֶף		H507 (1) Josh 18:28* [Added 2026-11-21: not matched by the rows above]
+H	KI2								Haggan			הַגָּן		H1588 (1) 2Ki 9:27* [Added 2026-11-21: not matched by the rows above]
+H	JDG								Haggoyim			הַגּוֹיִם		H1471 a (3) Jdg 4:2, 4:13, 4:16* [Added 2026-11-21: not matched by the rows above]
+H	SA1								Hakilah			חֲכִילָה		H2444 (3) 1Sam 23:19, 26:1, 26:3* [Added 2026-11-21: not matched by the rows above]
+dH	EZR								Hakkatan			קָטָן/(Hakkatan)		H6997 (1) Ezr 8:12* [Added 2026-11-21: not matched by the rows above]
+H	NEH								Hakkerem			הַכָּרֶם		H1021 (1) Neh 3:14* [Added 2026-11-21: not matched by the rows above]
+H	JDG								Hakkore			הַקּוֹרֵא		H5875 (1) Jdg 15:19* [Added 2026-11-21: not matched by the rows above]
+H	EST								Haman			הָמָן		H2001 (54) Est 3:1, 3:2, 3:4, 3:5, 3:6, 3:7, ... [Added 2026-11-21: not matched by the rows above]
+H	SA1								Hammahlekoth			הַֽמַּחְלְקוֹת		H5555 (1) 1Sam 23:28* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Hammoth			חַמֹּת		H2576+ (1) Josh 21:32* [Added 2026-11-21: not matched by the rows above]
+H	EZE								Hamonah			הֲמוֹנָה		H1997 (1) Eze 39:16* [Added 2026-11-21: not matched by the rows above]
+wH	DAN								Hananya			חֲנַנְיָה		H2608 a (1) Dan 1:7* [Added 2026-11-21: not matched by the rows above]
+H	DAN								Hananyah			חֲנַנְיָה		H2608 b (1) Dan 2:17* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Hannathon			חַנָּתֹן		H2615 (1) Josh 19:14* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Hapharaim			חֲפָרַיִם		H2663 (1) Josh 19:19* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Haram			הָרָם		H1027 (1) Josh 13:27* [Added 2026-11-21: not matched by the rows above]
+H	NEH								Harashim			הַחֲרָשִׁים		H2791 b (1) Neh 11:35* [Added 2026-11-21: not matched by the rows above]
+wH	EST				EST_1:10				Harbona			חַרְבוֹנָא		H2726 (1) Est 1:10* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	EST				EST_7:9				Harbona			חַרְבֹונָה		H2726 (1) Est 7:9* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	AMO								Harmon			הַרְמוֹן		H2038 (1) Amos 4:3* [Added 2026-11-21: not matched by the rows above]
+H	JDG								Harod			חֲרֹד		H5878 (1) Jdg 7:1* [Added 2026-11-21: not matched by the rows above]
+H	JDG								Harosheth			חֲרֹשֶׁת		H2800 (3) Jdg 4:2, 4:13, 4:16* [Added 2026-11-21: not matched by the rows above]
+H	EZR,NEH								Harsha			חַרְשָׁא		H8521 (2) Ezr 2:59, Neh 7:61* [Added 2026-11-21: not matched by the rows above]
+H	NUM								Hashmoneh			חַשְׁמֹנָה		H2832 (2) Num 33:29, 33:30* [Added 2026-11-21: not matched by the rows above]
+H	EST								Hathach			הֲתָךְ		H2047 (4) Est 4:5, 4:6, 4:9, 4:10* [Added 2026-11-21: not matched by the rows above]
+H	GEN,CH1								Hazarmaveth			חֲצַרְמָוֶת		H2700 (2) Gen 10:26, 1Chr 1:20* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Hazo			חֲזוֹ		H2375 (1) Gen 22:22* [Added 2026-11-21: not matched by the rows above]
+dH	CH1								Hazzobebah			צֹבֵבָה/(Hazzobebah)		H6637 (1) 1Chr 4:8* [Added 2026-11-21: not matched by the rows above]
+H	SA2								Hazzurim			הַצֻּרִים		H2521 (1) 2Sam 2:16* [Added 2026-11-21: not matched by the rows above]
+wH	EST				EST_2:8,EST_2:15				Hegai			הֵגַי		H1896 (3) Est 2:8, 2:15* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	EST				EST_2:3				Hegai			הֵגֶא		H1896 (1) Est 2:3* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	EZE								Helech			חֵילֵךְ		H2428 (1) Eze 27:11* [Added 2026-11-21: not matched by the rows above]
+H	ZEC								Helem			חֵלֶם		H2494 (1) Zech 6:14* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Heleph			חֵלֶף		H2501 (1) Josh 19:33* [Added 2026-11-21: not matched by the rows above]
+H	JOS,SA2								Helkath			חֶלְקָת		H2520/2521+ (3) Josh 19:25, 21:31, 2Sam 2:16* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Hemam			הֵימָם		H1967 (1) Gen 36:22* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Hemdan			חֶמְדָּן		H2533 (1) Gen 36:26* [Added 2026-11-21: not matched by the rows above]
+H	JDG								Heres			חֶרֶס		H2775 a (1) Jdg 8:13* [Added 2026-11-21: not matched by the rows above]
+H	KI1								Hesed			חֶסֶד		H1136 (1) 1Ki 4:10* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Heshmon			חֶשְׁמוֹן		H2829 (1) Josh 15:27* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Hilez			חִילֵז		H2432 (1) 1Chr 6:43* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Hobah			חוֹבָה		H2327 (1) Gen 14:15* [Added 2026-11-21: not matched by the rows above]
+H	NEH								Hodaviah			הֹודְוָה		H1937 (1) Neh 7:43* [Added 2026-11-21: not matched by the rows above]
+H	CH1,NEH								Hodiah			הוֹדִיָּה		H1940 (4) 1Chr 4:19, Neh 10:11, 10:14, 10:19* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Horem			חֳרֵם		H2765 (1) Josh 19:38* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Humtah			חֻמְטָה		H2547 (1) Josh 15:54* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Idalah			יִדְאֲלָה/(Idalah)		H3030 (1) Josh 19:15* [Added 2026-11-21: not matched by the rows above]
+H	KI2								Ijon			עִיּוֹן		H5859 (1) 2Ki 15:29* [Added 2026-11-21: not matched by the rows above]
+dH	GEN								Iob			יוֹב/(Iob)		H3102 (1) Gen 46:13* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Iphtah			יִפְתָּח/(Iphtah)		H3316/3317+ (2) Josh 15:43, 19:14* [Added 2026-11-21: not matched by the rows above]
+wH	CH1								Ir			עִיר		H5893 (1) 1Chr 7:12* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Irad			עִירָד		H5897 (2) Gen 4:18* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Irpeel			יִרְפְּאֵל/(Irpeel)		H3416 (1) Josh 18:27* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Iru			עִירוּ		H5900 (1) 1Chr 4:15* [Added 2026-11-21: not matched by the rows above]
+dH	GEN								Iscah			יִסְכָּה/(Iscah)		H3252 (1) Gen 11:29* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Ithlah			יִתְלָה/(Ithlah)		H3494 (1) Josh 19:42* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Ithnan			יִתְנָן/(Ithnan)		H3497 (1) Josh 15:23* [Added 2026-11-21: not matched by the rows above]
+dH	NEH								Izrahiah			יִזְרַחְיָה/(Izrahiah)		H3156 (1) Neh 12:42* [Added 2026-11-21: not matched by the rows above]
+dH	EZR								Jaala			יַעְלָה/(Jaala)		H3279 (1) Ezr 2:56* [Added 2026-11-21: not matched by the rows above]
+dH	SA2								Jaan			יַעַן/(Jaan)		H1842 (1) 2Sam 24:6* [Added 2026-11-21: not matched by the rows above]
+wdH	EZE				EZE_8:11				Jaazaniah			יַאֲזַנְיָהוּ/(Jaazaniah)		H2970 (1) Eze 8:11* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wdH	EZE				EZE_11:1				Jaazaniah			יַאֲזַנְיָה/(Jaazaniah)		H2970 (1) Eze 11:1* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+dH	GEN								Jabal			יָבָל/(Jabal)		H2989 (1) Gen 4:20* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Jabneel			יַבְנְאֵל/(Jabneel)		H2995 (2) Josh 15:11, 19:33* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Jagur			יָגוּר/(Jagur)		H3017 (1) Josh 15:21* [Added 2026-11-21: not matched by the rows above]
+dH	CH1								Jakan			יַעְכָּן/(Jakan)		H3275 (1) 1Chr 5:13* [Added 2026-11-21: not matched by the rows above]
+dH	CH2								Jechizkiah			יְחִזְקִיָּהוּ/(Jechizkiah)		H3169 (1) 2Chr 28:12* [Added 2026-11-21: not matched by the rows above]
+dH	GEN								Jegar			יְגַר/(Jegar)		H3026 a (1) Gen 31:47* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Jehud			יהֻד/(Jehud)		H3055 (1) Josh 19:45* [Added 2026-11-21: not matched by the rows above]
+dH	GEN,EXO								Jemuel			יְמוּאֵל/(Jemuel)		H3223 (2) Gen 46:10, Exo 6:15* [Added 2026-11-21: not matched by the rows above]
+dH	SA2								Jerub-Besheth			יְרֻבֶּשֶׁת/(Jerub-Besheth)		H3380 (1) 2Sam 11:21* [Added 2026-11-21: not matched by the rows above]
+dH	NEH								Jeshanah	=¦222636		הַיְשָׁנָה/(Jeshanah)		H3465 (1) Neh 3:6* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also added as an explanation by an earlier row, and the verse has another use of it]
+dH	CH1								Jeshebeab			יֶשֶׁבְאָב/(Jeshebeab)		H3428 (1) 1Chr 24:13* [Added 2026-11-21: not matched by the rows above]
+dH	GEN								Jidlaph			יִדְלָף/(Jidlaph)		H3044 (1) Gen 22:22* [Added 2026-11-21: not matched by the rows above]
+dH	KI2								Jonadab			יְהוֹנָדָב/(Jonadab)		H3082 (3) 2Ki 10:15, 10:23* [Added 2026-11-21: not matched by the rows above]
+dH	GEN								Jubal			יוּבָל/(Jubal)		H3106 (1) Gen 4:21* [Added 2026-11-21: not matched by the rows above]
+dH	JER								Jucal			יוּכַל/(Jucal)		H3116 (1) Jer 38:1* [Added 2026-11-21: not matched by the rows above]
+dH	EZR								Judea			יְהוּד/(Judea)		H3061 (1) Ezr 5:8* [Added 2026-11-21: not matched by the rows above]
+dH	GEN								Judith			יְהוּדִית/(Judith)		H3067 (1) Gen 26:34* [Added 2026-11-21: not matched by the rows above]
+wdH	JOS				JOS_15:55				Juttah			יוּטָּה/(Juttah)		H3194 (1) Josh 15:55* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wdH	JOS				JOS_21:16				Juttah			יֻטָּה/(Juttah)		H3194 (1) Josh 21:16* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+dH	JOS								Kain			קַיִן/(Kain)		H7014 a (1) Josh 15:57* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Kanah			קָנָה/(Kanah)		H7071 (3) Josh 16:8, 17:9, 19:28* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Kartah			קַרְתָּה/(Kartah)		H7177 (1) Josh 21:34* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Kartan			קַרְתָּן/(Kartan)		H7178 (1) Josh 21:32* [Added 2026-11-21: not matched by the rows above]
+H	GEN,KI2,NEH,JOB,ISA,JER,EZE,DAN,HAB								Kasdiy			כַּשְׂדִּים		H3778 (65) Gen 11:28, 11:31, 15:7, 2Ki 24:2, 25:5, 25:10, ... [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Kattah			קַטָּת/(Kattah)		H7005 (1) Josh 19:15* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Kazin			קָצִין/(Kazin)		H6278 (1) Josh 19:13* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Kedorlaomer			כְּדׇרְלָעֹמֶר		H3540 (5) Gen 14:1, 14:4, 14:5, 14:9, 14:17* [Added 2026-11-21: not matched by the rows above]
+H	EZR								Kelal			כְּלָל		H3636 (1) Ezr 10:30* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Kephar			כָּפָר		H3726+ (2) Josh 18:24* [Added 2026-11-21: not matched by the rows above]
+H	JDG								Keramim			כְּרָמִים		H64 (1) Jdg 11:33* [Added 2026-11-21: not matched by the rows above]
+H	KI1								Kerith			כְּרִית		H3747 (2) 1Ki 17:3, 17:5* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Kesil			כְּסִיל		H3686 (1) Josh 15:30* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Kesulloth			כְּסוּלֹת		H3694 (1) Josh 19:18* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Kezib			כְּזִיב		H3580 (1) Gen 38:5* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Kibzaim			קִבְצַיִם/(Kibzaim)		H6911 (1) Josh 21:22* [Added 2026-11-21: not matched by the rows above]
+H	SA2								Kileab			כִּלְאָב		H3609 (1) 2Sam 3:3* [Added 2026-11-21: not matched by the rows above]
+H	RUT								Kilion			כִּלְיוֹן		H3630 (3) Ruth 1:2, 1:5, 4:9* [Added 2026-11-21: not matched by the rows above]
+H	SA2								Kimham			כִּמְהָם		H3643 (2) 2Sam 19:38, 19:39* [Added 2026-11-21: not matched by the rows above]
+H	SA2								Kimhan			כִּמְהָן		H3643 (1) 2Sam 19:41* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Kinah			קִינָה/(Kinah)		H7016 (1) Josh 15:22* [Added 2026-11-21: not matched by the rows above]
+dH	CH1								Kishi			קִישִׁי/(Kishi)		H7029 (1) 1Chr 6:29* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Kitlish			כִּתְלִישׁ		H3798 (1) Josh 15:40* [Added 2026-11-21: not matched by the rows above]
+H	GEN,NUM,CH1,DAN								Kittim			כִּתִּים		H3794 (4) Gen 10:4, Num 24:24, 1Chr 1:7, Dan 11:30* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Kun			כּוּן		H3560 (1) 1Chr 18:8* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Lahad			לָהַד		H3855 (1) 1Chr 4:2* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Lahai			לַחַי		H883+ (3) Gen 16:14, 24:62, 25:11* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Lahmas			לַחְמָס		H3903 (1) Josh 15:40* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Lakkum			לַקּוּם		H3946 (1) Josh 19:33* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Lasha			לֶשַׁע		H3962 (1) Gen 10:19* [Added 2026-11-21: not matched by the rows above]
+H	ISA								Layishah			לַיְשָׁה		H3919 c (1) Isa 10:30* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Lebaoth			לְבָאוֹת		H3822 (1) Josh 15:32* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Letushites			לְטוּשִׁים		H3912 (1) Gen 25:3* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Leummites			לְאֻמִּים		H3817 (1) Gen 25:3* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Maarath			מַעֲרָת		H4638 (1) Josh 15:59* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Machbannai			מַכְבַּנַּי		H4344 (1) 1Chr 12:14* [Added 2026-11-21: not matched by the rows above]
+wH	JER				JER_48:2				Madmen			מַדְמֵן		H4086 (1) Jer 48:2* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also an English word]
+H	ISA								Madmenah			מַדְמֵנָה		H4088 (1) Isa 10:31* [Added 2026-11-21: not matched by the rows above]
+H	JDG								Mahaneh			מַחֲנֵה		H4265+ (1) Jdg 18:12* [Added 2026-11-21: not matched by the rows above]
+H	KI1								Mahol			מָחוֹל		H4235 (1) 1Ki 5:11* [Added 2026-11-21: not matched by the rows above]
+wH	JOS				JOS_11:8,JOS_13:6				Maim			מַיִם		H4956 (2) Josh 11:8, 13:6* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also an English word]
+H	CH1								Malkam			מַלְכָּם		H4445 a (1) 1Chr 8:9* [Added 2026-11-21: not matched by the rows above]
+H	GEN,NUM,CH1								Malkiel			מַלְכִּיאֵל		H4439 (3) Gen 46:17, Num 26:45, 1Chr 7:31* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Malkiram			מַלְכִּירָם		H4443 (1) 1Chr 3:18* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Mamre			מַמְרֵא		H4471 (10) Gen 13:18, 14:13, 14:24, 18:1, 23:17, 23:19, ... [Added 2026-11-21: not matched by the rows above]
+H	RUT								Mara			מָרָא		H4755 (1) Ruth 1:20* [Added 2026-11-21: not matched by the rows above]
+H	JER								Marduk			מְרֹדָךְ		H4781 (1) Jer 50:2* [Added 2026-11-21: not matched by the rows above]
+H	EST								Marsena			מַרְסְנָא		H4826 (1) Est 1:14* [Added 2026-11-21: not matched by the rows above]
+H	EZR								Mattattah			מַתַּתָּה		H4992 (1) Ezr 10:33* [Added 2026-11-21: not matched by the rows above]
+H	KI1								Meholah			מְחוֹלָה		H65 (1) 1Ki 4:12* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Mehujael	=¦1657		מְחוּיָאֵל		H4232 (1) Gen 4:18* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	GEN								Mehujael	=¦1658		מְחִיּיָאֵל		H4232 (1) Gen 4:18* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	EST								Mehuman			מְהוּמָן		H4104 (1) Est 1:10* [Added 2026-11-21: not matched by the rows above]
+wH	EST				EST_1:14,EST_1:21				Memucan			מְמוּכָן		H4462 (2) Est 1:14, 1:21* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	ISA								Meni			מְנִי		H4507 (1) Isa 65:11* [Added 2026-11-21: not matched by the rows above]
+H	SA2								Mephiboshet	=¦143753		מְפִיבֹשֶׁת		H4648 (5) 2Sam 4:4, 9:6, 19:26, 19:31* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	SA2								Mephiboshet	=¦145850		מְפִיבֹשֶׁת		H4648 (5) 2Sam 4:4, 9:6, 19:26, 19:31* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	SA2								Mephiboshet	=¦145867		מְפִיבֹשֶׁת		H4648 (5) 2Sam 4:4, 9:6, 19:26, 19:31* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	SA2								Mephiboshet	=¦152391		מְפִיבֹשֶׁת		H4648 (5) 2Sam 4:4, 9:6, 19:26, 19:31* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	SA2								Mephiboshet	=¦152486		מְפִיבֹשֶׁת		H4648 (5) 2Sam 4:4, 9:6, 19:26, 19:31* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	SA2								Mephiboshet	=¦153590		מְפִבֹשֶׁת		H4648 (1) 2Sam 21:8* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+wH	EST				EST_1:14				Meres			מֶרֶס		H4825 (1) Est 1:14* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also an English word]
+wH	GEN				GEN_10:30				Mesha			מֵשָׁא		H4852 (1) Gen 10:30* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	CH1				CH1_2:42				Mesha			מֵישָׁע		H4337 (1) 1Chr 2:42* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	DAN								Meshach			מֵישַׁךְ		H4336 (14) Dan 2:49, 3:12, 3:13, 3:14, 3:16, 3:19, ... [Added 2026-11-21: not matched by the rows above]
+H	GEN								Methushael			מְתוּשָׁאֵל		H4967 (2) Gen 4:18* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Micmethath			מִכְמְתָת		H4366 (2) Josh 16:6, 17:7* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Mikri			מִכְרִי		H4381 (1) 1Chr 9:8* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Mishal			מִשְׁאָל		H4861 (2) Josh 19:26, 21:30* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Mishpat			מִשְׁפָּט		H5880 (1) Gen 14:7* [Added 2026-11-21: not matched by the rows above]
+wH	JOS				JOS_11:8				Misrephoth			מִשְׂרְפוֹת		H4956+ (1) Josh 11:8* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	JOS				JOS_13:6				Misrephoth			מִשְׂרְפֹת		H4956+ (1) Josh 13:6* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	NEH								Moadiah			מַעֲדְיָה		H4573 (1) Neh 12:5* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Mozah			מֹצָה		H4681 (1) Josh 18:26* [Added 2026-11-21: not matched by the rows above]
+H	GEN,EXO,DEU,JDG,CH1								Naftali			נַפְתָּלִי		H5321 (5) Gen 35:25, Exo 1:4, Deu 27:13, Jdg 5:18, 1Chr 12:41* [Added 2026-11-21: not matched by the rows above]
+wH	CH2				CH2_9:29,CH2_29:25				Nathan			נָתָן		H5416 (2) 2Chr 9:29, 29:25* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	JOS								Neah			נֵעָה		H5269 (1) Josh 19:13* [Added 2026-11-21: not matched by the rows above]
+wH	KI2,CH2,EST				KI2_24:11,KI2_25:22,CH2_36:6,CH2_36:7,CH2_36:10,CH2_36:13,EST_2:6				Nebuchadnezzar			נְבוּכַדְנֶאצַּר		H5019 (7) 2Ki 24:11, 25:22, 2Chr 36:6, 36:7, 36:10, 36:13, ... [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	KI2,CH1				KI2_24:1,KI2_24:10,KI2_25:1,KI2_25:8,CH1_5:41				Nebuchadnezzar			נְבֻכַדְנֶאצַּר		H5019 (5) 2Ki 24:1, 24:10, 25:1, 25:8, 1Chr 5:41* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	NEH				NEH_7:6				Nebuchadnezzar			נְבוּכַדְנֶצַּר		H5019 (1) Neh 7:6* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	KI2								Nehushtan			נְחֻשְׁתָּן		H5180 (1) 2Ki 18:4* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Neiel			נְעִיאֵל		H5272 (1) Josh 19:27* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Nephtoah			נֶפְתּוֹחַ		H5318 (2) Josh 15:9, 18:15* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Nezib			נְצִיב		H5334 (1) Josh 15:43* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Nibshan			נִבְשָׁן		H5044 (1) Josh 15:62* [Added 2026-11-21: not matched by the rows above]
+H	NEH,EST								Nisan			נִיסָן		H5212 (2) Neh 2:1, Est 3:7* [Added 2026-11-21: not matched by the rows above]
+wH	JDG,KI1,CH1,NEH				JDG_2:8,KI1_16:34,CH1_7:27,NEH_8:17				Nun			נוּן		H5126 (4) Jdg 2:8, 1Ki 16:34, 1Chr 7:27, Neh 8:17* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also an English word]
+H	GEN								Obal			עוֹבָל		H5745 (1) Gen 10:28* [Added 2026-11-21: not matched by the rows above]
+H	GEN,EXO								Ohad			אֹהַד		H161 (2) Gen 46:10, Exo 6:15* [Added 2026-11-21: not matched by the rows above]
+wH	GEN				GEN_41:45,GEN_46:20				On			אֹן		H204 (2) Gen 41:45, 46:20* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also an English word]
+wH	GEN				GEN_41:50				On			אוֹן		H204 (1) Gen 41:50* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also an English word]
+H	JOS								Ophni			עׇפְנִי		H6078 (1) Josh 18:24* [Added 2026-11-21: not matched by the rows above]
+H	RUT								Orpah			עׇרְפָּה		H6204 (2) Ruth 1:4, 1:14* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Parah			פָּרָה		H6511 (1) Josh 18:23* [Added 2026-11-21: not matched by the rows above]
+H	KI2								Parbar			פַּרְוָרִים		H6503 (1) 2Ki 23:11* [Added 2026-11-21: not matched by the rows above]
+H	EST								Parmashta			פַּרְמַשְׁתָּא		H6534 (1) Est 9:9* [Added 2026-11-21: not matched by the rows above]
+H	NUM								Parnak			פַּרְנָךְ		H6535 (1) Num 34:25* [Added 2026-11-21: not matched by the rows above]
+H	EST								Parshandatha			פַּרְשַׁנְדָּתָא		H6577 (1) Est 9:7* [Added 2026-11-21: not matched by the rows above]
+H	CH2								Parvayim			פַּרְוָיִם		H6516 (1) 2Chr 3:6* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Pildash			פִּלְדָּשׁ		H6394 (1) Gen 22:22* [Added 2026-11-21: not matched by the rows above]
+dH	SA1								Pinehas			פִנְחָס/(Pinehas)		H6372 (1) 1Sam 1:3* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Piram			פִּרְאָם		H6502 (1) Josh 10:3* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Pishon			פִּישׁוֹן		H6376 (1) Gen 2:11* [Added 2026-11-21: not matched by the rows above]
+H	EXO								Pithom			פִּתֹם		H6619 (1) Exo 1:11* [Added 2026-11-21: not matched by the rows above]
+H	EST								Poratha			פּוֹרָתָא		H6334 (1) Est 9:8* [Added 2026-11-21: not matched by the rows above]
+H	NUM								Punan			פּוּנֹן		H6325 (2) Num 33:42, 33:43* [Added 2026-11-21: not matched by the rows above]
+wH	EST				EST_9:26,EST_9:28,EST_9:29				Purim			פּוּרִים		H6332 (3) Est 9:26, 9:28, 9:29* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	EST				EST_9:31,EST_9:32				Purim			פֻּרִים		H6332 (2) Est 9:31, 9:32* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	KI1				KI1_10:28				Que			קֹוֶה		H4723 a (2) 1Ki 10:28* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	CH2				CH2_1:16				Que			קְוֵא		H4723 a (2) 2Chr 1:16* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	JOS								Rabbith			רַבִּית		H7245 (1) Josh 19:20* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Rakkath			רַקַּת		H7557 (1) Josh 19:35* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Rakkon			רַקּוֹן		H7542 (1) Josh 19:46* [Added 2026-11-21: not matched by the rows above]
+H	SA1								Ramatayim			רָמָתַיִם		H7436+ (1) 1Sam 1:1* [Added 2026-11-21: not matched by the rows above]
+H	JOS,JDG								Ramath			רָמַת		H7434+/7437+ (2) Josh 13:26, Jdg 15:17* [Added 2026-11-21: not matched by the rows above]
+H	SA1								Ramoth	=¦141461		רָמוֹת		H7418+ (1) 1Sam 30:27* [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+H	NUM								Reba			רֶבַע		H7254 (1) Num 31:8* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Remeth			רֶמֶת		H7432 (1) Josh 19:21* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Resen			רֶסֶן		H7449 (1) Gen 10:12* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Reumah			רְאוּמָה		H7208 (1) Gen 22:24* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Rifat			רִיפַת		H7384 b (1) Gen 10:3* [Added 2026-11-21: not matched by the rows above]
+H	JOS,KI1								Rogel			רֹגֵל		H5883 (3) Josh 15:7, 18:16, 1Ki 1:9* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Roi			רֹאִי		H883 (3) Gen 16:14, 24:62, 25:11* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Rosh			רֹאשׁ		H7220 (1) Gen 46:21* [Added 2026-11-21: not matched by the rows above]
+H	HOS								Ruhamah			רָחַם		H7355 (1) Hos 2:25* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Rumah			רוּמָה		H1746 (1) Josh 15:52* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Sahadutha			שָׂהֲדוּתָא		H3026 b (1) Gen 31:47* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Sakia			שָׂכְיָה		H7634 (1) 1Chr 8:10* [Added 2026-11-21: not matched by the rows above]
+H	RUT								Salmah			שַׂלְמָה		H8009 (1) Ruth 4:20* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Sansannah			סַנְסַנָּה		H5578 (1) Josh 15:31* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Sarai			שָׂרַי		H8297 (17) Gen 11:29, 11:30, 11:31, 12:5, 12:11, 12:17, ... [Added 2026-11-21: not matched by the rows above]
+H	JOS								Secacah			סְכָכָה		H5527 (1) Josh 15:61* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Sedom			סְדֹם		H5467 (3) Gen 10:19, 18:22, 19:1* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Semakiah			סְמַכְיָהוּ		H5565 (1) 1Chr 26:7* [Added 2026-11-21: not matched by the rows above]
+H	NEH								Senaah			סְנָאָה		H5570 (1) Neh 3:3* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Sephar			סְפָר		H5611 (1) Gen 10:30* [Added 2026-11-21: not matched by the rows above]
+H	JOS,JDG								Sepher			סֵפֶר		H7158 (4) Josh 15:15, 15:16, Jdg 1:11, 1:12* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Serah			סֶרַח		H8556 b (1) Josh 19:50* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Shaalabbin			שַׁעֲלַבִּין		H8169 (1) Josh 19:42* [Added 2026-11-21: not matched by the rows above]
+H	EST								Shaashgaz			שַׁעַשְׁגַּז		H8190 (1) Est 2:14* [Added 2026-11-21: not matched by the rows above]
+H	DAN								Shadrach			שַׁדְרַךְ		H7715 (14) Dan 2:49, 3:12, 3:13, 3:14, 3:16, 3:19, ... [Added 2026-11-21: not matched by the rows above]
+H	CH1								Shageh			שָׁגֵה		H7681 (1) 1Chr 11:34* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Shaharaim			שַׁחֲרַיִם		H7842 (1) 1Chr 8:8* [Added 2026-11-21: not matched by the rows above]
+H	SA1								Shalisha			שָׁלִשָׁה		H8031 (1) 1Sam 9:4* [Added 2026-11-21: not matched by the rows above]
+wH	JOS,JDG,KI1,CH1				JOS_17:11,JDG_1:27,KI1_4:12,CH1_7:29				Shan			שְׁאָן		H1052 (4) Josh 17:11, Jdg 1:27, 1Ki 4:12, 1Chr 7:29* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wH	SA1				SA1_31:10,SA1_31:12				Shan			שָׁן		H1052 (2) 1Sam 31:10, 31:12* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	MIC								Shaphir			שָׁפִיר		H8208 (1) Mic 1:11* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Shaveh			שָׁוֵה		H7740 (2) Gen 14:5, 14:17* [Added 2026-11-21: not matched by the rows above]
+H	ZEC								Shebat			שְׁבָט		H7627 (1) Zech 1:7* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Shechariah			שְׁחַרְיָה		H7841 (1) 1Chr 8:26* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Shemeber			שֶׁמְאֵבֶר		H8038 (1) Gen 14:2* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Shephuphan			שְׁפוּפָן		H8197 b (1) 1Chr 8:5* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Sheresh			שָׁרֶשׁ		H8329 (1) 1Chr 7:16* [Added 2026-11-21: not matched by the rows above]
+H	EZR								Sheshbazzar			שֵׁשְׁבַּצַּר		H8340 (2) Ezr 5:14, 5:16* [Added 2026-11-21: not matched by the rows above]
+H	NUM								Sheth			שֵׁת		H8351 (1) Num 24:17* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Shilhim			שִׁלְחִים		H7978 (1) Josh 15:32* [Added 2026-11-21: not matched by the rows above]
+wH	JDG,SA1,PSA,JER				JDG_21:19,SA1_1:24,SA1_14:3,PSA_78:60,JER_7:14,JER_26:9,JER_41:5				Shiloh			שִׁלוֹ		H7887 (8) Jdg 21:19, 1Sam 1:24, 3:21, 14:3, Psa 78:60, Jer 7:14, ... [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	SA1								Shiloh	=¦126943		שִׁלוֹ		H7887 (8) Jdg 21:19, 1Sam 1:24, 3:21, 14:3, Psa 78:60, Jer 7:14, ... [Added 2026-11-21: not matched by the rows above; one word only as the gloss is also used for differently spelt names, and the verse has another use of it]
+wH	JDG,JER				JDG_21:21,JER_7:12				Shiloh			שִׁילוֹ		H7887 (3) Jdg 21:21, Jer 7:12* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+H	GEN								Shinab			שִׁנְאָב		H8134 (1) Gen 14:2* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Shion			שִׁיאֹן		H7866 (1) Josh 19:19* [Added 2026-11-21: not matched by the rows above]
+dH	JDG								Shittah			הַשִּׁטָּה/(Shittah)		H1029 (1) Jdg 7:22* [Added 2026-11-21: not matched by the rows above]
+H	GEN,CH1								Shuah			שׁוּחַ		H7744 (2) Gen 25:2, 1Chr 1:32* [Added 2026-11-21: not matched by the rows above]
+wH	NUM								Shupham			שְׁפוּפָם		H8197 a (1) Num 26:39* [Added 2026-11-21: not matched by the rows above]
+dH	SA2								Sirah			הַסִּרָה/(Sirah)		H5626 (1) 2Sam 3:26* [Added 2026-11-21: not matched by the rows above]
+H	CH1								Sismai			סִסְמַי		H5581 (2) 1Chr 2:40* [Added 2026-11-21: not matched by the rows above]
+H	EXO								Sithri			סִתְרִי		H5644 (1) Exo 6:22* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Sitnah			שִׂטְנָה		H7856 (1) Gen 26:21* [Added 2026-11-21: not matched by the rows above]
+H	EST								Sivan			סִיוָן		H5510 (1) Est 8:9* [Added 2026-11-21: not matched by the rows above]
+wH	KI2								Sur			סוּר		H5495 (1) 2Ki 11:6* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Taanath			תַּאֲנַת		H8387+ (1) Josh 16:6* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Tahash			תַּחַשׁ		H8477 (1) Gen 22:24* [Added 2026-11-21: not matched by the rows above]
+dH	SA2								Tahtim			חָדְשִׁי/(Tahtim)		H8483 (1) 2Sam 24:6* [Added 2026-11-21: not matched by the rows above]
+H	NUM								Tarah			תֶּרַח		H8646 (2) Num 33:27, 33:28* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Taralah			תַּרְאֲלָה		H8634 (1) Josh 18:27* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Tebah			טֶבַח		H2875 (1) Gen 22:24* [Added 2026-11-21: not matched by the rows above]
+H	EST								Tebeth			טֵבֶת		H2887 (1) Est 2:16* [Added 2026-11-21: not matched by the rows above]
+wH	CH1,CH2								Tiglat			תִּלְּגַת		H8407+ (3) 1Chr 5:6, 5:26, 2Chr 28:20* [Added 2026-11-21: not matched by the rows above]
+H	EZR								Tikvah			תִּקְוָה		H8616 (1) Ezr 10:15* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Timnath			תִּמְנַת		H8556 b (1) Josh 19:50* [Added 2026-11-21: not matched by the rows above]
+H	JDG								Timnite			תִּמְנִי		H8554 (1) Jdg 15:6* [Added 2026-11-21: not matched by the rows above]
+H	KI2								Tiphsah			תִּפְסַח		H8607 (1) 2Ki 15:16* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Tseboyim			צְבֹיִם		H6636 (1) Gen 10:19* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Tsidon			צִּידֹן		H6721 (1) Gen 10:19* [Added 2026-11-21: not matched by the rows above]
+wH	HOS				HOS_9:13				Tyre			צוֹר		H6865 (1) Hos 9:13* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also an English word]
+wH	JOL				JOL_4:4				Tyre			צֹר		H6865 (1) Joel 4:4* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also an English word]
+H	PRO								Ukal			אֻכָל		H401 (1) Prov 30:1* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Umah			עֻמָּה		H5981 (1) Josh 19:30* [Added 2026-11-21: not matched by the rows above]
+wH	KI1								Uri			אֻרִי		H221 (1) 1Ki 4:19* [Added 2026-11-21: not matched by the rows above]
+H	EZE								Uzal			אוּזָל		H187 (1) Eze 27:19* [Added 2026-11-21: not matched by the rows above]
+H	EST								Vaizatha			וַיְזָתָא		H2055 (1) Est 9:9* [Added 2026-11-21: not matched by the rows above]
+H	EST								Vashti			וַשְׁתִּי		H2060 (10) Est 1:9, 1:11, 1:12, 1:15, 1:16, 1:17, ... [Added 2026-11-21: not matched by the rows above]
+H	GEN,CH1								Yafet			יֶפֶת		H3315 (3) Gen 9:18, 10:1, 1Chr 1:4* [Added 2026-11-21: not matched by the rows above]
+H	SA2								Yehuda			יְהוּדָה		H1184 (1) 2Sam 6:2* [Added 2026-11-21: not matched by the rows above]
+H	JOS								Yiron			יִרְאוֹן		H3375 (1) Josh 19:38* [Added 2026-11-21: not matched by the rows above]
+dH	KI2								Zair			צָעִיר/(Zair)		H6811 (1) 2Ki 8:21* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Zaphon			צָפוֹן/(Zaphon)		H6829 (1) Josh 13:27* [Added 2026-11-21: not matched by the rows above]
+dH	JOS,SA2								Zela			צֵלַע/(Zela)		H6762 (2) Josh 18:28, 2Sam 21:14* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Zenan			צְנָן/(Zenan)		H6799 (1) Josh 15:37* [Added 2026-11-21: not matched by the rows above]
+wdH	JOS								Zer			צֵר/(Zer)		H6863 (1) Josh 19:35* [Added 2026-11-21: not matched by the rows above]
+H	EST								Zethar			זֵתַר		H2242 (1) Est 1:10* [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Ziddim			צִדִּים/(Ziddim)		H6661 (1) Josh 19:35* [Added 2026-11-21: not matched by the rows above]
+H	GEN								Zilpah			זִלְפָּה		H2153 (7) Gen 29:24, 30:9, 30:10, 30:12, 35:26, 37:2, ... [Added 2026-11-21: not matched by the rows above]
+dH	JOS								Zior			צִיעֹר/(Zior)		H6730 (1) Josh 15:54* [Added 2026-11-21: not matched by the rows above]
+wdH	GEN,EXO				GEN_23:8,GEN_25:9,GEN_46:10,EXO_6:15				Zohar			צֹחַר/(Zohar)		H6714 (4) Gen 23:8, 25:9, 46:10, Exo 6:15* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wdH	JOB				JOB_11:1,JOB_20:1,JOB_42:9				Zophar			צֹפַר/(Zophar)		H6691 (3) Job 11:1, 20:1, 42:9* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+wdH	JOB				JOB_2:11				Zophar			צוֹפַר/(Zophar)		H6691 (1) Job 2:11* [Added 2026-11-21: not matched by the rows above; limited to the verses as the gloss is also used for differently spelt names]
+# end of names added 2026-11-21
 
 
 # Other

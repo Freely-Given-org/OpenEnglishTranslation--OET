@@ -1,4 +1,4 @@
-\id DEU - Open English Translation—Readers’ Version (OET-RV) v0.2.14
+\id DEU - Open English Translation—Readers’ Version (OET-RV) v0.2.18
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 DEU
@@ -6,7 +6,7 @@
 \h Deuteronomy
 \toc1 Deuteronomy
 \toc2 Deuteronomy
-\toc3 Deu.
+\toc3 Deu
 \mt1 Deuteronomy
 \is1 Introduction
 \ip The Greek word ‘Deuteronomy’ means ‘Second law’, because some aspects of God’s instructions in the previous accounts are repeated again in this one, noticeably the Ten Commandments. Hebrew readers call this document ‘Devārim’ which is the second word in the Hebrew text and means ‘Words’ or ‘Things’. Some European and other translations call it ‘The fifth book of Mosheh/Moses’.
@@ -249,7 +249,7 @@
 \v 45 \add including\add* all the instructions, rules, and regulations that Mosheh had told them when they left Mitsrayim \add (Egypt)\add*,
 \v 46 when they were in the valley \add east\add* of the Yarden \add (Jordan)\add* \add river\add*. They were across from Beyt-Pe’or \add town\add*, in the land that the Amori King Sihon (who lived in Heshbon \add city\add*) had ruled. (Mosheh and the \add other\add* \add Israelis\add* had defeated them when they came out of Mitsrayim.)
 \v 47 They had taken possession of his land, as well as the land of Bashan’s King Og—the two Amori kings from the \add eastern side\add* of the Yarden—
-\v 48 from Aroer \add city in the south\add* along the edge of the Arnon valley, and as far north as Mt. Tsiyon \add (Zion)\add* (\add normally\add* called Mt. Hermon)
+\v 48 from Aroer \add city in the south\add* along the edge of the Arnon valley, and as far north as Mt. Tsiyon \add (Zion,\add* \add normally\add* called Mt. Hermon)
 \v 49 and the entire plain east of the Yarden \add river\add*, \add extending\add* to the Salt \add (Dead; Heb. Aravah)\add* sea and \add east to\add* the slopes of \add Mt.\add* Pisgah.
 \c 5
 \s1 The ten rules
@@ -897,7 +897,7 @@
 \v 2 No \add illegitimate child\add*\f + \fr 23:2 \ft Or possibly, child from mixed parentage.\f* is allowed to enter into Yahweh’s assembly, even down to the tenth generation.
 \p
 \v 3 No Amoni or Moavi is allowed to enter into Yahweh’s assembly, even down past the tenth generation\x + \xo 23:3-5: \xt Neh 13:1-2.\x*
-\v 4 since they wouldn’t \add even sell\add* you bread and water when the people were travelling from Mitsrayim \add (Egypt)\add* \add to Kena’an\add* \add (Canaan)\add*. \add What’s more,\add* they hired Be’or’s son Bil’am \add (Balaam)\add* (from Petor in Aram-Naharayim) to curse you
+\v 4 since they wouldn’t \add even sell\add* you bread and water when the people were travelling from Mitsrayim \add (Egypt)\add* \add to Kena’an\add* \add (Canaan)\add*. \add What’s more,\add* they hired Be’or’s son Bil’am \add (Balaam,\add* from Petor in Aram-Naharayim) to curse you
 \v 5 \add However,\add* your god Yahweh \add took no notice of\add* Bil’am and turned the curse into a blessing because \add he\add* loves you,\x + \xo 23:5: \xt Num 23:7–24:9.\x*
 \v 6 \add so\add* you must \add never\add* strive for peace or prosperity for \add the Amonim or the Moavim\add*.
 \p
@@ -1157,7 +1157,7 @@
 \v 49 Yahweh will send a very \add distant\add* nation against you. They’ll \add swoop in\add* like an eagle—speaking a language that you won’t understand.
 \v 50 They’ll be fierce \add looking\add* and with \add no mercy\add* for either the elderly or the young.
 \v 51 They’ll eat \add the meat of\add* your animals and the harvests from your crops until you’re destroyed. They won’t leave any grain or new wine, or calves, lambs, or kids—you’ll all \add die\add* \add of hunger\add*.
-\v 52 They’ll surround all your cities until your high, fortified walls that you trusted in come down all over your country. \add Yes,\add* you’ll be \add contained\add* inside your cities throughout the land the your god Yahweh has given you.
+\v 52 They’ll surround all your cities until your high, fortified walls that you trusted in come down all over your country. \add Yes,\add* you’ll be \add contained\add* inside your cities throughout the land your god Yahweh has given you.
 \p
 \v 53 Due to that siege and the distress that you experience from the oppression of your enemies, you’ll \add end up\add* eating the flesh of the sons and daughters that your god Yahweh has given you.
 \v 54 Even the most sensitive, kind-hearted man among you will \add be selfish\add* towards his brother, towards the wife \add that he loves\add*, and towards his own remaining children—
@@ -1242,7 +1242,7 @@
 \v 19 I call on the heavens and the earth to witness against you today: I’ve \add placed in front of you\add* \add the choice between\add* life and death, \add and between\add* \add blessings\add* and the \add curses\add*, so that you’ll \add be forced\add* to choose life so that you and your descendants will live.
 \v 20 \add Decide today\add* to love your god Yahweh, to listen to his voice, and to cling to him, because he’ll \add give\add* you life and \add lengthen\add* your \add lives\add* so you can live in the land that Yahweh promised to give to your fathers, Avraham,\x + \xo 30:20: \xt Gen 12:7.\x* Yitshak \add (Isaac)\add*,\x + \xo 30:20: \xt Gen 26:3.\x* and Ya’akov \add (Jacob)\add*.\x + \xo 30:20: \xt Gen 28:13.\x*
 \c 31
-\s1 Yehoshua (Joshua) installed as the new leader
+\s1 Yehoshua/Joshua installed as the new leader
 \s4 Promised land
 \p
 \v 1 Then Mosheh \add (Moses)\add* also told the Israelis,
@@ -1352,7 +1352,7 @@
 \q1
 \v 15 \add So the good fellow\add* got fat and kicked—
 \q1 you were fat, getting bloated, you gorged.
-\q1 Then he abandoned the God who created him,
+\q1 →Then he abandoned the God who created him,
 \q1 and he rejected the rock \add that had saved him\add*.
 \q1
 \v 16 \add Yisrael\add* \add (Israel)\add* provoked him with strange \add gods\add*.
@@ -1376,7 +1376,7 @@
 \q1
 \v 21 They provoked me with a non-god—
 \q1 angered me by their worthless idols,\x + \xo 32:21: \xt 1Cor 10:22.\x*
-\q1 so I’ll provoke them with a ‘non-people’.
+\q1 →so I’ll provoke them with a ‘non-people’.
 \q1 I’ll anger them by means of a foolish nation,\x + \xo 32:21: \xt Rom 10:19.\x*
 \q1
 \v 22 because \add my anger flames like\add* a fire.

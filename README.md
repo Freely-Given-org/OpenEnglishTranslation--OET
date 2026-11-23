@@ -69,6 +69,8 @@ Our _OET_ Bible text is licensed [CC BY-SA 4.0](https://creativecommons.org/lice
 
 Any included scripts are licensed [GPL 3.0](https://www.GNU.org/licenses/gpl-3.0.en.html) or later.
 
+In order to assist you, we have put together a simple program to help you adapt the _Open English Translation_ and export it in a couple of different formats—see the [OET_adapter repository](https://GitHub.com/Freely-Given-org/OpenEnglishTranslation_adapter).
+
 ## The inevitable event
 
 It is my request to my family and executors of my will to place all of this work into the public domain,

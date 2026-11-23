@@ -1,16 +1,17 @@
-\id 2SA - Open English Translation—Readers’ Version (OET-RV) v0.2.15
+\id 2SA - Open English Translation—Readers’ Version (OET-RV) v0.2.20
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 SA2
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \h 2 Shmuel
-\toc1 2 Shmuel
+\toc1 2 Shmuel (Samuel)
 \toc2 2 Shmuel
-\toc3 2 She.
+\toc3 2 Shm
 \mt1 2 Shmuel
+\mt2 (2 Samuel)
 \is1 Introduction
 \ip \bk Second Shmuel\bk* (commonly, but wrongly known as ‘Samuel’) is the continuation of \bk First Shmuel\bk*—the two parts together are considered a single ‘book’ in the Jewish Bible—it’s only split into two because it was too long to fit on a single scroll.
-\ip This the story of David’s reign: firstly he ruled what became known as ‘Yehudah’ (Judah) in the south east (chapters 1–4), and eventually, the entire nation, including the much larger area of Yisrael (called ‘Israel’ in older translations) in the north east (Chapter 5–24). This document explains how David dealt with his enemies within the country, as well as battling with other nations in order to widen and strengthen his kingdom. David’s faith and respect of God is demonstrated here, as well as his love for the people. However, despite that, he was also fierce and he was quite capable of disobeying God to get what he wanted. But God sees everything and seen his prophet Natan (Nathan) with a parable to show David his selfishness. David asked for forgiven for his sin and accepted the punishment that God gave him.
+\ip This the story of David’s reign: firstly he ruled what became known as ‘Yehudah’ (Judah) in the south east (chapters 1–4), and eventually, the entire nation, including the much larger area of Yisrael (called ‘Israel’ in older translations) in the north east (Chapter 5–24). This document explains how David dealt with his enemies within the country, as well as battling with other nations in order to widen and strengthen his kingdom. David’s faith and respect of God is demonstrated here, as well as his love for the people. However, despite that, he was also fierce and he was quite capable of disobeying God to get what he wanted. But God sees everything and seen his prophet Natan/Nathan with a parable to show David his selfishness. David asked for forgiven for his sin and accepted the punishment that God gave him.
 \ip The times of peace and prosperity through the latter parts of David’s rule were planted in the minds of the Hebrew people, and in the future when they faced difficulties, they would long for another king like David—a son (better ‘a descendant’) of David who would love God like him.
 \iot Main components of this account
 \io1 David’s kingdom in Yehudah \ior 1:1–4:12\ior*
@@ -124,7 +125,7 @@
 \v 11 and \add he\add* \add ruled them\add* for seven and a half years.
 \p
 \v 12 \add One day\add* Avner left Mahanayim with \add some of\add* Ish-Boshet’s servants and went to Giveon,
-\v 13 \add but\add* Yoav \add (Joab)\add* (Tseruyah’s son, \add traditionally called ‘Yoav’ in English\add*) \add took some of\add* David’s servants and went and \add confronted\add* them at the Giveon pool—one group on each side of the pool.
+\v 13 \add but\add* Yoav \add (Joab,\add* Tseruyah’s son, \add traditionally called ‘Yoav’ in English\add*) \add took some of\add* David’s servants and went and \add confronted\add* them at the Giveon pool—one group on each side of the pool.
 \v 14 Then Avner said to Yoav, “\add Let’s get some of these young warriors to fight it out in front of us\add*.”
 \p “\add Sounds good to me\add*,” said Yoav.
 \p
@@ -368,7 +369,7 @@
 \v 4 David captured 1,700 horsemen and twenty thousand men on foot. \add He\add* hamstrung all the chariot \add horses\add* except for a hundred of them.
 \p
 \v 5 Then \add the Arameans\add* came from Damesek \add (Damascus)\add* to help Tsovah’s king Hadadezer \add but\add* David \add killed\add* twenty-two thousand \add of them\add*.
-\v 6 David \add stationed\add* garrisons in Aram \add (Syria)\add* (in Damesek) and \add the Arameans\add* became David’s servants—bringing him tribute, and Yahweh \add helped\add* David \add win\add* wherever he went.
+\v 6 David \add stationed\add* garrisons in Aram \add (Syria,\add* in Damesek) and \add the Arameans\add* became David’s servants—bringing him tribute, and Yahweh \add helped\add* David \add win\add* wherever he went.
 \v 7 David \add confiscated\add* the gold shields that Hadadezer’s servants carried and brought them to Yerushalem \add (Jerusalem)\add*.
 \v 8 \add He\add* also brought a large amount of bronze out of Hadadezer’s cities of Betah and Berotah.
 \p
@@ -604,7 +605,7 @@
 \s1 Avshalom returns to Yerushalem
 \s4 Full kingdom
 \p
-\v 1 \add Now\add* Yoav \add (Joab)\add* (Tseruyah’s son) \add realised\add* that the king \add missed\add* Avshalom \add (Absalom)\add*,
+\v 1 \add Now\add* Yoav \add (Joab,\add* Tseruyah’s son) \add realised\add* that the king \add missed\add* Avshalom \add (Absalom)\add*,
 \v 2 \add so\add* \add he\add* sent for a wise woman from Tekoa and told her, “Now, please put on mourning clothes and don’t \add put on any make-up\add*. \add Act\add* like a woman who has been mourning for the dead for \add several\add* days,
 \v 3 and go to the king and \add give him this message\add*.” Then Yoav told her what to say to the king.
 \p
@@ -907,7 +908,7 @@
 \s4 Full kingdom
 \p Shimei (Gera’s son) fell \add onto his knees in front\add* of the king when he crossed the Yarden \add (Jordan)\add*
 \v 19 and \add begged\add* the king, “May my master not \add consider me guilty\add*, and \add don’t keep thinking about the terrible thing\add* your servant dig on the day that my master the king left Yerushalem \add (Jerusalem)\add*—\add don’t brood over it\add*
-\v 20 because your servant knows that I myself have sinned, and look, I have come today, first of all the Yosef’s \add (Joseph’s)\add* clans to come down to meet my master, the king.”
+\v 20 because your servant knows that I myself have sinned, and look, I have come today, first of all Yosef’s \add (Joseph’s)\add* clans to come down to meet my master, the king.”
 \p
 \v 21 \add But\add* Avishay (Tseruyah’s son) \add answered\add* \add instead\add*, “\add Rather than that\add*, shouldn’t Shimei be killed because he cursed Yahweh’s anointed \add one\add*?”
 \p
@@ -1035,7 +1036,7 @@
 \v 19 Then in \add another\add* battle with the Pelishtim at Gov, Elhanan (son of Ya’are-Oregim, from Beyt-Lehem \add (Bethlehem)\add*) \add killed\add* Galyat \add (Goliath)\add* the Giti \add even though\add* his spear \add handle\add* was like a weaver’s beam.
 \p
 \v 20 In a \add different\add* battle in Gat, there was a \add fierce man\add* there with \add six fingers on each hand and six toes on each foot\add* who was also a descendant of the giants,
-\v 21 \add but when\add* he taunted Yisrael, Yonatan \add (Jonathan)\add* (son of David’s brother Shimeah) \add killed\add* him.
+\v 21 \add but when\add* he taunted Yisrael, Yonatan \add (Jonathan,\add* son of David’s brother Shimeah) \add killed\add* him.
 \v 22 Those four \add men\add* were descendants of the giants in Gat, \add but\add* they were \add killed\add* by David and his \add men\add*.
 \c 22
 \s1 David’s song of praise
@@ -1107,7 +1108,7 @@
 \q1 because they were stronger than me.
 \q1
 \v 19 They \add confronted\add* me \add when I was experiencing difficulties\add*,
-\q2 but Yahweh supported me.
+\q2 ^but Yahweh supported me.
 \q1
 \v 20 He brought me out into a wide area.
 \q1 He rescued me because he was pleased with me.
@@ -1332,7 +1333,7 @@
 \r (1 Chr. 21:1-27)
 \p
 \v 1 Then Yahweh \add was angry\add* against Yisrael \add (Israel)\add* again and he incited David \add to cause problems for\add* them by saying, “Go \add and\add* \add order a census of\add* Yisrael and Yehudah \add (Judah)\add*.”
-\v 2 \add So\add* the king told Yoav \add (Joab)\add*, the commander of \add his\add* army, who was with him \add at the time\add*, “\add Travel throughout\add* all the \add regions of\add* the Israeli tribes, from Dan \add (in the far north)\add* down to Be’er-Sheva \add (Beersheba)\add* \add (in the far south)\add*, and count the people so that I’ll know the number of \add fighting men\add*.”
+\v 2 \add So\add* the king told Yoav \add (Joab)\add*, the commander of \add his\add* army, who was with him \add at the time\add*, “\add Travel throughout\add* all the \add regions of\add* the Israeli tribes, from Dan \add (in the far north)\add* down to Be’er-Sheva \add (Beersheba,\add* \add in the far south)\add*, and count the people so that I’ll know the number of \add fighting men\add*.”
 \p
 \v 3 “May your god Yahweh multiply the people a hundred times \add over\add*,” Yoav responded, “add may my master the king \add see that happen, but\add* why would my master the king \add want to do that\add*?”
 \v 4 \add However,\add* the king \add insisted, so even though\add* Yoav and the army commanders \add disagreed\add*, \add at the king’s command\add* \add they\add* \add set off to count\add* the Israeli people.

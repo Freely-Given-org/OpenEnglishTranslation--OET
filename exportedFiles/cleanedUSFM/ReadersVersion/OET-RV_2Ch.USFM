@@ -1,4 +1,4 @@
-\id 2CH - Open English Translation—Readers’ Version (OET-RV) v0.2.20
+\id 2CH - Open English Translation—Readers’ Version (OET-RV) v0.2.23
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CH2
@@ -6,12 +6,13 @@
 \h 2 Chronicles
 \toc1 2 Chronicles
 \toc2 2 Chronicles
-\toc3 2 Chr.
+\toc3 2 Chr
 \mt2 The second
 \mt1 Sequential Account
-\mt2 (2 Chronicles)
+\mt3 commonly called
+\mt2 2 Chronicles
 \is1 Introduction
-\ip The \bk Second Chronicles\bk* account is the continuation of \bk First Chronicles\bk* account (and they’re considered as just one account in the book form of the Hebrew Scriptures, the TaNaK). This document includes the account of Shelomoh (Solomon) becoming king, then the rebellion of the northern tribes against his son Rehav’am becoming king. That rebellion was led by Yarov’am (Jeroboam) and resulted in the split between the northern kingdom (called ‘Yisrael/Israel’ or sometimes ‘Efrayim/Ephraim’) and the southern kingdom (called ‘Yehudah/Judah’ and consisting mostly of the Yehudah and Benyamin tribes). This document then ends with the accounts of the Yehudah (Judah) kingdom and the defeat of Yerushalem (Jerusalem) in 586 B.C.
+\ip The \bk Second Chronicles\bk* account is the continuation of \bk First Chronicles\bk* account (and they’re considered as just one account in the book form of the Hebrew Scriptures, the TaNaK). This document includes the account of Shelomoh/Solomon becoming king, then the rebellion of the northern tribes against his son Rehav’am becoming king. That rebellion was led by Yarov’am/Jeroboam and resulted in the split between the northern kingdom (called ‘Yisrael/Israel’ or sometimes ‘Efrayim/Ephraim’) and the southern kingdom (called ‘Yehudah/Judah’ and consisting mostly of the Yehudah and Benyamin tribes). This document then ends with the accounts of the Yehudah/Judah kingdom and the defeat of Yerushalem/Jerusalem in 586 B.C.
 \iot Main components of this account
 \io1 Shelomoh’s reign \ior 1:1–9:31\ior*
 \io2 a. The first years \ior 1:1-17\ior*
@@ -533,7 +534,7 @@
 \r (1 Kgs 15:17-22)
 \p
 \v 1 In the thirty-sixth year of \add King\add* Asa’s reign, Yisrael’s \add (Israel’s)\add* king Baesha \add invaded\add* Yehudah \add (Judah)\add* and built Ramah to \add prevent anyone from leaving or entering the land controlled by\add* Yehudah’s King Asa.
-\v 2 Asa took gold and silver from the \add temple\add* treasuries and the king’s \add palace\add*, and he sent \add it\add* to King Ben-Hadad of Aram \add (Syria)\add* \add (modern Aram)\add*, who lived in Damesek \add (Damascus)\add*, \add requesting\add*,
+\v 2 Asa took gold and silver from the \add temple\add* treasuries and the king’s \add palace\add*, and he sent \add it\add* to King Ben-Hadad of Aram \add (Syria,\add* \add modern Aram)\add*, who lived in Damesek \add (Damascus)\add*, \add requesting\add*,
 \v 3 “\add I want\add* a \add peace treaty\add* between you and me, and between your \add family\add* and \add mine\add*. Listen, I’ve sent gold and silver to you. Go \add and\add* break your agreement with Yisrael’s King Baesha, \add so\add* he’ll \add give up on his attack\add* against me.”
 \p
 \v 4 Ben-Hadad \add accepted\add* King Asa’s \add suggestion\add* and sent his army captains \add to fight\add* against Yisrael’s cities. They struck Iyon, Dan, and Avel-Mayim, and all the storehouses in the Naftali \add (Naphtali)\add* cities.
@@ -689,7 +690,7 @@
 \v 11 Look how they’re repaying us \add for not destroying them\add*—they come \add here\add* to drive us out from the \add land\add* you gave us as an \add inheritance\add*.
 \v 12 \add So,\add* our god, \add please punish\add* them, because \add we’re not strong enough to battle this huge army that’s on its way\add*. \add We simply don’t know what to do, so we’re looking to you to rescue us\add*.”
 \p
-\v 13 \add At that time,\add* all of Yehudah \add (Judah)\add* (men, women, and children) were standing \add in front of\add* Yahweh,
+\v 13 \add At that time,\add* all of Yehudah \add (Judah,\add* men, women, and children) were standing \add in front of\add* Yahweh,
 \v 14 and Yahweh’s spirit came on Yahaziel. (Yahaziel was the son of Zekaryah \add (Zechariah)\add*, son of Benayah, son of Yeiel, son of Matanyah the Levite, and a \add descendant\add* of Asaf.) In the middle of the assembly
 \v 15 he said, “\add Pay\add* attention, all of Yehudah, inhabitants of Yerushalem, and King Yehoshafat. Yahweh has this to say to you all, ‘Don’t be afraid, and don’t be dismayed by this \add huge force\add*, because it’s not your battle, but God’s.\x + \xo 20:15-17: \xt Deu 20:1-4.\x*
 \v 16 Tomorrow, go down against them. Listen, they’re coming uphill near the Ascent of Tsits, and you’ll find them at the end of the valley, facing the Yeruel wilderness.
@@ -783,7 +784,7 @@
 \s4 Southern kingdom
 \r (2 Kgs 11:4-16)
 \p
-\v 1 \add The following year\add*, \add the priest\add* Yehoyada \add took courage\add* and made an agreement with the commanders of units of a hundred \add soldiers\add*: Azaryah (Yehoram’s \add (Jehoram’s)\add* son), Yishmael \add (Ishmael)\add* (Yehohanan’s son), \add another\add* Azaryah (Oved’s son), Ma’aseyah (Adayah’s son), and Elishafat (Zikri’s son).
+\v 1 \add The following year\add*, \add the priest\add* Yehoyada \add took courage\add* and made an agreement with the commanders of units of a hundred \add soldiers\add*: Azaryah (Yehoram’s \add (Jehoram’s)\add* son), Yishmael \add (Ishmael,\add* Yehohanan’s son), \add another\add* Azaryah (Oved’s son), Ma’aseyah (Adayah’s son), and Elishafat (Zikri’s son).
 \v 2 They went throughout Yehudah \add (Judah)\add* and gathered all the Levites and the \add clan leaders\add* from all the cities. \add When\add* they came to Yerushalem \add (Jerusalem)\add*,
 \v 3 the whole assembly \add made an agreement\add* with the \add young\add* king in the \add temple\add*, and \add Yehoyada\add* told them, “Listen, the \add late\add* king’s son will reign, just as Yahweh said about David’s descendants.\x + \xo 23:3: \xt 2Sam 7:12.\x*
 \v 4 \add Now\add* this is what you need to do: one third of you priests and Levites who are on duty on the Rest Day must guard the \add temple\add* \add entrances\add*.
@@ -939,7 +940,7 @@
 \p
 \v 21 King Uziyah had leprosy until he \add died\add*, \add so\add* he had to live in an isolated residence and wasn’t allowed to \add approach the temple\add*. His son Yotam \add (Jotham)\add* \add stood in for him\add*—supervising the \add palace\add* and \add ruling Yehudah\add* \add (Judah)\add*.
 \p
-\v 22 The record of all the other things Uziyah did \add while he was king\add* was written by the prophet Yeshayah \add (Isaiah)\add* (son of Amots).
+\v 22 The record of all the other things Uziyah did \add while he was king\add* was written by the prophet Yeshayah \add (Isaiah,\add* son of Amots).
 \v 23 \add When Uziyah died\add*,\x + \xo 26:23: \xt Isa 6:1.\x* because of his leprosy they buried him with his ancestors in a \add royal\add* grave in the countryside, and his son Yotam replaced him as king.
 \c 27
 \s1 Yehudah’s King Yotam
@@ -982,7 +983,7 @@
 \v 12 Then \add some of the leaders of\add* \add Yisrael\add* \add (Israel; Heb. Efrayim)\add* \add took action\add* and \add confronted\add* \add those returning from battle\add*: Azaryah (Yehohanan’s son), Berekyah (Meshilemot’s son), Yehizkiyah (Shalum’s son), and Amasa (Hadlay’s son)
 \v 13 told \add the ones returning\add*, “Don’t bring those captives here, because \add that would be disobedience, and add to the rest of our disobedience and wrongdoing\add*, because \add Yahweh’s already\add* \add angry\add* at \add us here in\add* Yisrael.”
 \v 14 \add So\add* the \add returning\add* \add soldiers\add* released the captives in front of the leaders and all the assembled \add people\add*, and \add dropped all the plunder\add* \add there as well\add*.
-\v 15 Then some men \add from Yisrael\add* \add were called out by name to come and search the plunder to find clothes and\add* dress the naked captives \add from Yehudah\add* and give them sandals. Then they \add gave them food and drink, as well as oil\add* \add to rub on their wounds\add*. They gave donkeys to those who \add couldn’t easily walk\add*, and took them to Yeriho \add (Jericho)\add* (\add Yeriho,\add* the Palm city) which was nearer their relatives, then those men returned to Shomron.
+\v 15 Then some men \add from Yisrael\add* \add were called out by name to come and search the plunder to find clothes and\add* dress the naked captives \add from Yehudah\add* and give them sandals. Then they \add gave them food and drink, as well as oil\add* \add to rub on their wounds\add*. They gave donkeys to those who \add couldn’t easily walk\add*, and took them to Yeriho \add (Jericho,\add* \add Yeriho,\add* the Palm city) which was nearer their relatives, then those men returned to Shomron.
 \p
 \v 16 Around that time, King Ahaz \add requested help from\add* the Assyrian kings,
 \v 17 because the Edomim had been and attacked Yehudah and taken captives.
@@ -994,7 +995,7 @@
 \s4 Southern kingdom
 \p
 \v 22 \add While King Ahaz was experiencing those troubles, he disobeyed Yahweh even more\add*
-\v 23 and sacrificed to the gods of Damesek \add (Damascus)\add* (\add because Aram\add* \add (Syria)\add* \add had defeated him\add*). He \add reasoned\add*, “Since the gods of the Aramean kings helped them, I’ll sacrifice to them, and then they’ll help me.” \add However,\add* that led to \add Ahaz’s\add* fall, and \add to the fall of\add* all of Yehudah \add (Judah)\add*.\f + \fr 28:23 \ft Sometimes in 2 Chronicles, Yehudah is referred to as Yisrael, but as that can be confusing for readers, we’ve made adjustments.\f*
+\v 23 and sacrificed to the gods of Damesek \add (Damascus,\add* \add because Aram\add* \add (Syria)\add* \add had defeated him\add*). He \add reasoned\add*, “Since the gods of the Aramean kings helped them, I’ll sacrifice to them, and then they’ll help me.” \add However,\add* that led to \add Ahaz’s\add* fall, and \add to the fall of\add* all of Yehudah \add (Judah)\add*.\f + \fr 28:23 \ft Sometimes in 2 Chronicles, Yehudah is referred to as Yisrael, but as that can be confusing for readers, we’ve made adjustments.\f*
 \v 24 Then Ahaz gathered all the furnishings \add that were used\add* in the \add temple\add*, and broke them into pieces and locked the \add temple\add* doors. Then he set up \add pagan\add* altars at every Yerushalem \add (Jerusalem)\add* \add intersection\add*,
 \v 25 and in every Yehudah city he set up hilltop shrines to make sacrifices to other gods, \add thus\add* angering Yahweh, his ancestors’ god.
 \p
@@ -1020,7 +1021,7 @@
 \v 11 \add So lads,\add* don’t \add mess around\add*, because Yahweh has chosen you to stand in his presence to serve him, and to be ministering and burning incense.
 \p
 \v 12 Then \add these\add* Levites \add took action\add*:
-\li1 from the Kohatites: Mahat (Amasay’s son) and Yoel \add (Joel)\add* (Azaryah’s son),
+\li1 from the Kohatites: Mahat (Amasay’s son) and Yoel \add (Joel,\add* Azaryah’s son),
 \li1 from the descendants of Merari: Kish (Avdi’s son) and Azaryah (Yehalel’el’s son),
 \li1 from the Gershonim: Yoah (Zimah’s son) and Eden (Yoah’s son),
 \li1
@@ -1064,7 +1065,7 @@
 \s1 Hizkiyah orders a pass-over celebration
 \s4 Both kingdoms
 \p
-\v 1 Then \add King\add* Hizkiyah \add (Hezekiah)\add* sent \add invitations\add* to all of Yisrael \add (Israel)\add* and Yehudah \add (Judah)\add* (including Efrayim \add (Ephraim)\add* and Menasheh \add (Manasseh)\add*) to come to Yahweh’s \add temple\add*,
+\v 1 Then \add King\add* Hizkiyah \add (Hezekiah)\add* sent \add invitations\add* to all of Yisrael \add (Israel)\add* and Yehudah \add (Judah,\add* including Efrayim \add (Ephraim)\add* and Menasheh \add (Manasseh)\add*) to come to Yahweh’s \add temple\add*,
 \v 2 \add because\add* the king had consulted with his officials and the whole assembly in Yerushalem \add (Jerusalem)\add* \add and decided\add* to \add have a late\add* celebration of the Passover in \add April\add*.\x + \xo 30:2-3: \xt Num 9:9-11.\x*
 \v 3 (They couldn’t have done it at the \add proper\add* time because the priests hadn’t consecrated themselves sufficiently then, and so the people hadn’t gathered in Yerushalem.)
 \v 4 The plan \add pleased\add* the king and all the people,
@@ -1155,7 +1156,7 @@
 \v 18 Then \add the Assyrians\add* \add shouted loud\add* \add threats\add* \add in Hebrew\add* to the people of Yerushalem who were on the wall, to \add try to\add* frighten and terrify them so they could capture the city—
 \v 19 \add telling them Yerushalem’s god was just another god made by people, and just as useless as other countries’ gods\add*.
 \p
-\v 20 Then King Hizkiyah and Yeshayah \add (Isaiah)\add* (son of the prophet Amots) called out to the heavens \add requesting God’s help\add*,
+\v 20 Then King Hizkiyah and Yeshayah \add (Isaiah,\add* son of the prophet Amots) called out to the heavens \add requesting God’s help\add*,
 \v 21 and Yahweh sent a messenger who destroyed the powerful warriors, and the leaders and chiefs in the Assyrian \add army\add*, and then their king had to \add return home in\add* shame. When he went into the temple of his god, some of \add his sons ran him through with a\add* sword.
 \p
 \v 22 \add So that’s how\add* Yahweh saved Hizkiyah and Yerushalem’s inhabitants from the Assyrian King Sanheriv, and from \add the power of other nations\add*, and he gave them peace on all sides.
@@ -1239,7 +1240,7 @@
 \v 9 They went to Hilkiyah the high priest and \add handed over the funds that had been donated\add* for God’s house, which had been collected by the Levites as doorkeepers—\add the money\add* was from \add the tribes of\add* Menasheh, Efrayim, and other places in \add the northern\add* Yisrael \add kingdom\add*, as well as from Yerushalem’s inhabitants and \add people across\add* all of Yehudah and Benyamin.
 \v 10 \add The priests\add* then \add paid the workers\add* who’d been assigned to \add work in\add* Yahweh’s \add temple\add* to repair and strengthen it.
 \v 11 They also \add paid the carpenters\add* and builders to buy cut \add stone\add* and timber for the beams and braces which Yehudah’s kings \add had allowed to deteriorate\add*,
-\v 12 and the \add workers\add* did \add their\add* work \add faithfully\add*. \add Their supervisors\add* were Yahat and Ovadyah \add (Obadiah)\add* (Levites descended from Merari), as well as Zekaryah \add (Zechariah)\add* and Meshulam (descendants of \add Levi’s son\add* Kohat), and all the Levites who \add were good on their\add* musical instruments.
+\v 12 and the \add workers\add* did \add their\add* work \add faithfully\add*. \add Their supervisors\add* were Yahat and Ovadyah \add (Obadiah,\add* Levites descended from Merari), as well as Zekaryah \add (Zechariah)\add* and Meshulam (descendants of \add Levi’s son\add* Kohat), and all the Levites who \add were good on their\add* musical instruments.
 \v 13 They \add also\add* supervised the porters and \add people\add* working on various \add other\add* tasks. Some of the Levites were secretaries, officials, and guards.
 \p
 \v 14 When they were bringing the money out of the \add temple\add*, Hilkiyah the \add high\add* priest found a scroll containing Yahweh’s instructions that had \add been given via\add* Mosheh \add (Moses)\add*.

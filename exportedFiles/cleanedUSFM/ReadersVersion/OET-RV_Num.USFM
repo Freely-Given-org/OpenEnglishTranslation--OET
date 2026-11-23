@@ -1,4 +1,4 @@
-\id NUM - Open English Translation—Readers’ Version (OET-RV) v0.2.19
+\id NUM - Open English Translation—Readers’ Version (OET-RV) v0.2.23
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 NUM
@@ -6,26 +6,26 @@
 \h Census
 \toc1 Census
 \toc2 Census
-\toc3 Cen.
+\toc3 Cen
 \mt1 Census
-\mt3 often called
+\mt3 commonly called
 \mt2 Numbers
 \is1 Introduction
-\ip The English word ‘Numbers’ relates to the census of Israeli fighting men so we have chosen to rename it as \bk ‘Census’\bk*. (Actually, there are \em two\em* censuses described in this document, but the plural form of the word feels less comfortable to pronounce.) Hebrew readers call this document ‘Bemidbar’ which is the fourth word in the Hebrew text, and means ‘In the wilderness’. Some European and other translations call it ‘The fourth book of Mosheh’ (Moses).
+\ip The English word ‘Numbers’ relates to the census of Israeli fighting men so we have chosen to rename it as \bk ‘Census’\bk*. (Actually, there are \em two\em* censuses described in this document, but the plural form of the word feels less comfortable to pronounce.) Hebrew readers call this document ‘Bemidbar’ which is the fourth word in the Hebrew text, and means ‘In the wilderness’. Some European and other translations call it ‘The fourth book of Mosheh/Moses’.
 \ip This document tells about the descendants of Yisrael (called ‘Israel’ in older translations) for the forty years after their departure from Mt. Sinay, until they arrived at the eastern edge of the land that God has promised to give them. This document is named after the census that Yahweh ordered Mosheh to take before the Israelis had left Mt. Sinay.
 \ip Then the Israelis purified themselves and celebrated their second ‘pass-over’ festival after some forty years had passed.
 \ip Also at that time, the second census of fighting men was taken, i.e., a generation later at Kadesh-Barnea at Kena’an’s southern boundary. But from Kadesh-Barnea, none of them entered the land that Yahweh had promised to give them.
-\ip When they were still camped east of the Yarden (Jordan) river, two and a half tribes requested to be given territory on that side of the river, although they sent their fighting men ahead with the other tribes to help them conquer Kena’an.
+\ip When they were still camped east of the Yarden/Jordan river, two and a half tribes requested to be given territory on that side of the river, although they sent their fighting men ahead with the other tribes to help them conquer Kena’an.
 \ip This ‘Census’ document also records how people were often scared and discouraged as they faced hardship, causing them to sometimes rebel against Yahweh and his chosen servant Mosheh who led them. However, Yahweh’s (mostly) patient endurance of their behaviour is told here, and his faithfulness throughout their generations. It reveals Mosheh as an obedient yet humble leader who was devoted both to Yahweh and to the people he had responsibility for.
 \iot Main components of this account
 \io1 The Israelis prepare to depart from Sinay \ior 1:1–9:23\ior*
 \io2 a. The first Israeli census \ior 1:1–4:49\ior*
 \io2 b. Various laws and regulations \ior 5:1–8:26\ior*
 \io2 c. The second celebration of the messenger’s ‘pass-over’ \ior 9:1-23\ior*
-\io1 From Mt. Sinay to Moav (Moab)\ior 10:1–21:35\ior*
+\io1 From Mt. Sinay to Moav/Moab\ior 10:1–21:35\ior*
 \io1 The events in Moav \ior 22:1–32:42\ior*
 \io1 The places passed through by the Israelis \ior 33:1-49\ior*
-\io1 Warnings before crossing the Yarden (Jordan) river \ior 33:50–36:13\ior*
+\io1 Warnings before crossing the Yarden/Jordan river \ior 33:50–36:13\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
@@ -562,7 +562,7 @@
 \v 26 Two of the men who were listed (named Eldad and Medad), had remained in the \add main\add* camp (not going to the \add sacred\add* tent), and the spirit had \add also\add* rested on them and they prophesied in the camp.
 \v 27 A young man ran to Mosheh and told him that Eldad and Medad were prophesying \add there\add* in the camp.
 \p
-\v 28 Then Nun’s son Yehoshua \add (Joshua)\add* (who had helped Mosheh since his youth) \add responded\add*, “My master Mosheh, stop them \add from that\add*.”
+\v 28 Then Nun’s son Yehoshua \add (Joshua,\add* who had helped Mosheh since his youth) \add responded\add*, “My master Mosheh, stop them \add from that\add*.”
 \p
 \v 29 \add But\add* Mosheh replied, “Are you being jealous \add on my behalf\add*? \add I’d be happy if\add* Yahweh would put his spirit on \em all\em* the people and \add make them into\add* prophets.”
 \v 30 Then Mosheh and the elders \add went back to their tents\add*.
@@ -608,7 +608,7 @@
 \li1
 \v 5 Shafat (Hori’s son) from Shim’on \add (Simeon)\add* tribe,
 \li1
-\v 6 Kalev \add (Caleb)\add* \add (Kalev—\add*Yefuneh’s son) from Yehudah \add (Judah)\add* tribe,
+\v 6 Kalev \add (Caleb,\add* \add Kalev—\add*Yefuneh’s son) from Yehudah \add (Judah)\add* tribe,
 \li1
 \v 7 Yigal (Yosef’s \add (Joseph’s)\add* son) from Yisakar \add (Issachar)\add* tribe,
 \li1
@@ -932,7 +932,7 @@
 \s1 Water from the Kadesh rock
 \r (Exo. 17:1-7)
 \p
-\v 1 Then in the first month \add of the next year\add*, all the \add Israelis\add* entered the Tsin \add (Zin)\add* \add (‘Thorny’ or ‘Thirsty’)\add* wilderness and the people \add camped\add* at Kadesh. \add While they were\add* there, Miryam \add (Miriam)\add* died, and was buried there.
+\v 1 Then in the first month \add of the next year\add*, all the \add Israelis\add* entered the Tsin \add (Zin,\add* \add ‘Thorny’ or ‘Thirsty’)\add* wilderness and the people \add camped\add* at Kadesh. \add While they were\add* there, Miryam \add (Miriam)\add* died, and was buried there.
 \p
 \v 2 \add However,\add* there was no water \add to drink,\add* \add so the people\add* came against Mosheh \add (Moses)\add* and Aharon \add (Aaron)\add*\x + \xo 20:2-13: \xt Exo 17:1-7.\x*
 \v 3 and complained, “\add It would have been better if we’d died in front of Yahweh along with our relatives\add* \add back there\add*.
@@ -1266,7 +1266,7 @@
 \q1 and your nest is set in the cliffs.
 \q1
 \v 22 but you Keynim will be destroyed
-\q1 when Ashur \add (Assyria)\add* \add (the Assyrians)\add* take you captive.”
+\q1 when Ashur \add (Assyria,\add* \add the Assyrians)\add* take you captive.”
 \p
 \v 23 Then \add finally,\add* \add Bil’am\add* \add (Balaam)\add* \add made this pronouncement\add*,
 \q1 “Oh dear, who can \add survive\add* when God does \add all\add* that?
@@ -1673,7 +1673,7 @@
 \v 31 “What Yahweh has told you, \add his\add* servants, that’s what we’ll do,” the \add leaders of the Gad and Re’uven tribes responded\add*.
 \v 32 We’ll \add send armed men across\add* to Kena’an, equipped to fight for Yahweh. \add However,\add* our inheritance to own will be \add here\add* on this side of the Yarden \add river\add*.”
 \p
-\v 33 \add So\add* Mosheh gave \add that region\add* to the Re’uven and Gad tribes, the half-tribe of Yosef’s \add (Joseph’s)\add* son Menasheh \add (Manasseh)\add*, \add encompassing\add* the kingdoms of the Amori King Sihon and the Bashan’s King Og, plus the surrounding territories.
+\v 33 \add So\add* Mosheh gave \add that region\add* to the Re’uven and Gad tribes, the half-tribe of Yosef’s \add (Joseph’s)\add* son Menasheh \add (Manasseh)\add*, \add encompassing\add* the kingdoms of the Amori King Sihon and Bashan’s King Og, plus the surrounding territories.
 \v 34 The Gadim rebuilt Divon, Atarot, Aroer,
 \v 35 Atrot-Shofan, Yazer, Yagebehah,
 \v 36 Beyt-Nimrah, and Beyt-Haran—\add all\add* \add fortified\add* cities with pens for \add their\add* flocks.

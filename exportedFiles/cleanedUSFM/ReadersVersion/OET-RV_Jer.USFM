@@ -1,12 +1,12 @@
-\id JER - Open English Translation—Readers’ Version (OET-RV) v0.2.20
+\id JER - Open English Translation—Readers’ Version (OET-RV) v0.2.25
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JER
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \h Yirmiyah
-\toc1 Yirmiyah
+\toc1 Yirmiyah (Jeremiah)
 \toc2 Yirmiyah
-\toc3 Yir.
+\toc3 Yir
 \mt1 Yirmiyah
 \mt2 (Jeremiah)
 \is1 Introduction
@@ -27,7 +27,7 @@
 \s4 Southern kingdom
 \p
 \v 1 \add These are\add* the messages from Hilkiyah’s son, Yirmiyah \add (Jeremiah)\add*—one of the priests who were in Anatot in Benyamin’s territory.
-\v 2 Yahweh’s \add messages\add* \add started\add* coming to him when Yehudah’s \add (Judah’s)\add* King Yoshiyah \add (Josiah)\add* (Amon’s son) was in the thirteenth year of his reign.\x + \xo 1:2: \xt 2Ki 22:3–23:27; 2Ch 34:8–35:19.\x*
+\v 2 Yahweh’s \add messages\add* \add started\add* coming to him when Yehudah’s \add (Judah’s)\add* King Yoshiyah \add (Josiah,\add* Amon’s son) was in the thirteenth year of his reign.\x + \xo 1:2: \xt 2Ki 22:3–23:27; 2Ch 34:8–35:19.\x*
 \v 3 \add It continued\add* through the \add reign\add* of Yoshiyah’s son, King Yehoyakim\x + \xo 1:3: \xt 2Ki 23:36–24:7; 2Ch 36:5-8.\x* until the end of the eleventh year of \add the reign\add* of Yoshiyah’s son, King Hizkiyah \add (Hezekiah)\add*—Yerushalem \add (Jerusalem)\add* was exiled in the fifth month \add of that year\add*.\x + \xo 1:3: \xt 2Ki 24:18–25:21; 2Ch 36:11-21.\x*
 \s1 Yirmiyah’s calling
 \q1
@@ -196,7 +196,7 @@
 \v 31 \add You in this\add* generation, \add pay attention\add* to Yahweh’s message.
 \q1 Have I been a wilderness to Yisrael \add (Israel)\add*, or a land of thick darkness?
 \q1 Why would my people say that they’ve now gone their own ways
-\q1 \add and so\add* won’t come back to me again?
+\q1 →\add and so\add* won’t come back to me again?
 \q1
 \v 32 Would a young woman forget \add to wear\add* her \add jewelry\add*,
 \q1 or a bride \add forget to wear\add* her \add wedding\add* sashes?
@@ -231,7 +231,7 @@
 \v 2 Look up at the \add barren hilltops\add* and see.
 \q1 Is there anywhere \add there\add* where you haven’t \add given yourself\add*?
 \q1 You sat by the paths \add waiting\add* for them like an Aravi \add waiting\add* in the wilderness,
-\q1 and \add so\add* you’ve polluted the \add nation\add* by your \add acts of\add* prostitution and wickedness.
+\q1 →and \add so\add* you’ve polluted the \add nation\add* by your \add acts of\add* prostitution and wickedness.
 \q1
 \v 3 \add That’s why\add* the showers have been withheld
 \q1 and the late \add rains\add* never came,
@@ -292,7 +292,7 @@
 \v 19 Then I thought to myself \add about\add* how I’d accept you \add to be my children\add*,
 \q1 and give you a desirable land—an inheritance that all nations \add consider very beautiful\add*.
 \q1 I \add decided\add* that you’ll all call me ‘my father’,
-\q1 and then you all won’t turn away from me.
+\q1 →and then you all won’t turn away from me.
 \q1
 \v 20 However, like a woman who deals treacherously with her companion,
 \q1 so too you’ve all dealt treacherously with me, \add you\add* \add Israeli people\add*.
@@ -326,7 +326,7 @@
 \q1 and remove \add those\add* detestable \add idols\add* \add away from me\add* without wavering,
 \q1
 \v 2 and if you promise \add as Yahweh lives\add*, in truth, justice, and righteousness,
-\q1 then the nations will bless themselves in him,
+\q1 →then the nations will bless themselves in him,
 \q1 and \add it’s him that they’ll boast about\add*.
 \p
 \v 3 \add Yes,\add* tells the \add people\add* from Yerushalem \add (Jerusalem)\add* and \add across all\add* Yehudah \add (Judah)\add*:
@@ -334,7 +334,7 @@
 \q1
 \v 4 Circumcise yourselves to Yahweh \add by\add* removing the foreskins from your \add hearts\add*
 \q1 \add you\add* \add people\add* of Yerushalem and Yehudah,
-\q1 so that my rage doesn’t \add burst out\add* and burn like fire,
+\q1 →so that my rage doesn’t \add burst out\add* and burn like fire,
 \q1 \add because\add* there wouldn’t be anyone to extinguish it \add due\add* to the wickedness of your \add behaviour\add*.
 \s1 The coming punishment of Yehudah
 \s4 Southern kingdom
@@ -455,7 +455,7 @@
 \v 1 Roam around Yerushalem’s \add (Jerusalem’s)\add* streets and look and observe,
 \q1 and search around its plazas.
 \q1 If you can find \add one\add* person there who \add values\add* justice and \add strives to be faithful\add*,
-\q1 then I’ll forgive \add the city\add*.
+\q1 →then I’ll forgive \add the city\add*.
 \q1
 \v 2 Even when \add they make an oath in Yahweh’s name\add*,
 \q1 it’ll \add still\add* be a lie.
@@ -471,7 +471,7 @@
 \q1
 \v 5 \add So\add* I’ll go to the leaders and speak to them,
 \q1 because they know Yahweh’s way and what their god \add requires\add*.
-\q1 However, all of them have broken out from under \add his\add* yoke,
+\q1 ^However, all of them have broken out from under \add his\add* yoke,
 \q2 and torn off the chains.
 \q1
 \v 6 \add Because of that,\add* a lion from a thicket will attack them.
@@ -507,7 +507,7 @@
 \q1 and we’ll \add never experience\add* war or famine.
 \q1
 \v 13 The prophets are \add full of air\add* and \add don’t have any\add* message.
-\q1 So let what they say, happen to them.
+\q1 →So let what they say, happen to them.
 \p
 \v 14 So Commander-in-chief Yahweh says this:
 \q1 Because you’ve spoken those \add words\add*,
@@ -532,7 +532,7 @@
 \q1
 \v 19 When the people \add ask why\add* Yahweh’s doing that, you’ll tell them:
 \q1 You rejected me and served \add foreign\add* gods in your own \add country\add*,
-\q1 so you’ll all serve strangers in a land that doesn’t belong to you.
+\q1 →so you’ll all serve strangers in a land that doesn’t belong to you.
 \s1 Yahweh warns his people
 \s4 Southern kingdom
 \p
@@ -657,7 +657,7 @@
 \v 15 Were they ashamed when they did something disgusting?
 \q1 \add No,\add* they weren’t ashamed—
 \q1 they didn’t even know how to be humiliated
-\q1 so therefore they’ll fall among the fallen.
+\q1 →so therefore they’ll fall among the fallen.
 \q1 At the time when I punish them, they’ll stumble.
 \m \add That’s what\add* Yahweh says.\x + \xo 6:12-15: \xt Jer 8:10-12.\x*
 \s1 Yisrael rejects Yahweh’s messages
@@ -721,13 +721,13 @@
 \q1 because the destroyer will suddenly come \add against\add* us.
 \q1
 \v 27 I’ve appointed you to examine my people like \add ore\add*,
-\q1 so you can observe their conduct, and test \add them\add*.
+\q1 →so you can observe their conduct, and test \add them\add*.
 \q1
 \v 28 They’re all stubborn rebels who go around slandering \add others\add*.
 \q1 They’re all \add like\add* bronze and iron, behaving corruptly.
 \q1
 \v 29 The bellows \add fan\add* the fire
-\q1 \add but after\add* the thorough refining, the lead \add remains\add*.
+\q1 ^\add but after\add* the thorough refining, the lead \add remains\add*.
 \q1 The evil \add people\add* haven’t been separated out.
 \q1
 \v 30 They’ll be called ‘rejected silver’
@@ -745,7 +745,7 @@
 \v 3 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says that
 \q1 you all must improve your ways,
 \q1 and make them right
-\q1 so that I’ll \add allow\add* you all to live in this \add land\add*.
+\q1 →so that I’ll \add allow\add* you all to live in this \add land\add*.
 \q1
 \v 4 Don’t trust in \add deceptive\add* words that say,
 \q1 ‘Yahweh’s temple \add is here\add*.’
@@ -841,7 +841,7 @@
 \v 12 Were they ashamed when they did \add something disgusting\add*?
 \q1 Even \add when confronted\add*, they weren’t ashamed—
 \q1 they didn’t know how to be humiliated
-\q1 so they’ll fall \add like the others\add*.
+\q1 →so they’ll fall \add like the others\add*.
 \q1 They’ll stumble at the time of their \add punishment\add* says Yahweh.\x + \xo 8:10-12: \xt Jer 6:12-15.\x*
 \p
 \v 13 I’ll bring their \add harvests\add* to an end, \add says\add* Yahweh.
@@ -892,7 +892,7 @@
 \q1 →then I’d weep day and night for my people’s slain daughter.
 \q1
 \v 2 Who will give me a lodging place for travellers in the desert?
-\q1 Then I would leave my people and walk away from them,
+\q1 →Then I would leave my people and walk away from them,
 \q1 because all of them are adulterers—
 \q1 a treacherous group of people.
 \q1
@@ -1099,7 +1099,7 @@
 \b
 \q1
 \v 21 \add Yes,\add* the shepherds are stupid and \add haven’t asked Yahweh for direction\add*
-\q1 so therefore they haven’t prospered, and all their flock has been scattered.
+\q1 →so therefore they haven’t prospered, and all their flock has been scattered.
 \q1
 \v 22 Listen, \add it sounds like news has arrived\add*
 \q1 plus there’s a loud rumble from a land in the north
@@ -1291,7 +1291,7 @@
 \q1 as you’ve forgotten me and trusted in \add lies\add*.
 \q1
 \v 26 \add So\add* I’ll also pull your \add skirt\add* up over your face
-\q1 and then your shame will become visible.
+\q1 →and then your shame will become visible.
 \q1
 \v 27 I’ve seen your adultery and \add neighing\add*—
 \q1 the wickedness of your prostitution on the hills and across the countryside.
@@ -1309,7 +1309,7 @@
 \q1 and Yerushalem \add (Jerusalem)\add* is crying out \add in distress\add*.
 \q1
 \v 3 The \add leading citizens\add* send their servants out for water,
-\q1 \add but\add* when they get to the wells, they didn’t find any.
+\q1 ^\add but\add* when they get to the wells, they didn’t find any.
 \q1 They return \add with empty containers\add*—
 \q1 ashamed and humiliated, and with their \add heads\add* covered \add in grief\add*.
 \q1
@@ -1426,7 +1426,7 @@
 \v 10 \add Poor\add* me, mother, that you gave birth to me—
 \q1 a man of strife and contention throughout the \add entire region\add*.
 \q1 I haven’t lent \add money\add* \add or borrowed it\add*
-\q1 \add yet\add* they all curse me.
+\q1 ^\add yet\add* they all curse me.
 \p
 \v 11 Yahweh said,
 \q1 Won’t I rescue you for good?
@@ -1557,7 +1557,7 @@
 \p
 \v 21 \add So listen,\add* I’m about to \add demonstrate that\add* at this time—
 \q1 I’ll reveal my \add power\add* and activity to them
-\q1 and then they’ll know that my name is Yahweh.
+\q1 →and then they’ll know that my name is Yahweh.
 \c 17
 \s1 Yehudah’s sin and punishment
 \s4 Southern kingdom
@@ -1606,7 +1606,7 @@
 \q1
 \v 11 A partridge hatches an egg that it didn’t lay.
 \q1 Someone \add might get rich by unjust means\add*
-\q1 \add but right\add* in the middle of their \add life\add* it’ll leave them
+\q1 ^\add but right\add* in the middle of their \add life\add* it’ll leave them
 \q1 and in the end, \add that person\add* will be a fool.
 \s1 Yirmiyah’s request to Yahweh
 \p
@@ -1659,7 +1659,7 @@
 \p
 \v 24 Yahweh \add declares\add* that if you carefully listen to me
 \q1 and don’t bring a load to this city’s gates on the rest day
-\q1 but instead set apart the rest day for Yahweh, and don’t do any work on it,
+\q1 ^but instead set apart the rest day for Yahweh, and don’t do any work on it,
 \q1
 \v 25 then kings, princes, and those who sit on David’s throne
 \q1 will come to this city’s gates in chariots and on horses.
@@ -1675,7 +1675,7 @@
 \v 27 \add But\add* if you don’t listen to me
 \q1 \add and don’t\add* set apart the rest day
 \q1 and don’t carry heavy loads to enter Yerushalem’s gates on the rest day,
-\q1 then I’ll light a fire at its gates \add that\add* will \add incinerate\add* Yerushalem’s fortresses,
+\q1 →then I’ll light a fire at its gates \add that\add* will \add incinerate\add* Yerushalem’s fortresses,
 \q1 and that won’t be able to be put out.
 \c 18
 \s1 Yirmiyah visits the potter
@@ -1815,9 +1815,9 @@
 \q1
 \v 9 If I say that I won’t \add mention\add* him
 \q1 and won’t speak in his name anymore,
-\q1 then \add his message\add* becomes a fire burning in my heart—
+\q1 →then \add his message\add* becomes a fire burning in my heart—
 \q1 shut up in my bones.
-\q1 Then I \add get worn out\add* holding it in,
+\q1 →Then I \add get worn out\add* holding it in,
 \q1 and I can’t continue \add to do it\add*.
 \q1
 \v 10 \add Yes,\add* I’ve heard many \add people\add* whispering
@@ -1825,11 +1825,11 @@
 \q1 \add They want to publicly denounce me\add*.
 \q1 All my trusted friends watch for my fall:
 \q1 “Perhaps he can be deceived
-\q1 so that we may prevail against him
+\q1 →so that we may prevail against him
 \q1 and take out our vengeance on him.”
 \q1
 \v 11 \add However\add* Yahweh is like a fearsome warrior with me,
-\q1 therefore \add my persecutors\add* will stumble and won’t prevail.
+\q1 →therefore \add my persecutors\add* will stumble and won’t prevail.
 \q1 Because they won’t succeed, they’ll be totally put to shame—
 \q1 an everlasting disgrace that’ll never be forgotten.
 \q1
@@ -1905,7 +1905,7 @@
 \v 5 \add However,\add* if you \add take no notice\add* of those \add instructions\add*, then Yahweh \add solemnly promises\add* that this \add palace\add* will become a \add pile of rubble\add*,\x + \xo 22:5: \xt Mat 23:38; Luk 13:35.\x*
 \v 6 because this is what Yahweh says about the \add palace\add* of Yehudah’s king:
 \q1 To me, you’re like the Gilead \add forests\add* or like Levanon’s \add summit\add*.
-\q1 \add However,\add* I’ll make you into a wilderness—
+\q1 ^\add However,\add* I’ll make you into a wilderness—
 \q1 cities that aren’t inhabited.
 \q1
 \v 7 I’ll \add appoint\add* destroyers against you—
@@ -1920,7 +1920,7 @@
 \q1
 \v 10 Don’t weep for \add King Yoshiyah\add* \add (Josiah)\add* \add who was killed\add*
 \q1 and don’t mourn \add because he died\add*.
-\q1 \add Instead,\add* weep bitterly for \add his son, King Yehoahaz\add* who’s about to be exiled
+\q1 ^\add Instead,\add* weep bitterly for \add his son, King Yehoahaz\add* who’s about to be exiled
 \q1 because he won’t return again and see his native land \add again\add*.
 \p
 \v 11 \add Yes,\add* Yahweh says this about Yoshiyah’s son Yehoahaz\f + \fr 22:11 \ft Called ‘Shallum’ here in the Hebrew.\f* who reigned instead of his father, who \add then\add* left this place. He won’t return there again\x + \xo 22:11: \xt 2Ki 23:31-34; 2Ch 36:1-4.\x*
@@ -1972,11 +1972,11 @@
 \q1
 \v 22 The wind will \add drive away\add* all your ‘shepherds’,
 \q1 and your ‘lovers’ will go into captivity.
-\q1 Then you’ll be ashamed and humiliated \add because of\add* all your wickedness.
+\q1 →Then you’ll be ashamed and humiliated \add because of\add* all your wickedness.
 \q1
 \v 23 \add You\add* who live in Levanon,
 \q1 nested \add there\add* among the cedars,
-\q1 \add but\add* how you’ll groan when your labour pains come to you,
+\q1 ^\add but\add* how you’ll groan when your labour pains come to you,
 \q1 like \add a woman\add* giving birth.
 \s1 Judgement for Yehoyakin
 \s4 Southern kingdom
@@ -2351,7 +2351,7 @@
 \s4 Southern kingdom
 \p
 \v 24 \add Yahweh told me to\add* tell Shemayah (the Nehelami) this:
-\v 25 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says this: Because you sent letters in your name to all the people in Yerushalem \add (Jerusalem)\add*, and to the priest Tsefanyah \add (Zephaniah)\add* (Ma’aseyah’s son), and to all the priests, to tell \add Tsefanyah\add*:
+\v 25 Yisrael’s \add (Israel’s)\add* god, Commander-in-chief Yahweh says this: Because you sent letters in your name to all the people in Yerushalem \add (Jerusalem)\add*, and to the priest Tsefanyah \add (Zephaniah,\add* Ma’aseyah’s son), and to all the priests, to tell \add Tsefanyah\add*:
 \pi1
 \v 26 Yahweh has made you, \add Tsefanyah,\add* priest in place of the priest Yehoyada, to be \add overseer\add* in Yahweh’s \add temple\add* over every man who raves \add out loud\add*, making himself a prophet, and you must put him in the stocks \add with an iron collar around his\add* neck.
 \v 27 \add So why\add* haven’t you rebuked Yirmiyah \add (Jeremiah)\add* the Antoti who’s prophesying to you all,
@@ -2397,7 +2397,7 @@
 \v 11 Yahweh \add declares\add*:
 \q1 \add Yes,\add* I’m with you to rescue you,
 \q1 because I’ll \add completely destroy\add* all the nations that I’ve scattered you to,
-\q1 but I won’t \add completely destroy\add* you.
+\q1 ^but I won’t \add completely destroy\add* you.
 \q1 I’ll discipline you according to justice,
 \q1 \add but I won’t just let you off what you deserve\add*.
 \p
@@ -2424,7 +2424,7 @@
 \q1
 \v 16 \add Because of that\add*, all those who devoured you will be devoured,
 \q1 and all of your adversaries, every one of them, will go into captivity.
-\q1 Then the ones plundering you will become like plunder,
+\q1 →Then the ones plundering you will become like plunder,
 \q1 and all those preying on you, I’ll give \add to you\add* as spoil.
 \q1
 \v 17 \add Yes,\add* I’ll bring healing to you,
@@ -2475,7 +2475,7 @@
 \q1 Yisrael going to find \add a peaceful place\add*.
 \q1
 \v 3 From far off, Yahweh appeared to me: I’ve always loved you
-\q1 therefore I’ve \add displayed\add* loyal commitment \add to help you endure\add*.
+\q1 →therefore I’ve \add displayed\add* loyal commitment \add to help you endure\add*.
 \q1
 \v 4 I’ll rebuild you, and you’ll be \add restored\add*, Yisrael’s \add pretty daughter\add*.
 \q1 Again you’ll adorn yourself with your tambourines,
@@ -2488,7 +2488,7 @@
 \q1 ‘\add Get ready\add* and let’s go up to our god Yahweh at Tsiyon \add (Zion)\add*,’
 \q1
 \v 7 because Yahweh says this:
-\q1 “Sing for \add Yisrael\add* \add (Israel)\add* (Ya’akov \add (Jacob)\add*) with gladness,
+\q1 “Sing for \add Yisrael\add* \add (Israel,\add* Ya’akov \add (Jacob)\add*) with gladness,
 \q1 and shout for this \add leader\add* of the nations.
 \q1 Cause it to be heard, praise, and say,
 \q1 ‘Yahweh, save your people, the remnant of Yisrael.’
@@ -2566,7 +2566,7 @@
 \q1 or a child \add that I really liked\add*?
 \q1 \add Yes,\add* as often as I speak against him,
 \q1 I still \add continually\add* remember him.
-\q1 Therefore I groan \add deep down\add* for him.
+\q1 →Therefore I groan \add deep down\add* for him.
 \q1 I’ll \add always feel compassionate towards\add* him.
 \m That is Yahweh’s declaration.
 \q1
@@ -2626,12 +2626,12 @@
 \q1 His name is Commander-in-chief Yahweh.
 \q1
 \v 36 Yahweh \add declares\add* that if these \add elements\add* stopped working,
-\q1 then Yisrael \add (Israel)\add* would also permanently cease to exist as a nation.
+\q1 →then Yisrael \add (Israel)\add* would also permanently cease to exist as a nation.
 \p
 \v 37 Yahweh says this:
 \q1 If the skies above could be measured and be searched out,
 \q1 as well as the foundations of the earth below,
-\q1 then I would also reject all of Yisrael’s descendants
+\q1 →then I would also reject all of Yisrael’s descendants
 \q2 for everything that they’ve done.
 \m That is Yahweh’s declaration.
 \p
@@ -2812,7 +2812,7 @@
 \v 11 \add When\add* Mikayah (son of Gemaryah son of Shafan) heard all Yahweh’s messages from the scroll,
 \v 12 he went down to the \add secretary’s\add* room in the \add palace\add*, and wow, all the officials were sitting there: Elishama the \add secretary\add*, Shemayah’s son Delayah, Akbor’s son Elnatan, Shafan’s son Gemaryah, and Hananyah’s son Tsidkiyah \add (Zedekiah)\add*, \add along with\add* all the \add other\add* officials.
 \v 13 \add When\add* Mikayah reported to them all the messages that he’d heard Baruk read aloud \add for the people to hear\add*,
-\v 14 the officials sent Yehudi \add (Jew)\add* (son of Netanyah son of Shelemyah son of Kushi) to Baruk. Yehudi \add ordered\add* Baruk, “Take the scroll in your hand, the scroll from which you were reading in the hearing of the people, and come.” \add So\add* Neriyah’s son Baruk took the scroll and went to the officials
+\v 14 the officials sent Yehudi \add (Jew,\add* son of Netanyah son of Shelemyah son of Kushi) to Baruk. Yehudi \add ordered\add* Baruk, “Take the scroll in your hand, the scroll from which you were reading in the hearing of the people, and come.” \add So\add* Neriyah’s son Baruk took the scroll and went to the officials
 \v 15 \add where\add* they told him to sit down and read it \add to them\add*, \add so\add* Baruk \add read out\add* \add the messages\add*.
 \v 16 \add When\add* they heard \add it all\add*, they \add were afraid and decided together that they needed to report it\add* all to the king,
 \v 17 and they asked Baruk, “How come you wrote down all these messages from \add Yirmiyah\add* \add (Jeremiah)\add*?”
@@ -3194,11 +3194,11 @@
 \q1 it will \add lie in ruins\add* and \add no one will live\add* there.
 \q1
 \v 20 Mitsrayim is a very beautiful young cow,
-\q1 but a \add stinging insect\add* is coming from the north.
+\q1 ^but a \add stinging insect\add* is coming from the north.
 \q1 It’s \add on its way\add*.
 \q1
 \v 21 Its hired soldiers are like calves \add that have been protected and well-fed\add*,
-\q1 but they’ll also turn away and run away.
+\q1 ^but they’ll also turn away and run away.
 \q1 They won’t stand together, because the day of their disaster is coming against them—
 \q1 it’s time for their punishment.
 \q1
@@ -3207,7 +3207,7 @@
 \q1 They’re coming toward her like woodcutters with axes.
 \q1
 \v 23 Yahweh \add declares\add* that they’ll cut down the forest
-\q1 \add so there’ll be nowhere to hide\add*
+\q1 →\add so there’ll be nowhere to hide\add*
 \q1 because \add their soldiers\add* will be more numerous than locusts
 \q1 and \add no one will even be able to count\add* them.
 \q1
@@ -3218,11 +3218,11 @@
 \v 26 I’ll \add hand them over\add* to \add those who want them dead\add*, and \add over\add* to Bavel’s \add (Babylon’s)\add* King Nevukadnetsar \add (Nebuchadnezzar)\add* and his servants. \add But\add* after that, \add Mitsrayim\add* will be inhabited as in \add past times\add*. That is Yahweh’s declaration.
 \s1 Yahweh’s rescue of Ya’akov’s descendants
 \q1
-\v 27 But you, my servant Ya’akov \add (Jacob)\add* \add (meaning Yisrael\add* \add (Israel)\add* \add )\add*, don’t \add be afraid\add*.
+\v 27 But you, my servant Ya’akov \add (Jacob,\add* \add meaning Yisrael\add* \add (Israel)\add* \add )\add*, don’t \add be afraid\add*.
 \q1 Don’t be dismayed, Yisrael, because listen,
 \q1 I’m about to \add bring you back\add* from \add far away\add*,
 \q1 and your \add descendants\add* from the land of their captivity.
-\q1 Then Ya’akov will return, \add find peace, and be secure\add*,
+\q1 →Then Ya’akov will return, \add find peace, and be secure\add*,
 \q1 and there’ll be no one to terrify him.\x + \xo 46:27-28: \xt Jer 30:10-11.\x*
 \q1
 \v 28 This is Yahweh’s declaration:
@@ -3230,7 +3230,7 @@
 \q1 because I’m with you,
 \q1 \add so\add* I’ll \add send\add* complete destruction to all the nations that I drove you into.
 \q1 \add But\add* I won’t completely \add destroy\add* you,
-\q1 although I’ll discipline you \add fairly\add*,
+\q1 ^although I’ll discipline you \add fairly\add*,
 \q1 and \add I\add* certainly won’t leave you unpunished.”
 \c 47
 \s1 Yahweh’s message to the Pelishtim
@@ -3287,7 +3287,7 @@
 \q1 shouts of distress will heard \add because of the\add* destruction.
 \q1
 \v 6 Flee, save your \add lives\add*
-\q1 so you’ll be like a juniper bush in the wilderness.
+\q1 →so you’ll be like a juniper bush in the wilderness.
 \b
 \q1
 \v 7 Because of your trust in your \add practices\add* and your wealth,
@@ -3307,7 +3307,7 @@
 \v 11 Moav \add (Moab)\add* has felt secure since it was young.
 \q1 It’s like its wine that’s never been poured from \add container to container\add*.
 \q1 It’s never gone into captivity.
-\q1 so it \add still\add* \add tastes as good as ever\add*—
+\q1 →so it \add still\add* \add tastes as good as ever\add*—
 \q1 its \add nice\add* aroma hasn’t changed.
 \p
 \v 12 \add But\add* Yahweh \add declares\add* that \add the time\add* is coming
@@ -3427,7 +3427,7 @@
 \q1 and its people live in their cities?\x + \xo 49:1-6: \xt Eze 21:28-32; 25:1-7; Amos 1:13-15; Zeph 2:8-11.\x*
 \v 2 So listen, Yahweh \add declares\add* that the \add time is\add* coming
 \q1 when I’ll sound the signal for battle against Amon’s \add capital city\add* Rabah,
-\q1 so it’ll become a deserted heap and its \add villages\add* will be set on fire,
+\q1 →so it’ll become a deserted heap and its \add villages\add* will be set on fire,
 \q1 because Yahweh says that Yisrael will \add drive out\add* those who \add initially\add* \add drove them out\add*.
 \v 3 Wail, Heshbon, because Ay will be devastated.
 \q1 Cry out \add and\add* put on \add coarse, abrasive\add* sackcloth, \add you\add* daughters of Rabah.
@@ -3502,7 +3502,7 @@
 \q1 The sound of \add distressed shouts\add* will be heard \add right across\add* at the Red sea.
 \q1
 \v 22 Listen, someone will ascend like an eagle, and swoop down and spread his wings over Batserah.
-\q1 Then on that day, Edom’s soldiers will be \add apprehensive\add* like \add women\add* in labour.”
+\q1 →Then on that day, Edom’s soldiers will be \add apprehensive\add* like \add women\add* in labour.”
 \s1 Yahweh’s judgement for Damesek
 \p
 \v 23 Concerning Damesek \add (Damascus)\add*:
@@ -3729,7 +3729,7 @@
 \q1
 \v 37 \add Attacks\add* are coming against their horses,
 \q1 their chariots and all of \add Bavel’s\add* foreign \add mercenaries\add*,
-\q1 so they’ll become like women.
+\q1 →so they’ll become like women.
 \q1 \add Armed raids\add* are coming against its storerooms,
 \q1 →and they’ll \add all\add* be looted.
 \q1
@@ -3805,7 +3805,7 @@
 \q1 Wail for it—give it medicine for its pain—perhaps it can be healed?
 \q1
 \v 9 We \add tried to\add* heal Bavel, but \add it never recovered\add*,
-\q1 \add so\add* leave it and let everyone go \add back\add* to their own \add region\add*,
+\q1 →\add so\add* leave it and let everyone go \add back\add* to their own \add region\add*,
 \q1 because its guilt has reached up to the heavens—
 \q1 it’s \add piled\add* up to the clouds.\x + \xo 51:9: \xt Rev 18:5.\x*
 \p
@@ -3937,7 +3937,7 @@
 \q1 like lambs, rams, \add and\add* male goats.
 \s1 Punishing Bavel and its god
 \p
-\v 41 \add Wow, Bavel\add* \add (Babylon)\add* \add (Heb. Sheshak)\add* has been captured.
+\v 41 \add Wow, Bavel\add* \add (Babylon,\add* \add Heb. Sheshak)\add* has been captured.
 \q1 \add The city\add* \add praised by the whole world\add* has been seized.
 \q1 \add Wow,\add* Bavel has become a horror among the nations.
 \q1
@@ -3949,7 +3949,7 @@
 \q1
 \v 44 I’ll punish Bavel’s \add god\add* Bel
 \q1 and I’ll \add pull\add* what he swallowed \add back\add* out of his mouth,
-\q1 Then the nations will no longer \add go streaming\add* to him \add to placate him\add*.
+\q1 →Then the nations will no longer \add go streaming\add* to him \add to placate him\add*.
 \q1 \add What’s more,\add* Bavel’s \add walls\add* will fall.
 \q1
 \v 45 Come out from \add Bavel\add*, my people.
@@ -3959,7 +3959,7 @@
 \q1 \add as\add* there’ll be a report one year and the again the year after.
 \q1 There’ll be violence will in the \add world\add*—ruler will be against ruler.
 \q1
-\v 47 Therefore, listen, \add the time\add* is coming when I’ll punish the Bavel’s carved idols.
+\v 47 Therefore, listen, \add the time\add* is coming when I’ll punish Bavel’s carved idols.
 \q1 \add People\add* \add across their country\add* will be ashamed,
 \q1 and their slaughtered \add soldiers\add* will all fall \add right there in their country\add*.
 \q1

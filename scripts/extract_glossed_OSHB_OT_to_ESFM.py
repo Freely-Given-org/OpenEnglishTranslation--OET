@@ -82,10 +82,10 @@ import bos_books_codes_py
 from ot_gloss_fallbacks import fix_known_gloss_duplication, recover_missing_word_glosses, select_gloss
 
 
-LAST_MODIFIED_DATE = '2026-11-18' # by RJH
+LAST_MODIFIED_DATE = '2026-11-21' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '1.0.9'
+PROGRAM_VERSION = '1.0.10'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -679,7 +679,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
 
         wn = f"¦{given_verse_row['n']}"
 
-        gloss = make_gloss_adjustments_and_append_word_number( gloss, wn )
+        gloss = make_gloss_adjustments_and_append_word_number( gloss, wn, given_verse_row['Ref'] )
         if 'S' in given_verse_row['GlossCapitalisation'] \
         or (just_had_insert and 'S' in saved_capitalisation): # Start of Sentence
             gloss = capitalise_gloss(gloss)
@@ -728,7 +728,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
                                                 f" (from '{given_verse_row['NoCantillations']}')" )
         wn = f"¦{given_verse_row['n']}"
 
-        wordGloss = make_gloss_adjustments_and_append_word_number( wordGloss, wn )
+        wordGloss = make_gloss_adjustments_and_append_word_number( wordGloss, wn, given_verse_row['Ref'] )
         if 'S' in given_verse_row['GlossCapitalisation']:
             wordGloss = capitalise_gloss(wordGloss)
 
@@ -762,21 +762,24 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
 # end of extract_glossed_OSHB_OT_to_ESFM.preform_row_gloss
 
 
-def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
+def make_gloss_adjustments_and_append_word_number( original_gloss:str, wn:str, ref:str ) -> str:
     """
     Makes adjustments to gloss 'words' (i.e., glosses of Hebrew words)
         and adds the word number(s)
 
     gloss can include things like 'he_created', 'the=earth/land', 'And=the=earth', '[was]_over', and '[is]'
 
+    ref is only required for user messages
+
     Returns fields like: 'he¦2_created¦2', 'the¦7=earth/land¦7', 'And¦9=the¦9=earth¦9', and XXX
     """
     # print( f"make_gloss_adjustments_and_append_word_number( {gloss=}, {wn=} )")
-    assert gloss
+    assert original_gloss
     assert wn[0] == '¦' and wn[1:].isdigit()
 
+    gloss = original_gloss
     if gloss == '_': # Why do we have these? TODO: Should they be hyphens (for untranslated words)?
-        logging.critical( f"Refusing to add word number {wn=} to {gloss=}" )
+        logging.critical( f"Refusing to add {ref} word number {wn=} to {gloss=}" )
         assert False, "We want to stop here" # Maybe it doesn't actually occur???
         return gloss # Don't want a word number on this
 
@@ -827,7 +830,6 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
                 # .replace( '[will,', '[will],' ) # 2026-03-19 ???
                 # .replace( '(with,', '[with],' ) # Not totally sure that it should be square brackets 2026-03-19 ???
                 .replace( 'to,who]', 'to,[who]' ) # 2026-03-19 ???
-                # .replace( '(to,', '[to],' ) # THIS ONE OVERREACHES!!! Not totally sure that it should be square brackets 2026-03-19 ??? THIS ONE OVERREACHES!!!
                 # .replace( '(in,life', '[in],life' ) # Not totally sure that it should be square brackets 2026-03-19 ???
                 # .replace( '(to,Baal', '[to],Baal' ) # 2026-03-19 ???
                 # .replace( 'and,(to,Ashtaroth', 'and,[to],Ashtaroth' ) # 2026-03-19 ???
@@ -856,17 +858,17 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
     if gloss.endswith('the_[one') or gloss.endswith('[who') or gloss.endswith('[will') or gloss.endswith('[those') or gloss.endswith('[one') or gloss.endswith('[have') or gloss.endswith('[has') or gloss.endswith('[had') or gloss.endswith('[are'):
         gloss = f'{gloss}]' # Append missing final closing bracket
     if ' ' in gloss:
-        logging.critical( f"Replacing space(s) with underline in {gloss=} at {wn=}" )
+        logging.critical( f"Replacing {ref} space(s) with underline in {gloss=} at {wn=}" )
         gloss = gloss.replace( ' ', '_' )
     if gloss.endswith( '_' ):
-        logging.critical( f"Removing final underline from {gloss=} at {wn=}" )
+        logging.critical( f"Removing {ref} final underline from {gloss=} at {wn=}" )
         gloss = gloss[:-1]
     assert '__' not in gloss
 
-    assert gloss.count( '(' ) == gloss.count( ')' ), f"Parentheses mismatch in  {gloss=} from {originalGloss=}, {wn=}"
+    assert gloss.count( '(' ) == gloss.count( ')' ), f"Parentheses mismatch in {ref} {gloss=} from {originalGloss=}, {wn=}"
     if '[' in gloss:
         # print( f"Have square brackets in {gloss=}, {wn=} )")
-        assert gloss.count('[') == gloss.count(']'), f"Unmatched brackets {gloss=} from {originalGloss=}"
+        assert gloss.count('[') == gloss.count(']'), f"Unmatched brackets {ref} {gloss=} from {originalGloss=}"
         # TODO: Are '[which],swarms' and 'in,[month]' and 'at,[time]' outlyers ????
         # assert '_' in gloss \
         # or gloss.endswith('[s]') or gloss.endswith('[es]') or gloss.endswith('[en]') or gloss.endswith('[ren]') or gloss.endswith('[question]') \
@@ -890,6 +892,9 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
             assert len(newCompoundList) <= compound.count( '_' ) + 1
             gloss = gloss.replace( f'[{compound}]', f'[{']_['.join(newCompoundList)}]' )
         # print( f"make_gloss_adjustments_and_append_word_number: after compound action: {gloss=} from {originalGloss=}")
+        # Pronouns split off the front of compounds above (e.g., '[it_was]' -> '[it]_[was]') become plain \\add spans
+        for pronoun in ('I','he','it','they','you','you_all','someone'):
+            gloss = gloss.replace( f'[{pronoun}]_[', f'\\add {pronoun}\\add*_[' )
         for article in ('the','a','those'):
             gloss = gloss.replace( f'[{article}]', f'\\add +{article}\\add*' )
         for copula in ('is','was','am','are','does','will','will_be','did','were','has_been','have_been','be','are_being'):
@@ -899,8 +904,7 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
             gloss = gloss.replace( f'[{implied}]', f'\\add >{implied}\\add*' )
         gloss = gloss.replace( '_[it]', '_\\add >it\\add*' ) # Can also occur at beginning of word, but don't want that one
         if '[' in gloss.replace('[s]','').replace('[es]','').replace('[en]','').replace('[ren]','').replace('[question]',''): # still
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Still have square brackets in {gloss=}, {wn=} )")
+            logging.warning( f"make_gloss_adjustments_and_append_word_number: still have square brackets in {ref} {wn=} {gloss=} from {original_gloss=}" )
             gloss = gloss.replace( '[', '\\add ' ).replace( ']', '\\add*' )
         # Now check the nesting is correct
         startIx = inCount = 0
@@ -915,12 +919,12 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
                 break
             if openIx < closeIx:
                 inCount += 1
-                assert inCount == 1, f"Bad nesting in {gloss=} from {originalGloss=}, {wn=}"
+                assert inCount == 1, f"Bad nesting in {ref} {gloss=} from {originalGloss=}, {wn=}"
                 startIx = openIx + 3
             else:
                 assert closeIx < openIx
                 inCount -= 1
-                assert inCount == 0, f"Bad nesting in {gloss=} from {originalGloss=}, {wn=}"
+                assert inCount == 0, f"Bad nesting in {ref} {gloss=} from {originalGloss=}, {wn=}"
                 startIx = closeIx + 3
 
     # Change 'behold' -- uUse capitals instead of exclamation marks
@@ -951,12 +955,12 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
 
     # if '\\add' in gloss:
     #     print( f"    Returning {gloss=} from ( {originalGloss=}, {wn=} )")
-    assert f' {wn}' not in gloss, f"make_gloss_adjustments_and_append_word_number: wrongly placed {gloss=} from {originalGloss=}"
-    assert f'*{wn}' not in gloss, f"make_gloss_adjustments_and_append_word_number: wrongly placed {gloss=} from {originalGloss=}"
-    assert f'_{wn}' not in gloss, f"make_gloss_adjustments_and_append_word_number: wrongly placed {gloss=} from {originalGloss=}"
-    assert f'{wn}{wn}' not in gloss, f"make_gloss_adjustments_and_append_word_number: bad {gloss=} from {originalGloss=}"
-    assert f'{wn[1:]}¦' not in gloss, f"make_gloss_adjustments_and_append_word_number: messed up {gloss=} from {originalGloss=}"
-    assert '!¦' not in gloss, f"make_gloss_adjustments_and_append_word_number: messed up {gloss=} from {originalGloss=}"
+    assert f' {wn}' not in gloss, f"make_gloss_adjustments_and_append_word_number: wrongly placed {ref} {gloss=} from {originalGloss=}"
+    assert f'*{wn}' not in gloss, f"make_gloss_adjustments_and_append_word_number: wrongly placed {ref} {gloss=} from {originalGloss=}"
+    assert f'_{wn}' not in gloss, f"make_gloss_adjustments_and_append_word_number: wrongly placed {ref} {gloss=} from {originalGloss=}"
+    assert f'{wn}{wn}' not in gloss, f"make_gloss_adjustments_and_append_word_number: bad {ref} {gloss=} from {originalGloss=}"
+    assert f'{wn[1:]}¦' not in gloss, f"make_gloss_adjustments_and_append_word_number: messed up {ref} {gloss=} from {originalGloss=}"
+    assert '!¦' not in gloss, f"make_gloss_adjustments_and_append_word_number: messed up {ref} {gloss=} from {originalGloss=}"
     return gloss
 # end of extract_glossed_OSHB_OT_to_ESFM.make_gloss_adjustments_and_append_word_number
 

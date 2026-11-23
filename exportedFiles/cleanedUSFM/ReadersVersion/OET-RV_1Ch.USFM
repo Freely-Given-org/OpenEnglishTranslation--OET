@@ -1,4 +1,4 @@
-\id 1CH - Open English Translation—Readers’ Version (OET-RV) v0.2.19
+\id 1CH - Open English Translation—Readers’ Version (OET-RV) v0.2.23
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CH1
@@ -6,13 +6,14 @@
 \h 1 Chronicles
 \toc1 1 Chronicles
 \toc2 1 Chronicles
-\toc3 1 Chr.
+\toc3 1 Chr
 \mt2 The first
 \mt1 Sequential Account
-\mt2 (1 Chronicles)
+\mt3 commonly called
+\mt2 1 Chronicles
 \is1 Introduction
-\ip The \bk First\bk* and the \bk Second Account of Chronicles\bk* are a retelling of lots of what’s included in \bk The accounts about Shmuel (Samuel)\bk* and of \bk The accounts about the kings\bk*, but told in different words. There seem to be two primary purposes for this account:
-\ip 1. So that the reader can learn more about the destruction of Yehudah (Judah) and Yisrael (Israel), as God fulfilled his promise and plans for his people. This writer illustrates the achievements of David, Shelomoh (Solomon), of Yehoshafat (Jehoshaphat), Hizkiyah (Hezekiah), of Yoshiyah (Josiah), along with other people who obeyed Yahweh’s instructions.
+\ip The \bk First\bk* and the \bk Second Account of Chronicles\bk* are a retelling of lots of what’s included in \bk The accounts about Shmuel/Samuel\bk* and of \bk The accounts about the kings\bk*, but told in different words. There seem to be two primary purposes for this account:
+\ip 1. So that the reader can learn more about the destruction of Yehudah/Judah and Yisrael/Israel, as God fulfilled his promise and plans for his people. This writer illustrates the achievements of David, Shelomoh/Solomon, of Yehoshafat/Jehoshaphat, Hizkiyah/Hezekiah, of Yoshiyah/Josiah, along with other people who obeyed Yahweh’s instructions.
 \ip 2. To document the division of the priests and Levites in preparation for their service in the soon-to-be-built temple for Yahweh, and the extensive preparations by King David that were eventually handed over to King Shelomoh. Yahweh had carefully instructed David about how he wanted the temple worship to operate, and then this was all written down and handed over to Shelomoh, who would be the one who would go on to construct the buildings and all the furnishings and equipment and utensils that were required for its functioning.
 \iot Main components of this document
 \io1 Lists of the ancestors \ior 1:1–9:44\ior*
@@ -125,7 +126,7 @@
 \v 15 Otsem sixth, then David \add last\add*.
 \v 16 Their sisters were Tseruyah and Avigayil. Tseruyah’s three sons were Avishay, Yoav \add (Joab)\add*, and Asahel.
 \v 17 Avigayil had Amasa. Amasa’s father was Yeter, a descendant of Yishmael \add (Ishmael)\add*.
-\s1 The descendants of Kalev (Caleb)
+\s1 The descendants of Kalev/Caleb
 \p
 \v 18 Hetsron’s \add third\add* son Kalev \add (Caleb)\add* had sons with Azuvah, one of \add his\add* wives. The sons were Yesher, Shovav, and Ardon. (The other wife’s name was Yerieot.)
 \v 19 When Azuvah died, Kalev married Efrat, and they had a son named Hur.
@@ -190,7 +191,7 @@
 \v 7 Nogah, Nefeg, Yafia,
 \v 8 Elishama, Elyada, and Elifelet. (Nine in all.)
 \v 9 David also had sons from his slave-wives. Their sister was Tamar.
-\s1 Descendants of King Shelomoh (Solomon)
+\s1 Descendants of King Shelomoh/Solomon
 \p
 \v 10 Shelomoh \add (Solomon)\add* had a son Rehav’am \add (Rehoboam)\add*, he had a son Aviyah, he had a son Asa, he had a son Yehoshafat \add (Jehoshaphat)\add*,
 \v 11 he had a son Yoram \add (Joram)\add*, he had a son Ahazyah, he had a son Yoash,
@@ -210,7 +211,7 @@
 \v 23 Nearyah’s three sons were Elyehoeynay, Hizkiyah, and Azrikam.
 \v 24 Elyehoeynay’s seven sons were Hodavyah, Elyashiv, Pelayah, Akuv, Yohanan, Delayah, and Anani.
 \c 4
-\s1 The other descendants of Yehudah (Judah)
+\s1 The other descendants of Yehudah/Judah
 \p
 \v 1 Yehudah’s \add (Judah’s)\add* sons were Perets, Hetsron, Karmi, Hur, and Shoval.
 \v 2 Shoval had a son Reayah, Reayah had a son Yahat, and Yahat had Ahumay and Lahad. Those were the ancestors of the Tsor’atim.
@@ -230,7 +231,7 @@
 \v 13 Kenaz’s sons were Otniel and Serayah. And Otniel’s sons were Hatat \add and Me’onotay\add*.\f + \fr 4:13 \ft Not in the Hebrew, but ‘sons’ was plural, so it seems that it may have been accidentally dropped out of the text.\f*
 \v 14 Me’onotay had a son Ofrah, and Serayah fathered Yoav \add (Joab)\add*, the \add founder\add* of Craftsmen’s valley, because they were craftsmen.
 \p
-\v 15 The sons of Kalev \add (Caleb)\add* (Yefuneh’s son) were Iru, Elah, and Na’am, and Elah’s son was Kenaz.
+\v 15 The sons of Kalev \add (Caleb,\add* Yefuneh’s son) were Iru, Elah, and Na’am, and Elah’s son was Kenaz.
 \p
 \v 16 Yehalel’el’s sons were Zif, Zifah, Tirya, and Asarel.
 \p
@@ -245,7 +246,7 @@
 \v 21 The sons of Shela (one of Yehudah’s \add (Judah’s)\add* sons) were Er (father of Lekah), Laedah (father of Mareshah and the clans \add who worked with\add* linen at Beyt-Eshbea),
 \v 22 Yokim and the men of Kozava, and Yoash and Saraf, who ruled in Moav \add (Moab)\add* and Yashuvi-Lehem. (\add All that is from ancient records\add*.)
 \v 23 They were the potters \add who lived in\add* Netaeim and Gederah—they lived there and \add worked for\add* the king.
-\s1 The descendants of Shim’on (Simeon)
+\s1 The descendants of Shim’on/Simeon
 \p
 \v 24 Shim’on’s \add (Simeon’s)\add* sons were Nemuel, Yamin, Yariv, Zerah, and Shaul.
 \v 25 \add Shaul’s\add* son was Shalum. \add Shalum’s\add* son was Mivsam. \add Mivsam’s\add* son was Mishma.
@@ -273,7 +274,7 @@
 \c 5
 \s1 Re’uven’s descendants
 \p
-\v 1 Re’uven was the first \add child\add* born to Yisrael \add (Israel)\add* \add (also known as Ya’akov\add* \add (Jacob)\add* \add )\add*, but when he \add had sex with one of his father’s slave-wives\add*, his birthright was given to the sons of Yosef \add (Joseph)\add*, \add another one of Yisrael’s sons\add*. \add So Re’uven wasn’t recorded as inheriting\add* the birthright,
+\v 1 Re’uven was the first \add child\add* born to Yisrael \add (Israel,\add* \add also known as Ya’akov\add* \add (Jacob)\add* \add )\add*, but when he \add had sex with one of his father’s slave-wives\add*, his birthright was given to the sons of Yosef \add (Joseph)\add*, \add another one of Yisrael’s sons\add*. \add So Re’uven wasn’t recorded as inheriting\add* the birthright,
 \v 2 \add and although\add* Yehudah \add (Judah)\add* was stronger than his \add other\add* brothers and \add would be the son to produce a ruler\add*, the birthright went to Yosef.\x + \xo 5:1-2: \xt Gen 35:22; 49:3-4; Gen 49:8-10.\x*
 \v 3 The sons of Yisrael’s eldest son Re’uven were Hanok, Palu, Hetsron, and Karmi.
 \p
@@ -330,7 +331,7 @@
 \v 13 Shalum was the father of Hilkiyah, and Hilkiyah was the father of Azaryah.
 \v 14 Azaryah was the father of Serayah, and Serayah was the father of Yehotsadak.
 \p
-\v 15 Yehotsadak \add was included\add* when Yahweh \add sent\add* Nevukadnetsar \add (Nebuchadnezzar)\add* to take Yehudah \add (Judah)\add* (\add which includes\add* Yerushalem) into exile.
+\v 15 Yehotsadak \add was included\add* when Yahweh \add sent\add* Nevukadnetsar \add (Nebuchadnezzar)\add* to take Yehudah \add (Judah,\add* \add which includes\add* Yerushalem) into exile.
 \s1 Levi’s other descendants
 \p
 \v 16 Levi’s sons were Gereshon, Kohat, and Merari.\x + \xo 6:16-19: \xt Exo 6:16-19.\x*
@@ -388,7 +389,7 @@
 \v 38 Korah was Yitshar’s son.
 \li1 Yitshar was Kohat’s son.
 \li1 Kohat was Levi’s son.
-\li1 Levi was the son of \add Ya’akov\add* \add (Jacob)\add* \add (or Ya’akov, who was later named\add* Yisrael \add (Israel)\add*/\add Yisrael)\add*.
+\li1 Levi was the son of \add Ya’akov\add* \add (Jacob,\add* \add or Ya’akov, who was later named\add* Yisrael \add (Israel)\add*/\add Yisrael)\add*.
 \p
 \v 39 \add Heyman’s\add* cousin Asaf’s \add group\add* stood to the right. Asaf was Berekyah’s son. Berekyah was Shimea’s son.
 \v 40 Shimea was Mika’el’s \add (Michael’s)\add* son. Mika’el was Ba’aseyah’s son. Ba’aseyah was Malkiyah’s son.
@@ -445,7 +446,7 @@
 \v 80 From the Gad tribe, \add they received these cities and\add* their nearby pastureland: Ramot in the Gilead \add region\add*, Mahanayim,
 \v 81 Heshbon, and Yazer.
 \c 7
-\s1 The descendants of Yisakar (Issachar)
+\s1 The descendants of Yisakar/Issachar
 \p
 \v 1 Yisakar’s \add (Issachar’s)\add* four sons were Tola, Puah, Yashuv, and Shimron.
 \v 2 Tola’s sons were Uzi, Refayah, Yeriel, Yahmay, Yivsam, and Shmuel \add (Samuel)\add*, \add who all became\add* leaders of their clans. \add There were strong warriors in the record of Tola’s descendants in each generation\add*. (During the time when David was Yisrael’s \add (Israel’s)\add* king, there were 22,600 such men.)
@@ -465,12 +466,12 @@
 \v 11 All those descendants of Yedieael were \add clan leaders\add* and \add strong\add* warriors, having 17,200 men ready to go to war.
 \p
 \v 12 The Shupim and Hupim were descendants of Ir, \add and\add* the Hushim were descendants of Aher.
-\s1 The descendants of Naftali (Naphtali)
+\s1 The descendants of Naftali/Naphtali
 \p
 \v 13 Naftali’s \add (Naphtali’s)\add* sons were Yahtsiel, Guni, Yetser, and Shalum. (\add They were\add* descendants of \add Ya’akov’s\add* \add (Jacob’s)\add* \add slave-wife\add* Bilhah.)
 \s1 Menasheh’s descendants
 \p
-\v 14 Menasheh \add (Manasseh)\add* had sons by his \add Arami\add* \add (Syrian)\add* (Heb. Aramean) slave-wife. She gave birth to Asriel and Makir (\add who fathered\add* Gilead).
+\v 14 Menasheh \add (Manasseh)\add* had sons by his \add Arami\add* \add (Syrian,\add* Heb. Aramean) slave-wife. She gave birth to Asriel and Makir (\add who fathered\add* Gilead).
 \v 15 Makir \add married\add* a wife from the Hupim and Shupim. (His sister’s name was Ma’akah.) \add Another\add* descendant was Tselofehad, and he had daughters.
 \v 16 Makir’s wife (\add also called\add* Ma’akah) bore a son and named him Peresh (and named his brother Sheresh) and his sons were Ulam and Rekem.
 \v 17 Ulam’s son was Bedan. Those were the descendants of Gilead (Makir’s son and Menasheh’s grandson).
@@ -490,7 +491,7 @@
 \p
 \v 25 \add Another of Efrayim’s sons\add* was Refah. Refah’s son was Reshef. \add Reshef’s\add* son was Telah. \add Telah’s\add* son was Tahan.
 \v 26 \add Tahan’s\add* son was Laedan. \add Laedan’s\add* son was Amihud. \add Amihud’s\add* son was Elishama.
-\v 27 \add Elishama’s\add* son was Nun. \add Nun’s\add* son was Yehoshua \add (Joshua)\add* \add (or Yehoshua, who led Yisrael’s\add* \add (Israel’s)\add* \add descendants after Mosheh\add* \add (Moses)\add* \add died)\add*.
+\v 27 \add Elishama’s\add* son was Nun. \add Nun’s\add* son was Yehoshua \add (Joshua,\add* \add or Yehoshua, who led Yisrael’s\add* \add (Israel’s)\add* \add descendants after Mosheh\add* \add (Moses)\add* \add died)\add*.
 \p
 \v 28 \add This is a list of\add* \add the cities and areas where Efrayim’s descendants lived\add*: Beyt-El \add (Bethel)\add* and the nearby villages, Na’aran to the east, Gezer to the west and the nearby villages, and Shekem and the nearby villages extending \add north\add* as far as Ayah and its villages.
 \p
@@ -555,7 +556,7 @@
 \v 30 His sons, \add starting with\add* the eldest, were Avdon, Tsur, Kish, Ba’al, Nadav,
 \v 31 Gedor, Ahyo, and Zeker.
 \v 32 Miklot \add (another of Yeiel’s sons)\add* was Shimeah’s father. All those descendants of Yeiel also lived in Yerushalem \add (Jerusalem)\add* near their relatives.
-\s1 The descendants of King Sha’ul (Saul)
+\s1 The descendants of King Sha’ul/Saul
 \p
 \v 33 Ner was the father of Kish. Kish was the father of \add King\add* Sha’ul \add (Saul)\add*. Sha’ul was the father of Yonatan \add (Jonathan)\add*, Malkishua, Avinadav, and Eshba’al.
 \v 34 Yonatan’s son was Meriv-Ba’al. Meriv-Ba’al was the father of Mikah.
@@ -595,7 +596,7 @@
 \p
 \v 14 From Levi’s descendants \add who returned to Yehudah\add* \add (Judah)\add* \add there were\add*: Shemayah (who was Hashuv’s son, Hashuv was Azrikam’s son, Azrikam was Hashavyah’s son, Hashavyah was a descendant of \add Levi’s youngest son\add* Merari),
 \v 15 Bakbakar, Heresh, Galal, Matanyah (who was Mika’s son, Mika was Zikri’s son, Zikri was Asaf’s son),
-\v 16 Ovadyah \add (Obadiah)\add* (who was Shemayah’s son, Shemayah was Galal’s son, Galal was Yedutun’s son), and Berekyah who lived in one of the villages where the Netofat people lived (Berekyah was Asa’s son, Asa was Elkanah’s son).
+\v 16 Ovadyah \add (Obadiah,\add* who was Shemayah’s son, Shemayah was Galal’s son, Galal was Yedutun’s son), and Berekyah who lived in one of the villages where the Netofat people lived (Berekyah was Asa’s son, Asa was Elkanah’s son).
 \p
 \v 17 \add From Levi’s descendants who returned to Yehudah and\add* who guarded the \add temple\add* gates there were Shalum, Akuv, Talmon, Ahiman, and some of their relatives. Shalum was \add their\add* leader.
 \v 18 Those descendents of Levi were gatekeepers at the King’s gate on the east, \add and their descendants still are, even to this day\add*.
@@ -603,7 +604,7 @@
 \v 19 Shalum was Kore’s son, Kore was Evyasaf’s son, and Evyasaf was Korah’s son. Shalum and his relatives from his clan (Korah’s descendants) had the duty of being gatekeepers, responsible for guarding the \add entrances\add* to Yahweh’s temple, as their ancestors had done.
 \v 20 \add Previously\add* Pinhas (Eleazar’s son) \add had supervised\add* the gatekeepers. Yahweh was with \add Pinhas\add*.
 \p
-\v 21 Zekaryah \add (Zechariah)\add* (Meshelemyah’s son) was gatekeeper of the entrance to the assembly tent.
+\v 21 Zekaryah \add (Zechariah,\add* Meshelemyah’s son) was gatekeeper of the entrance to the assembly tent.
 \v 22 \add Altogether, there were 212 men chosen to guard the gates\add*. \add The records of the clans in their villages listed their names\add*. \add King\add* David and \add the prophet\add* Shmuel \add (Samuel)\add* \add appointed them because they were dependable\add*.
 \v 23 They and their sons \add watched\add* over the gates of Yahweh’s house, that is, the \add sacred\add* tent, as guards.
 \v 24 There were gatekeepers on each of the \add temple’s\add* four sides: east, west, north, and south.
@@ -664,7 +665,7 @@
 \v 2 \add In the recent past\add*, even when Sha’ul \add (Saul)\add* was king, \em you\em* were the one who took Yisrael out and the one who brought us back in. Plus your god Yahweh told you, ‘You yourself will shepherd my people, Yisrael, and you yourself will become the leader of my Israeli people.’ ”
 \v 3 \add So\add* all the Israeli elders went to the king at Hevron, and David made a solemn agreement with them at Hevron \add in front\add* of Yahweh. Then they anointed David as king over Yisrael in accordance with Yahweh’s message \add that was given through\add* \add the prophet\add* Shmuel \add (Samuel)\add*.
 \p
-\v 4 Then David and all of Yisrael went to Yerushalem \add (Jerusalem)\add* (\add Yerushalem, which was also known as\add* Yevus \add because the Yevusim were living there\add*).\x + \xo 11:4: \xt Josh 15:63; Jdg 1:21.\x*
+\v 4 Then David and all of Yisrael went to Yerushalem \add (Jerusalem,\add* \add Yerushalem, which was also known as\add* Yevus \add because the Yevusim were living there\add*).\x + \xo 11:4: \xt Josh 15:63; Jdg 1:21.\x*
 \v 5 The inhabitants \add inside\add* Yevus said to David, “You won’t \add be entering this place\add*.” But David captured \add what became known as\add* the Tsiyon \add (Zion)\add* fortress, that is, David’s city.
 \v 6 \add He’d\add* said, “The one who strikes down the Yevusim first will become \add my army commander\add*.” Tseruyah’s son Yoav \add (Joab)\add* went up \add over the wall\add* first, and he became head \add of the army\add*.
 \v 7 David \add started\add* living in that fortress, so then they called it David’s city.
@@ -701,11 +702,11 @@
 \v 31 Itay (Rivay’s son from Giveah, which belonged to Benyamin’s descendants), Benayah (from Pireaton),
 \v 32 Huray (from the valleys near \add Mt.\add* Ga’ash), Aviel (from Aravah),
 \v 33 Azmavet (from Baharum), Elyahba (from Shaalvon),
-\v 34 Hashem’s sons (from Gizon), Yonatan \add (Jonathan)\add* (Shageh’s son from Harar),
+\v 34 Hashem’s sons (from Gizon), Yonatan \add (Jonathan,\add* Shageh’s son from Harar),
 \v 35 Ahiam (Sakar’s son from Harar), Elifal (Ur’s son),
 \v 36 Hefer (from Mekerat), Ahiyah (from Pelon),
 \v 37 Hetsro (from Karmel), Na’aray (Ezbay’s son),
-\v 38 Yoel \add (Joel)\add* (Natan’s \add (Nathan’s)\add* brother), Mivhar (Hagri’s son),
+\v 38 Yoel \add (Joel,\add* Natan’s \add (Nathan’s)\add* brother), Mivhar (Hagri’s son),
 \v 39 Tselek (the Amoni), Naharay (from Be’erot, armour bearer for Tseruyah’s son Yoav \add (Joab)\add*),
 \v 40 Ira (the Yitri), Garev (the Yitri),
 \v 41 Uriyah (\add Bat-Sheva’s\add* \add (Bathsheba’s)\add* \add husband\add* the Hiti), Zavad (Ahlay’s son),
@@ -721,7 +722,7 @@
 \p
 \v 1 These were the men who joined David in Tsiklag, when he was \add banished\add* from Kish’s son Sha’ul’s \add (Saul’s)\add* presence. (They were among the warriors who assisted \add David\add* in battle
 \v 2 armed with bows. \add Some\add* \add used slings\add* right-handed and \add some\add* left-handed, as well as \add shooting\add* arrows with a bow. \add They were\add* from \add the\add* Benyamin \add tribe\add*, Sha’ul’s relatives.)
-\v 3 \add Their\add* leader was Ahiezer, then next was Yoash, both Shema’ah’s sons from Giveah \add city\add*. \add Others were:\add* Yeziel and Pelet (Azmavet’s sons), Berakah, Yehu \add (Jehu)\add* (from Anatot \add city\add*),
+\v 3 \add Their\add* leader was Ahiezer, then next was Yoash, both Shema’ah’s sons from Giveah \add city\add*. \add Others were:\add* Yeziel and Pelet (Azmavet’s sons), Berakah, Yehu \add (Jehu,\add* from Anatot \add city\add*),
 \v 4 Yishmaeyah (\add from Giveon\add* \add city\add*, who \add was the leader of\add* the thirty greatest \add warriors\add*), Yirmiyah \add (Jeremiah)\add*, Yahaziel, Yohanan, Yozavad (\add from Gederah\add* \add city\add*),
 \v 5 Eleuzay, Yerimot, Be’alyah, Shemaryah, Shefatyah (from Haruf \add city\add*),
 \v 6 Elkanah, Yishiyah, Azarel, Yoezer, and Yashaveam (all Korah’s descendants),
@@ -982,7 +983,7 @@
 \q1
 \v 35 Then say, “Rescue us, God \add who’s our saviour\add*,
 \q1 and bring us together and save us from \add attacks\add* by other nations,
-\q1 so that we’ll thank you for your \add untarnished reputation\add*,
+\q1 →so that we’ll thank you for your \add untarnished reputation\add*,
 \q1 and boast about \add your praiseworthy actions\add*.”
 \q1
 \v 36 Blessed be Yisrael’s \add (Israel’s)\add* god Yahweh,
@@ -1405,7 +1406,7 @@
 \v 25 along with his relatives: Eliezer’s son Rehavyah, \add Rehavyah’s\add* son Yeshayah \add (Isaiah)\add*, \add Yeshayah’s\add* son Yoram \add (Joram)\add*, \add Yoram’s\add* son Zikri, and \add Zikri’s\add* son Shelomot.
 \v 26 Shelomot and his relatives \add supervised\add* all the storehouses for the sacred things that were consecrated by King David, the \add clan leaders\add*, and the army division leaders and other commanders
 \v 27 who’d dedicated some of the plunder \add from their battles\add* to the repair of Yahweh’s residence.
-\v 28 Shelomot and his relatives were also \add in charge of\add* everything that the prophet Shmuel \add (Samuel)\add*, \add King\add* Sha’ul \add (Saul)\add* (Kish’s son), and \add David’s two army commanders\add* Avner (Ner’s son) and Yoav \add (Joab)\add* (Tseruyah’s son) had dedicated \add to Yahweh\add*.
+\v 28 Shelomot and his relatives were also \add in charge of\add* everything that the prophet Shmuel \add (Samuel)\add*, \add King\add* Sha’ul \add (Saul,\add* Kish’s son), and \add David’s two army commanders\add* Avner (Ner’s son) and Yoav \add (Joab,\add* Tseruyah’s son) had dedicated \add to Yahweh\add*.
 \s1 Other Levites’ duties
 \s4 Full kingdom
 \p
@@ -1471,7 +1472,7 @@
 \m Those were the commanders of Yisrael’s \add (Israel’s)\add* tribes.
 \p
 \v 23 David hadn’t included men who were less than twenty years old when he’d ordered a census, because Yahweh had promised that he would multiply the Israelis like stars in the sky.\x + \xo 27:23: \xt Gen 15:5; 22:17; 26:4.\x*
-\v 24 Yoav \add (Joab)\add* (Tseruyah’s son) began the count, but never finished it, because \add Yahweh’s\add* anger had struck Yisrael,\x + \xo 27:24: \xt 2Sam 24:15; 1Ch 21:1-14.\x* so the census result wasn’t recorded in the record of King David’s reign.
+\v 24 Yoav \add (Joab,\add* Tseruyah’s son) began the count, but never finished it, because \add Yahweh’s\add* anger had struck Yisrael,\x + \xo 27:24: \xt 2Sam 24:15; 1Ch 21:1-14.\x* so the census result wasn’t recorded in the record of King David’s reign.
 \s1 King David’s administrators
 \s4 Full kingdom
 \li1

@@ -1,4 +1,4 @@
-\id PRO - Open English Translation—Readers’ Version (OET-RV) v0.2.4
+\id PRO - Open English Translation—Readers’ Version (OET-RV) v0.2.7
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PRO
@@ -6,14 +6,14 @@
 \h Proverbs
 \toc1 Proverbs
 \toc2 Proverbs
-\toc3 Prv.
+\toc3 Prv
 \mt1 Proverbs
 \is1 Introduction
 \ip This collection of \bk Proverbs\bk*, is one way of teaching so that godly people have good examples of sensible life principles. Most of these sayings concern a person’s lifestyle and internal values. Perhaps the most critical proverb included in here is: “The first step towards being wise is to strive to obey Yahweh” (1:7; 9:10). The sayings illustrate the good results that can come from following wise paths and not that of stupidity, as the path of wicked people is like deep darkness (4:19), and in contrast, the path of those who do what is right, is like a bright light (v18).
 \ip These proverbs are a collection of useful sayings that help to impart godly wisdom to the reader.
 \iot Main components of this collection
 \io1 Praising wisdom \ior 1:1–9:18\ior*
-\io1 Shelomoh’s (Solomon’s) sayings \ior 10:1–29:27\ior*
+\io1 Shelomoh’s/Solomon’s sayings \ior 10:1–29:27\ior*
 \io1 Agur’s sayings \ior 30:1-33\ior*
 \io1 Various other proverbs \ior 31:1-31\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
@@ -21,7 +21,7 @@
 \c 1
 \s1 The purpose of proverbs
 \p
-\v 1 \add These are\add* the proverbs \add collected\add* by King Shelomoh \add (Solomon)\add* of Yisrael \add (Israel)\add* (\add King\add* David’s son):
+\v 1 \add These are\add* the proverbs \add collected\add* by King Shelomoh \add (Solomon)\add* of Yisrael \add (Israel,\add* \add King\add* David’s son):
 \q1
 \v 2 \add These will help you\add* to know wisdom and instruction,
 \q1 \add and\add* to comprehend sayings \add that give\add* understanding.
@@ -258,7 +258,7 @@
 \q1 Safeguard sound wisdom and discretion
 \q1
 \v 22 and they’ll \add liven your mind\add*,
-\q1 and then \add people will notice it about you\add*.
+\q1 →and then \add people will notice it about you\add*.
 \q1
 \v 23 Then you’ll walk in confidence
 \q1 without \add tripping or\add* stumbling.
@@ -544,7 +544,7 @@
 \q1 and don’t let her capture you with her eyelashes,
 \q1
 \v 26 because the price of a prostitute \add might be as cheap as\add* a loaf of bread,
-\q1 but \add another\add* man’s wife \add might cost you\add* your precious life.
+\q1 ^but \add another\add* man’s wife \add might cost you\add* your precious life.
 \q1
 \v 27 Can anyone carry fire against their chest,
 \q1 without their clothes \add catching fire\add*.
@@ -1025,7 +1025,7 @@
 \b
 \q1
 \v 31 Listen, \add anyone who\add* \add does what’s right\add* will be rewarded \add appropriately\add*,
-\q1 \add so\add* how more so the wicked and disobedient \add person\add*!
+\q1 →\add so\add* how more so the wicked and disobedient \add person\add*!
 \c 12
 \q1
 \v 1 Anyone who loves discipline, loves knowledge,
@@ -1053,7 +1053,7 @@
 \q1 ^\add but\add* \add anyone\add* with a warped \add mind\add* will \add end up\add* despised.
 \q1
 \v 9 It’s better to be \add little known\add* yet have a servant,
-\q1 than to be self-important \add but have nothing to eat\add*.
+\q1 ^than to be self-important \add but have nothing to eat\add*.
 \q1
 \v 10 A \add godly\add* \add person\add* \add cares for\add* the life of their \add animal\add*,
 \q1 ^\add but\add* wicked \add people\add* \add display\add* cruelty rather than compassion.
@@ -1419,7 +1419,7 @@
 \q1 →he causes even his enemies to be at peace with them.
 \q1
 \v 8 It’s better to have \add just\add* a little \add from doing what’s right\add*,
-\q1 than a \add large income\add* \add acquired dishonestly\add*.
+\q1 ^than a \add large income\add* \add acquired dishonestly\add*.
 \q1
 \v 9 \add People\add* plan \add their\add* ways in \add their\add* minds,
 \q1 →but Yahweh directs \add their\add* steps.
@@ -1865,7 +1865,7 @@
 \q1 ^\add but\add* well-behaved \add people\add* \add act with decency\add*.
 \q1
 \v 9 It’s better to live in the corner of \add the attic\add*\f + \fr 21:9 \ft We made an adjustment here for most of our readers in houses with sloping roofs, as distinct from living in an arid climate and having a flat roof.\f*
-\q1 than inside the \add main\add* house with the company of an argumentative wife.
+\q1 ^than inside the \add main\add* house with the company of an argumentative wife.
 \q1
 \v 10 Wicked \add people\add* have a strong, inner craving for evil.
 \q1 →\add Even\add* \add their\add* \add neighbours\add* won’t be shown any favour.
@@ -1895,7 +1895,7 @@
 \q1 and a treacherous \add person\add* \add to free\add* a \add godly person\add*.
 \q1
 \v 19 It’s better to live in a wilderness \add region\add*,
-\q1 than with a wife who’s \add argumentative and negative\add*.
+\q1 ^than with a wife who’s \add argumentative and negative\add*.
 \q1
 \v 20 Precious \add treasures\add* and oil will be in the house of a wise \add person\add*,
 \q1 ^\add but\add* a foolish person consumes it \add all\add*.
@@ -1997,7 +1997,7 @@
 \q1 to \add advise and teach\add* \add you\add*—
 \q1
 \v 21 to show you true and reliable \add principles\add*
-\q1 so that you can give accurate answers to \add those\add* sent to you.
+\q1 →so that you can give accurate answers to \add those\add* sent to you.
 \s2 -1-
 \p
 \v 22 Don’t rob those in poverty just because they’re poor
@@ -2290,7 +2290,7 @@
 \q1 and don’t \add claim a place among the well-known\add* \add people\add*,\x + \xo 25:6-7: \xt Luk 14:8-10.\x*
 \q1
 \v 7 because it’s better if they tell you, “Come up here,”
-\q1 than to be placed lower \add right\add* in front of a prince \add as you look at him\add*.
+\q1 ^than to be placed lower \add right\add* in front of a prince \add as you look at him\add*.
 \p
 \v 8 Don’t \add be in a rush\add* to take someone to court.
 \q1 →What would you do at the end, if your neighbour put you to shame?
@@ -2404,7 +2404,7 @@
 \q1 they’re too lazy to bring it back to their mouth.
 \q1
 \v 16 The slacker is wiser in their own eyes,
-\q1 than seven \add people\add* who give \add good advice\add*.
+\q1 ^than seven \add people\add* who give \add good advice\add*.
 \q1
 \v 17 The person who gets angry about a quarrel that’s \add nothing to do with them\add*,
 \q1 is \add like\add* someone grabbing the ears of a dog that’s passing by.
@@ -2426,7 +2426,7 @@
 \q1 are \add like\add* a silver overlay on a clay pot.
 \q1
 \v 24 A person who hates can disguise it with their lips,
-\q1 but they’re \add accumulating deceit inside\add*.
+\q1 ^but they’re \add accumulating deceit inside\add*.
 \q1
 \v 25 When they say favourable \add things\add*, don’t trust them,
 \q1 because there’s seven \add detestable things in within them\add*.
@@ -2472,10 +2472,10 @@
 \q1 A friend nearby is better than a brother living a long way away.
 \q1
 \v 11 My child, \add make me happy by becoming wise\add*,
-\q1 and then I’ll be able to answer \add anyone\add* who taunts me.
+\q1 →and then I’ll be able to answer \add anyone\add* who taunts me.
 \q1
 \v 12 A sensible \add person\add* sees evil and \add stays out of sight\add*
-\q1 \add but\add* naive \add people\add* continue on then get punished.
+\q1 ^\add but\add* naive \add people\add* continue on then get punished.
 \q1
 \v 13 If someone guarantees a stranger’s loan, then \add definitely\add* take their coat,
 \q1 or if they stand as guarantee for a foreign \add woman\add*.\x + \xo 27:13: \xt 20:16.\x*

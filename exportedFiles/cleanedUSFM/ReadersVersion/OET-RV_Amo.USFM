@@ -1,4 +1,4 @@
-\id AMO - Open English Translation—Readers’ Version (OET-RV) v0.2.11
+\id AMO - Open English Translation—Readers’ Version (OET-RV) v0.2.14
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 AMO
@@ -8,9 +8,8 @@
 \toc2 Amos
 \toc3 Amos
 \mt1 Amos
-\mt2 (Heb. Amots)
 \is1 Introduction
-\ip Amos/Amos was a shepherd before he became a prophet. There grew up in Tekoa in Yehudah (Judah) province, but Yahweh commanded him to go to Beyt-El (Bethel) in Yisrael (Israel) in order to preach there. (Yisrael is north of Yehudah.) These events happened around 800 before Yeshua/Jesus (B.C.) He declared God’s curses on Aram, Peleshet, Pinisia, Edom, Amon, Moav, and even Yehudah. At that time, the people were prospering and there was no famine like in some other nations, and Yisrael had widened their border. But Amos saw how the rich people prospered because they took advantage of the poor and even abused them through the courts. They had stopped obeying Yahweh’s instructions and commands, so Amos didn’t hesitate to tell them how Yahweh would punish them and their country. He encouraged them to maintain true justice in their courts, because what if God might just be gracious towards the people remaining in their country (5:15).
+\ip Amos/Amos was a shepherd before he became a prophet. There grew up in Tekoa in Yehudah/Judah province, but Yahweh commanded him to go to Beyt-El/Bethel in Yisrael/Israel in order to preach there. (Yisrael is north of Yehudah.) These events happened around 800 before Yeshua/Jesus (B.C.) He declared God’s curses on Aram, Peleshet, Pinisia, Edom, Amon, Moav, and even Yehudah. At that time, the people were prospering and there was no famine like in some other nations, and Yisrael had widened their border. But Amos saw how the rich people prospered because they took advantage of the poor and even abused them through the courts. They had stopped obeying Yahweh’s instructions and commands, so Amos didn’t hesitate to tell them how Yahweh would punish them and their country. He encouraged them to maintain true justice in their courts, because what if God might just be gracious towards the people remaining in their country (5:15).
 \iot Main components of this document
 \io1 The punishment of nations near Yisrael \ior 1:1–2:5\ior*
 \io1 The punishment of Yisrael \ior 2:6–6:14\ior*
@@ -130,14 +129,14 @@
 \v 7 They trample the \add heads\add* of the poor into the dust.
 \q1 They \add just\add* push the oppressed \add out of the way\add*.
 \q1 A man and his father go \add lie with\add* the same girl
-\q1 and so profane my \add sinless reputation\add*.
+\q1 →and so profane my \add sinless reputation\add*.
 \v 8 They lie down beside every altar on clothes taken \add from the poor\add* as pledges,
 \q1 and in the house of their god they drink the wine of those who were fined.
 \p
 \v 9 Yet I destroyed the Amorim before them.
 \q1 \add They were as tall as\add* of cedars
 \q1 \add and\add* as strong as oaks.
-\q1 Yet I destroyed \add their\add* fruit \add up\add* high
+\q1 ^Yet I destroyed \add their\add* fruit \add up\add* high
 \q1 and \add their\add* roots \add down\add* below.\x + \xo 2:9: \xt Deu 3:8-11.\x*
 \v 10 Also, I brought you all out of Mitsrayim \add (Egypt)\add*
 \q1 and led you forty years in the wilderness
@@ -186,7 +185,7 @@
 \q1
 \v 8 The lion has roared—who won’t be afraid?
 \q1 The master Yahweh has spoken—who won’t prophesy?
-\s1 The punishment of Shomron (Samaria)
+\s1 The punishment of Shomron/Samaria
 \s4 Northern kingdom
 \q1
 \v 9 Declare this in the fortresses at Ashdod,
@@ -201,7 +200,7 @@
 \v 11 Therefore, this is what the master Yahweh says:
 \q1 “An enemy will surround the land,
 \q1 and weaken your powerful \add grip\add*,
-\q1 and \add then\add* your fortresses will be looted.”
+\q1 →and \add then\add* your fortresses will be looted.”
 \p
 \v 12 This is what Yahweh says:
 \q1 “\add Just\add* as the shepherd rescues out of the lion’s mouth two legs only, or a piece of an ear,
@@ -244,7 +243,7 @@
 \q1
 \v 6 I also gave you \add empty stomachs\add* in all your cities
 \q1 and lack of bread in all your places.
-\q1 Yet you all haven’t returned to me.
+\q1 ^Yet you all haven’t returned to me.
 \mi That is Yahweh’s declaration.
 \q1
 \v 7 I also withheld rain from you
@@ -255,26 +254,26 @@
 \q1 \add but\add* the piece of land where he didn’t send rain, dried up.
 \q1
 \v 8 \add People from\add* two or three cities staggered to another city to drink water,
-\q1 but \add still\add* weren’t \add able to get enough\add*.
-\q1 Yet you all haven’t returned to me.
+\q1 ^but \add still\add* weren’t \add able to get enough\add*.
+\q1 ^Yet you all haven’t returned to me.
 \mi That is Yahweh’s declaration.
 \q1
 \v 9 I \add ruined your crops\add* with blight and mildew.
 \q1 The multitude of your gardens and your vineyards,
 \q1 your fig trees and your olive trees,
 \q1 were all devastated by the \add locusts\add*.
-\q1 Yet you all haven’t returned to me.
+\q1 ^Yet you all haven’t returned to me.
 \mi That is Yahweh’s declaration.
 \q1
 \v 10 I sent \add deadly diseases\add* onto you \add similar to what I did in\add* Mitsrayim \add (Egypt)\add*.
 \q1 I killed your young men with the sword, carried away your horses,
 \q1 and made the stench of your camp \add reach your noses\add*.
-\q1 Yet you all haven’t returned to me.
+\q1 ^Yet you all haven’t returned to me.
 \mi That is Yahweh’s declaration.
 \q1
 \v 11 I overthrew \add cities\add* among you, \add just\add* like when God overthrew Sedom and Amorah \add (Gomorrah)\add*.\x + \xo 4:11: \xt Gen 19:24.\x*
 \q1 You were like a burning stick snatched out of the fire.
-\q1 Yet you all haven’t returned to me.
+\q1 ^Yet you all haven’t returned to me.
 \mi That is Yahweh’s declaration.
 \q1
 \v 12 Therefore I’ll do something terrible to you, Yisrael \add (Israel)\add*,
@@ -302,7 +301,7 @@
 \v 4 This is what Yahweh says to the \add people\add* of Yisrael:
 \q1 “Seek me and live!
 \q1
-\v 5 Don’t seek Beyt-El \add (Bethel)\add* \add (which means ‘God’s house’)\add*
+\v 5 Don’t seek Beyt-El \add (Bethel,\add* \add which means ‘God’s house’)\add*
 \q1 or enter Gilgal;
 \q1 Don’t journey \add down\add* to Be’er-Sheva \add (Beersheba)\add*.
 \q1 Because Gilgal will surely go into captivity,
@@ -415,7 +414,7 @@
 \q1
 \v 6 They drink bowls of wine
 \q1 and anoint themselves with the finest oils,
-\q1 but they don’t grieve over \add Yisrael’s\add* \add (Israel’s)\add* ruin.
+\q1 ^but they don’t grieve over \add Yisrael’s\add* \add (Israel’s)\add* ruin.
 \q1
 \v 7 Therefore, they’ll go into exile now with the first exiles,
 \q1 and the feasts of those who lounged about will \add come to an end\add*.
@@ -424,7 +423,7 @@
 \q1 “\add I\add*, the master Yahweh, have sworn by \add myself\add*
 \q1 that I detest \add Yisrael’s\add* pride.
 \q1 I hate \add their\add* fortresses,
-\q1 therefore I’ll hand the city\f + \fr 6:8 \ft Probably Shomron (Samaria).\f* over with everything that’s in it.”
+\q1 →therefore I’ll hand the city\f + \fr 6:8 \ft Probably Shomron/Samaria.\f* over with everything that’s in it.”
 \p
 \v 9 \add When that happens\add*, if there’s ten people left in a house, they’ll all die.
 \v 10 When a person’s relative comes to take their bodies out of the house to be burnt outside, if he asks the person in the house if there’s anyone with \add them\add* and if that person says there’s not, then he’ll say, “\add Don’t say anything else\add* because we mustn’t mention Yahweh’s name.”
@@ -540,11 +539,11 @@
 \v 11 This is the declaration of my master Yahweh:
 \q1 Listen, the days are coming when I’ll send a famine to \add this\add* country.
 \q1 Not a famine for bread or a thirst for water,
-\q1 but for hearing Yahweh’s messages.
+\q1 ^but for hearing Yahweh’s messages.
 \q1
 \v 12 They’ll stagger from sea to sea.
 \q1 They’ll rove around from the north to the east to seek Yahweh’s message,
-\q1 but they won’t find it.
+\q1 ^but they won’t find it.
 \q1
 \v 13 In that day the beautiful young women
 \q1 and the young men will faint from \add dehydration\add*.

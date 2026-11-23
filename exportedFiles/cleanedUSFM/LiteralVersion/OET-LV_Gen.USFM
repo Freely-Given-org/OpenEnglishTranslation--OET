@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-11-18 16:17 by extract_glossed_OSHB_OT_to_ESFM v1.0.9
+\rem ESFM file created 2026-11-21 21:50 by extract_glossed_OSHB_OT_to_ESFM v1.0.10
 \rem ESFM file edited by ScriptedBibleEditor v0.8.3 using ScriptedOTUpdates
 \h Genesis
 \toc1 Genesis
@@ -57,7 +57,7 @@
 \v 8 And= \nd YHWH\nd* god =he/it_planted a_garden in=ˊĒden from=east and=he/it_assigned there DOM the=humankind whom he_had_formed.
 \v 9 And= \nd YHWH\nd* god =he/it_made_sprout from the=soil every_of tree desirable to/for=appearance and=good for=food and=tree the=life in_the=middle the=garden and=tree the=knowledge good and=bad/evil.
 \v 10 And=river\f + \fr 2:10 \ft OSHB note: We read punctuation in L differently from BHS.\f* \add was\add*_going_out from=ˊĒden to=water DOM the=garden and=from=there it_divided and=it_was to=four heads.
-\v 11 The_name_of the=one \add is\add*_Pishon it the=(one)_going_around DOM all_of the_land_of the=Ḩₐvīlāh where \add is\add*_there the=gold.
+\v 11 The_name_of the=one \add is\add*_Piyshōn it the=(one)_going_around DOM all_of the_land_of the=Ḩₐvīlāh where \add is\add*_there the=gold.
 \v 12 And=gold_of the=earth/land the=that \add is\add*_good \add are\add*_there the=bdellium and=stone_of the=onyx/beryl.
 \v 13 And=name_of the=river the=second \add is\add*_Giyḩōn it the=(one)_going_around DOM all_of the_land_of Kūsh/(Cush).
 \v 14 And=name_of the=river the=third \add is\add*_Tigris it the=(one)_going the_east_of ʼAshshūr and=the=river the=fourth it \add is\add*_\add the\add*_Pərāt.
@@ -117,10 +117,10 @@
 \v 15 And=he/it_said to=him/it \nd YHWH\nd* therefore any_of \add one_who\add*_kills_of Qayin/(Cain) sevenfold he_will_be_avenged and= \nd YHWH\nd* =he/it_assigned to/for=Qayin/(Cain) a_sign to=not any_of finding=him/it to_strike DOM=him/it.
 \v 16 And= Qayin/(Cain) =he/it_went_out from=to/for=face/front/presence \nd YHWH\nd* and=he/it_sat_down//remained//lived in=land_of Nōd the_east_of ˊĒden.
 \v 17 And= Qayin/(Cain) =he/it_knew DOM his/its=wife/woman and=she/it_conceived/became_pregnant and=she/it_gave_birth DOM Ḩₐnōk/(Enoch) and=he/it_was building a_city and=he/it_called the_name_of the=city like/according_to=name his/its=son Ḩₐnōk.
-\v 18 And=he/it_was_born to/for=Ḩₐnōk DOM Irad and=Irad he_fathered DOM Mehujael and=Mehujael he_fathered DOM Methushael and=Methushael he_fathered DOM Lemek.
+\v 18 And=he/it_was_born to/for=Ḩₐnōk DOM ˊĪrād and=ˊĪrād he_fathered DOM Məḩūyā\sup ʼēl\sup* and=Məḩiyyyā\sup ʼēl\sup* he_fathered DOM Mətūshā\sup ʼēl\sup* and=Mətūshā\sup ʼēl\sup* he_fathered DOM Lemek.
 \v 19 And=he/it_took to=him/it Lemek two_of wives the_name_of the=one(f) \add was\add*_ˊĀdāh and=name_of the=second(fs) \add was\add*_Tsillāh/(Zillah).
-\v 20 And= ˊĀdāh =she/it_gave_birth DOM Jabal he he_was \add the\add*_father_of dweller[s]_of tent and=livestock/cattle.
-\v 21 And=name_of his/its=brother \add was\add*_Jubal he he_was \add the\add*_father_of every_of player_of harp and=reed_instrument/flute.
+\v 20 And= ˊĀdāh =she/it_gave_birth DOM Yāⱱāl/(Jabal) he he_was \add the\add*_father_of dweller[s]_of tent and=livestock/cattle.
+\v 21 And=name_of his/its=brother \add was\add*_Yūⱱāl/(Jubal) he he_was \add the\add*_father_of every_of player_of harp and=reed_instrument/flute.
 \v 22 And=Tsillāh also she she_bore DOM Tūⱱal- Qayin/(Cain) a_sharpener_of every_of worker_of bronze and=iron and=sister_of Tūⱱal- Qayin/(Cain) Naˊₐmāh.
 \v 23 And= Lemek =he/it_said to=his=wives Oh_ˊĀdāh and=Tsillāh listen_to my=sound/voice Oh_wives_of Lemek give_ear_to my=speech/discourse if/because a_man I_have_killed to/for=my=wound/bruise and=child/boy/young_man to/for=my=stripe/bruise/wound.
 \v 24 If/because sevenfold Qayin/(Cain) he_will_be_avenged and=Lemek seventy and=seven.
@@ -253,7 +253,7 @@
 \v 15 And÷I_will_remember DOM covenant_of÷my which \add is\add*_between÷me and÷between÷you(pl) and=between every_of creature living in=all flesh and=not it_will_become again the=waters (into)_a÷flood to÷destroy all_of flesh.
 \v 16 And= the÷bow =it_will_be in÷cloud[s] and÷I÷will_see_it to÷remember \add the\add*_covenant_of perpetuity between god and=between every_of creature living in=all flesh which \add is\add*_on the=earth/land.
 \v 17 And= god =he/it_said to Noaḩ this \add is\add*_the_sign_of the_covenant which I_have_established between÷me and=between all_of flesh which \add is\add*_on the=earth/land.
-\v 18 And= the_sons_of Noaḩ \add who\add*_came÷out from the=box =they_were Shēm and÷Ḩām and=Yafet and÷Ḩām he \add was\add*_the_father_of Kənaˊan/(Canaan).
+\v 18 And= the_sons_of Noaḩ \add who\add*_came÷out from the=box =they_were Shēm and÷Ḩām and=Yefet and÷Ḩām he \add was\add*_the_father_of Kənaˊan/(Canaan).
 \v 19 Three these \add were\add*_the_sons_of Noaḩ and÷from÷these all_of the=earth/land it_dispersed.
 \v 20 And= Noaḩ =he_began the_man_of the=soil and=he/it_planted a_vineyard.
 \v 21 And÷he_drank some_of the÷wine and÷he_became_drunk and÷he_uncovered_himself in_the=middle his_tent_of÷his.\f + \fr 9:21 \ft OSHB note: We have abandoned or added a ketib/qere relative to BHS. In doing this we agree with L against BHS.\f*
@@ -267,36 +267,36 @@
 \v 29 And= all_of the_days_of Noaḩ =they_were nine hundred(s) year[s] and÷fifty year[s] and=he/it_died.
 \c 10
 \nb
-\v 1 And=these \add are\add*_the_accounts_of the_sons_of Noaḩ Shēm Ḩām and=Yafet and=they_were_born to/for=them sons after the=flood.
+\v 1 And=these \add are\add*_the_accounts_of the_sons_of Noaḩ Shēm Ḩām and=Yefet and=they_were_born to/for=them sons after the=flood.
 \v 2 The_sons_of Yefet \add were\add*_Gomer and=Māgōg and=Māday and=Yāvān/(Javan) and=Tūⱱal and=Meshek and=Tirāş.
-\v 3 And=the_sons of_Gomer \add were\add*_ʼAshkənaz and=Rifat and=Tōgarmāh.
-\v 4 And=the_sons of_Yāvān/(Javan) \add were\add*_ʼElīshāˊh and=Tarshiysh Kittim and=Dodānīm.
+\v 3 And=the_sons of_Gomer \add were\add*_ʼAshkənaz and=Rīfat and=Tōgarmāh.
+\v 4 And=the_sons of_Yāvān/(Javan) \add were\add*_ʼElīshāˊh and=Tarshiysh Kittīm and=Dodānīm.
 \v 5 From=these the_coastlands_of the=nations they_separated in=their=lands each to=his/its=language to=their=clans in=their=nations.
 \v 6 And=the_sons of_Ḩām \add were\add*_Kūsh/(Cush) and=Miʦrayim and=Pūţ and=Kənaˊan.
 \v 7 And=the_sons of_Kūsh/(Cush) \add were\add*_Şəⱱāʼ and=Ḩₐvīlāh and=Şaⱱtāʼh and=Raˊmāh and=Şaⱱtəkāʼ and=the_sons of_Raˊmāh \add were\add*_Shəⱱāʼ and=Dədān.
 \v 8 And=Kūsh he_fathered DOM Nimrōd he he_began to=be a_mighty_\add man\add* on_the=earth.
 \v 9 He he_was a_mighty_\add man\add*_of hunting to=(the)_face_of/in_front_of/before \nd YHWH\nd* therefore yes/correct/thus/so it_is_said like=Nimrōd a_mighty_\add man\add*_of hunting to=(the)_face_of/in_front_of/before \nd YHWH\nd*.
-\v 10 And=it_became the_beginning_of his/its=kingdom Bāⱱel and=Erech and=Akkad and=Kələneh in=land of_Shinˊār.
-\v 11 From the=earth/land the=that he_went_forth ʼAshshūr and=he/it_built DOM Nīnəvēh and=DOM Rəḩoⱱōt- Ir and=DOM Calah.
-\v 12 And=DOM Resen between Nīnəvēh and=between Calah that the=city the=big/large/great(fs).
+\v 10 And=it_became the_beginning_of his/its=kingdom Bāⱱel and=ʼErek and=ʼAkkad and=Kələneh in=land of_Shinˊār.
+\v 11 From the=earth/land the=that he_went_forth ʼAshshūr and=he/it_built DOM Nīnəvēh and=DOM Rəḩoⱱōt- Ir and=DOM Kelaḩ/(Calah).
+\v 12 And=DOM Reşen between Nīnəvēh and=between Kelaḩ that the=city the=big/large/great(fs).
 \v 13 And=Miʦrayim he_fathered DOM \add the\add*_Lūdī and=DOM \add the\add*_ˊAnāmīm and=DOM \add the\add*_Lehāⱱīm and=DOM \add the\add*_Naftuḩīm.
 \v 14 And=DOM \add the\add*_Patruşī and=DOM \add the\add*_Kaşluḩīm/(Casluhites) where they_came_out from=there \add the\add*_Pəlishtiy and=DOM \add the\add*_Kaftorī/(Caphtorites).
 \v 15 And=Kənaˊan he_fathered DOM Tsīdōn/(Sidon) his/its=firstborn and=DOM Ḩēt.
 \v 16 And=DOM the=Yəⱱūşī and=DOM the=ʼAmorī and=DOM the=Girgāshiy.
 \v 17 And=DOM the=Ḩiūī and=DOM the=ˊArqī and=DOM the=Şīnī.
 \v 18 And=DOM the=ʼArvādī and=DOM the=Tsəmārī and=DOM the=Ḩₐmātī and=after the_clans_of the=Kənaˊₐnī they_were_scattered.
-\v 19 And= the_border_of the=Kənaˊₐnī =he/it_was from=Tsidon your(ms)=going towards=Gərāra to ˊAzzāh your(ms)=going towards=Sedom and=Amorah and=ʼAdmāh and=Tseboyim to Lasha.
+\v 19 And= the_border_of the=Kənaˊₐnī =he/it_was from=Tsīdon your(ms)=going towards=Gərāra to ˊAzzāh your(ms)=going towards=Şədom and=ˊAmorāh and=ʼAdmāh and=Tsəⱱoyim to Leshaˊ.
 \v 20 These \add were\add*_the_sons_of Ḩām to=their=clans to÷languages_of÷their in=their=lands in=their=nations.
 \v 21 And÷to÷Shēm it_was_born also he the_father_of all_of the_sons_of ˊĒⱱēr the_brother_of Yefet/(Japheth) (the)÷old.
-\v 22 The_sons_of Shēm \add were\add*_ˊĒylām and÷ʼAshshūr and=Arpakshad and÷Lūd and÷ʼArām.
+\v 22 The_sons_of Shēm \add were\add*_ˊĒylām and÷ʼAshshūr and=ʼArpakshad and÷Lūd and÷ʼArām.
 \v 23 And=the_sons of_ʼArām \add were\add*_ˊŪʦ and÷Ḩūl and÷Geter and÷Mash.
-\v 24 And=Arpakshad he_fathered DOM Shelaḩ and=Shelaḩ he_fathered DOM ˊĒⱱēr.
+\v 24 And=ʼArpakshad he_fathered DOM Shelaḩ and=Shelaḩ he_fathered DOM ˊĒⱱēr.
 \v 25 And÷to÷ˊĒⱱēr two_of sons it_was_born the_name_of the=one \add was\add*_Peleg if/because in÷days_of÷his the=earth/land it_was_divided and=name_of his/its=brother \add was\add*_Yoqţān/(Joktan).
-\v 26 And÷Yoqţān he_fathered DOM ʼAlmōdād and=DOM Shelef and=DOM Hazarmaveth and=DOM Yeraḩ/(Jerah).
+\v 26 And÷Yoqţān he_fathered DOM ʼAlmōdād and=DOM Shelef and=DOM Ḩₐʦarmāvet and=DOM Yeraḩ/(Jerah).
 \v 27 And=DOM Hₐdōrām and=DOM ʼŪzāl and=DOM Diqlāh.
-\v 28 And=DOM Obal and=DOM ʼAⱱīmā\sup ʼēl\sup* and=DOM Shəⱱāʼ.
+\v 28 And=DOM ˊŌⱱāl and=DOM ʼAⱱīmā\sup ʼēl\sup* and=DOM Shəⱱāʼ.
 \v 29 And=DOM ʼŌfīr and=DOM Ḩₐvīlāh and=DOM Yōⱱāⱱ/(Jobab) all_of these \add were\add*_the_sons_of Yoqţān.
-\v 30 And= place_of÷their_dwelling =he/it_was from÷Mesha your(ms)=going towards÷Sephar the_hill_country_of the_east.
+\v 30 And= place_of÷their_dwelling =he/it_was from÷Mēshāʼ your(ms)=going towards÷Şəfār the_hill_country_of the_east.
 \v 31 These \add were\add*_the_sons_of Shēm to=their=clans to÷languages_of÷their in=their=lands to÷nations_of÷their.
 \v 32 These \add were\add*_the_clans_of the_sons_of Noaḩ to÷descendants_of÷their in÷nations_of÷their and÷from÷these the=nations they_separated on_the=earth after the=flood.
 \c 11
@@ -312,7 +312,7 @@
 \v 9 Therefore yes/correct/thus/so someone_called his/its=name Bāⱱel if/because there \nd YHWH\nd* he_confused the_language_of all_of the=earth/land and=from=there he/it_scattered=them \nd YHWH\nd* over the_surface_of all_of the=earth/land.
 \v 10 These \add are\add*_the_accounts_of Shēm Shēm \add was\add*_a_son_of one_hundred_of year[s] and=he/it_fathered DOM ʼArpakshad two_years after the=flood.
 \v 11 And= Shēm =he/it_lived after fathering=by_him/it DOM ʼArpakshad five hundred(s) year[s] and=he/it_fathered sons and=daughters.
-\v 12 And=Arpakshad he_lived five and=thirty year[s] and=he/it_fathered DOM Shelaḩ.
+\v 12 And=ʼArpakshad he_lived five and=thirty year[s] and=he/it_fathered DOM Shelaḩ.
 \v 13 And= ʼArpakshad =he/it_lived after fathering=by_him/it DOM Shelaḩ three years and=four hundred(s) year[s] and=he/it_fathered sons and=daughters.
 \v 14 And=Shelaḩ he_lived thirty year[s] and=he/it_fathered DOM ˊĒⱱēr.
 \v 15 And= Shelaḩ =he/it_lived after fathering=by_him/it DOM ˊĒⱱēr three years and=four hundred(s) year[s] and=he/it_fathered sons and=daughters.
@@ -328,42 +328,42 @@
 \v 25 And= Nāḩōr =he/it_lived after fathering=by_him/it DOM Teraḩ nine- teen year[s] and=one_hundred year[s] and=he/it_fathered sons and=daughters.
 \v 26 And= Teraḩ =he/it_lived seventy year[s] and=he/it_fathered DOM ʼAⱱrām DOM Nāḩōr and=DOM Ḩārān.
 \v 27 And=these \add are\add*_the_accounts_of Teraḩ Teraḩ he_fathered DOM ʼAⱱrām DOM Nāḩōr and=DOM Ḩārān and=Ḩārān he_fathered DOM Lōţ.
-\v 28 And= Ḩārān =he/it_died on the_face_of Teraḩ his/its=father in=land his/its=descendants in=ʼŪr of_\add the\add*_\add ones\add*_from_Kasdiy.
-\v 29 And= ʼAⱱrām and=Nāḩōr =he/it_took to/for=them wives the_name_of the_wife_of ʼAⱱrām \add was\add*_Sarai and=name_of the_wife_of Nāḩōr \add was\add*_Milkāh the_daughter_of Ḩārān the_father_of Milkāh and=father_of Iscah.
-\v 30 And=it_became Sarai barren there_\add belonged\add*_not to/for=her/it a_child.
-\v 31 And= Teraḩ =he/it_took DOM ʼAⱱrām his/its=son and=DOM Lōţ the_son_of Ḩārān the_son_of his/its=son and=DOM Sarai his/its=daughter-in-law the_wife_of ʼAⱱrām his/its=son and=they_went_out with=them from=ʼŪr of_\add the\add*_\add ones\add*_from_Kasdiy to=go towards=land of_Kənaˊan/(Canaan) and=they_came to Ḩārān and=they_lived there.
+\v 28 And= Ḩārān =he/it_died on the_face_of Teraḩ his/its=father in=land his/its=descendants in=ʼŪr of_\add the\add*_\add ones\add*_from_Kasdim.
+\v 29 And= ʼAⱱrām and=Nāḩōr =he/it_took to/for=them wives the_name_of the_wife_of ʼAⱱrām \add was\add*_Sāray and=name_of the_wife_of Nāḩōr \add was\add*_Milkāh the_daughter_of Ḩārān the_father_of Milkāh and=father_of Yişkāh/(Iscah).
+\v 30 And=it_became Sāray barren there_\add belonged\add*_not to/for=her/it a_child.
+\v 31 And= Teraḩ =he/it_took DOM ʼAⱱrām his/its=son and=DOM Lōţ the_son_of Ḩārān the_son_of his/its=son and=DOM Sāray his/its=daughter-in-law the_wife_of ʼAⱱrām his/its=son and=they_went_out with=them from=ʼŪr of_\add the\add*_\add ones\add*_from_Kasdim to=go towards=land of_Kənaˊan/(Canaan) and=they_came to Ḩārān and=they_lived there.
 \v 32 And= the_days_of Teraḩ =they_were five years and=two_hundreds year[s] and= Teraḩ =he/it_died in=Ḩārān.
 \c 12
 \nb
 \v 1 And= \nd YHWH\nd* =he/it_said to ʼAⱱrām go to/for=yourself(m) from=your(ms)=land and=from=your(ms)=descendants and=from=household your_father_of÷your to the=earth/land which I_will_show=you(ms).
 \v 2 And=I_will_make=you(ms) to=(a)_nation great and=I_will_bless=you(ms) and=I_will_make_big/great your(ms)=name and=be a_blessing.
 \v 3 And=I_will_bless (those_who)bless=you(ms) and=despises=you(ms) I_will_curse and=they_will_be_blessed in=you(ms) all_of the_clans_of the=soil.
-\v 4 And= ʼAⱱrām =he/it_went just=as he_had_said to=him/it \nd YHWH\nd* and=he/it_went with=him/it Lōţ and=Avram \add was\add*_a_son_of five years and=seventy year[s] in=his/its=coming_out from=Ḩārān.
-\v 5 And= ʼAⱱrām =he/it_took DOM Sarai his/its=wife/woman and=DOM Lōţ the_son_of his/its=brother and=DOM all_of their=property which they_had_accumulated and=DOM the=people whom they_had_acquired in=Ḩārān and=they_went_out to=go towards=land of_Kənaˊan/(Canaan) and=they_came towards=land of_Kənaˊan/(Canaan).
+\v 4 And= ʼAⱱrām =he/it_went just=as he_had_said to=him/it \nd YHWH\nd* and=he/it_went with=him/it Lōţ and=ʼAⱱrām \add was\add*_a_son_of five years and=seventy year[s] in=his/its=coming_out from=Ḩārān.
+\v 5 And= ʼAⱱrām =he/it_took DOM Sāray his/its=wife/woman and=DOM Lōţ the_son_of his/its=brother and=DOM all_of their=property which they_had_accumulated and=DOM the=people whom they_had_acquired in=Ḩārān and=they_went_out to=go towards=land of_Kənaˊan/(Canaan) and=they_came towards=land of_Kənaˊan/(Canaan).
 \v 6 And= ʼAⱱrām =he/it_passed_through on_the=earth to the_place_of Shəkem to the_great_tree_of Mōreh and=the=Kənaˊₐnīte then on_the=earth.
 \v 7 And= \nd YHWH\nd* =he_appeared to ʼAⱱrām and=he/it_said to÷offspring_of÷your I_will_give DOM the=earth/land (the)÷this and=he/it_built there an_altar to/for=\nd YHWH\nd* \add who÷had\add*_appeared to=him/it.
 \v 8 And÷he_moved_on from=there to÷the_hill÷country from=east of÷Bēyt- \sup ʼēl\sup* and÷he_pitched tent_of÷his\f + \fr 12:8 \ft OSHB note: We have abandoned or added a ketib/qere relative to BHS. In doing this we agree with L against BHS.\f* Bēyt- \sup ʼēl\sup* \add was\add*_from_\add the\add*÷west and÷(the)÷ˊAy from=east and=he/it_built there an_altar to/for=\nd YHWH\nd* and=he/it_called in/on=name_of \nd YHWH\nd*.
 \v 9 And= ʼAⱱrām =he_journeyed going and÷journeying towards=the=south.
 \v 10 And=he/it_was a_famine on_the=earth and= ʼAⱱrām =he/it_descended to÷Miʦrayim/(Egypt) to÷sojourn there if/because \add was\add*_heavy the÷famine on_the=earth.
-\v 11 And=he/it_was just=as he_drew_near to÷enter towards=Miʦrayim and=he/it_said to Sarai his/its=wife/woman HERE please I_know if/because_that \add are\add*_a_woman beautiful_of appearance you.
+\v 11 And=he/it_was just=as he_drew_near to÷enter towards=Miʦrayim and=he/it_said to Sāray his/its=wife/woman HERE please I_know if/because_that \add are\add*_a_woman beautiful_of appearance you.
 \v 12 And=it_was if/because the÷Miʦrayimians they_will_see you and÷they_will_say his/its=wife/woman this and÷they_will_kill DOM=me and÷you they_will_let_live.
 \v 13 Say please sister_of÷\add are\add*_my you so_that it_may_go_well to=me because÷of÷you and= life_of÷my =it_will_live on÷account_of÷of_you.
 \v 14 And=he/it_was just= ʼAⱱrām =as_entered towards=Miʦrayim and= the÷Miʦrayimians =they_saw DOM the=woman if/because_that \add was\add*_beautiful she very.
 \v 15 And= the_officials_of Parˊoh =they_saw DOM=her/it and÷they_praised DOM=her/it to Parˊoh and= the=woman =she_was_taken the_house_of Parˊoh.
 \v 16 And÷to÷ʼAⱱrām he_did_good because÷of÷her and=he/it_was to=him/it sheep and÷cattle and_\add male\add*÷donkeys and_\add male\add*÷servants and÷female_servants and÷female_donkeys and÷camels.
-\v 17 And= \nd YHWH\nd* =he_struck DOM Parˊoh plagues great and=DOM house_of÷his on the_matter_of Sarai the_wife_of ʼAⱱrām.
+\v 17 And= \nd YHWH\nd* =he_struck DOM Parˊoh plagues great and=DOM house_of÷his on the_matter_of Sāray the_wife_of ʼAⱱrām.
 \v 18 And= Parˊoh =he/it_called (to)÷ʼAⱱrām and=he/it_said what this have_you_done to/for=me to/for=what not did_you_tell to/for=me if/because_that wife_of÷\add was\add*_your she.
 \v 19 Why did_you_say sister_of÷\add is\add*_my she and÷I_took DOM=her/it to=me to/for=(a)_woman and=now HERE wife_of÷your take_\add her\add* and÷go.
 \v 20 And=he/it_commanded on/upon/above=him/it Parˊoh men and÷they_sent_away DOM=him/it and=DOM his/its=wife/woman and=DOM all_of that to=him/it.
 \c 13
 \nb
 \v 1 And= ʼAⱱrām =he/it_ascended from=Miʦrayim/(Egypt) he and=his/its=woman/wife and=all that to=him/it and=Lōţ with=him/it towards=the=south.
-\v 2 And=Avram \add was\add*_wealthy very in÷livestock in÷silver and÷in÷gold.
+\v 2 And=ʼAⱱrām \add was\add*_wealthy very in÷livestock in÷silver and÷in÷gold.
 \v 3 And=he/it_went to÷journeyings_of÷his from_\add the\add*÷Negeⱱ and=unto Bēyt- \sup ʼēl\sup* to the÷place where it_had_been there mmm\f + \fr 13:3 \ft OSHB variant note: אהל/ה: (x-qere) 'אָֽהֳל/וֹ֙': lemma=168 n=0.1.0 morph=HNcmsc/Sp3ms id=01Gdj אָֽהֳל/וֹ֙\f* at÷beginning between Bēyt- \sup ʼēl\sup* and=between (the)÷ˊAy.
 \v 4 To the_place_of the_altar which he_had_made there at÷\add time\add* and=he/it_called there ʼAⱱrām in/on=name_of \nd YHWH\nd*.
 \v 5 And=also to÷Lōţ \add who÷was\add*_travelling with ʼAⱱrām sheep and÷cattle and÷tents it_belonged.
 \v 6 And=not the=earth/land it_supported DOM=them to÷dwell together if/because their=property it_was much and=not they_were_able to÷dwell together.
-\v 7 And=he/it_was quarrelling between the_herdsmen_of the_livestock_of ʼAⱱrām and=between the_herdsmen_of the_livestock_of Lōţ and÷the÷Kənaˊₐnī/(Canaanite)[s] and÷the÷Pərizzī[s] then \add was\add*_dwelling on_the=earth.
+\v 7 And=he/it_was quarrelling between the_herdsmen_of the_livestock_of ʼAⱱrām and=between the_herdsmen_of the_livestock_of Lōţ and÷the÷Kənaˊₐnī and÷the÷Pərizzī then \add was\add*_dwelling on_the=earth.
 \v 8 And= ʼAⱱrām =he/it_said to Lōţ not please strife let_it_be between÷me and÷between÷you and=between herdsmen_of÷my and=between herdsmen_of÷your if/because \add are\add*_men brothers we.
 \v 9 Not \add is\add*_all_of the=earth/land to=your=face separate please from÷with÷me if the÷left and÷I_will_go_to_the_right and=if the÷right and÷I_will_go_to_the_left.
 \v 10 And= Lōţ =he_lifted_up DOM eyes_of÷his and=he/it_saw DOM all_of the_valley_of the_Yardēn/(Jordan) if/because_that of_it_of÷all \add was\add*_well-watered to=(the)_face_of/in_front_of/before \nd YHWH\nd* destroyed DOM Şədom and=DOM ˊAmorāh/(Gomorrah) like÷the_garden_of \nd YHWH\nd* like÷the_land_of Miʦrayim/(Egypt) your(ms)=going Tsoˊar/(Zoar).
@@ -374,33 +374,33 @@
 \v 15 If/because DOM all_of the=earth/land which you \add are\add*_seeing to/for=yourself(m) I÷will_give_it and÷to÷offspring_of÷your until perpetuity.
 \v 16 And÷I_will_make DOM your(ms)=seed/fruit like÷the_dust_of the=earth/land which if anyone he_will_be_able to÷count DOM the_dust_of the=earth/land also your(ms)=seed/fruit it_will_numbered.
 \v 17 Arise walk_about on_the=earth to÷length_of÷its and÷to÷breadth_of÷its if/because to/for=yourself(m) I÷will_give_it.
-\v 18 And= ʼAⱱrām =he_moved_tent and÷he_went and=he/it_sat_down//remained//lived at÷the_great_trees_of Mamre which \add are\add*_at÷Ḩeⱱrōn and=he/it_built there an_altar to/for=\nd YHWH\nd*.
+\v 18 And= ʼAⱱrām =he_moved_tent and÷he_went and=he/it_sat_down//remained//lived at÷the_great_trees_of Mamrēʼ which \add are\add*_at÷Ḩeⱱrōn and=he/it_built there an_altar to/for=\nd YHWH\nd*.
 \c 14
 \nb
-\v 1 And=he/it_was in÷the_days_of Amraphel the_king_of Shinˊār ʼArəyōk the_king_of Ellasar Kedorlaomer the_king_of ˊĒylām and÷Tidˊāl the_king_of Gōy.
-\v 2 They_made war with Bera the_king_of Şədom and=DOM Birsha the_king_of ˊAmorāh/(Gomorrah) Shinab the_king_of ʼAdmāh and÷Shemeber the_king_of Tsəⱱoʼīm/(Zeboiim)\f + \fr 14:2 \ft OSHB variant note: צביים: (x-qere) 'צְבוֹיִ֔ים': lemma=6636 n=0.1 morph=HNp id=01kJL צְבוֹיִ֔ים\f*\f + \fr 14:2 \ft OSHB note: We read one or more consonants in L differently from BHS.\f* and÷the_king_of Belaˊ that \add is\add*_Tsoˊar/(Zoar).
+\v 1 And=he/it_was in÷the_days_of ʼAmrāfel the_king_of Shinˊār ʼArəyōk the_king_of ʼEllāşār Kədorlāˊomer the_king_of ˊĒylām and÷Tidˊāl the_king_of Gōy.
+\v 2 They_made war with Beraˊ the_king_of Şədom and=DOM Birshaˊ the_king_of ˊAmorāh/(Gomorrah) Shinʼāⱱ the_king_of ʼAdmāh and÷Shemʼēⱱer the_king_of Tsəⱱoʼīm/(Zeboiim)\f + \fr 14:2 \ft OSHB variant note: צביים: (x-qere) 'צְבוֹיִ֔ים': lemma=6636 n=0.1 morph=HNp id=01kJL צְבוֹיִ֔ים\f*\f + \fr 14:2 \ft OSHB note: We read one or more consonants in L differently from BHS.\f* and÷the_king_of Belaˊ that \add is\add*_Tsoˊar/(Zoar).
 \v 3 All_of these they_joined_together to the_valley_of (the)÷Siddim that \add is\add*_the_Sea_of (the)÷Salt.
-\v 4 Two_plus ten year[s] they_had_served DOM Kedorlaomer and=three teen year they_rebelled.
-\v 5 And÷in÷four- teen year Kedorlaomer and÷the÷kings who with=him/it he_came and÷they_defeated DOM \add the\add*_Rəfāʼīm in÷ˊAshtərot- qarnayim and=DOM the÷Zuzites in÷Ḩām and=DOM the÷ʼĒymīm in÷Shaveh Qiryātayim.
-\v 6 And=DOM the÷Ḩorīte[s] in÷their_hill_of÷country of_Sēˊīr to ʼĒl Pāʼrān which \add is\add*_at the÷wilderness.
-\v 7 And÷they_turned_back and=they_came to En Mishpat that \add is\add*_Qādēsh and÷they_defeated DOM all_of the_region_of the_ˊAmālēqite[s] and=also DOM the=ʼAmorī \add who÷was\add*_dwelling in÷ Ḩaʦʦōn tāmār.
+\v 4 Two_plus ten year[s] they_had_served DOM Kədorlāˊomer and=three teen year they_rebelled.
+\v 5 And÷in÷four- teen year Kədorlāˊomer and÷the÷kings who with=him/it he_came and÷they_defeated DOM \add the\add*_Rəfāʼīm in÷ˊAshtərot- qarnayim and=DOM the÷Zuzites in÷Ḩām and=DOM the÷ʼĒymīm in÷Shāvēh Qiryātayim.
+\v 6 And=DOM the÷Ḩorī in÷their_hill_of÷country of_Sēˊīr to ʼĒl Pāʼrān which \add is\add*_at the÷wilderness.
+\v 7 And÷they_turned_back and=they_came to ˊĒyn Mishpāţ that \add is\add*_Qādēsh and÷they_defeated DOM all_of the_region_of the_ˊAmālēqī and=also DOM the=ʼAmorī \add who÷was\add*_dwelling in÷ Ḩaʦʦōn tāmār.
 \v 8 And=he/it_went_out the_king_of Şədom and÷the_king_of ˊAmorāh and÷the_king_of ʼAdmāh and÷the_king_of Tsəⱱoʼīm\f + \fr 14:8 \ft OSHB variant note: צביים: (x-qere) 'צְבוֹיִ֔ם': lemma=6636 n=1.1 morph=HNp id=01Jqs צְבוֹיִ֔ם\f* and÷the_king_of Belaˊ that \add is\add*_Tsoˊar and÷they_deployed with=them battle in÷the_valley_of (the)÷Siddim.
-\v 9 With Kedorlaomer the_king_of ˊĒylām and÷Tidˊāl the_king_of Gōy and÷Amraphel the_king_of Shinˊār and÷ʼArəyōk the_king_of Ellasar four kings with the÷five.
-\v 10 And÷the_valley_of (the)÷Siddim\f + \fr 14:10 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* \add was\add*_pits_of pits_of bitumen and= the_king_of Şədom and=Amorah =they_fled and÷they_fell to÷(to) and÷\add those÷who\add*_survived the_hill_country÷to they_fled.
-\v 11 And=they_took DOM all_of the_possession[s]_of Şədom and=Amorah and=DOM all_of food_of÷their and÷they_went.
+\v 9 With Kədorlāˊomer the_king_of ˊĒylām and÷Tidˊāl the_king_of Gōy and÷ʼAmrāfel the_king_of Shinˊār and÷ʼArəyōk the_king_of ʼEllāşār four kings with the÷five.
+\v 10 And÷the_valley_of (the)÷Siddim\f + \fr 14:10 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* \add was\add*_pits_of pits_of bitumen and= the_king_of Şədom and=ˊAmorāh =they_fled and÷they_fell to÷(to) and÷\add those÷who\add*_survived the_hill_country÷to they_fled.
+\v 11 And=they_took DOM all_of the_possession[s]_of Şədom and=ˊAmorāh and=DOM all_of food_of÷their and÷they_went.
 \v 12 And=they_took DOM Lōţ and=DOM possession[s]_of÷his the_son_of the_brother_of ʼAⱱrām and÷they_went and=he \add was\add*_dwelling in÷Şədom.
-\v 13 And= the÷fugitive =he_came and÷he_told to÷ʼAⱱrām the÷Hebrew and=he \add was\add*_dwelling at÷the_great_trees_of Mamre the=ʼAmorī the_brother_of ʼEshkol and÷the_brother_of ˊĀnēr and÷they \add were\add*_the_partners_of the_covenant_of ʼAⱱrām.
+\v 13 And= the÷fugitive =he_came and÷he_told to÷ʼAⱱrām the÷Hebrew and=he \add was\add*_dwelling at÷the_great_trees_of Mamrēʼ the=ʼAmorī the_brother_of ʼEshkol and÷the_brother_of ˊĀnēr and÷they \add were\add*_the_partners_of the_covenant_of ʼAⱱrām.
 \v 14 And= ʼAⱱrām =he/it_listened if/because_that his/its=brother he_had_been_taken_captive and÷he_drew_out DOM men_of÷his_trained those_born_of his_household_of÷his eight- teen and=three hundred(s) and÷he_pursued to Dān.
-\v 15 And÷he_divided_himself on÷them night he and÷servants_of÷his and÷he÷attacked_them and÷he÷pursued_them to Hobah which \add is\add*_from_\add the\add*÷north of÷Dammeseq.
+\v 15 And÷he_divided_himself on÷them night he and÷servants_of÷his and÷he÷attacked_them and÷he÷pursued_them to Ḩōⱱāh which \add is\add*_from_\add the\add*÷north of÷Dammeseq.
 \v 16 And÷he_brought_back DOM all_of the÷possession[s] and=also DOM Lōţ his/its=brother and÷possession[s]_of÷his he_brought_back and=also DOM the÷women and=DOM the÷people.
-\v 17 And= the_king_of Şədom =he/it_went_out to÷meet÷him after returned÷he from÷when_defeated DOM Kedorlaomer\f + \fr 14:17 \ft OSHB note: Marks an anomalous form.\f*\f + \fr 14:17 \ft OSHB note: We read punctuation in L differently from BHS.\f* and=DOM the÷kings who with=him/it to the_valley_of Shaveh that \add is\add*_the_valley_of the_king.
+\v 17 And= the_king_of Şədom =he/it_went_out to÷meet÷him after returned÷he from÷when_defeated DOM Kədorlāˊomer\f + \fr 14:17 \ft OSHB note: Marks an anomalous form.\f*\f + \fr 14:17 \ft OSHB note: We read punctuation in L differently from BHS.\f* and=DOM the÷kings who with=him/it to the_valley_of Shāvēh that \add is\add*_the_valley_of the_king.
 \v 18 And÷Malkī- ʦedeq the_king_of Shālēm he_brought_out bread and÷wine and=he \add was\add*_a_priest of÷god Most_High.
 \v 19 And÷he÷blessed_him and÷he_said ʼAⱱrām \add be\add*_blessed by÷god Most_High \add the\add*_creator_of heaven and÷earth.
 \v 20 And_\add be\add*= god Most_High who he_has_delivered foes_of÷your in÷hand_of÷your =blessed and÷he_gave to=him/it a_tenth from=all.
 \v 21 And= the_king_of Şədom =he/it_said to ʼAⱱrām give to=me the=living_creatures and÷the÷possession[s] take to/for=you(fs).
 \v 22 And= ʼAⱱrām =he/it_said to the_king_of Şədom I_raise hand_of÷my to \nd YHWH\nd* god Most_High \add the\add*_creator_of heaven and÷earth.
 \v 23 If from÷a_thread and=unto a_thong_of a_sandal and=if I_will_take from=all that to/for=you(fs) and=not you_will_say I I_made_rich DOM ʼAⱱrām.
-\v 24 Apart÷from_me only \add that\add*_which the_young÷men they_have_eaten and÷the_share_of the_men who they_went with÷me ˊĀnēr ʼEshkol and÷Mamre they let_them_take share_of÷their.
+\v 24 Apart÷from_me only \add that\add*_which the_young÷men they_have_eaten and÷the_share_of the_men who they_went with÷me ˊĀnēr ʼEshkol and÷Mamrēʼ they let_them_take share_of÷their.
 \c 15
 \nb
 \v 1 After the÷things the=these the_message_of \nd YHWH\nd* it_came to ʼAⱱrām in÷vision to=say do_not fear Oh_ʼAⱱrām I \add am\add*_a_shield to/for=you(fs) reward_of÷your \add will_be\add*_great very.
@@ -409,7 +409,7 @@
 \v 4 And=BEHOLD/LO/SEE the_message_of \nd YHWH\nd* to=him/it to=say not he÷will_inherit_you this_\add one\add* if/because (if) \add one\add*_who he_will_come_out from÷your(pl)_inward_of÷parts he he÷will_inherit_you.
 \v 5 And÷he_brought_out DOM=him/it to÷the÷outside and=he/it_said look please to÷the÷heavens and÷count the=stars if you_are_able to÷count DOM=them and=he/it_said to=him/it thus it_will_be offspring_of÷your.
 \v 6 And÷he_believed in÷\nd YHWH\nd* and=he/it_considered=her/it for=him/it righteousness.
-\v 7 And=he/it_said to=him/it I \add am\add*_\nd YHWH\nd* who I÷brought_you_out from=ʼŪr of_\add the\add*_\add ones\add*_from_Kasdiy to÷give to/for=yourself(m) DOM the=earth/land (the)÷this to÷take÷possession_of_it.
+\v 7 And=he/it_said to=him/it I \add am\add*_\nd YHWH\nd* who I÷brought_you_out from=ʼŪr of_\add the\add*_\add ones\add*_from_Kasdim to÷give to/for=yourself(m) DOM the=earth/land (the)÷this to÷take÷possession_of_it.
 \v 8 And÷he_said my=master \nd YHWH\nd* how will_I_know if/because_that I÷will_take_possession_of_it.
 \v 9 And=he/it_said to=him/it bring to=me a_heifer three_years_old and÷a_goat three_years_old and÷a_ram three_years_old and÷a_turtle-dove and÷a_young_pigeon.
 \v 10 And=he/it_took to=him/it DOM all_of these and÷he_cut_in_two DOM=them in÷middle and=he/it_gave each piece_of÷its to÷meet his/its=neighbour and=DOM the÷bird[s]\f + \fr 15:10 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* not he_cut_in_two.
@@ -421,27 +421,27 @@
 \v 16 And_\add the\add*÷generation fourth they_will_return hither if/because not \add is\add*_complete the_iniquity_of the=ʼAmorī until now.
 \v 17 And=he/it_was the÷sun it_had_gone and÷darkness it_was and=BEHOLD/LO/SEE a_fire_pot_of smoke and÷a_torch_of fire which it_passed between the÷pieces the=these.
 \v 18 In_the=day (the)=that \nd YHWH\nd* he_made with ʼAⱱrām a_covenant to=say to÷offspring_of÷your I_give DOM the=earth/land (the)÷this from÷the_river_of Miʦrayim/(Egypt) to the=river the=big/great(sg) the_river_of Pərāt.
-\v 19 DOM the÷Qēynī[s] and=DOM the÷Kenizzite[s] and=DOM the÷Kadmonite[s].
-\v 20 And=DOM the÷Ḩittiy[s] and=DOM the÷Pərizzī[s] and=DOM the÷Rəfāʼīm.
+\v 19 DOM the÷Qēynī and=DOM the÷Qənizziy/(Kenizzites) and=DOM the÷Qadmonī/(Kadmonites).
+\v 20 And=DOM the÷Ḩittiy and=DOM the÷Pərizzī and=DOM the÷Rəfāʼīm.
 \v 21 And=DOM the=ʼAmorī and=DOM the=Kənaˊₐnī and=DOM the=Girgāshiy and=DOM the=Yəⱱūşī.
 \c 16
 \nb
-\v 1 And÷Sarai the_wife_of ʼAⱱrām not she_had_borne_children to=him/it and_\add belonged\add*÷to÷her a_maidservant from_Miʦrayim/(Miʦrayim) and÷name_of÷her \add was\add*_Hāgār.
-\v 2 And= Sarai =she/it_said to ʼAⱱrām HERE please he÷has_restrained_me \nd YHWH\nd* from÷bearing_children go please into maidservant_of÷my perhaps I_will_be_built_up from=her/it\f + \fr 16:2 \ft OSHB note: We read one or more vowels in L differently from BHS.\f* and= ʼAⱱrām =he/it_listened to=sound/voice of_Sarai.
-\v 3 And= Sarai the_wife_of ʼAⱱrām =she/it_took DOM Hāgār the÷from_Miʦrayim/(Miʦrayim) maidservant_of÷her from_the=end/extremity ten years of= of_ʼAⱱrām =the_dwelling in=land of_Kənaˊan/(Canaan) and=she/it_gave DOM=her/it to÷ʼAⱱrām her/its=husband/man to=him/it to/for=(a)_woman.
+\v 1 And÷Sāray the_wife_of ʼAⱱrām not she_had_borne_children to=him/it and_\add belonged\add*÷to÷her a_maidservant from_Miʦrayim/(Miʦrayim) and÷name_of÷her \add was\add*_Hāgār.
+\v 2 And= Sāray =she/it_said to ʼAⱱrām HERE please he÷has_restrained_me \nd YHWH\nd* from÷bearing_children go please into maidservant_of÷my perhaps I_will_be_built_up from=her/it\f + \fr 16:2 \ft OSHB note: We read one or more vowels in L differently from BHS.\f* and= ʼAⱱrām =he/it_listened to=sound/voice of_Sāray.
+\v 3 And= Sāray the_wife_of ʼAⱱrām =she/it_took DOM Hāgār the÷from_Miʦrayim/(Miʦrayim) maidservant_of÷her from_the=end/extremity ten years of= of_ʼAⱱrām =the_dwelling in=land of_Kənaˊan/(Canaan) and=she/it_gave DOM=her/it to÷ʼAⱱrām her/its=husband/man to=him/it to/for=(a)_woman.
 \v 4 And÷he_went into Hāgār and=she/it_conceived/became_pregnant and=she/it_saw if/because_that she_had_conceived and= mistress_of÷her =she_became_insignificant in÷eyes_of÷her.
-\v 5 And= Sarai =she/it_said to ʼAⱱrām injustice_of÷my \add is\add*_on÷you I I_put maidservant_of÷my in÷bosom_of÷your and=she/it_saw if/because_that she_had_conceived and÷I_have_become_insignificant in÷eyes_of÷her \nd YHWH\nd* may_he_judge between÷me and÷between÷you.\f + \fr 16:5 \ft OSHB note: Puncta extraordinaria a ◌ׄ is used to mark such marks in the text when they are above the line and a ◌ׅ when they are below the line.\f*
-\v 6 And= ʼAⱱrām =he/it_said to Sarai THERE maidservant_of÷your \add is\add*_in÷hand_of÷your do to/for=her/it the÷good in÷eyes_of÷your and÷she÷afflicted_her Sarai and÷she_fled from÷before_of÷her.
+\v 5 And= Sāray =she/it_said to ʼAⱱrām injustice_of÷my \add is\add*_on÷you I I_put maidservant_of÷my in÷bosom_of÷your and=she/it_saw if/because_that she_had_conceived and÷I_have_become_insignificant in÷eyes_of÷her \nd YHWH\nd* may_he_judge between÷me and÷between÷you.\f + \fr 16:5 \ft OSHB note: Puncta extraordinaria a ◌ׄ is used to mark such marks in the text when they are above the line and a ◌ׅ when they are below the line.\f*
+\v 6 And= ʼAⱱrām =he/it_said to Sāray THERE maidservant_of÷your \add is\add*_in÷hand_of÷your do to/for=her/it the÷good in÷eyes_of÷your and÷she÷afflicted_her Sāray and÷she_fled from÷before_of÷her.
 \v 7 And÷he÷found_her the_messenger_of \nd YHWH\nd* at the_spring_of the=waters in÷wilderness at the÷spring on÷the_way_of Shūr.
-\v 8 And÷he_said Oh_Hāgār the_maidservant_of Sarai where from÷this have_you_come and÷where are_you_going and=she/it_said from=face/in_front_of Sarai mistress_of÷my I \add am\add*_fleeing.
+\v 8 And÷he_said Oh_Hāgār the_maidservant_of Sāray where from÷this have_you_come and÷where are_you_going and=she/it_said from=face/in_front_of Sāray mistress_of÷my I \add am\add*_fleeing.
 \v 9 And=he/it_said to/for=her/it the_messenger_of \nd YHWH\nd* return to mistress_of÷your and÷humble_yourself under hands_of÷her.
 \v 10 And=he/it_said to/for=her/it the_messenger_of \nd YHWH\nd* greatly_(increase) I_will_increase DOM offspring_of÷your and=not it_will_be_counted from÷multitude.
 \v 11 And=he/it_said to/for=her/it the_messenger_of \nd YHWH\nd* HERE÷you \add are\add*_pregnant and÷you_will_bear a_son and÷you_will_call his/its=name Yishmāˊ\sup ʼēl\sup*/(Ishmael) if/because \nd YHWH\nd* he_has_listened to affliction_of÷your.
 \v 12 And=he he_will_be a_wild_donkey_of a_man his/its=hand \add will\add*÷on_(the)_everyone and÷the_hand_of everyone in/on/over=him/it and÷on the_face_of all_of brothers_of÷his he_will_dwell.
 \v 13 And=she/it_called/named the_name_of \nd YHWH\nd* \add who\add*÷spoke to=her/it you \add are\add*_a_god_of seeing if/because she_said also here have_I_seen the_back(s) of÷the_\add one_who\add*_sees_me.
-\v 14 Therefore yes/correct/thus/so someone_called (to)÷well Bəʼēr Lahai Roi THERE \add it\add*_\add is\add*_between Qādēsh and=between Bered.
+\v 14 Therefore yes/correct/thus/so someone_called (to)÷well Bəʼēr Laḩay Roʼī THERE \add it\add*_\add is\add*_between Qādēsh and=between Bered.
 \v 15 And= Hāgār =she/it_gave_birth to÷ʼAⱱrām a_son and= ʼAⱱrām =he/it_called the_name_of his/its=son whom Hāgār she_had_borne Yishmāˊ\sup ʼēl\sup*/(Ishmael).
-\v 16 And=Avram \add was\add*_a_son_of eighty year[s] and÷six years when= Hāgār =bore DOM Yishmāˊ\sup ʼēl\sup*/(Ishmael) to÷ʼAⱱrām.
+\v 16 And=ʼAⱱrām \add was\add*_a_son_of eighty year[s] and÷six years when= Hāgār =bore DOM Yishmāˊ\sup ʼēl\sup*/(Ishmael) to÷ʼAⱱrām.
 \c 17
 \nb
 \v 1 And=he/it_was ʼAⱱrām a_son_of ninety year[s] and÷nine years and= \nd YHWH\nd* =he_appeared to ʼAⱱrām and=he/it_said to=him/it I \add am\add*_god almighty walk_about to/for=my=face/front and=be blameless.
@@ -458,7 +458,7 @@
 \v 12 And÷a_son_of eight_of days he_will_be_circumcised to/for=you(pl) every_of male for÷generations_of÷your(pl) one_born_of \add the\add*_household and÷a_purchase_of silver from=all son_of foreignness who not \add is\add*_one÷of÷your_offspring he.
 \v 13 Definitely_(be_circumcised) (the)_one_born_of your_household_of÷your and÷the_purchase_of your_silver_of÷your he_will_be_circumcised and÷it_will_be covenant_of÷my in÷flesh_of÷your(pl) to÷a_covenant_of perpetuity.
 \v 14 And÷an_uncircumcised male who not DOM the_flesh_of his_foreskin_of÷his he_will_be_circumcised and= the=living_creatures the=that =it_will_be_cut_off from÷kinspeople(s)_of÷its DOM covenant_of÷my he_has_broken.
-\v 15 And= god =he/it_said to ʼAⱱrāhām Sarai wife_of÷your not you_will_call DOM his/its=name Sarai if/because \add is\add*_Sārāh his/its=name.
+\v 15 And= god =he/it_said to ʼAⱱrāhām Sāray wife_of÷your not you_will_call DOM his/its=name Sāray if/because \add is\add*_Sārāh his/its=name.
 \v 16 And÷I_will_bless DOM=her/it and=also I_will_give from=her/it to/for=yourself(m) a_son and÷I÷will_bless_her and÷she_will_become (into)÷nations kings_of peoples from=her/it they_will_be.
 \v 17 And= ʼAⱱrāhām =he_fell on his/its=faces/face and÷he_laughed and=he/it_said in÷heart_of÷his to÷a÷son_of one_hundred year[s] will_he_be_born and=if Sārāh a÷daughter_of ninety year[s] will_she_bear_a_child.
 \v 18 And= ʼAⱱrāhām =he/it_said to the=ʼElohīm if Yishmāˊ\sup ʼēl\sup*/(Ishmael) he_will_live before÷you.
@@ -473,7 +473,7 @@
 \v 27 And=all the_men_of his_household_of÷his one_born_of \add the\add*_household and÷a_purchase_of silver from÷with a_son_of foreignness they_were_circumcised with=him/it.
 \c 18
 \nb
-\v 1 And÷he_appeared to=him/it \nd YHWH\nd* at÷the_great_trees_of Mamre and=he \add was\add*_sitting the_opening_of the_tent about÷the_heat_of the=day.
+\v 1 And÷he_appeared to=him/it \nd YHWH\nd* at÷the_great_trees_of Mamrēʼ and=he \add was\add*_sitting the_opening_of the_tent about÷the_heat_of the=day.
 \v 2 And÷he_lifted_up eyes_of÷his and=he/it_saw and=BEHOLD/LO/SEE three men \add were\add*_standing on/upon/above=him/it and=he/it_saw and÷he_ran to÷meet÷them from÷the_opening_of the_tent and÷he_bowed_down ground÷to_\add the\add*.
 \v 3 And÷he_said my=master if please I_have_found favour in÷eyes_of÷your do_not please pass_by from=under servant_of÷your.
 \v 4 Let_it_be_brought please a_little_of water and÷wash feet_of÷your(pl) and÷support_yourselves(pl) under the=tree.
@@ -492,9 +492,9 @@
 \v 17 And÷\nd YHWH\nd* he_said \add be\add*= \add will\add*_I =concealing from÷ʼAⱱrāhām \add that\add*_which I \add am\add*_about_to_do.
 \v 18 And÷ʼAⱱrāhām surely_(become) he_will_become to=(a)_nation great and÷mighty and=they_will_be_blessed in=him/it all_of the_nations_of the=earth/land.
 \v 19 If/because I÷have_known_him so_that that he_may_command DOM children_of÷his and=DOM household_of÷his after÷him and÷they_will_keep the_way_of \nd YHWH\nd* for=doing righteousness and÷justice so_that \nd YHWH\nd* will_bring on ʼAⱱrāhām DOM \add that\add*_which he_has_spoken on/upon/above=him/it.
-\v 20 And= \nd YHWH\nd* =he/it_said the_outcry_of Şədom and=Amorah if/because it_is_great and÷sin_of÷their if/because it_is_heavy exceedingly.
+\v 20 And= \nd YHWH\nd* =he/it_said the_outcry_of Şədom and=ˊAmorāh if/because it_is_great and÷sin_of÷their if/because it_is_heavy exceedingly.
 \v 21 I_will_go_down please and÷I_will_see according÷to÷outcry_of÷its which÷it_has_come to=me have_they_done completely and=if not I_will_know.
-\v 22 And÷they_turned_away from=there the÷men and÷they_went towards=Sedom and÷ʼAⱱrāhām still÷he \add was\add*_standing to=(the)_face_of/in_front_of/before \nd YHWH\nd*.
+\v 22 And÷they_turned_away from=there the÷men and÷they_went towards=Şədom and÷ʼAⱱrāhām still÷he \add was\add*_standing to=(the)_face_of/in_front_of/before \nd YHWH\nd*.
 \v 23 And= ʼAⱱrāhām =he_drew_near and÷he_said also will_you_sweep_away \add the\add*_righteous with \add the\add*_wicked.
 \v 24 Perhaps there_\add are\add* fifty righteous_\add people\add* in_the=middle the=city also will_you_sweep_\add it\add*_away and=not will_you_forgive (to)÷place for_the_sake_of fifty the_righteous÷\add people\add* who \add are\add*_in÷midst_of÷its.
 \v 25 Far÷be_it to÷you from÷doing according÷the_manner the=this to÷put_to_death \add the\add*_righteous with \add the\add*_wicked and=it_was as÷\add person\add* as÷\add person\add* far÷be_it to÷you the÷judge_of all_of the=earth/land not will_he_do justice.
@@ -508,7 +508,7 @@
 \v 33 And= \nd YHWH\nd* =he/it_went just=as he_had_finished to÷speak to ʼAⱱrāhām and÷ʼAⱱrāhām he_returned to÷place_of÷his.
 \c 19
 \nb
-\v 1 And= the_two_of the÷messengers =they_came towards=Sedom in÷evening and=Lōţ \add was\add*_sitting in÷the_gate_of Şədom and= Lōţ =he/it_saw and=he/it_rose_up to÷meet÷them and÷he_bowed_down face ground÷to_\add the\add*.
+\v 1 And= the_two_of the÷messengers =they_came towards=Şədom in÷evening and=Lōţ \add was\add*_sitting in÷the_gate_of Şədom and= Lōţ =he/it_saw and=he/it_rose_up to÷meet÷them and÷he_bowed_down face ground÷to_\add the\add*.
 \v 2 And=he/it_said HERE please my_masters_of÷my turn_aside please to the_house_of your_servant_of÷your(pl) and÷stay_the_night and÷wash feet_of÷your(pl) and÷you(pl)_will_rise_early and÷you(pl)_will_go\f + \fr 19:2 \ft OSHB note: We read one or more vowels in L differently from BHS.\f* to÷way_of÷your(pl) and=they_said no if/because in÷place we_will_stay_the_night.
 \v 3 And÷he_urged (in)÷them exceedingly and÷they_turned_aside to=him/it and=they_came into house_of÷his and=he/it_made to/for=them a_feast and÷unleavened_bread(s) he_baked and÷they_ate.
 \v 4 Before they_lay_down and÷the_men_of the=city the_men_of Şədom they_surrounded (on) the÷house from÷young_man and=unto old_\add man\add* all_of the÷people from_\add the\add*÷end.
@@ -535,7 +535,7 @@
 \v 25 And÷he_overthrew DOM the÷cities (the)÷these and=DOM all_of the÷valley and=DOM all_of the_inhabitants_of the_cities and÷the_growth_of the=soil.
 \v 26 And= his/its=wife/woman =she_looked from÷behind÷him and=it_became a_pillar_of salt.
 \v 27 And= ʼAⱱrāhām =he_rose_early in÷morning to the÷place where he_had_stood there with the_presence_of \nd YHWH\nd*.
-\v 28 And÷he_looked_down on the_face_of Şədom and=Amorah and÷on all_of the_face_of the_land_of the_valley and=he/it_saw and=BEHOLD/LO/SEE the_smoke_of the=earth/land it_went_up like÷the_smoke_of (the)÷kiln.
+\v 28 And÷he_looked_down on the_face_of Şədom and=ˊAmorāh and÷on all_of the_face_of the_land_of the_valley and=he/it_saw and=BEHOLD/LO/SEE the_smoke_of the=earth/land it_went_up like÷the_smoke_of (the)÷kiln.
 \v 29 And=he/it_was when= god =destroyed DOM the_cities_of the_valley and= god =he_remembered DOM ʼAⱱrāhām and÷he_sent_out DOM Lōţ from÷the_middle_of the_overthrow when÷overthrew DOM the÷cities which he_had_dwelt in÷them Lōţ.
 \v 30 And= Lōţ =he/it_ascended from÷Tsoˊar and=he/it_sat_down//remained//lived in÷country and÷the_two_of daughters_of÷his with=him/it if/because he_was_afraid to÷dwell in÷Tsoˊar and=he/it_sat_down//remained//lived in÷cave he and÷the_two_of daughters_of÷his.
 \v 31 And= the÷firstborn =she/it_said to the÷young father_of÷our he_is_old and÷a_man there_\add is\add*_not on_the=earth to÷go on÷us according÷to_the_way_of all_of the=earth/land.
@@ -625,9 +625,9 @@
 \v 19 And= ʼAⱱrāhām =he_returned to servants_of÷his and÷they_arose and÷they_went together to Bəʼēr Shəⱱāʼ and= ʼAⱱrāhām =he/it_sat_down//remained//lived in÷Bəʼēr- sheⱱaˊ.
 \v 20 And=he/it_was after the÷things the=these and÷it_was_told to÷ʼAⱱrāhām to=say THERE Milkāh also she she_has_borne children to÷Nāḩōr your(ms)=brother/kindred.
 \v 21 DOM ˊŪʦ his/its=firstborn and=DOM Būz his/its=brother and=DOM Qəmū\sup ʼēl\sup* the_father_of ʼArām.
-\v 22 And=DOM Kesed and=DOM Hazo and=DOM Pildash and=DOM Jidlaph and=DOM Bətū\sup ʼēl\sup*.
+\v 22 And=DOM Kesed and=DOM Ḩₐzō and=DOM Pildāsh and=DOM Yidlāf/(Jidlaph) and=DOM Bətū\sup ʼēl\sup*.
 \v 23 And÷Bətū\sup ʼēl\sup* he_fathered DOM Riⱱqāh eight_\add sons\add* these Milkāh she_bore to÷Nāḩōr the_brother_of ʼAⱱrāhām.
-\v 24 And÷concubine_of÷his and÷name_of÷her \add was\add*_Reumah and= also she =she/it_gave_birth DOM Tebah and=DOM Gaham and=DOM Tahash and÷DOM Maˊₐkāh.
+\v 24 And÷concubine_of÷his and÷name_of÷her \add was\add*_Rəʼūmāh and= also she =she/it_gave_birth DOM Ţeⱱaḩ and=DOM Gaḩam and=DOM Taḩash and÷DOM Maˊₐkāh.
 \c 23
 \nb
 \v 1 And=they_were the_life_of Sārāh one_hundred year[s] and=twenty year[s] and÷seven years the_years_of the_life_of Sārāh.
@@ -637,7 +637,7 @@
 \v 5 And= the_people_of Ḩēt =they_answered DOM ʼAⱱrāhām to=say to=him/it.
 \v 6 Listen÷to_us my=master \add are\add*_a_prince_of god you among÷us in÷the_choicest_of our_burial_sites_of÷our bury DOM dead_of÷your anyone from=him/it DOM site_of÷his_burial not he_will_withhold from÷you from÷burying dead_of÷your.
 \v 7 And= ʼAⱱrāhām =he/it_rose_up and÷he_bowed_down to÷the_people_of the=earth/land to÷the_people_of Ḩēt.
-\v 8 And=he/it_spoke with=them to=say if (there) \add is\add*_with desire_of÷your(pl) to÷bury DOM dead_of÷my from÷before÷face_of÷me listen÷to_me and÷entreat to=me (in)÷ˊEfrōn the_son_of Zohar.
+\v 8 And=he/it_spoke with=them to=say if (there) \add is\add*_with desire_of÷your(pl) to÷bury DOM dead_of÷my from÷before÷face_of÷me listen÷to_me and÷entreat to=me (in)÷ˊEfrōn the_son_of Tsoḩar/(Zohar).
 \v 9 So÷that_he_may_give to=me DOM the_cave_of (the)÷Machpelah which to=him/it which \add is\add*_at÷the_end_of his_field_of÷his for÷silver full let÷him_give_it to=me among÷you(pl) to÷a_possession_of a_burial_site.
 \v 10 And÷ˊEfrōn \add was\add*_sitting in_the=middle the_people_of Ḩēt and= ˊEfrōn the÷Ḩētite =he_answered DOM ʼAⱱrāhām in÷the_ears_of the_people_of Ḩēt to=all/each/any/every \add those_who_were\add*_entering_of (of)_the_gate_of his_city_of÷his to=say.
 \v 11 No my=master listen÷to_me the=field I_give to/for=you(fs) and÷the÷cave which in/on/over=him/it to/for=yourself(m) I÷give_it to÷the_eyes_of the_sons_of my_people_of÷my I÷give_it to÷you bury dead_of÷your.
@@ -646,15 +646,15 @@
 \v 14 And= ˊEfrōn =he_answered DOM ʼAⱱrāhām to=say to=him/it.
 \v 15 My=master listen÷to_me land_of four hundred(s) shekel[s]_of silver between÷me and÷between÷you what \add is\add*_it and=DOM dead_of÷your bury.
 \v 16 And= ʼAⱱrāhām =he/it_listened to ˊEfrōn and= ʼAⱱrāhām =he_weighed_out for÷ˊEfrōn DOM the÷money which he_had_spoken in÷the_ears_of the_people_of Ḩēt four hundred(s) shekel[s]_of silver \add which\add*_passes_along to÷trader.
-\v 17 And=he/it_rose_up the_field_of ˊEfrōn which \add was\add*_in÷Machpelah which to=(the)_face_of/in_front_of/before Mamre the=field and÷the÷cave which in/on/over=him/it and=all the=tree which in_the=field which in=all border_of÷its round_about.
+\v 17 And=he/it_rose_up the_field_of ˊEfrōn which \add was\add*_in÷Machpelah which to=(the)_face_of/in_front_of/before Mamrēʼ the=field and÷the÷cave which in/on/over=him/it and=all the=tree which in_the=field which in=all border_of÷its round_about.
 \v 18 To÷ʼAⱱrāhām to÷a_purchase to÷the_eyes_of the_people_of Ḩēt for÷all_of \add those_who_were\add*_entering_of (of)_the_gate_of his_city_of÷his.
-\v 19 And=after thus ʼAⱱrāhām he_buried DOM Sārāh his/its=wife/woman into the_cave_of the_field_of (the)÷Machpelah on the_face_of Mamre that \add is\add*_Ḩeⱱrōn in=land of_Kənaˊan/(Canaan).
+\v 19 And=after thus ʼAⱱrāhām he_buried DOM Sārāh his/its=wife/woman into the_cave_of the_field_of (the)÷Machpelah on the_face_of Mamrēʼ that \add is\add*_Ḩeⱱrōn in=land of_Kənaˊan/(Canaan).
 \v 20 And= the=field and÷the÷cave which in/on/over=him/it =he/it_rose_up to÷ʼAⱱrāhām to÷a_possession_of a_burial_site from÷with the_people_of Ḩēt.
 \c 24
 \nb
 \v 1 And÷ʼAⱱrāhām he_was_old he_had_come in_the=days and÷\nd YHWH\nd* he_had_blessed DOM ʼAⱱrāhām in÷everything.
 \v 2 And= ʼAⱱrāhām =he/it_said to servant_of÷his (the)_old_of his_household_of÷his \add who÷was\add*_ruling in=all that to=him/it put please hand_of÷your under thigh_of÷my.
-\v 3 So÷that÷I_may_make_you_swear by÷\nd YHWH\nd* the_god_of the=heavens and÷the_god_of the=earth/land which/who not you_will_take a_wife for÷son_of÷my from÷the_daughters_of the_Kənaˊₐnī/(Canaanite)[s] whom I \add am\add*_dwelling in÷midst_of÷its.
+\v 3 So÷that÷I_may_make_you_swear by÷\nd YHWH\nd* the_god_of the=heavens and÷the_god_of the=earth/land which/who not you_will_take a_wife for÷son_of÷my from÷the_daughters_of the_Kənaˊₐnī whom I \add am\add*_dwelling in÷midst_of÷its.
 \v 4 If/because to land_of÷my and=near/to kindred_of÷my you_will_go and÷you_will_take a_wife for÷son_of÷my for÷Yiʦḩāq/(Isaac).
 \v 5 And=he/it_said to=him/it the÷servant perhaps not the=woman she_will_be_willing to=go after÷me to the=earth/land (the)÷this really÷(take_back) will_I_take_back DOM son_of÷your to the=earth/land where you_came_out from=there.
 \v 6 And=he/it_said to=him/it ʼAⱱrāhām take_heed to/for=yourself(m) lest you_should_take_back DOM son_of÷my to÷(to).
@@ -688,7 +688,7 @@
 \v 34 And÷he_said \add am\add*_the_servant_of ʼAⱱrāhām I.
 \v 35 And÷\nd YHWH\nd* he_has_blessed DOM my=master exceedingly and÷he_has_become_great and÷he_has_given to=him/it sheep and÷cattle and÷silver and÷gold and_\add male\add*÷servants and÷female_servants and÷camels and÷donkeys.
 \v 36 And= Sārāh the_wife_of my=master =she/it_gave_birth a_son to÷master_of÷my after age_of÷her_old and÷he_has_given for=him/it\f + \fr 24:36 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* DOM all_of that to=him/it.
-\v 37 And÷he÷made_me_swear_an_oath my=master to=say not you_must_take a_wife for÷son_of÷my from÷the_daughters_of the_Kənaˊₐnī/(Canaanite)[s] whom I \add am\add*_dwelling in÷land_of÷its.
+\v 37 And÷he÷made_me_swear_an_oath my=master to=say not you_must_take a_wife for÷son_of÷my from÷the_daughters_of the_Kənaˊₐnī whom I \add am\add*_dwelling in÷land_of÷its.
 \v 38 If not to the_house_of my_father_of÷my you_will_go and=near/to family_of÷my and÷you_will_take a_wife for÷son_of÷my.
 \v 39 And÷I_said to my=master perhaps not the=woman she_will_go after÷me.
 \v 40 And=he/it_said to÷me \nd YHWH\nd* whom I_have_walked_about before÷him he_will_send messenger_of÷his with÷you and÷he_will_make_successful journey_of÷your and÷you_will_take a_wife for÷son_of÷my from÷family_of÷my and=from=household my_father_of÷my.
@@ -713,7 +713,7 @@
 \v 59 And÷they_sent_away DOM Riⱱqāh sister_of÷their and=DOM nurse_of÷her and=DOM the_servant_of ʼAⱱrāhām and=DOM men_of÷his.
 \v 60 And÷they_blessed DOM Riⱱqāh and=they_said to/for=her/it our_sister_of÷Oh you become (into)÷thousands_of ten_thousand and= offspring_of÷your =may_it_take_possession_of DOM the_gate_of \add those_who\add*_hate_it.
 \v 61 And= Riⱱqāh and÷maids_of÷her =she/it_arose and÷they_rode on the÷camels and÷they_went after the=man and= the÷servant =he/it_took DOM Riⱱqāh and÷he_went.
-\v 62 And÷Yiʦḩāq/(Isaac) he_came from÷going Bəʼēr Lahai Roi and=he \add was\add*_dwelling in=land of÷the_Negeⱱ.
+\v 62 And÷Yiʦḩāq/(Isaac) he_came from÷going Bəʼēr Laḩay Roʼī and=he \add was\add*_dwelling in=land of÷the_Negeⱱ.
 \v 63 And= Yiʦḩāq =he/it_went_out to÷meditate in_the=field to_\add the\add*÷turning evening and÷he_lifted_up eyes_of÷his and=he/it_saw and=BEHOLD/LO/SEE camels \add were\add*_coming.
 \v 64 And= Riⱱqāh =she_lifted_up DOM eyes_of÷her and=she/it_saw DOM Yiʦḩāq and÷she_fell from=under the÷camel.
 \v 65 And=she/it_said to the÷servant who the=man this \add who÷is\add*_walking in_the=field to÷meet÷us and= the÷servant =he/it_said he my=master and=she/it_took the÷veil and÷she_covered_herself.
@@ -722,16 +722,16 @@
 \c 25
 \nb
 \v 1 And= ʼAⱱrāhām =he_repeated and=he/it_took a_wife and÷name_of÷her \add was\add*_Qəţūrāh.
-\v 2 And=she/it_gave_birth to=him/it DOM Zimrān and=DOM Yoqshān/(Jokshan) and=DOM Mədān and=DOM Midyān and=DOM Yishbāq/(Ishbak) and=DOM Shuah.
-\v 3 And÷Yoqshān he_fathered DOM Shəⱱāʼ and=DOM Dədān and=the_sons of_Dədān they_were ʼAshshūrites and÷Letushites and÷Leummites.
+\v 2 And=she/it_gave_birth to=him/it DOM Zimrān and=DOM Yoqshān/(Jokshan) and=DOM Mədān and=DOM Midyān and=DOM Yishbāq/(Ishbak) and=DOM Shūaḩ.
+\v 3 And÷Yoqshān he_fathered DOM Shəⱱāʼ and=DOM Dədān and=the_sons of_Dədān they_were ʼAshshūrites and÷Ləţūshim and÷Ləʼummim.
 \v 4 And=the_sons of_Midyān \add were\add*_ˊĒyfāh and÷ˊĒfer and÷Ḩₐnōk/(Enoch) and÷ʼAⱱīdāˊ and÷ʼEldāˊāh all_of these \add were\add*_the_sons_of Qəţūrāh.
 \v 5 And= ʼAⱱrāhām =he/it_gave DOM all_of that to=him/it to÷Yiʦḩāq/(Isaac).
 \v 6 And÷to÷the_sons_of the_concubines who \add belonged\add*_to÷ʼAⱱrāhām ʼAⱱrāhām he_gave gifts and÷he÷sent_them_away from=under Yiʦḩāq his/its=son in÷still÷he \add was\add*_alive eastward÷to to \add the\add*_land_of \add the\add*_east.
 \v 7 And=these \add are\add*_the_days_of the_years_of the_life_of ʼAⱱrāhām which he_lived one_hundred_of year[s] and=seventy year[s] and÷five years.
 \v 8 And÷he_expired and=he/it_died ʼAⱱrāhām in÷old_age good old and÷satisfied and÷he_was_gathered to kinspeople(s)_of÷his.
-\v 9 And= Yiʦḩāq and÷Yishmāˊ\sup ʼēl\sup*/(Ishmael) sons_of÷his =they_buried DOM=him/it into the_cave_of (the)÷Machpelah to the_field_of ˊEfrōn the_son_of Zohar the÷Ḩittiy which \add is\add*_on the_face_of Mamre.
+\v 9 And= Yiʦḩāq and÷Yishmāˊ\sup ʼēl\sup*/(Ishmael) sons_of÷his =they_buried DOM=him/it into the_cave_of (the)÷Machpelah to the_field_of ˊEfrōn the_son_of Tsoḩar/(Zohar) the÷Ḩittiy which \add is\add*_on the_face_of Mamrēʼ.
 \v 10 The=field which ʼAⱱrāhām he_had_acquired from÷with the_sons_of Ḩēt there÷(to) ʼAⱱrāhām and÷Sārāh his/its=wife/woman he_was_buried.
-\v 11 And=he/it_was after the_death_of ʼAⱱrāhām and= god =he/it_blessed DOM Yiʦḩāq his/its=son and= Yiʦḩāq =he/it_sat_down//remained//lived near Bəʼēr Lahai Roi.
+\v 11 And=he/it_was after the_death_of ʼAⱱrāhām and= god =he/it_blessed DOM Yiʦḩāq his/its=son and= Yiʦḩāq =he/it_sat_down//remained//lived near Bəʼēr Laḩay Roʼī.
 \v 12 And=these \add are\add*_the_accounts_of Yishmāˊ\sup ʼēl\sup*/(Ishmael) the_son_of ʼAⱱrāhām whom Hāgār the÷from_Miʦrayim/(Miʦrayim/(Egypt)) the_maidservant_of Sārāh she_bore to÷ʼAⱱrāhām.
 \v 13 And=these \add are\add*_the_names_of the_sons_of Yishmāˊ\sup ʼēl\sup*/(Ishmael) by÷names_of÷their to÷descendants_of÷their the_firstborn_of Yishmāˊ\sup ʼēl\sup*/(Ishmael) Nəⱱāyōt and÷Qēdār and÷ʼAdbə\sup ʼēl\sup* and÷Miⱱsām.
 \v 14 And÷Mishmāˊ and÷Dūmāh and÷Massāʼ.
@@ -776,8 +776,8 @@
 \v 17 And=he/it_went from=there Yiʦḩāq/(Isaac) and÷he_encamped in÷the_wadi_of Gərār and=he/it_sat_down//remained//lived there.
 \v 18 And= Yiʦḩāq =he_returned and÷he_dug DOM the_wells_of the=waters which people_had_dug in÷the_days_of ʼAⱱrāhām his/its=father and÷they÷had_stopped_them_up \add the\add*_Pəlishtiy after the_death_of ʼAⱱrāhām and=he/it_called (to)÷them names like÷names which he_had_called (to)÷them his/its=father.
 \v 19 And= the_servants_of Yiʦḩāq =they_dug in÷wadi and=they_found there a_well_of water living.
-\v 20 And= the_herdsmen_of Gərār =they_disputed with the_herdsmen_of Yiʦḩāq to=say to/for=us the=waters and=he/it_called the_name_of the_well Esek if/because they_quarrelled with=him/it.
-\v 21 And÷they_dug a_well another and÷they_disputed also on/upon=it(f) and=he/it_called his/its=name Sitnah.
+\v 20 And= the_herdsmen_of Gərār =they_disputed with the_herdsmen_of Yiʦḩāq to=say to/for=us the=waters and=he/it_called the_name_of the_well ˊĒseq if/because they_quarrelled with=him/it.
+\v 21 And÷they_dug a_well another and÷they_disputed also on/upon=it(f) and=he/it_called his/its=name Siţnāh.
 \v 22 And÷he_moved_on from=there and÷he_dug a_well another and=not they_disputed on/upon=it(f) and=he/it_called his/its=name Rəḩoⱱōt and=he/it_said if/because now \nd YHWH\nd* he_has_made_space to/for=us and÷we_will_be_fruitful in/on_the=earth.
 \v 23 And=he/it_ascended from=there Bəʼēr Shəⱱāʼ.
 \v 24 And÷he_appeared to=him/it \nd YHWH\nd* in÷night (the)=that and=he/it_said I \add am\add*_the_god_of ʼAⱱrāhām father_of÷your do_not be_afraid if/because \add am\add*_with÷you I and÷I÷will_bless_you and÷I_will_multiply DOM your(ms)=seed/fruit in=account_of ʼAⱱrāhām servant_of÷my.
@@ -790,7 +790,7 @@
 \v 31 And÷they_rose_early in÷morning and÷they_swore_an_oath each to÷brother_of÷his and÷he÷sent_them_off Yiʦḩāq and÷they_went from÷with÷him in÷peace.
 \v 32 And=he/it_was in_the=day (the)=that and= the_servants_of Yiʦḩāq =they_came and÷they_told to=him/it on the_causes_of the_well which they_had_dug and=they_said to=him/it we_have_found water.
 \v 33 And=he/it_called DOM=her/it Shibah therefore yes/correct/thus/so the_name_of the=city \add is\add*_Bəʼēr Shəⱱāʼ until the=day (the)÷this.
-\v 34 And=he/it_was ˊĒsāv a_son_of forty year[s] and=he/it_took a_wife DOM Judith the_daughter_of Bəʼērī the÷Ḩittiy and=DOM Bosmat the_daughter_of ʼĒylōn the÷Ḩittiy.
+\v 34 And=he/it_was ˊĒsāv a_son_of forty year[s] and=he/it_took a_wife DOM Yəhūdīt/(Judith) the_daughter_of Bəʼērī the÷Ḩittiy and=DOM Bosmat the_daughter_of ʼĒylōn the÷Ḩittiy.
 \v 35 And÷they_were bitterness_of spirit to÷Yiʦḩāq/(Isaac) and÷to÷Riⱱqāh.
 \c 27
 \nb
@@ -889,7 +889,7 @@
 \v 21 And= Yaˊₐqoⱱ =he/it_said to Lāⱱān come=NOW DOM wife_of÷my if/because days_of÷my they_have_been_completed so÷that_I_may_go into÷her.
 \v 22 And= Lāⱱān =he_gathered DOM all_of the_people_of the_place and=he/it_made a_feast.
 \v 23 And=he/it_was in÷evening and=he/it_took DOM Lēʼāh daughter_of÷his and=he/it_brought DOM=her/it to=him/it and÷he_went into÷her.
-\v 24 And= Lāⱱān =he/it_gave to/for=her/it DOM Zilpah maidservant_of÷his to÷Lēʼāh daughter_of÷his a_maidservant.
+\v 24 And= Lāⱱān =he/it_gave to/for=her/it DOM Zilpāh maidservant_of÷his to÷Lēʼāh daughter_of÷his a_maidservant.
 \v 25 And=he/it_was in÷morning and=BEHOLD/LO/SEE she \add was\add*_Lēʼāh and=he/it_said to Lāⱱān what this have_you_done to/for=me not for÷Rāḩēl have_I_served with÷you and=for=what have÷you_deceived_me.
 \v 26 And= Lāⱱān =he/it_said not it_is_done thus in÷place_of÷our to÷give the÷young to=(the)_face_of/in_front_of/before the÷firstborn.
 \v 27 Complete the_week_of this_\add one\add* and÷we_will_give to/for=yourself(m) also DOM this_\add one\add* for_\add the\add*÷service which you_will_serve with=me again seven years another.
@@ -911,10 +911,10 @@
 \v 6 And= Rāḩēl =she/it_said he÷has_vindicated_me god and=also he_has_listened to÷voice_of÷my and÷he_has_given to=me a_son therefore yes/correct/thus/so she_called his/its=name Dān.
 \v 7 And=she/it_conceived/became_pregnant again and= Bilhāh the_maidservant_of Rāḩēl =she/it_gave_birth a_son second to÷Yaˊₐqoⱱ.
 \v 8 And= Rāḩēl =she/it_said wrestling(s)_of god I_have_wrestled with sister_of÷my also I_have_prevailed and=she/it_called/named his/its=name Naftālī.
-\v 9 And= Lēʼāh =she/it_saw if/because_that she_had_stopped from÷bearing_children and=she/it_took DOM Zilpah maidservant_of÷her and=she/it_gave DOM=her/it to÷Yaˊₐqoⱱ/(Jacob) to/for=(a)_woman.
-\v 10 And= Zilpah the_maidservant_of Lēʼāh =she/it_gave_birth to÷Yaˊₐqoⱱ a_son.
+\v 9 And= Lēʼāh =she/it_saw if/because_that she_had_stopped from÷bearing_children and=she/it_took DOM Zilpāh maidservant_of÷her and=she/it_gave DOM=her/it to÷Yaˊₐqoⱱ/(Jacob) to/for=(a)_woman.
+\v 10 And= Zilpāh the_maidservant_of Lēʼāh =she/it_gave_birth to÷Yaˊₐqoⱱ a_son.
 \v 11 And= Lēʼāh =she/it_said in/on/at/with\f + \fr 30:11 \ft OSHB variant note: ב/גד: (x-qere) 'בָּ֣א': lemma=935 morph=HVqrmsa id=01Q3H בָּ֣א 'גָ֑ד': lemma=1409 n=1 morph=HNcmsa id=01gKG גָ֑ד\f* and=she/it_called/named DOM his/its=name Gād.
-\v 12 And= Zilpah the_maidservant_of Lēʼāh =she/it_gave_birth a_son second to÷Yaˊₐqoⱱ.
+\v 12 And= Zilpāh the_maidservant_of Lēʼāh =she/it_gave_birth a_son second to÷Yaˊₐqoⱱ.
 \v 13 And= Lēʼāh =she/it_said in÷happiness_of÷my if/because they÷will_call_me_blessed daughters and=she/it_called/named DOM his/its=name ʼĀshēr.
 \v 14 And= Rəʼūⱱēn =he/it_went in_\add the\add*÷days_of \add the\add*_harvest_of wheat(s) and÷he_found mandrakes in_the=field and=he/it_brought DOM=them to Lēʼāh his/its=mother and= Rāḩēl =she/it_said to Lēʼāh give please to=me some÷of_the_mandrakes_of your_son_of÷your.
 \v 15 And=she/it_said to/for=her/it small \add was\add*_your÷taking DOM husband_of÷my and÷taking also DOM the_mandrakes_of my_son_of÷my and= Rāḩēl =she/it_said for=so/thus/hence he_will_lie with÷you the=night for the_mandrakes_of your_son_of÷your.
@@ -994,8 +994,8 @@
 \v 44 And=now come I and÷you let_us_make a_covenant and=it_was (into)_a÷witness between÷me and÷between÷you.
 \v 45 And= Yaˊₐqoⱱ =he/it_took a_stone and÷he÷raised_it_up a_pillar.
 \v 46 And= Yaˊₐqoⱱ =he/it_said to÷relatives_of÷his gather stones and=they_took stones and÷they_made a_heap and÷they_ate there at the÷heap.
-\v 47 And=he/it_called to=him/it Lāⱱān Jegar Sahadutha and÷Yaˊₐqoⱱ he_called to=him/it Galeed.
-\v 48 And= Lāⱱān =he/it_said the÷heap the=this \add is\add*_a_witness between÷me and÷between÷you the=day therefore yes/correct/thus/so he_called his/its=name\f + \fr 31:48 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* Galeed.
+\v 47 And=he/it_called to=him/it Lāⱱān Yəgar/(Jegar) Sāhₐdūtāʼ and÷Yaˊₐqoⱱ he_called to=him/it Galˊēd.
+\v 48 And= Lāⱱān =he/it_said the÷heap the=this \add is\add*_a_witness between÷me and÷between÷you the=day therefore yes/correct/thus/so he_called his/its=name\f + \fr 31:48 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* Galˊēd.
 \v 49 And÷(the)÷Miʦpāh that he_said \nd YHWH\nd* may_he_keep_watch between÷me and÷between÷you if/because we_will_be_hidden each from÷neighbour_of÷his.
 \v 50 If you_will_mistreat DOM daughters_of÷my and=if you_will_take wives to daughters_of÷my there_\add is\add*_not anyone with÷us see god \add is\add*_a_witness between÷me and÷between÷you.
 \v 51 And= Lāⱱān =he/it_said to÷Yaˊₐqoⱱ/(Jacob) HERE the÷heap the=this and=BEHOLD/LO/SEE the÷pillar\f + \fr 31:51 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* which I_have_set_up between÷me and÷between÷you.
@@ -1090,7 +1090,7 @@
 \v 27 The_sons_of Yaˊₐqoⱱ they_came on the_\add ones\add*÷slain and÷they_plundered the=city that people_had_defiled sister_of÷their.
 \v 28 DOM flock[s]_of÷their and=DOM herd[s]_of÷their and=DOM donkeys_of÷their\f + \fr 34:28 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* and=DOM \add that\add*_which \add was\add*_in÷city and=DOM \add that\add*_which in_the=field they_took.
 \v 29 And=DOM all_of wealth_of÷their and=DOM all_of one[s]_of÷their_little and=DOM wives_of÷their they_took_captive and÷they_plundered and=DOM all_of that \add was\add*_in÷house.
-\v 30 And= Yaˊₐqoⱱ =he/it_said to Shimˊōn and=near/to Lēvī you(pl)_have_troubled DOM=me by÷making÷me_odious among÷the_inhabitant[s]_of the=earth/land among÷Kənaˊₐnī/(Canaanite)[s] and÷among÷Pərizzī[s] and÷I \add am\add*_men_of number and÷they_will_gather on÷me and÷they÷will_attack_me and= I and÷household_of÷my =I_will_be_destroyed.
+\v 30 And= Yaˊₐqoⱱ =he/it_said to Shimˊōn and=near/to Lēvī you(pl)_have_troubled DOM=me by÷making÷me_odious among÷the_inhabitant[s]_of the=earth/land among÷Kənaˊₐnī and÷among÷Pərizzī and÷I \add am\add*_men_of number and÷they_will_gather on÷me and÷they÷will_attack_me and= I and÷household_of÷my =I_will_be_destroyed.
 \v 31 And=they_said like÷a÷prostitute will_he_do with sister_of÷our.
 \c 35
 \nb
@@ -1114,13 +1114,13 @@
 \v 18 And=he/it_was when= life_of÷her =went_out if/because she_died and=she/it_called/named his/its=name Ben- Oni and÷father_of÷his he_called to=him/it Binyāmīn.
 \v 19 And= Rāḩēl =she_died and÷she_was_buried on÷the_way_of ʼEfrātāh that \add is\add*_Bēyt- leḩem.
 \v 20 And= Yaˊₐqoⱱ/(Jacob) =he_set_up a_pillar over grave_of÷her it \add is\add*_the_pillar_of the_grave_of Rāḩēl until the=day.
-\v 21 And= Yisrā\sup ʼēl\sup*/(Israel) =he_set_out and÷he_pitched tent_of÷his\f + \fr 35:21 \ft OSHB note: We have abandoned or added a ketib/qere relative to BHS. In doing this we agree with L against BHS.\f* from÷beyond (to)÷tower_of Eder.
+\v 21 And= Yisrā\sup ʼēl\sup*/(Israel) =he_set_out and÷he_pitched tent_of÷his\f + \fr 35:21 \ft OSHB note: We have abandoned or added a ketib/qere relative to BHS. In doing this we agree with L against BHS.\f* from÷beyond (to)÷tower_of ˊĒder.
 \v 22 And=he/it_was when= Yisrā\sup ʼēl\sup*/(Israel) =dwelt on_the=earth the=that and= Rəʼūⱱēn =he/it_went and÷he_lay\f + \fr 35:22 \ft OSHB alternative note: וַ/יִּשְׁכַּב֙: (x-accent)וַ/יִּשְׁכַּ֕ב\f* with Bilhāh\f + \fr 35:22 \ft OSHB alternative note: בִּלְהָה֙: (x-accent)בִּלְהָ֖ה\f* the_concubine_of his/its=father\f + \fr 35:22 \ft OSHB alternative note: אָבִ֔י/ו: (x-accent)אָבִ֑י/ו\f* and= Yisrā\sup ʼēl\sup*/(Israel) =he/it_listened\f + \fr 35:22 \ft OSHB alternative note: יִשְׂרָאֵ֑ל: (x-accent)יִשְׂרָאֵֽל\f* and= the_sons_of Yaˊₐqoⱱ =they_were two_plus ten.
 \v 23 The_sons_of Lēʼāh the_firstborn_of Yaˊₐqoⱱ Rəʼūⱱēn and÷Shimˊōn and÷Lēvī and=Yəhūdāh/(Yihudah) and÷Yissāskār/(Issachar) and÷Zəⱱūlūn.
 \v 24 The_sons_of Rāḩēl Yōşēf/(Joseph) and÷Binyāmīn.
-\v 25 And=the_sons of_Bilhāh the_maidservant_of Rāḩēl Dān and=Naftali.
-\v 26 And=the_sons of_Zilpah the_maidservant_of Lēʼāh Gād and=ʼĀshēr these \add were\add*_the_sons_of Yaˊₐqoⱱ who it_was_born to=him/it in÷Paddan- aram.
-\v 27 And= Yaˊₐqoⱱ =he_came to Yiʦḩāq/(Isaac) his/its=father Mamre Qiryat (the) that \add is\add*_Ḩeⱱrōn where he_had_sojourned there ʼAⱱrāhām and÷Yiʦḩāq.
+\v 25 And=the_sons of_Bilhāh the_maidservant_of Rāḩēl Dān and=Naftālī.
+\v 26 And=the_sons of_Zilpāh the_maidservant_of Lēʼāh Gād and=ʼĀshēr these \add were\add*_the_sons_of Yaˊₐqoⱱ who it_was_born to=him/it in÷Paddan- aram.
+\v 27 And= Yaˊₐqoⱱ =he_came to Yiʦḩāq/(Isaac) his/its=father Mamrēʼ Qiryat (the) that \add is\add*_Ḩeⱱrōn where he_had_sojourned there ʼAⱱrāhām and÷Yiʦḩāq.
 \v 28 And= the_days_of Yiʦḩāq =they_were one_hundred_of year[s] and=eighty year[s].
 \v 29 And= Yiʦḩāq =he_expired and=he/it_died and÷he_was_gathered to people(s)_of÷his an_old_\add man\add* and÷satisfied_of days and= ˊĒsāv and÷Yaˊₐqoⱱ/(Jacob) sons_of÷his =they_buried DOM=him/it.
 \c 36
@@ -1145,25 +1145,25 @@
 \v 18 And=these \add were\add*_the_sons_of ʼĀhₑlīⱱāmāh the_wife_of ˊĒsāv chief Yəˊūsh chief Yaˊlām chief Qoraḩ these \add were\add*_the_chiefs_of ʼĀhₑlīⱱāmāh the_daughter_of ˊAnāh the_wife_of ˊĒsāv.
 \v 19 These \add were\add*_the_sons_of ˊĒsāv and=these chiefs_of÷\add were\add*_their that \add is\add*_ʼEdōm.
 \v 20 These \add were\add*_the_sons_of Sēˊīr the÷Ḩorīte the_inhabitants_of the=earth/land Lōţān and÷Shōⱱāl and÷Tsiⱱˊōn and÷ˊAnāh.
-\v 21 And÷Diyshōn and÷ʼEʦer and÷Diyshān these \add were\add*_the_chiefs_of the_Ḩorīte[s] the_sons_of Sēˊīr in=land of_ʼEdōm.
-\v 22 And= the_sons_of Lōţān =they_were Ḩorī and÷Hemam and_\add was\add*÷the_sister_of Lōţān Timnāˊ.
+\v 21 And÷Diyshōn and÷ʼEʦer and÷Diyshān these \add were\add*_the_chiefs_of the_Ḩorī the_sons_of Sēˊīr in=land of_ʼEdōm.
+\v 22 And= the_sons_of Lōţān =they_were Ḩorī and÷Hēymām and_\add was\add*÷the_sister_of Lōţān Timnāˊ.
 \v 23 And=these \add were\add*_the_sons_of Shōⱱāl ˊAlvān and÷Mānaḩat and÷ˊĒyⱱāl Shəfō and÷ʼŌnām.
 \v 24 And=these \add were\add*_the_sons_of Tsiⱱˊōn/(Zibeon) and÷ʼAy\sup yāh\sup* and÷ˊAnāh he \add was\add*_ˊAnāh who he_found DOM the_hot÷springs in÷wilderness when÷he÷was_pasturing DOM the÷donkeys of÷Tsiⱱˊōn his/its=father.
 \v 25 And=these \add were\add*_the_children_of ˊAnāh Diyshōn and÷ʼĀhₑlīⱱāmāh the_daughter_of ˊAnāh.
-\v 26 And=these \add were\add*_the_sons_of Diyshān Hemdan and÷ʼEshbān and÷Yitrān/(Ithran) and÷Kərān/(Cheran).
-\v 27 These \add were\add*_the_sons_of ʼEʦer Bilhān and÷Zaˊₐvān and÷Akan.
+\v 26 And=these \add were\add*_the_sons_of Diyshān Ḩemdān and÷ʼEshbān and÷Yitrān/(Ithran) and÷Kərān/(Cheran).
+\v 27 These \add were\add*_the_sons_of ʼEʦer Bilhān and÷Zaˊₐvān and÷ˊAqān.
 \v 28 These \add were\add*_the_sons_of Diyshān ˊŪʦ and÷ʼArān.
-\v 29 These \add were\add*_the_chiefs_of the_Ḩorīte[s] chief Lōţān chief Shōⱱāl chief Tsiⱱˊōn chief ˊAnāh.
-\v 30 Chief Diyshōn chief ʼEʦer chief Diyshān these \add were\add*_the_chiefs_of the_Ḩorīte[s] to÷chiefs_of÷their in=land of_Sēˊīr.
+\v 29 These \add were\add*_the_chiefs_of the_Ḩorī chief Lōţān chief Shōⱱāl chief Tsiⱱˊōn chief ˊAnāh.
+\v 30 Chief Diyshōn chief ʼEʦer chief Diyshān these \add were\add*_the_chiefs_of the_Ḩorī to÷chiefs_of÷their in=land of_Sēˊīr.
 \v 31 And=these \add were\add*_the÷kings who they_reigned in=land of_ʼEdōm to=(the)_face_of/in_front_of/before a_king reigned of÷the_people_of of_Yisrā\sup ʼēl\sup*/(Israel).
 \v 32 And÷he_reigned in÷ʼEdōm Belaˊ the_son_of Bəˊōr and=name_of his_city_of÷his \add was\add*_Dinhāⱱāh.
 \v 33 And= Belaˊ =he/it_died and÷he_reigned in÷place_of_him Yōⱱāⱱ/(Jobab) the_son_of Zeraḩ from÷Boʦrāh.
-\v 34 And= Yōⱱāⱱ =he/it_died and÷he_reigned in÷place_of_him Ḩūshām from÷the_land_of the_Tēymānī[s].
+\v 34 And= Yōⱱāⱱ =he/it_died and÷he_reigned in÷place_of_him Ḩūshām from÷the_land_of the_Tēymānī.
 \v 35 And= Ḩūshām =he/it_died and÷he_reigned in÷place_of_him Hₐdad the_son_of Bədad \add who\add*÷defeated DOM Midyān in÷the_region_of Mōʼāⱱ and=name_of his_city_of÷his \add was\add*_ˊAvīt.
 \v 36 And= Hₐdad =he/it_died and÷he_reigned in÷place_of_him Samlāh from÷Masrēqāh.
 \v 37 And= Samlāh =he/it_died and÷he_reigned in÷place_of_him Shāʼūl/(Saul) from÷Rəḩoⱱōt the=river.
 \v 38 And= Shāʼūl =he/it_died and÷he_reigned in÷place_of_him Baˊal- Hanan the_son_of ˊAkbōr.
-\v 39 And= Baˊal- Hanan the_son_of ˊAkbōr =he/it_died and÷he_reigned in÷place_of_him Hadar and=name_of his_city_of÷his \add was\add*_Pāˊū and=name_of his/its=wife/woman \add was\add*_Məhēyţaⱱ\sup ʼēl\sup* the_daughter_of Maţrēd the_daughter_of Mēy- Zāhāⱱ.
+\v 39 And= Baˊal- Hanan the_son_of ˊAkbōr =he/it_died and÷he_reigned in÷place_of_him Hₐdar and=name_of his_city_of÷his \add was\add*_Pāˊū and=name_of his/its=wife/woman \add was\add*_Məhēyţaⱱ\sup ʼēl\sup* the_daughter_of Maţrēd the_daughter_of Mēy- Zāhāⱱ.
 \v 40 And=these \add were\add*_the_names_of the_chiefs_of ˊĒsāv to=their=clans to÷places_of÷their by÷names_of÷their chief Timnāˊ chief ˊAlvāh chief Yətēt/(Jetheth).
 \v 41 Chief ʼĀhₑlīⱱāmāh chief ʼĒlāh chief Pinon.
 \v 42 Chief Qənaz chief Tēymān chief Miⱱʦār.
@@ -1171,7 +1171,7 @@
 \c 37
 \nb
 \v 1 And= Yaˊₐqoⱱ/(Jacob) =he/it_sat_down//remained//lived in=land of_the_sojournings_of his/its=father in=land of_Kənaˊan/(Canaan).
-\v 2 These \add are\add*_the_accounts_of Yaˊₐqoⱱ Yōşēf/(Joseph) \add was\add*_a_son_of seven- teen year[s] he_was shepherding with brothers_of÷his (in)÷flock and=he \add was\add*_a_youth with the_sons_of Bilhāh and=DOM the_sons_of Zilpah the_wives_of his/its=father and= Yōşēf =he/it_brought DOM report_of÷their bad to father_of÷their.
+\v 2 These \add are\add*_the_accounts_of Yaˊₐqoⱱ Yōşēf/(Joseph) \add was\add*_a_son_of seven- teen year[s] he_was shepherding with brothers_of÷his (in)÷flock and=he \add was\add*_a_youth with the_sons_of Bilhāh and=DOM the_sons_of Zilpāh the_wives_of his/its=father and= Yōşēf =he/it_brought DOM report_of÷their bad to father_of÷their.
 \v 3 And÷Yisrā\sup ʼēl\sup*/(Israel) he_loved DOM Yōşēf from=all sons_of÷his if/because \add was\add*_a_son_of old_age(s) he to=him/it and÷he_made to=him/it a_long_garment_of palms_and_soles.
 \v 4 And= brothers_of÷his =they_saw if/because_that DOM=him/it father_of÷their he_loved from=all brothers_of÷his and÷they_hated DOM=him/it and=not they_were_able to÷speak_to_him to÷welfare.
 \v 5 And= Yōşēf =he_dreamed a_dream and÷he_told_\add it\add* to÷brothers_of÷his and÷they_increased again to_hate DOM=him/it.
@@ -1197,7 +1197,7 @@
 \v 25 And=they_lived to÷eat bread and÷they_lifted_up eyes_of÷their and=they_saw and=BEHOLD/LO/SEE a_caravan_of Yishmāˊ\sup ʼēl\sup*ī \add was\add*_coming from÷Gilˊād and÷camels_of÷their \add were\add*_carrying spice and÷balm and÷myrrh \add they\add*_\add were\add*_travelling to÷take_\add them\add*_down towards=Miʦrayim/(Egypt).
 \v 26 And= Yəhūdāh/(Judah) =he/it_said to brothers_of÷his what \add is\add*_\add the\add*_profit that/for/because/then/when we_will_kill DOM brother_of÷our and÷we_will_conceal DOM blood_of÷his.
 \v 27 Come and÷let÷us_sell_him to÷Yishmāˊ\sup ʼēl\sup*ī and÷hand_of÷our not let_it_be in=him/it if/because brother_of÷\add is\add*_our flesh_of÷our_own he and= brothers_of÷his =they_heard.
-\v 28 And= men Midyānite[s] traders =they_passed_by and÷they_drew and÷they_brought_up DOM Yōşēf from the÷pit and÷they_sold DOM Yōşēf to÷Yishmāˊ\sup ʼēl\sup*ī for÷twenty silver and÷they_brought DOM Yōşēf towards=Miʦrayim.
+\v 28 And= men Midyānīm traders =they_passed_by and÷they_drew and÷they_brought_up DOM Yōşēf from the÷pit and÷they_sold DOM Yōşēf to÷Yishmāˊ\sup ʼēl\sup*ī for÷twenty silver and÷they_brought DOM Yōşēf towards=Miʦrayim.
 \v 29 And= Rəʼūⱱēn =he_returned to the÷pit and=BEHOLD/LO/SEE not Yōşēf \add was\add*_in÷pit and÷he_tore DOM clothes_of÷his.
 \v 30 And÷he_returned to brothers_of÷his and÷he_said the÷boy he_\add is\add*÷not and÷I where \add am\add*_I going.
 \v 31 And=they_took DOM the_long_garment_of Yōşēf/(Joseph) and÷they_slaughtered a_male_goat_of goats and÷they_dipped DOM the_long÷garment in÷blood.
@@ -1212,7 +1212,7 @@
 \v 2 And=he/it_saw there Yəhūdāh a_daughter_of a_man a_Kənaˊₐnī/(Canaanite) and=his/its=name \add was\add*_Shūˊa and÷he÷took_her and÷he_went into÷her.
 \v 3 And=she/it_conceived/became_pregnant and=she/it_gave_birth a_son and=he/it_called DOM his/its=name ˊĒr.
 \v 4 And=she/it_conceived/became_pregnant again and=she/it_gave_birth a_son and=she/it_called/named DOM his/its=name ʼŌnān.
-\v 5 And=she/it_added again and=she/it_gave_birth a_son and=she/it_called/named DOM his/its=name Shēlāh and=it_was in÷Kezib when÷bore÷she DOM=him/it.
+\v 5 And=she/it_added again and=she/it_gave_birth a_son and=she/it_called/named DOM his/its=name Shēlāh and=it_was in÷Kəzīⱱ when÷bore÷she DOM=him/it.
 \v 6 And= Yəhūdāh =he/it_took a_wife for÷ˊĒr firstborn_of÷his and÷name_of÷her \add was\add*_Tāmār.
 \v 7 And=he/it_was ˊĒr the_firstborn_of Yəhūdāh evil in/on=both_eyes_of \nd YHWH\nd* and÷he÷put_him_to_death \nd YHWH\nd*.
 \v 8 And= Yəhūdāh =he/it_said to÷ʼŌnān go into the_wife_of your(ms)=brother/kindred and÷act_as_a_husband's_brother_for DOM=her/it and÷raise_up offspring for÷brother_of÷your.
@@ -1221,14 +1221,14 @@
 \v 11 And= Yəhūdāh/(Judah) =he/it_said to÷Tāmār his/its=daughter-in-law dwell a_widow the_house_of your_father_of÷your until Shēlāh son_of÷my he_will_grow_up if/because he_said lest also he he_should_die like÷brothers_of÷his and= Tāmār =she_went and÷she_dwelt the_house_of her_father_of÷her.
 \v 12 And= the=days =they_increased and= the_daughter_of Shūˊa the_wife_of Yəhūdāh =she_died and= Yəhūdāh =he/it_sighed/regretted and=he/it_ascended to the_shearers_of his/its=flock_of_sheep/goats he and÷Ḩīrāh his/its=neighbour the÷Adullamite to÷Timnāh.
 \v 13 And÷it_was_told to÷Tāmār to=say THERE father-in-law_of÷your \add is\add*_going_up to÷Timnāh to÷shear his/its=flock_of_sheep/goats.
-\v 14 And÷she_removed the_clothes_of her_widowhood_of÷her from÷on÷her and÷she_covered with÷veil and÷she_wrapped_herself_up and÷she_sat at÷the_entrance_of Enaim which \add is\add*_on the_road_of (of)_to÷Timnāh if/because she_had_seen if/because_that Shēlāh he_had_grown_up and÷she not she_had_been_given to=him/it to/for=(a)_woman.
+\v 14 And÷she_removed the_clothes_of her_widowhood_of÷her from÷on÷her and÷she_covered with÷veil and÷she_wrapped_herself_up and÷she_sat at÷the_entrance_of ˊĒynayim which \add is\add*_on the_road_of (of)_to÷Timnāh if/because she_had_seen if/because_that Shēlāh he_had_grown_up and÷she not she_had_been_given to=him/it to/for=(a)_woman.
 \v 15 And÷he÷saw_her Yəhūdāh and=he/it_considered=her/it to÷a_prostitute if/because she_had_covered face_of÷her.
 \v 16 And÷he_turned_aside to=her/it to the÷road and=he/it_said come=NOW please let_me_go into÷you if/because not he_knew if/because_that daughter-in-law_of÷\add was\add*_his she and=she/it_said what will_you_give to/for=me\f + \fr 38:16 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* that/for/because/then/when you_will_come into÷me.
 \v 17 And=he/it_said I I_will_send a_kid_of goats from the÷flock and=she/it_said if you_will_give a_pledge until you÷send_\add it\add*.
 \v 18 And=he/it_said what \add is\add*_the÷pledge which I_will_give to÷you and=she/it_said seal_of÷your and÷cord_of÷your and÷staff_of÷your which \add is\add*_in÷hand_of÷your and÷he_gave_\add them\add* to÷her and÷he_went to=her/it and=she/it_conceived/became_pregnant to=him/it.
 \v 19 And=she/it_arose and÷she_went and÷she_removed veil_of÷her from÷on÷her and÷she_put_on the_clothes_of her_widowhood_of÷her.
 \v 20 And= Yəhūdāh/(Judah) =he_sent DOM the_kid_of the_goats by÷the_hand_of his/its=neighbour the÷Adullamite to=take/accept/receive the÷pledge from÷the_hand_of the=woman and=not he÷found_her.
-\v 21 And÷he_asked DOM the_men_of her_place_of÷her to=say where \add is\add*_the÷cult_prostitute she \add was\add*_at÷Enaim at the÷road and=they_said not she_was in÷this_\add place\add* a_cult_prostitute.
+\v 21 And÷he_asked DOM the_men_of her_place_of÷her to=say where \add is\add*_the÷cult_prostitute she \add was\add*_at÷ˊĒynayim at the÷road and=they_said not she_was in÷this_\add place\add* a_cult_prostitute.
 \v 22 And÷he_returned to Yəhūdāh and=he/it_said not I÷found_her and=also the_men_of the_place they_said not she_was in÷this_\add place\add* a_cult_prostitute.
 \v 23 And= Yəhūdāh =he/it_said let_her_take_\add them\add* to/for=her/it lest we_should_become (into)÷contempt THERE I_sent the÷kid the=this and=you(ms) not you÷found_her.
 \v 24 And=he/it_was about÷three_of\f + \fr 38:24 \ft OSHB exegesis note: WLC has this word divided as כְּ/מִשְׁלֹ֣שׁ\f* months and÷it_was_told to÷Yəhūdāh to=say Tāmār daughter-in-law_of÷your she_has_acted_as_a_prostitute and=also HERE \add she_is\add*_pregnant to÷prostitution(s) and= Yəhūdāh =he/it_said bring÷her_out so÷that_she_may_be_burnt.
@@ -1334,12 +1334,12 @@
 \v 42 And= Parˊoh =he_removed DOM signet-ring_of÷his from=under his/its=hand and=he/it_gave DOM=her/it on the_hand_of Yōşēf and÷he_clothed DOM=him/it clothes_of fine_linen and=he/it_assigned the_chain_of the=gold on neck_of÷his.
 \v 43 And÷he_made_ride DOM=him/it in÷the_chariot_of the_second which to=him/it and÷they_proclaimed before÷him bend_the_knee and÷he_put DOM=him/it over all_of the_land_of Miʦrayim.
 \v 44 And= Parˊoh =he/it_said to Yōşēf I \add am\add*_Parˊoh and÷apart÷from_you not anyone he_will_lift_up DOM his/its=hand and=DOM foot_of÷his in=all the_land_of Miʦrayim.
-\v 45 And= Parˊoh =he/it_called the_name_of Yōşēf Zaphenath- Paneah and÷he_gave to=him/it DOM ʼEşənat the_daughter_of Poti- phera the_priest_of On to/for=(a)_woman and= Yōşēf =he/it_went_out over the_land_of Miʦrayim.
+\v 45 And= Parˊoh =he/it_called the_name_of Yōşēf Zaphenath- Paneah and÷he_gave to=him/it DOM ʼEşənat the_daughter_of Poti- phera the_priest_of ʼOn to/for=(a)_woman and= Yōşēf =he/it_went_out over the_land_of Miʦrayim.
 \v 46 And÷Yōşēf/(Joseph) \add was\add*_a_son_of thirty year[s] when÷stood÷he to=(the)_face_of/in_front_of/before Parˊoh the_king_of Miʦrayim and= Yōşēf =he/it_went_out from=to/for=face/front/presence Parˊoh and÷he_passed\f + \fr 41:46 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* in=all the_land_of Miʦrayim.
 \v 47 And= the=earth/land =it_produced in÷seven the_years_of (the)÷plenty to÷handfuls.
 \v 48 And÷he_gathered DOM all_of \add the\add*_food_of seven \add the\add*_years which they_were in=land of_Miʦrayim/(Egypt) and÷he_put food in÷cities the_food_of the_field[s]_of the=city which \add was\add*_around_of÷it he_put in÷the_midst_of÷of_it.
 \v 49 And= Yōşēf =he_heaped_up grain like÷the_sand_of the=sea much very until if/because he_ceased to÷measure_\add it\add* if/because there_\add was\add*_not measure.
-\v 50 And÷to÷Yōşēf two_of sons it_was_born before÷before the_year_of (the)÷famine it_came whom she_bore for=him/it ʼEşənat the_daughter_of Poti- phera the_priest_of On.
+\v 50 And÷to÷Yōşēf two_of sons it_was_born before÷before the_year_of (the)÷famine it_came whom she_bore for=him/it ʼEşənat the_daughter_of Poti- phera the_priest_of ʼŌn.
 \v 51 And= Yōşēf =he/it_called DOM the_name_of the_firstborn Mənashsheh if/because he÷has_made_me_forget god DOM all_of trouble_of÷my and=DOM all_of the_household_of my_father_of÷my.
 \v 52 And=DOM the_name_of the=second he_called ʼEfrayim if/because he÷has_made_me_fruitful god in=land my_affliction_of÷my.
 \v 53 And= seven the_years_of (the)÷plenty which it_was in=land of_Miʦrayim =they_came_to_an_end.
@@ -1500,18 +1500,18 @@
 \v 7 Sons_of÷his and=the_sons his_sons_of÷his with=him/it daughters_of÷his and÷the_daughters_of his_children_of÷his and=all his/its=seed he_brought with=him/it towards=Miʦrayim.
 \v 8 And=these \add are\add*_the_names_of the_sons_of Yisrā\sup ʼēl\sup*/(Israel) the=(ones_who)_went to÷Miʦrayim Yaˊₐqoⱱ and÷sons_of÷his the_firstborn_of Yaˊₐqoⱱ Rəʼūⱱēn.
 \v 9 And=the_sons of_Rəʼūⱱēn Ḩₐnōk/(Enoch) and÷Pallūʼ and÷Ḩeʦrōn and÷Karmī/(Carmi).
-\v 10 And=the_sons of_Shimˊōn Jemuel and÷Yāmīn/(Jamin) and÷Ohad and÷Yākīn/(Jakin) and÷Zohar and÷Shāʼūl/(Saul) the_son_of the_Kənaˊₐnī/(Canaanite)÷\add woman\add*.
+\v 10 And=the_sons of_Shimˊōn Yəmū\sup ʼēl\sup*/(Jemuel) and÷Yāmīn/(Jamin) and÷ʼOhad and÷Yākīn/(Jakin) and÷Tsoḩar/(Zohar) and÷Shāʼūl/(Saul) the_son_of the_Kənaˊₐnī/(Canaanite)÷\add woman\add*.
 \v 11 And=the_sons of_Lēvī Gērəshōn Qəhāt and÷Mərārī.
 \v 12 And=the_sons of_Yəhūdāh/(Judah) ˊĒr and÷ʼŌnān and÷Shēlāh and÷Pereʦ and÷Zeraḩ and= ˊĒr and÷ʼŌnān =he/it_died in=land of_Kənaˊan/(Canaan) and= the_sons_of Pereʦ =they_were Ḩeʦrōn and÷Ḩāmūl.
-\v 13 And=the_sons of_Yissāskār/(Issachar) Tōlāˊ and÷Pūʼāh and÷Iob and÷Shimrōn.
+\v 13 And=the_sons of_Yissāskār/(Issachar) Tōlāˊ and÷Pūʼāh and÷Yōⱱ/(Iob) and÷Shimrōn.
 \v 14 And=the_sons of_Zəⱱūlūn Şered and÷ʼĒylōn and÷Yaḩlə\sup ʼēl\sup*/(Jahleel).
 \v 15 These \add were\add*_the_sons_of Lēʼāh whom she_had_borne to÷Yaˊₐqoⱱ/(Jacob) in÷Paddan- aram and=DOM Dināh daughter_of÷his every_of (the)_person_of his_sons_of÷his and÷daughters_of÷his \add was\add*_thirty and÷three.
 \v 16 And=the_sons of_Gād Tsəfō/(Zepho)n and÷Ḩaggit Shūnī and÷ʼEʦbvōn ˊĒrī and÷ʼArōdī and÷ʼAr\sup ʼēl\sup*ī.
-\v 17 And=the_sons of_ʼĀshēr Yimnāh/(Imnah) and÷Yishvāh/(Ishvah) and÷Yishvī/(Ishvi) and÷Bərīˊāh and÷Seraḩ sister_of÷their and=the_sons of_Bərīˊāh Ḩeⱱer and÷Malkiel.
-\v 18 These \add were\add*_the_sons_of Zilpah whom Lāⱱān he_had_given to÷Lēʼāh daughter_of÷his and=she/it_gave_birth DOM these to÷Yaˊₐqoⱱ six- teen person[s].
+\v 17 And=the_sons of_ʼĀshēr Yimnāh/(Imnah) and÷Yishvāh/(Ishvah) and÷Yishvī/(Ishvi) and÷Bərīˊāh and÷Seraḩ sister_of÷their and=the_sons of_Bərīˊāh Ḩeⱱer and÷Malkī\sup ʼēl\sup*.
+\v 18 These \add were\add*_the_sons_of Zilpāh whom Lāⱱān he_had_given to÷Lēʼāh daughter_of÷his and=she/it_gave_birth DOM these to÷Yaˊₐqoⱱ six- teen person[s].
 \v 19 The_sons_of Rāḩēl the_wife_of Yaˊₐqoⱱ Yōşēf/(Joseph) and÷Binyāmīn.
-\v 20 And=he/it_was_born to÷Yōşēf in=land of_Miʦrayim/(Egypt) \add those\add*_whom she_bore for=him/it ʼEşənat the_daughter_of Poti- phera the_priest_of On DOM Mənashsheh and=DOM ʼEfrayim.
-\v 21 And=the_sons of_Binyāmīn Belaˊ and÷Beker and÷ʼAshbēl Gērāʼ and÷Naˊₐmān Ehi and÷Rosh Muppim and÷Ḩuppim and÷ʼArdə.
+\v 20 And=he/it_was_born to÷Yōşēf in=land of_Miʦrayim/(Egypt) \add those\add*_whom she_bore for=him/it ʼEşənat the_daughter_of Poti- phera the_priest_of ʼOn DOM Mənashsheh and=DOM ʼEfrayim.
+\v 21 And=the_sons of_Binyāmīn Belaˊ and÷Beker and÷ʼAshbēl Gērāʼ and÷Naˊₐmān ʼĒḩī and÷Roʼsh Muppim and÷Ḩuppim and÷ʼArdə.
 \v 22 These \add were\add*_the_sons_of Rāḩēl who it_was_born to÷Yaˊₐqoⱱ every_of person \add was\add*_four- teen.
 \v 23 And=the_sons of_Dān Ḩushim.
 \v 24 And=the_sons of_Naftālī Yaḩʦə\sup ʼēl\sup*/(Jahzeel) and÷Gūnī and÷Yēʦer/(Jezer) and÷Shillēm.
@@ -1613,7 +1613,7 @@
 \v 27 Binyāmīn \add is\add*_a_wolf \add which\add*_it_tears_to_pieces in÷morning he_consumes booty and÷to÷evening he_divides plunder.
 \v 28 All_of these \add are\add*_the_tribes_of Yisrā\sup ʼēl\sup*/(Israel) two_plus ten and÷this \add is_that\add*_which he_spoke to/for=them father_of÷their and=he/it_blessed them everyone whom according÷to_of÷his_blessing he_blessed DOM=them.
 \v 29 And=he/it_commanded them and=he/it_said to÷them I \add am\add*_about_to_be_gathered to people_of÷my bury DOM=me with fathers_of÷my into the÷cave which \add is\add*_in÷the_field_of ˊEfrōn the÷Ḩittiy.
-\v 30 In÷cave which \add is\add*_in÷the_field_of (the)÷Machpelah which \add is\add*_on the_face_of Mamre in=land of_Kənaˊan/(Canaan) which ʼAⱱrāhām he_bought DOM the=field from÷with ˊEfrōn the÷Ḩittiy to÷a_possession_of a_burial_site.
+\v 30 In÷cave which \add is\add*_in÷the_field_of (the)÷Machpelah which \add is\add*_on the_face_of Mamrēʼ in=land of_Kənaˊan/(Canaan) which ʼAⱱrāhām he_bought DOM the=field from÷with ˊEfrōn the÷Ḩittiy to÷a_possession_of a_burial_site.
 \v 31 There÷(to) people_buried DOM ʼAⱱrāhām and=DOM Sārāh his/its=wife/woman there÷(to) people_buried DOM Yiʦḩāq/(Isaac) and=DOM Riⱱqāh his/its=wife/woman and÷there÷(to) I_buried DOM Lēʼāh.
 \v 32 The_livestock_of the=field and÷the÷cave which in/on/over=him/it from÷with the_sons_of Ḩēt.
 \v 33 And= Yaˊₐqoⱱ/(Jacob) =they_were_ended/finished to÷command DOM sons_of÷his and÷he_gathered feet_of÷his into the÷bed and÷he_expired and÷he_was_gathered to peoples_of÷his.
@@ -1628,10 +1628,10 @@
 \v 7 And= Yōşēf =he/it_ascended to÷bury DOM his/its=father and÷they_went_up with=him/it all_of the_servants_of Parˊoh the_elders_of his_household_of÷his and=all/each/any/every the_elders_of the_land_of Miʦrayim.
 \v 8 And=all/each/any/every the_household_of Yōşēf/(Joseph) and÷brothers_of÷his and÷the_household_of his/its=father only one[s]_of÷their_little and÷sheep_of÷their and÷cattle_of÷their they_left in=land of_Goshen.
 \v 9 And=he/it_ascended with=him/it both chariotry as_well_as horsemen and=he/it_was the÷company numerous very.
-\v 10 And=they_came to the_threshing_floor_of Atad which \add is\add*_on÷the_other_side_of the_Yardēn/(Jordan) and÷they_lamented there a_lament great and÷heavy very and=he/it_made for÷father_of÷his mourning seven_of days.
-\v 11 And= the_inhabitant[s]_of the=earth/land the÷Kənaˊₐnī/(Canaanite)[s] =he/it_saw DOM the÷mourning at÷threshing_floor_of Atad and=they_said \add is\add*_mourning heavy this for÷Miʦrayim/(Egypt) therefore yes/correct/thus/so someone_called his/its=name Heⱱel/(Abel) Miʦrayim which \add is\add*_on÷the_other_side_of the_Yardēn.
+\v 10 And=they_came to the_threshing_floor_of Hāʼāţād/(Atad) which \add is\add*_on÷the_other_side_of the_Yardēn/(Jordan) and÷they_lamented there a_lament great and÷heavy very and=he/it_made for÷father_of÷his mourning seven_of days.
+\v 11 And= the_inhabitant[s]_of the=earth/land the÷Kənaˊₐnī =he/it_saw DOM the÷mourning at÷threshing_floor_of Hāʼāţād and=they_said \add is\add*_mourning heavy this for÷Miʦrayim/(Egypt) therefore yes/correct/thus/so someone_called his/its=name Heⱱel/(Abel) Miʦrayim which \add is\add*_on÷the_other_side_of the_Yardēn.
 \v 12 And= sons_of÷his =they_made to=him/it thus just=as he÷had_commanded_them.
-\v 13 And= sons_of÷his =they_carried DOM=him/it towards=land of_Kənaˊan/(Canaan) and÷they_buried DOM=him/it in÷the_cave_of the_field_of (the)÷Machpelah which ʼAⱱrāhām he_had_bought DOM the=field to÷a_possession_of a_burial_site from÷with ˊEfrōn the÷Ḩittiy on the_face_of Mamre.
+\v 13 And= sons_of÷his =they_carried DOM=him/it towards=land of_Kənaˊan/(Canaan) and÷they_buried DOM=him/it in÷the_cave_of the_field_of (the)÷Machpelah which ʼAⱱrāhām he_had_bought DOM the=field to÷a_possession_of a_burial_site from÷with ˊEfrōn the÷Ḩittiy on the_face_of Mamrēʼ.
 \v 14 And÷he_went_back Yōşēf to÷Miʦrayim he and÷brothers_of÷his and=all \add those÷who_had\add*_gone_up with=him/it to÷bury DOM his/its=father after he÷had_buried DOM his/its=father.
 \v 15 And= the_brothers_of Yōşēf/(Joseph) =they_saw if/because_that father_of÷their he_had_died and=they_said if he÷will_be_hostile_towards_us Yōşēf and÷indeed_(repay) he_will_repay to/for=us DOM all_of the÷harm which we_dealt_out_to DOM=him/it.
 \v 16 And÷they_commanded to Yōşēf to=say father_of÷your he_commanded to=(the)_face_of/in_front_of/before death_of÷his to=say.

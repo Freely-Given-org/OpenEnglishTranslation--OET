@@ -1,4 +1,4 @@
-\id GEN - Open English Translation—Readers’ Version (OET-RV) v0.2.18
+\id GEN - Open English Translation—Readers’ Version (OET-RV) v0.2.24
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 GEN
@@ -6,14 +6,14 @@
 \h Genesis
 \toc1 Genesis
 \toc2 Genesis
-\toc3 Gen.
+\toc3 Gen
 \mt1 Genesis
 \is1 Introduction
 \ip The meaning of the English name \bk Genesis\bk* is ‘source’ or ‘beginning’. Hebrew readers call this document ‘Bereshit’ which is the first word in the Hebrew and means ‘In the beginning’. Some European and other translations call it ‘The first book of Mosheh/Moses’.
 \ip This document describes the creation of space and of our planet and its contents, the origin of people, and the beginning of sin and suffering here in the world. This account also describes how God chose one particular people group and how he brought them to the land that he had promised them.
 \ip This document has two main parts:
-\ip 1. The making of world and the account of the first two people, and then the first ten generations of their descendants. We read about the foundations of human culture, beginning with Adam and Havah (Eve) and their banishment from the garden, about Kayin (Cain) killing his brother Hevel (Abel), about Noah and the worldwide flood, and about the construction of the tower at Bavel.
-\ip 2. The lives of the ancestors of the Jewish people: Avraham the first ancestor became famous due to his faith and trust, and his obedience of God’s commands. Following that is the account about his son Yitshak (Isaac), and his grandson Ya’akov (Jacob, also named ‘Yisrael’ or ‘Israel’), and then Ya’akov’s twelve sons who became the founders of the twelve tribes of Yisrael. That account also includes the part about Ya’akov’s son Yosef and what happened him when he was sold into Mitsrayim/Egypt by his brothers as a slave.
+\ip 1. The making of world and the account of the first two people, and then the first ten generations of their descendants. We read about the foundations of human culture, beginning with Adam and Havah/Eve and their banishment from the garden, about Kayin/Cain killing his brother Hevel/Abel, about Noah and the worldwide flood, and about the construction of the tower at Bavel.
+\ip 2. The lives of the ancestors of the Jewish people: Avraham the first ancestor became famous due to his faith and trust, and his obedience of God’s commands. Following that is the account about his son Yitshak/Isaac, and his grandson Ya’akov (Jacob, also named ‘Yisrael’ or ‘Israel’), and then Ya’akov’s twelve sons who became the founders of the twelve tribes of Yisrael. That account also includes the part about Ya’akov’s son Yosef and what happened him when he was sold into Mitsrayim/Egypt by his brothers as a slave.
 \ip We also read the accounts here about the various people groups that proliferated across the continent and formed into nations.
 \ip There in final parts of this account, we’re told about God’s eternal promise of God to the people group that he chose. God doesn’t forget his promises, but he also judges and punishes those who disobey him.
 \iot Main components of this account
@@ -24,7 +24,7 @@
 \io1 The tower at Bavel \ior 11:1-9\ior*
 \io1 The accounts of Shem through to Avraham \ior 11:10-32\ior*
 \io1 The Hebrew patriarchs: Avraham, Yitshak, and Ya’akov \ior 12:1–35:29\ior*
-\io1 The descendants of Esav (Esau) \ior 36:1-43\ior*
+\io1 The descendants of Esav/Esau \ior 36:1-43\ior*
 \io1 Yosef and his brothers \ior 37:1–45:28\ior*
 \io1 The Ivrim in Mitsrayim \ior 46:1–50:26\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
@@ -160,7 +160,7 @@
 \q1 “Because you did what your wife told you
 \q2 and ate from that tree
 \q2 that I’d told you not to eat from,
-\q1 then the ground will be cursed because of you.\x + \xo 3:17-18: \xt Heb 6:8.\x*
+\q1 →then the ground will be cursed because of you.\x + \xo 3:17-18: \xt Heb 6:8.\x*
 \q1 You’ll have to work hard to get food from it
 \q2 all the rest of your life.
 \q1
@@ -173,7 +173,7 @@
 \q1 \add Yes,\add* you were \add created\add* from dust,
 \q2 and you’ll return back to dust.”
 \p
-\v 20 Then the man named his wife ‘Havah’ \add (Eve)\add* \add (which means ‘living’)\add* because she would become the mother of all future people.
+\v 20 Then the man named his wife ‘Havah’ \add (Eve,\add* \add which means ‘living’)\add* because she would become the mother of all future people.
 \v 21 Then Yahweh God made clothes from \add animal\add* \add skins\add* for Adam and his wife and he dressed them.
 \s1 The humans get expelled from the garden
 \p
@@ -182,7 +182,7 @@
 \p
 \v 24 After he expelled them, he placed sentries on the east side of the garden in Eden, as well as a fiery sword that swung around in every direction to guard the path to the tree of life.
 \c 4
-\s1 Kayin (Cain) murders Hevel (Abel)
+\s1 Kayin/Cain murders Hevel/Abel
 \p
 \v 1 Then Adam \add slept with\add* his wife Havah \add (Eve)\add*, and she conceived and \add in due course\add* gave birth to Kayin \add (Cain)\add*. “Yahweh \add has enabled me to produce\add* a man,” she said.
 \v 2 \add Eventually\add* she also gave birth to \add Kayin’s\add* brother, Hevel \add (Abel)\add*. Hevel became a shepherd, while Kayin became a crop farmer.
@@ -221,10 +221,10 @@
 \q2 \add I killed\add* a young man who hurt me.
 \q1
 \v 24 If \add killers of\add* Kayin \add (Cain)\add* would be sentenced seven times as much,
-\q2 then \add anyone who kills\add* \add me\add* should be sentenced \em seventy-seven\em* times as much.”
+\q2 →then \add anyone who kills\add* \add me\add* should be sentenced \em seventy-seven\em* times as much.”
 \s1 Shet’s descendants
 \p
-\v 25 Then Adam slept with his wife again and she bore a son and named him Shet \add (Seth)\add* \add (which means ‘given’)\add* because she had said, “God has given me another son in place of Hevel \add (Abel)\add* who was killed by Kayin \add (Cain)\add*.”
+\v 25 Then Adam slept with his wife again and she bore a son and named him Shet \add (Seth,\add* \add which means ‘given’)\add* because she had said, “God has given me another son in place of Hevel \add (Abel)\add* who was killed by Kayin \add (Cain)\add*.”
 \v 26 \add Eventually\add* Shet also had a son and named him Enosh. That was when \add people\add* began using Yahweh’s name \add when they prayed for help\add*.
 \c 5
 \s1 Adam’s (important) descendants
@@ -409,7 +409,7 @@
 \r (1 Chr. 1:5-23)
 \p
 \v 1 These are the generations of Noah’s sons, Yefet \add (Japheth)\add*, Shem, and Ham, and their descendants born to them after the flood:
-\s2 Yefet’s (Japheth’s) descendants
+\s2 Yefet’s/Japheth’s descendants
 \p
 \v 2 Yefet’s \add (Japheth’s)\add* sons were Gomer, Magog, Maday, Yavan, Tuval, Meshek, and Tiras.
 \v 3 Gomer’s sons were Ashkenaz, Rifat, and Togarmah.
@@ -644,7 +644,7 @@
 \v 10 then added, “I’ll give you so many descendants that they won’t even be able to be counted because there’ll be so many.”
 \v 11 Then the messenger told her,
 \q1 “Listen here: you’re pregnant and will give birth to a son,
-\q1 and you’ll name him ‘Yishmael’ \add (Ishmael)\add* (\add which means ‘God hears’)\add*
+\q1 and you’ll name him ‘Yishmael’ \add (Ishmael,\add* \add which means ‘God hears’)\add*
 \q2 because Yahweh has heard your cries of misery.
 \q1
 \v 12 He’ll be a wild donkey of a man
@@ -667,7 +667,7 @@
 \v 5 \add so\add* you’ll no longer be called ‘Avram’, but \add now\add* your name will be ‘Avraham’ \add (which means ‘father of many nations’)\add* because I’m making you the father of many nations.\x + \xo 17:5: \xt Rom 4:17.\x*
 \v 6 I’ll make you \add and your descendants\add* very fruitful so that they form nations and some of them will become kings.
 \p
-\v 7 I’ll establish my agreement with you and your future \add descendants\add* for all the following generations. It will be an agreement that \add never ends\add*, that I’ll be the your god and God of your future \add descendants\add*.\x + \xo 17:7: \xt Luk 1:55.\x*
+\v 7 I’ll establish my agreement with you and your future \add descendants\add* for all the following generations. It will be an agreement that \add never ends\add*, that I’ll be your god and God of your future \add descendants\add*.\x + \xo 17:7: \xt Luk 1:55.\x*
 \v 8 I’ll give this land that you’re staying in—the entire region of Kena’an \add (Canaan)\add*—to you and your descendants as a permanent possession,\x + \xo 17:8: \xt Acts 7:5.\x* and I’ll be their god.”
 \p
 \v 9 Then God told Avraham, “\add For your part\add*, you and your descendants after you throughout \add all\add* their generations must follow the requirements of our agreement.
@@ -683,7 +683,7 @@
 \v 17 Avraham fell to his knees and he laughed and said to himself, “How can a hundred year old man father a child? And what about Sarah who’s ninety-nine years old having a baby!”
 \v 18 Then Avraham said to God, “If only \add you’d bless\add* Yishmael \add (Ishmael)\add* \add as my heir\add*.”
 \p
-\v 19 “No,” God \add replied\add*, “It’ll be your wife Sarah who gives you a son, and you’ll name him ‘Yitshak’ \add (Isaac)\add* \add (meaning ‘one who laughs’)\add*. I’ll establish my agreement with him as a never-ending commitment to him and his descendants.
+\v 19 “No,” God \add replied\add*, “It’ll be your wife Sarah who gives you a son, and you’ll name him ‘Yitshak’ \add (Isaac,\add* \add meaning ‘one who laughs’)\add*. I’ll establish my agreement with him as a never-ending commitment to him and his descendants.
 \v 20 \add But\add* as for Yishmael, I’ve heard \add your request\add*. Listen, I’ll bless him and make him fruitful and give him very many descendants. He’ll father twelve rulers and I’ll make him into a great nation,
 \v 21 however, my agreement will be established with Yitshak, who Sarah will give birth to by this time next year.”
 \v 22 Then having finished speaking with Avraham, God went up \add away\add* from him.
@@ -789,7 +789,7 @@
 \v 21 “Okay then,” the man replied, “I’ll also grant your request about this so I won’t overthrow the town that you’re talking about.
 \v 22 Hurry up, escape there, because I am not able to do a thing until you go there.”
 \p That’s why they \add renamed\add* the town to ‘Tsoar’ \add (which means ‘small’)\add*.
-\s1 The destruction of Sedom and Amorah (Gomorrah)
+\s1 The destruction of Sedom and Amorah/Gomorrah
 \p
 \v 23 The sun had already risen by the time Lot \add and family\add* reached Tsoar.
 \v 24 Then Yahweh rained burning sulfur down onto Sedom and Amorah \add (Gomorrah)\add*,\x + \xo 19:24-25: \xt Mat 10:15; 11:23-24; Luk 10:12; 17:29; 2Pe 2:6; Yud 7.\x*
@@ -809,7 +809,7 @@
 \v 34 Then the next day, the older girl said to the younger, Listen, last night I lay with my father. Let’s get him drunk again tonight then you go lie with him so that we’ll give life to descendants through our father.”
 \v 35 \add So\add* that next evening also, they got their father to drink wine and the younger girl went and lay with him, but \add again\add* he wasn’t aware of her coming or going.
 \v 36 In that way, both of Lot’s daughters got themselves pregnant through their father.
-\v 37 Then the eldest daughter gave birth to a son and she named him Moav \add (Moab)\add* \add (which means ‘from my father’)\add*. (He’s the ancestor of the Moavim to this day.)
+\v 37 Then the eldest daughter gave birth to a son and she named him Moav \add (Moab,\add* \add which means ‘from my father’)\add*. (He’s the ancestor of the Moavim to this day.)
 \v 38 The younger daughter also gave birth to a son and she named him Ben-Ami \add (which means ‘son of my people’)\add*. (He’s the ancestor of Amonim to this day.)
 \c 20
 \s1 Avraham and Avimelek and Sarah
@@ -852,7 +852,7 @@
 \p
 \v 8 The child grew and was weaned, and Avraham held a large feast on the day Yitshak \add (Isaac)\add* was weaned.
 \p
-\v 9 \add But\add* Sarah noticed that \add Yishmael\add* \add (Ishmael)\add* (the son of Hagar the Mitsri \add (Egyptian)\add* who she had given birth to for Avraham) was mocking,
+\v 9 \add But\add* Sarah noticed that \add Yishmael\add* \add (Ishmael,\add* the son of Hagar the Mitsri \add (Egyptian)\add* who she had given birth to for Avraham) was mocking,
 \v 10 \add so\add* \add Sarah\add* said to Avraham, “\add Get rid of\add* that slave woman and her son, because that slave woman’s son won’t be inheriting \add anything along\add* with my son Yitshak.”\x + \xo 21:10: \xt Gal 4:29-30.\x*
 \v 11 Now that stressed out Avraham \add who also cared for that\add* son,
 \v 12 but God told \add him\add*, “Don’t get distressed because of the boy and your slave woman. Listen to what Sarah’s telling you, because it’s in Yitshak that your descendants will be called yours.\x + \xo 21:12: \xt Rom 9:7; Heb 11:18.\x*
@@ -882,7 +882,7 @@
 \v 29 “Why did you pen those seven lambs,” Avimelek asked.
 \p
 \v 30 “Because I want you to take them,” \add Avraham\add* insisted. “I want them to be the verification that it was \em me\em* who dug this well.”
-\v 31 So that’s why the place was named ‘Be’er-Sheva’ \add (Beersheba)\add* \add (which means ‘Well of the seven’ or ‘Well of the oath’)\add*, because that’s where the two of them made their agreement.
+\v 31 So that’s why the place was named ‘Be’er-Sheva’ \add (Beersheba,\add* \add which means ‘Well of the seven’ or ‘Well of the oath’)\add*, because that’s where the two of them made their agreement.
 \p
 \v 32 \add So\add* the agreement was made at Be’er-Sheva, then Avimelek and Pikol, the commander of his army, got up and returned \add home\add* to the Pelishti region.
 \v 33 Then \add Avraham\add* planted a tamarisk tree there at Be’er-Sheva, and he prayed to Yahweh, the god of eternity.
@@ -916,7 +916,7 @@
 \v 13 Then Avraham raised his head and looked around, and wow, there was a ram was behind him, caught by its horns in the thicket. So Avraham went and grabbed the ram and sacrificed it as a burnt offering instead of his son.
 \v 14 \add So\add* Avraham named that place ‘Yahweh will provide’, and to this day it’s still said, “Yahweh will provide on his mountain.”
 \p
-\v 15 Then the Yahweh’s messenger called Avraham from the sky a second time
+\v 15 Then Yahweh’s messenger called Avraham from the sky a second time
 \v 16 saying, “I, Yahweh, make this declaration by my \add authority and truth\add*\x + \xo 22:16-17: \xt Heb 6:13-14.\x* that because you did that and didn’t withhold your only son,
 \v 17 I’ll bless you tremendously and I’ll cause your \add descendants\add* to be \add as numerous\add* as the stars in the sky and as the sand on the beach,\x + \xo 22:17: \xt Heb 11:12.\x* and your \add descendants\add* will be victorious over their enemies.
 \v 18 Because you obeyed what I said, all the nations of the earth will be blessed through your descendants.”\x + \xo 22:18: \xt Acts 3:25.\x*
@@ -1017,7 +1017,7 @@
 \p
 \v 42 “Then today I came to the well, and I said, ‘Yahweh, God of my master Avraham, if it’s what you want, make my journey succeed that I have come on.
 \v 43 Listen, I’m standing by this well, so let it be that the young woman who comes out to fetch water and I say to her, “Please give me a little water to drink from your jar,”
-\v 44 and she replies to me, “Sure, drink, and I will also get water for your camels,” let her be the wife that Yahweh has chosen for the my master’s son.’
+\v 44 and she replies to me, “Sure, drink, and I will also get water for your camels,” let her be the wife that Yahweh has chosen for my master’s son.’
 \v 45 Before I’d finished speaking in my heart, then wow, Rivkah was coming out with her jar on her shoulder. And she went down to the well and drew water, and I asked her, ‘Can I \add have a drink\add*.’
 \v 46 \add So\add* she hurried and lowered her jar from her \add shoulder\add* and said, ‘Drink, and I’ll also water your camels.’ So I drank and she also watered the camels.
 \v 47 Then I asked her, ‘Whose daughter are you?’ And she said, ‘The daughter of Betuel, a son of Nahor and his wife Milkah.’ Then I put the ring on her nose and the bracelets on her arms.
@@ -1093,8 +1093,8 @@
 \q2 and the older will serve the younger.”\x + \xo 25:23: \xt Rom 9:12.\x*
 \p
 \v 24 When the time came to give birth, she gave birth to twin \add boys\add*.
-\v 25 The firstborn came out quite red and covered with hair like a fur coat, so they named him ‘Esav’ \add (Esau)\add* \add (which means ‘hairy’)\add*.
-\v 26 Then his brother was born and his hand grabbed Esav’s heel, so he was named ‘Ya’akov’ \add (Jacob)\add* \add (which means ‘heel-grabber’)\add*. Yitshak \add (Isaac)\add* was sixty years old when they were born.
+\v 25 The firstborn came out quite red and covered with hair like a fur coat, so they named him ‘Esav’ \add (Esau,\add* \add which means ‘hairy’)\add*.
+\v 26 Then his brother was born and his hand grabbed Esav’s heel, so he was named ‘Ya’akov’ \add (Jacob,\add* \add which means ‘heel-grabber’)\add*. Yitshak \add (Isaac)\add* was sixty years old when they were born.
 \s1 Esav sells his future inheritance
 \p
 \v 27 As the boys grew up, Esav \add (Esau)\add* \add got good\add* at hunting, a man of the \add outdoors\add*, \add but\add* Ya’akov \add (Jacob)\add* was a quiet man who stayed around the tents.
@@ -1157,7 +1157,7 @@
 \v 31 \add The visitors\add* got up early the \add next\add* morning and make promises to each other. Then Yitshak sent them on their way, and they left from \add there\add* in peace.
 \p
 \v 32 That \add very\add* day, Yitshak’s slaves came and \add updated\add* him about the well that they had \add just been\add* digging and told him, “We’ve found water.”
-\v 33 \add So\add* \add Yitshak\add* named \add the well\add* ‘Shiv’ah’ \add (which sounds like the Hebrew word meaning ‘promise’)\add*, so that’s why that city is named ‘Be’er-Sheva’ \add (Beersheba)\add* \add (meaning ‘well of the promise’)\add* to this day.
+\v 33 \add So\add* \add Yitshak\add* named \add the well\add* ‘Shiv’ah’ \add (which sounds like the Hebrew word meaning ‘promise’)\add*, so that’s why that city is named ‘Be’er-Sheva’ \add (Beersheba,\add* \add meaning ‘well of the promise’)\add* to this day.
 \s1 Esav marries outsiders
 \p
 \v 34 When Esav \add (Esau)\add* was forty years old, he married \add two\add* Hiti women: Be’eri’s daughter Yehudit \add (Judith)\add* and Eylon’s daughter Basemat,
@@ -1216,7 +1216,7 @@
 \q1 Be master over your brothers,
 \q2 and may your mother’s sons bow down to you.
 \q1 \add May\add* those \add who\add* curse you be cursed,
-\q2 and \add may\add* those \add who\add* bless you be blessed.”\x + \xo 27:29: \xt Gen 12:3.\x*
+\q2 ^and \add may\add* those \add who\add* bless you be blessed.”\x + \xo 27:29: \xt Gen 12:3.\x*
 \s1 Esav begs for a secondary blessing
 \p
 \v 30 Then just as Yitshak \add (Isaac)\add* had finished blessing Ya’akov \add (Jacob)\add*, and as Ya’akov had only just gone out from his father’s presence, his brother Esav \add (Esau)\add* his brother \add returned\add* from his hunting.
@@ -1231,7 +1231,7 @@
 \p
 \v 35 But \add Yitshak\add* replied, “Your brother came \add in and deceived me\add* and he’s taken your blessing!”
 \p
-\v 36 “\add Yes,\add* his name Ya’akov \add (Jacob)\add* \add (meaning ‘deceiver’) suits him exactly!\add*” said \add Esav\add*. “\add First\add* he took my inheritance\x + \xo 27:36: \xt Gen 25:29-34.\x* and man, now he’s also taken my blessing!” Then he \add asked\add*, “Haven’t you \add at least\add* saved a blessing for me?”
+\v 36 “\add Yes,\add* his name Ya’akov \add (Jacob,\add* \add meaning ‘deceiver’) suits him exactly!\add*” said \add Esav\add*. “\add First\add* he took my inheritance\x + \xo 27:36: \xt Gen 25:29-34.\x* and man, now he’s also taken my blessing!” Then he \add asked\add*, “Haven’t you \add at least\add* saved a blessing for me?”
 \p
 \v 37 But Yitshak replied, “Listen, I’ve made him master over you, and I’ve given all his brothers to him as slaves. And I’ve sustained him with grain and wine. So then, what \add else\add* can I do for you, my son?”
 \p
@@ -1244,7 +1244,7 @@
 \q1
 \v 40 You \add and your descendants\add* will live by your sword,
 \q2 and you’ll serve your brother.
-\q1 But when you become restless
+\q1 ^But when you become restless
 \q2 you’ll \add all\add* break away from serving them.\x + \xo 27:40: \xt Gen 36:8; 2Ki 8:20.\x*
 \p
 \v 41 \add From that time onwards,\add* Esav \add (Esau)\add* hated Ya’akov \add (Jacob)\add* because of the blessing that \add their\add* father had blessed him with, and Esav said \add to himself\add*, “My father’s \add funeral\add* \add can’t be that far away\add*—\add after that\add* I’ll kill my brother Ya’akov.”
@@ -1282,7 +1282,7 @@
 \v 17 \add So\add* he was afraid and said \add to himself\add*, “This place is spine-chilling—it’s nothing other than God’s house, and it’s \add heaven’s\add* gateway.”
 \p
 \v 18 Then in the morning Ya’akov got up early, and he took the stone that he’d put under his head and stood it up \add longways\add* as a pillar, and he poured oil over the top of it.
-\v 19 He named that place ‘Beyt-El’ \add (Bethel)\add* \add (which means ‘God’s house’)\add*, even though that town had been named Luz before then.
+\v 19 He named that place ‘Beyt-El’ \add (Bethel,\add* \add which means ‘God’s house’)\add*, even though that town had been named Luz before then.
 \v 20 Then Ya’akov made a promise \add to God\add*, saying, “If God will be with me and watch over me on this road that I’m walking on, and give me bread to eat and clothes to wear,
 \v 21 and if I’m \add able to\add* return \add safely\add* to my father’s home, then I’ll make Yahweh my god,
 \v 22 and this stone that I’ve stood up as a pillar will be God’s house, and I’ll give you a tenth of everything that you give to me.”
@@ -1342,9 +1342,9 @@
 \p
 \v 31 \add Now\add* Yahweh saw that Le’ah was spurned, so he \add allowed her to conceive\add*, but Rahel \add (Rachel)\add* was \add unable to get pregnant\add*.
 \v 32 \add So\add* Le’ah \add got pregnant\add* and gave birth to a son, and she named him ‘Re’uven’ \add (which means ‘Look, a son’)\add* because she said, “Because Yahweh has looked on my misery, surely my husband will love me now.”
-\v 33 Then she \add got pregnant\add* again and \add gave birth to a second\add* son, and she said, “Because Yahweh heard that I am hated, then he also gave me this son.” So she called his name ‘Shim’on’ \add (Simeon)\add* \add (which means ‘he hears’)\add*.
+\v 33 Then she \add got pregnant\add* again and \add gave birth to a second\add* son, and she said, “Because Yahweh heard that I am hated, then he also gave me this son.” So she called his name ‘Shim’on’ \add (Simeon,\add* \add which means ‘he hears’)\add*.
 \v 34 Then she \add got pregnant\add* again and \add gave birth to a third\add* son, and she said, “This time now my husband will hold me close to him, because I’ve \add given\add* him three sons.” That’s why she named \add the baby\add* ‘Levi’ \add (which means ‘hold close’)\add*.
-\v 35 Then \add Le’ah\add* \add got pregnant\add* again and \add gave birth to a fourth\add* son, and she said, “This time I will praise Yahweh.” That’s why she named him ‘Yehudah’ \add (Judah)\add* \add (which means ‘praise’)\add*. Then she stopped \add getting pregnant\add*.
+\v 35 Then \add Le’ah\add* \add got pregnant\add* again and \add gave birth to a fourth\add* son, and she said, “This time I will praise Yahweh.” That’s why she named him ‘Yehudah’ \add (Judah,\add* \add which means ‘praise’)\add*. Then she stopped \add getting pregnant\add*.
 \c 30
 \p
 \v 1 Now Rahel \add realised\add* that she wasn’t \add producing any\add* children for Ya’akov \add (Jacob)\add*, so \add she\add* envied her sister \add Le’ah\add*, and she \add demanded from\add* Ya’akov, “Give me children, and if \add you don’t\add*, I’ll die!”
@@ -1356,7 +1356,7 @@
 \v 5 \add so\add* then Bilhah \add got pregnant\add* and \add produced\add* a son for Ya’akov.
 \v 6 Rahel said, “God has vindicated me, and indeed he’s listened to my \add request\add* and given me a son!” That’s why she named him ‘Dan’ \add (which means ‘he judged (in my favour)’)\add*.
 \v 7 \add Later on,\add* Rahel’s slave Bilhah \add got pregnant\add* again and \add gave birth to\add* a second son for Ya’akov
-\v 8 \add so\add* Rahel said, “I’ve \add had a difficult battle\add* with my sister but I’ve \add succeeded\add* in the end!” \add So\add* she named \add the baby\add* ‘Naftali’ \add (Naphtali)\add* \add (which means ‘my struggle’)\add*.
+\v 8 \add so\add* Rahel said, “I’ve \add had a difficult battle\add* with my sister but I’ve \add succeeded\add* in the end!” \add So\add* she named \add the baby\add* ‘Naftali’ \add (Naphtali,\add* \add which means ‘my struggle’)\add*.
 \p
 \v 9 \add Now when\add* Le’ah \add noticed\add* that she \add wasn’t getting pregnant any more\add*, she gave her female slave Zilpah to Ya’akov as a \add slave\add* wife.
 \v 10 Then \add eventually\add* Le’ah’s slave Zilpah \add produced\add* a son for Ya’akov,
@@ -1371,14 +1371,14 @@
 \v 16 \add So\add* \add that\add* evening \add when\add* Ya’akov came \add home\add* from the countryside, Le’ah went out to meet him and told \add him\add*, “You must come to me \add tonight\add* because I’ve hired you with my son’s mandrakes.” So he \add slept\add* with her that night.
 \p
 \v 17 God listened to Le’ah and she \add got pregnant\add* and \add produced\add* a fifth son for Ya’akov,
-\v 18 saying, “God has given me my reward because I gave my slave to my husband \add to sleep with\add*.” So she named him ‘Yisakar’ \add (Issachar)\add* \add (which means ‘reward’)\add*.
+\v 18 saying, “God has given me my reward because I gave my slave to my husband \add to sleep with\add*.” So she named him ‘Yisakar’ \add (Issachar,\add* \add which means ‘reward’)\add*.
 \v 19 Then Le’ah \add got pregnant\add* again and \add produced\add* a sixth son for Ya’akov,
 \v 20 saying, “God has \add given\add* me a nice present. This time my husband will honour me because I have \add produced\add* six sons for him.” So she called his name ‘Zevulun’ \add (which might mean ‘honour’)\add*.
 \v 21 Later on, \add Le’ah\add* had a daughter and named her Dinah.
 \p
 \v 22 Then God \add paid attention\add* to Rahel and listened to her and \add enabled her to conceive\add*,
 \v 23 \add so\add* she \add got pregnant\add* and produced a son, and said, “God has taken away my disgrace.”
-\v 24 She named him ‘Yosef’ \add (Joseph)\add* \add (which means ‘may he give another’)\add*, saying, “May Yahweh add another son to me.”
+\v 24 She named him ‘Yosef’ \add (Joseph,\add* \add which means ‘may he give another’)\add*, saying, “May Yahweh add another son to me.”
 \s1 Ya’akov prospers at Lavan’s expense
 \p
 \v 25 \add Sometime\add* after Rahel \add (Rachel)\add* had given birth to Yosef \add (Joseph)\add*, Ya’akov \add (Jacob)\add* said to Lavan \add (Laban)\add*, “Send me off \add now\add*, so that I can \add return\add* to my place and to my land.
@@ -1522,7 +1522,7 @@
 \v 27 “What’s your name?” the man \add asked\add*.
 \p “Ya’akov,” he \add replied\add*.
 \p
-\v 28 “You won’t be called Ya’akov anymore,” the man said, “but \add you’ll be\add* ‘Yisrael’ \add (Israel)\add* \add (which means ‘he struggled with God’)\add*, because you have struggled with God and with men, and you won.”\x + \xo 32:28: \xt Gen 35:10.\x*
+\v 28 “You won’t be called Ya’akov anymore,” the man said, “but \add you’ll be\add* ‘Yisrael’ \add (Israel,\add* \add which means ‘he struggled with God’)\add*, because you have struggled with God and with men, and you won.”\x + \xo 32:28: \xt Gen 35:10.\x*
 \p
 \v 29 “Please tell \add me\add* \em your\em* name,” Ya’akov \add requested\add*.
 \p “Why \add would you want to know\add* my name?”\x + \xo 32:29: \xt Jdg 13:17-18.\x* \add the man replied\add*, then he blessed \add Ya’akov\add* there.
@@ -1563,7 +1563,7 @@
 \p
 \v 18 Then Ya’akov \add (Jacob)\add*, having come from Padan-Aram, arrived peacefully at Shekem city in the Kena’an \add (Canaan)\add* region, and he camped \add outside\add* the city.
 \v 19 \add In due course,\add* he bought the portion of the field where he’d pitched his \add tents\add* from the sons of Hamor, the father of Shekem, for a hundred \add pieces of silver\add*.\x + \xo 33:19: \xt Josh 24:32; Yhn 4:5.\x*
-\v 20 He set up an altar there and he named it ‘El Elohe Yisrael’ \add (Israel)\add* \add (which means ‘God, the god of Yisrael’)\add*.
+\v 20 He set up an altar there and he named it ‘El Elohe Yisrael’ \add (Israel,\add* \add which means ‘God, the god of Yisrael’)\add*.
 \c 34
 \s1 Dinah’s rape leads to a plan
 \p
@@ -1654,7 +1654,7 @@
 \s1 Esav’s descendants
 \r (1 Chr. 1:34-37)
 \p
-\v 1 These are the descendants of Esav \add (Esau)\add* (who’s also known as Edom):
+\v 1 These are the descendants of Esav \add (Esau,\add* who’s also known as Edom):
 \v 2 Esav had \add married two local women from the Kena’an\add* \add (Canaan)\add* \add region\add*: Adah (the Hiti Eylon’s daughter) and Oholivamah (Anah’s daughter and granddaughter of the Hivi Tsivoen)\x + \xo 36:2: \xt Gen 26:34.\x*
 \v 3 and Basemat (Yishmael’s \add (Ishmael’s)\add* daughter and the sister of Nevayot).\x + \xo 36:3: \xt Gen 28:9.\x*
 \p
@@ -1714,7 +1714,7 @@
 \c 37
 \s1 Yosef’s dreams cause conflict
 \p
-\v 1 Yisrael \add (Israel)\add* \add (also called Ya’akov\add* \add (Jacob)\add* \add )\add* lived in the area where his father \add Yitshak\add* \add (Isaac)\add* had stayed, in the Kena’an \add (Canaan)\add* region.
+\v 1 Yisrael \add (Israel,\add* \add also called Ya’akov\add* \add (Jacob)\add* \add )\add* lived in the area where his father \add Yitshak\add* \add (Isaac)\add* had stayed, in the Kena’an \add (Canaan)\add* region.
 \v 2 This is \add the record of\add* \add his\add* descendants:
 \p When Yosef \add (Joseph)\add* was seventeen, he was shepherding the \add flocks\add* with his brothers. He was \add younger than his brothers\add* who were the sons of his father’s \add slave\add* wives Bilhah and Zilpah. \add One day\add* Yosef gave a \add tell-tale\add* bad report about them to their father.
 \p
@@ -1734,7 +1734,7 @@
 \s1 Yosef is sold by his brothers
 \p
 \v 12 \add Sometime after that,\add* \add Yosef’s\add* \add (Joseph’s)\add* brothers went to shepherd their father’s \add flocks\add* near Shekem.
-\v 13 \add One day,\add* Yisrael \add (Israel)\add* said to Yosef, “Aren’t your brothers \add away\add* shepherding near Shekem? Come \add we’ll get some supplies\add* and I’ll send you to them.”
+\v 13 \add One day,\add* Yisrael \add (Israel)\add* said to Yosef, “Aren’t your brothers \add away\add* shepherding near Shekem? \add Let’s go\add* \add and we’ll get some supplies\add* and then I’ll send you to them.”
 \p “\add Sure\add*,” \add Yosef\add* \add replied\add*.
 \p
 \v 14 Then he \add told\add* him, “Please go and see \add how\add* your brothers \add are doing\add* and the \add flocks\add* \add as well\add*, then \add come and let me know\add*.”
@@ -1743,7 +1743,7 @@
 \p
 \v 16 “I’m \add looking for\add* my brothers,” he answered. “Please tell me where they’re \add looking after\add* \add our flocks\add*.”
 \p
-\v 17 “They’ve left here,” the man responded. “I heard them say, ‘Let’s go to Dotan.’ ”
+\v 17 “They’ve left here,” the man responded. “I heard them \add talking about going\add* to Dotan.”
 \p So Yosef continued on after his brothers and found them at Dotan,
 \v 18 \add but\add* they saw him from a distance and before he \add got close\add* to them, they \add made plans among themselves\add* to kill him.
 \v 19 “Look, that master \add dreamer\add* is coming,” they said to each other.
@@ -1757,7 +1757,7 @@
 \v 25 Then they sat down to eat, and \add a bit later when they looked up\add*, look, \add there was\add* a caravan of Yishmaelim \add (Ishmaelites)\add* coming \add towards them\add*. \add They had left\add* Gilead carrying \add spices\add* and balm and myrrh on their camels that they were going to take down to Mitsrayim \add (Egypt)\add*.
 \v 26 Then Yehudah \add (Judah)\add* said to his brothers, “What will we gain if we kill our brother and cover up his blood?
 \v 27 Let’s sell him to \add these\add* Yishmaelim \add so we won’t be guilty of killing\add* him. \add After all,\add* he’s our brother—our \add own\add* flesh \add and blood\add*.” And his brothers \add agreed\add*.
-\v 28 \add So\add* \add when\add* the Midyanite traders came past, \add the brothers\add* pulled Yosef up and lifted him out of the pit and sold \add him\add* to the Yishmaelim for twenty \add pieces\add* of silver. Then \add the traders took\add* Yosef \add onwards with them\add* to Mitsrayim.\x + \xo 37:28: \xt Acts 7:9.\x*
+\v 28 \add So\add* \add when\add* the Midyanite traders came past, \add the brothers\add* pulled Yosef up and lifted him out of the pit and sold \add him\add* to the Yishmaelim for twenty silver \add coins\add*. Then \add the traders took\add* Yosef \add onwards with them\add* to Mitsrayim.\x + \xo 37:28: \xt Acts 7:9.\x*
 \p
 \v 29 \add Later on,\add* Re’uven returned to the pit, but wow, Yosef wasn’t \add down there\add*, so he tore his clothes \add in despair\add*
 \v 30 and returned to his brothers and said, “The boy isn’t there. \add What am I going to do\add*?”
@@ -1947,8 +1947,8 @@
 \v 49 \add So\add* Yosef stored up so much grain \add that it was\add* like sand \add on the beaches\add*, until he \add eventually\add* stopped measuring it because it \add too much to calculate\add*.
 \p
 \v 50 Before the \add years\add* of the famine came, Yosef had two sons that Esenat (the daughter of Poti-Fera, the priest of On) gave birth to.
-\v 51 Yosef named the oldest son ‘Menasheh’ \add (Manasseh)\add* \add (which means ‘forget’)\add*, because he said, “God has made me forget all my hardships and all of my family.”
-\v 52 \add His\add* second \add son\add* he named ‘Efrayim’ \add (Ephraim)\add* \add (which means ‘fruitful’)\add*, because he said, “God has made me fruitful in the land of my difficulties.”
+\v 51 Yosef named the oldest son ‘Menasheh’ \add (Manasseh,\add* \add which means ‘forget’)\add*, because he said, “God has made me forget all my hardships and all of my family.”
+\v 52 \add His\add* second \add son\add* he named ‘Efrayim’ \add (Ephraim,\add* \add which means ‘fruitful’)\add*, because he said, “God has made me fruitful in the land of my difficulties.”
 \p
 \v 53 Then the seven years of plenty in Mitsrayim came to an end
 \v 54 and the seven years of famine started, just as Yosef had said. The famine \add covered the entire wider region\add*,\x + \xo 41:54: \xt Acts 7:11.\x* but \add it was different in\add* Mitsrayim.
@@ -2226,7 +2226,7 @@
 \v 26 \add So\add* Yosef established it as a law to this day concerning the Mitsri farmland: that the fifth belongs to Par’oh. (Only the priests’ land didn’t become Par’oh’s.)
 \s1 Ya’akov’s burial request
 \p
-\v 27 \add So\add* Yisrael \add (Israel)\add* \add (also called Ya’akov\add* \add (Jacob)\add* \add ) and his descendants\add* settled in the Goshen region of Mitsrayim \add (Egypt)\add* and \add prospered\add*. The \add had many children\add* and \add quickly increased in number\add*.
+\v 27 \add So\add* Yisrael \add (Israel,\add* \add also called Ya’akov\add* \add (Jacob)\add* \add ) and his descendants\add* settled in the Goshen region of Mitsrayim \add (Egypt)\add* and \add prospered\add*. The \add had many children\add* and \add quickly increased in number\add*.
 \v 28 Ya’akov resided \add there\add* for seventeen years, and \add by then\add* he was 147 years old
 \v 29 and he was getting close to death, so he called for his son Yosef \add (Joseph)\add* and asked him, “If, please, I have found favour in your eyes, please \add give me your hand and promise to\add* deal with me in kindness and faithfulness. Please don’t bury me in Mitsrayim.\x + \xo 47:29-30: \xt Gen 49:29-32; 50:6.\x*
 \v 30 When I \add die\add*, I want to be buried with my ancestors, so carry me out of Mitsrayim and bury me in their tomb.”
@@ -2252,8 +2252,8 @@
 \v 11 “I \add never expected to see you again\add*” \add he\add* said to Yosef, “but wow, God has \add even\add* let me see your children as well.”
 \v 12 Then Yosef removed \add his sons\add* from his \add father’s\add* knees and bowed with his face to the ground.
 \p
-\v 13 Then Yosef took both of them—Efrayim \add (Ephraim)\add* on his right toward Yisrael’s left and Menasheh \add (Manasseh)\add* \add (the eldest)\add* on his left toward Yisrael’s right—and brought them close to him.
-\v 14 But Yisrael intentionally extended his right hand and placed it on the Efrayim’s head (the younger one), and \add crossing his arms,\add* he placed his left hand on Menasheh’s head.
+\v 13 Then Yosef took both of them—Efrayim \add (Ephraim)\add* on his right toward Yisrael’s left and Menasheh \add (Manasseh,\add* \add the eldest)\add* on his left toward Yisrael’s right—and brought them close to him.
+\v 14 But Yisrael intentionally extended his right hand and placed it on Efrayim’s head (the younger one), and \add crossing his arms,\add* he placed his left hand on Menasheh’s head.
 \v 15 Then he blessed Yosef saying,
 \q1 “May the god who my \add grandfather\add* Avraham and my father Yitshak \add (Isaac)\add* \add served\add*,
 \q1 the god who has been shepherding me \add for my entire life\add*,
@@ -2336,7 +2336,7 @@
 \q1 His border will extend up to Tsidon \add (Sidon)\add*.
 \b
 \q1
-\v 14 \bd Yisakar\bd* \add (Issachar)\add* (Yisakar) is a strong donkey
+\v 14 \bd Yisakar\bd* \add (Issachar,\add* Yisakar) is a strong donkey
 \q1 lying down between the sheep pens.\f + \fr 49:14 \ft Or ‘between two saddlebags’.\f*
 \q1
 \v 15 He’ll see that \add his\add* resting place is good
@@ -2358,7 +2358,7 @@
 \b
 \q1
 \v 19 \bd Gad\bd* will be attacked by riders,
-\q2 but he’ll attack them from behind.
+\q2 ^but he’ll attack them from behind.
 \b
 \q1
 \v 20 \bd Asher\bd* will enjoy delicious food,

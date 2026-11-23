@@ -1,4 +1,4 @@
-\id ECC - Open English Translation—Readers’ Version (OET-RV) v0.2.2
+\id ECC - Open English Translation—Readers’ Version (OET-RV) v0.2.4
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 ECC
@@ -6,13 +6,14 @@
 \h Reflections
 \toc1 Reflections
 \toc2 Reflections
-\toc3 REfl.
+\toc3 Refl
 \mt1 Reflections
 \mt3 commonly called
 \mt2 Kohelet
+\mt2 (Ecclesiastes)
 \mt3 (meaning ‘The group leader’)
 \is1 Introduction
-\ip This collection of \bk Reflections\bk* (commonly called \bk Ecclesiastes\bk*), was written by a wise leader. Some of the proverbs here were written by King Shelomoh (Solomon), but there’s also proverbs from other writers. The authors of these thought carefully about the meaning of life. They looked at everything that happens here in the world (‘under the sun’) to discover its purpose and to try to understand the meaning of life. They advise that it’s necessary to respect and obey Yahweh, to strive to find happiness in our daily lives. (The meaning of Ecclesiastes is ‘The group leader’. The title commonly used in English is a Latin transliteration of the Greek translation of the Hebrew word קֹהֶלֶת.) In Hebrew texts, this document is grouped in with ‘The Writings (Ketuvim)’.
+\ip This collection of \bk Reflections\bk* (commonly called \bk Ecclesiastes\bk*), was written by a wise leader. Some of the proverbs here were written by King Shelomoh/Solomon, but there’s also proverbs from other writers. The authors of these thought carefully about the meaning of life. They looked at everything that happens here in the world (‘under the sun’) to discover its purpose and to try to understand the meaning of life. They advise that it’s necessary to respect and obey Yahweh, to strive to find happiness in our daily lives. (The meaning of Ecclesiastes is ‘The group leader’. The title commonly used in English is a Latin transliteration of the Greek translation of the Hebrew word קֹהֶלֶת.) In Hebrew texts, this document is grouped in with ‘The Writings (Ketuvim)’.
 \iot Main components of this document
 \io1 Questions about life \ior 1:1–2:26\ior*
 \io1 Truths about life \ior 3:1–11:8\ior*
@@ -83,7 +84,7 @@
 \p
 \v 1 I said \add to myself\add*,
 \q1 “Come on, let me \add find out what’s good and enjoy the pleasure from them\add*.”
-\q1 But look, it was also pointless.
+\q1 ^But look, it was also pointless.
 \q1
 \v 2 To laughter, I said, “It’s madness,”
 \q1 and to joy, “What’s \add the point of this\add*?”
@@ -140,7 +141,7 @@
 \q1
 \v 15 I said \add to myself\add*, “\add The fool’s end will also come\add* to me,
 \q1 \add so what use was it being\add* so wise back then?”
-\q1 Then I \add told myself\add* that that also is pointless,
+\q1 →Then I \add told myself\add* that that also is pointless,
 \q1
 \v 16 because \add neither the wise person nor the fool will be remembered forever\add*,
 \q1 \add as they’ll both be forgotten in the days to come\add*—
@@ -177,7 +178,7 @@
 \v 25 because who could eat and enjoy \add life\add* apart from \add him\add*?
 \q1
 \v 26 \add Yes,\add* he gives wisdom and knowledge and happiness to \add people who are good in his sight\add*.\x + \xo 2:26: \xt Yob 32:8; Prv 2:6.\x*
-\q1 But to the sinner, he gives the job of gathering and collecting to give to the one who’s good \add in God’s sight\add*.
+\q1 ^But to the sinner, he gives the job of gathering and collecting to give to the one who’s good \add in God’s sight\add*.
 \q1 That also is pointless and chasing after the wind.
 \c 3
 \s1 A right time for everything
@@ -213,10 +214,10 @@
 \q1
 \v 11 \add God\add* makes everything \add happen at the appropriate\add* time.
 \q1 Also, he puts \add the awareness of\add* eternity into \add the human mind\add*,
-\q1 yet humanity can’t grasp \add what\add* God has done from \add the\add* beginning to \add the\add* end.
+\q1 ^yet humanity can’t grasp \add what\add* God has done from \add the\add* beginning to \add the\add* end.
 \q1
 \v 12 I know that there’s nothing better for them
-\q1 than being cheerful and doing good during \add their lives\add*
+\q1 ^than being cheerful and doing good during \add their lives\add*
 \q1
 \v 13 and everyone should eat and drink and see good in \add everything they do\add*—
 \q1 that’s a gift from God.
@@ -237,7 +238,7 @@
 \q1 because there’s a time for every matter, and \add for every action to be judged\add*.”
 \q1
 \v 18 I said \add to myself\add*, “God tests humanity
-\q1 so they can see that they themselves are \add like\add* animals
+\q1 →so they can see that they themselves are \add like\add* animals
 \q1
 \v 19 because the \add same one thing happens to both people and animals\add*:
 \q1 \add just like one dies, so does the other\add*—they both have the same breath.
@@ -261,21 +262,21 @@
 \q1 \add but there was no one to comfort the oppressed\add*.
 \q1
 \v 2 \add So\add* I praised those \add who were\add* dead—who’ve already died,
-\q1 more than the living—those who are still alive.
+\q1 ^more than the living—those who are still alive.
 \q1
 \v 3 \add But\add* better than both of them, is the one who hasn’t yet lived—
 \q1 who hasn’t seen the evil things that are being done \add in this world\add*.
 \b
 \q1
 \v 4 Then I \add noticed all the skills used and the work that gets done\add*,
-\q1 \add but also\add* \add saw\add* that it \add raised the envy of others\add*.
+\q1 ^\add but also\add* \add saw\add* that it \add raised the envy of others\add*.
 \q1 That is also pointless and chasing after the wind.
 \q1
 \v 5 The fool folds his hands \add together instead of working\add*
 \q1 and \add ends up\add* \add ruining himself\add*.
 \q1
 \v 6 A \add small handful\add* of quietness is better
-\q1 than \add two very full handfuls of\add* work and chasing after the wind.
+\q1 ^than \add two very full handfuls of\add* work and chasing after the wind.
 \q1
 \v 7 Then I turned and I saw a pointless thing \add in this world\add*:
 \q1
@@ -298,7 +299,7 @@
 \q1 A three-stranded rope can’t be \add easily broken\add*.
 \q1
 \v 13 A poor but wise youth is better \add off\add*
-\q1 than an old but foolish king who \add can’t accept\add* advice,
+\q1 ^than an old but foolish king who \add can’t accept\add* advice,
 \q1
 \v 14 because \add coming from a family who’d spent time in prison\add*, he \add made it\add* to become king—yet even in his kingdom he was born poor.
 \q1
@@ -317,7 +318,7 @@
 \v 2 Don’t \add speak out too quickly\add*,
 \q1 and don’t let your \add emotions rush to make you request something from\add* God,
 \q1 because God is in the heavens,
-\q1 but you’re on the earth, so let your words be few.
+\q1 ^but you’re on the earth, so let your words be few.
 \q1
 \v 3 A dream \add can lead to a lot of panic\add*,
 \q1 and a fool’s voice brings many words.
@@ -328,7 +329,7 @@
 \q1 Whatever you promise, do it!\x + \xo 5:4: \xt Psa 66:13-14.\x*
 \q1
 \v 5 It’s better not to \add make a promise\add*
-\q1 than to promise something and then not do it.
+\q1 ^than to promise something and then not do it.
 \q1
 \v 6 Don’t allow your mouth to cause your \add whole\add* body to sin,
 \q1 and don’t tell the \add temple\add* messenger that it was an unintentional sin.
@@ -393,13 +394,13 @@
 \q2
 \v 2 God gives wealth and possessions and prestige to someone,
 \q1 and \add that person\add* \add has access to everything they want\add*,
-\q1 but God doesn’t \add allow them to enjoy\add* it—
-\q1 instead a foreigner will \add get to enjoy\add* it.
+\q1 ^but God doesn’t \add allow them to enjoy\add* it—
+\q1 ^instead a foreigner will \add get to enjoy\add* it.
 \q1 That’s \add totally\add* pointless, and it’s \add senseless and unfair\add*.
 \q1
 \v 3 If a man should father a hundred children
 \q1 and live many years however \add long his life might be\add*,
-\q1 but \add he’s not satisfied in himself\add* by his prosperity
+\q1 ^but \add he’s not satisfied in himself\add* by his prosperity
 \q1 and \add he doesn’t have anywhere to be buried\add*,
 \q1 \add then I’d say that a stillborn child would have been better off than him\add*,
 \q1
@@ -451,7 +452,7 @@
 \q1 \add whereas foolish people prefer to spend time at a party\add*.
 \q1
 \v 5 It’s better to accept a rebuke from a wise \add person\add*
-\q1 than to listen to the \add songs\add* from foolish \add people\add*,
+\q1 ^than to listen to the \add songs\add* from foolish \add people\add*,
 \q1
 \v 6 because the laughter of a fool
 \q1 is like the crackling of \add burning\add* thorn \add twigs\add* under a cooking pot—
@@ -485,7 +486,7 @@
 \p
 \v 15 I’ve seen everything in my days of pointlessness:
 \q1 There’s \add godly\add* \add people\add* \add dying despite doing everything right\add*,
-\q1 and there are wicked \add people\add* \add living long lives doing\add* evil.
+\q1 ^and there are wicked \add people\add* \add living long lives doing\add* evil.
 \q1
 \v 16 Don’t be highly righteous or overly wise—
 \q1 Why \add go to the trouble of\add* destroying yourself?
@@ -529,7 +530,7 @@
 \q1
 \v 28 I continually \add tried to learn more\add*, but I didn’t find it.
 \q1 I found one \add special\add* man out of a thousand
-\q1 but I couldn’t find one \add such\add* woman out of all of them.
+\q1 ^but I couldn’t find one \add such\add* woman out of all of them.
 \q1
 \v 29 This is the only \add conclusion\add* I came to:
 \q1 God made humankind to \add do good, but\add* \add instead\add* they’ve come up with many \add other kinds of\add* schemes.
@@ -572,7 +573,7 @@
 \q1 That’s also pointless.
 \q1
 \v 11 When an evil activity isn’t quickly condemned,
-\q1 then humanity will become totally determined to do evil.
+\q1 →then humanity will become totally determined to do evil.
 \q1
 \v 12 \add Even if\add* \add an ungodly person\add* does some evil thing a hundred times \add over\add* and \add goes on to\add* live a long time,
 \q1 I know that things will go better \add for those who respect and obey\add* God.
@@ -582,7 +583,7 @@
 \q1
 \v 14 There’s something else strange that happens in this world:
 \q1 when bad things happen to godly \add people\add*
-\q1 and when good things happen to evil people.
+\q1 ^and when good things happen to evil people.
 \q1 That’s also hard to understand.
 \q1
 \v 15 Then I recommended enjoyment
@@ -663,7 +664,7 @@
 \v 16 \add So I concluded\add* that wisdom is better than strength and yet the poor person’s wisdom \add wasn’t appreciated and his words were soon forgotten\add*.
 \q1
 \v 17 The words of wise \add people\add* are \add quietly\add* heeded—
-\q1 more than those of a ruler shouting at a \add bunch of\add* fools.
+\q1 ^more than those of a ruler shouting at a \add bunch of\add* fools.
 \q1
 \v 18 It’s better to be wise than to have many weapons,
 \q1 \add but\add* one disobedient person will destroy a lot of good.
@@ -698,14 +699,14 @@
 \q1 Someone who splits wood might get injured by it.
 \q1
 \v 10 If \add your\add* iron axe head gets blunt and \add the owner\add* doesn’t sharpen it,
-\q1 then he has to use lots of strength,
+\q1 →then he has to use lots of strength,
 \q1 \add so use wisdom if you want to succeed\add*.
 \q1
 \v 11 If a snake bites before it’s charmed,
 \q1 the snake charmer \add won’t be able to charge\add* \add for the show\add*.
 \q1
 \v 12 A wise person’s words earn them favour,
-\q1 but a fool’s lips destroy him—
+\q1 ^but a fool’s lips destroy him—
 \q1
 \v 13 \add as soon as he opens his mouth, foolishness comes out\add*,
 \q1 and the end of his chatter is wicked madness.
@@ -796,7 +797,7 @@
 \q1 and the \add women\add* looking out the windows will no longer see clearly.\f + \fr 12:3 \ft This may also be referring to the failing body, e.g., the guards being the arms, the stooping being the legs, the grinders being few would refer to the teeth, and the windows might refer to the eyes.\f*
 \q1
 \v 4 Then the doors in the street will be shut
-\q1 so that the grinding that \add gets louder\add* with the first birdsong will be \add barely heard\add*
+\q1 →so that the grinding that \add gets louder\add* with the first birdsong will be \add barely heard\add*
 \q1 and all the girls singing will be \add quietened\add*.
 \q1
 \v 5 The people will also become afraid of heights

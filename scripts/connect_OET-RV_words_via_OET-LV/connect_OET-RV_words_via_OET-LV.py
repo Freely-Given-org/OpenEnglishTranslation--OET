@@ -238,6 +238,9 @@ CHANGELOG:
         assert that OET-RV articles aren't inside '\\nd' spans, and assert that the OET-LV
         '\\add +' (added article) and '\\add =' (added copula) spans no longer have word numbers
         and never link an OET-RV article to a source word whose OET-LV gloss has no article
+    2026-11-20 OET-RV names table 'Explained' Y/blank column became 'Explanation' (the inserted text, e.g., '\\add !(Jared)\\add*')
+    2026-11-21 OET-RV names table: Segment (OT/NT/DC) column added (with one row per segment) and 'GrkName' renamed 'SimplifiedTransliteration'
+    2026-11-22 OET-RV names table 'Explanation' column split into 'NotesExplanation' (without the \\add !(…)\\add* markup) and 'CanonicalExplanation' (the inserted text)
 
 """
 from gettext import gettext as _
@@ -270,10 +273,10 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-11-18'
+LAST_MODIFIED_DATE = '2026-11-22'
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '2.1.2'
+PROGRAM_VERSION = '2.1.5'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -292,7 +295,7 @@ assert OET_LV_NT_ESFM_InputFolderPath.is_dir()
 assert OET_RV_ESFM_FolderPath.is_dir()
 
 OET_RV_NAMES_TABLE_FILEPATH = OET_RV_ESFM_FolderPath.joinpath( 'OET-RV_names_table.tsv' )
-OET_RV_NAMES_TABLE_HEADER = 'TraditionalName\tGrkName\tRVName\tExplained\tComment'
+OET_RV_NAMES_TABLE_HEADER = 'TraditionalName\tSegment\tSimplifiedTransliteration\tRVName\tNotesExplanation\tCanonicalExplanation\tComment'
 assert OET_RV_NAMES_TABLE_FILEPATH.is_file()
 OET_RV_WORD_PHRASES_TABLE_FILEPATH = OET_RV_ESFM_FolderPath.joinpath( 'OET-RV_wordPhrases_table.tsv' )
 OET_RV_WORD_PHRASES_TABLE_HEADER = 'LVWord\tRVWords\tEnabled\tComment'
@@ -495,9 +498,9 @@ def loadOETRVNameTable() -> None:
         which we often have to guess at when matching it to an OET-LV transliterated name
         (e.g., we blindly turn a leading 'J' into a 'Y', which gets 'Jerusalem' -> 'Yerusalem'
             instead of the 'Yerushalem' that we actually use).
-    This table records the real decision, so we prefer it wherever the translator has flagged a row
-        with an 'Explained' flag of 'Y'.
-    Rows without that flag are just candidates, so we deliberately ignore them.
+    This table records the real decision, so we prefer it wherever the translator has given a row
+        a 'CanonicalExplanation' (the text inserted after the name in the OET-RV, e.g., '\\add !(Jared)\\add*').
+    Rows without an explanation are just candidates, so we deliberately ignore them.
     """
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading decided OET-RV names from {OET_RV_NAMES_TABLE_FILEPATH}…" )
@@ -510,13 +513,13 @@ def loadOETRVNameTable() -> None:
 
     for line in tsvLines[1:]:
         fields = line.split( '\t' )
-        if len(fields) < 3: continue # Some editors delete trailing columns
-        traditionalName, rvName = fields[0].strip(), fields[2].strip()
-        explained = fields[3].strip() if len(fields) >= 4 else ''
+        if len(fields) < 4: continue # Some editors delete trailing columns
+        traditionalName, rvName = fields[0].strip(), fields[3].strip() # (Rows are repeated for each OT/NT/DC segment)
+        explanation = fields[5].strip() if len(fields) >= 6 else '' # CanonicalExplanation
         if not traditionalName or not rvName: continue
         # The OET-RV uses straight apostrophes inside names, but the table uses curly ones, e.g., 'Sha’ul'
         state.rvNameCandidates[traditionalName.replace( '’', "'" )].add( rvName.replace( '’', "'" ) )
-        if explained.upper() != 'Y': continue # Only the translator's decisions (not just candidates)
+        if not explanation: continue # Only the translator's decisions (not just candidates)
         state.rvNameTable[traditionalName.replace( '’', "'" )].add( rvName.replace( '’', "'" ) )
     state.rvNameTableInverse = defaultdict( set ) # OET-RV spelling -> set of traditional names for it
     for traditionalName,rvNames in state.rvNameTable.items():

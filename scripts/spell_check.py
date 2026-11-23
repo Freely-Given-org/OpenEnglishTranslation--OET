@@ -25,6 +25,9 @@ CHANGELOG:
     2026-04-16 Handle names with apostrophes in them better
     2026-06-11 Handle new % (changed person) \\add format
     2026-07-22 Added additional possible path for TEDDict
+    2026-11-20 Read the renamed OET-RV names table 'Explanation' column and accept the names in it
+    2026-11-21 OET-RV names table: Segment (OT/NT/DC) column added (with one row per segment) and 'GrkName' renamed 'SimplifiedTransliteration'
+    2026-11-22 OET-RV names table 'Explanation' column split into 'NotesExplanation' (without the \\add !(…)\\add* markup) and 'CanonicalExplanation' (the inserted text)
 """
 from gettext import gettext as _
 # from typing import List, Tuple, Optional
@@ -38,10 +41,10 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-11-17' # by RJH
+LAST_MODIFIED_DATE = '2026-11-22' # by RJH
 SHORT_PROGRAM_NAME = "spell_check"
 PROGRAM_NAME = "OET Spell Check"
-PROGRAM_VERSION = '0.34'
+PROGRAM_VERSION = '0.37'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -59,7 +62,7 @@ assert OET_LV_NAMES_TSV_FILEPATH.is_file()
 EXPECTED_OET_LV_NAMES_TSV_HEADER = 'TraditionalName\tLVName'
 OET_RV_NAMES_TSV_FILEPATH = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/OET-RV_names_table.tsv' )
 assert OET_RV_NAMES_TSV_FILEPATH.is_file()
-EXPECTED_OET_RV_NAMES_TSV_HEADER = 'TraditionalName\tGrkName\tRVName\tExplained\tComment'
+EXPECTED_OET_RV_NAMES_TSV_HEADER = 'TraditionalName\tSegment\tSimplifiedTransliteration\tRVName\tNotesExplanation\tCanonicalExplanation\tComment'
 
 TED_Dict_folderpath = Path( '/srv/Programming/RobH123/TED_Dict/sourceDicts/')
 assert TED_Dict_folderpath.is_dir()
@@ -250,6 +253,9 @@ def load_OET_RV_names() -> bool:
         if '-' in rvName: # Break up names like Beer-Sheva (as we split them below)
             for rvNameBit in rvName.split( '-' ):
                 OET_RV_NAMES_SET.add( rvNameBit )
+        # Also accept the names in the inserted explanation, e.g., '\\add !(James; Grk. Yakobos)\\add*'
+        for explanationName in re.findall( r"[A-Z][\w'-]*", re.sub( r'Grk\.', '', row['NotesExplanation'] or '' ) ):
+            OET_RV_NAMES_SET.add( re.sub( r"'s?$", '', explanationName ) )
 
 
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
