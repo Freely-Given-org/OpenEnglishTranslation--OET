@@ -35,7 +35,16 @@ class Token:
     @property
     def linkable(self):
         return (not self.word_fragment
+                and not self.is_source_language_label
                 and (self.code is None or self.code in {'@', '*', '%', '&', '≈', '$', '#', '≡', '!'}))
+
+    @property
+    def is_source_language_label(self):
+        """'Grk' or 'Heb' in a traditional-name span, e.g. '\\add !(James; Grk. Yakobos)\\add*'.
+
+        These only name the language of the following spelling, so never link them.
+        """
+        return self.code == '!' and self.text in SOURCE_LANGUAGE_LABELS
 
 
 @dataclass(frozen=True)
@@ -60,6 +69,8 @@ NOTE = re.compile(r'\\(\+?(?:f|fe|x|fig|jmp))\b.*?\\\1\*')
 ADD_CODES = '@#≈$≡*<>&%+^!='
 # These additions have no corresponding source word, including uncertain forms.
 UNLINKED_ADD_CODES = frozenset(('', '<', '>'))
+# Language labels inside traditional-name spans, e.g. '\\add !(James; Grk. Yakobos)\\add*'
+SOURCE_LANGUAGE_LABELS = frozenset(('Grk', 'Heb'))
 TEXT_MARKER = re.compile(r'\\(?:v|p|m|pi\d*|q\d*|qm\d*|li\d*|lim\d*|nb|b|pc|pr|qr|cls|pmo|pm|pmc|pmr|mi|ph\d*|n)$')
 SEMANTIC_CODES = {'@', '*', '%', '&'}
 PRONOUNS = {'he', 'him', 'his', 'she', 'her', 'hers', 'they', 'them', 'their',

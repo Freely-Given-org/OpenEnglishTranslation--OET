@@ -241,6 +241,9 @@ CHANGELOG:
     2026-11-20 OET-RV names table 'Explained' Y/blank column became 'Explanation' (the inserted text, e.g., '\\add !(Jared)\\add*')
     2026-11-21 OET-RV names table: Segment (OT/NT/DC) column added (with one row per segment) and 'GrkName' renamed 'SimplifiedTransliteration'
     2026-11-22 OET-RV names table 'Explanation' column split into 'NotesExplanation' (without the \\add !(…)\\add* markup) and 'CanonicalExplanation' (the inserted text)
+    2026-11-24 Never link the 'Grk.'/'Heb.' language labels inside traditional-name spans
+        (e.g. '\\add !(James; Grk. Yakobos)\\add*'), remove any word numbers already on them,
+        and leave them out of the word-number statistics
 
 """
 from gettext import gettext as _
@@ -255,7 +258,7 @@ import json
 import time
 from functools import lru_cache
 
-from oet_alignment import (LVToken, UNLINKED_ADD_CODES, index_book_lines, tokenize,
+from oet_alignment import (LVToken, UNLINKED_ADD_CODES, SOURCE_LANGUAGE_LABELS, index_book_lines, tokenize,
                            with_clause_boundaries, unlinked_add_spans, is_word_fragment,
                            OPTIONAL_PLURAL)
 from oet_candidates import select_links
@@ -273,10 +276,10 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-11-22'
+LAST_MODIFIED_DATE = '2026-11-24'
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '2.1.5'
+PROGRAM_VERSION = '2.1.6'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -1037,6 +1040,10 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
         if numUnlinkedAddSpanRemovals:
             if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
                 vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Removed a total of {numUnlinkedAddSpanRemovals:,} word number(s) from plain, < or > add spans in {rvESFMFilename}" )
+        # 'Grk.'/'Heb.' labels only name the language of a traditional spelling.
+        numLabelRemovals = removeWordNumbersFromSourceLanguageLabels( rvESFMFilename, state.rvESFMLines )
+        if numLabelRemovals:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Removed {numLabelRemovals:,} word number(s) from 'Grk.'/'Heb.' labels in {rvESFMFilename}" )
         # Do some basic checking (better to find common editing errors sooner rather than later)
         for lineNumber,line in enumerate( state.rvESFMLines, start=1 ):
             assert not line.startswith(' '), f"Unexpected space at start in {rvESFMFilename} {lineNumber}: '{line}'"
@@ -1676,6 +1683,30 @@ def removeWordNumbersInUnlinkedAddSpans(filename:str, lines:List[str]) -> int:
 # end of removeWordNumbersInUnlinkedAddSpans
 
 
+# A numbered language label, e.g. the 'Grk¦33571.' of '(James¦33571; Grk¦33571. Yakobos¦33571)'
+sourceLanguageLabelLinkRegex = re.compile( rf"\b({'|'.join(sorted(SOURCE_LANGUAGE_LABELS))})¦[1-9][0-9]{{0,5}}(?=\.)" )
+# The same labels without numbers, so that they can be left out of the word-number statistics
+sourceLanguageLabelWordRegex = re.compile( rf"\b({'|'.join(sorted(SOURCE_LANGUAGE_LABELS))})(¦[0-9]+)?\." )
+
+def removeWordNumbersFromSourceLanguageLabels(filename:str, lines:List[str]) -> int:
+    """Remove source numbers from 'Grk.' and 'Heb.' labels in place.
+
+    These only say which language the following traditional spelling comes from,
+        so they never translate a source word themselves.
+    Return the number of individual source-number suffixes removed.
+    """
+    numRemoved = 0
+    for n, line in enumerate(lines):
+        if '¦' not in line:
+            continue
+        cleaned, removed = sourceLanguageLabelLinkRegex.subn( r'\1', line )
+        if removed:
+            lines[n] = cleaned
+            numRemoved += removed
+    return numRemoved
+# end of removeWordNumbersFromSourceLanguageLabels
+
+
 # The OET-RV lines that hold something other than translated Bible text, so their words can never
 #   have a word number: section headings, the translator's heading comments, the titles of the
 #   poetry sections, the speaker of a saying, and the letters of an acrostic poem.
@@ -1723,6 +1754,7 @@ def getVerseTextWords( verseText:str ) -> List[str]:
         # NOTE: These have to go first, because a note can be inside an add span.
     for start, end in reversed(list(unlinked_add_spans(text))):
         text = text[:start] + ' ' + text[end:] # Additions with no source-word counterpart
+    text = sourceLanguageLabelWordRegex.sub( ' ', text ) # 'Grk.'/'Heb.' labels of traditional spellings
     for separatorChar in rvWordSeparatorChars:
         text = text.replace( separatorChar, ' ' ) # The characters that run two words together
     text = usfmMarkerRegex.sub( stripUSFMMarker, text ).strip() # The markers that are left

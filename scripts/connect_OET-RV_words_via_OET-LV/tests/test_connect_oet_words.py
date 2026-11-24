@@ -303,6 +303,15 @@ class EditingTests(unittest.TestCase):
         self.assertEqual([t.text for t in tokens], ["he's", 'her'])
         self.assertEqual(connect.applyRVTokenLink('MRK',1,1,tokens[1],3,'test'), (0,0))
 
+    def test_source_language_labels_lose_numbers_and_are_not_counted(self):
+        self.book(r'\c 1', r'\v 1 Yakov¦5 \add !(James¦5; Grk¦5. Yakobos¦5)\add* \add !(Heb¦6. Aramit¦6)\add*')
+        self.assertNotIn('Grk', [t.text for t in connect.getLiveRVTokens('MRK',1,1) if t.linkable])
+        self.assertEqual(connect.countWordsAndWordNumbers(connect.state.rvESFMLines), (4,4))
+        self.assertEqual(connect.removeWordNumbersFromSourceLanguageLabels('test',connect.state.rvESFMLines),2)
+        self.assertEqual(connect.state.rvESFMLines[1],
+                         r'\v 1 Yakov¦5 \add !(James¦5; Grk. Yakobos¦5)\add* \add !(Heb. Aramit¦6)\add*')
+        self.assertEqual(connect.removeWordNumbersFromSourceLanguageLabels('test',connect.state.rvESFMLines),0)
+
     def test_plain_uncertain_add_is_not_linkable_or_counted(self):
         self.book(r'\c 1', r'\v 1 she \add ?her¦2\add*')
         self.assertNotIn('her', [t.text for t in connect.getLiveRVTokens('MRK',1,1) if t.linkable])

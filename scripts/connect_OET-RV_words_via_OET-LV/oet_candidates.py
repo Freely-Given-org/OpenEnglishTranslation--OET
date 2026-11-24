@@ -198,7 +198,8 @@ def alias_candidates(tokens, evidence):
             before.insert(0, token)
             if token.boundary_before:
                 break
-        aliases = [tokens[i] for i in indexes if tokens[i].text[:1].isupper()]
+        aliases = [tokens[i] for i in indexes
+                   if tokens[i].text[:1].isupper() and not tokens[i].is_source_language_label]
         group = before + aliases
         if not before or not aliases or all(t.number is not None for t in group):
             continue

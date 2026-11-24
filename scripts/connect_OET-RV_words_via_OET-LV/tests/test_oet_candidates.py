@@ -310,6 +310,14 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual(self.links(r'Yohan \add !(John)\add*',
             [LVToken('Ioannes',1,names=frozenset({'yohan','john'}))]), [('Yohan',1),('John',1)])
 
+    def test_source_language_labels_in_alias_spans_are_never_linked(self):
+        # 'Grk.' and 'Heb.' only say which language the following spelling is from.
+        names = frozenset({'yakov','james','yakobos'})
+        self.assertEqual(self.links(r'Yakov¦5 \add !(James; Grk. Yakobos)\add*',
+            [LVToken('Iakōbos',5,names=names)]), [('James',5),('Yakobos',5)])
+        self.assertEqual(self.links(r'Avraham¦8 \add !(Heb. Avraham)\add*',
+            [LVToken('Abraam',8,names=frozenset({'avraham'}))]), [('Avraham',8)])
+
     def test_unknown_alias_does_not_claim_the_names_attached_conjunction(self):
         self.assertEqual(self.links(r'and¦1 Yafet¦1 \add !(Japeth)\add*',
             [LVToken('and',1), LVToken('Yāfet',1,names=frozenset({'yafet'}))]), [('Japeth',1)])
