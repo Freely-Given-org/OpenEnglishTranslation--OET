@@ -1,4 +1,4 @@
-\id NAM - Open English Translation—Readers’ Version (OET-RV) v0.2.7
+\id NAM - Open English Translation—Readers’ Version (OET-RV) v0.2.8
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 NAH
@@ -10,7 +10,7 @@
 \mt1 Nahum
 \is1 Introduction
 \ip This document is about the destruction of Nineveh, the capital city of Ashur/Assyria—an ancient enemy of Yisrael/Israel, and was written between 663 and 612 B.C. The prophet Nahum was pleased that Yahweh destroyed Nineveh, because that was a sign that God does indeed punish sinners.
-\ip A large portion of the document is poetry, with some narrative portions also included. Unlike English poetry which can often focus on rhyme, Hebrew poetry often includes parallelism where the same thought is repeated or extended using different words. The \em OET Readers’ Version\em* tries to assist the reader by starting the second line in a parallel set with the symbol \bd ≈\bd*.
+\ip A large portion of the document is poetry, with some narrative portions also included. Unlike English poetry which can often focus on rhyme, Hebrew poetry often includes parallelism where the same thought is repeated or extended using different words. The \em OET Readers’ Version\em* tries to assist the reader by starting the second line in a parallel set with the symbol \bd ≈\bd*, in a contrasting set with \bd ^\bd*, and in a consequence set with \bd →\bd*.
 \ip It can take a little bit of effort to decipher this message—to see who’s being spoken to—because it’s often alternating between Yahweh declaring good news to his people, and declaring bad news to Nineveh.
 \iot Main components of this document
 \io1 Yahweh’s punishment of Nineveh \ior 1:1-15\ior*
@@ -86,7 +86,7 @@
 \q1
 \v 15 \add My people,\add* look, a messenger is running across the hills.
 \q1 He’ll be bringing good news—announcing peace.\x + \xo 1:15: \xt Isa 52:7.\x*
-\q1 →So celebrate your festivals Yehudah \add (Judah)\add*, and keep your promises,
+\q1 So celebrate your festivals Yehudah \add (Judah)\add*, and keep your promises,
 \q1 because that wicked \add country\add* won’t invade you again—it’ll be destroyed.
 \c 2
 \s1 Nineveh’s coming destruction
@@ -234,7 +234,7 @@
 \v 17 Your \add many\add* guards are like locusts,
 \q1 and you have a swarm of officials.
 \q1 On a \add cold\add* morning they settle on the walls,
-\q1 ^but when the sun rises they fly away
+\q1 but when the sun rises they fly away
 \q2 to some place that nobody knows about.
 \b
 \q1

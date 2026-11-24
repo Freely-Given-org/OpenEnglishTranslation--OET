@@ -17,6 +17,18 @@ Script to convert OET ESFM files with word numbers back to simple USFM files.
 
 TODO: Doesn't delete the \\rem ESFM headers yet
 
+OET-RV line-start characters:
+    Four special characters can occur at the very start of an OET-RV text line,
+        i.e., after any paragraph/poetry marker and/or verse number,
+        e.g., '\\q1 ≈…', '\\v 13 ≈…', '\\q2 \\v 4 →…', '\\v 17 ⇔…':
+            ≈ synonymous parallelism (the second line repeats a similar thought)
+            ^ antithetic parallelism (the second line says the opposite)
+            → synthetic parallelism (the second line gives the result or conclusion)
+            ⇔ the OET-RV swapped the clause order of the verse (only for our word-connecting software)
+    These are OUTSIDE of any \\add span, so are different from the '\\add ≈' and '\\add ^' codes.
+    All four are removed from the exported USFM.
+    (The '\\bd ≈\\bd*', etc. in the book introductions that explain the symbols are left untouched.)
+
 
 CHANGELOG:
     2024-05-15 Added OT conversion and removed \\untr sets
@@ -31,6 +43,7 @@ CHANGELOG:
     2026-08-30 Remove superfluous print output
     2026-09-14 Add warning about editing exported file
     2026-09-26 Handle new ! (alternate name) \\add format
+    2026-11-25 Remove all four OET-RV line-start characters (≈ ^ → ⇔) after any paragraph marker and/or verse number
 """
 from pathlib import Path
 import re
@@ -41,10 +54,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint, BOOKLIST_OT3
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-10-10' # by RJH
+LAST_MODIFIED_DATE = '2026-11-25' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
-PROGRAM_VERSION = '0.71'
+PROGRAM_VERSION = '0.72'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -64,6 +77,9 @@ assert cleaned_USFM_FolderPath.is_dir() and OET_LV_USFM_OutputFolderPath.is_dir(
 
 ESFMWordNumberRegex = re.compile( '¦[1-9][0-9]{0,5}' ) # 1..6 digits
 ESFMNakedChapterRegex = re.compile( '\\\\c ([1-9][0-9]{0,2})\n\\\\v ', re.MULTILINE)
+# The OET-RV line-start characters (see above), after any paragraph/poetry marker and/or verse number
+#   Group 1 is the part of the line to keep (a line can't start with an '\\add ≈' or '\\add ^' span)
+lineStartCharacterRegex = re.compile( r'^((?:\\(?!add )[a-z]+[0-9]* )?(?:\\v [0-9]+\S* )?)[≈^→⇔]', re.MULTILINE )
 def main():
     """
     Main program to handle command line parameters and then run what they want.
@@ -145,9 +161,9 @@ def main():
                                 .replace( '\\zrhilite*', '' ).replace( '\\z1hilite*', '' ).replace( '\\z2hilite*', '' ).replace( '\\z3hilite*', '' ).replace( '\\z4hilite*', '' )
                 adjText = ( adjText
                             .replace( "'", '’' ) # Convert apostrophes
-                            .replace( "\\q1 ≈", '\\q1 ' ).replace( "\\q2 ≈", '\\q2 ' ) # Remove 'parallelism' marker
-                            .replace( ' ⇔', ' ') # Remove "verse text swapped in order" marker from OET-RV
                         )
+                # Remove the line-start parallelism (≈ ^ →) and "verse text swapped in order" (⇔) characters
+                adjText = lineStartCharacterRegex.sub( r'\1', adjText )
                 # Turn section headings into USFM Extended Study Content sidebars
                 # See https://ubsicap.github.io/usfm/master/notes_study/sidebars.html
                 inESB = False

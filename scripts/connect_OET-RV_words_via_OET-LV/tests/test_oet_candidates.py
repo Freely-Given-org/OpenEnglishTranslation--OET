@@ -71,6 +71,61 @@ class CandidateTests(unittest.TestCase):
                          [("houses'",7),("houses'",8)])
         self.assertEqual(self.links("houses' houses'", [('houses',7)]), [])
 
+    def test_paraphrased_verb_after_linked_subject_gets_its_number(self):
+        verb = lambda w, n: LVToken(w, n, verb=True, lemma='NT:poreuō')
+        gone = [verb('they',1), verb('were',1), verb('gone',1)]
+        village = gone + [LVToken('to',2), LVToken('another',3), LVToken('village',4)]
+        # LUK 9:56: the phrasal particle goes with its verb
+        self.assertEqual(self.links('so they¦1 headed off to another village', village),
+                         [('headed',1),('off',1),('to',2),('another',3),('village',4)])
+        self.assertEqual(self.links('so they headed off to another village', village),
+                         [('they',1),('headed',1),('off',1),('to',2),('another',3),('village',4)])
+        # JDE 1:11: contractions are subjects too
+        self.assertEqual(self.links("they've¦1 followed", gone), [('followed',1)])
+        self.assertEqual(self.links("I¦1 was¦1 vetoed", [verb('I',1), verb('was',1), verb('forbidden',1)]),
+                         [('vetoed',1)])
+        # Unlinked auxiliaries and negatives are skipped (but not linked)
+        self.assertEqual(self.links("they¦1 won't head", gone), [('head',1)])
+        self.assertEqual(self.links("they¦1 can't ever head", gone), [])
+        # ACT 1:26: a short reworded span after the subject
+        self.assertEqual(self.links(r'they¦1 \add ≈drew straws\add* and', gone), [('drew',1),('straws',1)])
+        self.assertEqual(self.links(r'they¦1 \add ≈drew the long straws\add* and', gone), [])
+        self.assertEqual(self.links(r'they¦1 \add ≈drew straws¦5\add* and', gone), [])
+
+    def test_verb_after_subject_needs_a_free_content_word(self):
+        verb = lambda w, n: LVToken(w, n, verb=True, lemma='NT:poreuō')
+        gone = [verb('they',1), verb('were',1), verb('gone',1)]
+        # The verb is already linked to something
+        self.assertEqual(self.links('they¦1 headed¦1 off', gone), [])
+        # Not the next word, another clause, an addition, a name, a negative or another source word
+        for rv in ('they¦1 then headed', 'they¦1 quickly headed', 'they¦1, headed',
+                   'they¦1 wanted to head', 'they¦1 anyone',
+                   r'they¦1 \add headed\add*', 'they¦1 Yohan', "they¦1 didn't", 'they¦1 village'):
+            with self.subTest(rv=rv):
+                self.assertNotIn(1, [n for _, n in self.links(rv, gone + [LVToken('village',2)])])
+        # The LV verb's own word elsewhere is better evidence (EZE 17:10 'wither' ... 'it sprouted')
+        self.assertEqual(self.links('they¦1 headed off, gone', gone), [('gone',1)])
+        # Only verbs, and only when their gloss has more than a subject
+        self.assertEqual(self.links('they¦1 headed', [LVToken('they',1), LVToken('gone',1)]), [])
+        self.assertEqual(self.links('they¦1 headed', [verb('they',1)]), [])
+        # A particle that translates another source word keeps its own number
+        self.assertEqual(self.links('they¦1 headed up', gone + [LVToken('up',2)]), [('headed',1),('up',2)])
+
+    def test_learnt_lemma_renderings_only_settle_anchored_gaps(self):
+        learnt = {'NT:poreuō': frozenset({'trekked'})}
+        columns = [LVToken('the',1), LVToken('apprentices',2), LVToken('were',3,verb=True,lemma='NT:poreuō'),
+                   LVToken('gone',3,verb=True,lemma='NT:poreuō'), LVToken('quickly',6),
+                   LVToken('into',4), LVToken('Galil',5)]
+        rv = 'the¦1 apprentices¦2 hastily trekked to¦4 Galil¦5'
+        self.assertEqual(self.links(rv, columns), [])
+        self.assertEqual(self.links(rv, columns, learnt_renderings=learnt), [('trekked',3)])
+        # Another lemma's rendering is no evidence, and nor are the subject/auxiliary columns
+        self.assertEqual(self.links(rv, columns, learnt_renderings={'NT:erχomai': frozenset({'trekked'})}), [])
+        self.assertEqual(self.links('the¦1 apprentices¦2 trekked', columns[:3],
+                                    learnt_renderings={'NT:poreuō': frozenset({'trekked'})}), [])
+        # Repeats remain ambiguous
+        self.assertEqual(self.links('trekked trekked', columns[2:4], learnt_renderings=learnt), [])
+
     def test_competing_phrase_is_atomic(self):
         a, b = tokenize('alpha beta')
         phrase = Candidate(((a, 1),(b, 1)), frozenset({0}), 'phrase')

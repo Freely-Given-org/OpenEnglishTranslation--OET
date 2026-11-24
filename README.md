@@ -2,9 +2,9 @@
 
 The **_Open English Translation_ of the Bible (OET)** -- a unique, exciting, completely free and open-licensed, new modern-English Bible translation
 
-The new website is at https://OET.Bible. (The previous one was at https://Freely-Given.org/BibleTranslations/English/OET/.) The Bible text is also available at the [_Open Bible Data_](https://github.com/Freely-Given-org/OpenBibleData) website at https://Freely-Given.org/OBD/.
+The new website is at https://OpenEnglishTranslation.Bible. (The previous one was at https://Freely-Given.org/BibleTranslations/English/OET/.) The Bible text is also available at the [_Open Bible Data_](https://github.com/Freely-Given-org/OpenBibleData) website at https://Freely-Given.org/OBD/.
 
-The design features can be found under the ‘Design’ menu at https://OET.Bible.
+The design features can be found under the ‘Design’ menu at https://OpenEnglishTranslation.Bible.
 
 ## Background
 
@@ -34,17 +34,17 @@ Plus we try to remove ‘Christianese’ (words that you’re only likely to hea
 
 After several years of waiting, the _Open English Translation_ project was restarted in the second half of 2022
 (as soon as the new [Statistical Restoration Greek New Testament](https://GreekCNTR.org/collation/index.htm) dataset was officially released by the [Center for New Testament Restoration](https://GreekCNTR.org)).
-This work started with a review of our [design](https://OET.Bible/Design/ReadersVersion/) and work on new planned [file formats](https://github.com/Freely-Given-org/ESFM),
-and then a focus on creating the New Testament portion of the [Literal Version](https://OET.Bible/Design/LiteralVersion/).
+This work started with a review of our [design](https://OpenEnglishTranslation.Bible/Design/ReadersVersion/) and work on new planned [file formats](https://github.com/Freely-Given-org/ESFM),
+and then a focus on creating the New Testament portion of the [Literal Version](https://OpenEnglishTranslation.Bible/Design/LiteralVersion/).
 
 The Old Testament portion is based on the work of the [Open Scriptures Hebrew Bible](https://hb.OpenScriptures.org) team
 (although we prefer to call it ‘The Hebrew Scriptures’ rather than ‘The Old Testament’,
 and we call ‘The New Testament’ ‘The Messianic Update’.)
 
 Are you interested in helping or supporting this effort?
-If so, please use our [Contact Page](https://Freely-Given.org/Contact.html) or [here](https://OET.Bible/About/Contact/).
+If so, please use our [Contact Page](https://Freely-Given.org/Contact.html) or [here](https://OpenEnglishTranslation.Bible/About/Contact/).
 
-Some frequently asked questions (FAQs) about the OET can be found [here](https://OET.Bible//Discussion/FAQ/).
+Some frequently asked questions (FAQs) about the OET can be found [here](https://OpenEnglishTranslation.Bible//Discussion/FAQ/).
 
 The _Open English Translation_ will eventually be available in six versions:
 
@@ -60,7 +60,7 @@ If you’re a professional Bible translator or consultant or notes-writer, or if
 ## Schedule
 
 As of August 2026, the entire Bible has been drafted.
-([This status page](https://OET.Bible/About/Status/) is kept updated with our progress.)
+([This status page](https://OpenEnglishTranslation.Bible/About/Status/) is kept updated with our progress.)
 Our goal is to complete v0.5 by the end of 2027, but we need more eyes on the text.
 
 ## Licences

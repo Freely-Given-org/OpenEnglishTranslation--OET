@@ -15,7 +15,7 @@ rather than being natural in the language that they’re being translated into.
 For instance in modern English, it’s far more natural for any non-churched person to say
 ‘God’s kingdom’ than ‘kingdom of God’.
 
-You can read more about the design of the _OET-RV_ [here](https://OET.Bible/Design/ReadersVersion).
+You can read more about the design of the _OET-RV_ [here](https://OpenEnglishTranslation.Bible/Design/ReadersVersion).
 
 ### ‘Add’ classes
 
@@ -26,11 +26,11 @@ We use USFM \add markers but differentiate further by using an additional symbol
 - contextual additions, e.g., and \add after that\add* he said
 - application/interpretational additions, e.g., when we reword the concept to what we think the author was trying to say, but the final words that we use are not there at all in the original.
 
-See our [formats page](https://OET.Bible/Resources/Formats) for more information on how these things are implemented.
+See our [formats page](https://OpenEnglishTranslation.Bible/Resources/Formats) for more information on how these things are implemented.
 
 ## Schedule
 
-As of August 2026, the entire Bible has been drafted after some estimated 10,000 hours of work done over a period of four full-time years. ([This page](https://OET.Bible/About/Status/) will now be kept updated with progress.)
+As of August 2026, the entire Bible has been drafted after some estimated 10,000 hours of work done over a period of four full-time years. ([This page](https://OpenEnglishTranslation.Bible/About/Status/) will now be kept updated with progress.)
 We’ve now moved into Phase 3 which is focused on consistency and accuracy checks.
 
 ## Disclaimer

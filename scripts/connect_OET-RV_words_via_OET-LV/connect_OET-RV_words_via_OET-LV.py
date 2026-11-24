@@ -88,6 +88,21 @@ Specialised \\add spans:
             e.g., 'Shelomo (\\add !Solomon\\add*)'
         Both forms of the name should be linked to the OET-LV name by having the same word number.
 
+OET-RV line-start characters:
+    Four special characters can occur at the very start of an OET-RV text line,
+        i.e., after any paragraph/poetry marker and/or verse number,
+        e.g., '\\q1 ≈…', '\\v 13 ≈…', '\\q2 \\v 4 →…', '\\v 17 ⇔…':
+            ≈ synonymous parallelism (the second line repeats a similar thought)
+            ^ antithetic parallelism (the second line says the opposite)
+            → synthetic parallelism (the second line gives the result or conclusion)
+            ⇔ the OET-RV swapped the clause order of the verse
+    These are OUTSIDE of any \\add span, so are different from the '\\add ≈' and '\\add ^' codes above.
+    The three parallelism characters aren't word characters, so the word tokenizer just skips them.
+    A verse whose text starts with ⇔ has its clauses matched in reverse order (see matchVerseCandidates()).
+    The load checks assert that none of the four occurs anywhere else
+        (except '\\add ≈'/'\\add ^' codes and the '\\bd ≈\\bd*', etc. in introductions that explain them),
+        and that none is followed by a space.
+
 Versification: Use the explicit BOS OET-RV and OET-LV source profiles.
     BOS maps complete RV passages before any word matching. Verse bridges stay
     together, chapter changes are followed, and Psalm titles use BOS declarations.
@@ -244,6 +259,14 @@ CHANGELOG:
     2026-11-24 Never link the 'Grk.'/'Heb.' language labels inside traditional-name spans
         (e.g. '\\add !(James; Grk. Yakobos)\\add*'), remove any word numbers already on them,
         and leave them out of the word-number statistics
+    2026-11-24 Also do the whole-book checks (e.g., balanced parentheses) and character marker nesting checks
+        from convert_OET-RV_to_simple_HTML.py (fatal for OT/NT, warnings for DC), so they're found sooner
+    2026-11-25 Document all four OET-RV line-start characters (≈ ^ → ⇔) and extend the '≈' placement check to all of them
+    2026-11-25 Assert that OET-RV word numbers never come before a (straight) apostrophe, e.g., 'he¦123'd'
+    2026-11-25 When an RV subject (e.g. 'they') is the only link for a source verb whose LV gloss has its own
+        subject (e.g. 'they were gone'), give that number to the next unlinked content word in the clause
+        (plus a phrasal particle, e.g. 'headed off'), and learn each verb lemma's existing OET-RV renderings
+        (e.g. poreuō as 'travelled') as weak evidence for anchored gaps (see buildLearntVerbRenderings())
 
 """
 from gettext import gettext as _
@@ -261,7 +284,7 @@ from functools import lru_cache
 from oet_alignment import (LVToken, UNLINKED_ADD_CODES, SOURCE_LANGUAGE_LABELS, index_book_lines, tokenize,
                            with_clause_boundaries, unlinked_add_spans, is_word_fragment,
                            OPTIONAL_PLURAL)
-from oet_candidates import select_links
+from oet_candidates import select_links, is_learnable_rendering
 from oet_versification import audit_unmapped_lv, resolve_alignment_passages
 from oet_derived_word_tables import RELATED_WORD_GROUPS, CONTRACTION_SUBJECTS
 from oet_noun_tables import SIMPLE_NOUN_PAIRS, SIMPLE_NOUNS_FLAT, verbalNouns
@@ -276,10 +299,10 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-11-24'
+LAST_MODIFIED_DATE = '2026-11-25'
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '2.1.6'
+PROGRAM_VERSION = '2.3.0'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -453,6 +476,9 @@ def main():
 
     # Load the OET-RV words that are more than one word for one OET-LV word, e.g. 'you all'
     loadOETRVWordPhraseTable()
+
+    # Learn how the OET-RV already renders each source verb (e.g. poreuō as 'travelled')
+    buildLearntVerbRenderings()
 
     # Display anywhere where we still have 'for' that should perhaps be 'because'
     # show_fors( lv )
@@ -878,23 +904,118 @@ rvArticleInsideNDRegex = re.compile( r'\\\+?nd (?:(?!\\\+?nd\*).)*?\b(?:[Tt]he|[
 #   These are articles and copulas that the English needed, so they don't translate any Hebrew or Greek word
 #   (and if they had a number, this script would wrongly connect OET-RV articles to it).
 lvNumberedArticleAddRegex = re.compile( r'\\\+?add [+=][^\\]*?¦[1-9]' )
-# Legitimate places for '≈' are:
-#   at the start of a (poetry) line for synonymous parallelism, i.e., after any paragraph and/or verse marker
-#       e.g., '≈…', '\\q1 ≈…', '\\v 13 ≈…', '\\q2 \\v 4 ≈…'
-#   at the start of a reworded add span, i.e., '\\add ≈', '\\+add ≈', '\\add ?≈', '\\+add ?≈'
-#   in introduction text explaining the symbol, i.e., '\\bd ≈\\bd*'
-lineStartParallelismRegex = re.compile( r'^(?:\\[a-z]+[0-9]* )?(?:\\v [0-9]+\S* )?≈' )
-rewordedAddRegex = re.compile( r'\\\+?add \??≈' )
-def checkApproxSymbolUsage( line:str ) -> bool:
+# The OET-RV line-start characters (see the module docstring)
+LINE_START_CHARACTERS = '≈^→⇔'
+# Legitimate places for the line-start characters are:
+#   at the start of a (poetry) line, i.e., after any paragraph and/or verse marker
+#       e.g., '≈…', '\\q1 ≈…', '\\v 13 ⇔…', '\\q2 \\v 4 →…'
+#   for '≈' and '^' only, at the start of a reworded or opposite add span,
+#       i.e., '\\add ≈', '\\+add ≈', '\\add ?≈', '\\+add ?≈', '\\add ^', etc.
+#   in introduction text explaining the symbol, e.g., '\\bd ≈\\bd*'
+lineStartCharacterRegex = re.compile( r'^(?:\\(?!add )[a-z]+[0-9]* )?(?:\\v [0-9]+\S* )?[≈^→⇔]' )
+lineStartCharacterAddRegex = re.compile( r'\\\+?add \??[≈^]' )
+def checkLineStartCharacterUsage( line:str ) -> bool:
     """
-    Returns True if every '≈' in the ESFM line is either at the start of the line text
-        (synonymous parallelism) or part of a '\\add ≈' (reworded) marker.
+    Returns True if every '≈', '^', '→' and '⇔' in the ESFM line is either at the start of the line text
+        (parallelism or reordered verse) or part of a '\\add ≈' (reworded) or '\\add ^' (opposite) marker.
     """
-    if '≈' not in line: return True
-    remainingLine = lineStartParallelismRegex.sub( '', line, count=1 )
-    remainingLine = rewordedAddRegex.sub( '', remainingLine ).replace( '\\bd ≈\\bd*', '' )
-    return '≈' not in remainingLine
-# end of checkApproxSymbolUsage
+    if not any( char in line for char in LINE_START_CHARACTERS ): return True
+    remainingLine = lineStartCharacterRegex.sub( '', line, count=1 )
+    remainingLine = lineStartCharacterAddRegex.sub( '', remainingLine )
+    for char in LINE_START_CHARACTERS:
+        remainingLine = remainingLine.replace( f'\\bd {char}\\bd*', '' )
+    return not any( char in remainingLine for char in LINE_START_CHARACTERS )
+# end of checkLineStartCharacterUsage
+
+# A word number must go at the end of the whole word, including any (straight) apostrophe part,
+#   e.g., 'he'd¦123', 'Tsurishadai's¦123', 'days'¦123', never 'he¦123'd' or 'days¦123''
+#   (applyRVTokenLink() won't insert one there, and the load checks reject any that are edited in)
+wordNumberBeforeApostropheRegex = re.compile( r"¦[0-9]+'" )
+
+
+# These whole-book checks mirror the ones in ../convert_OET-RV_to_simple_HTML.py (produce_HTML_files()),
+#   so that the errors are found when the words are connected, i.e., much earlier in the makefile processes.
+psalmColouringMarkerRegex = re.compile( r'\\z(?:r|[1-4])(?:hilite)?(?: |\*)' ) # Psalm/Song colouring markers
+FOOTNOTE_AND_XREF_MARKERS = ('f','fr','fl','ft','fq','fqa','x','xo','xt','fig') # \fl is a footnote label, e.g., '\fl Greek '
+NON_NESTING_MARKERS = ('fr','fl','ft','fq','fqa','xo','xt')
+
+def checkRVESFMTextForExport( BBB:str, filename:str, esfmText:str ) -> None:
+    """
+    Assert that the OET-RV ESFM text will pass the checks done when it's converted to HTML.
+
+    These are the whole-book checks (e.g., balanced parentheses) and the character marker nesting checks
+        from convert_OET-RV_to_simple_HTML.py which aren't already done line-by-line in connect_OET_RV_book().
+    """
+    def context( text:str, what:str ) -> str:
+        ix = text.index( what )
+        return text[max(0,ix-20):ix+22]
+
+    checkText = esfmText.replace( ' 120¦', ' 12Z¦' ) if BBB=='ACT' else esfmText # Avoid false alarm
+    match = illegalWordLinkRegex1.search( checkText )
+    assert not match, f"Digits before word number (doubled-up word number?) in {filename}: '{checkText[max(0,match.start()-20):match.end()+22]}'"
+    match = illegalWordLinkRegex2.search( esfmText )
+    assert not match, f"Letters after word number in {filename}: '{esfmText[max(0,match.start()-20):match.end()+22]}'"
+    assert esfmText.count('(') == esfmText.count(')'), f"Unbalanced parentheses in {filename}: {esfmText.count('(')=} and {esfmText.count(')')=}{findUnbalancedLines( esfmText, '(', ')' )}"
+    assert esfmText.count('‘') >= esfmText.count('’'), f"More closing than opening single quotes in {filename}: {esfmText.count('‘')=} and {esfmText.count('’')=}"
+    assert esfmText.count('“') >= esfmText.count('”'), f"More closing than opening double quotes in {filename}: {esfmText.count('“')=} and {esfmText.count('”')=}"
+    assert '--' not in esfmText, f"Doubled hyphens in {filename}: '{context(esfmText,'--')}'"
+    assert '‘ ' not in esfmText, f"Space after single opening quote in {filename}: '{context(esfmText,'‘ ')}'"
+    apostrophedText = esfmText.replace( "'", "’" ).replace( '” ’', '”’' ).replace( '\\add ’', '’' ) # The HTML has curly apostrophes
+    assert ' ’' not in apostrophedText, f"Space before single closing quote (or apostrophe) in {filename}: '{context(apostrophedText,' ’')}'"
+    for badText, description in ( (' \\f*','Footnote ending with space'), (' \\x*','Xref ending with space'),
+                                  ('_¦','Word number attached to underline'), ('¦¦','Doubled word number character'),
+                                  ('\\p\n\\s','Useless paragraph before section heading') ):
+        assert badText not in esfmText, f"{description} in {filename}: '{context(esfmText,badText)}'"
+
+    expectedMarkers = { *BibleOrgSysGlobals.USFMCharacterMarkers, *FOOTNOTE_AND_XREF_MARKERS }
+    for lineNumber,line in enumerate( esfmText.split( '\n' ), start=1 ):
+        if BBB=='PSA' and '\\z' in line:
+            line = psalmColouringMarkerRegex.sub( '', line )
+        # Check that each character marker is closed before it's opened again
+        for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
+            opener, closer = f'\\{characterMarker} ', f'\\{characterMarker}*'
+            if opener not in line and closer not in line: continue
+            inCount = 0
+            for match in re.finditer( f'{re.escape(opener)}|{re.escape(closer)}', line ):
+                inCount += 1 if match.group(0) == opener else -1
+                assert inCount in (0,1), f"{characterMarker} marker bad nesting in {filename} {lineNumber}: '{line}'"
+            assert inCount == 0, f"{characterMarker} marker mismatch in {filename} {lineNumber}: '{line}'"
+        # Check that nested (+) and unnested markers open and close in order
+        inCharMarkers = []
+        for match in re.finditer( r'\\(\+?)([a-z0-9]{1,4})([ *])', line[3:] ): # Skip the paragraph marker at the beginning of the line
+            isNested, markerName, isClose = match.group(1)=='+', match.group(2), match.group(3)=='*'
+            if isNested:
+                assert inCharMarkers, f"Nested \\+{markerName} marker with nothing open in {filename} {lineNumber}: '{line}'"
+            assert markerName in expectedMarkers, f"Unexpected {markerName=} with {inCharMarkers} in {filename} {lineNumber}: '{line}'"
+            if isClose:
+                assert inCharMarkers and inCharMarkers[-1] == markerName, f"Closing {markerName=} doesn't match {inCharMarkers=} in {filename} {lineNumber}: '{line}'"
+                inCharMarkers.pop()
+            elif markerName not in NON_NESTING_MARKERS:
+                inCharMarkers.append( markerName )
+        assert not inCharMarkers, f"Left over markers {inCharMarkers} in {filename} {lineNumber}: '{line}'"
+# end of checkRVESFMTextForExport
+
+def checkRVBookForExport( BBB:str, filename:str, esfmText:str, when:str ) -> None:
+    """
+    Run checkRVESFMTextForExport() for the OT and NT books (which convert_OET-RV_to_simple_HTML.py converts),
+        but only warn about the DC books (which it doesn't convert, and which still have curly apostrophes, etc.).
+    """
+    try: checkRVESFMTextForExport( BBB, filename, esfmText )
+    except AssertionError as err:
+        if bookSegment(BBB) != 'DC': raise AssertionError( f"{err} ({when})" ) from err
+        logging.warning( f"DC book would fail OET-RV HTML export checks ({when}): {err}" )
+# end of checkRVBookForExport
+
+def findUnbalancedLines( text:str, opener:str, closer:str ) -> str:
+    """
+    Return a description of the lines which have unbalanced opener/closer characters (to help find the error).
+
+    Note: Some of these might be correct, e.g., a parenthesis that covers more than one verse.
+    """
+    unbalanced = [ f"{lineNumber}: '{wordLinkRegex.sub( '', line )[:120]}…'" for lineNumber,line in enumerate( text.split( '\n' ), start=1 )
+                    if line.count(opener) != line.count(closer) ]
+    return ( '\n  Unbalanced lines are:\n    ' + '\n    '.join( unbalanced ) ) if unbalanced else ''
+# end of findUnbalancedLines
 
 def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
     """
@@ -1021,7 +1142,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             assert  badNDAdd not in line, f"\\nd inside \\add end {lvESFMFilename} {lineNumber}: '{line}'"
             assert  ' ¦' not in line, f"Word number attached to space {lvESFMFilename} {lineNumber}: '{line}'"
             assert not lvNumberedArticleAddRegex.search( line ), f"Word number inside '\\add +' added article or '\\add =' added copula (regenerate the OET-LV) in {lvESFMFilename} {lineNumber}: '{line}'"
-            assert checkApproxSymbolUsage( line ), f"Unexpected ≈ (not at line start or in '\\add ≈') in {lvESFMFilename} {lineNumber}: '{line}'"
+            assert checkLineStartCharacterUsage( line ), f"Unexpected ≈, ^, → or ⇔ (not at line start or in '\\add ≈'/'\\add ^') in {lvESFMFilename} {lineNumber}: '{line}'"
             if '\\x* ' in line: # this can be ok if the xref directly follows other text
                 logger = logging.critical if ' \\x ' in line else logging.warning
                 logger( f"Double-check space after xref in {lvESFMFilename} {lineNumber}: '{line}'" )
@@ -1044,6 +1165,8 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
         numLabelRemovals = removeWordNumbersFromSourceLanguageLabels( rvESFMFilename, state.rvESFMLines )
         if numLabelRemovals:
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Removed {numLabelRemovals:,} word number(s) from 'Grk.'/'Heb.' labels in {rvESFMFilename}" )
+        # Find the errors that would otherwise only be found by the later HTML export (e.g., unbalanced parentheses)
+        checkRVBookForExport( BBB, rvESFMFilename, '\n'.join( state.rvESFMLines ), 'after loading' )
         # Do some basic checking (better to find common editing errors sooner rather than later)
         for lineNumber,line in enumerate( state.rvESFMLines, start=1 ):
             assert not line.startswith(' '), f"Unexpected space at start in {rvESFMFilename} {lineNumber}: '{line}'"
@@ -1059,8 +1182,10 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             assert '’“' not in line and '“’' not in line, f"Unexpected consecutive closing speech marks in {rvESFMFilename} {lineNumber}: '{line}'"
             if '’ ”' not in line and '’\\wj* ”' not in line:
                 assert ' ”' not in line, f"Unexpected space at end of speech in {rvESFMFilename} {lineNumber}: '{line}'"
-            assert '≈ ' not in line, f"Unexpected space after ≈ in {rvESFMFilename} {lineNumber}: '{line}'"
-            assert checkApproxSymbolUsage( line ), f"Unexpected ≈ (not at line start or in '\\add ≈') in {rvESFMFilename} {lineNumber}: '{line}'"
+            for char in LINE_START_CHARACTERS:
+                assert f'{char} ' not in line, f"Unexpected space after {char} in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert not wordNumberBeforeApostropheRegex.search( line ), f"Word number before an apostrophe (it belongs at the end of the whole word) in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert checkLineStartCharacterUsage( line ), f"Unexpected ≈, ^, → or ⇔ (not at line start or in '\\add ≈'/'\\add ^') in {rvESFMFilename} {lineNumber}: '{line}'"
             for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
                 assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {rvESFMFilename} {lineNumber}: '{line}'"
                 assert  f' \\{characterMarker}* 'not in line, f"doubled spaces around close {characterMarker} marker {rvESFMFilename} {lineNumber}: '{line}'"
@@ -1129,6 +1254,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
         # NOTE: '*?' has to have a space before it, because \\add*? might occur at the end of a question
         for wronglyOrderedCombo in ('+?','=?','<?','>?','≡?','&?','@?',' *?','#?','%?','^?','≈?','$?'):
             assert wronglyOrderedCombo not in newESFMtext, f"Wrongly ordered combo check failed with '{wronglyOrderedCombo}' before saving {BBB} with '{newESFMtext[newESFMtext.index(wronglyOrderedCombo)-10:newESFMtext.index(wronglyOrderedCombo)+35]}'"
+        checkRVBookForExport( BBB, rvESFMFilename, newESFMtext, 'before saving' )
         options = BibleOrgSysGlobals.commandLineArguments
         destination = options.output_dir / rvESFMFilename if options.output_dir else rvESFMFilepath
         if not options.dry_run:
@@ -1441,7 +1567,9 @@ def matchVerseCandidates( BBB:str, c:int,v:int, lvWordList:List[str], reversedOr
         nameEligible = capitalised and lvWordIsNoun(row, testament)
         names = (frozenset(getLVNameSpellings(plain, ('NT','NT_OT') if testament in ('NT','DC') else ('OT',)))
                  if nameEligible and hasattr(state, 'nameTables') else frozenset())
-        columns.append(LVToken(plain, number, proper, noun=lvWordIsNoun(row, testament), names=names))
+        verbLemma = lvVerbLemma(row, testament)
+        columns.append(LVToken(plain, number, proper, noun=lvWordIsNoun(row, testament), names=names,
+                               verb=verbLemma is not None, lemma=verbLemma or ''))
     if lvVerseText is not None:
         columns = with_clause_boundaries(columns, lvVerseText)
     # Optional project-specific phrases enter the same candidate graph as the
@@ -1454,7 +1582,8 @@ def matchVerseCandidates( BBB:str, c:int,v:int, lvWordList:List[str], reversedOr
             phraseIndex.setdefault(rvPhrase[0], []).append((rvPhrase, lvPhrase))
     proposals = select_links(getLiveRVTokens(BBB, c, v), columns,
                              scoreAlignedWords, simplifyRVLVWord, numberVariants,
-                             reversedOrder, phraseIndex, DIRECTIONAL_WORD_INDEX)
+                             reversedOrder, phraseIndex, DIRECTIONAL_WORD_INDEX,
+                             getattr(state, 'learntVerbRenderings', None))
     # An OET-RV article can only translate a source word whose OET-LV gloss has an article in it.
     #   The articles that the English needed ('\add +the\add*') have no word number, so without this,
     #   positional gap-filling can give an OET-RV 'the' the number of the noun beside it.
@@ -1571,6 +1700,84 @@ def lvWordIsProperNoun( lvWordRow:List[str], testament:str ) -> bool:
     morphology = lvWordRow[state.wordTableHeaderList['OT'].index('Morphology')]
     return any(part.startswith('Np') for part in morphology.split(','))
 # end of connect_OET-RV_words_via_OET-LV.lvWordIsProperNoun
+
+
+def lvVerbLemma( lvWordRow:List[str], testament:str ) -> Optional[str]:
+    """
+    Return a segment-qualified lemma key (e.g. 'NT:poreuō', 'OT:1980') if the OET-LV word is a verb,
+        else None.
+    The NT word table has 'Role' and 'SRLemma' columns. The OT word table has comma-separated
+        'Morphology' and 'Strongs' parts for prefixes and suffixes (e.g. 'C,Vqw3ms' with 'c,3212'),
+        so we take the Strong's number of the verb part. DC verbs need unanimous TAGNT 'V-' analyses.
+    """
+    try:
+        header = state.wordTableHeaderList[testament]
+        if testament == 'NT':
+            if lvWordRow[header.index('Role')].strip() != 'V': return None
+            lemma = lvWordRow[header.index('SRLemma')].strip()
+            return f'NT:{lemma}' if lemma else None
+        if testament == 'DC':
+            morphology = lvWordRow[header.index('Morphology')]
+            if not morphology or not all(part.strip().startswith('V-') for part in morphology.split('|')): return None
+            lemma = lvWordRow[header.index('Lemma')].strip() if 'Lemma' in header else ''
+            return f'DC:{lemma}' if lemma else None
+        for morphology, strongs in zip(lvWordRow[header.index('Morphology')].split(','),
+                                       lvWordRow[header.index('Strongs')].split(',')):
+            if morphology.startswith('V') and strongs.strip():
+                return f'OT:{strongs.strip()}'
+    except (IndexError, KeyError, ValueError):
+        pass # Short (e.g., final blank) rows or a table without these columns
+    return None
+# end of connect_OET-RV_words_via_OET-LV.lvVerbLemma
+
+
+# How many different source words (of one verb lemma) the OET-RV must already link to an English
+#   word before we treat that word as a known rendering of the lemma (see buildLearntVerbRenderings()).
+MIN_LEARNT_RENDERING_OCCURRENCES = 3
+
+def buildLearntVerbRenderings() -> None:
+    """
+    Learn how the OET-RV already renders each source verb lemma, from the existing word links in
+        ALL of the OET-RV books (not just the selected ones), e.g. poreuō as 'go', 'went', 'travelled', 'left'.
+
+    Only plain lowercase content words count (not pronouns, auxiliaries, particles, 'that', names
+        or words inside \\add spans: see is_learnable_rendering()),
+        and only if they're linked to at least MIN_LEARNT_RENDERING_OCCURRENCES different source words.
+    The candidate selector uses these as weak lexical evidence (weaker than any curated table),
+        so they can only settle an RV/LV gap between existing links, never justify a verse-wide jump.
+    The table is built once before any book is processed, so results don't depend on book order
+        or multiprocessing.
+    """
+    counts = defaultdict(set) # (lemma, simplified RV word) -> set of source word numbers
+    for filepath in sorted(OET_RV_ESFM_FolderPath.glob('OET-RV_*.ESFM')):
+        try:
+            BBB = canonicalBookCode(filepath.stem.removeprefix('OET-RV_'))
+            testament = bookSegment(BBB)
+        except (ValueError, KeyError):
+            continue # e.g. INT (front matter)
+        if testament not in state.wordTable:
+            continue
+        for lineNumber, line in enumerate(filepath.read_text(encoding='utf-8').split('\n')):
+            if '¦' not in line or line.startswith('\\rem '):
+                continue
+            for token in tokenize(line, lineNumber):
+                if token.number is None or not token.linkable or token.code is not None:
+                    continue
+                if not is_learnable_rendering(token.match_text):
+                    continue
+                if token.number >= len(state.wordTable[testament]):
+                    continue
+                lemma = lvVerbLemma(state.wordTable[testament][token.number], testament)
+                if lemma:
+                    counts[lemma, simplifyRVLVWord(token.text)].add(token.number)
+    learnt = defaultdict(set)
+    for (lemma, word), numbers in counts.items():
+        if len(numbers) >= MIN_LEARNT_RENDERING_OCCURRENCES:
+            learnt[lemma].add(word)
+    state.learntVerbRenderings = {lemma: frozenset(words) for lemma, words in learnt.items()}
+    vPrint('Normal', DEBUGGING_THIS_MODULE,
+           f"  Learnt {sum(len(words) for words in learnt.values()):,} existing OET-RV renderings of {len(learnt):,} source verb lemmas.")
+# end of connect_OET-RV_words_via_OET-LV.buildLearntVerbRenderings
 
 
 lvAltNameRegex = re.compile(r'[/(]')

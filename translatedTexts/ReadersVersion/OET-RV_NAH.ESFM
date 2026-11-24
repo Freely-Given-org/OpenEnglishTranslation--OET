@@ -1,4 +1,4 @@
-\id NAM - Open English Translation—Readers' Version (OET-RV) v0.2.7
+\id NAM - Open English Translation—Readers' Version (OET-RV) v0.2.8
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 NAH
@@ -10,7 +10,7 @@
 \mt1 Nahum
 \is1 Introduction
 \ip This document is about the destruction of Nineveh, the capital city of Ashur/Assyria—an ancient enemy of Yisrael/Israel, and was written between 663 and 612 B.C. The prophet Nahum was pleased that Yahweh destroyed Nineveh, because that was a sign that God does indeed punish sinners.
-\ip A large portion of the document is poetry, with some narrative portions also included. Unlike English poetry which can often focus on rhyme, Hebrew poetry often includes parallelism where the same thought is repeated or extended using different words. The \em OET Readers' Version\em* tries to assist the reader by starting the second line in a parallel set with the symbol \bd ≈\bd*.
+\ip A large portion of the document is poetry, with some narrative portions also included. Unlike English poetry which can often focus on rhyme, Hebrew poetry often includes parallelism where the same thought is repeated or extended using different words. The \em OET Readers' Version\em* tries to assist the reader by starting the second line in a parallel set with the symbol \bd ≈\bd*, in a contrasting set with \bd ^\bd*, and in a consequence set with \bd →\bd*.
 \ip It can take a little bit of effort to decipher this message—to see who's being spoken to—because it's often alternating between Yahweh declaring good news to his people, and declaring bad news to Nineveh.
 \iot Main components of this document
 \io1 Yahweh's punishment of Nineveh \ior 1:1-15\ior*
@@ -34,7 +34,7 @@
 \q1 He¦373167 walks among whirlwinds and¦373170 \add #storms¦373170\add*,
 \q1 ≈and¦373172 clouds¦373172 are \add ≈like\add* dust¦373173 \add stirred up\add* by his¦373174 feet¦373174.
 \q1
-\v 4 He¦373176 scolds the ocean¦373177 and¦373178 makes¦373178 it¦373178 \add ≈sand\add*.
+\v 4 He¦373176 scolds¦373176 the ocean¦373177 and¦373178 makes¦373178 it¦373178 \add ≈sand\add*.
 \q1 ≈He dries¦373178 up all¦373179 the¦373181 rivers¦373181.
 \q1 Bashan¦373184 and¦373185 Karmel¦373185 wither up.
 \q1 ≈He makes the¦373186 flowers¦373186 wilt in Levanon¦373187.
@@ -42,7 +42,7 @@
 \v 5 The mountains¦373190 shake¦373191 \add ≈when he appears\add*,
 \q1 ≈and¦373193 the¦373193 hills¦373193 melt¦373194.
 \q1 The¦373196 ground¦373196 heaves¦373195 at his¦373197 presence—
-\q1 actually the entire world¦373198 and¦373199 all¦373199 its residents.
+\q1 actually the entire world¦373198 and¦373199 all¦373199 its residents¦373201.
 \b
 \q1
 \v 6 What can \add ≈withstand\add* his¦373205 indignation¦373205?
@@ -62,7 +62,7 @@
 \q1
 \v 10 They'll get tangled up as if¦373253 in thorns¦373256,
 \q2 and¦373258 they'll \add walk\add* like¦373258 drunks¦373259.
-\q1 They'll¦373260 be¦373260 \add ≈burnt up completely\add* like¦373261 dry¦373262 stubble¦373261.
+\q1 They'll¦373260 be¦373260 \add ≈burnt¦373260 up¦373260 completely¦373260\add* like¦373261 dry¦373262 stubble¦373261.
 \b
 \q1
 \v 11 Someone in \add @Nineveh¦373265\add* \add ≈made a decision\add*,
@@ -72,24 +72,24 @@
 \q1
 \v 12 This is what Yahweh¦373279 says¦373278:
 \q1 Even though¦373280 \add @the Assyrians\add* are numerous¦373284 and¦373285 \add ≈well equipped\add*.
-\q2 they'll¦373286 be¦373286 destroyed anyway and¦373287 will¦373287 be no more.
+\q2 they'll¦373286 be¦373286 destroyed¦373286 anyway and¦373287 will¦373287 be no more.
 \q1 Although I've¦373288 afflicted¦373288 you¦373288 \add my people\add*,
 \q2 I¦373290 won't¦373289 afflict¦373290 you¦373290 any more.
 \q1
-\v 13 I'll¦373294 free your \add neck\add* from¦373296 their harness.
+\v 13 I'll¦373294 free¦373294 your \add neck\add* from¦373296 their harness.
 \q1 ≈I'll¦373298 \add ≈snap¦373298 their\add* chains¦373297 \add that are holding you\add*.
 \b
 \q1
 \v 14 Yahweh¦373302 has¦373300 \add ≈given instructions¦373300\add* about you, \add Nineveh\add*.
 \q1 \add ≈You'll have no more descendants to carry on¦373301\add* your¦373306 name¦373306.
-\q1 I'll¦373310 \add ≈destroy\add* \add &your\add* \add #idols¦373311 and¦373312 images¦373312\add* in your \add #temples¦373308\add*.
-\q1 I'll¦373313 \add ≈dig\add* your¦373314 grave¦373314 because¦373315 you're¦373316 despised.
+\q1 I'll¦373310 \add ≈destroy¦373310\add* \add &your\add* \add #idols¦373311 and¦373312 images¦373312\add* in your \add #temples¦373308\add*.
+\q1 I'll¦373313 \add ≈dig¦373313\add* your¦373314 grave¦373314 because¦373315 you're¦373316 despised¦373316.
 \b
 \q1
 \v 15 \add My people,\add* look, a messenger is running across the¦373323 hills¦373323.
 \q1 He'll¦373335 be bringing good news¦373325—announcing peace¦373327.\x + \xo 1:15: \xt Isa 52:7.\x*
 \q1 →So celebrate¦373328 your festivals¦373328 Yehudah¦373329 \add !(Judah¦373329)\add*, and keep your¦373330 promises¦373332,
-\q1 because¦373333 that wicked \add country\add* won't¦373334 invade you again¦373336—it'll¦373343 be¦373343 destroyed.
+\q1 because¦373333 that wicked \add country\add* won't¦373334 invade you again¦373336—it'll¦373343 be¦373343 destroyed¦373343.
 \c 2
 \s1 Nineveh's coming destruction
 \rem /s1 The Destruction of the Wicked City; Nineveh to Fall; The Fall of Nineveh
@@ -117,7 +117,7 @@
 \q1 They look like¦373402 \add flaming\add* torches¦373402,
 \q1 ≈and \add ≈dart across\add* like¦373403 lightning.
 \q1
-\v 5 He¦373407 calls his¦373408 officers¦373408—
+\v 5 He¦373407 calls¦373407 his¦373408 officers¦373408—
 \q1 They¦373409 stumble¦373409 as they march¦373410.
 \b
 \q1 They¦373412 hurry¦373412 to \add attack the city\add* wall¦373413,
@@ -179,7 +179,7 @@
 \q1 ≈She \add ≈attracts\add* other peoples¦373583 with her¦373582 sorceries¦373584.
 \q1
 \v 5 Commander-in-chief Yahweh¦373589 \add ≈declares¦373588\add* that \add %he's¦373586\add* against¦373587 you¦373587.
-\q1 \add %He'll¦373591\add* lift your¦373592 \add #skirt¦373592\add* up over¦373593 your¦373595 \add ≈head\add*,
+\q1 \add %He'll¦373591\add* lift¦373591 your¦373592 \add #skirt¦373592\add* up over¦373593 your¦373595 \add ≈head\add*,
 \q1 and¦373596 show¦373596 your¦373598 nakedness¦373598 to the \add other\add* countries¦373597.
 \q1 \add ≡Show¦373596\add* your¦373600 shame¦373600 to the \add various\add* kingdoms¦373599.
 \q1
@@ -188,9 +188,9 @@
 \q1 I'll¦373606 make¦373606 a¦373607 spectacle¦373607 of you.
 \q1
 \v 7 Everyone¦373610 who¦373612 sees¦373612 you¦373612 will¦373613 run¦373613 away
-\q2 and¦373615 say¦373615, ‘Nineveh¦373617 is¦373616 destroyed.’
+\q2 and¦373615 say¦373615, ‘Nineveh¦373617 is¦373616 destroyed¦373616.’
 \q1 Who¦373618 will¦373619 weep for¦373620 her¦373620?
-\q1 Where¦373621 can I¦373622 find someone who'll comfort¦373623 \add %her¦373624\add*?
+\q1 Where¦373621 can I¦373622 find¦373622 someone who'll comfort¦373623 \add %her¦373624\add*?
 \b
 \q1
 \v 8 Are you¦373626 better¦373626 than¦373627 No¦373627 \add city\add*\f + \fr 3:8 \ft Ancient No-Amon—modern Luxor in Mitsrayim.\f* was,
@@ -232,7 +232,7 @@
 \q1 They'll \add ≈chew you up\add* like¦373737 locusts¦373737.
 \q1 You need to multiply like¦373739 locusts¦373739 and grasshoppers.
 \q1
-\v 16 You¦373743 have¦373743 so many merchants¦373744—
+\v 16 You¦373743 have¦373743 so many¦373743 merchants¦373744—
 \q2 more¦373745 than¦373745 the¦373745 stars¦373745 in the¦373746 sky¦373746.
 \q1 Like \add #locusts¦373747\add*, they strip¦373748 valuables and¦373749 then fly¦373749 away¦373749.
 \q1

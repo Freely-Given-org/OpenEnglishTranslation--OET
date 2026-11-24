@@ -361,7 +361,7 @@ $(RV_HTML): $(RV_HTML_sentinel)
 # are left alone; deleted PDFs, changed artwork/config/code, and new books are
 # detected too. Wait for the connector AND all LV releases, including with -j.
 # TOML puts PDFs in OpenBibleData/htmlPages/OET/Downloads/ and a small link catalogue
-# in the OET website's src/data/. No large PDFs are copied into OET.Bible.
+# in the OET website's src/data/. No large PDFs are copied into OpenEnglishTranslation.Bible.
 TYPESETTER_DIR ?= ../../BibleTypesetter
 PDF_PYTHON ?= python3
 PDF_CONFIG ?= $(TYPESETTER_DIR)/SILE/settings.toml

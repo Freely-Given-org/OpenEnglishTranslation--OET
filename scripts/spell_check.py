@@ -16,6 +16,17 @@
 """
 Script to spell check the Open English Translation of the Bible.
 
+OET-RV line-start characters:
+    Four special characters can occur at the very start of an OET-RV text line,
+        i.e., after any paragraph/poetry marker and/or verse number,
+        e.g., '\\q1 ≈…', '\\v 13 ≈…', '\\q2 \\v 4 →…', '\\v 17 ⇔…':
+            ≈ synonymous parallelism (the second line repeats a similar thought)
+            ^ antithetic parallelism (the second line says the opposite)
+            → synthetic parallelism (the second line gives the result or conclusion)
+            ⇔ the OET-RV swapped the clause order of the verse (only for our word-connecting software)
+    These are OUTSIDE of any \\add span, so are different from the '\\add ≈' and '\\add ^' codes.
+    All four are removed before spell-checking the line.
+
 CHANGELOG:
     2024-03-13 Added check for duplicated words
     2025-03-10 Added support for a few more internal USFM markers
@@ -28,6 +39,8 @@ CHANGELOG:
     2026-11-20 Read the renamed OET-RV names table 'Explanation' column and accept the names in it
     2026-11-21 OET-RV names table: Segment (OT/NT/DC) column added (with one row per segment) and 'GrkName' renamed 'SimplifiedTransliteration'
     2026-11-22 OET-RV names table 'Explanation' column split into 'NotesExplanation' (without the \\add !(…)\\add* markup) and 'CanonicalExplanation' (the inserted text)
+    2026-11-25 Explicitly remove all four OET-RV line-start characters (≈ ^ → ⇔), not just ⇔
+    2026-11-25 Handle the ! (alternate name) \\add format, and treat no-break spaces (e.g., between ’ and ”) as spaces
 """
 from gettext import gettext as _
 # from typing import List, Tuple, Optional
@@ -41,10 +54,10 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-11-22' # by RJH
+LAST_MODIFIED_DATE = '2026-11-25' # by RJH
 SHORT_PROGRAM_NAME = "spell_check"
 PROGRAM_NAME = "OET Spell Check"
-PROGRAM_VERSION = '0.37'
+PROGRAM_VERSION = '0.38'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -360,12 +373,13 @@ def spellCheckFile( BBB:str, filepath:str|Path, nameSet:set[str] ) -> bool:
             elif marker == 'v':
                 V, rest = rest.split( ' ', 1 )
             if rest:
-                if rest.startswith( '⇔' ): rest = rest[1:] # Delete 'reordered verse' marker
+                if rest[0] in LINE_START_CHARACTERS: rest = rest[1:] # Delete parallelism or 'reordered verse' character
                 spellCheckESFMText( rest, f'{BBB} {C}:{V} \\{marker}', nameSet )
     return True
 # end of spell_check.spellCheckFile
 
 
+LINE_START_CHARACTERS = '≈^→⇔' # See above
 USFM_CLOSED_FIELDS_TO_COMPLETELY_REMOVE = ('x','fig')
 def spellCheckESFMText( text:str, location:str, nameSet:set[str] ) -> bool:
     """
@@ -380,7 +394,7 @@ def spellCheckESFMText( text:str, location:str, nameSet:set[str] ) -> bool:
 
     lastLastWord = lastWord = ''
 
-    for addChar in ('≈','$','+','>','<','@','*','#','%','≡'):
+    for addChar in ('≈','$','+','>','<','@','*','#','%','≡','!','&','^','='):
         adjText = adjText.replace( f'\\add ?{addChar}', '' ).replace( f'\\add {addChar}', '' )
     for charMarker in ('add','+add','em','+em','nd','+nd','sc','+sc','wj','+wj','bd','+bd','it','+it','bdit','+bdit','tl',
                         'ior','bk','+bk','sig','sup','qs',
@@ -402,6 +416,7 @@ def spellCheckESFMText( text:str, location:str, nameSet:set[str] ) -> bool:
                     # .replace( '\\add*', '' ) # Removed above
                     # .replace( '\\jmp ', ' \\jmp ' ) # Removed above
                     .replace( '…', ' ' ).replace( '◙', ' ' ).replace( '◘', ' ' )
+                    .replace( '\u202f', ' ' ).replace( '\xa0', ' ' ) # Treat narrow and normal no-break spaces (e.g., between ’ and ”) as spaces
                     .replace( '  ', ' ' )
                     )
     adjWords = adjText.split( ' ' )
@@ -444,7 +459,7 @@ def spellCheckESFMText( text:str, location:str, nameSet:set[str] ) -> bool:
             # Remove \add markers
             if word[0] == '?': # This one can precede the others
                 word = word[1:]
-            if word[0] in '+<=>#%@*^&≈$?≡→':
+            if word[0] in '+<=>#%@*^&≈$?≡→!':
                 word = word[1:]
             if not word: break
 

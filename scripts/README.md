@@ -85,7 +85,7 @@ has B5, A4 and Letter print options and a B5 screen version: 696 PDFs total. Unc
 
 The profile writes the PDFs, manifest and download index directly into
 `OpenBibleData/htmlPages/OET/Downloads/`, and writes the small link catalogue
-to `OpenEnglishTranslation-website/src/data/oet-pdfs.json`. The OET.Bible
+to `OpenEnglishTranslation-website/src/data/oet-pdfs.json`. The OpenEnglishTranslation.Bible
 Downloads page links to the OBD files. No PDFs are copied into its deployment.
 The normal OBD publishing process must publish that folder; the batch does
 not upload files. OBD's page rebuild preserves the Downloads folder.
@@ -500,6 +500,47 @@ may move around content words, and verse-wide uniqueness can still establish
 initial anchors. Acts 19:40–41's
 “And … have no defence” must not borrow “And having said” from the dismissal
 sentence after the quotation.
+
+### 25 November 2026 paraphrased verbs after a linked subject
+
+A Greek/Hebrew finite verb's LV gloss includes its subject (Luke 9:56 “they were
+gone”). The RV “they” matched that subject exactly, but a paraphrased verb
+(“headed off”) matched nothing, so Open Bible Data showed ‘they’ as the verb's
+translation. Two additions (v2.3.0) now complete such links:
+
+* **Verb after a linked subject.** When every RV word with a verb's number is a
+  subject/auxiliary, the next unlinked content word in the same clause takes the
+  number, with a phrasal particle (`off`, `up`, `out`, `away`, `down`, `back`).
+  The verb can also be a short reworded span (`\add ≈drew straws\add*`).
+  Up to two unlinked auxiliaries/negatives may come first (“they won't die”),
+  but those aren't linked. It abstains:
+  * for adverbs, indefinite pronouns and helper verbs (“I want to tell”);
+  * for a word with lexical evidence for another source word;
+  * when the LV verb's own word occurs elsewhere in the RV passage.
+* **Learnt verb renderings.** Before processing, `buildLearntVerbRenderings()`
+  reads every RV book. It records each plain lowercase content word that is
+  already linked to at least three different occurrences of one verb lemma
+  (e.g. poreuō → *travelled*). These count as weak evidence (45, below the
+  curated synonyms' 60), so they can only settle a gap between existing links.
+  Words like `that`, `who`, `then` and particles are never learnt.
+
+A whole-Bible preview added 4,025 links:
+* 2,047 by the subject rule;
+* 1,975 by the learnt renderings;
+* 3 by other rules (gap-filling around the new links).
+
+Subject/auxiliary-only verb links fell from 5,939 to 3,768. In samples, about
+nine in ten new links were right. The rest were mostly loose paraphrases,
+e.g. Exodus 22:23 “I'll help” for “I will hear”.
+
+List what remains (copulas excluded) with:
+
+```sh
+uv run --project scripts python scripts/connect_OET-RV_words_via_OET-LV/audit_pronoun_only_verbs.py
+```
+
+This writes `audits/<date>-pronoun-only-verbs.tsv`. Use `--rv-folder` to audit
+an `--output-dir` preview instead.
 
 ### 23 October 2026 related forms and supplied nouns
 

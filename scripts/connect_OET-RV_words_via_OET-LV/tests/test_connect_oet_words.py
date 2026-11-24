@@ -303,6 +303,51 @@ class EditingTests(unittest.TestCase):
         self.assertEqual([t.text for t in tokens], ["he's", 'her'])
         self.assertEqual(connect.applyRVTokenLink('MRK',1,1,tokens[1],3,'test'), (0,0))
 
+    def test_export_checks_find_html_conversion_errors_early(self):
+        good = "\\id MRK\n\\c 10\n\\v 41 Ya'akov¦1 \\add !(James¦1; Grk. Yakobos¦1)\\add* \\f + \\fr 10:41 \\ft A ‘note’.\\f*"
+        connect.checkRVESFMTextForExport('MRK', 'test', good)
+        for bad in (good.replace('!(James', '!((James'), good.replace('¦1;', '¦¦1;'),
+                    good.replace('Yakobos¦1', 'Yakobos¦1x'), good.replace('‘note', 'note'),
+                    good.replace('.\\f*', '. \\f*'), good.replace('\\add*', '\\f*', 1),
+                    good.replace('\\c 10', '\\p\n\\s1 Heading\n\\c 10')):
+            with self.subTest(bad=bad):
+                with self.assertRaises(AssertionError):
+                    connect.checkRVESFMTextForExport('MRK', 'test', bad)
+        # Nested markers must close in order, and a multi-verse parenthesis only needs to balance overall
+        connect.checkRVESFMTextForExport('MRK', 'test', '\\v 3 (The \\wj said \\+add more\\+add*\\wj*\n\\v 4 done.)')
+        with self.assertRaises(AssertionError):
+            connect.checkRVESFMTextForExport('MRK', 'test', '\\v 3 The \\wj said \\+add more\\wj*\\+add*')
+        # DC books (not converted to HTML) only get warnings
+        with self.assertLogs(level='WARNING'):
+            connect.checkRVBookForExport('TOB', 'test', '\\v 1 it’s (here', 'after loading')
+        with self.assertRaises(AssertionError):
+            connect.checkRVBookForExport('MRK', 'test', '\\v 1 it’s (here', 'after loading')
+
+    def test_verb_lemmas_and_learnt_renderings(self):
+        connect.state.wordTableHeaderList = {'NT': ['Ref','SRLemma','Role'],
+                                             'OT': ['Ref','Strongs','Morphology']}
+        connect.state.wordTable = {
+            'NT': [['Ref','SRLemma','Role']] + [[f'MRK_1:{n}w1','poreuō','V'] for n in range(1,5)]
+                  + [['MRK_1:5w1','oikos','N']],
+            'OT': [['Ref','Strongs','Morphology'], ['GEN_1:1w1','c,3212','C,Vqw3ms'],
+                   ['GEN_1:1w2','b,7225','R,Ncfsa']]}
+        self.assertEqual(connect.lvVerbLemma(connect.state.wordTable['NT'][1], 'NT'), 'NT:poreuō')
+        self.assertIsNone(connect.lvVerbLemma(connect.state.wordTable['NT'][5], 'NT'))
+        self.assertEqual(connect.lvVerbLemma(connect.state.wordTable['OT'][1], 'OT'), 'OT:3212')
+        self.assertIsNone(connect.lvVerbLemma(connect.state.wordTable['OT'][2], 'OT'))
+        self.assertIsNone(connect.lvVerbLemma([], 'NT'))
+        with tempfile.TemporaryDirectory() as folder:
+            (Path(folder) / 'OET-RV_MRK.ESFM').write_text('\n'.join((
+                r'\rem travelled¦1 travelled¦2 travelled¦3',
+                r'\v 1 They¦1 travelled¦1 and¦2 then travelled¦2 \add ≈travelled¦3\add*.',
+                r'\v 2 they¦3 travelled¦3 and¦4 headed¦4 off, \add travelled¦4\add*',
+                r'\v 3 he¦4 went¦1 went¦2 went¦3 to his house¦5 house¦5 house¦5',
+                r'\v 4 that¦1 that¦2 that¦3 up¦1 up¦2 up¦3')), encoding='utf-8')
+            with patch.object(connect, 'OET_RV_ESFM_FolderPath', Path(folder)), patch.object(connect, 'vPrint'):
+                connect.buildLearntVerbRenderings()
+        # Three different source words, not counting \rem lines, \add spans, pronouns, 'that', particles or nouns
+        self.assertEqual(connect.state.learntVerbRenderings, {'NT:poreuō': frozenset({'travelled', 'went'})})
+
     def test_source_language_labels_lose_numbers_and_are_not_counted(self):
         self.book(r'\c 1', r'\v 1 Yakov¦5 \add !(James¦5; Grk¦5. Yakobos¦5)\add* \add !(Heb¦6. Aramit¦6)\add*')
         self.assertNotIn('Grk', [t.text for t in connect.getLiveRVTokens('MRK',1,1) if t.linkable])
@@ -392,6 +437,24 @@ class EditingTests(unittest.TestCase):
         truncated = connect.tokenize('houses', 1, 5)[0]
         self.assertEqual(connect.applyRVTokenLink('RUT',1,1,truncated,1,'test'), (0,0))
         self.assertEqual(connect.state.rvESFMLines[1], "\\v 1 houses' foundations")
+
+    def test_contraction_number_follows_whole_word(self):
+        for word in ("he'd", "I'll", "Tsurishadai's", "days'"):
+            with self.subTest(word=word):
+                self.book(r'\c 1', f'\\v 1 {word} journey')
+                token = connect.getLiveRVTokens('RUT',1,1)[0]
+                self.assertEqual(token.text, word)
+                self.assertEqual(connect.applyRVTokenLink('RUT',1,1,token,1,'test'), (1,0))
+                self.assertEqual(connect.state.rvESFMLines[1], f'\\v 1 {word}¦1 journey')
+                self.assertIsNone(connect.wordNumberBeforeApostropheRegex.search(connect.state.rvESFMLines[1]))
+
+    def test_load_check_finds_number_before_apostrophe(self):
+        for bad in ("he¦1'd¦2", "who¦1'd", "Tsurishadai¦1's", "days¦1' journey"):
+            with self.subTest(bad=bad):
+                self.assertIsNotNone(connect.wordNumberBeforeApostropheRegex.search(bad))
+        for good in ("he'd¦2", "days'¦1 journey", "‘houses¦1’", "he's"):
+            with self.subTest(good=good):
+                self.assertIsNone(connect.wordNumberBeforeApostropheRegex.search(good))
 
     def test_insertion_rejects_apostrophe_hidden_by_formatting(self):
         for tail in (r"\add 's death\add*", r"\bd*'s sons", r"\+nd*'s children",

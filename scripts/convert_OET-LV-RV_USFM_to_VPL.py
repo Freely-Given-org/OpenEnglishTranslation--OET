@@ -28,7 +28,7 @@ Creates a VPL format for the 66 books in a single file for each of the LV and RV
     # year_short:           2026
     # year_long:            2026-09-25
     # title:                The Open English Translation of the Bible (OET) Literal Version (OET-LV)
-    # URL:                  https://OET.Bible
+    # URL:                  https://OpenEnglishTranslation.Bible
     # copyright_short:      © 2010-2026 Freely-Given.org
     # copyright_long:       Copyright © 2010–2026 https://Freely-Given.org available under CC-BY-SA licence
 
@@ -113,7 +113,7 @@ def main():
 # year_short:           {datetime.datetime.now().year}
 # year_long:            {datetime.datetime.now().strftime('%Y-%m-%d')}
 # title:                The Open English Translation of the Bible ({versionAbbreviation})
-# URL:                  https://OET.Bible
+# URL:                  https://OpenEnglishTranslation.Bible
 # copyright_short:      © 2010-2026 Freely-Given.org
 # copyright_long:       Copyright © 2010–2026 https://Freely-Given.org available under CC-BY-SA licence
 # versification:        {versionAbbreviation} (BOS profile)

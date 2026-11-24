@@ -15,11 +15,23 @@
 """
 Script to convert OET-RV ESFM files to text files suitable for TTS processing.
 
+OET-RV line-start characters:
+    Four special characters can occur at the very start of an OET-RV text line,
+        i.e., after any paragraph/poetry marker and/or verse number,
+        e.g., '\\q1 ≈…', '\\v 13 ≈…', '\\q2 \\v 4 →…', '\\v 17 ⇔…':
+            ≈ synonymous parallelism (the second line repeats a similar thought)
+            ^ antithetic parallelism (the second line says the opposite)
+            → synthetic parallelism (the second line gives the result or conclusion)
+            ⇔ the OET-RV swapped the clause order of the verse (only for our word-connecting software)
+    These are OUTSIDE of any \\add span, so are different from the '\\add ≈' and '\\add ^' codes.
+    All four are removed so that they're not read out.
+
 
 CHANGELOG:
     2026-02-24 Switched from PiperTTS to much better quality online GoogleTTS
     2026-02-26 Copy ogg files straight into Radio folder
     2026-06-11 Handle new % (changed person) \\add format
+    2026-11-25 Remove the OET-RV line-start characters (≈ ^ → ⇔)
 """
 from pathlib import Path
 import os, os.path
@@ -35,10 +47,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Formats.ESFMBible import ESFMBible, ESFM_WORD_NUMBER_REGEX
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-11-25' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-RV_to_sectionReadings"
 PROGRAM_NAME = "Convert OET-RV to section readings"
-PROGRAM_VERSION = '0.40'
+PROGRAM_VERSION = '0.41'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -113,6 +125,7 @@ THINGS_TO_REMOVE = ( # Don't include \\add here because they get special treatme
     '(Tyre)',
     '(Zion)',
 )
+LINE_START_CHARACTERS = '≈^→⇔' # See above
 ADD_THINGS_TO_REMOVE = ( '?≈','≈', '?$', '$', '=', '+', '#', '%', '*', '&', '?@','@', '≡', '<', '>', '^', '→', '?', '' )
 
 PICKLE_FILENAME_END = '.OBD_Bible.pickle'
@@ -336,6 +349,8 @@ def processBook( BBB:str ) -> int:
             if marker == 'p' and verseText:
                 verseText = f'{verseText}\n\n'
             elif marker == 'v~':
+                if rest and rest[0] in LINE_START_CHARACTERS: # Parallelism or reordered verse character
+                    rest = rest[1:]
                 verseText = f'{verseText} {rest}' # We don't worry here about extra spaces here
         verseText = ESFM_WORD_NUMBER_REGEX.sub( '', verseText )
         for someString in THINGS_TO_REMOVE:
@@ -350,6 +365,7 @@ def processBook( BBB:str ) -> int:
                     )
         # print( f"Final {BBB} {reference} verse text: {verseText}" )
         assert '\\' not in verseText, f"Backslash in final {BBB} {reference} verse text: {verseText}"
+        assert '⇔' not in verseText, f"Unexpected ⇔ in final {BBB} {reference} verse text: {verseText}"
         for someCharacters in ADD_THINGS_TO_REMOVE:
             if someCharacters:
                 assert f' {someCharacters}' not in verseText, f"Unexpected {someCharacters} character(s) in final {BBB} {reference} verse text: {verseText}"

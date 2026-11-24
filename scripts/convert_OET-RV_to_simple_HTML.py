@@ -13,6 +13,18 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 """
+OET-RV line-start characters:
+    Four special characters can occur at the very start of an OET-RV text line,
+        i.e., after any paragraph/poetry marker and/or verse number,
+        e.g., '\\q1 ≈…', '\\v 13 ≈…', '\\q2 \\v 4 →…', '\\v 17 ⇔…':
+            ≈ synonymous parallelism (the second line repeats a similar thought)
+            ^ antithetic parallelism (the second line says the opposite)
+            → synthetic parallelism (the second line gives the result or conclusion)
+            ⇔ the OET-RV swapped the clause order of the verse (only for our word-connecting software)
+    These are OUTSIDE of any \\add span, so are different from the '\\add ≈' and '\\add ^' codes.
+    The three parallelism characters are displayed in a styled span (with a title/tooltip)
+        as on Freely-Given.org/OBD, but the ⇔ is removed.
+
 CHANGELOG:
     2026-10-22 Use BOS source profiles for mapped metadata, passages and export/navigation.
     2023-03-21 Added handling for three verses at once (when verse content is reordered)
@@ -38,6 +50,7 @@ CHANGELOG:
     2026-05-08 Upgraded to bos_books_codes_py
     2026-05-31 Handle (remove) Psalm/Song thematic colouring markers
     2026-10-17 Fix handling of (longer) \\bdit character marker
+    2026-11-25 Style the line-start parallelism characters (≈ ^ →) and remove the line-start ⇔ (reordered verse) character
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -58,10 +71,10 @@ from bible_organisational_system import getSmallLeadingInt
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-10-22' # by RJH
+LAST_MODIFIED_DATE = '2026-11-25' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '1.0.1'
+PROGRAM_VERSION = '1.1.0'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -120,6 +133,9 @@ span.wj { color:fireBrick; }
 span.wj span.RVadded { color:lightCoral; }
 span.reworded, span.updatedMeasure { color:dimGrey; }
 span.wj span.reworded, span.wj span.updatedMeasure { color:lightCoral; }
+span.synonParr { vertical-align:super; font-size:0.8em; color:green; }
+span.antiParr { vertical-align:super; font-size:0.8em; color:orangeRed; }
+span.synthParr { vertical-align:super; font-size:0.8em; color:blue; }
 span.nominaSacra { font-weight:bold; }
 span.sig { font-family:cursive; }
 span.bk { font-style:italic; }
@@ -736,6 +752,10 @@ of what the original authors had inked onto their ancient manuscripts.)</p>
 consider were most probably in the mind of the writer, but as none of us can double-check
 with the original speakers or writers, the reader is free to disagree.
 They are clearly marked because we have tried to be as honest / transparent as possible.</p>
+<p>In poetry, a <span class="synonParr">≈</span> at the start of a line marks synonymous parallelism
+(where the line repeats a similar thought to the previous line),
+a <span class="antiParr">^</span> marks antithetic parallelism (where the line says the opposite),
+and a <span class="synthParr">→</span> marks synthetic parallelism (where the line gives the result or conclusion).</p>
 """
 
 INTRO_PRAYER_HTML = """<p class="shortPrayer">It is our prayer that this <em>Readers' Version</em> of the
@@ -756,6 +776,17 @@ START_HTML = """<!DOCTYPE html>
 <body>
 """
 END_HTML = '</body></html>\n'
+
+# The OET-RV line-start characters (see above), after any paragraph/poetry marker and/or verse number
+#   Group 1 is the part of the line to keep (a line can't start with an '\\add ≈' or '\\add ^' span)
+#   Group 2 is the line-start character
+lineStartCharacterRegex = re.compile( r'^((?:\\(?!add )[a-z]+[0-9]* )?(?:\\v [0-9]+\S* )?)([≈^→⇔])', re.MULTILINE )
+LINE_START_CHARACTER_HTML = {
+    '≈': '<span class="synonParr" title="synonymous parallelism">≈\u202f</span>',
+    '^': '<span class="antiParr" title="antithetic parallelism">^\u202f</span>',
+    '→': '<span class="synthParr" title="synthetic parallelism">→\u202f</span>',
+    '⇔': '', # Only used by our word-connecting software, so not displayed
+    }
 
 illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
 illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters immediately AFTER the wordlink number
@@ -858,8 +889,8 @@ def produce_HTML_files() -> None:
                             startIx = closeIx + 3
 
                 inCharMarkers = []
-                expectedMarkers = BibleOrgSysGlobals.USFMCharacterMarkers + ['f','fr','ft','fq','fqa','x','xo','xt','fig']
-                nonNestingMarkers = ('fr','ft','fq','fqa','xo','xt')
+                expectedMarkers = BibleOrgSysGlobals.USFMCharacterMarkers + ['f','fr','fl','ft','fq','fqa','x','xo','xt','fig'] # \fl is a footnote label
+                nonNestingMarkers = ('fr','fl','ft','fq','fqa','xo','xt')
                 lineLen = len( line )
                 for cc,char in enumerate( line ):
                     if cc<3: continue # Skip the paragraph marker at the beginning of the line
@@ -990,6 +1021,9 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     if count > 0:
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Removed {count:,} figure fields from {BBB} USFM" )
+
+    # Style the line-start parallelism characters and remove the line-start ⇔ (reordered verse) character
+    usfm_text = lineStartCharacterRegex.sub( lambda match: f'{match.group(1)}{LINE_START_CHARACTER_HTML[match.group(2)]}', usfm_text )
 
     C = V = '0'
     book_html = ''

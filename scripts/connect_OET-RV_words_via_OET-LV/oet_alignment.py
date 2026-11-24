@@ -56,6 +56,8 @@ class LVToken:
     boundary_after: bool = False
     noun: bool = False
     names: frozenset[str] = frozenset()
+    verb: bool = False
+    lemma: str = ''  # Segment-qualified source lemma, e.g. 'NT:poreuō' (verbs only)
 
 
 MARKER = re.compile(r'\\(?P<name>\+?[a-zA-Z][a-zA-Z0-9]*)(?P<close>\*)? ?')

@@ -34,7 +34,7 @@ but at the very least call it _Adapted from the Open English Translation_
 or perhaps something like _The Literal Version taken from the Open English Translation_.
 
 If you reuse or adapt this text, please attribute it as:
-_The Literal Version taken from the Open English Translation (OET-LV)_, © Robert Hunt, [OET.Bible](https://OET.Bible), CC BY-SA 4.0,
+_The Literal Version taken from the Open English Translation (OET-LV)_, © Robert Hunt, [OpenEnglishTranslation.Bible](https://OpenEnglishTranslation.Bible), CC BY-SA 4.0,
 and also keep the upstream attributions listed above.
 
 See the [main README](../../README.md) for more about the OET project and its licences.

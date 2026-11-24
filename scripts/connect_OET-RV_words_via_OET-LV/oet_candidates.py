@@ -13,6 +13,7 @@ point before the caller writes the accepted occurrences once, right to left.
 """
 from collections import defaultdict
 from dataclasses import dataclass, replace
+import re
 
 from oet_alignment import (SEMANTIC_CODES, MOVEMENT_FUNCTION_WORDS, alignment_units,
                            linked_phrase_columns, phrase_edges, propose_links, same_clause)
@@ -21,6 +22,72 @@ from oet_alignment import (SEMANTIC_CODES, MOVEMENT_FUNCTION_WORDS, alignment_un
 # These nouns often supply the English head of an adjective. Even an exact
 # leftover "person" elsewhere in the verse does not establish its referent.
 CONTEXTUAL_HEADS = {'person', 'people', 'one', 'ones', 'thing', 'things'}
+
+# A Greek/Hebrew finite verb carries its own subject, so its LV gloss often
+# starts with one ("they were gone", "he/it went"). These RV subjects (and
+# their contractions) can match that part of the gloss exactly, while the RV
+# verb itself ("headed off") is paraphrased and stays unlinked.
+SUBJECT_WORD = re.compile(r"^(?:i|you|he|she|it|we|they)(?:['’](?:m|re|s|d|ll|ve))?$")
+# Adverbial particles that complete an English phrasal verb ("headed off").
+VERB_PARTICLES = {'off', 'up', 'out', 'away', 'down', 'back'}
+# Words (besides '-ly' adverbs) that can come between a subject and its verb,
+# so they cannot be taken to be that verb ("they then headed", "we all went").
+NOT_VERBS = {'then', 'also', 'all', 'both', 'each', 'now', 'just', 'still', 'even',
+             'only', 'again', 'soon', 'never', 'always', 'often', 'already', 'once',
+             'so', 'too', 'there', 'here', 'yet', 'ever', 'first', 'together',
+             'themselves', 'himself', 'herself', 'itself', 'ourselves', 'yourself',
+             'yourselves', 'myself', 'who', 'which', 'that', 'what', 'when', 'where',
+             'if', 'because', 'since', 'than', 'very', 'much', 'more', 'most', 'some',
+             'no', 'nor', 'neither', 'either', 'certainly', 'surely', 'indeed'}
+# Unlinked auxiliaries/negatives that can come between a subject and its verb
+SKIPPABLE_AUXILIARIES = {'will', 'would', 'shall', 'should', 'can', 'could', 'may', 'might',
+                         'must', 'do', 'does', 'did', 'have', 'has', 'had', 'not', 'never'}
+MAX_SKIPPED_AUXILIARIES = 2
+MAX_REWORDED_VERB_WORDS = 3
+LY_VERBS = {'reply', 'apply', 'fly', 'rely', 'supply', 'multiply', 'comply', 'rally'}
+# Indefinite pronouns, which can follow a linked 'it is to' etc.
+NOT_VERBS |= {'anyone', 'everyone', 'someone', 'noone', 'nobody', 'anybody', 'everybody',
+              'somebody', 'anything', 'everything', 'something', 'nothing', 'one'}
+# Helper verbs that usually precede the real (paraphrased) verb, e.g. JHN 5:19
+# "I want to tell you" for LV "I am saying", or "I'm going to prove".
+CATENATIVE_VERBS = {'want', 'wants', 'wanted', 'wanting', 'going', 'about', 'able',
+                    'need', 'needs', 'needed', 'try', 'tries', 'tried', 'trying',
+                    'start', 'starts', 'started', 'begin', 'begins', 'began', 'begun',
+                    'continue', 'continues', 'continued', 'keep', 'keeps', 'kept',
+                    'seem', 'seems', 'seemed', 'used', 'like', 'likes', 'liked', 'let'}
+# Learnt per-lemma renderings are weaker than every curated table (synonyms
+# are 60, reviewed related forms 50), so they only decide an anchored gap.
+LEARNT_RENDERING_SCORE = 45
+
+
+def is_function_word(text):
+    """Pronouns, owners, prepositions, auxiliaries, negatives and their contractions."""
+    word = text.casefold().replace('’', "'")
+    return (word in MOVEMENT_FUNCTION_WORDS or bool(SUBJECT_WORD.match(word))
+            or word.endswith("n't") or word in {"let's", 'let'})
+
+
+# Words that can be linked to a verb (e.g. 'that' in "said that", 'up' in
+# "went up") but which say nothing about how that verb is translated elsewhere.
+NOT_LEARNABLE = {'that', 'who', 'whom', 'whose', 'which', 'what', 'when', 'where', 'why',
+                 'how', 'while', 'until', 'after', 'before', 'then', 'so', 'thus', 'those',
+                 'these', 'this', 'there', 'here', 'one', 'ones', 'all', 'and', 'or', 'but',
+                 'if', 'because', 'up', 'away', 'back', 'out', 'off', 'down', 'over',
+                 'through', 'around', 'about', 'again', 'also', 'not', 'no', 'yes'}
+
+
+def is_learnable_rendering(text):
+    """Whether an RV word linked to a verb can show how the RV renders that verb's lemma."""
+    word = text.casefold().replace('’', "'")
+    return (len(word) >= 2 and word.isalpha() and text.islower() and not is_function_word(word)
+            and word not in NOT_LEARNABLE and word not in NOT_VERBS)
+
+
+def content_columns(columns, number):
+    """The LV gloss columns of one source verb that are more than its subject/auxiliaries."""
+    return frozenset(j for j, col in enumerate(columns)
+                     if col.number == number and col.verb
+                     and not all(is_function_word(w) for w in col.text.split('/') if w))
 
 
 @dataclass(frozen=True)
@@ -76,12 +143,14 @@ def select_candidates(candidates, anchors=()):
 
 class Evidence:
     """Passage-local cached scores shared by alignment and lexical recovery."""
-    def __init__(self, columns, lexical_score, normalise, number_variants, directional_index=None):
+    def __init__(self, columns, lexical_score, normalise, number_variants, directional_index=None,
+                 learnt_renderings=None):
         self.columns = columns
         self.lexical_score = lexical_score
         self.normalise = normalise
         self.number_variants = number_variants
         self.directional_index = directional_index or {}
+        self.learnt_renderings = learnt_renderings or {}
         self.names = defaultdict(set)
         for col in columns:
             for spelling in (col.text, *col.text.split('/')):
@@ -114,6 +183,12 @@ class Evidence:
             variants = self.number_variants(self.normalise(token.text))
             if any(self.normalise(w) in variants for w in col.text.split('/') if w.islower()):
                 scores.append(('marked number change', 95))
+        if (col.verb and col.lemma and is_learnable_rendering(token.match_text)
+                and self.normalise(token.text) in self.learnt_renderings.get(col.lemma, ())
+                and not all(is_function_word(w) for w in col.text.split('/') if w)):
+            # How the RV already renders this lemma elsewhere, e.g. poreuō as
+            # "travelled". Never a verse-wide jump: far below the 90 required.
+            scores.append(('learnt lemma rendering', LEARNT_RENDERING_SCORE))
         score = max((s for s in scores if s), key=lambda s: s[1], default=None)
         self.word_cache[key] = score
         return score
@@ -295,8 +370,78 @@ def repeat_candidates(tokens, evidence):
             yield Candidate(bindings, claims, 'explicit same-verse repeat', 2)
 
 
+def subject_verb_candidates(tokens, evidence):
+    """Give a source verb's number to the RV verb after its linked subject.
+
+    The RV subject ("they") matched the subject inside the LV verb gloss ("they
+    were gone"), but the paraphrased RV verb ("headed off") matched nothing.
+    Only when every RV word with that number is a subject/auxiliary, and the
+    next unlinked word in the same clause (after at most two unlinked
+    auxiliaries/negatives) is a content word with no lexical evidence for any
+    other source word, does that verb (plus a phrasal particle like 'off', or
+    else a whole short reworded '≈' span) take the number. It claims the LV verb's content
+    columns, so any contextual or lexical match of those columns wins instead.
+    """
+    by_number = defaultdict(list)
+    for i, token in enumerate(tokens):
+        if token.linkable and token.number is not None:
+            by_number[token.number].append(i)
+    for number, indexes in by_number.items():
+        if not all(is_function_word(tokens[i].match_text) for i in indexes):
+            continue  # The verb itself (or a paraphrase of it) is already linked.
+        subjects = [i for i in indexes if SUBJECT_WORD.match(tokens[i].match_text.casefold())]
+        claims = content_columns(evidence.columns, number)
+        if not subjects or not claims:
+            continue
+        if any(t.linkable and t.code not in SEMANTIC_CODES and (score := evidence.word(t, evidence.columns[j]))
+               and score[1] >= 90 for t in tokens for j in claims):
+            continue  # The LV verb's own word is elsewhere in the RV (so the subject link may be wrong).
+        def other_evidence(token):
+            return any(evidence.word(token, col) for col in evidence.columns if col.number != number)
+        def is_free_content(token, codes=(None,)):
+            text = token.match_text
+            return (token.linkable and token.number is None and token.code in codes
+                    and text.isalpha() and text.islower() and not is_function_word(text)
+                    and text not in NOT_VERBS and text not in CATENATIVE_VERBS
+                    and (not text.endswith('ly') or text in LY_VERBS)
+                    and not other_evidence(token))
+        i, skipped = subjects[-1] + 1, 0
+        while i < len(tokens):
+            token = tokens[i]
+            if token.number == number:
+                i += 1  # e.g. "I¦7 was¦7 vetoed"
+            elif (skipped < MAX_SKIPPED_AUXILIARIES and token.number is None and token.code is None
+                  and (token.match_text.casefold() in SKIPPABLE_AUXILIARIES
+                       or token.match_text.casefold().replace('’', "'").endswith("n't"))):
+                i, skipped = i + 1, skipped + 1  # e.g. "they¦7 won't die": 'won't' isn't the verb
+            else:
+                break
+        if i >= len(tokens) or not same_clause(tokens[subjects[-1]:i+1]):
+            continue
+        verb = tokens[i]
+        if is_free_content(verb):
+            bindings = [(verb, number)]
+            if i+1 < len(tokens):
+                particle = tokens[i+1]
+                if (particle.match_text.casefold() in VERB_PARTICLES and particle.linkable
+                        and particle.number is None and particle.code is None
+                        and same_clause([verb, particle]) and not other_evidence(particle)):
+                    bindings.append((particle, number))
+        elif verb.code == '≈' and is_free_content(verb, ('≈',)) and (i == 0 or tokens[i-1].span != verb.span):
+            # A reworded verb, e.g. ACT 1:26 "they¦7 \add ≈drew straws\add*". Take the whole short span.
+            span = [t for t in tokens[i:] if t.span == verb.span]
+            if (len(span) > MAX_REWORDED_VERB_WORDS or not same_clause(span)
+                    or any(not t.linkable or t.number is not None or other_evidence(t) for t in span)):
+                continue
+            bindings = [(t, number) for t in span]
+        else:
+            continue
+        yield Candidate(tuple(bindings), claims, 'verb after linked subject')
+
+
 def select_links(tokens, columns, lexical_score, normalise, number_variants,
-                 reversed_clauses=False, phrase_index=None, directional_index=None):
+                 reversed_clauses=False, phrase_index=None, directional_index=None,
+                 learnt_renderings=None):
     """Return accepted links using original offsets, with no text mutation.
 
     All providers see the same snapshot each round. Accepted links become
@@ -305,7 +450,8 @@ def select_links(tokens, columns, lexical_score, normalise, number_variants,
     """
     originals = {(t.line, t.start): t for t in tokens}
     live = list(tokens)
-    evidence = Evidence(columns, lexical_score, normalise, number_variants, directional_index)
+    evidence = Evidence(columns, lexical_score, normalise, number_variants, directional_index,
+                        learnt_renderings)
     result = {}
     while True:
         indexes = {t: i for i, t in enumerate(live)}
@@ -314,7 +460,8 @@ def select_links(tokens, columns, lexical_score, normalise, number_variants,
         candidates.extend(phrase_candidates(units, evidence, phrase_index))
         candidates.extend(alias_candidates(live, evidence))
         candidates.extend(repeat_candidates(live, evidence))
-        anchors = list(existing_claims(units, evidence, phrase_index))
+        candidates.extend(subject_verb_candidates(live, evidence))
+        anchors =list(existing_claims(units, evidence, phrase_index))
         # A marked clause swap needs lexical/name anchors before its rotation
         # can be inferred. Never bootstrap it by assuming the original order.
         anchored = [t for t in live if t.linkable and t.number is not None]
