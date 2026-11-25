@@ -859,10 +859,10 @@ def produce_HTML_files() -> None:
             invalid_text = '\\p\n\\s'
             assert invalid_text not in esfm_text, f"""Why do we have a useless paragraph in {source_filename}: {esfm_text[esfm_text.index(invalid_text)-20:esfm_text.index(invalid_text)+22]}"""
             for lineNumber,line in enumerate( esfm_text.split( '\n' ), start=1 ):
-                if BBB=='PSA' and '\\z' in line: # Psalm/Song colouring markers
-                    line = line.replace( '\\zr ', '' ).replace( '\\z1 ', '' ).replace( '\\z2 ', '' ).replace( '\\z3 ', '' ).replace( '\\z4 ', '' ) \
-                                .replace( '\\zrhilite ', '' ).replace( '\\z1hilite ', '' ).replace( '\\z2hilite ', '' ).replace( '\\z3hilite ', '' ).replace( '\\z4hilite ', '' ) \
-                                .replace( '\\zrhilite*', '' ).replace( '\\z1hilite*', '' ).replace( '\\z2hilite*', '' ).replace( '\\z3hilite*', '' ).replace( '\\z4hilite*', '' )
+                if '\\z' in line: # Poetry (Psalm/Song etc.) colouring markers
+                    line = line.replace( '\\z0 ', '' ).replace( '\\zr ', '' ).replace( '\\z1 ', '' ).replace( '\\z2 ', '' ).replace( '\\z3 ', '' ).replace( '\\z4 ', '' ).replace( '\\z5 ', '' ) \
+                                .replace( '\\zrhilite ', '' ).replace( '\\z1hilite ', '' ).replace( '\\z2hilite ', '' ).replace( '\\z3hilite ', '' ).replace( '\\z4hilite ', '' ).replace( '\\z5hilite ', '' ) \
+                                .replace( '\\zrhilite*', '' ).replace( '\\z1hilite*', '' ).replace( '\\z2hilite*', '' ).replace( '\\z3hilite*', '' ).replace( '\\z4hilite*', '' ).replace( '\\z5hilite*', '' )
                 # This loop isn't finding all the problems
                 for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
                     # First check the overall count
@@ -1042,10 +1042,10 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{BBB} {marker}='{rest}'" )
         if marker in ('id','usfm','ide','h','toc2','toc3'):
             continue # We don't need to map those markers to HTML
-        if BBB=='PSA' and '\\z' in rest: # Psalm/Song colouring markers
-            rest = rest.replace( '\\zr ', '' ).replace( '\\z1 ', '' ).replace( '\\z2 ', '' ).replace( '\\z3 ', '' ).replace( '\\z4 ', '' ) \
-                        .replace( '\\zrhilite ', '' ).replace( '\\z1hilite ', '' ).replace( '\\z2hilite ', '' ).replace( '\\z3hilite ', '' ).replace( '\\z4hilite ', '' ) \
-                        .replace( '\\zrhilite*', '' ).replace( '\\z1hilite*', '' ).replace( '\\z2hilite*', '' ).replace( '\\z3hilite*', '' ).replace( '\\z4hilite*', '' )
+        if '\\z' in rest: # Poetry (Psalm/Song etc.) colouring markers
+            rest = rest.replace( '\\z0 ', '' ).replace( '\\zr ', '' ).replace( '\\z1 ', '' ).replace( '\\z2 ', '' ).replace( '\\z3 ', '' ).replace( '\\z4 ', '' ).replace( '\\z5 ', '' ) \
+                        .replace( '\\zrhilite ', '' ).replace( '\\z1hilite ', '' ).replace( '\\z2hilite ', '' ).replace( '\\z3hilite ', '' ).replace( '\\z4hilite ', '' ).replace( '\\z5hilite ', '' ) \
+                        .replace( '\\zrhilite*', '' ).replace( '\\z1hilite*', '' ).replace( '\\z2hilite*', '' ).replace( '\\z3hilite*', '' ).replace( '\\z4hilite*', '' ).replace( '\\z5hilite*', '' )
         if marker == 'rem':
             # print( f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}" )
             # assert not inRightDiv, f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}"

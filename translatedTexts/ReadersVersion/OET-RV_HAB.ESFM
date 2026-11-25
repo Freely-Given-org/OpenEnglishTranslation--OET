@@ -1,4 +1,4 @@
-\id HAB - Open English Translation—Readers' Version (OET-RV) v0.2.4
+\id HAB - Open English Translation—Readers' Version (OET-RV) v0.3.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 HAB
@@ -187,13 +187,13 @@
 \v 1 A¦374364 prayer¦374364 of¦374365 the¦374366 prophet¦374366 Havakuk¦374365 \add !(Habakkuk¦374365)\add* \add ≈designed to be sung\add*:\f + \fr 3:1 \ft The meaning of the Hebrew word transliterated ‘shigyonot’ is unknown, but assumed to be some kind of musical directive. (Also in Song/Psalm 7:0.)\f*
 \rem /s1 The Prophet's Prayer
 \q1
-\v 2 Yahweh¦374370, I've¦374371 heard¦374371 \add ≈the report¦374372 about¦374372 what you've done\add*,
+\v 2 \z1 Yahweh¦374370, I've¦374371 \z1hilite heard¦374371\z1hilite* \add ≈the report¦374372 about¦374372 what you've done\add*,
 \q1 ≈and I'm¦374373 in awe¦374373 of¦374375 your¦374375 work¦374375, Yahweh.
 \q1 \add ≈Do it¦374378 again in¦374379 our times\add*—
 \q1 ≈\add ≈show us again in¦374382 this age\add*.
 \q1 Despite your severe¦374382 anger¦374382, remember¦374384 to¦374383 have¦374383 compassion¦374383.
 \q1
-\v 3 God¦374386 came¦374389 in from¦374388 Teyman¦374388 \add in Edom\add*,
+\v 3 \z2 God¦374386 came¦374389 in from¦374388 Teyman¦374388 \add in Edom\add*,
 \q1 and¦374390 the \add ≈sinless\add* \add >one\add* from¦374391 Mt. Paran¦374393. \qs (\+add ≈Instrumental¦374394 break¦374394\+add*.)\qs*
 \q1 His \add ≈splendour¦374397 blanketed¦374395\add* the skies¦374396,
 \q1 ≈and the¦374400 earth¦374400 was full of his¦374398 praise¦374398.
@@ -216,10 +216,10 @@
 \v 7 I¦374441 saw¦374441 the¦374442 \add people in\add* tents¦374442 in Kushan¦374443 in trouble¦374440.
 \q1 ≈The¦374445 tent¦374445 curtains¦374445 in the¦374446 Midyan¦374447 region¦374446 were trembling¦374444.
 \q1
-\v 8 Was your rage against the rivers¦374450, Yahweh¦374452?
+\v 8 \z3 Was your rage against the rivers¦374450, Yahweh¦374452?
 \q1 ≈Was¦374455 your¦374455 anger¦374455 against the rivers,
 \q1 ≈or¦374456 your¦374459 fury¦374459 against the ocean¦374458,
-\q1 when¦374460 you¦374461 rode¦374461 in on¦374462 your horses¦374464 and your¦374464 victorious chariots¦374465?
+\q1 when¦374460 you¦374461 rode¦374461 in on¦374462 your \z3hilite horses¦374464\z3hilite* and your¦374464 victorious chariots¦374465?
 \q1
 \v 9 You \add ≈got your bow¦374470 out ready to use\add*.
 \q1 \add ≈Each arrow¦374472 was a promise you'd made¦374469\add*. \qs (\+add ≈Instrumental¦374474 break¦374474\+add*.)\qs*
@@ -246,18 +246,18 @@
 \q1 since they¦374536 came like a storm¦374536 to¦374537 scatter¦374537 us—
 \q1 their¦374538 gloating¦374538 was like¦374539 someone who \add ≈destroys weak people\add* in¦374543 secret.
 \q1
-\v 15 You¦374545 trod¦374545 on¦374546 \add top of\add* the sea¦374546 with your¦374547 horses¦374547—
+\v 15 You¦374545 trod¦374545 on¦374546 \add top of\add* the sea¦374546 with your¦374547 \z3hilite horses¦374547\z3hilite*—
 \q1 \add churning\add* the many¦374550 waters¦374549.
 \b
 \q1
-\v 16 I¦374552 heard¦374552, and¦374554 my¦374555 \add ≈insides turned to jelly\add*.
+\v 16 \z1 I¦374552 \z1hilite heard¦374552\z1hilite*, and¦374554 my¦374555 \add ≈insides turned to jelly\add*.
 \q1 My¦374558 lips¦374558 quivered¦374557 at the sound¦374556.
 \q1 My¦374561 bones¦374561 \add ≈start aching\add*, and¦374562 my legs tremble beneath¦374562 me¦374562.
 \q1 ^However, I will¦374565 wait quietly¦374565 for¦374566 the day¦374566 of¦374566 distress¦374567 to \add ≈hit\add* the people¦374569 who invaded¦374570 us¦374570.
 \b
 \rem /s1 Trust and Joy in the Midst of Trouble
 \q1
-\v 17 Even if¦374572 the fig¦374574 tree¦374574 doesn't produce¦374579 buds¦374577
+\v 17 \z4 Even if¦374572 the fig¦374574 tree¦374574 doesn't produce¦374579 buds¦374577
 \q1 and¦374578 there¦374578 is no fruit on¦374580 the grapevines,
 \q1 and although the olive¦374584 tree¦374584 stops producing,
 \q1 and¦374585 the fields¦374585 yield no food¦374589,
@@ -271,4 +271,4 @@
 \q1 and¦374610 he¦374610 makes¦374615 my¦374611 feet¦374611 \add agile\add* like¦374612 a deer's \add ≡feet¦374611\add*.
 \q1 He \add ≈helps me climb up to¦374616\add* my¦374614 high¦374614 places¦374614.\x + \xo 3:19: \xt 2Sam 22:34; Psa 18:33.\x*
 \rem /d For the leader: with stringed instruments
-\d For the musical director, on my stringed instruments.
+\d \z0 For the musical director, on my stringed instruments.

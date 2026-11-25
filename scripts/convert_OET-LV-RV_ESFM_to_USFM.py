@@ -155,10 +155,10 @@ def main():
             if VV == 'LV': # remove LV specialised version of USFM \\add fields
                 adjText = adjText.replace( '\\add ¿\\add*', '' ) # Remove those added hyphens
             elif VV == 'RV':
-                if adjText and BBB=='PSA' and '\\z' in adjText: # Psalm/Song colouring markers
-                    adjText = adjText.replace( '\\zr ', '' ).replace( '\\z1 ', '' ).replace( '\\z2 ', '' ).replace( '\\z3 ', '' ).replace( '\\z4 ', '' ) \
-                                .replace( '\\zrhilite ', '' ).replace( '\\z1hilite ', '' ).replace( '\\z2hilite ', '' ).replace( '\\z3hilite ', '' ).replace( '\\z4hilite ', '' ) \
-                                .replace( '\\zrhilite*', '' ).replace( '\\z1hilite*', '' ).replace( '\\z2hilite*', '' ).replace( '\\z3hilite*', '' ).replace( '\\z4hilite*', '' )
+                if adjText and '\\z' in adjText: # Poetry (Psalm/Song etc.) colouring markers
+                    adjText = adjText.replace( '\\z0 ', '' ).replace( '\\zr ', '' ).replace( '\\z1 ', '' ).replace( '\\z2 ', '' ).replace( '\\z3 ', '' ).replace( '\\z4 ', '' ).replace( '\\z5 ', '' ) \
+                                .replace( '\\zrhilite ', '' ).replace( '\\z1hilite ', '' ).replace( '\\z2hilite ', '' ).replace( '\\z3hilite ', '' ).replace( '\\z4hilite ', '' ).replace( '\\z5hilite ', '' ) \
+                                .replace( '\\zrhilite*', '' ).replace( '\\z1hilite*', '' ).replace( '\\z2hilite*', '' ).replace( '\\z3hilite*', '' ).replace( '\\z4hilite*', '' ).replace( '\\z5hilite*', '' )
                 adjText = ( adjText
                             .replace( "'", '’' ) # Convert apostrophes
                         )

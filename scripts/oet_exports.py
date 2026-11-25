@@ -27,10 +27,10 @@ def render_entries(verseData, VV, BBB):
     verseText, firstWord = '', False
     for entry in verseData:
         marker, cleanText = entry.getMarker(), entry.getOriginalText()
-        if cleanText and VV=='RV' and BBB=='PSA' and '\\z' in cleanText: # Psalm/Song colouring markers
-            cleanText = cleanText.replace( '\\zr ', '' ).replace( '\\z1 ', '' ).replace( '\\z2 ', '' ).replace( '\\z3 ', '' ).replace( '\\z4 ', '' ) \
-                        .replace( '\\zrhilite ', '' ).replace( '\\z1hilite ', '' ).replace( '\\z2hilite ', '' ).replace( '\\z3hilite ', '' ).replace( '\\z4hilite ', '' ) \
-                        .replace( '\\zrhilite*', '' ).replace( '\\z1hilite*', '' ).replace( '\\z2hilite*', '' ).replace( '\\z3hilite*', '' ).replace( '\\z4hilite*', '' )
+        if cleanText and VV=='RV' and '\\z' in cleanText: # Poetry (Psalm/Song etc.) colouring markers
+            cleanText = cleanText.replace( '\\z0 ', '' ).replace( '\\zr ', '' ).replace( '\\z1 ', '' ).replace( '\\z2 ', '' ).replace( '\\z3 ', '' ).replace( '\\z4 ', '' ).replace( '\\z5 ', '' ) \
+                        .replace( '\\zrhilite ', '' ).replace( '\\z1hilite ', '' ).replace( '\\z2hilite ', '' ).replace( '\\z3hilite ', '' ).replace( '\\z4hilite ', '' ).replace( '\\z5hilite ', '' ) \
+                        .replace( '\\zrhilite*', '' ).replace( '\\z1hilite*', '' ).replace( '\\z2hilite*', '' ).replace( '\\z3hilite*', '' ).replace( '\\z4hilite*', '' ).replace( '\\z5hilite*', '' )
         if marker[0] == '¬': pass # Ignore end markers
         elif marker == 'c': pass # Ignore
         elif marker == 'c~': pass # Ignore text after chapter marker

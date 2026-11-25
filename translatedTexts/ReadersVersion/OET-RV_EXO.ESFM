@@ -1,4 +1,4 @@
-\id EXO - Open English Translation—Readers' Version (OET-RV) v0.2.20
+\id EXO - Open English Translation—Readers' Version (OET-RV) v0.3.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EXO
@@ -644,8 +644,8 @@
 \rem /s1 The Song of Moses; A Song of Deliverance; The Song of Moses and Miriam
 \p
 \v 1 Then¦32500 Mosheh¦32503 \add !(Moses¦32503)\add* and¦32504 the¦32504 Israelis¦32505 sang¦32508 this¦32509 song¦32508 to¦32510 Yahweh¦32510:\x + \xo 15:1: \xt Rev 15:3.\x*
-\q1 “I¦32513 will¦32513 sing¦32513 to¦32514 Yahweh¦32514 because¦32515 he's¦32518 been¦32518 so successful—
-\q1 he's¦32521 thrown¦32521 both the¦32519 \add #horses¦32519\add* and¦32520 their riders¦32520 into¦32522 the sea¦32522.
+\q1 \z1 “I¦32513 will¦32513 sing¦32513 to¦32514 Yahweh¦32514 because¦32515 he's¦32518 been¦32518 so successful—
+\q1 he's¦32521 thrown¦32521 both the¦32519 \add #\z1hilite horses¦32519\z1hilite*\add* and¦32520 their \z1hilite riders¦32520\z1hilite* into¦32522 the sea¦32522.
 \q1
 \v 2 I will sing about¦32524 Yahweh, my¦32524 source of strength¦32525,
 \q2 and¦32527 the one who saves me¦32529.\x + \xo 15:2: \xt Psa 118:14; Isa 12:2.\x*
@@ -656,7 +656,7 @@
 \q1 Yahweh¦32541 is his¦32542 name¦32542.
 \b
 \q1
-\v 4 He¦32547 threw¦32547 Par'oh's¦32545 \add !(Pharaoh's¦32545)\add* chariots¦32544 and¦32546 his¦32546 army¦32546 into¦32548 the sea.
+\v 4 \z2 He¦32547 threw¦32547 Par'oh's¦32545 \add !(Pharaoh's¦32545)\add* chariots¦32544 and¦32546 his¦32546 army¦32546 into¦32548 the sea.
 \q1 ≈His¦32550 hand-picked officers¦32550 have¦32551 been¦32551 sunk¦32551 in¦32552 the sea¦32552.
 \b
 \q1
@@ -682,7 +682,7 @@
 \q1 They¦32614 sank¦32614 like¦32615 lead¦32615 in¦32616 that \add ≈terrible surge\add*.
 \b
 \q1
-\v 11 Which other \add #god¦32622\add* is like¦32621 you¦32621, Yahweh¦32623?
+\v 11 \z3 Which other \add #god¦32622\add* is like¦32621 you¦32621, Yahweh¦32623?
 \q1 Who¦32624 else is so powerful and yet sinless,
 \q2 receiving praises¦32629 for doing¦32630 miracles?
 \q1
@@ -710,22 +710,22 @@
 \q1 The place¦32697 you've¦32698 chosen¦32698 to¦32698 become your home, Yahweh¦32700—
 \q2 a¦32701 sanctuary¦32701 built¦32699 by your¦32704 hands¦32704, master¦32702.
 \q1
-\v 18 Yahweh¦32706 will¦32708 reign¦32708 \add as king\add* forever and¦32710 ever¦32710.
+\v 18 \z1 Yahweh¦32706 will¦32708 reign¦32708 \add as king\add* forever and¦32710 ever¦32710.
 \q1
-\v 19 Par'oh's¦32715 \add !(Pharaoh's¦32715)\add* horse¦32714 went¦32713 into the sea, along with¦32716 his¦32716 chariots¦32716 and¦32717 horsemen¦32717,\f + \fr 15:19 \ft Some interpreters include v19 as part of Mosheh's song (as we do, although it does seem less poetic in structure), while others don't. (There's no speech marks in the ancient Hebrew texts.)\f*
+\v 19 Par'oh's¦32715 \add !(Pharaoh's¦32715)\add* \z1hilite horse¦32714\z1hilite* went¦32713 into the sea, along with¦32716 his¦32716 chariots¦32716 and¦32717 horsemen¦32717,\f + \fr 15:19 \ft Some interpreters include v19 as part of Mosheh's song (as we do, although it does seem less poetic in structure), while others don't. (There's no speech marks in the ancient Hebrew texts.)\f*
 \q1 and¦32719 Yahweh¦32720 brought¦32719 the¦32724 \add #water¦32724\add* back¦32719 over¦32721 them¦32721,
 \q1 \add after\add* the Israelis¦32727 had walked¦32728 through on¦32729 dry ground¦32729 in¦32730 the¦32730 middle¦32730 of the¦32731 sea¦32731.”
 \s1 Miryam's song
 \rem /s1 The Song of Miriam
 \p
-\v 20 Then¦32734 Aharon's¦32738 \add !(Aaron's¦32738)\add* sister¦32737 Miryam¦32735 \add !(Miriam¦32735)\add* who was a prophetess¦32736, picked¦32734 up a tambourine¦32741 and¦32743 went¦32743 outside¦32743. All¦32744 the¦32746 other women¦32746 did likewise and followed her¦32742 out¦32743 to dance¦32749 together
+\v 20 \z0 Then¦32734 Aharon's¦32738 \add !(Aaron's¦32738)\add* sister¦32737 Miryam¦32735 \add !(Miriam¦32735)\add* who was a prophetess¦32736, picked¦32734 up a tambourine¦32741 and¦32743 went¦32743 outside¦32743. All¦32744 the¦32746 other women¦32746 did likewise and followed her¦32742 out¦32743 to dance¦32749 together
 \v 21 \add ≈so¦32751\add* Miryam¦32753 sang¦32751 this response:
-\q1 “Sing¦32754 to¦32755 Yahweh¦32755 and tell of his amazing victory—
-\q1 He¦32759 tossed¦32762 the \add #horses¦32760\add* and¦32761 their riders¦32761 into¦32763 the sea¦32763.”
+\q1 \z1 “Sing¦32754 to¦32755 Yahweh¦32755 and tell of his amazing victory—
+\q1 He¦32759 tossed¦32762 the \add #\z1hilite horses¦32760\z1hilite*\add* and¦32761 their \z1hilite riders¦32761\z1hilite* into¦32763 the sea¦32763.”
 \s1 The bitter water
 \rem /s1 Bitter Water; In the wilderness; The Waters of Marah and Elim; Bitter Water Made Sweet; Bitter Water at Marah
 \p
-\v 22 Then¦32766 Mosheh¦32767 \add !(Moses¦32767)\add* lead¦32766 the Israelis¦32770 away from¦32771 the Red sea¦32771 and¦32774 they¦32774 moved¦32774 into¦32775 the¦32777 wilderness¦32777 at Shur¦32779. They¦32780 went¦32780 through the wilderness for three¦32781 days¦32783 and¦32785 \add finally\add* found¦32787 some water¦32788,
+\v 22 \z0 Then¦32766 Mosheh¦32767 \add !(Moses¦32767)\add* lead¦32766 the Israelis¦32770 away from¦32771 the Red sea¦32771 and¦32774 they¦32774 moved¦32774 into¦32775 the¦32777 wilderness¦32777 at Shur¦32779. They¦32780 went¦32780 through the wilderness for three¦32781 days¦32783 and¦32785 \add finally\add* found¦32787 some water¦32788,
 \v 23 but it was so bitter¦32798 that they¦32799 couldn't drink¦32794 it. So¦32802 they named¦32805 that place ‘Marah¦32806’ \add (which means ‘bitter’)\add*,
 \v 24 and¦32808 the¦32809 people¦32809 grumbled¦32808 about Mosheh¦32812 saying¦32813, “\add So\add* what¦32814 will¦32816 we¦32816 drink¦32816 \add then\add*?”
 \v 25 \add ≈So¦32818\add* \add @Mosheh¦32818\add* cried¦32818 out¦32818 to¦32819 Yahweh¦32821, and¦32822 Yahweh showed¦32822 him¦32822 a¦32824 tree¦32824. When¦32825 he¦32825 threw¦32825 it into¦32826 the¦32828 water¦32828, the¦32830 water¦32830 became¦32829 \add safe to drink\add*.

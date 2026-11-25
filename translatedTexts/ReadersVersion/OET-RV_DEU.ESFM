@@ -1,4 +1,4 @@
-\id DEU - Open English Translation—Readers' Version (OET-RV) v0.2.19
+\id DEU - Open English Translation—Readers' Version (OET-RV) v0.3.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 DEU
@@ -1376,7 +1376,7 @@
 \v 30 Then¦97673 Mosheh¦97674 \add !(Moses¦97674)\add* \add ≈recited this¦97684 entire song¦97683 aloud to all¦97676 the¦97678 gathered¦97678 Israelis¦97679\add*:
 \c 32
 \p
-\v 1 “\add ≈Listen¦97689 you\add* heavens¦97690, and¦97691 let¦97691 me¦97691 speak¦97691,
+\v 1 \z1 “\add ≈Listen¦97689 you\add* heavens¦97690, and¦97691 let¦97691 me¦97691 speak¦97691,
 \q1 ≈and¦97692 let¦97692 the¦97693 earth¦97693 listen¦97692 to \add ≈what I have to say\add*.
 \q1
 \v 2 Let my¦97700 teaching¦97700 drop¦97698 like¦97699 rain¦97699,
@@ -1387,7 +1387,7 @@
 \v 3 because¦97713 I declare Yahweh's¦97715 name¦97714.
 \q1 ≈\add ≈Tell¦97716 God¦97719 how great¦97718 he is\add*.
 \q1
-\v 4 The¦97721 Rock¦97721, his¦97723 work¦97723 is perfect¦97722,
+\v 4 \z1hilite The¦97721 Rock¦97721\z1hilite*, his¦97723 work¦97723 is perfect¦97722,
 \q1 ≈because¦97724 all¦97725 his¦97727 ways¦97727 are \add ≈fair and honest\add*—
 \q1 a¦97729 \add ≈faithful¦97730\add* God¦97729 \add ≈who never does wrong\add*.
 \q1 ≈He's¦97735 \add ≈always honest and always correct\add*.
@@ -1401,7 +1401,7 @@
 \q1 Isn't¦97756 he¦97758 your father¦97759, your¦97759 creator¦97760?
 \q1 ≈He made¦97762 you¦97762 and¦97763 established¦97763 you¦97763.
 \q1
-\v 7 Remember¦97765 the days¦97766 of¦97766 old¦97776.
+\v 7 \z2 Remember¦97765 the days¦97766 of¦97766 old¦97776.
 \q1 ≈Consider¦97768 generation after generation over the years¦97769.
 \q1 Ask¦97773 your¦97774 father¦97774 and¦97775 he'll¦97775 inform you¦97775.
 \q1 ≈\add ≡Question\add* your¦97776 elders¦97776 and¦97777 they'll¦97777 tell¦97777 you¦97778.
@@ -1430,17 +1430,17 @@
 \v 13 He¦97836 \add ≈helped Yisrael reach the hilltops\add*,
 \q1 and¦97843 fed¦97843 them the fruits¦97844 of¦97844 the countryside¦97845.
 \q1 He¦97846 nourished¦97846 them with honey¦97847 from¦97848 the cliffs,
-\q1 ≈oil¦97849 from¦97850 the \add ≈hardest rocks¦97851\add*,
+\q1 ≈oil¦97849 from¦97850 the \add ≈hardest \z2hilite rocks¦97851\z2hilite*\add*,
 \q1
 \v 14 yogurt from the cattle and¦97855 milk¦97855 from the \add #flocks¦97856\add*,
 \q1 with¦97857 fat¦97859 of¦97859 lambs¦97860, and¦97861 rams¦97861 from Bashan¦97864, and¦97865 goats¦97865,
 \q1 with¦97866 plump wheat¦97870 kernels,
 \q1 and¦97871 the juice of¦97871 grapes¦97873 that you¦97874 drank¦97874 as wine¦97876.
 \q1
-\v 15 \add ≈So¦97878 the good fellow\add* got¦97878 fat¦97878 and¦97880 kicked¦97880—
+\v 15 \z3 \add ≈So¦97878 the good fellow\add* got¦97878 fat¦97878 and¦97880 kicked¦97880—
 \q1 ≈you¦97881 were fat¦97881, getting¦97882 bloated¦97882, you¦97883 gorged¦97883.
 \q1 →Then¦97884 he¦97884 abandoned¦97884 the God¦97885 who¦97886 created¦97886 him¦97886,
-\q1 ≈and¦97887 he¦97887 rejected the¦97888 rock¦97888 \add ≈that had saved him\add*.
+\q1 ≈and¦97887 he¦97887 rejected \z3hilite the¦97888 rock¦97888\z3hilite* \add ≈that had saved him\add*.
 \q1
 \v 16 \add @Yisrael\add* \add !(Israel)\add* provoked¦97894 him with strange¦97892 \add gods\add*.
 \q1 ≈They¦97894 anger¦97894 him with their abominations¦97893.
@@ -1450,7 +1450,7 @@
 \q1 New¦97903 ones that¦97904 had¦97905 come¦97905 recently,
 \q1 ≈that¦97906 your \add #ancestor¦97908\add* had never \add ≈served\add*.
 \q1
-\v 18 You neglected the rock¦97910 \add ≈who carried you\add*,
+\v 18 You neglected the \z3hilite rock¦97910\z3hilite* \add ≈who carried you\add*,
 \q1 ≈and¦97913 you¦97913 forgot¦97913 God¦97914 who¦97915 gave birth to you¦97915.
 \q1
 \v 19 Yahweh¦97918 noticed¦97917 that and¦97919 he¦97919 rejected¦97919 \add >you\add*,
@@ -1484,7 +1484,7 @@
 \q1 \add whether it's for\add* a young¦98008 man¦98008 or young¦98011 woman¦98011,
 \q1 ≈or the baby¦98012 or the grey-haired man¦98015.
 \q1
-\v 26 I¦98018 said¦98018 I'd¦98019 wipe¦98019 them¦98019 out—
+\v 26 \z4 I¦98018 said¦98018 I'd¦98019 wipe¦98019 them¦98019 out—
 \q1 ≈I¦98020 would¦98020 remove¦98020 their memory¦98022 from¦98021 humankind¦98021
 \q1
 \v 27 if¦98024 \add ≈it wasn't for the fact that I expect that their enemies¦98026 would boast\add*.
@@ -1500,7 +1500,7 @@
 \q1
 \v 30 How¦98061 could one¦98063 \add warrior\add* chase¦98062 a¦98064 thousand¦98064 \add Israelis\add*,
 \q1 ≈or two¦98065 put¦98066 ten¦98067 thousands to¦98066 flight¦98066,
-\q1 unless their ‘rock¦98073’ sold¦98074 them¦98074,
+\q1 unless their ‘\z4hilite rock¦98073\z4hilite*’ sold¦98074 them¦98074,
 \q1 ≈and¦98075 Yahweh¦98075 gave¦98076 them¦98076 up¦98076?
 \q1
 \v 31 Even our¦98082 enemies¦98082 know
@@ -1517,7 +1517,7 @@
 \v 34 ‘Aren't¦98107 these \add future events\add* \add ≈my secret\add*—
 \q1 ≈sealed¦98112 up¦98112 in¦98113 my¦98113 treasure-houses?
 \q1
-\v 35 Vengeance¦98116 and¦98117 recompense belong to¦98118 me\x + \xo 32:35: \xt Rom 12:19; Heb 10:30.\x*
+\v 35 \z4hilite Vengeance¦98116\z4hilite* and¦98117 recompense belong to¦98118 me\x + \xo 32:35: \xt Rom 12:19; Heb 10:30.\x*
 \q1 at the time¦98118 when¦98119 their¦98120 foot¦98120 slips¦98119,
 \q1 because¦98121 the¦98123 day¦98123 of¦98123 their¦98124 disaster¦98124 is close¦98122,
 \q1 and¦98125 the things prepared for them¦98127 hurry¦98125 along.’
@@ -1528,7 +1528,7 @@
 \q1 and¦98146 no one¦98146 \add remains\add*, either free¦98146 or \add ≈enslaved\add*.
 \q1
 \v 37 Then¦98148 he'll \add ≈ask¦98148\add*, ‘Where¦98149 are their¦98150 gods¦98150—
-\q1 the rock¦98151 who they¦98152 \add ≈went to to be safe\add*,
+\q1 the \z4hilite rock¦98151\z4hilite* who they¦98152 \add ≈went to to be safe\add*,
 \q1
 \v 38 who ate¦98158 the¦98156 fat¦98156 of¦98156 their¦98157 sacrifices¦98157,
 \q1 ≈\add and\add* drank¦98159 the¦98160 wine¦98160 \add ≈that¦98155 they'd offered\add*?
@@ -1546,7 +1546,7 @@
 \q2
 \v 41 when I¦98202 sharpen¦98202 my¦98204 glittering¦98203 sword¦98204,
 \q1 ≈and¦98205 \add ≈prepare to apply\add* justice¦98206,
-\q1 I¦98208 will¦98208 return¦98208 vengeance¦98209 on my¦98210 enemies¦98210,
+\q1 I¦98208 will¦98208 return¦98208 \z4hilite vengeance¦98209\z4hilite* on my¦98210 enemies¦98210,
 \q1 ≈and¦98211 I'll¦98212 pay¦98212 back¦98212 those¦98211 who¦98211 hate¦98211 me¦98211.
 \q1
 \v 42 I'll¦98214 make¦98214 my¦98215 arrows¦98215 drunk¦98214 with blood¦98216,
@@ -1554,12 +1554,12 @@
 \q1 with the blood¦98220 of¦98220 those slaughtered¦98221 and¦98222 the captives¦98222—
 \q1 from¦98223 the heads of¦98223 the enemy's¦98225 leaders¦98224.” ’
 \q1
-\v 43 \add You\add* nations¦98228, \add ≈need to appreciate\add* his people,
+\v 43 \z1 \add You\add* nations¦98228, \add ≈need to appreciate\add* his people,
 \q1 because¦98230 he'll¦98234 avenge¦98234 the¦98231 blood¦98231 of¦98231 his¦98233 servants¦98233,
-\q1 and¦98235 he'll¦98236 return¦98236 vengeance¦98235 onto his¦98237 enemies¦98237,
+\q1 and¦98235 he'll¦98236 return¦98236 \z1hilite vengeance¦98235\z1hilite* onto his¦98237 enemies¦98237,
 \q1 and¦98238 then he'll¦98238 \add ≈forgive¦98238\add* his country¦98239—his¦98239 people¦98240.”
 \p
-\v 44 Then¦98243 Mosheh¦98244 \add !(Moses¦98244)\add*, accompanied by Nun's¦98260 son¦98258 Yehoshua \add !(Joshua)\add*, went¦98243 and¦98245 \add ≈recited\add* all¦98248 the¦98250 words¦98250 of¦98250 that¦98253 song¦98251 \add ≈for the people¦98255 to hear\add*.
+\v 44 \z0 Then¦98243 Mosheh¦98244 \add !(Moses¦98244)\add*, accompanied by Nun's¦98260 son¦98258 Yehoshua \add !(Joshua)\add*, went¦98243 and¦98245 \add ≈recited\add* all¦98248 the¦98250 words¦98250 of¦98250 that¦98253 song¦98251 \add ≈for the people¦98255 to hear\add*.
 \s1 Mosheh's final instructions
 \rem /s1 Moses' Final Instructions
 \p
@@ -1579,7 +1579,7 @@
 \p
 \v 1 This¦98437 is the¦98438 blessing¦98438 with which¦98439 the¦98442 man¦98442 of¦98442 God, Mosheh¦98441 \add !(Moses¦98441)\add*, blessed¦98440 \add ≈Israelis¦98447\add* \add just\add* \add ≈before¦98448\add* his¦98449 death¦98449:
 \q1
-\v 2 “Yahweh¦98452 came from¦98453 \add Mt.\add* Sinay¦98453 came¦98454
+\v 2 \z1 “Yahweh¦98452 came from¦98453 \add Mt.\add* Sinay¦98453 came¦98454
 \q1 ≈and¦98455 appeared to them from¦98456 \add Mt.\add* Se'ir¦98456—
 \q1 shining¦98458 out¦98458 from¦98459 Mt. Paran¦98460.
 \q1 He¦98461 came¦98461 with ten¦98462 thousands¦98462 of¦98462 holy¦98463 ones¦98463,
@@ -1593,24 +1593,24 @@
 \v 4 Mosheh¦98486 \add !(Moses¦98486)\add* \add ≈gave\add* us those instructions
 \q1 \add that would become\add* a¦98487 \add valuable\add* possession¦98487 for Ya'akov's¦98489 \add !(Jacob's¦98489)\add* \add ≈descendants\add*.
 \q1
-\v 5 \add @Yahweh¦98491\add* became king¦98493 over Yeshurun¦98492,\f + \fr 33:5 \ft Yeshurun means ‘the upright one’, a term of endearment for Yisrael, also in verse 26.\f*
+\v 5 \add @Yahweh¦98491\add* became king¦98493 over \z1hilite Yeshurun¦98492\z1hilite*,\f + \fr 33:5 \ft Yeshurun means ‘the upright one’, a term of endearment for Yisrael, also in verse 26.\f*
 \q1 when¦98494 the leaders¦98495 of¦98495 the people¦98496 had gathered¦98494—
 \q1 Yisrael's¦98499 \add !(Israel's¦98499)\add* tribes¦98498 all together¦98497.
 \b
 \p
-\v 6 Let Re'uven¦98502 live¦98501 and¦98503 not¦98503 die¦98505,
+\v 6 \z2 Let Re'uven¦98502 live¦98501 and¦98503 not¦98503 die¦98505,
 \q1 \add ?≈but¦98506\add* let¦98506 his¦98507 men¦98507 be few.”
 \b
 \p
-\v 7 Then¦98511 he¦98513 said¦98513 this¦98511 is for Yehudah¦98512 \add !(Judah¦98512)\add*,
-\q1 “Yahweh¦98515, listen¦98514 to Yehudah's¦98517 voice¦98516,
+\v 7 \z0 Then¦98511 he¦98513 said¦98513 this¦98511 is for Yehudah¦98512 \add !(Judah¦98512)\add*,
+\q1 \z2 “Yahweh¦98515, listen¦98514 to Yehudah's¦98517 voice¦98516,
 \q1 and¦98518 take¦98521 him¦98521 to his¦98522 people¦98520.
 \q1 \add ≈He¦98523 defended\add* himself,
 \q1 plus¦98525 you help¦98525 him against his¦98526 enemies¦98526.”
 \b
 \p
-\v 8 Then¦98530 for Levi¦98530, he¦98531 said¦98531,
-\q1 “Your¦98532 Tumim¦98532 and¦98533 your¦98533 Urim¦98533\x + \xo 33:8: \xt Exo 28:30.\x*
+\v 8 \z0 Then¦98530 for Levi¦98530, he¦98531 said¦98531,
+\q1 \z2 “Your¦98532 Tumim¦98532 and¦98533 your¦98533 Urim¦98533\x + \xo 33:8: \xt Exo 28:30.\x*
 \q1 \add ≈belong¦98534 to¦98534\add* your godly man¦98534,
 \q1 who¦98536 you¦98537 tested¦98537 at¦98538 Masah¦98538.\x + \xo 33:8: \xt Exo 17:7.\x*
 \q1 ≈You¦98539 strove¦98539 against him¦98539 at¦98540 the¦98542 Merivah¦98543 \add ≈springs\add*.\x + \xo 33:8: \xt Exo 17:7; Num 20:13.\x*
@@ -1625,20 +1625,20 @@
 \q1 He'll \add ≈burn fragrant incense¦98573 for you\add*,
 \q1 ≈and¦98575 whole¦98575 burnt offerings¦98575 on¦98576 your¦98578 altar¦98578.
 \q1
-\v 11 Yahweh¦98581, bless¦98580 \add @Yisrael's¦98582\add* \add ≈possessions\add*,
+\v 11 Yahweh¦98581, \z2hilite bless¦98580\z2hilite* \add @Yisrael's¦98582\add* \add ≈possessions\add*,
 \q1 and¦98583 accept the¦98583 work¦98583 \add ≈that he does\add*.
 \q1 \add ≈Crush¦98586\add* those¦98588 who¦98588 \add ≈take action\add* up against¦98588 him¦98588,
 \q1 and¦98589 \add ≈those¦98589 who¦98589 hate¦98589\add*, in case they¦98592 \add ≈attack¦98592\add*.”
 \b
 \p
-\v 12 To¦98595 Benyamin¦98595, he¦98596 said¦98596,
-\q1 “Yahweh's¦98598 \add ≈special one\add* lives¦98599 in security¦98600 beside him¦98601.
+\v 12 \z0 To¦98595 Benyamin¦98595, he¦98596 said¦98596,
+\q1 \z3 “Yahweh's¦98598 \add ≈special one\add* lives¦98599 in security¦98600 beside him¦98601.
 \q1 He¦98602 \add ≈protects¦98602\add* him¦98603 all¦98604 day¦98606 \add ≈long\add*,
 \q1 ≈and¦98607 Yahweh \add ?≈places him on his¦98608 chest\add*.”
 \b
 \p
-\v 13 To¦98612 Yosef¦98612 \add !(Joseph¦98612)\add*, he¦98613 said¦98613,
-\q1 “Yahweh¦98615 \add ≈will bless¦98614\add* his¦98616 land¦98616,
+\v 13 \z0 To¦98612 Yosef¦98612 \add !(Joseph¦98612)\add*, he¦98613 said¦98613,
+\q1 \z3 “Yahweh¦98615 \add ≈will \z3hilite bless¦98614\z3hilite*\add* his¦98616 land¦98616,
 \q1 with the \add ≈rain from¦98617 the sky¦98618\add*,
 \q1 ≈from¦98619 the dew¦98619 and¦98620 from¦98620 the¦98620 \add ≈springs\add* lying¦98621 beneath¦98622,
 \q1
@@ -1661,8 +1661,8 @@
 \q1 ≈and¦98669 they¦98669 are the¦98670 thousands¦98670 of¦98670 Menasheh¦98671 \add !(Manasseh¦98671)\add*.”
 \b
 \p
-\v 18 To Zevulun¦98674, he¦98675 said¦98675,
-\q1 “Zevulun¦98677, be happy when¦98678 you¦98678 go¦98678 out¦98678,
+\v 18 \z0 To Zevulun¦98674, he¦98675 said¦98675,
+\q1 \z4 “Zevulun¦98677, be happy when¦98678 you¦98678 go¦98678 out¦98678,
 \q1 and¦98679 Yisakar¦98679 \add !(Issachar¦98679)\add* \add too\add*, in¦98680 your¦98680 tents¦98680.
 \q1
 \v 19 They¦98685 will¦98685 call¦98685 peoples¦98682 to the mountain¦98683.
@@ -1671,8 +1671,8 @@
 \q1 and¦98695 on treasures hidden in the sand¦98697.”
 \b
 \p
-\v 20 To Gad¦98700, he¦98701 said¦98701,
-\q1 “Blessed¦98702 be the¦98703 one¦98703 who¦98703 enlarges¦98703 Gad¦98704.
+\v 20 \z0 To Gad¦98700, he¦98701 said¦98701,
+\q1 \z4 “\z4hilite Blessed¦98702\z4hilite* be the¦98703 one¦98703 who¦98703 enlarges¦98703 Gad¦98704.
 \q1 He'll¦98706 live¦98706 like¦98705 a¦98705 lioness,
 \q1 and¦98707 tear¦98707 off an¦98708 arm¦98708, \add perhaps\add* also¦98709 a¦98711 head¦98711.
 \q1
@@ -1683,26 +1683,26 @@
 \q1 ≈and¦98728 his¦98728 judgements¦98728 for Yisrael¦98731 \add !(Israel¦98731)\add*.”
 \b
 \p
-\v 22 To Dan¦98734, he¦98735 said¦98735,
-\q1 “Dan¦98736 is a¦98738 lion¦98738 cub¦98737
+\v 22 \z0 To Dan¦98734, he¦98735 said¦98735,
+\q1 \z4 “Dan¦98736 is a¦98738 lion¦98738 cub¦98737
 \q1 leaping¦98739 out¦98739 from¦98740 Bashan¦98742.”
 \b
 \p
-\v 23 To¦98744 Naftali¦98744 \add !(Naphtali¦98744)\add*, he¦98745 said¦98745,
-\q1 “Naftali¦98746, overflowing with favour¦98748,
+\v 23 \z0 To¦98744 Naftali¦98744 \add !(Naphtali¦98744)\add*, he¦98745 said¦98745,
+\q1 \z4 “Naftali¦98746, overflowing with favour¦98748,
 \q1 ≈and¦98749 full¦98749 of¦98750 Yahweh's¦98751 \add #blessings¦98750\add*,
 \q1 you'll \add ≈possess¦98754\add* the west¦98752 and¦98753 the south¦98753.”
 \b
 \p
-\v 24 To Asher¦98757, he¦98758 said¦98758,
-\q1 “Asher is¦98759 blessed¦98759 among the sons¦98760.
+\v 24 \z0 To Asher¦98757, he¦98758 said¦98758,
+\q1 \z4 “Asher \z4hilite is¦98759 blessed¦98759\z4hilite* among the sons¦98760.
 \q1 ≈Let him be¦98762 favoured¦98763 among his¦98764 brothers¦98764,
 \q1 and¦98765 \add ≈enjoy having\add* \add lots of olive\add* oil¦98766.
 \q1
 \v 25 Your gates will have iron¦98769 and¦98770 bronze¦98770 bars,
 \q1 ≈and¦98772 you'll \add ≈be¦98772 strong¦98773\add* all your¦98773 life.
 \q1
-\v 26 There's¦98775 no one \add else\add* like¦98776 Yeshurun's¦98777 God¦98776,
+\v 26 \z1 There's¦98775 no one \add else\add* like¦98776 \z1hilite Yeshurun's¦98777\z1hilite* God¦98776,
 \q1 riding¦98778 the \add #heavens¦98779\add* to your¦98780 help¦98780,
 \q1 ≈and¦98781 in¦98781 his¦98781 majesty¦98781 on the clouds¦98782.
 \q1

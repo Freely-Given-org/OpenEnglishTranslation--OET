@@ -1,4 +1,4 @@
-\id 1CH - Open English Translation—Readers' Version (OET-RV) v0.2.24
+\id 1CH - Open English Translation—Readers' Version (OET-RV) v0.3.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CH1
@@ -991,7 +991,7 @@
 \rem /s1 A Song of Praise
 \rem /r (Psalms 105.1-15; 96.1-13; 106.1,47,48)
 \q1
-\v 8 Give¦194887 thanks¦194887 to¦194888 Yahweh¦194888 \add and\add* \add ≈use his name¦194890 when calling¦194889 out\add* \add for help\add*.
+\v 8 \z1 \z1hilite Give¦194887 thanks¦194887\z1hilite* to¦194888 Yahweh¦194888 \add and\add* \add ≈use his name¦194890 when calling¦194889 out\add* \add for help\add*.
 \q1 →\add ≈Tell all the other nations¦194892 about¦194893 what he's done\add* \add for you Israelis\add*.
 \q1
 \v 9 Sing¦194895 to¦194896 him¦194896 \add and\add* \add ≈make music¦194897\add* to¦194899 him¦194899.
@@ -1003,16 +1003,16 @@
 \v 11 \add ≈Ask Yahweh¦194914 to help you and¦194915 give you\add* his¦194915 strength¦194915.
 \q1 ≈\add ≈Constantly ask for his¦194917 direction\add*.
 \q1
-\v 12 Remember¦194920 \add ≈the wonderful¦194921 things\add* that¦194922 he's¦194923 done¦194923—
+\v 12 \z1hilite Remember¦194920\z1hilite* \add ≈the wonderful¦194921 things\add* that¦194922 he's¦194923 done¦194923—
 \q1 ≈his¦194924 miracles and¦194925 \add ≈how he punished those who deserved it\add*.
 \q1
 \v 13 You descendants¦194929 of¦194929 his¦194931 servant¦194931 Yisrael¦194930 \add !(Israel¦194930)\add*,
 \q1 ≈you descendants¦194932 of¦194932 Ya'akov¦194933 \add !(Jacob¦194933)\add*, the \add #one¦194934\add* who he chose¦194934,
 \q1
-\v 14 he¦194936 is our¦194938 god¦194938, Yahweh¦194937.
-\q1 ≈\add ≈He judges¦194942 the¦194941 entire¦194939 world¦194941\add*.
+\v 14 \z2 he¦194936 is our¦194938 god¦194938, Yahweh¦194937.
+\q1 ≈\add ≈He judges¦194942 the¦194941 entire¦194939 \z2hilite world¦194941\z2hilite*\add*.
 \q1
-\v 15 Remember¦194944 his agreement¦194946 forever¦194945—
+\v 15 \z2hilite Remember¦194944\z2hilite* his agreement¦194946 forever¦194945—
 \q1 ≈the \add ≈instructions¦194948 that¦194948 he¦194948 gave\add* to a¦194949 thousand¦194949 generations¦194950,
 \q1
 \v 16 \add ≡the agreement\add* that¦194952 he¦194953 \add ≈made¦194953\add* with¦194954 Avraham¦194956,\x + \xo 16:16: \xt Gen 12:7.\x*
@@ -1038,13 +1038,13 @@
 \q1 ≈and¦195007 don't¦195008 harm¦195010 my¦195007 prophets¦195007.”
 \b
 \q1
-\v 23 Sing¦195013 to¦195014 Yahweh¦195014 \add ≈everybody\add*.
+\v 23 \z1 Sing¦195013 to¦195014 Yahweh¦195014 \add ≈everybody\add*.
 \q1 →\add ≈Every¦195015 day tell others that he's saved us\add*.
 \q1
 \v 24 \add ≈Tell¦195026 the¦195033 other nations¦195033 about¦195034 his¦195034 power\add*.
 \q1 ≈\add ≡Tell all the people groups about the wonderful things he's done\add*,
 \q1
-\v 25 because¦195036 Yahweh¦195038 is great¦195037 and¦195039 deserves a lot of praise¦195039,
+\v 25 \z2 because¦195036 Yahweh¦195038 is great¦195037 and¦195039 deserves a lot of praise¦195039,
 \q1 ≈and¦195041 he¦195042 should be¦195041 revered¦195041 more than any other god¦195047.
 \q1
 \v 26 All¦195050 those gods¦195052 of¦195052 the¦195053 \add other\add* people¦195053 groups are worthless¦195054,
@@ -1054,37 +1054,37 @@
 \q1 ≈\add and\add* strength¦195062 and¦195063 happiness \add radiate\add* from his¦195064 place¦195064.
 \b
 \q1
-\v 28 \add ≈You people¦195069 in nations all over the world, praise\add* Yahweh¦195067—
+\v 28 \z1 \add ≈You people¦195069 in nations all over the world, praise\add* Yahweh¦195067—
 \q1 \add ≈praise him for¦195071 his splendour¦195072 and¦195073 his\add* strength¦195073.
 \q1
 \v 29 \add ≈Praise Yahweh¦195076 for his¦195078 great reputation¦195078\add*.
 \q1 Bring an¦195080 offering¦195080 and¦195081 come¦195081 \add ≈into his presence\add*.
 \q1 ≈Worship¦195083 Yahweh¦195084 in¦195085 \add his\add* \add ≈splendour¦195085 and purity¦195087\add*.
 \q1
-\v 30 \add ≈Let the entire¦195091 planet¦195093 tremble¦195089 if he comes\add*.
-\q1 The¦195093 world¦195093 is¦195096 \add ≈firmly\add* established¦195096—it¦195100 can't¦195098 be¦195100 shaken¦195100 \add around\add*.
+\v 30 \add ≈Let the entire¦195091 \z1hilite planet¦195093\z1hilite* tremble¦195089 if he comes\add*.
+\q1 \z2 The¦195093 world¦195093 is¦195096 \add ≈firmly\add* established¦195096—it¦195100 can't¦195098 be¦195100 shaken¦195100 \add around\add*.
 \q1
-\v 31 Let¦195102 the¦195103 heavens¦195103 be¦195104 glad¦195104, and let the¦195105 earth¦195105 shout in celebration,
+\v 31 Let¦195102 the¦195103 heavens¦195103 be¦195104 glad¦195104, and let the¦195105 \z2hilite earth¦195105\z2hilite* shout in celebration,
 \q1 and¦195106 let¦195106 \add ≈people¦195106 in all\add* the nations¦195107 say¦195106, “Yahweh¦195108 \add ≈is king¦195109\add*.”
 \q1
 \v 32 Let¦195111 the¦195112 oceans¦195112 roar \add ≈along with all the creatures in¦195120 them\add*.
 \q1 ≈Let¦195114 the¦195115 countryside¦195115 celebrate \add ≈along with all¦195116 the creatures that¦195118 live there\add*.
 \q1
 \v 33 Then¦195122 the¦195124 trees¦195124 in the¦195125 \add #forests¦195125\add* should shout¦195123 happily¦195123 \add ≈when Yahweh¦195127 comes\add*,
-\q1 because¦195128 he¦195130 is coming¦195130 to¦195131 judge¦195131 the¦195134 \add ≈world¦195134\add*.
+\q1 because¦195128 he¦195130 is coming¦195130 to¦195131 judge¦195131 the¦195134 \add ≈\z2hilite world¦195134\z2hilite*\add*.
 \b
 \q1
-\v 34 Give¦195136 thanks¦195136 to¦195137 Yahweh¦195137, because¦195138 he's¦195139 good¦195139,
+\v 34 \z1 \z1hilite Give¦195136 thanks¦195136\z1hilite* to¦195137 Yahweh¦195137, because¦195138 he's¦195139 good¦195139,
 \q1 because¦195140 his loyal¦195142 commitment¦195142 \add lasts\add* forever¦195141.\x + \xo 16:34: \xt 2Ch 5:13; 7:3; Ezr 3:11; Psa 100:5; 106:1; 107:1; 118:1; 136:1; Jer 33:11.\x*
 \q1
 \v 35 Then¦195144 say¦195144, “Rescue¦195145 us¦195145, God¦195146 \add ≈who's our¦195147 saviour\add*,
 \q1 and¦195148 bring us¦195148 together and¦195149 save¦195149 us¦195149 from¦195150 \add attacks\add* by other nations¦195152,
-\q1 →so that we'll thank¦195153 you for your¦195155 \add ≈untarnished¦195155 reputation¦195154\add*,
+\q1 →so that we'll \z1hilite thank¦195153\z1hilite* you for your¦195155 \add ≈untarnished¦195155 reputation¦195154\add*,
 \q1 and boast¦195156 about¦195157 \add ≈your¦195157 praiseworthy¦195157 actions\add*.”
 \q1
-\v 36 Blessed¦195159 be Yisrael's¦195162 \add !(Israel's¦195162)\add* god¦195161 Yahweh,
+\v 36 \z3 Blessed¦195159 be Yisrael's¦195162 \add !(Israel's¦195162)\add* god¦195161 Yahweh,
 \q1 \add ≈in eternity past and¦195166 eternity to¦195166 come\add*.
-\q1 And¦195168 all¦195169 the¦195171 people¦195171 said¦195168, “Amen¦195172” and¦195173 praised¦195173 Yahweh¦195174.
+\q1 \z0 And¦195168 all¦195169 the¦195171 people¦195171 said¦195168, “Amen¦195172” and¦195173 praised¦195173 Yahweh¦195174.
 \s1 Worshipping in Yerushalem
 \rem /s1 Worship at Jerusalem and Gibeon; Regular Worship Maintained
 \s4 Full kingdom

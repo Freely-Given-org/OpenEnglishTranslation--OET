@@ -1,4 +1,4 @@
-\id JDG - Open English Translation—Readers' Version (OET-RV) v0.2.21
+\id JDG - Open English Translation—Readers' Version (OET-RV) v0.3.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JDG
@@ -210,9 +210,9 @@
 \p
 \v 1 ⇔That¦113848 day¦113847, Deborah¦113842 and¦113843 Barak¦113843 sang¦113841 this song:
 \q1
-\v 2 “When¦113851 the leaders take the lead in¦113853 Yisrael¦113853 \add !(Israel¦113853)\add*,
+\v 2 \z1 “When¦113851 the leaders take the lead in¦113853 Yisrael¦113853 \add !(Israel¦113853)\add*,
 \q1 when¦113854 the people¦113855 offer themselves willingly,
-\q1 Yahweh¦113857 be blessed¦113856.
+\q1 Yahweh¦113857 be \z1hilite blessed¦113856\z1hilite*.
 \q1
 \v 3 Listen¦113859 you kings¦113860.
 \q1 ≈Pay¦113861 attention you rulers¦113862.
@@ -229,23 +229,23 @@
 \q1 Yes, Mt. Sinay¦113895 shook in¦113896 front¦113896 of¦113896 Yisrael's¦113899 god¦113898, Yahweh.\x + \xo 5:5: \xt Exo 19:18.\x*
 \b
 \q1
-\v 6 In¦113901 the¦113901 days¦113901 of¦113901 Anat's¦113905 son¦113903 Shamgar¦113902,
-\q1 ≈in¦113906 the¦113906 days¦113906 of¦113906 Ya'el¦113907,
+\v 6 \z2 In¦113901 the¦113901 days¦113901 of¦113901 Anat's¦113905 son¦113903 Shamgar¦113902,
+\q1 ≈in¦113906 the¦113906 days¦113906 of¦113906 \z2hilite Ya'el¦113907\z2hilite*,
 \q1 \add main\add* roads¦113909 were abandoned,
 \q1 ≈and¦113910 travellers¦113910 walked¦113912 twisting¦113914 trails.
 \q1
 \v 7 Israeli¦113918 villages were abandoned.
 \q1 ≈No one lived there until¦113920 I¦113921, Deborah¦113922, became their leader.
-\q1 I¦113923 became¦113923 one of Yisrael's¦113925 \add !(Israel's¦113925)\add* \add #mothers¦113924\add*.
+\q1 I¦113923 became¦113923 one of Yisrael's¦113925 \add !(Israel's¦113925)\add* \add #\z2hilite mothers¦113924\z2hilite*\add*.
 \q1
 \v 8 When¦113937 \add ?@Yisrael¦113927\add* chose¦113927 new¦113929 gods¦113928,
 \q2 →then¦113930 enemies attacked the¦113932 \add city\add* gates¦113932.
 \q1 No shield¦113933 or spear¦113937 could be¦113936 found¦113936
 \q2 among¦113938 forty¦113938 thousand¦113939 in¦113940 Yisrael¦113940.
 \q1
-\v 9 \add ≈I'm thankful\add* to¦113943 Yisrael's¦113944 commanders¦113943
+\v 9 \z1 \add ≈I'm thankful\add* to¦113943 Yisrael's¦113944 commanders¦113943
 \q2 who¦113945 volunteered¦113945 \add to help\add* the people¦113946.
-\q1 Yahweh¦113948 be blessed¦113947.
+\q1 Yahweh¦113948 be \z1hilite blessed¦113947\z1hilite*.
 \q1
 \v 10 You riders¦113950 of¦113950 white donkeys¦113951,
 \q1 you¦113953 who¦113953 sit¦113953 on¦113954 saddle blankets,
@@ -260,7 +260,7 @@
 \q1 Then¦113974 Yahweh's people went¦113975 down¦113975 to¦113976 the \add city\add* gates¦113976.
 \b
 \q1
-\v 12 Wake up, Deborah¦113983, wake up.
+\v 12 \z3 Wake up, Deborah¦113983, wake up.
 \q1 Wake up, wake up, \add ≈sing\add* a¦113988 song¦113988.
 \q1 Barak¦113990, \add ≈get moving\add* and¦113991 capture¦113991 your¦113992 prisoners,
 \q2 you son¦113993 of¦113993 Avinoam¦113995.
@@ -291,7 +291,7 @@
 \q1 And¦114077 Naftali¦114077 \add !(Naphtali¦114077)\add* \add ≈was at their heights¦114079\add* on the battlefield¦114080.
 \b
 \q1
-\v 19 Kings¦114083 came¦114082 and made war.
+\v 19 \z4 Kings¦114083 came¦114082 and made war.
 \q1 Then¦114085 the¦114087 Kena'ani \add !(Canaanite)\add* kings¦114087 fought¦114086 at¦114089 Ta'anak¦114089,
 \q2 at¦114090 the¦114092 Megidon¦114093 springs.
 \q1 ^\add But\add* they \add ≈weren't able to plunder any\add* silver¦114095.
@@ -313,7 +313,7 @@
 \q1 to¦114144 help¦114144 Yahweh¦114145 against the mighty ones.’
 \b
 \q1
-\v 24 Ya'el¦114150 will¦114148 be¦114148 an \add ≈honoured\add* woman¦114149.
+\v 24 \z2 \z2hilite Ya'el¦114150\z2hilite* will¦114148 be¦114148 an \add ≈honoured\add* woman¦114149.
 \q2 The¦114151 wife¦114151 of¦114151 Hever¦114152 the¦114153 Keyni¦114153.
 \q1 She deserves the most praise out of \add all\add* women¦114154 \add ≈who live in¦114155 tents¦114155\add*.
 \q1
@@ -329,7 +329,7 @@
 \q1 ≈He¦114188 bowed¦114188 down¦114188 between her feet—where¦114190 he¦114191 bowed¦114191 down¦114191, there¦114192 he¦114193 fell¦114193—destroyed¦114194.
 \b
 \q1
-\v 28 Sisera's¦114201 mother¦114200 looked¦114198 out the¦114197 window¦114197.
+\v 28 Sisera's¦114201 \z2hilite mother¦114200\z2hilite* looked¦114198 out the¦114197 window¦114197.
 \q1 She peered through¦114202 the¦114203 lattice¦114203, crying out,
 \q2 ‘Why¦114204 is his¦114206 chariot¦114206 so¦114199 slow to¦114207 return¦114207?
 \q2 ≈Why¦114208 are the¦114210 hoofbeats¦114210 of¦114210 his¦114211 chariots¦114211 delayed¦114209?’
@@ -344,9 +344,9 @@
 \q1 Dyed scarves as plunder¦114240.’
 \b
 \q1
-\v 31 May¦114243 all¦114244 your¦114246 enemies¦114246 perish¦114243 like that, Yahweh¦114247.
+\v 31 \z1 May¦114243 all¦114244 your¦114246 enemies¦114246 perish¦114243 like that, Yahweh¦114247.
 \q1 \add ≈But¦114248\add* may those¦114248 who¦114248 love¦114248 \add %you¦114248\add* shine like¦114249 the¦114250 sun¦114250 rising in¦114251 its¦114251 strength¦114251.”
-\m Then¦114252 that region¦114253 had peace¦114252 for forty¦114254 years¦114255.
+\m \z0 Then¦114252 that region¦114253 had peace¦114252 for forty¦114254 years¦114255.
 \c 6
 \s1 Gid'on
 \rem /s1 The Midianite Oppression; Gideon; Gideon Becomes Israel's Judge

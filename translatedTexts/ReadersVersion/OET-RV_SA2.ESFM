@@ -1,4 +1,4 @@
-\id 2SA - Open English Translation—Readers' Version (OET-RV) v0.2.20
+\id 2SA - Open English Translation—Readers' Version (OET-RV) v0.3.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 SA2
@@ -57,13 +57,13 @@
 \v 17 Then¦142054 David¦142055 sang this¦142059 funeral song for Sha'ul¦142062 \add !(Saul¦142062)\add* and¦142063 his¦142066 son¦142066 Yonatan¦142065 \add !(Jonathan¦142065)\add*
 \v 18 and¦142068 said¦142068 \add that it should be\add* taught¦142069 to¦142069 the¦142070 \add ≈people\add* of¦142070 Yehudah¦142072 \add !(Judah¦142072)\add*. \add It's called\add* ‘The bow¦142073’ and indeed, it's¦142075 written¦142075 \add down\add* in the¦142078 Book¦142078 of¦142078 Yashar:\x + \xo 1:18: \xt Josh 10:13.\x*
 \q1
-\v 19 “Yisrael's¦142082 \add !(Israel's¦142082)\add* splendour \add was\add* slain¦142086 \add ≈in the hills\add*.
-\q1 ≈How¦142087 the \add ≈powerful¦142089\add* \add warriors\add* have¦142088 \add ≈died\add*.
+\v 19 \zr “Yisrael's¦142082 \add !(Israel's¦142082)\add* splendour \add was\add* slain¦142086 \add ≈in the hills\add*.
+\q1 ≈How¦142087 the \add ≈powerful¦142089\add* \add warriors\add* \zrhilite have¦142088\zrhilite* \add ≈died\add*.
 \q1
-\v 20 Don't¦142091 tell¦142093 \add <them\add* in¦142094 Gat¦142094.
+\v 20 \z1 Don't¦142091 tell¦142093 \add <them\add* in¦142094 Gat¦142094.
 \q1 ≈Don't¦142095 let \add <them\add* take the news¦142097 to Ashkelon's¦142099 streets¦142098,
 \q1 in case the¦142103 Pelishti \add ≈women¦142103\add* celebrate¦142102,
-\q1 and the¦142108 daughters¦142108 of¦142108 the¦142109 uncircumcised¦142109 are elated.
+\q1 and the¦142108 \z1hilite daughters¦142108\z1hilite* of¦142108 the¦142109 uncircumcised¦142109 are elated.
 \b
 \q1
 \v 21 \add ≈You\add* mountains¦142111 in¦142112 Gilboa¦142112,
@@ -85,21 +85,21 @@
 \q2 ≈they¦142159 were¦142159 stronger¦142159 than lions¦142158.
 \b
 \q1
-\v 24 Weep¦142166 for Sha'ul¦142165 you daughters¦142161 of¦142161 Yisrael¦142162 \add !(Israel¦142162)\add*,
+\v 24 Weep¦142166 for Sha'ul¦142165 you \z1hilite daughters¦142161\z1hilite* of¦142161 Yisrael¦142162 \add !(Israel¦142162)\add*,
 \q1 the one who¦142167 \add ≈dressed¦142167 you¦142167 in nice clothes with¦142169 jewellery\add*,
 \q1 ≈and gave you all gold¦142174 \add ≈brooches\add* to put on¦142175.
 \b
 \q1
-\v 25 Those warriors¦142180 have¦142179 fallen¦142179 in¦142181 the¦142181 middle¦142181 of¦142182 the¦142182 battle¦142182.
+\v 25 \zr Those warriors¦142180 \zrhilite have¦142179 fallen¦142179\zrhilite* in¦142181 the¦142181 middle¦142181 of¦142182 the¦142182 battle¦142182.
 \q1 ≈Yonatan¦142183 has been¦142187 killed¦142187 \add there\add* on the hills.
 \b
 \q1
-\v 26 I \add ≈grieve\add* for you¦142192 my¦142193 dear friend Yonatan¦142194 \add !(Jonathan¦142194)\add*.
+\v 26 \z2 I \add ≈grieve\add* for you¦142192 my¦142193 dear friend Yonatan¦142194 \add !(Jonathan¦142194)\add*.
 \q1 You¦142195 were¦142195 \add ≈so kind\add* to¦142196 me¦142196.
 \q1 ≈Your¦142199 \add ≈friendship meant more¦142201 to¦142200 me¦142200\add* than¦142201 the women¦142202 \add ≈who say they love me\add*.
 \b
 \q1
-\v 27 \add Yes, those\add* \add ≈powerful warriors\add* have¦142205 fallen¦142205,
+\v 27 \zr \add Yes, those\add* \add ≈powerful warriors\add* \zrhilite have¦142205 fallen¦142205\zrhilite*,
 \q1 ≈and¦142207 those weapons¦142208 of¦142208 war¦142209 have¦142207 \add ≈been destroyed¦142207\add*.”
 \c 2
 \s1 David's kingdom
@@ -1105,7 +1105,7 @@
 \p
 \v 1 Then¦153940 after Yahweh¦153942 had rescued¦153949 \add @David¦153951\add* from¦153952 Sha'ul¦153957 \add !(Saul¦153957)\add* and all¦153953 his¦153955 enemies¦153955, David¦153941 \add ≈sang this¦153947 song¦153946\add* for Yahweh¦153950,
 \q1
-\v 2 “Yahweh¦153960 is my¦153961 rock¦153961 and¦153962 my¦153962 fortress¦153962
+\v 2 \z1 “Yahweh¦153960 is my¦153961 rock¦153961 and¦153962 my¦153962 fortress¦153962
 \q1 and¦153963 \add ≈the one who rescues me\add*, \add yes,\add* even me.
 \q1
 \v 3 God¦153967 of¦153967 my¦153968 rock¦153968—I¦153969 \add ≈find safety¦153969\add* in¦153971 him¦153971,
@@ -1129,7 +1129,7 @@
 \q1 ≈and¦154016 \add ≈he heard\add* my¦154016 cry¦154016 for¦154016 help¦154016.
 \b
 \q1
-\v 8 The¦154024 earth¦154024 reeled and it shook.
+\v 8 \z2 The¦154024 earth¦154024 reeled and it shook.
 \q1 ≈The¦154025 foundations¦154025 of¦154025 the¦154026 heavens¦154026 trembled¦154027,
 \q2 and¦154028 they¦154028 shook¦154028 because¦154029 \add ≈he became angry\add*.
 \q1
@@ -1152,7 +1152,7 @@
 \v 14 Yahweh¦154084 thundered¦154080 from¦154081 the sky¦154083.
 \q1 ≈The¦154085 most¦154085 high¦154085 \add >God\add* \add ≈made¦154086 his voice¦154087 known\add*.
 \q1
-\v 15 He¦154089 sent¦154089 out¦154089 arrows¦154090, and¦154091 he¦154091 scattered¦154091 them¦154091.
+\v 15 He¦154089 sent¦154089 out¦154089 arrows¦154090, and¦154091 he¦154091 \z2hilite scattered¦154091 them¦154091\z2hilite*.
 \q1 ≈\add ≡He¦154089 sent¦154089 out¦154089\add* lightning¦154092, and¦154093 he¦154093 confused¦154093 them¦154093.
 \q1
 \v 16 The channels¦154097 of¦154097 the sea¦154098 \add ≈became visible\add*.
@@ -1174,7 +1174,7 @@
 \q1 He¦154134 rescued¦154134 me¦154134 because¦154135 he¦154137 was pleased¦154137 with me¦154138.
 \b
 \q1
-\v 21 Yahweh¦154141 has rewarded me \add ≈because of¦154142 my¦154142 obedience¦154142\add*.
+\v 21 \z3 Yahweh¦154141 has rewarded me \add ≈because of¦154142 my¦154142 obedience¦154142\add*.
 \q1 ≈He's¦154145 repaid¦154145 me¦154146 because \add ≈my hands¦154144 were clean¦154143\add*,
 \q1
 \v 22 because¦154148 I've¦154149 followed¦154149 Yahweh's¦154151 paths¦154150,
@@ -1207,7 +1207,7 @@
 \q1 ≈With my¦154225 god's¦154225 \add help\add* I¦154226 can leap¦154226 over¦154226 a¦154228 \add city\add* wall¦154228.
 \b
 \q1
-\v 31 God's¦154230 path¦154232 is perfect¦154231.
+\v 31 \z2 God's¦154230 path¦154232 is perfect¦154231.
 \q1 ≈Yahweh's¦154234 message¦154233 is \add ≈tried and tested\add*.
 \q1 →He¦154237 \add ≈keeps everyone¦154238 safe who¦154239 requests his protection¦154239\add*.
 \q1
@@ -1236,10 +1236,10 @@
 \v 39 I¦154302 will \add ≈attack¦154302\add* them¦154302 and¦154303 smash¦154303 them¦154303.
 \q1 ≈They¦154305 won't¦154304 stand¦154305 \add again\add*—they'll¦154306 fall¦154306 under¦154307 my¦154308 feet¦154308.
 \q1
-\v 40 You¦154310 \add ≈give me¦154310 extra strength¦154311\add* for¦154312 the war.
+\v 40 You¦154310 \add ≈give me¦154310 extra strength¦154311\add* \z2hilite for¦154312 the war\z2hilite*.
 \q1 You¦154313 make¦154313 the people who¦154314 \add ≈rebelled¦154314 against¦154314\add* me \add ≈submit¦154313\add*.
 \q1
-\v 41 \add ≈You make my enemies¦154317 flee away from me¦154319\add*.
+\v 41 \add ≈You make \z2hilite my enemies¦154317\z2hilite* flee away from me¦154319\add*.
 \q1 \add You help me\add* destroy¦154322 the people who¦154321 hate¦154321 me¦154321.
 \q1
 \v 42 They¦154324 look¦154324, but¦154325 there's¦154325 \add ≈no one to rescue¦154326 them\add*.
@@ -1249,7 +1249,7 @@
 \q1 ≈I trample them like¦154337 the mud¦154337 on the streets¦154339 and flatten them.
 \b
 \q1
-\v 44 You¦154343 rescue¦154343 me¦154343 from¦154344 the¦154344 arguments of¦154344 my¦154345 people¦154345.
+\v 44 \z4 You¦154343 rescue¦154343 me¦154343 from¦154344 the¦154344 arguments of¦154344 my¦154345 people¦154345.
 \q1 You¦154346 \add ≈help me¦154346 remain\add* as the head¦154347 of¦154347 nations¦154348.
 \q1 People¦154349 serve¦154353 me \add ≈even if I don't¦154350 even know¦154352 them\add*.
 \q1
@@ -1283,8 +1283,8 @@
 \s4 Full kingdom
 \p
 \v 1 These¦154421 are David's¦154423 final¦154424 words¦154422:
-\q1 “The¦154425 message¦154425 from Yishay's¦154429 \add !(Jesse's¦154429)\add* son¦154427 David—
-\q1 ≈a message¦154430 from the¦154431 man¦154431 who¦154432 \add ≈rose¦154432 through the¦154434 ranks\add*—
+\q1 \z1 “The¦154425 \z1hilite message¦154425\z1hilite* from Yishay's¦154429 \add !(Jesse's¦154429)\add* son¦154427 David—
+\q1 ≈a \z1hilite message¦154430\z1hilite* from the¦154431 man¦154431 who¦154432 \add ≈rose¦154432 through the¦154434 ranks\add*—
 \q2 who was selected by Ya'akov's¦154436 \add !(Jacob's¦154436)\add* god¦154435—
 \q1 \add singer of\add* Yisrael's¦154439 \add !(Israel's¦154439)\add* pleasant¦154437 songs¦154438.
 \q1
@@ -1293,8 +1293,8 @@
 \q1
 \v 3 Yisrael's god¦154452 spoke¦154451 to¦154454 me¦154454.
 \q1 ≈The¦154456 rock¦154456 of¦154456 Yisrael¦154457 told¦154455 \add >me\add*.
-\q1 The one¦154458 who¦154458 rules¦154458 \add ≈people¦154459 with justice\add*,
-\q1 →rules¦154461 out of¦154462 his respect¦154462 for God¦154463.
+\q1 \z2 The one¦154458 who¦154458 \z2hilite rules¦154458\z2hilite* \add ≈people¦154459 with justice\add*,
+\q1 →\z2hilite rules¦154461\z2hilite* out of¦154462 his respect¦154462 for God¦154463.
 \q1
 \v 4 He's¦154467 like¦154465 the rising sun¦154469 bringing the morning light¦154465—
 \q2 a cloudless morning¦154466.
@@ -1306,7 +1306,7 @@
 \q2 all arranged¦154492 and¦154494 secured¦154494.
 \q1 He'll¦154506 make¦154506 my¦154499 salvation¦154499 and¦154500 every¦154500 desire¦154502 grow¦154506. ???
 \q1
-\v 6 But¦154508 evil \add >people\add* are¦154509 like¦154509 \add #thorns¦154509\add*—
+\v 6 \z3 But¦154508 evil \add >people\add* are¦154509 like¦154509 \add #thorns¦154509\add*—
 \q2 they're all¦154511 thrown away¦154510.
 \q1 because¦154512 they \add ≈injure your hands¦154515\add*.
 \q2
@@ -1318,7 +1318,7 @@
 \s4 Full kingdom
 \r (1 Chr. 11:10-41)
 \p
-\v 8 These¦154531 are the¦154532 names¦154532 of¦154532 David's¦154535 \add top\add* warriors:
+\v 8 \z0 These¦154531 are the¦154532 names¦154532 of¦154532 David's¦154535 \add top\add* warriors:
 \p \bd Yoshev-Bashevet\bd* the Tahkemoni¦154538 was the¦154540 head¦154540 of¦154540 ‘The¦154541 Three’. One¦154552 time¦154551 he¦154542 attacked and killed¦154550 eight¦154548 hundred¦154549 men with his spear.
 \p
 \v 9 Next after¦154556 him¦154556 was \bd Eleazar¦154558\bd*, the¦154559 son¦154559 of¦154559 Ahohi's son Dodo¦154561. \add Once he was\add* among¦154566 the three¦154566 powerful warriors¦154567 with¦154569 David¦154571 when¦154572 they¦154572 taunted the Pelishtim¦154573 who¦154574 were¦154574 gathered¦154574 there¦154576 for¦154577 battle¦154577. The¦154579 Israeli¦154580 warriors \add ≈retreated back up¦154578\add* their hill,

@@ -402,8 +402,8 @@ def spellCheckESFMText( text:str, location:str, nameSet:set[str] ) -> bool:
                         'f +','ft','fqa','fq','fl', # We intentionally omit 'fr' Why???
                         'x +','xt', # We intentionally omit 'xo' Why???
                         'jmp',
-                        'z1hilite','z2hilite','z3hilite','z4hilite','zrhilite',
-                        'z1','z2','z3','z4','zr',
+                        'z1hilite','z2hilite','z3hilite','z4hilite','z5hilite','zrhilite',
+                        'z0','z1','z2','z3','z4','z5','zr',
                         ):
         adjText = adjText.replace( f'\\{charMarker} ', '' ).replace( f'\\{charMarker}*', '' )
     adjText =  ( adjText.replace( '—', ' ' ) # Treat em-dashes as spaces

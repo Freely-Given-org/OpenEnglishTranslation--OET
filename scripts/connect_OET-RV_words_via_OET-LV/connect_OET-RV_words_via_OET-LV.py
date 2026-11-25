@@ -935,7 +935,7 @@ wordNumberBeforeApostropheRegex = re.compile( r"¦[0-9]+'" )
 
 # These whole-book checks mirror the ones in ../convert_OET-RV_to_simple_HTML.py (produce_HTML_files()),
 #   so that the errors are found when the words are connected, i.e., much earlier in the makefile processes.
-psalmColouringMarkerRegex = re.compile( r'\\z(?:r|[1-4])(?:hilite)?(?: |\*)' ) # Psalm/Song colouring markers
+psalmColouringMarkerRegex = re.compile( r'\\z(?:r|[0-5])(?:hilite)?(?: |\*)' ) # Poetry (Psalm/Song etc.) colouring markers: \z0 (end), \z1..\z5, \zr (refrain), and their hilites
 FOOTNOTE_AND_XREF_MARKERS = ('f','fr','fl','ft','fq','fqa','x','xo','xt','fig') # \fl is a footnote label, e.g., '\fl Greek '
 NON_NESTING_MARKERS = ('fr','fl','ft','fq','fqa','xo','xt')
 
@@ -969,7 +969,7 @@ def checkRVESFMTextForExport( BBB:str, filename:str, esfmText:str ) -> None:
 
     expectedMarkers = { *BibleOrgSysGlobals.USFMCharacterMarkers, *FOOTNOTE_AND_XREF_MARKERS }
     for lineNumber,line in enumerate( esfmText.split( '\n' ), start=1 ):
-        if BBB=='PSA' and '\\z' in line:
+        if '\\z' in line:
             line = psalmColouringMarkerRegex.sub( '', line )
         # Check that each character marker is closed before it's opened again
         for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:

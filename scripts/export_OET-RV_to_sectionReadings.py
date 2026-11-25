@@ -32,6 +32,7 @@ CHANGELOG:
     2026-02-26 Copy ogg files straight into Radio folder
     2026-06-11 Handle new % (changed person) \\add format
     2026-11-25 Remove the OET-RV line-start characters (≈ ^ → ⇔)
+    2026-11-25 Remove the OET-RV poetry colouring markers (\\z0..\\z5, \\zr and their hilites)
 """
 from pathlib import Path
 import os, os.path
@@ -50,7 +51,7 @@ from BibleOrgSys.Formats.ESFMBible import ESFMBible, ESFM_WORD_NUMBER_REGEX
 LAST_MODIFIED_DATE = '2026-11-25' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-RV_to_sectionReadings"
 PROGRAM_NAME = "Convert OET-RV to section readings"
-PROGRAM_VERSION = '0.41'
+PROGRAM_VERSION = '0.42'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -126,6 +127,7 @@ THINGS_TO_REMOVE = ( # Don't include \\add here because they get special treatme
     '(Zion)',
 )
 LINE_START_CHARACTERS = '≈^→⇔' # See above
+POETRY_COLOURING_MARKER_REGEX = re.compile( r'\\z(?:r|[0-5])(?:hilite)?(?: |\*)' ) # \z0 (end), \z1..\z5, \zr (refrain), and their hilites
 ADD_THINGS_TO_REMOVE = ( '?≈','≈', '?$', '$', '=', '+', '#', '%', '*', '&', '?@','@', '≡', '<', '>', '^', '→', '?', '' )
 
 PICKLE_FILENAME_END = '.OBD_Bible.pickle'
@@ -349,6 +351,7 @@ def processBook( BBB:str ) -> int:
             if marker == 'p' and verseText:
                 verseText = f'{verseText}\n\n'
             elif marker == 'v~':
+                if rest and '\\z' in rest: rest = POETRY_COLOURING_MARKER_REGEX.sub( '', rest )
                 if rest and rest[0] in LINE_START_CHARACTERS: # Parallelism or reordered verse character
                     rest = rest[1:]
                 verseText = f'{verseText} {rest}' # We don't worry here about extra spaces here
