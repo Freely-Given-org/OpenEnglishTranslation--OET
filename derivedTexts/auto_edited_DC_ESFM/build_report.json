@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "lexical/editorial draft; not a completed translation",
   "source_manifest_sha256": "3f1fb7507b3304b471f7bab0a360b8382b27bd2d51e65c71e40731aef0b18e2a",
-  "overrides_sha256": "25748b5eebb66fe44bbfe9eae07bcc9382519a037393617e8ac6f75a765de5b3",
-  "name_aliases_sha256": "af493d003f73c2674661192a48fc9fc0293d1676c577ecab38ae676ec4d4cb71",
+  "overrides_sha256": "02fdf5a30bdbe374d49b83156fd1343bd547ebf610b1554ce2708a382b06df39",
+  "name_aliases_sha256": "9806f33ea00e9fa6643dafeb00288431e034b2ddc5c10fc3235eaba3d02759db",
   "latin_glosses_sha256": "76da96c3082c2e337398ea3411a27b9efbf22459310ae41d258406f230f5942e",
   "transliteration": {
     "package": "bible-transliterations",
@@ -153,7 +153,7 @@
       "verse_segments": 213,
       "prologue_segments": 0
     },
-    "DAG": {
+    "DNG": {
       "words": 12333,
       "glossed": 10951,
       "unresolved": 1382,
@@ -268,7 +268,7 @@
       "verse_segments": 483,
       "prologue_segments": 0
     },
-    "ES1": {
+    "GES": {
       "words": 8928,
       "glossed": 7794,
       "unresolved": 1134,
@@ -401,7 +401,7 @@
     "latin-editorial-draft": 245
   },
   "unsupported_books": {
-    "ES2": "No complete Greek source in Brenton. English 2 Esdras (Latin 4 Esdras) needs a separately selected witness and glossing pipeline; LXX Esdras B is Ezra-Nehemiah, not this book."
+    "LES": "No complete Greek source in Brenton. English 2 Esdras (Latin 4 Esdras) needs a separately selected witness and glossing pipeline; LXX Esdras B is Ezra-Nehemiah, not this book."
   },
   "rv_label_differences": 270,
   "source_review_tokens": 7,

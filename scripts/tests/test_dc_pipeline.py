@@ -426,11 +426,11 @@ class CachedSourceTests(unittest.TestCase):
         dc.sources(dc.load_manifest(dc.MANIFEST), dc.CACHE)
         verses = dc.load_verses(dc.CACHE)
         self.assertEqual(set(verses), set(dc.BOOKS))
-        self.assertNotIn('ES2', verses)
+        self.assertNotIn('LES', verses)
         baruch6 = [v for v in verses['BAR'] if v.chapter == 6]
         self.assertEqual(len(baruch6), 73)
         self.assertEqual(baruch6[0].source_ref, 'LJE_1:1')
-        self.assertEqual({v.chapter for v in verses['DAG']}, set(range(1, 15)))
+        self.assertEqual({v.chapter for v in verses['DNG']}, set(range(1, 15)))
         self.assertEqual(verses['PS2'][0].source_ref, 'PSA_151:1')
         self.assertEqual(len(verses['PS2']), 7)
         prologue = [v for v in verses['SIR'] if v.chapter == 0]

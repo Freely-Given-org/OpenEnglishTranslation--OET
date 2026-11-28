@@ -40,8 +40,6 @@ SPELLING_DIR = SCRIPT_DIR / 'ScriptedDCUpdates'
 EDITOR = ROOT.parent / 'ScriptedBibleEditor/Rust/scripted_bible_editor/target/release/scripted_bible_editor'
 EDITOR_CONTROL = 'ScriptedBibleEditor.control.toml'
 SPELLING_TABLE = 'changeFromUSSpelling.commandTable.tsv'
-# Repository filenames use older aliases; the editor enumerates canonical BOS codes.
-EDITOR_BOOK_CODES = {'DAG': 'DNG', 'ES1': 'GES'}
 RV = ROOT / 'translatedTexts/ReadersVersion'
 TABLE = 'OET-LV_DC_word_table.tsv'
 
@@ -53,12 +51,12 @@ BOOKS = {
     'WIS': ('WIS', 'Wisdom of Solomon', [('WIS', None, None)]),
     'SIR': ('SIR', 'Sirach', [('SIR', None, None)]),
     'BAR': ('BAR', 'Baruch', [('BAR', None, None), ('LJE', None, 6)]),
-    'DAG': ('DAG', 'Daniel (Greek)', [('DAG', None, None), ('SUS', None, 13), ('BEL', None, 14)]),
+    'DNG': ('DAG', 'Daniel (Greek)', [('DAG', None, None), ('SUS', None, 13), ('BEL', None, 14)]),
     'MA1': ('1MA', '1 Maccabees', [('1MA', None, None)]),
     'MA2': ('2MA', '2 Maccabees', [('2MA', None, None)]),
     'MA3': ('3MA', '3 Maccabees', [('3MA', None, None)]),
     'MA4': ('4MA', '4 Maccabees', [('4MA', None, None)]),
-    'ES1': ('1ES', '1 Esdras', [('1ES', None, None)]),
+    'GES': ('1ES', '1 Esdras', [('1ES', None, None)]),
     'MAN': ('MAN', 'Prayer of Manasseh', [('MAN', None, None)]),
     'PS2': ('PS2', 'Psalm 151', [('PSA', 151, 1)]),
     # Append new books so existing DC word numbers remain stable.
@@ -781,7 +779,7 @@ def render_books(verses: dict, rows: list[dict]) -> dict[str, str]:
         usfm, title, _ = BOOKS[book]
         source = ('H. B. Swete, volume III (1905); Open Greek and Latin / First1KGreek, CC BY-SA 4.0.'
                   if book in TEI_SOURCES else 'Brenton Greek Septuagint (eBible.org), Public Domain.')
-        lines = [f'\\id {usfm} - OET-LV DC lexical draft', '\\usfm 3.0', '\\ide UTF-8',
+        lines = [f'\\id {usfm}', '\\usfm 3.0', '\\ide UTF-8',
                  f'\\rem ESFM v0.6 {book}', f'\\rem WORDTABLE {TABLE}',
                  '\\rem DRAFT: automatic dictionary glosses in Greek order; grammar and context are unreviewed.',
                  '\\rem Unresolved words are enclosed in ⟦ ⟧. These files are not publication-ready translations.',
@@ -914,16 +912,15 @@ def run_spelling_editor(rendered: dict[str, str], rows: list[dict], editor: Path
         (staging / 'input').mkdir()
         (staging / 'output').mkdir()
         for book, text in rendered.items():
-            bos = EDITOR_BOOK_CODES.get(book, book)
-            (staging / 'input' / f'{bos}_gloss.ESFM').write_text(text, encoding='utf-8')
+            (staging / 'input' / f'{book}_gloss.ESFM').write_text(text, encoding='utf-8')
             # The Rust editor deliberately emits only changed books.
-            (staging / 'output' / f'OET-LV_{bos}.ESFM').write_text(text, encoding='utf-8')
+            (staging / 'output' / f'OET-LV_{book}.ESFM').write_text(text, encoding='utf-8')
         (staging / 'input' / TABLE).write_text(tsv_text(FIELDS, rows), encoding='utf-8')
         result = subprocess.run([str(editor.resolve()), str(staging / EDITOR_CONTROL), '--silent', '--errors'],
                                 capture_output=True, text=True)
         if result.returncode:
             raise ValueError(f'ScriptedBibleEditor failed ({result.returncode}): {result.stderr[-2000:]}')
-        return {book: (staging / 'output' / f'OET-LV_{EDITOR_BOOK_CODES.get(book, book)}.ESFM').read_text(encoding='utf-8')
+        return {book: (staging / 'output' / f'OET-LV_{book}.ESFM').read_text(encoding='utf-8')
                 for book in rendered}
 
 
@@ -1016,7 +1013,7 @@ def build(args) -> None:
                   spelling=spelling,
                   books=per_book, words=len(rows), glossed=sum(bool(r['OETGlossWords']) for r in rows),
                   statuses=dict(Counter(r['GlossStatus'] for r in rows)),
-                  unsupported_books={'ES2': 'No complete Greek source in Brenton. English 2 Esdras (Latin 4 Esdras) needs a separately selected witness and glossing pipeline; LXX Esdras B is Ezra-Nehemiah, not this book.'},
+                  unsupported_books={'LES': 'No complete Greek source in Brenton. English 2 Esdras (Latin 4 Esdras) needs a separately selected witness and glossing pipeline; LXX Esdras B is Ezra-Nehemiah, not this book.'},
                   rv_label_differences=len(differences),
                   source_review_tokens=len(source_review(rows)),
                   limitations=['Lexical glosses do not supply inflection, syntax, or contextual sense.',
@@ -1059,7 +1056,7 @@ def build(args) -> None:
     check(args)
     for book, summary in per_book.items():
         print(f"{book}: {summary['glossed']:,}/{summary['words']:,} words have draft glosses/names ({summary['draft_coverage_percent']}%)")
-    print('ES2: no output; requires a separately selected source witness and glossing pipeline.')
+    print('LES: no output; requires a separately selected source witness and glossing pipeline.')
 
 
 def check(args) -> None:

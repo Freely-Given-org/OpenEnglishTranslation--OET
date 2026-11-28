@@ -513,6 +513,10 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
     ('Truly', 'May it be so'),
     ('unblemished', 'no defects'),
     ('unblemished', 'without defects'),
+    ('undeservedly', "didn't deserve"), # RV TH2 3:8
+    ('undeservedly', 'free of charge'), # RV MAT 10:8 (twice), REV 22:17
+    ('undeservedly', 'without any personal gain'), # RV CO2 11:7
+    ('undeservedly', 'without deserving it'), # RV ROM 3:24
     ('virgin', 'young woman'), # RV EXO 22:16 / LV EXO 22:15
     ('visit', 'look after'), # RV PSA 65:9 / LV PSA 65:10
     ('waiting', 'look forward'), # RV JDE 1:21

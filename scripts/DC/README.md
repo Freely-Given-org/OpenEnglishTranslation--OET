@@ -92,8 +92,8 @@ Every build renders the draft books into a temporary folder, then runs the real
 ScriptedBibleEditor with the adjacent `ScriptedBibleEditor.control.toml` and
 spelling table. The control's `input`/`output` paths refer to that staging folder,
 so invoke this step through `make LV_DC` or the DC builder. The Rust editor writes
-only changed books; the builder supplies originals for the other books. Temporary
-filenames use BOS `DNG`/`GES`, while final repository filenames remain `DAG`/`ES1`.
+only changed books; the builder supplies originals for the other books. Both the
+temporary and final filenames use the BOS book codes (e.g. `DNG`, `GES`).
 
 The builder reads the edited ESFM back through its word links and updates
 `OETGlossWords` in both word-table copies. It does not run a second replacement
@@ -169,15 +169,15 @@ Rahlfs/CATSS annotation data are used or copied.
 | --- | --- |
 | TOB, JDT, ESG, WIS, SIR | Corresponding Greek book |
 | BAR | BAR 1–5, followed by LJE 1 as BAR 6 |
-| DAG | DAG 1–12, SUS 1 as DAG 13, BEL 1 as DAG 14 |
+| DNG | DAG 1–12, SUS 1 as DNG 13, BEL 1 as DNG 14 |
 | MA1, MA2, MA3, MA4 | 1MA, 2MA, 3MA, 4MA |
-| ES1 | 1ES |
+| GES | 1ES |
 | MAN | MAN |
 | PS2 | PSA 151 as PS2 1, with `\cp 151` |
 | PSS | First1KGreek `tlg0527.tlg035.1st1K-grc1.xml`, Swete's 18 Psalms of Solomon; USFM `PSS` |
 | ODE | First1KGreek `tlg0527.tlg028.1st1K-grc1.xml`, Swete's Odes I–XIV; USFM `ODA` |
 | LAO | Lightfoot (1875), Latin text, pp. 353–355; one chapter and 20 OET verses; USFM/BOS `LAO` |
-| ES2 | No output; requires a different source/glossing route |
+| LES | No output; requires a different source/glossing route |
 
 ### Latin Laodiceans and its RV adaptation
 
@@ -293,7 +293,7 @@ colophon encoded as paragraph text are paratext, not included in the glossed
 verse text. Their original text remains in the unmodified archive. The exceptional
 paragraph strings are listed explicitly in `PARAGRAPH_PARATEXT` in the builder.
 
-English **2 Esdras** (OET `ES2`, often Latin **4 Esdras**) must not be substituted
+English **2 Esdras** (OET/BOS `LES`, often Latin **4 Esdras**) must not be substituted
 with the Septuagint's **Esdras B**, which is Ezra–Nehemiah. The Brenton archive
 does not contain the requested book. The public-domain eBible Clementine Vulgate
 download listing also omits that appendix. Selecting and checking a complete
@@ -424,12 +424,11 @@ changes to Greek/names, unsafe control paths, malformed rules and editor failure
 They verify the conversion machinery, not translation accuracy.
 The installed BibleOrgSys loader was also checked against all 16 books and the
 complete 123,885-word auxiliary table, including PSS 18:14, ODE 4:9a/9b and ODE
-14:47. All 42 conversion tests pass. The connector uses canonical BOS identities
-(`DNG`/`GES`) internally while preserving the repository's `DAG`/`ES1` filenames,
-and keeps lettered LV labels distinct in its audit. General DC export support
+14:47. All 42 conversion tests pass. The connector and the repository filenames both use
+the canonical BOS identities (`DNG`/`GES`/`LES`), and the connector keeps lettered LV labels distinct in its audit. General DC export support
 will need to account for these book identities and source boundaries as well.
 
 The next substantial improvements are an openly reusable, validated LXX
-lemmatisation/morphology source, contextual glossing and inflection, an ES2
+lemmatisation/morphology source, contextual glossing and inflection, an LES (2 Esdras)
 witness, and explicit edition/versification mappings before publication or RV
 word alignment.

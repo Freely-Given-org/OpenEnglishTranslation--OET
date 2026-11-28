@@ -102,6 +102,7 @@ SINGLE_WORD_MAPPINGS = (
     ('about','of'), # Mrk 12:26, 14:71
     ('about','whom'), # Mrk 12:26, 14:71
     ('above','over'), # Mat 2:9
+    ('accept', 'acquire'), # MAT 10:9
     ('Accept', 'receiving'), # ROM 14:1
     ('accept', 'receive'), # PRO 4:10
     ('accept', 'received'), # JHN 1:11
@@ -1456,6 +1457,7 @@ SINGLE_WORD_MAPPINGS = (
     ('deserted', 'waste'), # EZE 6:14
     ('deserted', 'abandoned'), # RV ISA 6:12
     ('deserting', 'abandoned'), # SA1 8:8
+    ('deserve', 'undeservedly'), # RV TH2 3:8 (where 'didn't' could also be the later 'not')
     ('designer', 'skillful'), # EXO 38:23
     ('desirable', 'desirablenesses'), # SNG 5:16
     ('desirable', 'desire'), # JER 3:19
@@ -2176,6 +2178,7 @@ SINGLE_WORD_MAPPINGS = (
     ('frames', 'frame[s]'), # EXO 26:20
     ('frames', 'rims'), # KI1 7:35
     ('free', 'release'), # HEB 2:15
+    ('freely', 'undeservedly'), # RV REV 21:6
     ('freely', 'voluntariness'), # RV HOS 14:4 / LV HOS 14:5
     ('freeze', 'frost'), # RV ZEC 14:6
     ('fresh', 'freshly'), # GEN 8:11
@@ -5933,6 +5936,7 @@ SINGLE_WORD_MAPPINGS = (
     ('unjust', 'unjustly'), # PE1 2:19
     ('unlace', 'untie'), # LUK 3:16
     ('unloaded', 'unharnessed'), # GEN 24:32
+    ('unnecessarily', 'undeservedly'), # RV GAL 2:21
     ('unploughed', 'unplowed'), # JER 4:3
     ('unquenchable','inextinguishable'), # Mat 3:12
     ('unrighteous', 'unrighteousness'), # TH2 2:10

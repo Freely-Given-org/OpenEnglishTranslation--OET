@@ -362,7 +362,7 @@ state = State()
 
 
 def canonicalBookCode(book):
-    """Keep OET filenames separate from BOS's canonical book identities."""
+    """Map older OET filename aliases to BOS's canonical book identities (current filenames already use them)."""
     return {'DAG': 'DNG', 'ES1': 'GES', 'ES2': 'LES'}.get(book, book)
 
 
@@ -387,7 +387,7 @@ def alignmentSources():
 
 
 def bookFilename(bible, book, abbreviation):
-    """Use the loader's actual filename (e.g. GES is stored as OET-RV_ES1)."""
+    """Use the loader's actual filename (which may differ from the BOS code in older checkouts)."""
     return getattr(bible, 'possibleFilenameDict', {}).get(book, f'{abbreviation}_{book}.ESFM')
 
 
@@ -1234,8 +1234,12 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             newESFMtext = re.sub(r'^\\rem (?:not )?WORDTABLE .*$', lambda m: declaration,
                                 newESFMtext, flags=re.MULTILINE)
         else:
-            first, separator, rest = newESFMtext.partition('\n')
-            newESFMtext = first + '\n' + declaration + separator + rest
+            # Standard header order is \id, \usfm, \ide, \rem ESFM, \rem WORDTABLE,
+            #   so insert after the \rem ESFM line (or after \id if that's missing)
+            esfmMatch = re.search(r'^\\rem ESFM v.*$', newESFMtext, re.MULTILINE)
+            insertAt = esfmMatch.end() if esfmMatch else newESFMtext.find('\n')
+            if insertAt == -1: insertAt = len(newESFMtext)
+            newESFMtext = newESFMtext[:insertAt] + '\n' + declaration + newESFMtext[insertAt:]
             for item in getattr(state, 'audit', ()):
                 if item['book'] == BBB:
                     item['line'] += 1 # The new header precedes every verse.
@@ -2052,7 +2056,7 @@ if __name__ == '__main__':
 
     # Configure basic Bible Organisational System (BOS) set-up
     parser = BibleOrgSysGlobals.setup( PROGRAM_NAME, PROGRAM_VERSION )
-    parser.add_argument('--books', nargs='+', metavar='BBB', help='process only these OT/DC/NT codes (e.g. RUT TOB MRK; DAG/ES1/ES2 filename aliases are accepted)')
+    parser.add_argument('--books', nargs='+', metavar='BBB', help='process only these OT/DC/NT codes (e.g. RUT TOB MRK; older DAG/ES1/ES2 aliases are accepted)')
     parser.add_argument('--dry-run', action='store_true', help='compute links and coverage without writing ESFM files')
     parser.add_argument('--output-dir', type=Path, help='write proposed ESFM books here instead of replacing source books')
     parser.add_argument('--report', type=Path, help='write coverage and proposed positional/lexical links as JSON (single process)')

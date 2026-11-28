@@ -136,7 +136,7 @@ This is how we currently form the 27 New Testament files for the OET-LV-NT:
 DC ESFM books with their own linked word table. `make check_DC` checks source
 preservation, links, editorial overrides, and the conversion tests. This stage
 is also included in `make LV`. These are incomplete dictionary-gloss drafts,
-not publication-ready translations; ES2 needs a separate source route, and the
+not publication-ready translations; LES (2 Esdras) needs a separate source route, and the
 existing HTML/USFM/VREF exports still cover the original 66 LV books.
 This includes PSS (18 chapters) and ODE (14 chapters), from the openly licensed
 Swete/First1KGreek transcription. ODE retains Swete's arrangement and documented
@@ -264,8 +264,9 @@ logging/settings files may still be created during a dry run.
 
 The connector includes available `auto_edited_DC_ESFM` books as a separate DC
 segment, between OT and NT. `--books TOB MAN` selects DC books just like OT/NT;
-the filename codes `DAG` and `ES1` are also accepted (BOS calls them `DNG` and
-`GES`). ES2 is not available until an LV source is built. Older checkouts without
+Greek Daniel and 1 Esdras use their BOS codes `DNG` and `GES` (the older aliases
+`DAG` and `ES1` are still accepted). LES (2 Esdras) is not available until an LV
+source is built. Older checkouts without
 the DC directory still process OT and NT. DC word numbers use only the DC table,
 never the same row number in an OT/NT table. Linked DC output declares and copies
 `OET-LV_DC_word_table.tsv`, including when using `--output-dir`.

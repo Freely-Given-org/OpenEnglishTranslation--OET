@@ -336,7 +336,7 @@ def export_literal_English_gloss_esfm() -> bool:
                     vPrint( 'Normal', DEBUGGING_THIS_MODULE,
                             f"  Wrote {esfm_filepath.name}" if written else f"  {esfm_filepath.name} is unchanged; file not rewritten." )
                 num_exported_files += 1
-            USFM_book_code = bos_books_codes_py.bos_book_code_to_usfm_abbrev( BBB )
+            USFM_book_code = bos_books_codes_py.bos_book_code_to_usfm_abbrev( BBB ).upper() # USFM requires uppercase book IDs
             English_book_name = bos_books_codes_py.get_english_name_nr( BBB )
             esfm_text = f"""\\id {USFM_book_code}
 \\usfm 3.0
